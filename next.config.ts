@@ -1,7 +1,114 @@
 import type { NextConfig } from "next";
+import fs from "node:fs";
+import path from "node:path";
+
+/**
+ * Read all blog post slugs from content/blog/ at build time.
+ * Used to auto-generate 301 redirects from the old WordPress permalink
+ * structure (/{slug}/) to the new Next.js structure (/blog/{slug}).
+ */
+function getBlogSlugs(): string[] {
+  const dir = path.join(process.cwd(), "content", "blog");
+  if (!fs.existsSync(dir)) return [];
+  return fs
+    .readdirSync(dir)
+    .filter((f) => f.endsWith(".mdx"))
+    .map((f) => f.replace(/\.mdx$/, ""));
+}
+
+/**
+ * Explicit redirects from old WordPress nested URLs that blog content
+ * still links to internally. Without these, Googlebot following in-body
+ * links inside migrated posts hits 404s and bleeds crawl budget / equity.
+ *
+ * Sourced from the SEO launch audit (2026-04-07) — every entry corresponds
+ * to a real `https://muzeoffice.com/...` URL that appears in at least one
+ * migrated MDX file in content/blog/.
+ */
+const wordpressRedirects = [
+  { source: "/contact-us", destination: "/contact" },
+  { source: "/workspace-memberships/virtual-office-in-las-vegas", destination: "/las-vegas-virtual-office" },
+  { source: "/workspace-memberships/coworking-las-vegas", destination: "/las-vegas-coworking" },
+  { source: "/workspace-memberships/office-space-in-las-vegas", destination: "/las-vegas-private-office" },
+  { source: "/workspace-memberships/coworking-houston-texas", destination: "/houston-coworking" },
+  { source: "/workspace-memberships/virtual-office-houston-texas", destination: "/houston-virtual-office" },
+  { source: "/workspace-memberships/virtual-office-houston-texas/premium-mailing-address-services-in-houston", destination: "/houston-virtual-office" },
+  { source: "/workspace-solutions-coworking-private-and-virtual-offices", destination: "/workspace-memberships" },
+  { source: "/locations/las-vegas-coworking", destination: "/locations/las-vegas" },
+  { source: "/locations/south-main-coworking", destination: "/locations/houston" },
+  { source: "/events-in-las-vegas", destination: "/las-vegas-event-space" },
+  { source: "/events-in-houston-and-las-vegas", destination: "/las-vegas-event-space" },
+  { source: "/conference-room-near-me-where-to-book-your-next-event", destination: "/las-vegas-meeting-rooms" },
+  { source: "/coworking-space-near-me-how-working-in-a-coworking-space-boosts-your-productivity", destination: "/las-vegas-coworking" },
+  { source: "/office-day-pass-in-houston-at-muzeoffice", destination: "/houston-coworking" },
+  { source: "/tips-for-choosing-a-virtual-office-near-me", destination: "/las-vegas-virtual-office" },
+  { source: "/make-the-most-out-of-your-virtual-office-space-in-las-vegas", destination: "/las-vegas-virtual-office" },
+];
+
+/**
+ * Redirects for blog posts that were removed due to duplicate content
+ * or thin content. Each entry redirects BOTH the old WordPress permalink
+ * path (`/{slug}`) AND the new Next.js blog path (`/blog/{slug}`) to the
+ * canonical destination, so indexed URLs from either era resolve cleanly.
+ */
+const removedBlogRedirects = [
+  // Duplicate: keep coworking-for-creators-in-las-vegas, drop the others
+  { source: "/coworking-for-creators-las-vegas", destination: "/blog/coworking-for-creators-in-las-vegas" },
+  { source: "/blog/coworking-for-creators-las-vegas", destination: "/blog/coworking-for-creators-in-las-vegas" },
+  { source: "/coworking-for-creatives", destination: "/blog/coworking-for-creators-in-las-vegas" },
+  { source: "/blog/coworking-for-creatives", destination: "/blog/coworking-for-creators-in-las-vegas" },
+  // Duplicate: keep virtual-mailboxes-in-las-vegas (plural), drop singular
+  { source: "/virtual-mailbox-in-las-vegas", destination: "/blog/virtual-mailboxes-in-las-vegas" },
+  { source: "/blog/virtual-mailbox-in-las-vegas", destination: "/blog/virtual-mailboxes-in-las-vegas" },
+  // Thin stub: redirect topic to the commercial page that covers it
+  { source: "/the-future-of-virtual-offices", destination: "/las-vegas-virtual-office" },
+  { source: "/blog/the-future-of-virtual-offices", destination: "/las-vegas-virtual-office" },
+  // Thin stub: off-topic for coworking, redirect to blog index
+  { source: "/why-tiktok-is-a-great-marketing-tool-for-small-businesses", destination: "/blog" },
+  { source: "/blog/why-tiktok-is-a-great-marketing-tool-for-small-businesses", destination: "/blog" },
+  // Duplicate: keep modern-meeting-room-near-ces-las-vegas, drop the long-slug version
+  { source: "/creating-the-future-a-modern-meeting-room-near-ces-las-vegas", destination: "/blog/modern-meeting-room-near-ces-las-vegas" },
+  { source: "/blog/creating-the-future-a-modern-meeting-room-near-ces-las-vegas", destination: "/blog/modern-meeting-room-near-ces-las-vegas" },
+];
+
+type RedirectRule = {
+  source: string;
+  destination: string;
+  permanent: boolean;
+};
+
+/**
+ * Preserve one-hop 301s for legacy WordPress URLs with and without trailing
+ * slashes. Googlebot was hitting `/workspace-memberships/.../` first, then
+ * taking a second 308 just to normalize the slash before our actual redirect.
+ */
+function withTrailingSlashVariants(routes: RedirectRule[]): RedirectRule[] {
+  return routes.flatMap((route) => {
+    if (route.source === "/" || route.source.endsWith("/")) return [route];
+
+    return [route, { ...route, source: `${route.source}/` }];
+  });
+}
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    // Order matters: explicit redirects first, then the auto-generated
+    // blog slug redirects. Next.js uses first-match-wins, so explicit
+    // rules for removed blog slugs must be evaluated before the auto
+    // rule (which only covers slugs currently present in content/blog/).
+    const slugs = getBlogSlugs();
+    const autoBlogRedirects = slugs.map((slug) => ({
+      source: `/${slug}`,
+      destination: `/blog/${slug}`,
+      permanent: true,
+    }));
+
+    return withTrailingSlashVariants([
+      ...wordpressRedirects.map((r) => ({ ...r, permanent: true })),
+      ...removedBlogRedirects.map((r) => ({ ...r, permanent: true })),
+      ...autoBlogRedirects,
+    ]);
+  },
 };
 
 export default nextConfig;
