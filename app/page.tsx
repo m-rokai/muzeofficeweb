@@ -42,6 +42,20 @@ import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
+  openGraph: {
+    title:
+      "Muze Office — Coworking, Virtual Office & Private Offices in Las Vegas",
+    description:
+      "Muze Office is a Las Vegas flexspace for coworking, virtual offices, private offices, and meeting rooms. Day pass from $25. Houston coming soon.",
+    url: "https://muzeoffice.com",
+    type: "website",
+  },
+  twitter: {
+    title:
+      "Muze Office — Coworking, Virtual Office & Private Offices in Las Vegas",
+    description:
+      "Muze Office is a Las Vegas flexspace for coworking, virtual offices, private offices, and meeting rooms. Day pass from $25. Houston coming soon.",
+  },
 };
 
 const serviceIcons: Record<string, React.ReactNode> = {
