@@ -17,12 +17,13 @@ import { cn } from "@/lib/utils";
 import { Section } from "@/components/layout/section";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { CTASection } from "@/components/marketing/cta-section";
-import { Card, CardContent } from "@/components/ui/card";
+import { FAQSection } from "@/components/marketing/faq-section";
 import { Badge } from "@/components/ui/badge";
 import { locations, type Location } from "@/lib/data/locations";
 import { services as allServices } from "@/lib/data/services";
+import { getFAQsForPage } from "@/lib/data/faqs";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
-import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/components/marketing/animate";
+import { FadeIn } from "@/components/marketing/animate";
 import { BRAND } from "@/lib/utils/constants";
 
 const coreServiceIds = [
@@ -88,6 +89,10 @@ export default async function LocationDetailPage({
   const locationServices = getLocationServices(location);
   const isActive = location.status === "active";
   const imageSlug = location.slug === "las-vegas" ? "las-vegas" : "houston";
+  // Page-scoped FAQs live per city slug (e.g. "locations/las-vegas").
+  // Coming-soon cities (Houston) intentionally have no FAQ set — the page
+  // is noindexed and the info hasn't been finalized.
+  const faqs = getFAQsForPage(`locations/${location.slug}`);
 
   return (
     <>
@@ -280,6 +285,15 @@ export default async function LocationDetailPage({
           </FadeIn>
         </div>
       </Section>
+
+      {/* FAQ */}
+      {faqs.length > 0 && (
+        <FAQSection
+          heading={`Muze Office ${location.name} — FAQ`}
+          description={`Answers to common questions about Muze Office ${location.name}, including address, hours, parking, and services.`}
+          faqs={faqs}
+        />
+      )}
 
       {/* Map Placeholder */}
       {isActive && (

@@ -6,10 +6,12 @@ import { buttonVariants } from "@/lib/utils/button-variants";
 import { cn } from "@/lib/utils";
 import { Section } from "@/components/layout/section";
 import { CTASection } from "@/components/marketing/cta-section";
+import { FAQSection } from "@/components/marketing/faq-section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { locations } from "@/lib/data/locations";
-import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/components/marketing/animate";
+import { getFAQsForPage } from "@/lib/data/faqs";
+import { FadeIn, ScaleIn } from "@/components/marketing/animate";
 import { BRAND } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
@@ -42,6 +44,8 @@ const locationServices: Record<string, string[]> = {
 };
 
 export default function LocationsPage() {
+  const faqs = getFAQsForPage("locations");
+
   return (
     <>
       {/* Hero */}
@@ -154,6 +158,13 @@ export default function LocationsPage() {
           ))}
         </div>
       </Section>
+
+      {/* FAQ */}
+      <FAQSection
+        heading="Muze Office locations — FAQ"
+        description="Answers to common questions about our Las Vegas location and upcoming Houston opening."
+        faqs={faqs}
+      />
 
       {/* CTA */}
       <CTASection

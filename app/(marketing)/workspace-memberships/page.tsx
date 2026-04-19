@@ -12,8 +12,10 @@ import { buttonVariants } from "@/lib/utils/button-variants";
 import { cn } from "@/lib/utils";
 import { Section } from "@/components/layout/section";
 import { CTASection } from "@/components/marketing/cta-section";
+import { FAQSection } from "@/components/marketing/faq-section";
 import { Card, CardContent } from "@/components/ui/card";
 import { services } from "@/lib/data/services";
+import { getFAQsForPage } from "@/lib/data/faqs";
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/components/marketing/animate";
 import { BRAND } from "@/lib/utils/constants";
 
@@ -64,6 +66,8 @@ const columnKeys = [
 ];
 
 export default function WorkspaceMembershipsPage() {
+  const faqs = getFAQsForPage("workspace-memberships");
+
   return (
     <>
       {/* Hero */}
@@ -182,6 +186,13 @@ export default function WorkspaceMembershipsPage() {
         </div>
         </FadeIn>
       </Section>
+
+      {/* FAQ */}
+      <FAQSection
+        heading="Workspace memberships — FAQ"
+        description="Common questions about Muze Office workspace memberships, pricing, and what's included."
+        faqs={faqs}
+      />
 
       {/* CTA */}
       <CTASection

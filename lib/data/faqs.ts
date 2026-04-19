@@ -324,3 +324,130 @@ export const faqsByService: FAQsByService = {
 export function getFAQsForService(serviceId: string): FAQ[] {
   return faqsByService[serviceId] ?? [];
 }
+
+/* ── Page-scoped FAQs (for pages that aren't a single service) ─────────
+ *
+ * The city-service dynamic route already surfaces FAQs via
+ * `faqsByService`. These arrays cover other top pages that previously
+ * had no FAQPage schema — the /workspace-memberships comparison page,
+ * the /locations overview, and the /locations/las-vegas city page.
+ * Each answer below is grounded in lib/data/services.ts or
+ * lib/data/locations.ts — no fabrication.
+ */
+
+const workspaceMembershipsFAQs: FAQ[] = [
+  {
+    question: "What workspace memberships does Muze Office offer?",
+    answer:
+      "Muze Office offers five workspace types in Las Vegas: Virtual Office (from $39/mo) for a business address and mail, Coworking (Day Pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo), Private Office (contact for pricing) for 1–5+ person teams, Meeting Rooms (from $25/hr), and Event Space (from $50/hr). All memberships are month-to-month.",
+  },
+  {
+    question: "Which membership is right for me?",
+    answer:
+      "If you need an address only, start with Virtual Office. If you need desk space for the day, get a Day Pass. If you're in the space regularly, Hot Desk or Dedicated Desk. If you need a private, lockable room for your team, book a tour of the Private Offices. If you're hosting clients or meetings occasionally, book Meeting Rooms by the hour.",
+  },
+  {
+    question: "Are memberships month-to-month, or is there a contract?",
+    answer:
+      "All Muze Office memberships are month-to-month. No long-term lease, no personal guaranty, no setup fees. Cancel with 30 days' notice.",
+  },
+  {
+    question: "What's included with every membership?",
+    answer:
+      "Every plan includes high-speed WiFi, unlimited coffee and water, free parking, access to the on-site Muze Cafe, and community events. Coworking and private office plans also include meeting room credits, mail handling, and biometric 24/7 access where applicable.",
+  },
+  {
+    question: "Is there free parking for members and visitors?",
+    answer:
+      "Yes. Parking is free for all members, day pass holders, meeting room guests, and event attendees. No meters, no valet fees, no garage charges.",
+  },
+  {
+    question: "Can I try the space before committing to a membership?",
+    answer:
+      "Yes. Book a free tour or grab a $25 Day Pass — no membership required. You'll get full access to the coworking area, WiFi, coffee, and free parking for the day.",
+  },
+];
+
+const locationsOverviewFAQs: FAQ[] = [
+  {
+    question: "Where is Muze Office located?",
+    answer:
+      "Our active Las Vegas location is at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 — about 10 minutes from Harry Reid International Airport, off I-215 and away from Strip traffic. A Houston location is coming soon near the Galleria and Uptown district.",
+  },
+  {
+    question: "Which city is open right now?",
+    answer:
+      "Las Vegas is open and accepting members, day pass visitors, and meeting room bookings. Houston is coming soon — join the waitlist via our contact page for early access.",
+  },
+  {
+    question: "When is the Houston location opening?",
+    answer:
+      "Our Houston location is coming soon in the Galleria / Uptown area near I-610 West Loop. Exact address and opening date will be announced — join our waitlist to be the first to know.",
+  },
+  {
+    question: "Do you offer multi-city memberships?",
+    answer:
+      "We plan to offer multi-city membership options once Houston opens so members can work from either location. Details will be shared closer to the Houston opening.",
+  },
+  {
+    question: "Is parking available at each location?",
+    answer:
+      "Yes. Free parking is included at our Las Vegas location for all members, day pass visitors, meeting room guests, and event attendees. Houston will also include parking when it opens.",
+  },
+  {
+    question: "How do I schedule a tour?",
+    answer:
+      "For Las Vegas, book a free tour through our booking page or call (702) 370-7515. For Houston, reach out via our contact page to join the waitlist and get notified about pre-opening tours.",
+  },
+];
+
+const lasVegasLocationFAQs: FAQ[] = [
+  {
+    question: "What is the address for Muze Office Las Vegas?",
+    answer:
+      "6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119. It's a real commercial suite — not a PO Box or mail-drop storefront — off I-215 in the South Las Vegas corridor.",
+  },
+  {
+    question: "How far is Muze Office from Harry Reid International Airport?",
+    answer:
+      "About 10 minutes by car from Harry Reid International Airport (LAS), just off I-215. Easy for fly-in client meetings and same-day business trips.",
+  },
+  {
+    question: "What are your hours in Las Vegas?",
+    answer:
+      "The space is staffed Monday through Friday, 10 AM to 7 PM. Dedicated Desk and Private Office members have 24/7 access via biometric entry.",
+  },
+  {
+    question: "Is there free parking at the Las Vegas location?",
+    answer:
+      "Yes. Parking is free for every member, day pass visitor, meeting room guest, and event attendee. No meters, no valet, no garage fees.",
+  },
+  {
+    question: "What services are available at Muze Office Las Vegas?",
+    answer:
+      "Virtual Office (from $39/mo), Coworking (Day Pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo), Private Office (contact for pricing), Meeting Rooms (from $25/hr), and Event Space (from $50/hr). All month-to-month.",
+  },
+  {
+    question: "Does Nevada have state income tax?",
+    answer:
+      "No. Nevada has no state income tax, no corporate income tax, and no franchise tax. This is one reason many out-of-state founders register their LLC at a Nevada address like Muze Office Las Vegas.",
+  },
+  {
+    question: "Can I use the Las Vegas address for my LLC?",
+    answer:
+      "Yes. 6860 Bermuda Rd, Suite 200 is a real commercial address you can use for LLC registration, Google Business Profile, contracts, and business licensing. A registered agent is a separate role — pair a registered agent service with the virtual office if you need one.",
+  },
+];
+
+/** Map page keys (typically route paths or identifiers) to FAQ arrays for
+ *  pages that aren't a single service under the city-service route. */
+export const faqsByPage: Record<string, FAQ[]> = {
+  "workspace-memberships": workspaceMembershipsFAQs,
+  locations: locationsOverviewFAQs,
+  "locations/las-vegas": lasVegasLocationFAQs,
+};
+
+/** Get FAQs for a given page key. Returns [] if none are defined. */
+export function getFAQsForPage(pageKey: string): FAQ[] {
+  return faqsByPage[pageKey] ?? [];
+}
