@@ -18,6 +18,7 @@ export const mainNav: NavItem[] = [
     label: "Memberships",
     href: "/workspace-memberships",
     children: [
+      { label: "Flexible Workspaces", href: "/las-vegas-flexible-workspaces" },
       { label: "Virtual Office", href: "/las-vegas-virtual-office" },
       {
         label: "Coworking",

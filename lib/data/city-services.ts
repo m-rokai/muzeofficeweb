@@ -246,6 +246,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         { slug: "las-vegas-day-pass", label: "Las Vegas Day Pass ($25/day)" },
         { slug: "las-vegas-hot-desk", label: "Las Vegas Hot Desk ($350/mo)" },
         { slug: "las-vegas-dedicated-desk", label: "Las Vegas Dedicated Desk ($399/mo)" },
+        { slug: "las-vegas-flexible-workspaces", label: "Las Vegas Flexible Workspaces" },
         { slug: "las-vegas-virtual-office", label: "Las Vegas Virtual Office" },
         { slug: "las-vegas-meeting-rooms", label: "Las Vegas Meeting Rooms" },
         { slug: "las-vegas-airport-coworking", label: "Las Vegas Airport Coworking" },
@@ -525,6 +526,99 @@ export const cityServiceData: Record<string, CityServiceData> = {
     },
   },
 
+  "las-vegas-flexible-workspaces": {
+    slug: "las-vegas-flexible-workspaces",
+    cityId: "las-vegas",
+    serviceId: "flexible-workspaces",
+    h1: "Flexible Workspaces in Las Vegas",
+    heroSubtitle:
+      "One building, four commitment levels. Start with a $25 day pass, move up to a hot desk or dedicated desk, and grow into a private office when the team does — all month-to-month, all at 6860 Bermuda Rd.",
+    metaTitle: "Flexible Workspaces Las Vegas | Day Pass to Private Office",
+    metaDescription:
+      "Flexible workspaces in Las Vegas at 6860 Bermuda Rd, Suite 200. Day pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo, private offices for teams — month-to-month, no long-term lease.",
+    heroImage: "/images/hero/coworking-space.jpg",
+    useCases: [
+      "Startups scaling from 3 to 8 people without signing a new lease",
+      "Teams reducing office burn while keeping a professional address",
+      "Remote-first companies opening a Las Vegas beachhead",
+      "Founders testing office culture before a full commitment",
+      "Consultants who want a pro address without a 12-month contract",
+      "Out-of-state teams relocating staff one hire at a time",
+    ],
+    locationCallout:
+      "6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 — 10 minutes from Harry Reid International Airport, off I-215, with free parking on-site. Open Monday through Friday, 10am to 7pm; 24/7 biometric access for Dedicated Desk and Private Office members.",
+    longFormBody: {
+      bestFor: [
+        {
+          persona: "Scaling startups that grew from 3 to 8 people in six months",
+          scenario:
+            "You signed up for a hot desk or two when the team was small, then you hired a few more people and ran out of desks. The normal play is to break the coworking plan, sign a traditional lease, buy furniture, and wait for buildout. You want an option that doesn't require any of that — just more space in the same building.",
+          fit: [
+            "Hot Desk at $350/month per person covers the first wave of hires during business hours",
+            "Dedicated Desk at $399/month reserves seats for full-time team members who need a permanent spot and 24/7 biometric access",
+            "Team Office and Custom Suite options are in the same building — no move-outs, no new commute for the team",
+            "Month-to-month on every tier means you can flex headcount up or down as hiring and revenue change",
+          ],
+        },
+        {
+          persona: "Remote-first companies opening a Las Vegas beachhead",
+          scenario:
+            "Your company is remote by default, but you're opening a Nevada presence for tax, hiring, or client-proximity reasons. You don't know yet whether you need a private office, a few dedicated desks, or just a business address with meeting rooms for when leadership flies in.",
+          fit: [
+            "Virtual Office plans from $39/month cover the business-address and mail-handling use case without taking physical space",
+            "Day Pass at $25/day lets traveling execs and occasional visitors work from the building without adding to a monthly commitment",
+            "Dedicated Desk at $399/month reserves space for a permanent Las Vegas hire without jumping to a private office",
+            "If the Las Vegas presence grows, Team Office and Custom Suite options are already in the same building — no second relocation for the local team",
+          ],
+        },
+        {
+          persona: "Consultants who want a pro address without committing to an office",
+          scenario:
+            "You run an independent practice and you want a real Las Vegas address for LLC filings, contracts, and client-facing materials — plus a professional space for the occasional in-person meeting — without paying private-office prices for walls you'd sit alone inside most days.",
+          fit: [
+            "Hot Desk at $350/month covers any-desk business-hours access plus meeting room credits and mail handling",
+            "Dedicated Desk at $399/month adds a reserved seat, 24/7 biometric access, personal storage, and a business address with mail",
+            "Private phone booths for confidential client calls without a living-room background",
+            "Meeting rooms bookable by the hour when a client flies in — a professional conference room, not a coffee shop",
+          ],
+        },
+      ],
+      whyChoose: {
+        heading: "Why choose flexible workspaces in Las Vegas at Muze Office",
+        paragraphs: [
+          "Most people who land on a flexible-workspaces search aren't asking about coworking specifically or private offices specifically — they're trying to figure out what shape their workspace should take six months from now when they're bigger, smaller, or in a different phase of a project. The honest answer is that you probably don't need to decide today. Muze Office runs the full stack under one roof at 6860 Bermuda Rd, Suite 200: drop-in day passes at $25, Hot Desk memberships at $350/month, Dedicated Desks at $399/month, private offices for teams of 1-10+, and virtual-office plans from $39/month for people who only need the address. Every tier is month-to-month. You can start with a day pass, move up to a hot desk once you know you'll be in the space most weekdays, grow into a dedicated desk when you want 24/7 access and a permanent spot, and move into a private office when the team outgrows the shared floor — all without changing buildings, commutes, or business addresses.",
+          "The flexibility argument is really an argument about risk. A traditional commercial lease in Las Vegas is typically a 12-to-36 month commitment with a personal guaranty, a security deposit of one or two months, a tenant-improvement allowance that locks you into a specific buildout, CAM fees on top of base rent, and a painful exit if headcount changes. A flexible-workspace plan at Muze Office is month-to-month with 30 days' notice to cancel. That difference compounds when you're a startup that might double in size, a remote-first company that might decide it doesn't need Las Vegas at all, or a consultant whose client roster changes every quarter. The cost of being wrong on a 24-month lease is six figures; the cost of being wrong on a $350/month hot desk is $350.",
+          "The other half of the pitch is that the whole stack is genuinely the same space. The day-pass holder, the hot-desk member, the dedicated-desk member, and the private-office tenant all park in the same lot, walk through the same lobby, use the same conference rooms, drink coffee at the same on-site cafe, and show up to the same community events. When you upgrade, you're not changing your commute or your professional identity — you're just getting more or less space depending on what you need this quarter.",
+        ],
+      },
+      comparison: {
+        heading: "Flexible workspaces vs. a traditional lease or a single coworking plan",
+        paragraphs: [
+          "A traditional commercial lease in the Las Vegas area typically runs 12 to 36 months with a personal guaranty, a one-to-two-month security deposit, CAM fees on top of base rent, a buildout delay that typically runs weeks, and a separate furniture bill before the first desk is usable. Breaking the lease early usually means forfeiting the deposit and paying the remaining term. That math works for a stable 15-person operation with a clear five-year trajectory. It does not work for a team that might be five people or fifteen people six months from now — which describes most early-stage companies, most consulting practices, and most remote-first businesses opening a second market.",
+          "A single coworking plan — just a Hot Desk membership at a pure coworking operator — is the other trap. The plan is flexible month-to-month, but the moment your team grows past two or three people, or you need a lockable office for a confidential conversation, or you want 24/7 access for a founder who works late, you're stuck. The answer at a pure coworking space is usually to move to a different building with different pricing, a different commute, and a different business address. Muze Office is designed so the entire stack — day pass, hot desk, dedicated desk, private office, virtual office, meeting rooms — lives in the same building under the same terms. You upgrade by walking down the hall, not by signing a new lease somewhere else.",
+          "For buyers weighing these options, the comparison is not really between coworking and a private office — it's between committing early and keeping optionality. Flexible workspaces exist because the answer to 'what do we need?' genuinely changes over 6 to 12 months. Start with the tier that matches today and upgrade when reality makes the case for more space.",
+        ],
+      },
+      howToGetStarted: {
+        heading: "How to pick a flexible workspace at Muze Office Las Vegas",
+        paragraphs: [
+          "Start with a Day Pass ($25). It's the lowest-risk way to try the space, test the WiFi on a real video call, see how the commute works from where you live, and meet the community before committing to a monthly plan. Day passes are walk-in Monday through Friday, 10am to 7pm — show ID at the front desk and you're at a working desk in five minutes. See /las-vegas-day-pass for the details.",
+          "Once you've decided you'll be in the space most weekdays, Hot Desk ($350/month) at /las-vegas-hot-desk is the business-hours any-desk membership most people settle into. If you want your own reserved desk, 24/7 biometric access, and a business address with mail, Dedicated Desk ($399/month) at /las-vegas-dedicated-desk is the next step up. For teams of 2 to 10+ who need walls, Private Office at /las-vegas-private-office runs month-to-month with all utilities, WiFi, cleaning, and conference rooms included — tours are the fastest way to get real pricing. For founders and remote-first companies that only need the address, see /las-vegas-virtual-office for Mail Holding ($39/mo), Sandstone ($69/mo), Opal ($149/mo), and Diamond ($249/mo) plans.",
+          "You can move between tiers any time. Hot Desk members who outgrow business hours upgrade to Dedicated Desk. Dedicated Desk members whose teams grow move into a Private Office. Private-office tenants who scale back for a quarter can step down to a desk. Nothing about the address, the commute, the parking, or the community changes when you do — only the shape of the space.",
+        ],
+      },
+      relatedServices: [
+        { slug: "las-vegas-day-pass", label: "Las Vegas Day Pass ($25/day)" },
+        { slug: "las-vegas-hot-desk", label: "Las Vegas Hot Desk ($350/mo)" },
+        { slug: "las-vegas-dedicated-desk", label: "Las Vegas Dedicated Desk ($399/mo)" },
+        { slug: "las-vegas-coworking", label: "Las Vegas Coworking (overview)" },
+        { slug: "las-vegas-private-office", label: "Las Vegas Private Office" },
+        { slug: "las-vegas-virtual-office", label: "Las Vegas Virtual Office" },
+        { slug: "las-vegas-meeting-rooms", label: "Las Vegas Meeting Rooms" },
+      ],
+    },
+  },
+
   "las-vegas-private-office": {
     slug: "las-vegas-private-office",
     cityId: "las-vegas",
@@ -619,6 +713,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       },
       relatedServices: [
         { slug: "las-vegas-coworking", label: "Las Vegas Coworking" },
+        { slug: "las-vegas-flexible-workspaces", label: "Las Vegas Flexible Workspaces" },
         { slug: "las-vegas-virtual-office", label: "Las Vegas Virtual Office" },
         { slug: "las-vegas-meeting-rooms", label: "Las Vegas Meeting Rooms" },
       ],
@@ -1589,6 +1684,99 @@ export const cityServiceData: Record<string, CityServiceData> = {
         { slug: "houston-coworking", label: "Houston Coworking (overview)" },
         { slug: "houston-private-office", label: "Houston Private Office" },
         { slug: "houston-virtual-office", label: "Houston Virtual Office" },
+      ],
+    },
+  },
+
+  "houston-flexible-workspaces": {
+    slug: "houston-flexible-workspaces",
+    cityId: "houston",
+    serviceId: "flexible-workspaces",
+    h1: "Flexible Workspaces in Houston",
+    heroSubtitle:
+      "One Galleria building, four commitment levels. Start with a day pass, move up to a hot desk or dedicated desk, and grow into a private office when the team does — all month-to-month, all at 1800 Augusta Dr.",
+    metaTitle: "Flexible Workspaces Houston | Coming Soon",
+    metaDescription:
+      "Flexible workspaces in Houston at 1800 Augusta Dr inside the 610 Loop. Day pass, hot desk, dedicated desk, and private offices — month-to-month, no long-term lease. Coming soon to Muze Office Houston.",
+    heroImage: "/images/hero/coworking-space.jpg",
+    useCases: [
+      "Startups scaling from 3 to 8 people without signing a new lease",
+      "Teams reducing office burn while keeping a professional address",
+      "Remote-first companies opening a Houston beachhead",
+      "Founders testing office culture before a full commitment",
+      "Consultants who want a pro Galleria address without a 12-month contract",
+      "Out-of-state teams relocating staff one hire at a time",
+    ],
+    locationCallout:
+      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, with free parking on-site. Opening soon.",
+    longFormBody: {
+      bestFor: [
+        {
+          persona: "Scaling startups that grew from 3 to 8 people in six months",
+          scenario:
+            "You signed up for a hot desk or two when the team was small, then you hired a few more people and ran out of desks. The normal play is to break the coworking plan, sign a traditional lease, buy furniture, and wait for buildout. You want an option that doesn't require any of that — just more space in the same Galleria building.",
+          fit: [
+            "Hot Desk at $350/month per person covers the first wave of hires during business hours",
+            "Dedicated Desk at $399/month reserves seats for full-time team members who need a permanent spot and 24/7 biometric access",
+            "Team Office and Custom Suite options are in the same building at 1800 Augusta Dr — no move-outs, no new commute for the team",
+            "Month-to-month on every tier means you can flex headcount up or down as hiring and revenue change",
+          ],
+        },
+        {
+          persona: "Remote-first companies opening a Houston beachhead",
+          scenario:
+            "Your company is remote by default, but you're opening a Houston presence for hiring, client-proximity, or energy-sector reasons. You don't know yet whether you need a private office, a few dedicated desks, or just a business address with meeting rooms for when leadership flies in.",
+          fit: [
+            "Virtual Office plans cover the business-address and mail-handling use case without taking physical space",
+            "Day Pass lets traveling execs and occasional visitors work from the building without adding to a monthly commitment",
+            "Dedicated Desk reserves space for a permanent Houston hire without jumping to a private office",
+            "If the Houston presence grows, Team Office and Custom Suite options are already in the same Galleria building — no second relocation for the local team",
+          ],
+        },
+        {
+          persona: "Consultants who want a pro Galleria address without committing to an office",
+          scenario:
+            "You run an independent practice and you want a real Houston address in the Galleria for LLC filings, contracts, and client-facing materials — plus a professional space for the occasional in-person meeting — without paying private-office prices for walls you'd sit alone inside most days.",
+          fit: [
+            "Hot Desk at $350/month covers any-desk business-hours access plus meeting room credits and mail handling",
+            "Dedicated Desk at $399/month adds a reserved seat, 24/7 biometric access, personal storage, and a business address with mail",
+            "Private phone booths for confidential client calls without a townhome or Rice Village coffee-shop background",
+            "Meeting rooms bookable by the hour when a client drives in from Sugar Land, Katy, or The Woodlands",
+          ],
+        },
+      ],
+      whyChoose: {
+        heading: "Why choose flexible workspaces in Houston at Muze Office",
+        paragraphs: [
+          "Most people who land on a flexible-workspaces search aren't asking about coworking specifically or private offices specifically — they're trying to figure out what shape their workspace should take six months from now when they're bigger, smaller, or in a different phase of a project. The honest answer is that you probably don't need to decide today. Muze Office Houston is opening at 1800 Augusta Dr inside the 610 Loop with the full stack under one roof: drop-in day passes, Hot Desk memberships at $350/month, Dedicated Desks at $399/month, private offices for teams of 1-10+, and virtual-office plans for people who only need the address. Every tier is month-to-month. You can start with a day pass, move up to a hot desk once you know you'll be in the space most weekdays, grow into a dedicated desk when you want 24/7 access and a permanent spot, and move into a private office when the team outgrows the shared floor — all without changing buildings, commutes, or business addresses.",
+          "The flexibility argument is really an argument about risk. A traditional commercial lease in the Galleria or Uptown is typically a 12-to-36 month commitment with a personal guaranty, a security deposit of one or two months, a tenant-improvement allowance that locks you into a specific buildout, CAM fees on top of base rent, and a painful exit if headcount changes. A flexible-workspace plan at Muze Office Houston will be month-to-month with 30 days' notice to cancel. That difference compounds when you're a startup that might double in size, a remote-first company that might decide it doesn't need Houston at all, or a consultant whose client roster changes every quarter.",
+          "The other half of the pitch is that the whole stack is genuinely the same space. The day-pass holder, the hot-desk member, the dedicated-desk member, and the private-office tenant will all park in the same lot, walk through the same lobby, use the same conference rooms, drink coffee at the same on-site cafe, and show up to the same community events. When you upgrade, you're not changing your commute or your professional identity — you're just getting more or less space depending on what you need this quarter.",
+        ],
+      },
+      comparison: {
+        heading: "Flexible workspaces vs. a traditional lease or a single coworking plan",
+        paragraphs: [
+          "A traditional commercial lease in the Galleria, Uptown, or downtown Houston typically runs 12 to 36 months with a personal guaranty, a one-to-two-month security deposit, CAM fees on top of base rent, a buildout delay that typically runs weeks, and a separate furniture bill before the first desk is usable. Breaking the lease early usually means forfeiting the deposit and paying the remaining term. That math works for a stable 15-person operation with a clear five-year trajectory. It does not work for a team that might be five people or fifteen people six months from now — which describes most early-stage companies, most consulting practices, and most remote-first businesses opening a second market.",
+          "A single coworking plan — just a Hot Desk membership at a pure coworking operator — is the other trap. The plan is flexible month-to-month, but the moment your team grows past two or three people, or you need a lockable office for a confidential conversation, or you want 24/7 access for a founder who works late, you're stuck. The answer at a pure coworking space is usually to move to a different building with different pricing, a different commute, and a different business address. Muze Office Houston is designed so the entire stack — day pass, hot desk, dedicated desk, private office, virtual office, meeting rooms — lives in the same building under the same terms. You upgrade by walking down the hall, not by signing a new lease somewhere else.",
+          "For buyers weighing these options, the comparison is not really between coworking and a private office — it's between committing early and keeping optionality. Flexible workspaces exist because the answer to 'what do we need?' genuinely changes over 6 to 12 months. Start with the tier that matches today and upgrade when reality makes the case for more space.",
+        ],
+      },
+      howToGetStarted: {
+        heading: "How to pick a flexible workspace at Muze Office Houston",
+        paragraphs: [
+          "Muze Office Houston is opening soon at 1800 Augusta Dr in the Galleria. Join the waitlist to lock in pre-launch pricing across every tier — day pass, hot desk, dedicated desk, private office, and virtual office — and to get the opening-day schedule for tours and move-ins.",
+          "When we open, most people start with a Day Pass to try the space, test the WiFi on a real video call, and see how the commute from Memorial, Uptown, West University, Bellaire, River Oaks, or downtown works. See /houston-day-pass for the details. Once you've decided you'll be in the space most weekdays, Hot Desk at /houston-hot-desk is the business-hours any-desk membership most people settle into. If you want your own reserved desk, 24/7 biometric access, and a business address with mail, Dedicated Desk at /houston-dedicated-desk is the next step up. For teams of 2 to 10+ who need walls, Private Office at /houston-private-office runs month-to-month with all utilities, WiFi, cleaning, and conference rooms included. For founders and remote-first companies that only need the address, see /houston-virtual-office.",
+          "Like Las Vegas, every Houston tier will be month-to-month — no long-term commitment, 30 days' notice to cancel, no buildout delay, no furniture bill. You'll be able to move between tiers any time as headcount and commitment levels change.",
+        ],
+      },
+      relatedServices: [
+        { slug: "houston-day-pass", label: "Houston Day Pass" },
+        { slug: "houston-hot-desk", label: "Houston Hot Desk ($350/mo)" },
+        { slug: "houston-dedicated-desk", label: "Houston Dedicated Desk ($399/mo)" },
+        { slug: "houston-coworking", label: "Houston Coworking (overview)" },
+        { slug: "houston-private-office", label: "Houston Private Office" },
+        { slug: "houston-virtual-office", label: "Houston Virtual Office" },
+        { slug: "houston-meeting-rooms", label: "Houston Meeting Rooms" },
       ],
     },
   },

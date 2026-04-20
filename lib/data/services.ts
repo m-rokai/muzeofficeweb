@@ -235,6 +235,71 @@ export const services: Service[] = [
     ],
   },
   {
+    id: "flexible-workspaces",
+    name: "Flexible Workspaces",
+    shortName: "Flexible Workspaces",
+    shortDescription:
+      "Month-to-month workspace that flexes with your team. Start with a day pass, grow into a hot desk or dedicated desk, and move into a private office without changing buildings.",
+    icon: "Layers",
+    tiers: [
+      {
+        name: "Day Pass",
+        price: 25,
+        priceUnit: "day",
+        features: [
+          "Drop-in for a single day — no membership, no commitment",
+          "Shared desk, fast WiFi, coffee, free parking",
+          "Phone booths for private calls",
+        ],
+      },
+      {
+        name: "Hot Desk",
+        price: 350,
+        priceUnit: "month",
+        features: [
+          "Any-desk monthly membership during business hours",
+          "Meeting room credits and mail handling",
+          "Community events access",
+        ],
+        highlighted: true,
+      },
+      {
+        name: "Dedicated Desk",
+        price: 399,
+        priceUnit: "month",
+        features: [
+          "Reserved desk with personal storage",
+          "24/7 biometric access",
+          "Business address with mail handling",
+        ],
+      },
+      {
+        name: "Private Office",
+        price: null,
+        priceUnit: "month",
+        features: [
+          "Lockable, furnished offices for 1–10+ people",
+          "All utilities, WiFi, cleaning, meeting rooms included",
+          "Same building — upgrade from a desk without moving",
+        ],
+      },
+    ],
+    includedAmenities: [
+      "wifi",
+      "parking",
+      "coffee",
+      "cafe",
+      "phone-booths",
+      "printing",
+      "biometric",
+      "meeting-rooms",
+      "mail-handling",
+      "business-address",
+      "events",
+      "receptionist",
+    ],
+  },
+  {
     id: "private-office",
     name: "Private Office",
     shortName: "Private Office",
