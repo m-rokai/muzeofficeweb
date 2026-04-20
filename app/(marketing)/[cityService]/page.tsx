@@ -19,6 +19,7 @@ import { PricingCard } from "@/components/marketing/pricing-card";
 import { FAQSection } from "@/components/marketing/faq-section";
 import { CTASection } from "@/components/marketing/cta-section";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
+import { ServiceSchema } from "@/components/seo/service-schema";
 import { OptixBookingWidget } from "@/components/marketing/optix-booking-widget";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/marketing/animate";
 import { buttonVariants } from "@/lib/utils/button-variants";
@@ -146,6 +147,7 @@ export default async function CityServicePage({ params }: PageProps) {
   return (
     <>
       {!isComingSoon && <LocalBusinessSchema locationId={ctx.locationId} />}
+      <ServiceSchema serviceId={ctx.serviceId} cityId={ctx.locationId} />
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },
