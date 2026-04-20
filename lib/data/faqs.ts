@@ -349,12 +349,12 @@ const workspaceMembershipsFAQs: FAQ[] = [
   {
     question: "Are memberships month-to-month, or is there a contract?",
     answer:
-      "All Muze Office memberships are month-to-month. No long-term lease, no personal guaranty, no setup fees. Cancel with 30 days' notice.",
+      "Virtual Office, Coworking, and Private Office memberships are month-to-month — no long-term lease, no personal guaranty, no setup fees — cancellable with 30 days' notice. Meeting Rooms and Event Space are booked hourly or by package; see those pages for cancellation windows.",
   },
   {
     question: "What's included with every membership?",
     answer:
-      "Every plan includes high-speed WiFi, unlimited coffee and water, free parking, access to the on-site Muze Cafe, and community events. Coworking and private office plans also include meeting room credits, mail handling, and biometric 24/7 access where applicable.",
+      "In-space plans (Coworking and Private Office) include free parking and high-speed WiFi; Coworking adds unlimited coffee, Muze Cafe access, and meeting room credits, and Dedicated Desk adds 24/7 biometric entry and a business address. Private Office bundles all of the above plus utilities, cleaning, and receptionist. Virtual Office centers on address and mail handling — see each service page for the per-tier breakdown.",
   },
   {
     question: "Is there free parking for members and visitors?",
