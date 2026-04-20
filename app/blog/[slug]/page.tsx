@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
+import remarkGfm from "remark-gfm";
 import { buttonVariants } from "@/lib/utils/button-variants";
 import { Section } from "@/components/layout/section";
 import { cn } from "@/lib/utils";
@@ -151,7 +152,11 @@ export default async function BlogPostPage({
           )}
 
           <div className="prose prose-lg max-w-none prose-headings:font-[family-name:var(--font-plus-jakarta)] prose-headings:font-semibold prose-headings:text-[#1A1A1A] prose-p:text-[#1A1A1A] prose-p:leading-relaxed prose-a:text-[#EAA820] prose-a:no-underline hover:prose-a:underline prose-strong:text-[#1A1A1A] prose-ul:text-[#1A1A1A] prose-ol:text-[#1A1A1A] prose-li:text-[#1A1A1A] prose-blockquote:border-l-[#EAA820] prose-blockquote:text-[#74726D] prose-img:rounded-xl">
-            <MDXRemote source={post.content} components={mdxComponents} />
+            <MDXRemote
+              source={post.content}
+              components={mdxComponents}
+              options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+            />
           </div>
         </div>
       </Section>
