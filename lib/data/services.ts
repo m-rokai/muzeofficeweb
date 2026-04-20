@@ -22,7 +22,7 @@ export const services: Service[] = [
     name: "Virtual Office",
     shortName: "Virtual Office",
     shortDescription:
-      "Professional business address with mail handling, conference room access, and coworking hours. No lease required.",
+      "A real business address for your LLC with mail handling, mail forwarding on upper tiers, and meeting room access. No lease required.",
     icon: "Mail",
     tiers: [
       {
