@@ -306,7 +306,6 @@ export const cityServiceData: Record<string, CityServiceData> = {
             "One-day trial lets you try every amenity before committing — WiFi, phone booths, coffee, parking, the vibe",
             "If you come back more than about a week a month, the Hot Desk at $350/month starts to pay for itself",
             "No upsell at the door — pay $25, work, leave, decide later",
-            "Day-pass receipts can be applied toward your first month if you upgrade within 30 days",
           ],
         },
       ],
@@ -331,7 +330,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         paragraphs: [
           "Walk in Monday through Friday between 10am and 7pm at 6860 Bermuda Rd, Suite 200. Show your ID at the front desk, pay for the Day Pass ($25), and we'll point you to an open desk. The whole process takes about five minutes. If you're arriving during a major convention week (CES, SEMA, NAB, MAGIC, etc.) it's worth booking online the day before so your spot is reserved — but most days, walk-in is fine.",
           "The Day Pass covers desk access, WiFi, unlimited coffee and water, free parking, phone-booth access for private calls, printing, and the on-site Muze Cafe. Meeting rooms are a separate booking at $25-$75/hour and can be reserved by the hour online. If you need to take a client call during your day, a Huddle Room ($25/hr) is usually the right call.",
-          "If you come back more than one week a month, move to a Hot Desk or Dedicated Desk. See /las-vegas-hot-desk for the monthly business-hours shape, or /las-vegas-dedicated-desk for reserved desk + 24/7 + business address. Day-pass receipts can usually be applied toward your first month if you upgrade within 30 days — ask at the front desk when you come in.",
+          "If you come back more than one week a month, move to a Hot Desk or Dedicated Desk. See /las-vegas-hot-desk for the monthly business-hours shape, or /las-vegas-dedicated-desk for reserved desk + 24/7 + business address.",
         ],
       },
       relatedServices: [
@@ -420,7 +419,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to get started with a Hot Desk in Las Vegas",
         paragraphs: [
-          "Start with a Day Pass ($25) if you haven't been in the space yet — use it to try a typical weekday in the coworking area, test the WiFi on a real video call, check the commute from where you live, and see how the community fits. Most Hot Desk members sign up after one or two day-pass visits. Day-pass receipts can usually be applied toward your first month if you upgrade within 30 days.",
+          "Start with a Day Pass ($25) if you haven't been in the space yet — use it to try a typical weekday in the coworking area, test the WiFi on a real video call, check the commute from where you live, and see how the community fits. Most Hot Desk members sign up after one or two day-pass visits.",
           "When you're ready to sign up, Hot Desk is month-to-month. No setup fee, no personal guaranty, no 12-month commitment. You can pause your membership for a month if you're traveling — just let us know in advance. Cancellations are 30 days' notice, same as the other tiers. Mail handling is included; if you want to start using 6860 Bermuda Rd, Suite 200 as your business address, we'll set that up the day you sign up.",
           "If you later realize you need 24/7 access, a reserved desk, or a business address with mail forwarding, upgrade to Dedicated Desk ($399/month) — see /las-vegas-dedicated-desk. If you grow a team and need wall privacy, move to a Private Office — see /las-vegas-private-office. And if you're here less than a week a month, the Day Pass at /las-vegas-day-pass is probably still the right fit.",
         ],
@@ -1375,7 +1374,6 @@ export const cityServiceData: Record<string, CityServiceData> = {
             "One-day trial lets you try every amenity before committing — WiFi, phone booths, coffee, parking, the vibe",
             "If you come back more than about a week a month, the Hot Desk at $350/month starts to pay for itself",
             "No upsell at the door — pay $25, work, leave, decide later",
-            "Day-pass receipts can be applied toward your first month if you upgrade within 30 days",
           ],
         },
       ],
@@ -1400,7 +1398,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         paragraphs: [
           "Muze Office Houston is opening soon at 1800 Augusta Dr. Join the waitlist to lock in pre-launch pricing and to get the opening-day schedule for Day Passes. When we open, walk-in Day Passes will be available during business hours — show your ID at the front desk, pay $25, and we'll point you to an open desk. Booking online the day before guarantees a spot during busier weeks.",
           "The Day Pass will cover desk access, WiFi, unlimited coffee and water, free parking, phone-booth access for private calls, printing, and the on-site Muze Cafe. Meeting rooms will be a separate booking at $25-$75/hour and reservable by the hour online. If you need to take a client call during your day, a Huddle Room will be the right call.",
-          "If you come back more than one week a month, move to a Hot Desk or Dedicated Desk. See /houston-hot-desk for the monthly business-hours shape, or /houston-dedicated-desk for reserved desk + 24/7 + business address. Day-pass receipts can usually be applied toward your first month if you upgrade within 30 days.",
+          "If you come back more than one week a month, move to a Hot Desk or Dedicated Desk. See /houston-hot-desk for the monthly business-hours shape, or /houston-dedicated-desk for reserved desk + 24/7 + business address.",
         ],
       },
       relatedServices: [

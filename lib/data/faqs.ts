@@ -362,11 +362,6 @@ const dayPassFAQs: FAQ[] = [
       "Yes. Free parking is included for every Day Pass visitor at our Las Vegas location — no meters, no valet, no garage fees. That matters in Las Vegas where Strip hotel day-use garages charge $35-45/day.",
   },
   {
-    question: "If I upgrade from Day Pass to a monthly plan, can I apply what I paid?",
-    answer:
-      "Usually, yes. Day-pass receipts can typically be applied toward your first month if you upgrade to a Hot Desk or Dedicated Desk within 30 days. Ask at the front desk when you come in — the team will track it so you don't have to.",
-  },
-  {
     question: "What's the difference between a Day Pass and a Hot Desk membership?",
     answer:
       "A Day Pass is $25 per day with no commitment — right for drop-in use. A Hot Desk is $350/month for any-desk business-hours access, plus meeting room credits, mail handling, and community events. The math flips in Hot Desk's favor around the 14th-15th day per month. If you're in the space more than about a week a month, Hot Desk is usually the better deal.",
