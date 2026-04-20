@@ -109,6 +109,17 @@ const nextConfig: NextConfig = {
       ...autoBlogRedirects,
     ]);
   },
+  // LLM / markdown readiness. The `/md/...` route handlers own the
+  // rendering; these rewrites let LLMs fetch the canonical `.md` URL
+  // format that the llms.txt standard expects without having to expose
+  // an `/md/` path to humans.
+  async rewrites() {
+    return [
+      { source: "/blog/:slug.md", destination: "/md/blog/:slug" },
+      { source: "/locations/:city.md", destination: "/md/locations/:city" },
+      { source: "/:slug.md", destination: "/md/:slug" },
+    ];
+  },
 };
 
 export default nextConfig;
