@@ -107,7 +107,7 @@ export default function ContactPage() {
             </Card>
             </FadeIn>
 
-            {/* Houston — Coming Soon */}
+            {/* Houston */}
             <FadeIn delay={0.2}>
             <Card className="border-[#E6E4DF] bg-white">
               <CardContent className="flex flex-col gap-4 p-6">
@@ -115,15 +115,19 @@ export default function ContactPage() {
                   <h2 className="font-[family-name:var(--font-plus-jakarta)] text-xl font-semibold">
                     Muze Office Houston
                   </h2>
-                  <Badge variant="secondary" className="text-xs">
-                    Coming Soon
+                  <Badge className="bg-[#EAA820] text-white hover:bg-[#C17A28] text-xs">
+                    Open
                   </Badge>
                 </div>
                 <p className="text-sm text-[#74726D]">
-                  Our Houston location near the Galleria and Texas Medical Center is
-                  on the way. Sign up for updates or reach out with questions.
+                  Inside the 610 Loop in the Galleria / Tanglewood area. Free
+                  parking on-site — no Post Oak garage fees.
                 </p>
                 <ul className="flex flex-col gap-3">
+                  <li className="flex items-start gap-3 text-sm text-[#74726D]">
+                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#EAA820]" />
+                    <span>1800 Augusta Dr, Houston, TX 77057</span>
+                  </li>
                   <li className="flex items-center gap-3 text-sm text-[#74726D]">
                     <Mail className="h-4 w-4 shrink-0 text-[#EAA820]" />
                     <a

@@ -15,9 +15,9 @@ import { FadeIn, ScaleIn } from "@/components/marketing/animate";
 import { BRAND } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
-  title: "Locations — Muze Office Las Vegas",
+  title: "Locations — Muze Office Las Vegas & Houston",
   description:
-    "Visit Muze Office at 6860 Bermuda Rd, Suite 200 in Las Vegas — 10 minutes from the airport with free parking. Houston location coming soon.",
+    "Visit Muze Office at 6860 Bermuda Rd, Suite 200 in Las Vegas or 1800 Augusta Dr inside the 610 Loop in Houston. Two active locations, free parking at both.",
   alternates: { canonical: "/locations" },
 };
 
@@ -56,8 +56,9 @@ export default function LocationsPage() {
               Our Locations
             </h1>
             <p className="mt-4 text-base text-[#74726D] md:text-lg">
-              Flexible workspace in two growing cities. Las Vegas is open now.
-              Houston is on the way.
+              Two active locations — Las Vegas (6860 Bermuda Rd, Suite 200) and
+              Houston (1800 Augusta Dr in the Galleria / Tanglewood area). Free
+              parking at both.
             </p>
           </div>
         </FadeIn>
@@ -77,7 +78,7 @@ export default function LocationsPage() {
                   alt={
                     loc.slug === "las-vegas"
                       ? `Muze Office ${loc.name} coworking and private office building at 6860 Bermuda Rd, Suite 200, 10 minutes from Harry Reid International Airport`
-                      : `Muze Office ${loc.name} — upcoming flexible workspace near the Galleria and Uptown district`
+                      : `Muze Office ${loc.name} coworking and private office building at 1800 Augusta Dr inside the 610 Loop in the Galleria / Tanglewood area`
                   }
                   fill
                   className="object-cover"

@@ -22,8 +22,8 @@ export function SiteFooter() {
               />
             </Link>
             <p className="text-sm text-gray-400">
-              Flexible workspace in Las Vegas &mdash; month-to-month memberships,
-              no long-term leases. Houston coming soon.
+              Flexible workspace in Las Vegas and Houston &mdash; month-to-month
+              memberships, no long-term leases.
             </p>
             <p className="text-sm text-gray-500">
               &copy; 2023&ndash;{new Date().getFullYear()} Muze International Corporation. All

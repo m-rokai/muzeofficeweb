@@ -68,9 +68,9 @@ const coreServices = services.filter((s) =>
 );
 
 const homepageFAQs = [
-  { question: "What is Muze Office?", answer: "Muze Office is a flexible workspace provider in Las Vegas (and coming soon to Houston) offering coworking, virtual offices, private offices, meeting rooms, and event space. All memberships are month-to-month with no long-term leases." },
+  { question: "What is Muze Office?", answer: "Muze Office is a flexible workspace provider in Las Vegas and Houston offering coworking, virtual offices, private offices, meeting rooms, and event space. All memberships are month-to-month with no long-term leases." },
   { question: "Do I need a membership to use the space?", answer: "No. Day passes are available for anyone — no membership or commitment required. Walk in or book ahead. We also offer monthly memberships for hot desks, dedicated desks, and private offices." },
-  { question: "Where is Muze Office located?", answer: "Our Las Vegas location is at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 — just 10 minutes from Harry Reid International Airport via I-215 W. Free parking is included for all members and day pass holders." },
+  { question: "Where is Muze Office located?", answer: "Two active locations: Las Vegas at 6860 Bermuda Rd, Suite 200 (10 minutes from Harry Reid International Airport via I-215 W), and Houston at 1800 Augusta Dr, 77057 (inside the 610 Loop in the Galleria / Tanglewood area). Free parking included at both." },
   { question: "What are your hours?", answer: "Monday through Friday, 10am to 7pm. Members with dedicated desks and private offices have 24/7 access via biometric entry." },
   { question: "Is there parking?", answer: "Yes — free parking for all members, day pass holders, meeting room guests, and event attendees. No meters, no valet fees, no parking garage charges." },
   { question: "Can I book a meeting room without a membership?", answer: "Yes. Meeting rooms are available by the hour to anyone — no membership required. All rooms include AV equipment, video conferencing, whiteboards, and WiFi. Huddle rooms start at $25/hr." },
@@ -105,7 +105,7 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn delay={0.35}>
             <p className="mt-6 max-w-[580px] text-lg leading-relaxed text-gray-300 md:text-xl">
-              Month-to-month coworking, virtual offices, private offices, meeting rooms, and event space at 6860 Bermuda Rd, Suite 200. No long-term leases. Free parking. 10 minutes from Harry Reid International Airport. Houston coming soon.
+              Month-to-month coworking, virtual offices, private offices, meeting rooms, and event space in Las Vegas (6860 Bermuda Rd, Suite 200) and Houston (1800 Augusta Dr, Galleria / Tanglewood). No long-term leases. Free parking. Two active locations.
             </p>
           </FadeIn>
           <FadeIn delay={0.5}>
@@ -225,40 +225,16 @@ export default function HomePage() {
         </StaggerContainer>
       </Section>
 
-      {/* Houston — Coming Soon (single card, not full service grid) */}
-      <Section>
-        <FadeIn>
-          <div className="mx-auto max-w-[720px]">
-            <Card className="border-[#E6E4DF] bg-white">
-              <CardContent className="flex flex-col items-center gap-4 p-8 text-center">
-                <Badge className="bg-[#1A1A1A]/10 text-[#1A1A1A] border border-[#1A1A1A]/10 text-sm px-3 py-1">
-                  <MapPin className="mr-1.5 h-3.5 w-3.5" /> Coming Soon
-                </Badge>
-                <h2 className="text-2xl font-semibold md:text-3xl">
-                  Houston, Texas
-                </h2>
-                <p className="max-w-[480px] text-base text-[#74726D]">
-                  We&apos;re expanding to Houston near the Galleria and Uptown district. Texas has no state income tax. Join the waitlist for early access.
-                </p>
-                <Link href="/locations/houston" className={cn(buttonVariants({ variant: "outline" }), "rounded-xl h-12 px-6 text-base mt-2")}>
-                  Learn More <ArrowRight className="ml-1.5 h-4 w-4" />
-                </Link>
-              </CardContent>
-            </Card>
-          </div>
-        </FadeIn>
-      </Section>
-
       {/* Locations */}
       <Section>
         <FadeIn>
           <div className="mb-14 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 className="text-3xl font-semibold md:text-4xl lg:text-5xl">
-                Coworking in Las Vegas
+                Coworking in Las Vegas &amp; Houston
               </h2>
               <p className="mt-4 max-w-[600px] text-lg text-[#74726D]">
-                Visit Muze Office at 6860 Bermuda Rd, Suite 200 in Las Vegas — 10 minutes from the airport with free parking.
+                Two active locations: 6860 Bermuda Rd in Las Vegas (10 minutes from Harry Reid International Airport) and 1800 Augusta Dr in Houston (inside the 610 Loop in the Galleria / Tanglewood area). Free parking at both.
               </p>
             </div>
             <Link href="/locations" className={cn(buttonVariants({ variant: "outline" }), "w-fit rounded-xl h-12 px-6 text-base")}>
@@ -276,7 +252,7 @@ export default function HomePage() {
                     alt={
                       loc.slug === "las-vegas"
                         ? "Muze Office Las Vegas exterior at 6860 Bermuda Rd, Suite 200 near Harry Reid International Airport"
-                        : "Muze Office Houston location coming soon near the Galleria and Uptown district"
+                        : "Muze Office Houston at 1800 Augusta Dr inside the 610 Loop in the Galleria / Tanglewood area"
                     }
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"

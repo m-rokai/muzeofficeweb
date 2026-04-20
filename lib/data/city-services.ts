@@ -1423,9 +1423,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Day Pass at Muze Office Houston",
     heroSubtitle:
       "Drop in for a single day of focused work in the Galleria — no membership, no setup, no commitment. Walk in with a laptop, plug into fast WiFi, and keep your day moving.",
-    metaTitle: "Day Pass Houston Coworking | Coming Soon",
+    metaTitle: "Day Pass Houston Coworking | $25/day",
     metaDescription:
-      "Day pass coworking in Houston at 1800 Augusta Dr in the Galleria — $25, walk-in, no membership. Real desk, fast WiFi, unlimited coffee, free parking. Coming soon to Muze Office Houston.",
+      "Day pass coworking in Houston at 1800 Augusta Dr in the Galleria — $25, walk-in, no membership. Real desk, fast WiFi, unlimited coffee, free parking. Inside the 610 Loop.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Freelancers and consultants here for a single Galleria-area workday",
@@ -1513,9 +1513,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Hot Desk in Houston",
     heroSubtitle:
       "Any-desk monthly coworking in the Galleria for remote workers and consultants in the space three-to-five days a week. Meeting room credits, mail handling, and community events included — all on month-to-month terms.",
-    metaTitle: "Hot Desk Houston | Coming Soon | Muze Office",
+    metaTitle: "Hot Desk Houston | $350/mo | Muze Office",
     metaDescription:
-      "Hot Desk coworking in Houston at 1800 Augusta Dr in the Galleria — $350/month, any-desk business-hours access, meeting room credits, mail handling, free parking. Coming soon to Muze Office Houston.",
+      "Hot Desk coworking in Houston at 1800 Augusta Dr in the Galleria — $350/month, any-desk business-hours access, meeting room credits, mail handling, free parking. Month-to-month.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Remote workers in the space three-to-five days a week",
@@ -1604,9 +1604,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Dedicated Desk in Houston",
     heroSubtitle:
       "Your own reserved desk in the Galleria, personal storage, 24/7 biometric access, meeting room credits, and a business address with mail. Month-to-month terms — the most committed coworking tier short of a private office.",
-    metaTitle: "Dedicated Desk Houston | Coming Soon | Muze",
+    metaTitle: "Dedicated Desk Houston | $399/mo | Muze",
     metaDescription:
-      "Dedicated Desk coworking in Houston at 1800 Augusta Dr in the Galleria — $399/month, reserved desk, personal storage, 24/7 biometric entry, business address, meeting room credits. Coming soon.",
+      "Dedicated Desk coworking in Houston at 1800 Augusta Dr in the Galleria — $399/month, reserved desk, personal storage, 24/7 biometric entry, business address, meeting room credits.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Remote workers who want a permanent Galleria-area desk with dual monitors",
@@ -1695,9 +1695,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Flexible Workspaces in Houston",
     heroSubtitle:
       "One Galleria building, four commitment levels. Start with a day pass, move up to a hot desk or dedicated desk, and grow into a private office when the team does — all month-to-month, all at 1800 Augusta Dr.",
-    metaTitle: "Flexible Workspaces Houston | Coming Soon",
+    metaTitle: "Flexible Workspaces Houston | Day Pass to Private Office",
     metaDescription:
-      "Flexible workspaces in Houston at 1800 Augusta Dr inside the 610 Loop. Day pass, hot desk, dedicated desk, and private offices — month-to-month, no long-term lease. Coming soon to Muze Office Houston.",
+      "Flexible workspaces in Houston at 1800 Augusta Dr inside the 610 Loop. Day pass, hot desk, dedicated desk, and private offices — month-to-month, no long-term lease.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Startups scaling from 3 to 8 people without signing a new lease",
@@ -1989,9 +1989,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Conference Rooms in Houston",
     heroSubtitle:
       "Corporate conference rooms in the Galleria by the hour for client pitches, board meetings, depositions, and investor updates. Video conferencing, dual-screen boardroom option, and free parking included.",
-    metaTitle: "Conference Rooms Houston | Coming Soon",
+    metaTitle: "Conference Rooms Houston | From $50/hr",
     metaDescription:
-      "Book a Houston conference room at 1800 Augusta Dr inside the 610 Loop from $50/hr. Video conferencing, dual-screen boardroom, free parking. Coming soon to Muze Office Houston.",
+      "Book a Houston conference room at 1800 Augusta Dr inside the 610 Loop from $50/hr. Video conferencing, dual-screen boardroom, free parking. Month-to-month bookings.",
     heroImage: "/images/hero/meeting-room.jpg",
     useCases: [
       "Board meetings and quarterly reviews",

@@ -253,24 +253,24 @@ const galleriaCoworkingFAQs: FAQ[] = [
       "We'll offer Day Passes, Hot Desk monthly memberships, and Dedicated Desk monthly memberships — the same flexible options as our Las Vegas location. Pricing will be announced closer to opening.",
   },
   {
-    question: "Will parking be included?",
+    question: "Is parking included?",
     answer:
-      "Yes. Parking will be included for all members and day pass visitors, just like our Las Vegas location.",
+      "Yes. Free parking is included for all members and day pass visitors at our Houston Galleria location — no Post Oak garage fees.",
   },
   {
-    question: "When is the Houston location opening?",
+    question: "Where is the Houston location?",
     answer:
-      "Our Houston Galleria location is coming soon. Join our waitlist to be the first to know about opening dates and early-bird pricing.",
+      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd and the Houston Galleria.",
   },
   {
-    question: "Will meeting rooms be available?",
+    question: "Are meeting rooms available?",
     answer:
-      "Yes. The Houston location will include huddle rooms, conference rooms, and a boardroom — all equipped with AV and video conferencing.",
+      "Yes. Our Houston location offers huddle rooms, conference rooms, and a boardroom — all equipped with AV and video conferencing and bookable by the hour.",
   },
   {
     question: "Can I use my Las Vegas membership in Houston?",
     answer:
-      "We plan to offer multi-city membership options. Stay tuned for details as we get closer to the Houston opening.",
+      "We offer multi-city membership options so members can work from either Las Vegas or Houston. Contact us for details.",
   },
 ];
 
@@ -296,9 +296,9 @@ const medicalCenterCoworkingFAQs: FAQ[] = [
       "Yes. Day passes will be available for medical professionals who need flexible workspace near the Medical Center without a monthly commitment.",
   },
   {
-    question: "When is this location opening?",
+    question: "Where is this Houston location?",
     answer:
-      "Our Houston Medical Center-area coworking is coming soon. Join our waitlist to be notified about opening dates and early access.",
+      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop, approximately 15 minutes from the Texas Medical Center via I-610 West Loop.",
   },
   {
     question: "What amenities will be included?",
@@ -503,22 +503,22 @@ const locationsOverviewFAQs: FAQ[] = [
   {
     question: "Where is Muze Office located?",
     answer:
-      "Our active Las Vegas location is at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 — about 10 minutes from Harry Reid International Airport, off I-215 and away from Strip traffic. A Houston location is coming soon near the Galleria and Uptown district.",
+      "Two active locations: Las Vegas at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 (10 minutes from Harry Reid International Airport, off I-215); and Houston at 1800 Augusta Dr, Houston, TX 77057 (inside the 610 Loop in the Galleria / Tanglewood area).",
   },
   {
-    question: "Which city is open right now?",
+    question: "Which cities are open?",
     answer:
-      "Las Vegas is open and accepting members, day pass visitors, and meeting room bookings. Houston is coming soon — join the waitlist via our contact page for early access.",
+      "Both Las Vegas and Houston are open and accepting members, day pass visitors, and meeting room bookings.",
   },
   {
-    question: "When is the Houston location opening?",
+    question: "How do I find the Houston location?",
     answer:
-      "Our Houston location is coming soon in the Galleria / Uptown area near I-610 West Loop. Exact address and opening date will be announced — join our waitlist to be the first to know.",
+      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, 15 minutes from the Texas Medical Center, and 25 minutes from George Bush Intercontinental (IAH) and William P. Hobby (HOU).",
   },
   {
     question: "Do you offer multi-city memberships?",
     answer:
-      "We plan to offer multi-city membership options once Houston opens so members can work from either location. Details will be shared closer to the Houston opening.",
+      "Yes. Multi-city membership options are available so members can work from either Las Vegas or Houston. Contact us for details.",
   },
   {
     question: "Is parking available at each location?",

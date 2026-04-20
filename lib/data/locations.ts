@@ -83,7 +83,7 @@ export const locations: Location[] = [
     name: "Houston",
     nickname: "Muze Office Houston",
     slug: "houston",
-    status: "coming-soon",
+    status: "active",
     address: {
       street: "1800 Augusta Dr",
       city: "Houston",
@@ -92,8 +92,8 @@ export const locations: Location[] = [
       country: "US",
     },
     geo: { lat: 29.7573, lng: -95.4868 },
-    phone: "TBD",
-    phoneRaw: "",
+    phone: "(702) 370-7515",
+    phoneRaw: "+17023707515",
     email: "access@muzeoffice.com",
     hours: {
       weekdays: { open: "10:00", close: "19:00" },
