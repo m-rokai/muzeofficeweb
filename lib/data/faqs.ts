@@ -85,7 +85,7 @@ const meetingRoomFAQs: FAQ[] = [
   {
     question: "How do I book a meeting room?",
     answer:
-      "You can book online through our website or the Muze Office app. Select your room size, date, and time, and you'll receive an instant confirmation. Walk-in bookings are available based on availability.",
+      "For Las Vegas meeting rooms, book online directly from the Las Vegas Meeting Rooms page — select room size, date, and time for instant confirmation. For Houston meeting rooms, use our contact form or call us to reserve. Walk-in bookings are available based on availability at both locations.",
   },
   {
     question: "Is catering available for meetings?",
@@ -128,7 +128,7 @@ const conferenceRoomFAQs: FAQ[] = [
   {
     question: "How do I book a conference room?",
     answer:
-      "Book online by the hour or call us. Same-day bookings are usually possible outside of peak hours. Virtual office and coworking members already have monthly meeting room credits that can cover part or all of a booking.",
+      "Reserve a conference room by the hour through our contact form or by calling (702) 370-7515. Same-day bookings are usually possible outside of peak hours. Virtual office and coworking members already have monthly meeting room credits that can cover part or all of a booking.",
   },
   {
     question: "Is catering available for conference-room meetings?",
@@ -349,7 +349,7 @@ const dayPassFAQs: FAQ[] = [
   {
     question: "Do I need a membership or reservation to use a Day Pass?",
     answer:
-      "No. Day Passes are walk-in. Show up Monday through Friday between 10am and 7pm at 6860 Bermuda Rd, Suite 200 in Las Vegas, show your ID at the front desk, pay $25, and you're at a working desk within five minutes. You can book online if you want to lock in a spot during a busy convention week, but most days walk-in availability is fine.",
+      "No. Day Passes are walk-in. Show up Monday through Friday between 10am and 7pm at your Muze Office location, show your ID at the front desk, pay $25, and you're at a working desk within five minutes. Contact the front desk if you want to lock in a spot during a particularly busy week.",
   },
   {
     question: "What are the Day Pass hours?",
@@ -359,7 +359,7 @@ const dayPassFAQs: FAQ[] = [
   {
     question: "Is parking free with a Day Pass?",
     answer:
-      "Yes. Free parking is included for every Day Pass visitor at our Las Vegas location — no meters, no valet, no garage fees. That matters in Las Vegas where Strip hotel day-use garages charge $35-45/day.",
+      "Yes. Free parking is included for every Day Pass visitor — no meters, no valet, no garage fees.",
   },
   {
     question: "What's the difference between a Day Pass and a Hot Desk membership?",
@@ -387,7 +387,7 @@ const hotDeskFAQs: FAQ[] = [
   {
     question: "Do Hot Desk members get a business address?",
     answer:
-      "Hot Desk includes mail handling at the 6860 Bermuda Rd, Suite 200 address — you can receive LLC, tax, and business correspondence there and pick it up during business hours. A formal business-address-only product (with package receiving and mail forwarding) is the Virtual Office tier. Dedicated Desk ($399/mo) bundles a business address as part of the tier.",
+      "Hot Desk includes mail handling at your Muze Office location — you can receive LLC, tax, and business correspondence there and pick it up during business hours. A formal business-address-only product (with package receiving and mail forwarding) is the Virtual Office tier. Dedicated Desk ($399/mo) bundles a business address as part of the tier.",
   },
   {
     question: "How many meeting room hours come with Hot Desk?",
@@ -415,7 +415,7 @@ const dedicatedDeskFAQs: FAQ[] = [
   {
     question: "Is the business address real, or a PO Box?",
     answer:
-      "It's a real commercial suite address — 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119. Not a PO Box. Accepted by the Nevada Secretary of State for LLC filings, usable on Google Business Profile, and usable on contracts. Some members drop a separate Virtual Office subscription when they move up to Dedicated Desk because the mail-and-address piece is already bundled in.",
+      "It's a real commercial suite address at your Muze Office location — not a PO Box. Accepted by the Secretary of State for LLC filings, usable on Google Business Profile, and usable on contracts. Some members drop a separate Virtual Office subscription when they move up to Dedicated Desk because the mail-and-address piece is already bundled in.",
   },
   {
     question: "What's the difference between Dedicated Desk and a Private Office?",

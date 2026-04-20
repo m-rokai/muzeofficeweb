@@ -103,7 +103,7 @@ export const services: Service[] = [
         price: 350,
         priceUnit: "month",
         features: [
-          "Shared desk access anytime",
+          "Shared desk access during business hours",
           "Meeting room credits",
           "Mail handling",
           "Community events access",
@@ -178,7 +178,7 @@ export const services: Service[] = [
         price: 350,
         priceUnit: "month",
         features: [
-          "Shared desk access anytime",
+          "Shared desk access during business hours",
           "Meeting room credits",
           "Mail handling",
           "Community events access",
@@ -597,13 +597,13 @@ export const services: Service[] = [
     tiers: [
       {
         name: "Day Pass",
-        price: null,
+        price: 25,
         priceUnit: "day",
         features: ["Desk, WiFi, coffee, parking"],
       },
       {
         name: "Hot Desk",
-        price: null,
+        price: 350,
         priceUnit: "month",
         features: [
           "Shared desk, WiFi, coffee",
@@ -614,7 +614,7 @@ export const services: Service[] = [
       },
       {
         name: "Dedicated Desk",
-        price: null,
+        price: 399,
         priceUnit: "month",
         features: [
           "Reserved desk, storage",
@@ -644,13 +644,13 @@ export const services: Service[] = [
     tiers: [
       {
         name: "Day Pass",
-        price: null,
+        price: 25,
         priceUnit: "day",
         features: ["Desk, WiFi, coffee, parking"],
       },
       {
         name: "Hot Desk",
-        price: null,
+        price: 350,
         priceUnit: "month",
         features: [
           "Shared desk, WiFi, coffee",
@@ -661,7 +661,7 @@ export const services: Service[] = [
       },
       {
         name: "Dedicated Desk",
-        price: null,
+        price: 399,
         priceUnit: "month",
         features: [
           "Reserved desk, storage",

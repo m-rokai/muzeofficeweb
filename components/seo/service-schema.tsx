@@ -61,6 +61,10 @@ export function ServiceSchema({ serviceId, cityId }: ServiceSchemaProps) {
   const service = getService(serviceId);
   const location = getLocation(cityId);
   if (!service || !location) return null;
+  // Don't publish priced, "InStock" offers for locations that aren't live yet.
+  // Mirrors LocalBusinessSchema gating so crawlers only see schema for
+  // locations with a real address, phone, and operating status.
+  if (location.status !== "active") return null;
 
   const offers = service.tiers
     .map(buildOffer)

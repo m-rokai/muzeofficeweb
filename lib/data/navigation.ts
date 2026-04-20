@@ -7,32 +7,8 @@ export interface NavItem {
 
 export const mainNav: NavItem[] = [
   { label: "Home", href: "/" },
-  {
-    label: "Locations",
-    href: "/locations",
-    children: [
-      { label: "Las Vegas", href: "/locations/las-vegas" },
-    ],
-  },
-  {
-    label: "Memberships",
-    href: "/workspace-memberships",
-    children: [
-      { label: "Flexible Workspaces", href: "/las-vegas-flexible-workspaces" },
-      { label: "Virtual Office", href: "/las-vegas-virtual-office" },
-      {
-        label: "Coworking",
-        href: "/las-vegas-coworking",
-        children: [
-          { label: "Day Pass ($25/day)", href: "/las-vegas-day-pass" },
-          { label: "Hot Desk ($350/mo)", href: "/las-vegas-hot-desk" },
-          { label: "Dedicated Desk ($399/mo)", href: "/las-vegas-dedicated-desk" },
-        ],
-      },
-      { label: "Private Offices", href: "/las-vegas-private-office" },
-      { label: "Meeting Rooms", href: "/las-vegas-meeting-rooms" },
-    ],
-  },
+  { label: "Locations", href: "/locations" },
+  { label: "Memberships", href: "/workspace-memberships" },
   { label: "Events", href: "/las-vegas-event-space" },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },

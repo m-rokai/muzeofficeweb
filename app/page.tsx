@@ -64,7 +64,7 @@ const amenities = [
 ];
 
 const coreServices = services.filter((s) =>
-  ["virtual-office", "coworking", "private-office", "meeting-rooms", "event-space"].includes(s.id)
+  ["virtual-office", "coworking", "private-office", "meeting-rooms", "conference-rooms", "event-space"].includes(s.id)
 );
 
 const homepageFAQs = [

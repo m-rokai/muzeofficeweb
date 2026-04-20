@@ -39,6 +39,7 @@ const coreServiceIds = [
   "coworking",
   "private-office",
   "meeting-rooms",
+  "conference-rooms",
   "event-space",
 ];
 
