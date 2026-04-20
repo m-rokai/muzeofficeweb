@@ -109,6 +109,39 @@ const meetingRoomFAQs: FAQ[] = [
   },
 ];
 
+const conferenceRoomFAQs: FAQ[] = [
+  {
+    question: "What is the difference between a Conference Room and a Boardroom at Muze Office?",
+    answer:
+      "The Conference Room ($50/hr) seats 6-8 around a single table with a large display and video conferencing — the right fit for client pitches, sales meetings, and team presentations. The Boardroom ($75/hr) seats 10-14 with dual screens and a sound system — built for board meetings, workshops, and legal depositions where the formality matters.",
+  },
+  {
+    question: "What AV equipment is included in every conference room?",
+    answer:
+      "Every conference room includes a large display, video conferencing capability, high-speed WiFi, and whiteboards. The Boardroom adds dual screens and a sound system. You do not need to bring your own equipment.",
+  },
+  {
+    question: "Can I host a legal deposition or mediation in a conference room?",
+    answer:
+      "Yes. The Boardroom is sized for depositions, mediations, and sworn testimony with up to 14 seats, dual screens for exhibit review, and a sound system that handles recorded testimony. Free parking is available for witnesses, counsel, and the court reporter.",
+  },
+  {
+    question: "How do I book a conference room?",
+    answer:
+      "Book online by the hour or call us. Same-day bookings are usually possible outside of peak hours. Virtual office and coworking members already have monthly meeting room credits that can cover part or all of a booking.",
+  },
+  {
+    question: "Is catering available for conference-room meetings?",
+    answer:
+      "Yes. Our on-site Muze Cafe provides coffee service, pastries, sandwich trays, and full lunch — coordinated with your booking so setup is handled before your attendees arrive.",
+  },
+  {
+    question: "Is parking included for attendees?",
+    answer:
+      "Yes. Free parking is included for you and every attendee — no validation needed, no valet fees. This is a common differentiator from hotel conference rooms on the Strip or in the Galleria that charge attendees to park.",
+  },
+];
+
 const eventSpaceFAQs: FAQ[] = [
   {
     question: "What is the capacity of the event space?",
@@ -313,6 +346,7 @@ export const faqsByService: FAQsByService = {
   coworking: coworkingFAQs,
   "private-office": privateOfficeFAQs,
   "meeting-rooms": meetingRoomFAQs,
+  "conference-rooms": conferenceRoomFAQs,
   "event-space": eventSpaceFAQs,
   "airport-coworking": airportCoworkingFAQs,
   "convention-coworking": conventionCoworkingFAQs,

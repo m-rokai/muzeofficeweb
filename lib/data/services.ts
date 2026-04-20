@@ -241,6 +241,47 @@ export const services: Service[] = [
     ],
   },
   {
+    id: "conference-rooms",
+    name: "Conference Rooms",
+    shortName: "Conference Rooms",
+    shortDescription:
+      "Corporate-grade conference rooms available by the hour for board meetings, client pitches, depositions, and investor updates. AV equipment, video conferencing, and free parking included.",
+    icon: "Presentation",
+    tiers: [
+      {
+        name: "Conference Room",
+        price: 50,
+        priceUnit: "hour",
+        features: [
+          "6-8 people",
+          "Large display, video conferencing",
+          "Client meetings, presentations",
+        ],
+        highlighted: true,
+      },
+      {
+        name: "Boardroom",
+        price: 75,
+        priceUnit: "hour",
+        features: [
+          "10-14 people",
+          "Dual screens, sound system",
+          "Board meetings, workshops, depositions",
+        ],
+      },
+    ],
+    includedAmenities: [
+      "av-equipment",
+      "video-conferencing",
+      "wifi",
+      "parking",
+      "whiteboards",
+      "coffee",
+      "receptionist",
+      "flexible-setup",
+    ],
+  },
+  {
     id: "event-space",
     name: "Event Space",
     shortName: "Event Space",

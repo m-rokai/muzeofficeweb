@@ -443,9 +443,100 @@ export const cityServiceData: Record<string, CityServiceData> = {
         ],
       },
       relatedServices: [
+        { slug: "las-vegas-conference-rooms", label: "Las Vegas Conference Rooms" },
         { slug: "las-vegas-event-space", label: "Las Vegas Event Space" },
         { slug: "las-vegas-virtual-office", label: "Las Vegas Virtual Office" },
         { slug: "las-vegas-coworking", label: "Las Vegas Coworking" },
+      ],
+    },
+  },
+
+  "las-vegas-conference-rooms": {
+    slug: "las-vegas-conference-rooms",
+    cityId: "las-vegas",
+    serviceId: "conference-rooms",
+    h1: "Conference Rooms in Las Vegas",
+    heroSubtitle:
+      "Corporate conference rooms by the hour for client pitches, board meetings, depositions, and investor updates. Video conferencing, dual-screen boardroom option, and free parking included.",
+    metaTitle: "Conference Rooms Las Vegas | From $50/hr",
+    metaDescription:
+      "Book a Las Vegas conference room at 6860 Bermuda Rd from $50/hr. Video conferencing, dual-screen boardroom, free parking. For client meetings, board meetings, depositions.",
+    heroImage: "/images/hero/meeting-room.jpg",
+    useCases: [
+      "Board meetings and quarterly reviews",
+      "Client pitches and sales presentations",
+      "Legal depositions and mediations",
+      "Investor updates and fundraising meetings",
+      "Panel interviews for senior hires",
+      "Strategy offsites and leadership workshops",
+    ],
+    locationCallout:
+      "6860 Bermuda Rd, Suite 200 in South Las Vegas — 10 minutes from Harry Reid International Airport, off I-215, with free parking for every attendee.",
+    longFormBody: {
+      bestFor: [
+        {
+          persona: "Out-of-town attorneys running a Las Vegas deposition",
+          scenario:
+            "You're counsel flying into LAS for a half-day deposition or mediation and you need a neutral, professional Nevada venue — not a hotel suite, not a rented apartment, not a courthouse annex. The witness, opposing counsel, and the court reporter all need to find the same address easily and park without a meter hassle.",
+          fit: [
+            "Boardroom at $75/hr seats up to 14 around a proper conference table for counsel, witness, and court reporter",
+            "Dual screens and a sound system make exhibit review and recorded testimony straightforward",
+            "Free parking on-site for every attendee — no Strip valet charge, no metered street parking",
+            "10 minutes from Harry Reid International via I-215 W, so fly-in morning depositions are realistic",
+          ],
+        },
+        {
+          persona: "Convention attendees needing a private meeting away from the hotel",
+          scenario:
+            "You're in Las Vegas for CES, SEMA, NAB, or another major convention and you need a one-hour client meeting or investor pitch somewhere quieter than a Strip hotel lobby, a casino cafe, or the convention center floor — with real AV instead of a laptop on a cocktail table.",
+          fit: [
+            "Conference Room at $50/hr for 6-8 people with large display and video conferencing included",
+            "Off-Strip location means no fighting convention traffic, no casino noise, and no F&B minimum",
+            "Walk-in availability is often possible outside peak hours — book by the hour, exactly what you need",
+            "Free parking instead of a $45 Strip hotel valet charge for your prospect",
+          ],
+        },
+        {
+          persona: "Founders running investor pitches and board meetings",
+          scenario:
+            "Your quarterly board meeting or an investor update needs a space that reads as a real company — not your living room, not a WeWork lounge, not a restaurant private room where servers interrupt the pitch to ask about drinks.",
+          fit: [
+            "Boardroom ($75/hr) for formal board meetings with dual screens and a sound system",
+            "Conference Room ($50/hr) for 6-8 person investor updates and working sessions",
+            "Catering from on-site Muze Cafe — coffee service, pastries, sandwich trays, full lunch — one point of contact",
+            "Rooms reconfigure for theater, classroom, u-shape, or boardroom style depending on how you want the meeting to feel",
+          ],
+        },
+      ],
+      whyChoose: {
+        heading: "Why book a Las Vegas conference room at Muze Office",
+        paragraphs: [
+          "Most Las Vegas conference rooms sit inside a Strip hotel's business center, and the pricing reflects it — $150 to $250 per hour for a room the same size as ours, almost always with a food-and-beverage minimum that adds $500 to $1,500 on top of the rental, and parking fees that your attendees pay separately. Muze Office conference rooms start at $50 per hour for the 6-8 person Conference Room and $75 per hour for the 10-14 person Boardroom. No F&B minimum, no day-rate padding, no parking charges for the people you invite.",
+          "The equipment is actually built for the kind of meetings that happen in a conference room. Every Conference Room includes a large display with real video conferencing hardware, WiFi fast enough to run a live screen share, and whiteboards — the basics that most hotel business centers either charge extra for or do not provide at all. The Boardroom steps up to dual screens and a sound system, which is what you want for a board meeting, a legal deposition, or an investor pitch where the formality matters.",
+          "Location helps too. 6860 Bermuda Rd, Suite 200 sits in the 89119 business corridor off I-215, about 10 minutes from Harry Reid International Airport and well away from Strip tourist traffic. That makes fly-in morning meetings genuinely possible — counsel or a prospect lands at LAS, grabs a Lyft, spends an hour in a conference room, and is back at the terminal before their return flight. Everyone parks for free, there is no casino noise bleeding through the walls, and the space reads as a real workspace rather than a hotel ballroom.",
+        ],
+      },
+      comparison: {
+        heading: "Conference room vs. hotel business center, home office, and coffee shop",
+        paragraphs: [
+          "Hotel business centers on the Strip are built for large corporate events and priced for travelers on expense accounts. A comparable room rents for $150 to $250 per hour before you add the food-and-beverage minimum, which typically runs $500 to $1,500 on a half-day booking whether you want it or not. Parking is billed separately at $35 to $45 per car, which every attendee notices. For a routine two-hour board meeting or a one-hour pitch, the math does not hold up — you are paying for ballroom infrastructure when you need a conference table.",
+          "A home office is cheap and convenient, but it is the wrong signal when you are running a client pitch, a formal board meeting, or a deposition. Clients read your office as a signal about how you run your business. A sworn witness reads your living-room sofa as a reason to question the seriousness of the proceeding. For meetings that affect revenue, a neutral professional venue is table stakes, and $50 to $75 per hour is the cheapest insurance you will buy against a bad impression.",
+          "Coffee shops are the default free option and the cost shows up in the meeting outcome. Starbucks cannot run a real video call without ambient noise leaking in, has no privacy for confidential discussions, and does not support presentations, whiteboards, or a proper conference table. For anyone whose meeting outcome affects a deal, a case, or a round of funding, a real conference room pays for itself the moment it removes the distraction.",
+        ],
+      },
+      howToGetStarted: {
+        heading: "How to book a Las Vegas conference room",
+        paragraphs: [
+          "Pick the room that fits the meeting, not the one that fits your budget. The Conference Room at $50 per hour is the right call for 6-8 person client meetings, sales pitches, interviews, and investor updates — it comes with a large display, real video conferencing, and whiteboards. The Boardroom at $75 per hour is the step up for 10-14 people with dual screens and a sound system — use it for board meetings, workshops, all-hands sessions, and legal depositions where the formality of the setup matters.",
+          "Book by the hour, not by the day. Most conference-room bookings run 60 to 120 minutes and there is no reason to pad the reservation. Walk-in availability depends on the day but same-day bookings are usually possible outside of peak hours, and Muze Cafe can handle coffee service, pastries, sandwich trays, or a full catered lunch as an add-on so you are not coordinating a separate caterer.",
+          "If you end up booking conference rooms regularly, becoming a virtual office or coworking member is often cheaper. Opal and Diamond virtual-office tiers include monthly meeting-room hours that can be applied to a conference-room booking, and dedicated-desk coworking members receive monthly meeting-room credits as part of their plan. Book a one-off room first, and talk to us about credits on a plan if the math starts to favor it.",
+        ],
+      },
+      relatedServices: [
+        { slug: "las-vegas-meeting-rooms", label: "Las Vegas Meeting Rooms" },
+        { slug: "las-vegas-event-space", label: "Las Vegas Event Space" },
+        { slug: "las-vegas-coworking", label: "Las Vegas Coworking" },
+        { slug: "las-vegas-virtual-office", label: "Las Vegas Virtual Office" },
       ],
     },
   },
@@ -1145,9 +1236,100 @@ export const cityServiceData: Record<string, CityServiceData> = {
         ],
       },
       relatedServices: [
+        { slug: "houston-conference-rooms", label: "Houston Conference Rooms" },
         { slug: "houston-event-space", label: "Houston Event Space" },
         { slug: "houston-virtual-office", label: "Houston Virtual Office" },
         { slug: "houston-coworking", label: "Houston Coworking" },
+      ],
+    },
+  },
+
+  "houston-conference-rooms": {
+    slug: "houston-conference-rooms",
+    cityId: "houston",
+    serviceId: "conference-rooms",
+    h1: "Conference Rooms in Houston",
+    heroSubtitle:
+      "Corporate conference rooms in the Galleria by the hour for client pitches, board meetings, depositions, and investor updates. Video conferencing, dual-screen boardroom option, and free parking included.",
+    metaTitle: "Conference Rooms Houston | Coming Soon",
+    metaDescription:
+      "Book a Houston conference room at 1800 Augusta Dr inside the 610 Loop from $50/hr. Video conferencing, dual-screen boardroom, free parking. Coming soon to Muze Office Houston.",
+    heroImage: "/images/hero/meeting-room.jpg",
+    useCases: [
+      "Board meetings and quarterly reviews",
+      "Client pitches and sales presentations",
+      "Legal depositions and mediations",
+      "Investor updates and fundraising meetings",
+      "Panel interviews for senior hires",
+      "Strategy offsites and leadership workshops",
+    ],
+    locationCallout:
+      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria, minutes from Post Oak Blvd. Free parking for every attendee.",
+    longFormBody: {
+      bestFor: [
+        {
+          persona: "Counsel running a Houston-based deposition or mediation",
+          scenario:
+            "You're running a half-day deposition, mediation, or sworn testimony and need a neutral Galleria-area venue where witnesses, opposing counsel, and the court reporter can all find the same address, park on-site, and focus on the record — not navigate a Post Oak garage or a hotel lobby.",
+          fit: [
+            "Boardroom at $75/hr seats up to 14 around a proper conference table for counsel, witness, and court reporter",
+            "Dual screens and a sound system make exhibit review and recorded testimony straightforward",
+            "Free parking on-site for every attendee — no Post Oak garage fee or valet charge",
+            "Quiet, Tanglewood-adjacent location with no retail or restaurant noise interrupting proceedings",
+          ],
+        },
+        {
+          persona: "Sales teams pitching Houston clients and fly-in prospects",
+          scenario:
+            "A prospect is flying into IAH or Hobby for a 60-90 minute meeting, or driving in from Sugar Land, The Woodlands, or Katy, and you need a central Galleria conference room with real AV — not a Post Oak hotel ballroom with a food-and-beverage minimum or a coffee shop with no privacy.",
+          fit: [
+            "Conference Room at $50/hr for 6-8 people with large display and video conferencing included",
+            "Inside the 610 Loop and minutes from Post Oak Blvd — central for clients coming from any direction",
+            "Free parking for your prospect — no Post Oak garage fee or valet charge",
+            "Book by the hour, exactly what you need — no F&B minimum, no day-rate padding",
+          ],
+        },
+        {
+          persona: "Founders and small businesses running board meetings and investor updates",
+          scenario:
+            "Your quarterly board meeting, investor update, or leadership offsite needs a Houston venue that reads as a real company — not a living room, not a Galleria hotel ballroom at 5x the price, not a restaurant private room where servers interrupt the pitch.",
+          fit: [
+            "Boardroom ($75/hr) for formal board meetings with dual screens and a sound system",
+            "Conference Room ($50/hr) for 6-8 person investor updates and working sessions",
+            "Catering from on-site Muze Cafe — coffee service, pastries, sandwich trays, full lunch — one point of contact",
+            "Rooms reconfigure for theater, classroom, u-shape, or boardroom style depending on how you want the meeting to feel",
+          ],
+        },
+      ],
+      whyChoose: {
+        heading: "Why book a Houston conference room at Muze Office",
+        paragraphs: [
+          "Most Houston conference rooms sit inside a Galleria or downtown hotel's business center, and the pricing reflects it — $150 to $250 per hour for a comparable room, almost always with a food-and-beverage minimum that adds $500 to $1,500 on top of the rental, and parking billed separately to every attendee. Muze Office conference rooms start at $50 per hour for the 6-8 person Conference Room and $75 per hour for the 10-14 person Boardroom. No F&B minimum, no day-rate padding, no parking charges for the people you invite.",
+          "The equipment is built for the meetings that actually happen in a conference room. Every Conference Room includes a large display with real video conferencing hardware, WiFi fast enough to run a live screen share, and whiteboards — the basics that most hotel business centers charge extra for or do not provide at all. The Boardroom steps up to dual screens and a sound system, which is what you want for a board meeting, a legal deposition, or an investor pitch where the formality matters.",
+          "Location helps too. 1800 Augusta Dr is inside the 610 Loop in the Galleria, which pulls comfortably from Memorial, Tanglewood, West University, Bellaire, River Oaks, and downtown — and it is about 25 minutes from both IAH and Hobby, which makes fly-in morning meetings workable. Everyone parks for free on-site. Nobody has to navigate a Post Oak garage or pay for valet.",
+        ],
+      },
+      comparison: {
+        heading: "Conference room vs. hotel business center, home office, and coffee shop",
+        paragraphs: [
+          "Hotel business centers in the Galleria and downtown Houston are built for large corporate events and priced accordingly. A comparable room rents for $150 to $250 per hour before the food-and-beverage minimum, which typically adds $500 to $1,500 on a half-day booking whether you want it or not. Parking is billed separately — $12 to $25 per car for day parking, more for valet — which every attendee notices. For a routine two-hour board meeting or a one-hour pitch, the math does not hold up.",
+          "A home office is cheap and convenient, but it is the wrong signal when you are running a client pitch, a formal board meeting, or a deposition. Clients and sworn witnesses read your office as a signal about how seriously you treat the meeting. For anything that affects revenue, a deal, a case, or a round of funding, a neutral professional venue is table stakes, and $50 to $75 per hour is cheap insurance against a bad impression.",
+          "Coffee shops are the default free option and the cost shows up in the meeting outcome. A Galleria-area coffee shop cannot run a real video call without ambient noise leaking in, has no privacy for confidential discussion, and does not support presentations, whiteboards, or a proper conference table. Finding parking inside the Loop at lunch hour is its own problem. For a meeting that matters, a real conference room pays for itself the moment it removes the distraction.",
+        ],
+      },
+      howToGetStarted: {
+        heading: "How to book a Houston conference room",
+        paragraphs: [
+          "Pick the room that fits the meeting, not the one that fits your budget. The Conference Room at $50 per hour is the right call for 6-8 person client meetings, sales pitches, interviews, and investor updates — large display, real video conferencing, and whiteboards included. The Boardroom at $75 per hour is the step up for 10-14 people with dual screens and a sound system — use it for board meetings, workshops, all-hands sessions, and legal depositions where the formality of the setup matters.",
+          "Book by the hour, not by the day. Most conference-room bookings run 60 to 120 minutes and there is no reason to pad the reservation. Catering from the on-site Muze Cafe is available as an add-on — coffee service, pastries, sandwich trays, full lunch — so you are not coordinating a separate caterer.",
+          "If you end up booking conference rooms regularly, becoming a virtual office or coworking member can be cheaper. Opal and Diamond virtual-office tiers include monthly meeting-room hours that can be applied to a conference-room booking, and dedicated-desk coworking members receive monthly meeting-room credits as part of their plan. Muze Office Houston is opening soon at 1800 Augusta Dr — join the waitlist to lock in pre-launch pricing.",
+        ],
+      },
+      relatedServices: [
+        { slug: "houston-meeting-rooms", label: "Houston Meeting Rooms" },
+        { slug: "houston-event-space", label: "Houston Event Space" },
+        { slug: "houston-coworking", label: "Houston Coworking" },
+        { slug: "houston-virtual-office", label: "Houston Virtual Office" },
       ],
     },
   },
