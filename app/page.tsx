@@ -315,14 +315,14 @@ export default function HomePage() {
               Coworking &amp; virtual office plans — no long-term leases
             </h2>
             <p className="mx-auto mt-4 max-w-[640px] text-lg text-[#74726D]">
-              Day passes from $25, dedicated desks from $399/mo, virtual offices from $39/mo. All memberships are month-to-month with free parking, WiFi, coffee, and meeting room access.
+              <Link href="/las-vegas-day-pass" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Day Pass $25</Link>, <Link href="/las-vegas-hot-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Hot Desk $350/mo</Link>, <Link href="/las-vegas-dedicated-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Dedicated Desk $399/mo</Link>, and virtual offices from $39/mo. All memberships are month-to-month with free parking, WiFi, coffee, and meeting room access.
             </p>
           </div>
         </FadeIn>
         <StaggerContainer className="grid gap-6 md:grid-cols-3 mt-4">
           {[
-            { name: "Day Pass", price: "$25", unit: "/day", description: "Perfect for freelancers, travelers, or anyone who needs a desk for the day.", features: ["Hot desk access", "High-speed WiFi", "Unlimited coffee & tea", "Free parking"], cta: "Get a Day Pass", href: "/contact", highlighted: false },
-            { name: "Dedicated Desk", price: "$399", unit: "/month", description: "Your own dedicated desk in a shared space — no reservations, no hassle.", features: ["24/7 access", "Ergonomic setup", "Meeting room credits", "Business address & mail"], cta: "Become a Member", href: "/contact", highlighted: true },
+            { name: "Day Pass", price: "$25", unit: "/day", description: "Drop-in for a single day — no membership, no setup, no commitment. Walk in with a laptop and go.", features: ["Hot desk access", "High-speed WiFi", "Unlimited coffee & tea", "Free parking"], cta: "See Day Pass Details", href: "/las-vegas-day-pass", highlighted: false },
+            { name: "Dedicated Desk", price: "$399", unit: "/month", description: "Your own reserved desk, personal storage, 24/7 biometric access, and a business address with mail.", features: ["24/7 access", "Reserved desk & storage", "Meeting room credits", "Business address & mail"], cta: "See Dedicated Desk Details", href: "/las-vegas-dedicated-desk", highlighted: true },
             { name: "Private Office", price: "Custom", unit: "", description: "Enclosed, lockable offices for 2-10 people. Fully furnished and customizable.", features: ["24/7 access", "Furnished & customizable", "All utilities included", "Conference room credits"], cta: "Book a Tour", href: BRAND.booking.tourUrl, highlighted: false },
           ].map((plan) => (
             <StaggerItem key={plan.name} className={plan.highlighted ? "pt-3" : ""}>

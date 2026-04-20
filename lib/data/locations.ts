@@ -64,6 +64,9 @@ export const locations: Location[] = [
     services: [
       "virtual-office",
       "coworking",
+      "day-pass",
+      "hot-desk",
+      "dedicated-desk",
       "private-office",
       "meeting-rooms",
       "conference-rooms",
@@ -115,6 +118,9 @@ export const locations: Location[] = [
     services: [
       "virtual-office",
       "coworking",
+      "day-pass",
+      "hot-desk",
+      "dedicated-desk",
       "private-office",
       "meeting-rooms",
       "conference-rooms",

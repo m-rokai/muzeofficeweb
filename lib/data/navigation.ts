@@ -19,7 +19,15 @@ export const mainNav: NavItem[] = [
     href: "/workspace-memberships",
     children: [
       { label: "Virtual Office", href: "/las-vegas-virtual-office" },
-      { label: "Coworking", href: "/las-vegas-coworking" },
+      {
+        label: "Coworking",
+        href: "/las-vegas-coworking",
+        children: [
+          { label: "Day Pass ($25/day)", href: "/las-vegas-day-pass" },
+          { label: "Hot Desk ($350/mo)", href: "/las-vegas-hot-desk" },
+          { label: "Dedicated Desk ($399/mo)", href: "/las-vegas-dedicated-desk" },
+        ],
+      },
       { label: "Private Offices", href: "/las-vegas-private-office" },
       { label: "Meeting Rooms", href: "/las-vegas-meeting-rooms" },
     ],

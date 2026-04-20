@@ -340,10 +340,112 @@ const privateOfficeFAQs: FAQ[] = [
   },
 ];
 
+const dayPassFAQs: FAQ[] = [
+  {
+    question: "How much does a Day Pass cost at Muze Office?",
+    answer:
+      "A Day Pass is $25. That covers a desk in the shared coworking area, high-speed WiFi, unlimited coffee and water, free parking, phone-booth access, printing, and access to the on-site Muze Cafe. Meeting rooms are a separate booking at $25-$75/hour.",
+  },
+  {
+    question: "Do I need a membership or reservation to use a Day Pass?",
+    answer:
+      "No. Day Passes are walk-in. Show up Monday through Friday between 10am and 7pm at 6860 Bermuda Rd, Suite 200 in Las Vegas, show your ID at the front desk, pay $25, and you're at a working desk within five minutes. You can book online if you want to lock in a spot during a busy convention week, but most days walk-in availability is fine.",
+  },
+  {
+    question: "What are the Day Pass hours?",
+    answer:
+      "Monday through Friday, 10am to 7pm, which is when the front desk is staffed and the coworking area is open to non-members. 24/7 access is reserved for Dedicated Desk and Private Office members with biometric entry.",
+  },
+  {
+    question: "Is parking free with a Day Pass?",
+    answer:
+      "Yes. Free parking is included for every Day Pass visitor at our Las Vegas location — no meters, no valet, no garage fees. That matters in Las Vegas where Strip hotel day-use garages charge $35-45/day.",
+  },
+  {
+    question: "If I upgrade from Day Pass to a monthly plan, can I apply what I paid?",
+    answer:
+      "Usually, yes. Day-pass receipts can typically be applied toward your first month if you upgrade to a Hot Desk or Dedicated Desk within 30 days. Ask at the front desk when you come in — the team will track it so you don't have to.",
+  },
+  {
+    question: "What's the difference between a Day Pass and a Hot Desk membership?",
+    answer:
+      "A Day Pass is $25 per day with no commitment — right for drop-in use. A Hot Desk is $350/month for any-desk business-hours access, plus meeting room credits, mail handling, and community events. The math flips in Hot Desk's favor around the 14th-15th day per month. If you're in the space more than about a week a month, Hot Desk is usually the better deal.",
+  },
+];
+
+const hotDeskFAQs: FAQ[] = [
+  {
+    question: "What's included with a Hot Desk membership?",
+    answer:
+      "A Hot Desk at $350/month includes any-desk access in the coworking area during business hours, monthly meeting room credits, mail handling, community-event access, phone booths, printing, unlimited coffee, on-site Muze Cafe, and free parking. Month-to-month with 30 days' notice to cancel.",
+  },
+  {
+    question: "Is a Hot Desk 24/7?",
+    answer:
+      "No. Hot Desk is a business-hours product — Monday through Friday, 10am to 7pm, which is when the front desk is staffed. If you need 24/7 access, weekend access, or early-morning / late-night hours, Dedicated Desk at $399/month adds biometric 24/7 entry.",
+  },
+  {
+    question: "Do I get my own reserved desk with a Hot Desk?",
+    answer:
+      "No. Hot Desk is any-desk access — you sit wherever is open in the shared coworking area each day. If you want a reserved desk you can leave a monitor and keyboard on, plus personal storage, upgrade to Dedicated Desk at $399/month.",
+  },
+  {
+    question: "Do Hot Desk members get a business address?",
+    answer:
+      "Hot Desk includes mail handling at the 6860 Bermuda Rd, Suite 200 address — you can receive LLC, tax, and business correspondence there and pick it up during business hours. A formal business-address-only product (with package receiving and mail forwarding) is the Virtual Office tier. Dedicated Desk ($399/mo) bundles a business address as part of the tier.",
+  },
+  {
+    question: "How many meeting room hours come with Hot Desk?",
+    answer:
+      "Hot Desk includes monthly meeting room credits that you can apply to any room type — Huddle Room ($25/hr), Conference Room ($50/hr), or Boardroom ($75/hr). Additional hours beyond the credits are available at standard hourly rates. Credits don't roll over month-to-month.",
+  },
+  {
+    question: "Is there a long-term contract?",
+    answer:
+      "No. Hot Desk is month-to-month with 30 days' notice to cancel. No setup fees, no personal guaranty, no 12-month commitment. You can pause a month if you're traveling — just let the team know in advance.",
+  },
+];
+
+const dedicatedDeskFAQs: FAQ[] = [
+  {
+    question: "What's included with a Dedicated Desk membership?",
+    answer:
+      "A Dedicated Desk at $399/month includes everything in Hot Desk — meeting room credits, mail handling, phone booths, WiFi, coffee, parking, community events — plus a reserved desk that's yours every day, personal storage, 24/7 biometric access to the building, and a business address with mail you can use for LLC filings, Google Business Profile, and contracts.",
+  },
+  {
+    question: "How is the 24/7 access provided?",
+    answer:
+      "Via biometric entry — you're enrolled on your first day as a Dedicated Desk member, and once that's set up you have 24/7 access to the building via the side entrance. Hot Desk and Day Pass do not include biometric or 24/7 access.",
+  },
+  {
+    question: "Is the business address real, or a PO Box?",
+    answer:
+      "It's a real commercial suite address — 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119. Not a PO Box. Accepted by the Nevada Secretary of State for LLC filings, usable on Google Business Profile, and usable on contracts. Some members drop a separate Virtual Office subscription when they move up to Dedicated Desk because the mail-and-address piece is already bundled in.",
+  },
+  {
+    question: "What's the difference between Dedicated Desk and a Private Office?",
+    answer:
+      "A Dedicated Desk is a reserved seat in the open coworking area — community, shared noise level, no walls. A Private Office is a furnished, lockable room with walls and a door — right for members who need wall privacy for confidential client calls or regulatory reasons. Most members who don't close a door for more than an hour or two a week stay on Dedicated Desk; those who need wall privacy most days move to a Private Office.",
+  },
+  {
+    question: "Can I leave equipment on my desk overnight?",
+    answer:
+      "Yes. That's the point of a Dedicated Desk — leave a monitor, keyboard, headphones, and personal items between sessions. Personal storage is included for anything that doesn't fit on the desk surface.",
+  },
+  {
+    question: "Is Dedicated Desk month-to-month?",
+    answer:
+      "Yes. Month-to-month with 30 days' notice to cancel. No setup fees, no personal guaranty, no long-term lease. If you outgrow the shared area and need walls, the upgrade path to Private Office is clean.",
+  },
+];
+
 /** Map service IDs to their FAQ arrays */
 export const faqsByService: FAQsByService = {
   "virtual-office": virtualOfficeFAQs,
   coworking: coworkingFAQs,
+  "day-pass": dayPassFAQs,
+  "hot-desk": hotDeskFAQs,
+  "dedicated-desk": dedicatedDeskFAQs,
   "private-office": privateOfficeFAQs,
   "meeting-rooms": meetingRoomFAQs,
   "conference-rooms": conferenceRoomFAQs,

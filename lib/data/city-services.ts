@@ -238,14 +238,290 @@ export const cityServiceData: Record<string, CityServiceData> = {
         heading: "How to get started with coworking in Las Vegas",
         paragraphs: [
           "If you're not sure whether coworking is right for you, start with a $25 day pass. Walk in Monday through Friday between 10am and 7pm, or book online and we'll have a spot ready when you arrive. Day passes include everything — desk, WiFi, coffee, parking, phone booths, meeting room availability. No credit card holds, no long forms, no pressure to sign up.",
-          "Once you've used us for a week or two and know you want to be here most days, the Hot Desk membership ($350/month) is the natural next step. Hot Desk members can use any available desk in the shared workspace, get meeting room credits, mail handling, and full access to community events. If you want your own reserved spot that you can leave your monitor and dual keyboard setup on, upgrade to Dedicated Desk ($399/month) which adds a permanent desk, personal storage, and 24/7 biometric access.",
-          "Everything is month-to-month. We don't do annual contracts, cancellation fees, or setup charges. If you need to pause your membership for a month because you're traveling, just let us know. If you want to bring a client in for a meeting, you can book a conference room by the hour or use your included credits. Book a free tour if you want to see the space first, or just show up with a laptop.",
+          "Once you've used us for a week or two and know you want to be here most days, the Hot Desk membership ($350/month) is the natural next step. Hot Desk members can use any available desk in the shared workspace, get meeting room credits, mail handling, and full access to community events. If you want your own reserved spot that you can leave your monitor and dual keyboard setup on, upgrade to Dedicated Desk ($399/month) which adds a permanent desk, personal storage, 24/7 biometric access, and a business address with mail.",
+          "Each coworking tier has its own detail page if you want to dig into the specifics: the Day Pass ($25/day, drop-in, no membership) at /las-vegas-day-pass, the Hot Desk ($350/month, 3–5 days a week, business hours) at /las-vegas-hot-desk, and the Dedicated Desk ($399/month, reserved desk, 24/7 biometric, business address) at /las-vegas-dedicated-desk. Everything is month-to-month. We don't do annual contracts, cancellation fees, or setup charges. Book a free tour if you want to see the space first, or just show up with a laptop.",
         ],
       },
       relatedServices: [
+        { slug: "las-vegas-day-pass", label: "Las Vegas Day Pass ($25/day)" },
+        { slug: "las-vegas-hot-desk", label: "Las Vegas Hot Desk ($350/mo)" },
+        { slug: "las-vegas-dedicated-desk", label: "Las Vegas Dedicated Desk ($399/mo)" },
         { slug: "las-vegas-virtual-office", label: "Las Vegas Virtual Office" },
         { slug: "las-vegas-meeting-rooms", label: "Las Vegas Meeting Rooms" },
         { slug: "las-vegas-airport-coworking", label: "Las Vegas Airport Coworking" },
+      ],
+    },
+  },
+
+  "las-vegas-day-pass": {
+    slug: "las-vegas-day-pass",
+    cityId: "las-vegas",
+    serviceId: "day-pass",
+    h1: "Day Pass at Muze Office Las Vegas",
+    heroSubtitle:
+      "Drop in for a single day of focused work — no membership, no setup, no commitment. Walk in with a laptop, plug into fast WiFi, and keep your day moving.",
+    metaTitle: "Day Pass Las Vegas Coworking | $25 | Muze Office",
+    metaDescription:
+      "Day pass coworking in Las Vegas for $25 at 6860 Bermuda Rd, Suite 200. Walk-in, no membership. Real desk, fast WiFi, unlimited coffee, free parking. 10 min from LAS.",
+    heroImage: "/images/hero/coworking-space.jpg",
+    useCases: [
+      "Freelancers and consultants here for a single day of focused work",
+      "CES, SEMA, NAB, and MAGIC attendees escaping the convention floor",
+      "Remote workers testing the space before committing to a membership",
+      "Traveling professionals with one meeting or one deliverable in town",
+      "Freelance creatives who need a professional Zoom backdrop",
+      "Anyone whose coffee shop just asked them to buy another drink",
+    ],
+    locationCallout:
+      "6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 — 10 minutes from Harry Reid International Airport, off I-215, with free parking on-site. Walk in Monday through Friday, 10am to 7pm.",
+    longFormBody: {
+      bestFor: [
+        {
+          persona: "Drop-in professionals with one focused day in town",
+          scenario:
+            "You're in Las Vegas for 24 to 48 hours — one client meeting, one deliverable, one stretch of heads-down time — and you need a real desk for the afternoon without signing up for anything, paying a setup fee, or explaining yourself at a coffee shop counter.",
+          fit: [
+            "$25 flat for the day — desk, WiFi, coffee, parking, phone booths, everything",
+            "No membership, no credit card hold, no signup forms — walk in, show ID, sit down",
+            "Phone booths for private calls without airport PA announcements in the background",
+            "Free parking so a $25 day is actually a $25 day — no $40 Strip valet on top",
+          ],
+        },
+        {
+          persona: "Convention attendees escaping the show floor",
+          scenario:
+            "You're in town for CES, SEMA, NAB, MAGIC, or another major Las Vegas convention and you need two or three real work hours between sessions — not a hotel lobby seat surrounded by other attendees taking the same calls you want to take.",
+          fit: [
+            "Off-Strip location means we don't fill up with the convention crowd like hotel lobbies do",
+            "Fast WiFi that actually supports video calls during convention peak days",
+            "Quiet space to close deals, send follow-ups, or prep for the next day's booth shifts",
+            "Free parking versus $45-60/day Strip garage rates during convention weeks",
+          ],
+        },
+        {
+          persona: "Freelancers testing the space before a monthly plan",
+          scenario:
+            "You've been working from home and you're considering a coworking membership but you don't want to sign up for anything before you've actually spent a full day in the space — desk comfort, WiFi speed, noise level, commute, everything.",
+          fit: [
+            "One-day trial lets you try every amenity before committing — WiFi, phone booths, coffee, parking, the vibe",
+            "If you come back more than about a week a month, the Hot Desk at $350/month starts to pay for itself",
+            "No upsell at the door — pay $25, work, leave, decide later",
+            "Day-pass receipts can be applied toward your first month if you upgrade within 30 days",
+          ],
+        },
+      ],
+      whyChoose: {
+        heading: "Why the Day Pass at Muze Office Las Vegas",
+        paragraphs: [
+          "Most people who need a real workspace for a single day in Las Vegas end up at the wrong place for the wrong reason. Coffee shops on Paradise Rd and the Strip fill up by 10am and the WiFi collapses the moment you try to screen-share. Hotel lobbies are crowded, noisy, and mostly out of seats with outlets. Airport lounges at LAS charge $50-65 for a crowded counter that isn't a desk. Hotel business centers run $15-30 for a windowless room with a decade-old desktop. The $25 Day Pass at Muze Office replaces all of those with a single clean option: a real desk, a real chair, fast WiFi built for video calls, unlimited coffee, free parking, and phone booths when you need a private call.",
+          "The Day Pass is a walk-in product. Show up Monday through Friday between 10am and 7pm, drop your ID at the front desk, and you're at a working desk within five minutes. You can book online if you want to lock in a spot during a busy convention week or Strip event, but most days walk-in availability is not a problem. Day pass holders get the same WiFi, the same coffee, the same phone booths, and the same cafe access as monthly members — the only thing they don't get is 24/7 access and meeting-room credits (meeting rooms are bookable by the hour separately).",
+          "The location is the part that makes the Day Pass practical for out-of-town visitors. 6860 Bermuda Rd, Suite 200 sits in the 89119 business corridor off I-215, 10 minutes from Harry Reid International Airport and well away from Strip tourist traffic. That means you can fly into LAS in the morning, rent a car, spend the middle of the day working, make a client meeting, and be back at the terminal before your return flight — all with free parking, no Strip traffic, and a clean place to take the calls that matter.",
+        ],
+      },
+      comparison: {
+        heading: "Day Pass vs. a monthly Hot Desk or Dedicated Desk",
+        paragraphs: [
+          "If you're in town for a single day or a small handful of days a month, the Day Pass at $25/day is the right product. It's walk-in, it's low-commitment, and it covers every core amenity you'd use on a short visit. A single Day Pass costs roughly the same as a day of cafe-hopping ($15-25 in drinks) but replaces the noise, the unreliable WiFi, and the implied buy-another-drink pressure with a real workspace.",
+          "If you end up needing the space more than about a week per month, the Hot Desk at $350/month is the natural upgrade. Hot Desk members get any-desk access during business hours, monthly meeting room credits, mail handling, and full access to community events — the math flips in Hot Desk's favor somewhere around the 14th or 15th day in the space. Hot Desk is still a business-hours product, same as the Day Pass — 24/7 access is not part of the tier. For that, Dedicated Desk at $399/month is the upgrade: your own reserved desk you can leave a monitor on, personal storage, 24/7 biometric entry, meeting room credits, and a business address with mail. If you're using the space daily, Dedicated Desk is the shape that fits.",
+          "The three products are genuinely differentiated, not marketing rebrandings of the same thing. Pick the one whose commitment level matches how you actually plan to use the space. Start with a Day Pass if you're not sure — we'd rather you try us for a day and upgrade on your own timeline than sign up for something you don't end up using.",
+        ],
+      },
+      howToGetStarted: {
+        heading: "How to use a Day Pass at Muze Office Las Vegas",
+        paragraphs: [
+          "Walk in Monday through Friday between 10am and 7pm at 6860 Bermuda Rd, Suite 200. Show your ID at the front desk, pay for the Day Pass ($25), and we'll point you to an open desk. The whole process takes about five minutes. If you're arriving during a major convention week (CES, SEMA, NAB, MAGIC, etc.) it's worth booking online the day before so your spot is reserved — but most days, walk-in is fine.",
+          "The Day Pass covers desk access, WiFi, unlimited coffee and water, free parking, phone-booth access for private calls, printing, and the on-site Muze Cafe. Meeting rooms are a separate booking at $25-$75/hour and can be reserved by the hour online. If you need to take a client call during your day, a Huddle Room ($25/hr) is usually the right call.",
+          "If you come back more than one week a month, move to a Hot Desk or Dedicated Desk. See /las-vegas-hot-desk for the monthly business-hours shape, or /las-vegas-dedicated-desk for reserved desk + 24/7 + business address. Day-pass receipts can usually be applied toward your first month if you upgrade within 30 days — ask at the front desk when you come in.",
+        ],
+      },
+      relatedServices: [
+        { slug: "las-vegas-hot-desk", label: "Las Vegas Hot Desk ($350/mo)" },
+        { slug: "las-vegas-dedicated-desk", label: "Las Vegas Dedicated Desk ($399/mo)" },
+        { slug: "las-vegas-coworking", label: "Las Vegas Coworking (overview)" },
+        { slug: "las-vegas-convention-coworking", label: "Convention Coworking Las Vegas" },
+        { slug: "las-vegas-airport-coworking", label: "Airport Coworking Las Vegas" },
+      ],
+    },
+  },
+
+  "las-vegas-hot-desk": {
+    slug: "las-vegas-hot-desk",
+    cityId: "las-vegas",
+    serviceId: "hot-desk",
+    h1: "Hot Desk in Las Vegas",
+    heroSubtitle:
+      "Any-desk monthly coworking for remote workers and consultants in the space three-to-five days a week. Meeting room credits, mail handling, and community events included — all on month-to-month terms.",
+    metaTitle: "Hot Desk Las Vegas | $350/mo | Muze Office",
+    metaDescription:
+      "Hot Desk coworking in Las Vegas for $350/month at 6860 Bermuda Rd, Suite 200. Any-desk access during business hours, meeting room credits, mail handling, free parking. Month-to-month.",
+    heroImage: "/images/hero/coworking-space.jpg",
+    useCases: [
+      "Remote workers in the space three-to-five days a week",
+      "Consultants who don't care which specific desk they sit at",
+      "Freelancers who want meeting room credits without a private office",
+      "Solo founders using mail handling for LLC and business correspondence",
+      "Recent home-office escapees tired of kitchen-table Zoom calls",
+      "Out-of-state founders running a Nevada business a few days a month",
+    ],
+    locationCallout:
+      "6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 — 10 minutes from Harry Reid International Airport, off I-215, with free parking on-site. Open Monday through Friday, 10am to 7pm.",
+    longFormBody: {
+      bestFor: [
+        {
+          persona: "Remote workers in the space 3–5 days a week",
+          scenario:
+            "Your employer is fully remote or hybrid, your apartment is not a great place to do heads-down work, and you want a professional space to go to most weekdays — without paying for a reserved desk you don't actually need since any open spot is fine.",
+          fit: [
+            "$350/month for any-desk access any weekday — sit wherever is open",
+            "Meeting room credits for client calls, team syncs, and interviews",
+            "Mail handling included, so LLC and business mail can come to the office",
+            "Community events access — organic networking with other remote workers, founders, and consultants",
+          ],
+        },
+        {
+          persona: "Consultants and independent advisors running a small practice",
+          scenario:
+            "You run a consulting, advisory, or coaching practice out of your laptop, you want a professional backdrop for client Zoom calls, and you want monthly meeting room credits for the occasional in-person client visit — without the cost of a private office you'd sit in alone most days.",
+          fit: [
+            "Shared desk anywhere in the coworking area — find the quiet corner you like each day",
+            "Meeting room credits for in-person client meetings and pitch sessions",
+            "Phone booths for confidential client calls without a living-room background",
+            "Month-to-month terms so you can pause or cancel when a client roster changes",
+          ],
+        },
+        {
+          persona: "Freelancers past the Day Pass stage but not ready for Dedicated Desk",
+          scenario:
+            "You've been day-passing at Muze Office for a few weeks, you know you want to be in the space most days, but you don't need your own reserved desk or 24/7 access — business hours are plenty and the shared area is where the community is.",
+          fit: [
+            "Math flips from Day Pass to Hot Desk around the 14th-15th day per month",
+            "Meeting room credits turn into real value once client calls become a weekly thing",
+            "Mail handling lets you use the Bermuda Rd address for LLC and business correspondence",
+            "If you outgrow Hot Desk later, Dedicated Desk ($399/mo) adds reserved desk, 24/7, and a business address",
+          ],
+        },
+      ],
+      whyChoose: {
+        heading: "Why choose a Hot Desk in Las Vegas at Muze Office",
+        paragraphs: [
+          "The Hot Desk at $350/month is the middle product in the coworking tier stack and it's the one that fits the largest share of members. You get any-desk access during business hours — Monday through Friday, 10am to 7pm — plus monthly meeting room credits, mail handling, community-event access, phone booths, printing, unlimited coffee, and free parking. The tradeoff versus Dedicated Desk is that you don't have a reserved seat and you don't have 24/7 biometric entry; the tradeoff versus Day Pass is that you're paying monthly rather than per visit and getting meeting credits and mail handling on top.",
+          "It's a business-hours product, not a 24/7 product. Hot Desk members use the space during the same hours the building is staffed — that's the reason the tier exists at $350 rather than $399. The coworking space is comfortable, well-lit, and built for focused work during those hours; if you need to work late, weekends, or odd hours, Dedicated Desk ($399) with 24/7 biometric entry is the right shape, not Hot Desk. We mention this explicitly because some members sign up expecting 24/7 and get surprised at the door on a Saturday.",
+          "The mail handling piece is a real perk that often gets overlooked in the tier comparison. Hot Desk members can have LLC, tax, and business correspondence sent to 6860 Bermuda Rd, Suite 200 and pick it up during business hours — a Nevada street address with a suite number that works for LLC filings, Google Business Profile, and contracts. It's not the same product as Virtual Office (no package receiving, no mail forwarding, no dedicated business-address-only plan), but for someone who's already at the space most weekdays, the mail-handling inclusion solves the mail problem without a second subscription.",
+        ],
+      },
+      comparison: {
+        heading: "Hot Desk vs. Day Pass and Dedicated Desk",
+        paragraphs: [
+          "Against the Day Pass, Hot Desk wins on cost once you're in the space more than about 14 days a month. A Day Pass at $25 × 15 days is already $375, and at 20 days you're up to $500 — a Hot Desk at $350 is cheaper starting in week three and gets progressively cheaper the more you come in. Hot Desk also adds meeting room credits and mail handling, which the Day Pass doesn't include. Day Pass stays the right call if you're only in town for a handful of days per month; Hot Desk takes over once the space becomes part of your weekly rhythm.",
+          "Against Dedicated Desk, the difference is hours-of-access and desk-reservation, not community amenities. Hot Desk runs during business hours (10am-7pm, Monday through Friday); Dedicated Desk adds 24/7 biometric access, a reserved desk you can leave a monitor on, personal storage, and a business address with mail. For remote workers whose day ends at 6pm and who don't need a permanent physical footprint, Hot Desk is the right fit at $350. For members whose work runs into late nights, weekends, or irregular schedules — or who want to leave a dual-monitor rig set up between sessions — Dedicated Desk at $399 adds the pieces that make that workable.",
+          "The Hot Desk tier is designed for people who are committed to being in the space most weekdays but flexible about which specific desk they sit at. If that's you — a remote worker, a solo consultant, a freelancer with a professional client roster — Hot Desk is the product that matches the commitment level without overpaying for reserved-desk infrastructure you won't use.",
+        ],
+      },
+      howToGetStarted: {
+        heading: "How to get started with a Hot Desk in Las Vegas",
+        paragraphs: [
+          "Start with a Day Pass ($25) if you haven't been in the space yet — use it to try a typical weekday in the coworking area, test the WiFi on a real video call, check the commute from where you live, and see how the community fits. Most Hot Desk members sign up after one or two day-pass visits. Day-pass receipts can usually be applied toward your first month if you upgrade within 30 days.",
+          "When you're ready to sign up, Hot Desk is month-to-month. No setup fee, no personal guaranty, no 12-month commitment. You can pause your membership for a month if you're traveling — just let us know in advance. Cancellations are 30 days' notice, same as the other tiers. Mail handling is included; if you want to start using 6860 Bermuda Rd, Suite 200 as your business address, we'll set that up the day you sign up.",
+          "If you later realize you need 24/7 access, a reserved desk, or a business address with mail forwarding, upgrade to Dedicated Desk ($399/month) — see /las-vegas-dedicated-desk. If you grow a team and need wall privacy, move to a Private Office — see /las-vegas-private-office. And if you're here less than a week a month, the Day Pass at /las-vegas-day-pass is probably still the right fit.",
+        ],
+      },
+      relatedServices: [
+        { slug: "las-vegas-day-pass", label: "Las Vegas Day Pass ($25/day)" },
+        { slug: "las-vegas-dedicated-desk", label: "Las Vegas Dedicated Desk ($399/mo)" },
+        { slug: "las-vegas-coworking", label: "Las Vegas Coworking (overview)" },
+        { slug: "las-vegas-virtual-office", label: "Las Vegas Virtual Office" },
+        { slug: "las-vegas-meeting-rooms", label: "Las Vegas Meeting Rooms" },
+      ],
+    },
+  },
+
+  "las-vegas-dedicated-desk": {
+    slug: "las-vegas-dedicated-desk",
+    cityId: "las-vegas",
+    serviceId: "dedicated-desk",
+    h1: "Dedicated Desk in Las Vegas",
+    heroSubtitle:
+      "Your own reserved desk, personal storage, 24/7 biometric access, meeting room credits, and a business address with mail. Month-to-month terms — the most committed coworking tier short of a private office.",
+    metaTitle: "Dedicated Desk Las Vegas | $399/mo | Muze Office",
+    metaDescription:
+      "Dedicated Desk coworking in Las Vegas for $399/month at 6860 Bermuda Rd, Suite 200. Reserved desk, personal storage, 24/7 biometric entry, business address, meeting room credits.",
+    heroImage: "/images/hero/coworking-space.jpg",
+    useCases: [
+      "Remote workers who want a permanent desk and dual monitors",
+      "Founders running a solo business out of Nevada daily",
+      "Consultants with client calls at 7am PT or 9pm PT",
+      "Out-of-state LLC founders who also need a business address",
+      "Solo professionals who used to rent a tiny private office and realized they didn't need walls",
+      "Creatives who want a personal storage cubby for equipment",
+    ],
+    locationCallout:
+      "6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 — 10 minutes from Harry Reid International Airport, off I-215, with free parking on-site. 24/7 biometric access for Dedicated Desk members.",
+    longFormBody: {
+      bestFor: [
+        {
+          persona: "Remote workers who want a permanent desk setup",
+          scenario:
+            "You're in the coworking space five days a week, you want to leave a dual-monitor setup plugged in, you don't want to pack and unpack a laptop bag every morning, and you'd rather pay $399 and never wonder whether your usual corner will be open than save $49 and hunt for a desk.",
+          fit: [
+            "Reserved desk — same spot every day, monitor and keyboard stay put",
+            "Personal storage cubby for equipment, files, headphones, and anything else you don't want to carry",
+            "24/7 biometric entry for early-morning or late-night sessions when the front desk is closed",
+            "Meeting room credits for client calls, interviews, and team syncs",
+          ],
+        },
+        {
+          persona: "Solo founders running a Nevada business daily",
+          scenario:
+            "You've filed an LLC in Nevada, you're running the business out of Las Vegas daily, and you want a real business address you can use on LLC filings, contracts, and Google Business Profile — plus 24/7 access so you can match client time zones on either coast.",
+          fit: [
+            "Business address and mail handling are included in the $399 tier — no second Virtual Office subscription needed",
+            "24/7 biometric access for 6am calls to East Coast clients or 10pm calls to Tokyo partners",
+            "Nevada has no state income tax, no corporate income tax, and no franchise tax on most small businesses",
+            "Address can be used for LLC filings, Google Business Profile, and contracts — it's a real commercial suite, not a mailbox",
+          ],
+        },
+        {
+          persona: "Consultants outgrowing Hot Desk but not ready for a private office",
+          scenario:
+            "You've been on Hot Desk for a few months, your client load has grown, you're now in the space every weekday plus some weekends, and you want your own permanent spot — but you don't need walls or a lockable door and you don't want to triple your cost for a Solo Office.",
+          fit: [
+            "$399/month adds reserved desk, 24/7 access, personal storage, and a business address to everything Hot Desk already includes",
+            "You keep the community of the shared coworking area — organic networking, open seating energy",
+            "Meeting room credits for client pitches and confidential conversations",
+            "If you later need wall privacy for confidential client meetings, upgrade path to Private Office is clean",
+          ],
+        },
+      ],
+      whyChoose: {
+        heading: "Why choose a Dedicated Desk in Las Vegas at Muze Office",
+        paragraphs: [
+          "The Dedicated Desk at $399/month is the top of the coworking tier stack. You get everything Hot Desk includes — meeting room credits, mail handling, phone booths, fast WiFi, unlimited coffee, free parking, community events — plus four things that make the tier distinct: a reserved desk that's yours every day, personal storage for equipment and files, 24/7 biometric entry, and a Las Vegas business address with mail you can use on LLC filings, Google Business Profile, and contracts. It's the product for members whose work has graduated past 'I'll sit wherever' into 'I want to plug in a dual-monitor rig and leave it there.'",
+          "The 24/7 biometric access is the piece that flips the math for a lot of members. Hot Desk at $350 runs during business hours (Monday through Friday, 10am to 7pm); Dedicated Desk adds unrestricted weekend, early-morning, and late-night access via biometric entry. If you have East Coast clients and take 6am calls, or if you're running a side business that only gets attention after 9pm, or if weekends are when you actually get caught up, the extra $49/month for 24/7 is usually the deciding factor rather than the reserved desk itself.",
+          "The business-address-and-mail inclusion is the other differentiator. Dedicated Desk members can have LLC filings, tax correspondence, and business mail delivered to 6860 Bermuda Rd, Suite 200 — a real commercial suite number, not a PO Box, accepted by the Nevada Secretary of State and registered agents. The address is also usable for Google Business Profile and contracts. That's one reason some members drop a separate Virtual Office subscription when they move up to Dedicated Desk — the mail-and-address piece is bundled in.",
+        ],
+      },
+      comparison: {
+        heading: "Dedicated Desk vs. Hot Desk and Private Office",
+        paragraphs: [
+          "Against Hot Desk ($350/month), the upgrade to Dedicated Desk at $399 adds four things: a reserved desk you can leave set up between sessions, personal storage, 24/7 biometric entry, and a business address with mail. The $49/month delta is small if any of those four matter to your workflow. For members whose work is strictly business-hours and who don't care which desk they sit at, Hot Desk stays the right product. For members who want a permanent physical footprint, work outside business hours, or want to skip a separate Virtual Office subscription, Dedicated Desk is the better fit.",
+          "Against a Private Office, the tradeoff is walls and cost. A Solo Office at Muze Office is a furnished, lockable private room — the right call if you have confidential client calls most days, if you want to decorate and organize a room the way your business actually works, or if you need physical wall privacy for regulatory or professional reasons. Private Offices are not publicly priced because they vary by office size, location in the building, and length of stay; they typically run meaningfully higher than Dedicated Desk. For members who don't need walls, Dedicated Desk delivers the reserved-seat and 24/7 parts of 'my own space' at coworking pricing.",
+          "The practical way to choose is to ask how many hours a week you'd actually work with your door closed. If the answer is zero or one, Dedicated Desk is probably the right tier. If it's more than a few hours — confidential client conversations, deposition-style meetings, sensitive document review — a Solo Office starts to earn its keep.",
+        ],
+      },
+      howToGetStarted: {
+        heading: "How to get started with a Dedicated Desk in Las Vegas",
+        paragraphs: [
+          "Start by spending a day or two in the space — a Day Pass ($25) at /las-vegas-day-pass is the simplest way. Walk around during business hours, look at the desks that are consistently open, and pick a spot you'd like to claim as your own. When you sign up for Dedicated Desk, we'll assign you that desk (or the closest available equivalent) and get you set up with personal storage and a biometric entry enrollment the same day.",
+          "Month-to-month terms are the same as the rest of the coworking tiers — 30 days' notice to cancel, no setup fees, no personal guaranty, no long-term lock-in. Biometric entry is enrolled on your first day; once that's set up, you have 24/7 access to the building via the side entrance. Mail handling and business address services are activated the day you sign up — if you want to start using 6860 Bermuda Rd, Suite 200 for LLC filings or contracts, we can issue a suite assignment letter at signup.",
+          "If you realize Dedicated Desk is too much — you don't need the 24/7 access, or the reserved desk isn't worth the $49/month delta — dropping back to Hot Desk at /las-vegas-hot-desk is a same-day change. If you grow a team or need lockable wall privacy for confidential client conversations, the upgrade path is Private Office — see /las-vegas-private-office for team and solo office options.",
+        ],
+      },
+      relatedServices: [
+        { slug: "las-vegas-hot-desk", label: "Las Vegas Hot Desk ($350/mo)" },
+        { slug: "las-vegas-day-pass", label: "Las Vegas Day Pass ($25/day)" },
+        { slug: "las-vegas-coworking", label: "Las Vegas Coworking (overview)" },
+        { slug: "las-vegas-private-office", label: "Las Vegas Private Office" },
+        { slug: "las-vegas-virtual-office", label: "Las Vegas Virtual Office" },
       ],
     },
   },
@@ -1036,9 +1312,285 @@ export const cityServiceData: Record<string, CityServiceData> = {
         ],
       },
       relatedServices: [
+        { slug: "houston-day-pass", label: "Houston Day Pass ($25/day)" },
+        { slug: "houston-hot-desk", label: "Houston Hot Desk ($350/mo)" },
+        { slug: "houston-dedicated-desk", label: "Houston Dedicated Desk ($399/mo)" },
         { slug: "houston-galleria-coworking", label: "Galleria Coworking Houston" },
         { slug: "houston-virtual-office", label: "Houston Virtual Office" },
         { slug: "houston-meeting-rooms", label: "Houston Meeting Rooms" },
+      ],
+    },
+  },
+
+  "houston-day-pass": {
+    slug: "houston-day-pass",
+    cityId: "houston",
+    serviceId: "day-pass",
+    h1: "Day Pass at Muze Office Houston",
+    heroSubtitle:
+      "Drop in for a single day of focused work in the Galleria — no membership, no setup, no commitment. Walk in with a laptop, plug into fast WiFi, and keep your day moving.",
+    metaTitle: "Day Pass Houston Coworking | Coming Soon",
+    metaDescription:
+      "Day pass coworking in Houston at 1800 Augusta Dr in the Galleria — $25, walk-in, no membership. Real desk, fast WiFi, unlimited coffee, free parking. Coming soon to Muze Office Houston.",
+    heroImage: "/images/hero/coworking-space.jpg",
+    useCases: [
+      "Freelancers and consultants here for a single Galleria-area workday",
+      "Out-of-town business travelers in Houston for one or two days",
+      "Remote workers testing the space before committing to a membership",
+      "Professionals with one client meeting inside the 610 Loop",
+      "Freelance creatives who need a professional Zoom backdrop",
+      "Anyone tired of Montrose or Rice Village coffee shops at lunch hour",
+    ],
+    locationCallout:
+      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, with free parking on-site. Opening soon.",
+    longFormBody: {
+      bestFor: [
+        {
+          persona: "Drop-in professionals with one focused day in Houston",
+          scenario:
+            "You're in Houston for 24 to 48 hours — one client meeting, one deliverable, one stretch of heads-down time inside the 610 Loop — and you need a real desk for the afternoon without signing up for anything, paying a setup fee, or explaining yourself at a coffee shop counter.",
+          fit: [
+            "$25 flat for the day — desk, WiFi, coffee, parking, phone booths, everything",
+            "No membership, no credit card hold, no signup forms — walk in, show ID, sit down",
+            "Phone booths for private calls without espresso-machine noise in the background",
+            "Free parking so a $25 day is actually a $25 day — no $8-15 Post Oak garage fee on top",
+          ],
+        },
+        {
+          persona: "Out-of-town visitors to the Galleria and Uptown district",
+          scenario:
+            "You're visiting Houston for a convention, a client meeting, or a family visit and you need two or three real work hours between activities — not a hotel lobby seat or a Rice Village coffee shop packed at lunch hour.",
+          fit: [
+            "Central Galleria location — inside the Loop and 15 minutes from downtown, the Medical Center, and most Inner Loop offices",
+            "Fast WiFi that actually supports video calls during peak hours",
+            "Quiet space to close deals, send follow-ups, or prep for the next day's meetings",
+            "Free parking versus Post Oak garage rates of $8-15/day during Galleria business hours",
+          ],
+        },
+        {
+          persona: "Freelancers testing the space before a monthly plan",
+          scenario:
+            "You've been working from a Houston apartment or a Heights townhome and you're considering a coworking membership — but you don't want to sign up for anything before you've actually spent a full day in the space to test WiFi, noise level, commute, and the rest.",
+          fit: [
+            "One-day trial lets you try every amenity before committing — WiFi, phone booths, coffee, parking, the vibe",
+            "If you come back more than about a week a month, the Hot Desk at $350/month starts to pay for itself",
+            "No upsell at the door — pay $25, work, leave, decide later",
+            "Day-pass receipts can be applied toward your first month if you upgrade within 30 days",
+          ],
+        },
+      ],
+      whyChoose: {
+        heading: "Why the Day Pass at Muze Office Houston",
+        paragraphs: [
+          "Most people who need a real workspace for a single day in Houston end up at the wrong place for the wrong reason. Coffee shops in Montrose and Rice Village fill up by late morning and the WiFi collapses the moment you try to screen-share. Hotel lobbies in the Galleria and downtown are crowded and mostly out of seats with outlets. Hotel business centers run $15-30 for a windowless room with a decade-old desktop. The $25 Day Pass at Muze Office Houston replaces all of those with a single clean option: a real desk, a real chair, fast WiFi built for video calls, unlimited coffee, free parking, and phone booths when you need a private call.",
+          "The Day Pass is a walk-in product. Show up during business hours at 1800 Augusta Dr, drop your ID at the front desk, and you're at a working desk within five minutes. You can book online if you want to lock in a spot during a busy week, but most days walk-in availability is not a problem. Day pass holders get the same WiFi, the same coffee, the same phone booths, and the same cafe access as monthly members — the only thing they don't get is 24/7 access and meeting-room credits (meeting rooms are bookable by the hour separately).",
+          "The location makes the Day Pass practical for visitors from across the metro. 1800 Augusta Dr sits inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, and it pulls comfortably from Memorial, Uptown, West University, Bellaire, River Oaks, and downtown without ever fighting 59 or 290 traffic. That means you can drive in from any direction, work for half a day, make a client meeting, and head back — with free parking, no Post Oak garage fee, and a clean place to take the calls that matter.",
+        ],
+      },
+      comparison: {
+        heading: "Day Pass vs. a monthly Hot Desk or Dedicated Desk",
+        paragraphs: [
+          "If you're in the space a single day or a small handful of days a month, the Day Pass at $25/day is the right product. It's walk-in, it's low-commitment, and it covers every core amenity you'd use on a short visit. A single Day Pass costs roughly the same as a day of cafe-hopping ($15-25 in drinks) but replaces the noise, the unreliable WiFi, and the implied buy-another-drink pressure with a real workspace.",
+          "If you end up needing the space more than about a week per month, the Hot Desk at $350/month is the natural upgrade. Hot Desk members get any-desk access during business hours, monthly meeting room credits, mail handling, and full access to community events — the math flips in Hot Desk's favor somewhere around the 14th or 15th day in the space. Hot Desk is still a business-hours product, same as the Day Pass — 24/7 access is not part of the tier. For that, Dedicated Desk at $399/month is the upgrade: your own reserved desk you can leave a monitor on, personal storage, 24/7 biometric entry, meeting room credits, and a business address with mail.",
+          "The three products are genuinely differentiated, not marketing rebrandings of the same thing. Pick the one whose commitment level matches how you actually plan to use the space. Start with a Day Pass if you're not sure — we'd rather you try us for a day and upgrade on your own timeline than sign up for something you don't end up using.",
+        ],
+      },
+      howToGetStarted: {
+        heading: "How to use a Day Pass at Muze Office Houston",
+        paragraphs: [
+          "Muze Office Houston is opening soon at 1800 Augusta Dr. Join the waitlist to lock in pre-launch pricing and to get the opening-day schedule for Day Passes. When we open, walk-in Day Passes will be available during business hours — show your ID at the front desk, pay $25, and we'll point you to an open desk. Booking online the day before guarantees a spot during busier weeks.",
+          "The Day Pass will cover desk access, WiFi, unlimited coffee and water, free parking, phone-booth access for private calls, printing, and the on-site Muze Cafe. Meeting rooms will be a separate booking at $25-$75/hour and reservable by the hour online. If you need to take a client call during your day, a Huddle Room will be the right call.",
+          "If you come back more than one week a month, move to a Hot Desk or Dedicated Desk. See /houston-hot-desk for the monthly business-hours shape, or /houston-dedicated-desk for reserved desk + 24/7 + business address. Day-pass receipts can usually be applied toward your first month if you upgrade within 30 days.",
+        ],
+      },
+      relatedServices: [
+        { slug: "houston-hot-desk", label: "Houston Hot Desk ($350/mo)" },
+        { slug: "houston-dedicated-desk", label: "Houston Dedicated Desk ($399/mo)" },
+        { slug: "houston-coworking", label: "Houston Coworking (overview)" },
+        { slug: "houston-galleria-coworking", label: "Galleria Coworking Houston" },
+        { slug: "houston-medical-center-coworking", label: "Medical Center Coworking Houston" },
+      ],
+    },
+  },
+
+  "houston-hot-desk": {
+    slug: "houston-hot-desk",
+    cityId: "houston",
+    serviceId: "hot-desk",
+    h1: "Hot Desk in Houston",
+    heroSubtitle:
+      "Any-desk monthly coworking in the Galleria for remote workers and consultants in the space three-to-five days a week. Meeting room credits, mail handling, and community events included — all on month-to-month terms.",
+    metaTitle: "Hot Desk Houston | Coming Soon | Muze Office",
+    metaDescription:
+      "Hot Desk coworking in Houston at 1800 Augusta Dr in the Galleria — $350/month, any-desk business-hours access, meeting room credits, mail handling, free parking. Coming soon to Muze Office Houston.",
+    heroImage: "/images/hero/coworking-space.jpg",
+    useCases: [
+      "Remote workers in the space three-to-five days a week",
+      "Consultants who don't care which specific desk they sit at",
+      "Freelancers who want meeting room credits without a private office",
+      "Solo founders using mail handling for LLC and business correspondence",
+      "Recent home-office escapees tired of kitchen-table Zoom calls",
+      "Out-of-town founders running a Texas business a few days a month",
+    ],
+    locationCallout:
+      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, with free parking on-site. Opening soon.",
+    longFormBody: {
+      bestFor: [
+        {
+          persona: "Remote workers in the space 3–5 days a week",
+          scenario:
+            "Your employer is fully remote or hybrid, your apartment or townhome is not a great place to do heads-down work, and you want a professional space to go to most weekdays — without paying for a reserved desk you don't actually need since any open spot is fine.",
+          fit: [
+            "$350/month for any-desk access any weekday — sit wherever is open",
+            "Meeting room credits for client calls, team syncs, and interviews",
+            "Mail handling included, so LLC and business mail can come to the Galleria address",
+            "Community events access — organic networking with other remote workers, founders, and consultants",
+          ],
+        },
+        {
+          persona: "Consultants and independent advisors running a small practice",
+          scenario:
+            "You run a consulting, advisory, or coaching practice out of your laptop, you want a professional Galleria-area backdrop for client Zoom calls, and you want monthly meeting room credits for the occasional in-person client visit — without the cost of a private office you'd sit in alone most days.",
+          fit: [
+            "Shared desk anywhere in the coworking area — find the quiet corner you like each day",
+            "Meeting room credits for in-person client meetings and pitch sessions",
+            "Phone booths for confidential client calls without a living-room or townhome background",
+            "Month-to-month terms so you can pause or cancel when a client roster changes",
+          ],
+        },
+        {
+          persona: "Freelancers past the Day Pass stage but not ready for Dedicated Desk",
+          scenario:
+            "You've been day-passing at Muze Office Houston for a few weeks, you know you want to be in the space most days, but you don't need your own reserved desk or 24/7 access — business hours are plenty and the shared area is where the community is.",
+          fit: [
+            "Math flips from Day Pass to Hot Desk around the 14th-15th day per month",
+            "Meeting room credits turn into real value once client calls become a weekly thing",
+            "Mail handling lets you use the 1800 Augusta Dr address for LLC and business correspondence",
+            "If you outgrow Hot Desk later, Dedicated Desk ($399/mo) adds reserved desk, 24/7, and a business address",
+          ],
+        },
+      ],
+      whyChoose: {
+        heading: "Why choose a Hot Desk in Houston at Muze Office",
+        paragraphs: [
+          "The Hot Desk at $350/month is the middle product in the coworking tier stack and it's the one that fits the largest share of members. You get any-desk access during business hours, plus monthly meeting room credits, mail handling, community-event access, phone booths, printing, unlimited coffee, and free parking. The tradeoff versus Dedicated Desk is that you don't have a reserved seat and you don't have 24/7 biometric entry; the tradeoff versus Day Pass is that you're paying monthly rather than per visit and getting meeting credits and mail handling on top.",
+          "It's a business-hours product, not a 24/7 product. Hot Desk members use the space during the same hours the building is staffed — that's the reason the tier exists at $350 rather than $399. The coworking space is comfortable, well-lit, and built for focused work during those hours; if you need to work late, weekends, or odd hours, Dedicated Desk ($399) with 24/7 biometric entry is the right shape, not Hot Desk.",
+          "The mail handling piece is a real perk that often gets overlooked in the tier comparison. Hot Desk members can have LLC, tax, and business correspondence sent to 1800 Augusta Dr and pick it up during business hours — a Texas street address with a suite number that works for LLC filings, Google Business Profile, and contracts. It's not the same product as Virtual Office (no package receiving, no mail forwarding, no dedicated business-address-only plan), but for someone who's already at the space most weekdays, the mail-handling inclusion solves the mail problem without a second subscription.",
+        ],
+      },
+      comparison: {
+        heading: "Hot Desk vs. Day Pass and Dedicated Desk",
+        paragraphs: [
+          "Against the Day Pass, Hot Desk wins on cost once you're in the space more than about 14 days a month. A Day Pass at $25 × 15 days is already $375, and at 20 days you're up to $500 — a Hot Desk at $350 is cheaper starting in week three and gets progressively cheaper the more you come in. Hot Desk also adds meeting room credits and mail handling, which the Day Pass doesn't include. Day Pass stays the right call if you're only in the space a handful of days per month; Hot Desk takes over once it becomes part of your weekly rhythm.",
+          "Against Dedicated Desk, the difference is hours-of-access and desk-reservation, not community amenities. Hot Desk runs during business hours; Dedicated Desk adds 24/7 biometric access, a reserved desk you can leave a monitor on, personal storage, and a business address with mail. For remote workers whose day ends at 6pm and who don't need a permanent physical footprint, Hot Desk is the right fit at $350. For members whose work runs into late nights, weekends, or irregular schedules — or who want to leave a dual-monitor rig set up between sessions — Dedicated Desk at $399 adds the pieces that make that workable.",
+          "The Hot Desk tier is designed for people who are committed to being in the space most weekdays but flexible about which specific desk they sit at. If that's you — a remote worker, a solo consultant, a freelancer with a professional client roster — Hot Desk is the product that matches the commitment level without overpaying for reserved-desk infrastructure you won't use.",
+        ],
+      },
+      howToGetStarted: {
+        heading: "How to get started with a Hot Desk in Houston",
+        paragraphs: [
+          "Muze Office Houston is opening soon at 1800 Augusta Dr in the Galleria. Join the waitlist to lock in pre-launch pricing on Hot Desk and get first access to the opening roster. Once we open, we recommend starting with a Day Pass at /houston-day-pass so you can try a typical weekday in the coworking area, test the WiFi on a real video call, and see how the community fits before signing up month-to-month.",
+          "When you're ready, Hot Desk will be month-to-month. No setup fee, no personal guaranty, no 12-month commitment. Mail handling will be included; if you want to start using 1800 Augusta Dr as your business address for LLC filings or contracts, we can set that up the day you sign up.",
+          "If you later need 24/7 access, a reserved desk, or a business address with mail, upgrade to Dedicated Desk at /houston-dedicated-desk. If you grow a team and need wall privacy, move to a Private Office at /houston-private-office. And if you're in the space less than a week a month, the Day Pass at /houston-day-pass is probably still the right fit.",
+        ],
+      },
+      relatedServices: [
+        { slug: "houston-day-pass", label: "Houston Day Pass ($25/day)" },
+        { slug: "houston-dedicated-desk", label: "Houston Dedicated Desk ($399/mo)" },
+        { slug: "houston-coworking", label: "Houston Coworking (overview)" },
+        { slug: "houston-virtual-office", label: "Houston Virtual Office" },
+        { slug: "houston-meeting-rooms", label: "Houston Meeting Rooms" },
+      ],
+    },
+  },
+
+  "houston-dedicated-desk": {
+    slug: "houston-dedicated-desk",
+    cityId: "houston",
+    serviceId: "dedicated-desk",
+    h1: "Dedicated Desk in Houston",
+    heroSubtitle:
+      "Your own reserved desk in the Galleria, personal storage, 24/7 biometric access, meeting room credits, and a business address with mail. Month-to-month terms — the most committed coworking tier short of a private office.",
+    metaTitle: "Dedicated Desk Houston | Coming Soon | Muze",
+    metaDescription:
+      "Dedicated Desk coworking in Houston at 1800 Augusta Dr in the Galleria — $399/month, reserved desk, personal storage, 24/7 biometric entry, business address, meeting room credits. Coming soon.",
+    heroImage: "/images/hero/coworking-space.jpg",
+    useCases: [
+      "Remote workers who want a permanent Galleria-area desk with dual monitors",
+      "Founders running a solo Texas business daily",
+      "Consultants with client calls at 7am CT or 9pm CT",
+      "Out-of-state LLC founders who also need a Texas business address",
+      "Solo professionals who used to rent a tiny private office and realized they didn't need walls",
+      "Creatives who want a personal storage cubby for equipment",
+    ],
+    locationCallout:
+      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, with free parking on-site. 24/7 biometric access for Dedicated Desk members at opening.",
+    longFormBody: {
+      bestFor: [
+        {
+          persona: "Remote workers who want a permanent desk setup",
+          scenario:
+            "You're in the coworking space five days a week, you want to leave a dual-monitor setup plugged in, you don't want to pack and unpack a laptop bag every morning, and you'd rather pay $399 and never wonder whether your usual corner will be open than save $49 and hunt for a desk.",
+          fit: [
+            "Reserved desk — same spot every day, monitor and keyboard stay put",
+            "Personal storage cubby for equipment, files, headphones, and anything else you don't want to carry",
+            "24/7 biometric entry for early-morning or late-night sessions when the front desk is closed",
+            "Meeting room credits for client calls, interviews, and team syncs",
+          ],
+        },
+        {
+          persona: "Solo founders running a Texas business daily",
+          scenario:
+            "You've filed an LLC in Texas, you're running the business out of Houston daily, and you want a real business address you can use on LLC filings, contracts, and Google Business Profile — plus 24/7 access so you can match client time zones on either coast.",
+          fit: [
+            "Business address and mail handling are included in the $399 tier — no second Virtual Office subscription needed",
+            "24/7 biometric access for 6am calls to East Coast clients or 10pm calls to West Coast partners",
+            "Texas has no state personal income tax — a frequent reason founders relocate here",
+            "Address can be used for LLC filings, Google Business Profile, and contracts — it's a real commercial suite, not a mailbox",
+          ],
+        },
+        {
+          persona: "Consultants outgrowing Hot Desk but not ready for a private office",
+          scenario:
+            "You've been on Hot Desk for a few months, your client load has grown, you're now in the space every weekday plus some weekends, and you want your own permanent spot — but you don't need walls or a lockable door and you don't want to triple your cost for a Solo Office.",
+          fit: [
+            "$399/month adds reserved desk, 24/7 access, personal storage, and a business address to everything Hot Desk already includes",
+            "You keep the community of the shared coworking area — organic networking, open seating energy",
+            "Meeting room credits for client pitches and confidential conversations",
+            "If you later need wall privacy for confidential client meetings, upgrade path to Private Office is clean",
+          ],
+        },
+      ],
+      whyChoose: {
+        heading: "Why choose a Dedicated Desk in Houston at Muze Office",
+        paragraphs: [
+          "The Dedicated Desk at $399/month is the top of the coworking tier stack. You get everything Hot Desk includes — meeting room credits, mail handling, phone booths, fast WiFi, unlimited coffee, free parking, community events — plus four things that make the tier distinct: a reserved desk that's yours every day, personal storage for equipment and files, 24/7 biometric entry, and a Houston business address with mail you can use on LLC filings, Google Business Profile, and contracts. It's the product for members whose work has graduated past 'I'll sit wherever' into 'I want to plug in a dual-monitor rig and leave it there.'",
+          "The 24/7 biometric access is the piece that flips the math for a lot of members. Hot Desk at $350 runs during business hours; Dedicated Desk adds unrestricted weekend, early-morning, and late-night access via biometric entry. If you have East Coast clients and take 6am calls, or if you're running a side business that only gets attention after 9pm, or if weekends are when you actually get caught up, the extra $49/month for 24/7 is usually the deciding factor rather than the reserved desk itself.",
+          "The business-address-and-mail inclusion is the other differentiator. Dedicated Desk members can have LLC filings, tax correspondence, and business mail delivered to 1800 Augusta Dr — a real commercial suite number, not a PO Box, accepted by the Texas Secretary of State and registered agents. The address is also usable for Google Business Profile and contracts. That's one reason some members drop a separate Virtual Office subscription when they move up to Dedicated Desk — the mail-and-address piece is bundled in.",
+        ],
+      },
+      comparison: {
+        heading: "Dedicated Desk vs. Hot Desk and Private Office",
+        paragraphs: [
+          "Against Hot Desk ($350/month), the upgrade to Dedicated Desk at $399 adds four things: a reserved desk you can leave set up between sessions, personal storage, 24/7 biometric entry, and a business address with mail. The $49/month delta is small if any of those four matter to your workflow. For members whose work is strictly business-hours and who don't care which desk they sit at, Hot Desk stays the right product. For members who want a permanent physical footprint, work outside business hours, or want to skip a separate Virtual Office subscription, Dedicated Desk is the better fit.",
+          "Against a Private Office, the tradeoff is walls and cost. A Solo Office at Muze Office Houston will be a furnished, lockable private room — the right call if you have confidential client calls most days, if you want to decorate and organize a room the way your business actually works, or if you need physical wall privacy for regulatory or professional reasons. Private Offices aren't publicly priced because they vary by office size, location in the building, and length of stay; they typically run meaningfully higher than Dedicated Desk. For members who don't need walls, Dedicated Desk delivers the reserved-seat and 24/7 parts of 'my own space' at coworking pricing.",
+          "The practical way to choose is to ask how many hours a week you'd actually work with your door closed. If the answer is zero or one, Dedicated Desk is probably the right tier. If it's more than a few hours — confidential client conversations, deposition-style meetings, sensitive document review — a Solo Office starts to earn its keep.",
+        ],
+      },
+      howToGetStarted: {
+        heading: "How to get started with a Dedicated Desk in Houston",
+        paragraphs: [
+          "Muze Office Houston is opening soon at 1800 Augusta Dr in the Galleria. Join the waitlist to lock in pre-launch pricing on Dedicated Desk and get first access to the opening-day desk assignment. Once we open, we recommend spending a day or two in the space first — a Day Pass ($25) at /houston-day-pass is the simplest way — so you can pick the desk you'd like to claim as your own.",
+          "Month-to-month terms will be the same as the rest of the coworking tiers — 30 days' notice to cancel, no setup fees, no personal guaranty, no long-term lock-in. Biometric entry will be enrolled on your first day; once that's set up, you'll have 24/7 access to the building. Mail handling and business address services will be activated the day you sign up — if you want to start using 1800 Augusta Dr for LLC filings or contracts, we can issue a suite assignment letter at signup.",
+          "If you realize Dedicated Desk is too much — you don't need the 24/7 access, or the reserved desk isn't worth the $49/month delta — dropping back to Hot Desk at /houston-hot-desk will be a same-day change. If you grow a team or need lockable wall privacy for confidential client conversations, the upgrade path is Private Office — see /houston-private-office for team and solo office options when Houston opens.",
+        ],
+      },
+      relatedServices: [
+        { slug: "houston-hot-desk", label: "Houston Hot Desk ($350/mo)" },
+        { slug: "houston-day-pass", label: "Houston Day Pass ($25/day)" },
+        { slug: "houston-coworking", label: "Houston Coworking (overview)" },
+        { slug: "houston-private-office", label: "Houston Private Office" },
+        { slug: "houston-virtual-office", label: "Houston Virtual Office" },
       ],
     },
   },
