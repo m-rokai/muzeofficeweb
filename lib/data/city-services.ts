@@ -918,9 +918,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Event Space in Las Vegas",
     heroSubtitle:
       "Host corporate events, workshops, networking mixers, and private gatherings. Full AV, flexible layouts, and on-site catering from Muze Cafe.",
-    metaTitle: "Event Space Las Vegas | From $50/hr",
+    metaTitle: "Event Space Las Vegas | From $99/hr",
     metaDescription:
-      "Rent event space in Las Vegas from $50/hr. Full AV, flexible layouts, catering available. Perfect for corporate events, workshops, and private gatherings.",
+      "Rent event space in Las Vegas from $99/hr (varies by room). Full AV, flexible layouts, catering available. 10% off bookings of 8+ hours. Corporate events, workshops, and private gatherings.",
     heroImage: "/images/hero/event-space.jpg",
     useCases: [
       "Corporate workshops and training sessions",
@@ -937,9 +937,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
         {
           persona: "Corporate training and workshop organizers",
           scenario:
-            "You're running a half-day or full-day training for 20-60 attendees and need a venue with real AV, configurable seating, and predictable catering pricing — not a $10k Strip hotel ballroom quote with a five-figure F&B minimum.",
+            "You're running a multi-hour or all-day training for 20-60 attendees and need a venue with real AV, configurable seating, and predictable catering pricing — not a $10k Strip hotel ballroom quote with a five-figure F&B minimum.",
           fit: [
-            "Half-Day at $175 or Full-Day at $300 for predictable, all-in event pricing",
+            "Hourly rates from $99 (varies by room) with a flat 10% discount on bookings of 8+ hours",
             "Projector, screen, sound system, and wireless mics included — not billed separately",
             "Flexible seating — theater, classroom, u-shape, lounge — reconfigured for your event",
             "Catering from the on-site Muze Cafe handles coffee service, lunch, and snack breaks",
@@ -961,7 +961,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You're organizing a monthly industry mixer, community meetup, or real-estate networking night and you need a venue that looks professional without eating your entire event budget on the room alone.",
           fit: [
-            "Hourly rate at $50/hr for short, tight events — pay only for the time you need",
+            "Hourly rates from $99 for short, tight events — pay only for the time you need",
             "No food-and-beverage minimum — bring outside catering or add Muze Cafe separately",
             "Layout flexes for standing mingling, seated presentations, or hybrid formats",
             "Free parking for every guest so nobody leaves before the event ends",
@@ -972,7 +972,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "Your distributed team is gathering once a year and you want a full day of working sessions plus an evening celebration — in one venue that doesn't feel like a sterile hotel conference floor.",
           fit: [
-            "Full-Day at $300 covers 8 hours — enough for a morning working session plus an evening celebration",
+            "Book 8 or more hours and get a flat 10% discount — covers a morning working session plus an evening celebration",
             "Space reconfigures between work mode and party mode without moving venues",
             "Climate-controlled indoor venue — reliable regardless of Las Vegas summer heat or winter wind",
             "Muze Cafe catering handles breakfast, lunch, and an evening reception without a separate vendor",
@@ -983,7 +983,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         heading: "Why choose Muze Office for your Las Vegas event",
         paragraphs: [
           "Las Vegas is built for mega-events, and the venues reflect it. Strip ballrooms start around $3,000 to $8,000 for a half-day rental, almost always with a five-figure food-and-beverage minimum, parking fees on top, and an AV team you have to hire separately. For a corporate workshop, a product launch for 40 people, a networking mixer, or a private client dinner, that's massively oversized. You're paying for infrastructure designed to host 500 people when you need space for 40.",
-          "Muze Office event space is the right-sized alternative. Our space rents from $50 per hour for small sessions, $175 for a half-day block, and $300 for a full eight-hour day. Full AV is included — projector, screen, sound system, wireless microphones, flexible lighting — and we can rearrange the seating layout for your specific event, whether that's theater-style for a presentation, classroom for a workshop, or open for a mixer. The on-site Muze Cafe handles catering directly, which means one point of contact for both the space and the food rather than juggling a venue contact and an outside caterer.",
+          "Muze Office event space is the right-sized alternative. Hourly rates start at $99 per hour and vary by which room you book, with a flat 10% discount applied automatically to any booking of 8 hours or more — enough for a morning working session plus an evening celebration in one day. Full AV is included — projector, screen, sound system, wireless microphones, flexible lighting — and we can rearrange the seating layout for your specific event, whether that's theater-style for a presentation, classroom for a workshop, or open for a mixer. The on-site Muze Cafe handles catering directly, which means one point of contact for both the space and the food rather than juggling a venue contact and an outside caterer.",
           "The off-Strip location is part of the appeal for locals. Most Las Vegas residents avoid the Strip entirely for anything that isn't a tourist activity — the traffic is brutal, parking is expensive, and the driving distance from the suburbs adds 30-45 minutes to every attendee's evening. Muze Office is in the 89119 business corridor off I-215, which is easy to reach from Summerlin, Henderson, North Las Vegas, and the airport without ever touching the Strip. Free parking for every guest is included, which matters more than most people realize until they've planned an event where attendees had to pay $40 each just to show up.",
         ],
       },
@@ -998,9 +998,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to book event space in Las Vegas",
         paragraphs: [
-          "Start by matching the time block to the event type. A one-hour Hourly booking ($50) works for a lunch-and-learn, a small pitch meeting, or a short workshop. The Half-Day package ($175) covers four hours and is the sweet spot for most workshops, training sessions, product demos, or extended team offsites. The Full-Day option ($300) gives you eight hours and is the right choice for conferences, all-day retreats, or events with multiple sessions and breaks.",
+          "Event space is booked hourly, with rates starting at $99/hour that vary depending on which room fits your event. A one-to-two hour booking works for a lunch-and-learn, a small pitch meeting, or a short workshop. A four-hour block is the sweet spot for most workshops, training sessions, product demos, or extended team offsites. Bookings of 8 hours or more get a flat 10% discount automatically — the right structure for conferences, all-day retreats, or events with multiple sessions and breaks. We don't charge separate half-day or full-day package rates; you only pay for the hours you actually book.",
           "Once you know your time block, talk to our event coordinator about layout and catering. We can configure the space for theater-style (rows of chairs facing the front — maximizes capacity for presentations), classroom-style (tables and chairs — works for workshops where attendees need to take notes), u-shape or boardroom (for discussions), or open/lounge (for networking mixers and receptions). Catering from Muze Cafe ranges from coffee-and-pastry service for morning sessions to full plated meals for evening events.",
-          "Book a walkthrough before you commit to a specific package. Most of our clients decide on their exact setup after they see the space in person — the dimensions on a floor plan don't always match your mental model for how many people will fit comfortably. Walkthroughs are free, take about 15 minutes, and you can bring whoever's planning the event with you. Once you lock in the date, we handle setup and breakdown on either side of your block, so you show up when you're ready and leave when you're done.",
+          "Book a walkthrough before you commit to a specific room and time. Most of our clients decide on their exact setup after they see the space in person — the dimensions on a floor plan don't always match your mental model for how many people will fit comfortably. Walkthroughs are free, take about 15 minutes, and you can bring whoever's planning the event with you. Once you lock in the date, we handle setup and breakdown on either side of your block, so you show up when you're ready and leave when you're done.",
         ],
       },
       relatedServices: [
@@ -2079,9 +2079,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Event Space in Houston",
     heroSubtitle:
       "Host corporate events, workshops, networking mixers, and private gatherings in the Galleria. Full AV, flexible layouts, and on-site catering from Muze Cafe.",
-    metaTitle: "Event Space Houston | From $50/hr",
+    metaTitle: "Event Space Houston | From $99/hr",
     metaDescription:
-      "Rent event space in Houston's Galleria from $50/hr. Full AV, flexible layouts, catering available. Perfect for corporate events, workshops, and private gatherings.",
+      "Rent event space in Houston's Galleria from $99/hr (varies by room). Full AV, flexible layouts, catering available. 10% off bookings of 8+ hours. Corporate events, workshops, and private gatherings.",
     heroImage: "/images/hero/event-space.jpg",
     useCases: [
       "Corporate workshops and training sessions",
@@ -2098,9 +2098,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
         {
           persona: "Corporate training and workshop organizers",
           scenario:
-            "You're running a half-day or full-day training for 20-60 attendees and need a Houston venue with real AV, configurable seating, and predictable catering pricing — not a $10k Galleria hotel ballroom quote with a five-figure F&B minimum.",
+            "You're running a multi-hour or all-day training for 20-60 attendees and need a Houston venue with real AV, configurable seating, and predictable catering pricing — not a $10k Galleria hotel ballroom quote with a five-figure F&B minimum.",
           fit: [
-            "Half-Day at $175 or Full-Day at $300 for predictable, all-in event pricing",
+            "Hourly rates from $99 (varies by room) with a flat 10% discount on bookings of 8+ hours",
             "Projector, screen, sound system, and wireless mics included — not billed separately",
             "Flexible seating — theater, classroom, u-shape, lounge — reconfigured for your event",
             "Catering from the on-site Muze Cafe handles coffee service, lunch, and snack breaks",
@@ -2122,7 +2122,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You're organizing a monthly industry mixer, community meetup, or real-estate networking night and you need a Houston venue that looks professional without eating your entire event budget on the room alone.",
           fit: [
-            "Hourly rate at $50/hr for short, tight events — pay only for the time you need",
+            "Hourly rates from $99 for short, tight events — pay only for the time you need",
             "No food-and-beverage minimum — bring outside catering or add Muze Cafe separately",
             "Layout flexes for standing mingling, seated presentations, or hybrid formats",
             "Free parking for every guest so nobody leaves before the event ends",
@@ -2133,7 +2133,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "Your distributed team is gathering in Houston once a year and you want a full day of working sessions plus an evening celebration — in one venue that doesn't feel like a sterile hotel conference floor.",
           fit: [
-            "Full-Day at $300 covers 8 hours — enough for a morning working session plus an evening celebration",
+            "Book 8 or more hours and get a flat 10% discount — covers a morning working session plus an evening celebration",
             "Space reconfigures between work mode and party mode without moving venues",
             "Climate-controlled indoor venue — reliable regardless of Houston summer heat or hurricane-season weather",
             "Muze Cafe catering handles breakfast, lunch, and an evening reception without a separate vendor",
@@ -2144,7 +2144,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         heading: "Why choose Muze Office for your Houston event",
         paragraphs: [
           "Houston's event market is big, and the venues reflect it. Galleria and downtown ballrooms start around $2,500 to $6,000 for a half-day rental, almost always with a five-figure food-and-beverage minimum, parking fees on top, and an AV team you have to hire separately. For a corporate workshop, a product launch for 40 people, a networking mixer, or a private client dinner, that's massively oversized. You're paying for infrastructure designed to host 500 people when you need space for 40.",
-          "Muze Office Houston event space is the right-sized alternative. Our space rents from $50 per hour for small sessions, $175 for a half-day block, and $300 for a full eight-hour day. Full AV is included — projector, screen, sound system, wireless microphones, flexible lighting — and we can rearrange the seating layout for your specific event, whether that's theater-style for a presentation, classroom for a workshop, or open for a mixer. The on-site Muze Cafe handles catering directly, which means one point of contact for both the space and the food rather than juggling a venue contact and an outside caterer.",
+          "Muze Office Houston event space is the right-sized alternative. Hourly rates start at $99 per hour and vary by which room you book, with a flat 10% discount applied automatically to any booking of 8 hours or more — enough for a morning working session plus an evening celebration in one day. Full AV is included — projector, screen, sound system, wireless microphones, flexible lighting — and we can rearrange the seating layout for your specific event, whether that's theater-style for a presentation, classroom for a workshop, or open for a mixer. The on-site Muze Cafe handles catering directly, which means one point of contact for both the space and the food rather than juggling a venue contact and an outside caterer.",
           "The inside-the-Loop Galleria location is part of the appeal for Houston locals. Most Houston professionals avoid the downtown parking garages and the West 610 Loop gridlock at rush hour if they can help it, and our Augusta Dr address is easy to reach from Memorial, River Oaks, West U, Bellaire, Tanglewood, and Uptown without getting on a freeway at all. Free parking for every guest is included, which matters more than most people realize until they've planned an event where attendees had to pay $15-25 each just to park.",
         ],
       },
@@ -2159,9 +2159,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to book event space in Houston",
         paragraphs: [
-          "Start by matching the time block to the event type. A one-hour Hourly booking ($50) works for a lunch-and-learn, a small pitch meeting, or a short workshop. The Half-Day package ($175) covers four hours and is the sweet spot for most workshops, training sessions, product demos, or extended team offsites. The Full-Day option ($300) gives you eight hours and is the right choice for conferences, all-day retreats, or events with multiple sessions and breaks.",
+          "Event space is booked hourly, with rates starting at $99/hour that vary depending on which room fits your event. A one-to-two hour booking works for a lunch-and-learn, a small pitch meeting, or a short workshop. A four-hour block is the sweet spot for most workshops, training sessions, product demos, or extended team offsites. Bookings of 8 hours or more get a flat 10% discount automatically — the right structure for conferences, all-day retreats, or events with multiple sessions and breaks. We don't charge separate half-day or full-day package rates; you only pay for the hours you actually book.",
           "Once you know your time block, talk to our event coordinator about layout and catering. We can configure the space for theater-style (rows of chairs facing the front — maximizes capacity for presentations), classroom-style (tables and chairs — works for workshops where attendees need to take notes), u-shape or boardroom (for discussions), or open/lounge (for networking mixers and receptions). Catering from Muze Cafe ranges from coffee-and-pastry service for morning sessions to full plated meals for evening events.",
-          "Book a walkthrough before you commit to a specific package. Most of our clients decide on their exact setup after they see the space in person — the dimensions on a floor plan don't always match your mental model for how many people will fit comfortably. Walkthroughs are free, take about 15 minutes, and you can bring whoever's planning the event with you. Once you lock in the date, we handle setup and breakdown on either side of your block, so you show up when you're ready and leave when you're done.",
+          "Book a walkthrough before you commit to a specific room and time. Most of our clients decide on their exact setup after they see the space in person — the dimensions on a floor plan don't always match your mental model for how many people will fit comfortably. Walkthroughs are free, take about 15 minutes, and you can bring whoever's planning the event with you. Once you lock in the date, we handle setup and breakdown on either side of your block, so you show up when you're ready and leave when you're done.",
         ],
       },
       relatedServices: [

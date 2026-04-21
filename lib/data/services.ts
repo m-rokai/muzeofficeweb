@@ -451,39 +451,21 @@ export const services: Service[] = [
     name: "Event Space",
     shortName: "Event Space",
     shortDescription:
-      "Host corporate events, workshops, and private gatherings. Full AV, flexible layouts, and on-site catering available.",
+      "Host corporate events, workshops, and private gatherings. Hourly rates from $99/hr vary by room, with a 10% discount on bookings of 8+ hours. Full AV, flexible layouts, and on-site catering available.",
     icon: "CalendarDays",
     tiers: [
       {
         name: "Hourly",
-        price: 50,
+        price: 99,
         priceUnit: "hour",
         features: [
-          "Short meetings, workshops",
-          "Full AV included",
-          "Flexible layout",
-        ],
-      },
-      {
-        name: "Half-Day",
-        price: 175,
-        priceUnit: "day",
-        features: [
-          "4-hour block",
-          "Workshops, training sessions",
-          "Catering available",
+          "Rates start at $99/hr, vary by room",
+          "Full AV included — projector, screen, sound system, wireless mics",
+          "Flexible seating layouts (theater, classroom, u-shape, lounge)",
+          "10% discount on bookings of 8 hours or more",
+          "Catering available from on-site Muze Cafe",
         ],
         highlighted: true,
-      },
-      {
-        name: "Full-Day",
-        price: 300,
-        priceUnit: "day",
-        features: [
-          "8-hour block",
-          "Conferences, retreats",
-          "Custom layout and catering",
-        ],
       },
     ],
     includedAmenities: [

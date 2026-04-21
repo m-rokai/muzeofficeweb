@@ -166,12 +166,12 @@ const eventSpaceFAQs: FAQ[] = [
   {
     question: "How far in advance should I book?",
     answer:
-      "We recommend booking at least 2 weeks in advance for half-day and full-day events. Hourly bookings can often be accommodated on shorter notice. Contact us for availability.",
+      "We recommend booking at least 2 weeks in advance for longer events (workshops, training sessions, retreats, all-day sessions). Shorter hourly bookings can often be accommodated on shorter notice. Contact us for availability.",
   },
   {
     question: "What are the pricing options?",
     answer:
-      "Hourly ($50/hr) for short meetings and workshops, Half-Day ($175) for 4-hour blocks ideal for training sessions, and Full-Day ($300) for 8-hour blocks suited for conferences and retreats. All include full AV equipment.",
+      "Event space is billed hourly, with rates starting at $99/hr — the exact rate depends on which room you book. Bookings of 8 hours or more automatically get a flat 10% discount. There are no separate half-day or full-day packages — you pay for the hours you need. All rates include full AV (projector, sound system, wireless mics) and flexible seating layouts.",
   },
 ];
 
@@ -470,7 +470,7 @@ const workspaceMembershipsFAQs: FAQ[] = [
   {
     question: "What workspace memberships does Muze Office offer?",
     answer:
-      "Muze Office offers five workspace types in Las Vegas: Virtual Office (from $39/mo) for a business address and mail, Coworking (Day Pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo), Private Office (contact for pricing) for 1–5+ person teams, Meeting Rooms (from $25/hr), and Event Space (from $50/hr). All memberships are month-to-month.",
+      "Muze Office offers five workspace types in Las Vegas: Virtual Office (from $39/mo) for a business address and mail, Coworking (Day Pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo), Private Office (contact for pricing) for 1–5+ person teams, Meeting Rooms (from $25/hr), and Event Space (from $99/hr). All memberships are month-to-month.",
   },
   {
     question: "Which membership is right for me?",
@@ -556,7 +556,7 @@ const lasVegasLocationFAQs: FAQ[] = [
   {
     question: "What services are available at Muze Office Las Vegas?",
     answer:
-      "Virtual Office (from $39/mo), Coworking (Day Pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo), Private Office (contact for pricing), Meeting Rooms (from $25/hr), and Event Space (from $50/hr). All month-to-month.",
+      "Virtual Office (from $39/mo), Coworking (Day Pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo), Private Office (contact for pricing), Meeting Rooms (from $25/hr), and Event Space (from $99/hr). All month-to-month.",
   },
   {
     question: "Does Nevada have state income tax?",
