@@ -64,6 +64,9 @@ function markdownResponse(body: string) {
     headers: {
       "Content-Type": "text/markdown; charset=utf-8",
       "Cache-Control": "public, max-age=3600, s-maxage=3600",
+      // Mirror of canonical HTML — keep out of search indexes to avoid
+      // duplicate-content competition while still reachable by agents.
+      "X-Robots-Tag": "noindex, follow",
     },
   });
 }

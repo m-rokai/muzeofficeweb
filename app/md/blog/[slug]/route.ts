@@ -19,6 +19,9 @@ export async function GET(
     headers: {
       "Content-Type": "text/markdown; charset=utf-8",
       "Cache-Control": "public, max-age=3600, s-maxage=3600",
+      // Mirror of canonical blog HTML, including posts the HTML side marks
+      // noindex (e.g. legacy partnership posts). Blanket-noindex the mirror.
+      "X-Robots-Tag": "noindex, follow",
     },
   });
 }

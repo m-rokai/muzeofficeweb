@@ -21,6 +21,7 @@ export async function GET(
     headers: {
       "Content-Type": "text/markdown; charset=utf-8",
       "Cache-Control": "public, max-age=3600, s-maxage=3600",
+      "X-Robots-Tag": "noindex, follow",
     },
   });
 }

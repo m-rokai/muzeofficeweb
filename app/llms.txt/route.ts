@@ -117,6 +117,9 @@ export function GET() {
     headers: {
       "Content-Type": "text/markdown; charset=utf-8",
       "Cache-Control": "public, max-age=3600, s-maxage=3600",
+      // Keep the LLM surfaces fetchable by agents but out of search indexes,
+      // so /foo.md doesn't compete with canonical /foo for rankings.
+      "X-Robots-Tag": "noindex, follow",
     },
   });
 }
