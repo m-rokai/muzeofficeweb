@@ -21,6 +21,7 @@ import { CTASection } from "@/components/marketing/cta-section";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 import { ServiceSchema } from "@/components/seo/service-schema";
 import { OptixBookingWidget } from "@/components/marketing/optix-booking-widget";
+import { RelatedReading } from "@/components/marketing/related-reading";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/marketing/animate";
 import { buttonVariants } from "@/lib/utils/button-variants";
 import { cn } from "@/lib/utils";
@@ -29,6 +30,7 @@ import { locations } from "@/lib/data/locations";
 import { services } from "@/lib/data/services";
 import { getCityServiceData } from "@/lib/data/city-services";
 import { getFAQsForService } from "@/lib/data/faqs";
+import { getRelatedBlogSlugsForService } from "@/lib/data/blog-links";
 import { BRAND } from "@/lib/utils/constants";
 import {
   generateAllCityServiceParams,
@@ -496,6 +498,13 @@ export default async function CityServicePage({ params }: PageProps) {
           </div>
         </Section>
       )}
+
+      {/* ── Related Reading ───────────────────────────────── */}
+      <RelatedReading
+        slugs={getRelatedBlogSlugsForService(service.id)}
+        heading={`More on ${service.name.toLowerCase()}`}
+        subtitle={`Long-form reading from the Muze Office team on ${service.name.toLowerCase()} in ${location.name}.`}
+      />
 
       {/* ── CTA ───────────────────────────────────────────── */}
       <CTASection

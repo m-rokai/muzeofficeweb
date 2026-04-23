@@ -69,6 +69,44 @@ const removedBlogRedirects = [
   // Duplicate: keep modern-meeting-room-near-ces-las-vegas, drop the long-slug version
   { source: "/creating-the-future-a-modern-meeting-room-near-ces-las-vegas", destination: "/blog/modern-meeting-room-near-ces-las-vegas" },
   { source: "/blog/creating-the-future-a-modern-meeting-room-near-ces-las-vegas", destination: "/blog/modern-meeting-room-near-ces-las-vegas" },
+
+  // Thin or stale-dated generic coworking posts → canonical service page
+  { source: "/how-to-choose-the-perfect-coworking-space-for-your-business", destination: "/las-vegas-coworking" },
+  { source: "/blog/how-to-choose-the-perfect-coworking-space-for-your-business", destination: "/las-vegas-coworking" },
+  { source: "/how-coworking-will-change-the-way-we-work-in-2022", destination: "/las-vegas-coworking" },
+  { source: "/blog/how-coworking-will-change-the-way-we-work-in-2022", destination: "/las-vegas-coworking" },
+  { source: "/coworking-in-2024-embracing-the-future-with-muze-office", destination: "/las-vegas-coworking" },
+  { source: "/blog/coworking-in-2024-embracing-the-future-with-muze-office", destination: "/las-vegas-coworking" },
+  { source: "/coworking-networking-how-to-connect-with-other-professionals", destination: "/las-vegas-coworking" },
+  { source: "/blog/coworking-networking-how-to-connect-with-other-professionals", destination: "/las-vegas-coworking" },
+  { source: "/choosing-the-best-office-space-for-your-business-in-2023", destination: "/workspace-memberships" },
+  { source: "/blog/choosing-the-best-office-space-for-your-business-in-2023", destination: "/workspace-memberships" },
+
+  // Seasonal / date-stamped posts that no longer match search intent
+  { source: "/the-dos-and-donts-of-planning-a-thanksgiving-business-event-for-2022", destination: "/las-vegas-event-space" },
+  { source: "/blog/the-dos-and-donts-of-planning-a-thanksgiving-business-event-for-2022", destination: "/las-vegas-event-space" },
+  { source: "/thanksgiving-2024", destination: "/locations/las-vegas" },
+  { source: "/blog/thanksgiving-2024", destination: "/locations/las-vegas" },
+  { source: "/embracing-gratitude-and-growth-this-november-at-muze-office", destination: "/locations/las-vegas" },
+  { source: "/blog/embracing-gratitude-and-growth-this-november-at-muze-office", destination: "/locations/las-vegas" },
+
+  // Off-topic tourist / stale partnership content
+  { source: "/top-5-things-to-do-in-las-vegas-for-an-unforgettable-experience", destination: "/locations/las-vegas" },
+  { source: "/blog/top-5-things-to-do-in-las-vegas-for-an-unforgettable-experience", destination: "/locations/las-vegas" },
+  { source: "/top-5-places-to-visit-in-texas", destination: "/locations/houston" },
+  { source: "/blog/top-5-places-to-visit-in-texas", destination: "/locations/houston" },
+  { source: "/muze-office-and-equinox-a-partnership-for-excellence", destination: "/locations/las-vegas" },
+  { source: "/blog/muze-office-and-equinox-a-partnership-for-excellence", destination: "/locations/las-vegas" },
+
+  // Generic office-design posts that dilute topical authority — send to blog index
+  { source: "/boosting-collaboration-in-the-office-essential-tips-for-effective-teamwork", destination: "/blog" },
+  { source: "/blog/boosting-collaboration-in-the-office-essential-tips-for-effective-teamwork", destination: "/blog" },
+  { source: "/office-lighting-design-tips-for-creating-an-illuminating-workspace", destination: "/blog" },
+  { source: "/blog/office-lighting-design-tips-for-creating-an-illuminating-workspace", destination: "/blog" },
+  { source: "/how-to-choose-the-right-office-furniture-for-comfort-and-functionality", destination: "/blog" },
+  { source: "/blog/how-to-choose-the-right-office-furniture-for-comfort-and-functionality", destination: "/blog" },
+  { source: "/the-ultimate-guide-to-office-acoustics-creating-a-sound-environment-for-work", destination: "/blog" },
+  { source: "/blog/the-ultimate-guide-to-office-acoustics-creating-a-sound-environment-for-work", destination: "/blog" },
 ];
 
 type RedirectRule = {
