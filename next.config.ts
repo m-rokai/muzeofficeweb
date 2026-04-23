@@ -79,8 +79,13 @@ type RedirectRule = {
 
 /**
  * Preserve one-hop 301s for legacy WordPress URLs with and without trailing
- * slashes. Googlebot was hitting `/workspace-memberships/.../` first, then
- * taking a second 308 just to normalize the slash before our actual redirect.
+ * slashes. Paired with `skipTrailingSlashRedirect: true` below so these
+ * `.../` variants actually match instead of being stripped first by Next's
+ * built-in trailing-slash normalization (which would otherwise produce a
+ * two-hop chain: `/foo/` → `/foo` → `/destination`).
+ *
+ * `proxy.ts` handles the slash-stripping fallback for paths that are not in
+ * the redirect table.
  */
 function withTrailingSlashVariants(routes: RedirectRule[]): RedirectRule[] {
   return routes.flatMap((route) => {
@@ -91,6 +96,7 @@ function withTrailingSlashVariants(routes: RedirectRule[]): RedirectRule[] {
 }
 
 const nextConfig: NextConfig = {
+  skipTrailingSlashRedirect: true,
   async redirects() {
     // Order matters: explicit redirects first, then the auto-generated
     // blog slug redirects. Next.js uses first-match-wins, so explicit
