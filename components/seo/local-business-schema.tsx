@@ -24,15 +24,30 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
     : "";
   const localCue = location.localCues[0] ? ` ${location.localCues[0]}.` : "";
 
+  const locationUrl = `${BRAND.url}/locations/${location.slug}`;
+  const externalProfiles = location.externalProfiles ?? {};
+  const sameAs = [
+    BRAND.social.twitter,
+    BRAND.social.facebook,
+    BRAND.social.instagram,
+    BRAND.social.linkedin,
+    BRAND.social.tiktok,
+    externalProfiles.yelp,
+    externalProfiles.bbb,
+    externalProfiles.gbp,
+  ].filter((url): url is string => Boolean(url));
+
   const data: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "CoworkingSpace",
+    "@id": `${locationUrl}#coworkingspace`,
     name: location.nickname,
     description: `Flexible coworking, virtual offices, private offices, meeting rooms, and event space in ${address.city}, ${address.state}.${landmarkPhrase}${localCue} Free parking, high-speed WiFi, on-site cafe, and month-to-month memberships with no long-term leases.`,
     image: `${BRAND.url}/images/spaces/${location.slug}.jpg`,
-    url: `${BRAND.url}/locations/${location.slug}`,
+    url: locationUrl,
     telephone: location.phone !== "TBD" ? location.phone : undefined,
     email: location.email,
+    parentOrganization: { "@id": `${BRAND.url}/#organization` },
     address: {
       "@type": "PostalAddress",
       streetAddress: address.street !== "TBD" ? address.street : undefined,
@@ -46,6 +61,10 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
       latitude: geo.lat,
       longitude: geo.lng,
     },
+    areaServed: location.areaServed.map((area) => ({
+      "@type": "City",
+      name: area,
+    })),
     openingHoursSpecification: openingHours.length > 0
       ? {
           "@type": "OpeningHoursSpecification",
@@ -60,14 +79,8 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
           closes: hours.weekdays?.close,
         }
       : undefined,
-    priceRange: "$$",
-    sameAs: [
-      BRAND.social.twitter,
-      BRAND.social.facebook,
-      BRAND.social.instagram,
-      BRAND.social.linkedin,
-      BRAND.social.tiktok,
-    ],
+    priceRange: "$25-$899",
+    sameAs,
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "High-Speed WiFi", value: true },
       { "@type": "LocationFeatureSpecification", name: "Free Parking", value: true },

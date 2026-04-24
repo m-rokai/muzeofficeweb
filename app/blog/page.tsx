@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { Section } from "@/components/layout/section";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import {
   FadeIn,
   StaggerContainer,
@@ -13,12 +14,12 @@ import { getAllPosts, formatDate, getReadingTime } from "@/lib/blog";
 export const metadata: Metadata = {
   title: "Muze Office Blog — Coworking & Virtual Office Insights",
   description:
-    "Tips, guides, and insights on coworking, virtual offices, remote work, and flexible workspace in Las Vegas from the Muze Office team.",
+    "Tips, guides, and insights on coworking, virtual offices, remote work, and flexible workspace in Las Vegas and Houston from the Muze Office team.",
   alternates: { canonical: "/blog" },
   openGraph: {
     title: "Muze Office Blog — Coworking & Virtual Office Insights",
     description:
-      "Tips, guides, and insights on coworking, virtual offices, remote work, and flexible workspace in Las Vegas.",
+      "Tips, guides, and insights on coworking, virtual offices, remote work, and flexible workspace in Las Vegas and Houston.",
   },
 };
 
@@ -27,6 +28,12 @@ export default function BlogIndexPage() {
 
   return (
     <>
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Blog", href: "/blog" },
+        ]}
+      />
       <Section>
         <FadeIn>
           <div className="mx-auto max-w-[720px] text-center">
@@ -35,7 +42,7 @@ export default function BlogIndexPage() {
             </h1>
             <p className="mt-4 text-base text-[#74726D] md:text-lg">
               Coworking tips, virtual office guides, and workspace insights
-              from Las Vegas.
+              from Las Vegas and Houston.
             </p>
           </div>
         </FadeIn>

@@ -50,16 +50,18 @@ export async function generateMetadata({
     return { title: "Location Not Found | Muze Office" };
   }
 
-  const addressStr =
+  const shortAddress =
     location.address.street !== "TBD"
-      ? `${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}`
+      ? location.address.street
       : `${location.address.city}, ${location.address.state}`;
 
   const isComingSoon = location.status !== "active";
+  const phoneCta =
+    location.phone !== "TBD" ? `Call ${location.phone}.` : "Coming soon.";
 
   return {
     title: `Muze Office ${location.name} — Coworking & Virtual Office`,
-    description: `Visit Muze Office ${location.name} at ${addressStr}. Flexible coworking, virtual offices, private offices, meeting rooms, and event space. Month-to-month. ${location.phone !== "TBD" ? `Call ${location.phone}.` : "Coming soon."}`,
+    description: `Muze Office ${location.name} at ${shortAddress}. Coworking, virtual offices, private offices, meeting rooms, event space. Month-to-month. ${phoneCta}`,
     alternates: { canonical: `/locations/${city}` },
     // Prevent Google from indexing coming-soon pages with TBD addresses,
     // but allow crawlers to follow outbound links (internal navigation,

@@ -131,7 +131,7 @@ export default async function CityServicePage({ params }: PageProps) {
   const pageData = getCityServiceData(cityService);
   if (!pageData) notFound();
 
-  const faqs = getFAQsForService(ctx.serviceId);
+  const faqs = getFAQsForService(ctx.serviceId, ctx.locationId);
   const isComingSoon = location.status === "coming-soon";
   const hasOnlineBooking =
     !isComingSoon &&

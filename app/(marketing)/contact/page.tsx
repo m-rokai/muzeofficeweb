@@ -10,6 +10,7 @@ import {
 import { buttonVariants } from "@/lib/utils/button-variants";
 import { cn } from "@/lib/utils";
 import { Section } from "@/components/layout/section";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { CTASection } from "@/components/marketing/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -29,6 +30,12 @@ export default function ContactPage() {
   return (
     <>
       <LocalBusinessSchema locationId="las-vegas" />
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Contact", href: "/contact" },
+        ]}
+      />
       {/* Hero */}
       <Section>
         <FadeIn>

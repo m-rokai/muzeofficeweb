@@ -19,10 +19,19 @@ export interface Location {
   email: string;
   hours: { weekdays: { open: string; close: string }; weekends: null };
   localCues: string[];
+  /** Primary neighborhoods this location is physically in. */
   neighborhoods: string[];
+  /** Wider service-area cities/neighborhoods used for `areaServed` markup. */
+  areaServed: string[];
   nearbyLandmarks: { name: string; distance: string }[];
   services: string[];
   taxAdvantage: string;
+  /** External profile URLs for this specific location, used in JSON-LD `sameAs`. */
+  externalProfiles?: {
+    yelp?: string;
+    bbb?: string;
+    gbp?: string;
+  };
 }
 
 export const locations: Location[] = [
@@ -55,6 +64,19 @@ export const locations: Location[] = [
       "Not a casino, not a hotel lobby — a real workspace",
     ],
     neighborhoods: ["Paradise", "South Las Vegas"],
+    areaServed: [
+      "Las Vegas",
+      "Paradise",
+      "Enterprise",
+      "Spring Valley",
+      "Henderson",
+      "Summerlin",
+      "Green Valley",
+      "Sunrise Manor",
+      "Whitney",
+      "Winchester",
+      "North Las Vegas",
+    ],
     nearbyLandmarks: [
       { name: "Harry Reid International Airport", distance: "10 min" },
       { name: "I-15", distance: "5 min" },
@@ -77,6 +99,9 @@ export const locations: Location[] = [
     ],
     taxAdvantage:
       "Nevada has no state income tax, no corporate income tax, and no franchise tax.",
+    externalProfiles: {
+      yelp: "https://www.yelp.com/biz/muze-office-bermuda-las-vegas",
+    },
   },
   {
     id: "houston",
@@ -107,6 +132,20 @@ export const locations: Location[] = [
       "Month-to-month flexibility in a market dominated by long leases",
     ],
     neighborhoods: ["Galleria", "Tanglewood", "Uptown"],
+    areaServed: [
+      "Houston",
+      "Galleria",
+      "Tanglewood",
+      "Uptown",
+      "Memorial",
+      "River Oaks",
+      "Briargrove",
+      "Bellaire",
+      "Westchase",
+      "Energy Corridor",
+      "Inner Loop",
+      "West Houston",
+    ],
     nearbyLandmarks: [
       { name: "The Galleria", distance: "10 min" },
       { name: "Post Oak Blvd", distance: "5 min" },
@@ -131,6 +170,9 @@ export const locations: Location[] = [
       "medical-center-coworking",
     ],
     taxAdvantage: "Texas has no state personal income tax.",
+    externalProfiles: {
+      bbb: "https://www.bbb.org/us/tx/houston/profile/office-space-rental/muze-office-0915-90064601",
+    },
   },
 ];
 

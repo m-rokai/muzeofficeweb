@@ -434,9 +434,55 @@ const dedicatedDeskFAQs: FAQ[] = [
   },
 ];
 
-/** Map service IDs to their FAQ arrays */
+const houstonVirtualOfficeFAQs: FAQ[] = [
+  {
+    question: "Do I get a real street address or a PO Box?",
+    answer:
+      "You get a real street address with a suite number — not a PO Box. You can use it on your website, business cards, LLC filings, and Google Business Profile. Our Houston address is 1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area.",
+  },
+  {
+    question: "Can I use this address to register my Texas LLC?",
+    answer:
+      "Yes. Our Houston address works for Texas LLC registration with the Secretary of State, business licensing, Google Business Profile verification, and contracts. Note that a Texas registered agent (the person or service authorized to receive legal service of process for your LLC) is a separate role — if you need one, you can pair a registered agent service with your Muze Office Houston virtual office.",
+  },
+  {
+    question: "How does mail handling work?",
+    answer:
+      "We receive your mail at your suite address. You get a notification when mail arrives, and you can pick it up during business hours. Our Opal and Diamond plans also include mail forwarding to any address you choose.",
+  },
+  {
+    question: "Do virtual office plans include meeting room access?",
+    answer:
+      "Yes. The Opal plan includes 2 meeting room hours per month, and the Diamond plan includes 6 hours per month. Additional hours can be booked at our standard hourly rate. All rooms include AV equipment and video conferencing.",
+  },
+  {
+    question: "Are there long-term contracts?",
+    answer:
+      "No. All virtual office plans are month-to-month with no long-term commitment required. You can upgrade, downgrade, or cancel with 30 days' notice.",
+  },
+  {
+    question: "What's included in each virtual office package?",
+    answer:
+      "Mail Holding ($39/mo): professional Houston business address with suite number, USPS letter mail pickup, and LLC/Google Business registration — letters only, no packages. Sandstone ($69/mo): adds package receiving from UPS, FedEx, and Amazon plus signature-required mail. Opal ($149/mo): adds mail forwarding, 4 coworking hours, and 2 meeting room hours. Diamond ($249/mo): adds 20 coworking hours, 6 meeting room hours, and a dedicated local phone line.",
+  },
+  {
+    question: "What's the difference between a virtual office and a PO Box?",
+    answer:
+      "A PO Box gives you a box number at the post office — it can't be used for LLC registration, and it looks unprofessional on a business card. A virtual office gives you a real street address with a suite number, plus access to meeting rooms, coworking, and a receptionist. It's a professional business presence without renting a full office.",
+  },
+  {
+    question: "How close is Muze Office to Houston airports?",
+    answer:
+      "About 25 minutes by car from George Bush Intercontinental (IAH) and 25 minutes from William P. Hobby (HOU). The 1800 Augusta Dr location sits inside the 610 Loop in the Galleria area, making fly-in client meetings practical from either airport.",
+  },
+];
+
+/** Map service IDs to their FAQ arrays. Keys can be either a bare service ID
+ *  (default for that service across all cities) or a city-prefixed key
+ *  ("<locationId>-<serviceId>") for a city-specific override. */
 export const faqsByService: FAQsByService = {
   "virtual-office": virtualOfficeFAQs,
+  "houston-virtual-office": houstonVirtualOfficeFAQs,
   coworking: coworkingFAQs,
   "day-pass": dayPassFAQs,
   "hot-desk": hotDeskFAQs,
@@ -451,8 +497,17 @@ export const faqsByService: FAQsByService = {
   "medical-center-coworking": medicalCenterCoworkingFAQs,
 };
 
-/** Get FAQs for a given service ID */
-export function getFAQsForService(serviceId: string): FAQ[] {
+/** Get FAQs for a given service ID, with optional city-specific override.
+ *  Looks up "<cityId>-<serviceId>" first; falls back to "<serviceId>". */
+export function getFAQsForService(
+  serviceId: string,
+  cityId?: string,
+): FAQ[] {
+  if (cityId) {
+    const cityServiceKey = `${cityId}-${serviceId}`;
+    const cityOverride = faqsByService[cityServiceKey];
+    if (cityOverride) return cityOverride;
+  }
   return faqsByService[serviceId] ?? [];
 }
 
@@ -570,12 +625,51 @@ const lasVegasLocationFAQs: FAQ[] = [
   },
 ];
 
+const houstonLocationFAQs: FAQ[] = [
+  {
+    question: "What is the address for Muze Office Houston?",
+    answer:
+      "1800 Augusta Dr, Houston, TX 77057. It's a real commercial suite in the Galleria / Tanglewood area inside the 610 Loop — not a PO Box or mail-drop storefront — minutes from Post Oak Blvd.",
+  },
+  {
+    question: "How far is Muze Office Houston from IAH and Hobby airports?",
+    answer:
+      "About 25 minutes by car from George Bush Intercontinental (IAH) and 25 minutes from William P. Hobby (HOU). The Galleria location makes fly-in client meetings practical from either airport.",
+  },
+  {
+    question: "What are your hours in Houston?",
+    answer:
+      "The space is staffed Monday through Friday, 10 AM to 7 PM. Dedicated Desk and Private Office members have 24/7 access via biometric entry.",
+  },
+  {
+    question: "Is there free parking at the Houston location?",
+    answer:
+      "Yes. Parking is free for every member, day pass visitor, meeting room guest, and event attendee at 1800 Augusta Dr. No meters, no valet, no garage fees.",
+  },
+  {
+    question: "What services are available at Muze Office Houston?",
+    answer:
+      "Virtual Office (from $39/mo), Coworking (Day Pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo), Private Office (contact for pricing), Meeting Rooms (from $25/hr), and Event Space (from $99/hr). All month-to-month.",
+  },
+  {
+    question: "Does Texas have state income tax?",
+    answer:
+      "No. Texas has no state personal income tax. This is one reason many out-of-state founders form Texas LLCs and use a real Houston address like Muze Office Houston for their business filings.",
+  },
+  {
+    question: "Can I use the Houston address for my Texas LLC?",
+    answer:
+      "Yes. 1800 Augusta Dr, Houston, TX 77057 is a real commercial address you can use for Texas LLC registration, Google Business Profile, contracts, and business licensing. A Texas registered agent is a separate role — pair a registered agent service with the virtual office if you need one.",
+  },
+];
+
 /** Map page keys (typically route paths or identifiers) to FAQ arrays for
  *  pages that aren't a single service under the city-service route. */
 export const faqsByPage: Record<string, FAQ[]> = {
   "workspace-memberships": workspaceMembershipsFAQs,
   locations: locationsOverviewFAQs,
   "locations/las-vegas": lasVegasLocationFAQs,
+  "locations/houston": houstonLocationFAQs,
 };
 
 /** Get FAQs for a given page key. Returns [] if none are defined. */

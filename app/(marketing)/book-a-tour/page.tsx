@@ -11,6 +11,7 @@ import {
 import { buttonVariants } from "@/lib/utils/button-variants";
 import { cn } from "@/lib/utils";
 import { Section } from "@/components/layout/section";
+import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { CTASection } from "@/components/marketing/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
 import { ContactForm } from "@/components/forms/contact-form";
@@ -19,9 +20,9 @@ import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/components/mar
 import { BRAND } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
-  title: "Book a Tour — Visit Muze Office Las Vegas",
+  title: "Book a Tour — Muze Office Las Vegas & Houston",
   description:
-    "Schedule a free tour of Muze Office at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119. See coworking desks, private offices, meeting rooms, and the on-site cafe. Call (702) 370-7515.",
+    "Free tour of Muze Office Las Vegas (6860 Bermuda Rd) or Houston (1800 Augusta Dr). See coworking desks, private offices, meeting rooms. Call (702) 370-7515.",
   alternates: { canonical: "/book-a-tour" },
 };
 
@@ -74,6 +75,12 @@ export default function BookATourPage() {
   return (
     <>
       <LocalBusinessSchema locationId="las-vegas" />
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Book a Tour", href: "/book-a-tour" },
+        ]}
+      />
       {/* Hero */}
       <Section>
         <div className="mx-auto max-w-[800px] text-center">
