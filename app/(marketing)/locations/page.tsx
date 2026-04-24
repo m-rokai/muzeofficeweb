@@ -15,9 +15,9 @@ import { FadeIn, ScaleIn } from "@/components/marketing/animate";
 import { BRAND } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
-  title: "Locations — Muze Office Las Vegas & Houston",
+  title: "Las Vegas & Houston Locations — Coworking & Virtual Offices",
   description:
-    "Visit Muze Office at 6860 Bermuda Rd, Suite 200 in Las Vegas or 1800 Augusta Dr inside the 610 Loop in Houston. Two active locations, free parking at both.",
+    "Las Vegas: 6860 Bermuda Rd, Suite 200. Houston: 1800 Augusta Dr (Galleria/Tanglewood). Coworking, virtual offices, private offices, meeting rooms, event space. Free parking at both.",
   alternates: { canonical: "/locations" },
 };
 

@@ -105,7 +105,7 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn delay={0.35}>
             <p className="mt-6 max-w-[580px] text-lg leading-relaxed text-gray-300 md:text-xl">
-              Month-to-month coworking, virtual offices, private offices, meeting rooms, and event space in Las Vegas (6860 Bermuda Rd, Suite 200) and Houston (1800 Augusta Dr, Galleria / Tanglewood). No long-term leases. Free parking. Two active locations.
+              Muze Office is month-to-month coworking, virtual offices, private offices, meeting rooms, and event space in Las Vegas (6860 Bermuda Rd, Suite 200) and Houston (1800 Augusta Dr, Galleria / Tanglewood). No long-term leases. Free parking. Two active locations.
             </p>
           </FadeIn>
           <FadeIn delay={0.5}>

@@ -5,7 +5,9 @@ export function OrganizationSchema() {
   const data: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": `${BRAND.url}/#organization`,
     name: BRAND.name,
+    alternateName: ["Muze", "Muze Coworking", "Muze Office Las Vegas", "Muze Office Houston"],
     legalName: BRAND.legalName,
     url: BRAND.url,
     logo: `${BRAND.url}/images/logo.png`,

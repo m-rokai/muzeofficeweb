@@ -1220,9 +1220,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Virtual Office in Houston",
     heroSubtitle:
       "A real Houston business address on Augusta Dr in the Galleria — not a P.O. Box. Use it for your Texas LLC, Google Business Profile, contracts, and mail. Meeting rooms included.",
-    metaTitle: "Virtual Office Houston | From $39/mo",
+    metaTitle: "Houston Virtual Office — Galleria Business Address from $39/mo",
     metaDescription:
-      "Get a professional Houston business address with mail handling, Texas LLC registration, and meeting room access. Mail Holding plans start at $39/mo. Month-to-month. No lease required.",
+      "Real Houston virtual office and business address at 1800 Augusta Dr in the Galleria. Mail handling, Texas LLC ready, meeting rooms. From $39/mo. Month-to-month.",
     heroImage: "/images/hero/virtual-office.jpg",
     useCases: [
       "Remote workers who need a Houston business address",
