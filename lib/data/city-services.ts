@@ -51,12 +51,12 @@ export const cityServiceData: Record<string, CityServiceData> = {
     slug: "las-vegas-virtual-office",
     cityId: "las-vegas",
     serviceId: "virtual-office",
-    h1: "Las Vegas Business Address & Virtual Office",
+    h1: "Virtual Office in Las Vegas",
     heroSubtitle:
       "A real Las Vegas business address on Bermuda Rd in a staffed commercial suite — not a PO Box. Use it for your LLC filings, Nevada state registrations, Google Business Profile, and business mail. Mail forwarding included on Opal and Diamond plans.",
-    metaTitle: "Virtual Office Las Vegas | From $39/mo",
+    metaTitle: "Virtual Office in Las Vegas | Real Address from $39/mo | Muze Office",
     metaDescription:
-      "Real Las Vegas business address for your LLC and Google Business Profile. Mail handling from $39/mo; mail forwarding on Opal and Diamond. Month-to-month.",
+      "Get a virtual office in Las Vegas with a real business address at 6860 Bermuda Rd. From $39/mo. LLC-ready, Google Business Profile-eligible, mail forwarding on Opal and Diamond. Month-to-month.",
     heroImage: "/images/hero/virtual-office.jpg",
     useCases: [
       "LLC filings and Nevada business registration",
@@ -117,9 +117,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
         },
       ],
       whyChoose: {
-        heading: "Why choose a Las Vegas business address at Muze Office",
+        heading: "Why a virtual office in Las Vegas at Muze Office",
         paragraphs: [
-          "A Las Vegas virtual office is one of the most cost-effective ways to establish a real business presence in Nevada without signing a lease. Muze Office sits at 6860 Bermuda Rd, Suite 200 in the 89119 business corridor — a real commercial building with a real suite, reception, and physical tenants, not a UPS Store counter or a ghost address. That matters when you register an LLC with the Nevada Secretary of State, verify a Google Business Profile, open a business bank account, or file paperwork that requires a street address rather than a P.O. Box.",
+          "A virtual office in Las Vegas is one of the most cost-effective ways to establish a real business presence in Nevada without signing a lease. Muze Office sits at 6860 Bermuda Rd, Suite 200 in the 89119 business corridor — a real commercial building with a real suite, reception, and physical tenants, not a UPS Store counter or a ghost address. That matters when you register an LLC with the Nevada Secretary of State, verify a Google Business Profile, open a business bank account, or file paperwork that requires a street address rather than a P.O. Box.",
           "Use 6860 Bermuda Rd, Suite 200, Las Vegas NV 89119 as your business address on LLC filings, Nevada state registrations, Google Business Profile setup, and client-facing contracts. It reads as a real commercial address because it is one — the suite number is yours, the mail is delivered to the suite, and the building has a staffed reception during business hours. Banks and payment processors differ in how they treat virtual-office and commercial mail-receiving-agent (CMRA) addresses during verification — check with your specific institution before using this address on financial applications. We are not your registered agent for legal service of process; if you need that, you'll work with a separate registered agent service and can list Muze Office as your business address alongside.",
           "Nevada's tax advantage is the other half of the equation. The state has no personal income tax, no corporate income tax, and no franchise tax on most small businesses. Pairing a Nevada virtual office with LLC formation gives you a legitimate local footprint at a fraction of what physical office space would cost. Mail Holding starts at $39 per month — a professional address with USPS letter mail notification and suite-number delivery. Sandstone ($69) adds package receiving from UPS, FedEx, and Amazon, typically the deciding factor for e-commerce sellers. Mail forwarding is included from Opal ($149) — if you live out of state or travel often, your mail gets bundled and forwarded to you on a schedule that works.",
           "Beyond the address, every virtual office plan at Muze Office is backed by a real coworking space. Opal ($149) and Diamond ($249) include coworking hours and meeting room credits, so when a client flies in for a meeting you have a professional conference room to bring them to — not a Starbucks on Paradise Rd. The building is 10 minutes from Harry Reid International Airport via I-215, which makes fly-in meetings realistic for out-of-state businesses that only need a Las Vegas presence a few times a year.",

@@ -74,7 +74,7 @@ const homepageFAQs = [
   { question: "What are your hours?", answer: "Monday through Friday, 10am to 7pm. Members with dedicated desks and private offices have 24/7 access via biometric entry." },
   { question: "Is there parking?", answer: "Yes — free parking for all members, day pass holders, meeting room guests, and event attendees. No meters, no valet fees, no parking garage charges." },
   { question: "Can I book a meeting room without a membership?", answer: "Yes. Meeting rooms are available by the hour to anyone — no membership required. All rooms include AV equipment, video conferencing, whiteboards, and WiFi. Huddle rooms start at $25/hr." },
-  { question: "Do you offer virtual office plans?", answer: "Yes. Virtual office plans start at $39/month (Mail Holding) for a professional Las Vegas business address with USPS letter mail pickup. Sandstone ($69/mo) adds package receiving from UPS, FedEx, and Amazon. Higher tiers add mail forwarding, coworking hours, and meeting room access. You can use any plan for LLC registration, Google Business Profile, and contracts." },
+  { question: "Do you offer a virtual office in Las Vegas?", answer: "Yes. A virtual office in Las Vegas at Muze Office starts at $39/month (Mail Holding) for a professional business address at 6860 Bermuda Rd, Suite 200 with USPS letter mail pickup. Sandstone ($69/mo) adds package receiving from UPS, FedEx, and Amazon. Higher tiers add mail forwarding, coworking hours, and meeting room access. You can use any plan for LLC registration, Google Business Profile, and contracts. Full details and pricing at /las-vegas-virtual-office." },
   { question: "Are there long-term contracts?", answer: "No. All Muze Office memberships are month-to-month. Cancel anytime with 30 days' notice. No long-term lease required." },
 ];
 
@@ -100,7 +100,7 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn delay={0.2}>
             <h1 className="max-w-[780px] text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-5xl lg:text-6xl">
-              Coworking, Virtual Offices &amp; Private Workspace in Las Vegas
+              Flexible Workspace in Las Vegas — Coworking, Private Offices &amp; Meeting Rooms
             </h1>
           </FadeIn>
           <FadeIn delay={0.35}>
@@ -291,7 +291,7 @@ export default function HomePage() {
               Coworking &amp; virtual office plans — no long-term leases
             </h2>
             <p className="mx-auto mt-4 max-w-[640px] text-lg text-[#74726D]">
-              <Link href="/las-vegas-day-pass" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Day Pass $25</Link>, <Link href="/las-vegas-hot-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Hot Desk $350/mo</Link>, <Link href="/las-vegas-dedicated-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Dedicated Desk $399/mo</Link>, and virtual offices from $39/mo. All memberships are month-to-month with free parking, WiFi, coffee, and meeting room access.
+              <Link href="/las-vegas-day-pass" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Day Pass $25</Link>, <Link href="/las-vegas-hot-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Hot Desk $350/mo</Link>, <Link href="/las-vegas-dedicated-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Dedicated Desk $399/mo</Link>, and a <Link href="/las-vegas-virtual-office" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">virtual office in Las Vegas</Link> from $39/mo. All memberships are month-to-month with free parking, WiFi, coffee, and meeting room access.
             </p>
           </div>
         </FadeIn>
