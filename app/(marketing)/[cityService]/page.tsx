@@ -137,14 +137,21 @@ export default async function CityServicePage({ params }: PageProps) {
     !isComingSoon &&
     location.slug === "las-vegas" &&
     service.id === "meeting-rooms";
+  // Virtual-office shoppers want the address, not a tour of an empty desk.
+  // Route them to /contact so the lead lands in access@muzeoffice.com.
+  const isVirtualOffice = service.id === "virtual-office";
   const primaryCtaHref = hasOnlineBooking
     ? "#book-online"
-    : BRAND.booking.tourUrl;
+    : isVirtualOffice
+      ? "/contact"
+      : BRAND.booking.tourUrl;
   const primaryCtaLabel = isComingSoon
     ? "Join Waitlist"
     : hasOnlineBooking
       ? "Book Online"
-      : "Book a Tour";
+      : isVirtualOffice
+        ? `Get My ${location.name} Address`
+        : "Book a Tour";
 
   return (
     <>
@@ -513,6 +520,8 @@ export default async function CityServicePage({ params }: PageProps) {
             ? `Be First to Know About ${service.name} in ${location.name}`
             : hasOnlineBooking
               ? `Ready to Book ${service.name} in ${location.name}?`
+            : isVirtualOffice
+              ? `Ready for a Real ${location.name} Business Address?`
             : `Ready to Get Started with ${service.name}?`
         }
         subtitle={
@@ -520,6 +529,8 @@ export default async function CityServicePage({ params }: PageProps) {
             ? `Muze Office ${location.name} is coming soon. Join the waitlist for early access and special pricing.`
             : hasOnlineBooking
               ? `Reserve your room online now, or call us if you need catering, AV help, or a custom setup for your meeting.`
+            : isVirtualOffice
+              ? `Pick a tier, complete USPS Form 1583, and start using ${location.address.street}, ${location.address.city} ${location.address.state} on your LLC, GBP, and contracts. Most members are live within a week.`
             : `Book a tour today or call us to learn more about ${service.name.toLowerCase()} at Muze Office ${location.name}.`
         }
         primaryLabel={primaryCtaLabel}
