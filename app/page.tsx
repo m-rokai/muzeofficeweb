@@ -78,6 +78,7 @@ const homepageFAQs = [
   { question: "Is there parking?", answer: "Yes — free parking for all members, day pass holders, meeting room guests, and event attendees. No meters, no valet fees, no parking garage charges." },
   { question: "Can I book a meeting room without a membership?", answer: "Yes. Meeting rooms are available by the hour to anyone — no membership required. All rooms include AV equipment, video conferencing, whiteboards, and WiFi. Huddle rooms start at $25/hr." },
   { question: "Do you offer a virtual office in Las Vegas?", answer: "Yes. A virtual office in Las Vegas at Muze Office starts at $39/month (Mail Holding) for a professional business address at 6860 Bermuda Rd, Suite 200 with USPS letter mail pickup. Sandstone ($69/mo) adds package receiving from UPS, FedEx, and Amazon. Higher tiers add mail forwarding, coworking hours, and meeting room access. You can use any plan for LLC registration, Google Business Profile, and contracts. Full details and pricing at /las-vegas-virtual-office." },
+  { question: "Do you offer a virtual office in Houston?", answer: "Yes. A virtual office in Houston at Muze Office starts at $39/month (Mail Holding) for a professional Galleria business address at 1800 Augusta Dr with USPS letter mail pickup. Sandstone ($69/mo) adds UPS, FedEx, and Amazon package receiving. Higher tiers add mail forwarding, coworking hours, and meeting room access. The address satisfies Texas LLC filings, Google Business Profile, and most banks. Full details and pricing at /houston-virtual-office." },
   { question: "Are there long-term contracts?", answer: "No. All Muze Office memberships are month-to-month. Cancel anytime with 30 days' notice. No long-term lease required." },
 ];
 
@@ -205,8 +206,48 @@ export default function HomePage() {
         </FadeIn>
         <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {coreServices.map((service) => (
-            <StaggerItem key={service.id}>
+            <StaggerItem key={`lv-${service.id}`}>
               <Link href={`/las-vegas-${service.id}`} className="group block h-full">
+                <Card className="h-full border-[#E6E4DF] bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <CardContent className="flex flex-col gap-5 p-7">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-white">
+                      {serviceIcons[service.id]}
+                    </div>
+                    <h3 className="text-xl font-semibold">{service.name}</h3>
+                    <p className="text-base text-[#74726D] leading-relaxed">{service.shortDescription}</p>
+                    {service.tiers[0]?.price && (
+                      <p className="text-base font-semibold text-[#EAA820]">From ${service.tiers[0].price}/{service.tiers[0].priceUnit}</p>
+                    )}
+                    <span className="mt-auto inline-flex items-center gap-1.5 text-base font-medium text-[#1A1A1A] group-hover:text-[#EAA820] transition-colors">
+                      Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+      </Section>
+
+      {/* Services — Houston */}
+      <Section variant="white">
+        <FadeIn>
+          <div className="mb-14">
+            <Badge className="mb-4 bg-[#EAA820]/10 text-[#EAA820] border border-[#EAA820]/20 text-sm px-3 py-1">
+              <MapPin className="mr-1.5 h-3.5 w-3.5" /> Houston
+            </Badge>
+            <h2 className="text-3xl font-semibold md:text-4xl lg:text-5xl">
+              Workspace in Houston
+            </h2>
+            <p className="mt-4 max-w-[600px] text-lg text-[#74726D]">
+              1800 Augusta Dr — inside the 610 Loop in the Galleria / Tanglewood area. Free parking, fast WiFi, month-to-month. No long-term leases.
+            </p>
+          </div>
+        </FadeIn>
+        <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          {coreServices.map((service) => (
+            <StaggerItem key={`hou-${service.id}`}>
+              <Link href={`/houston-${service.id}`} className="group block h-full">
                 <Card className="h-full border-[#E6E4DF] bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <CardContent className="flex flex-col gap-5 p-7">
                     <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-white">
@@ -294,7 +335,7 @@ export default function HomePage() {
               Coworking &amp; virtual office plans — no long-term leases
             </h2>
             <p className="mx-auto mt-4 max-w-[640px] text-lg text-[#74726D]">
-              <Link href="/las-vegas-day-pass" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Day Pass $25</Link>, <Link href="/las-vegas-hot-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Hot Desk $350/mo</Link>, <Link href="/las-vegas-dedicated-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Dedicated Desk $399/mo</Link>, and a <Link href="/las-vegas-virtual-office" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">virtual office in Las Vegas</Link> from $39/mo. All memberships are month-to-month with free parking, WiFi, coffee, and meeting room access.
+              <Link href="/las-vegas-day-pass" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Day Pass $25</Link>, <Link href="/las-vegas-hot-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Hot Desk $350/mo</Link>, <Link href="/las-vegas-dedicated-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Dedicated Desk $399/mo</Link>, a <Link href="/las-vegas-virtual-office" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">virtual office in Las Vegas</Link> from $39/mo, and a <Link href="/houston-virtual-office" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">virtual office in Houston</Link> from $39/mo. All memberships are month-to-month with free parking, WiFi, coffee, and meeting room access.
             </p>
           </div>
         </FadeIn>
