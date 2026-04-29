@@ -39,3 +39,8 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Local agent worktrees and tooling
+.claude/
+ProjectPilot/
+handoff/
