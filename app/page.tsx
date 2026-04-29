@@ -41,6 +41,9 @@ import { BRAND } from "@/lib/utils/constants";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
+  title: "Muze Office — Flexible Workspace in Las Vegas & Houston",
+  description:
+    "Flexible workspace in Las Vegas (6860 Bermuda Rd) and Houston (1800 Augusta Dr). Coworking, virtual offices, private offices, meeting rooms. Day pass $25, virtual office $39/mo. Month-to-month, free parking.",
   alternates: { canonical: "/" },
 };
 
