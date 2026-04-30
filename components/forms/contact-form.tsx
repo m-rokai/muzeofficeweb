@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { track } from "@vercel/analytics";
 import { CheckCircle2, Mail, Phone, Loader2, AlertCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -92,13 +93,16 @@ export function ContactForm({ className }: { className?: string }) {
       const result = await submitContactForm(data);
 
       if (result.success) {
+        track("contact_form_submitted", { interest });
         setStatus("sent");
         setServerMessage(result.message);
       } else {
+        track("contact_form_error");
         setStatus("error");
         setServerMessage(result.message);
       }
     } catch {
+      track("contact_form_error");
       setStatus("error");
       setServerMessage(
         "Something went wrong. Please email us directly at access@muzeoffice.com or call (702) 370-7515."
