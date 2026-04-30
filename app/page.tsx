@@ -35,6 +35,7 @@ import {
 import { GoogleReviewsBadge } from "@/components/marketing/google-reviews-badge";
 import { LogoCarousel } from "@/components/marketing/logo-carousel";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
+import { RelatedReading } from "@/components/marketing/related-reading";
 import { services } from "@/lib/data/services";
 import { locations } from "@/lib/data/locations";
 import { BRAND } from "@/lib/utils/constants";
@@ -461,6 +462,23 @@ export default function HomePage() {
           </div>
         </FadeIn>
       </Section>
+
+      {/* Featured posts — surfaces specific blog URLs from the homepage so
+          unindexed posts get a strong internal-link signal from the highest
+          authority page on the site. */}
+      <RelatedReading
+        slugs={[
+          "how-to-set-up-a-virtual-office-in-las-vegas",
+          "how-to-set-up-a-virtual-office-in-houston",
+          "virtual-office-vs-po-box-in-nevada",
+          "6-advantages-of-a-virtual-office-in-las-vegas",
+          "5-benefits-of-private-office-space-in-las-vegas",
+          "meeting-space-near-las-vegas-airport",
+        ]}
+        heading="From the Muze Office blog"
+        subtitle="Practical guides on virtual offices, coworking, and flexible workspace in Las Vegas and Houston."
+        limit={6}
+      />
 
       {/* FAQ */}
       <FAQSection
