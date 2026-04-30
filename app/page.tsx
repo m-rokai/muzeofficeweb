@@ -208,13 +208,13 @@ export default function HomePage() {
         <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {coreServices.map((service) => (
             <StaggerItem key={`lv-${service.id}`}>
-              <Link href={`/las-vegas-${service.id}`} className="group block h-full">
+              <Link href={`/las-vegas-${service.id}`} className="group block h-full" aria-label={`Las Vegas ${service.name}`}>
                 <Card className="h-full border-[#E6E4DF] bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <CardContent className="flex flex-col gap-5 p-7">
                     <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-white">
                       {serviceIcons[service.id]}
                     </div>
-                    <h3 className="text-xl font-semibold">{service.name}</h3>
+                    <h3 className="text-xl font-semibold">Las Vegas {service.name}</h3>
                     <p className="text-base text-[#74726D] leading-relaxed">{service.shortDescription}</p>
                     {service.tiers[0]?.price && (
                       <p className="text-base font-semibold text-[#EAA820]">From ${service.tiers[0].price}/{service.tiers[0].priceUnit}</p>
@@ -248,13 +248,13 @@ export default function HomePage() {
         <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {coreServices.map((service) => (
             <StaggerItem key={`hou-${service.id}`}>
-              <Link href={`/houston-${service.id}`} className="group block h-full">
+              <Link href={`/houston-${service.id}`} className="group block h-full" aria-label={`Houston ${service.name}`}>
                 <Card className="h-full border-[#E6E4DF] bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <CardContent className="flex flex-col gap-5 p-7">
                     <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-white">
                       {serviceIcons[service.id]}
                     </div>
-                    <h3 className="text-xl font-semibold">{service.name}</h3>
+                    <h3 className="text-xl font-semibold">Houston {service.name}</h3>
                     <p className="text-base text-[#74726D] leading-relaxed">{service.shortDescription}</p>
                     {service.tiers[0]?.price && (
                       <p className="text-base font-semibold text-[#EAA820]">From ${service.tiers[0].price}/{service.tiers[0].priceUnit}</p>
