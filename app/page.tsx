@@ -115,11 +115,21 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn delay={0.5}>
             <div className="mt-10 flex flex-wrap gap-4">
-              <a href={BRAND.booking.tourUrl} className={cn(buttonVariants({ size: "lg" }), "rounded-xl bg-[#EAA820] px-8 text-white hover:bg-[#C17A28] h-14 text-base font-semibold")}>
+              <a
+                href={BRAND.booking.tourUrl}
+                data-cta="book_tour"
+                data-cta-location="homepage_hero"
+                className={cn(buttonVariants({ size: "lg" }), "rounded-xl bg-[#EAA820] px-8 text-white hover:bg-[#C17A28] h-14 text-base font-semibold")}
+              >
                 Book a Free Tour
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              <Link href="/locations" className={cn(buttonVariants({ variant: "outline", size: "lg" }), "rounded-xl border-white/50 bg-transparent px-8 text-white hover:bg-white/10 hover:text-white h-14 text-base")}>
+              <Link
+                href="/locations"
+                data-cta="find_your_desk"
+                data-cta-location="homepage_hero"
+                className={cn(buttonVariants({ variant: "outline", size: "lg" }), "rounded-xl border-white/50 bg-transparent px-8 text-white hover:bg-white/10 hover:text-white h-14 text-base")}
+              >
                 Find Your Desk
               </Link>
             </div>
@@ -493,6 +503,7 @@ export default function HomePage() {
         subtitle="Coworking, virtual offices, and private offices in Las Vegas. Month-to-month. No commitment. Book a tour today."
         primaryLabel="Book a Free Tour"
         primaryHref={BRAND.booking.tourUrl}
+        ctaLocation="homepage_bottom"
       />
     </>
   );

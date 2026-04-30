@@ -11,6 +11,17 @@ interface CTASectionProps {
   primaryHref: string;
   showPhone?: boolean;
   phone?: string;
+  /** Optional override for the CTA event name. Defaults are derived from primaryHref. */
+  ctaName?: string;
+  /** Page-level identifier so events can be attributed to the source page. */
+  ctaLocation?: string;
+}
+
+function deriveCtaName(href: string): string {
+  if (href.includes("book-a-tour") || href.includes("/tour")) return "book_tour";
+  if (href.includes("/contact")) return "contact_us";
+  if (href.includes("workspace-memberships")) return "view_memberships";
+  return "primary_cta";
 }
 
 export function CTASection({
@@ -20,7 +31,10 @@ export function CTASection({
   primaryHref,
   showPhone = true,
   phone = "(702) 370-7515",
+  ctaName,
+  ctaLocation = "cta_section",
 }: CTASectionProps) {
+  const cta = ctaName ?? deriveCtaName(primaryHref);
   return (
     <section className="w-full bg-[#1A1A1A] py-16 px-4 sm:px-6 md:py-28">
       <div className="mx-auto flex max-w-[1200px] flex-col items-center gap-8 text-center">
@@ -36,6 +50,8 @@ export function CTASection({
           <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
             <Link
               href={primaryHref}
+              data-cta={cta}
+              data-cta-location={ctaLocation}
               className={cn(
                 buttonVariants({ size: "lg" }),
                 "rounded-xl bg-[#EAA820] text-white hover:bg-[#C17A28] h-14 px-8 text-base font-semibold"

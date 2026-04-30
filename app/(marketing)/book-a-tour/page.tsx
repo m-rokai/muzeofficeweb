@@ -274,6 +274,7 @@ export default function BookATourPage() {
         primaryLabel="Call (702) 370-7515"
         primaryHref="tel:+17023707515"
         showPhone={false}
+        ctaLocation="book_a_tour_bottom"
       />
     </>
   );

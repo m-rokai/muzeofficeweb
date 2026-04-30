@@ -185,6 +185,7 @@ export default function AboutPage() {
         subtitle="Book a tour of Muze Office Las Vegas. Walk through the coworking area, private offices, meeting rooms, and cafe."
         primaryLabel="Book a Tour"
         primaryHref={BRAND.booking.tourUrl}
+        ctaLocation="about_bottom"
       />
     </>
   );

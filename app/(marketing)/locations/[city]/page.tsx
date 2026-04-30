@@ -341,6 +341,7 @@ export default async function LocationDetailPage({
         primaryLabel={isActive ? "Book a Tour" : "Contact Us"}
         primaryHref={isActive ? BRAND.booking.tourUrl : "/contact"}
         showPhone={isActive}
+        ctaLocation={`location_${location.slug}_bottom`}
       />
     </>
   );

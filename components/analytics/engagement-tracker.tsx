@@ -12,7 +12,20 @@ import { track } from "@vercel/analytics";
 export function EngagementTracker() {
   useEffect(() => {
     function handler(event: MouseEvent) {
-      const link = (event.target as HTMLElement | null)?.closest?.("a");
+      const target = event.target as HTMLElement | null;
+      if (!target) return;
+
+      // CTA tracking via `data-cta`. Lives on whichever element we want
+      // attributed (anchor or button), and beats href-pattern matching
+      // because the same href can mean different things in different slots.
+      const ctaEl = target.closest?.("[data-cta]") as HTMLElement | null;
+      if (ctaEl) {
+        const cta = ctaEl.dataset.cta;
+        const location = ctaEl.dataset.ctaLocation;
+        if (cta) track("cta_click", location ? { cta, location } : { cta });
+      }
+
+      const link = target.closest?.("a");
       if (!link) return;
 
       const href = link.getAttribute("href");

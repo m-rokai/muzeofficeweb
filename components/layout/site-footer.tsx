@@ -130,6 +130,8 @@ export function SiteFooter() {
                 <li>
                   <Link
                     href="/contact"
+                    data-cta="contact_us"
+                    data-cta-location="footer"
                     className="text-sm text-gray-400 transition-colors hover:text-white"
                   >
                     Contact
@@ -138,6 +140,8 @@ export function SiteFooter() {
                 <li>
                   <Link
                     href="/book-a-tour"
+                    data-cta="book_tour"
+                    data-cta-location="footer"
                     className="text-sm text-gray-400 transition-colors hover:text-white"
                   >
                     Book a Tour

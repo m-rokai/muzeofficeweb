@@ -21,6 +21,8 @@ export function MobileCTA() {
         </a>
         <a
           href={BRAND.booking.tourUrl}
+          data-cta="book_tour"
+          data-cta-location="mobile_sticky"
           className={cn(
             buttonVariants({ size: "lg" }),
             "flex-1 rounded-xl bg-[#1A1A1A] h-11 text-sm hover:bg-[#333]"

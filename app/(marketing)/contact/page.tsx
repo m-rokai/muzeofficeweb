@@ -189,6 +189,7 @@ export default function ContactPage() {
         subtitle="Schedule a tour and see the space firsthand. Walk through coworking, private offices, meeting rooms, and the on-site cafe."
         primaryLabel="Book a Tour"
         primaryHref={BRAND.booking.tourUrl}
+        ctaLocation="contact_bottom"
       />
     </>
   );

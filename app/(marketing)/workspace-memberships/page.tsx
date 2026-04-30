@@ -201,6 +201,7 @@ export default function WorkspaceMembershipsPage() {
         subtitle="Book a tour and our team will walk you through the options. No pressure, no commitment."
         primaryLabel="Book a Tour"
         primaryHref={BRAND.booking.tourUrl}
+        ctaLocation="workspace_memberships_bottom"
       />
     </>
   );

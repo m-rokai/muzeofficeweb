@@ -54,6 +54,8 @@ export function SiteHeader() {
           </a>
           <a
             href={BRAND.booking.tourUrl}
+            data-cta="book_tour"
+            data-cta-location="header_desktop"
             className={cn(buttonVariants({ size: "sm" }), "rounded-lg bg-[#1A1A1A] hover:bg-[#333]")}
           >
             Book a Tour
@@ -89,6 +91,8 @@ export function SiteHeader() {
                 <a
                   href={BRAND.booking.tourUrl}
                   onClick={() => setOpen(false)}
+                  data-cta="book_tour"
+                  data-cta-location="header_mobile_menu"
                   className={cn(buttonVariants(), "w-full rounded-lg bg-[#1A1A1A]")}
                 >
                   Book a Tour

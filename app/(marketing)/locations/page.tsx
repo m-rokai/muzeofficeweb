@@ -173,6 +173,7 @@ export default function LocationsPage() {
         subtitle="Book a tour of our Las Vegas location. Free parking, 10 minutes from the airport."
         primaryLabel="Book a Tour"
         primaryHref={BRAND.booking.tourUrl}
+        ctaLocation="locations_index_bottom"
       />
     </>
   );
