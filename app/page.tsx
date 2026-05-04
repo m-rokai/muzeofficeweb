@@ -45,7 +45,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Muze Office — Flexible Workspace in Las Vegas & Houston",
   description:
-    "Muze Office is a flexible workspace at 6860 Bermuda Rd in Las Vegas, with a Houston location coming soon. Month-to-month memberships, free parking, on-site cafe. Day pass from $25.",
+    "Flexible workspace at 6860 Bermuda Rd in Las Vegas — coworking, private offices, meeting rooms. Month-to-month, free parking, on-site cafe. Houston coming soon.",
   alternates: { canonical: "/" },
 };
 
@@ -96,6 +96,8 @@ export default function HomePage() {
           alt="Muze Office coworking lounge at 6860 Bermuda Rd, Suite 200 in Las Vegas, with open desks, natural light, and a view toward the on-site cafe"
           fill
           priority
+          fetchPriority="high"
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30" />
@@ -331,7 +333,7 @@ export default function HomePage() {
                     <p className="mt-1 text-base text-[#74726D]">Location details coming soon</p>
                   )}
                   <Link href={`/locations/${loc.slug}`} className={cn(buttonVariants(), "mt-auto rounded-xl bg-[#1A1A1A] hover:bg-[#333] h-12 px-6 text-base w-fit")}>
-                    {loc.status === "coming-soon" ? "Learn More" : "Explore"} <ArrowRight className="ml-1.5 h-4 w-4" />
+                    {loc.status === "coming-soon" ? `${loc.name} Waitlist` : `Explore ${loc.name}`} <ArrowRight className="ml-1.5 h-4 w-4" />
                   </Link>
                 </CardContent>
               </Card>

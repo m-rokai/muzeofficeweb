@@ -33,7 +33,7 @@ export async function generateMetadata({
   if (!post) return {};
 
   return {
-    title: post.seoTitle || `${post.title} | Muze Office Blog`,
+    title: post.seoTitle || post.title,
     description: post.description,
     alternates: { canonical: `/blog/${slug}` },
     ...(post.noindex && { robots: { index: false, follow: true } }),

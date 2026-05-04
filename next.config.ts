@@ -35,6 +35,7 @@ const wordpressRedirects = [
   { source: "/workspace-memberships/virtual-office-houston-texas/premium-mailing-address-services-in-houston", destination: "/houston-virtual-office" },
   { source: "/workspace-solutions-coworking-private-and-virtual-offices", destination: "/workspace-memberships" },
   { source: "/locations/las-vegas-coworking", destination: "/las-vegas-coworking" },
+  { source: "/locations/houston-coworking", destination: "/locations/houston" },
   { source: "/locations/south-main-coworking", destination: "/locations/houston" },
   { source: "/events-in-las-vegas", destination: "/las-vegas-event-space" },
   { source: "/events-in-houston-and-las-vegas", destination: "/las-vegas-event-space" },

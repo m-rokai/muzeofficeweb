@@ -21,7 +21,7 @@ import { BRAND } from "@/lib/utils/constants";
 export const metadata: Metadata = {
   title: "About Muze Office — Modern Workspaces That Inspire",
   description:
-    "Muze Office provides flexible coworking, virtual offices, private offices, and meeting rooms in Las Vegas and Houston. No long-term leases. Month-to-month memberships designed for modern professionals.",
+    "Muze Office provides flexible coworking, virtual offices, private offices, and meeting rooms in Las Vegas — and soon Houston. Month-to-month, no long-term leases.",
   alternates: { canonical: "/about" },
 };
 

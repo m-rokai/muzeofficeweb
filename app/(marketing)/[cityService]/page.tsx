@@ -173,6 +173,7 @@ export default async function CityServicePage({ params }: PageProps) {
             fill
             className="object-cover opacity-40"
             priority
+            fetchPriority="high"
             sizes="100vw"
           />
         </div>
