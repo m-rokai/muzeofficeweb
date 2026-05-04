@@ -5,6 +5,7 @@ import {
   Users,
   Lock,
   Presentation,
+  Projector,
   CalendarDays,
   Check,
 } from "lucide-react";
@@ -31,6 +32,7 @@ const serviceIcons: Record<string, React.ReactNode> = {
   coworking: <Users className="h-6 w-6" />,
   "private-office": <Lock className="h-6 w-6" />,
   "meeting-rooms": <Presentation className="h-6 w-6" />,
+  "conference-rooms": <Projector className="h-6 w-6" />,
   "event-space": <CalendarDays className="h-6 w-6" />,
 };
 
@@ -95,7 +97,7 @@ export default function WorkspaceMembershipsPage() {
               Choose your workspace
             </h2>
             <p className="mt-3 max-w-[560px] text-base text-[#74726D]">
-              Five flexible options in Las Vegas. All plans include free parking and
+              Six flexible options in Las Vegas. All plans include free parking and
               are available month-to-month.
             </p>
           </div>

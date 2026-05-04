@@ -411,7 +411,7 @@ export const services: Service[] = [
     shortName: "Conference Rooms",
     shortDescription:
       "Corporate-grade conference rooms available by the hour for board meetings, client pitches, depositions, and investor updates. AV equipment, video conferencing, and free parking included.",
-    icon: "Presentation",
+    icon: "Projector",
     tiers: [
       {
         name: "Conference Room",

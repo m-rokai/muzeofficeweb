@@ -6,6 +6,7 @@ import {
   Users,
   Lock,
   Presentation,
+  Projector,
   CalendarDays,
   Wifi,
   Car,
@@ -53,6 +54,7 @@ const serviceIcons: Record<string, React.ReactNode> = {
   coworking: <Users className="h-7 w-7" />,
   "private-office": <Lock className="h-7 w-7" />,
   "meeting-rooms": <Presentation className="h-7 w-7" />,
+  "conference-rooms": <Projector className="h-7 w-7" />,
   "event-space": <CalendarDays className="h-7 w-7" />,
 };
 
