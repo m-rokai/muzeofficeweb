@@ -44,7 +44,7 @@ import { cn } from "@/lib/utils";
 export const metadata: Metadata = {
   title: "Muze Office — Flexible Workspace in Las Vegas & Houston",
   description:
-    "Flexible workspace in Las Vegas (6860 Bermuda Rd) and Houston (1800 Augusta Dr). Coworking, virtual offices, private offices, meeting rooms. Day pass $25, virtual office $39/mo. Month-to-month, free parking.",
+    "Muze Office is a flexible workspace at 6860 Bermuda Rd in Las Vegas, with a Houston location coming soon. Month-to-month memberships, free parking, on-site cafe. Day pass from $25.",
   alternates: { canonical: "/" },
 };
 
@@ -224,7 +224,7 @@ export default function HomePage() {
                     <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-white">
                       {serviceIcons[service.id]}
                     </div>
-                    <h3 className="text-xl font-semibold">Las Vegas {service.name}</h3>
+                    <h3 className="text-xl font-semibold">{service.name}</h3>
                     <p className="text-base text-[#74726D] leading-relaxed">{service.shortDescription}</p>
                     {service.tiers[0]?.price && (
                       <p className="text-base font-semibold text-[#EAA820]">From ${service.tiers[0].price}/{service.tiers[0].priceUnit}</p>
@@ -264,7 +264,7 @@ export default function HomePage() {
                     <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-white">
                       {serviceIcons[service.id]}
                     </div>
-                    <h3 className="text-xl font-semibold">Houston {service.name}</h3>
+                    <h3 className="text-xl font-semibold">{service.name}</h3>
                     <p className="text-base text-[#74726D] leading-relaxed">{service.shortDescription}</p>
                     {service.tiers[0]?.price && (
                       <p className="text-base font-semibold text-[#EAA820]">From ${service.tiers[0].price}/{service.tiers[0].priceUnit}</p>
@@ -346,7 +346,7 @@ export default function HomePage() {
               Coworking &amp; virtual office plans — no long-term leases
             </h2>
             <p className="mx-auto mt-4 max-w-[640px] text-lg text-[#74726D]">
-              <Link href="/las-vegas-day-pass" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Day Pass $25</Link>, <Link href="/las-vegas-hot-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Hot Desk $350/mo</Link>, <Link href="/las-vegas-dedicated-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Dedicated Desk $399/mo</Link>, a <Link href="/las-vegas-virtual-office" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">virtual office in Las Vegas</Link> from $39/mo, and a <Link href="/houston-virtual-office" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">virtual office in Houston</Link> from $39/mo. All memberships are month-to-month with free parking, WiFi, coffee, and meeting room access.
+              <Link href="/las-vegas-day-pass" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Day Pass $25</Link>, <Link href="/las-vegas-hot-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Hot Desk $350/mo</Link>, <Link href="/las-vegas-dedicated-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Dedicated Desk $399/mo</Link>, and <Link href="/las-vegas-virtual-office" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Virtual Office plans</Link> from $39/mo. All memberships are month-to-month with free parking, WiFi, coffee, and meeting room access.
             </p>
           </div>
         </FadeIn>

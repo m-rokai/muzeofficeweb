@@ -108,7 +108,7 @@ export const locations: Location[] = [
     name: "Houston",
     nickname: "Muze Office Houston",
     slug: "houston",
-    status: "active",
+    status: "coming-soon",
     address: {
       street: "1800 Augusta Dr",
       city: "Houston",

@@ -60,8 +60,8 @@ export async function generateMetadata({
     location.phone !== "TBD" ? `Call ${location.phone}.` : "Coming soon.";
 
   return {
-    title: `Muze Office ${location.name} — Coworking & Virtual Office`,
-    description: `Muze Office ${location.name} at ${shortAddress}. Coworking, virtual offices, private offices, meeting rooms, event space. Month-to-month. ${phoneCta}`,
+    title: `Muze Office ${location.name} — Location, Hours & Directions`,
+    description: `Visit Muze Office ${location.name} at ${shortAddress}. Hours, parking, directions, and amenities. Month-to-month memberships available. ${phoneCta}`,
     alternates: { canonical: `/locations/${city}` },
     // Prevent Google from indexing coming-soon pages with TBD addresses,
     // but allow crawlers to follow outbound links (internal navigation,

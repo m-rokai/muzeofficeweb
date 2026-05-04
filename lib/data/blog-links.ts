@@ -21,6 +21,8 @@ const relatedByService: Record<string, string[]> = {
   "virtual-office": [
     "nevada-llc-virtual-office",
     "virtual-office-for-llc-in-texas",
+    "how-to-set-up-a-virtual-office-in-houston",
+    "best-virtual-office-providers-in-houston",
     "6-advantages-of-a-virtual-office-in-las-vegas",
     "virtual-mailboxes-in-las-vegas",
     "the-3-top-perks-of-a-virtual-business-address-in-las-vegas",
