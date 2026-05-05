@@ -7,6 +7,7 @@ import { MobileCTA } from "@/components/layout/mobile-cta";
 import { OrganizationSchema } from "@/components/seo/organization-schema";
 import { EngagementTracker } from "@/components/analytics/engagement-tracker";
 import { Analytics } from "@vercel/analytics/next";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -73,6 +74,11 @@ export default function RootLayout({
         <MobileCTA />
         <EngagementTracker />
         <Analytics />
+        <Script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="m104LdR/8lGp8/edHuBYHg"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
