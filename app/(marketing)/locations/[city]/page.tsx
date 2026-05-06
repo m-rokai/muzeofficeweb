@@ -289,6 +289,43 @@ export default async function LocationDetailPage({
         </div>
       </Section>
 
+      {/* On-site Amenities (LV only) */}
+      {isActive && location.slug === "las-vegas" && (
+        <Section variant="gray">
+          <FadeIn>
+            <div className="mx-auto flex max-w-[800px] flex-col gap-6">
+              <div>
+                <h2 className="font-[family-name:var(--font-plus-jakarta)] text-2xl font-semibold">
+                  On-site Amenities
+                </h2>
+                <p className="mt-2 text-sm text-[#74726D]">
+                  Partner businesses operating inside the building. Members and
+                  guests can book directly.
+                </p>
+              </div>
+              <a
+                href="https://beauty-booking-three.vercel.app"
+                target="_blank"
+                rel="noopener"
+                className="group flex flex-col gap-2 rounded-xl border border-[#E6E4DF] bg-white p-6 transition-colors hover:border-[#EAA820]"
+              >
+                <h3 className="font-[family-name:var(--font-plus-jakarta)] text-lg font-semibold text-[#1A1A1A]">
+                  Ashley Lacy Esthetics
+                </h3>
+                <p className="text-sm text-[#74726D]">
+                  On-site esthetician booth &mdash; facials, waxing, lash, and
+                  body treatments. Open 7 days a week. Book online with a
+                  deposit.
+                </p>
+                <span className="text-sm font-medium text-[#EAA820] group-hover:underline">
+                  Book a facial &rarr;
+                </span>
+              </a>
+            </div>
+          </FadeIn>
+        </Section>
+      )}
+
       {/* FAQ */}
       {faqs.length > 0 && (
         <FAQSection

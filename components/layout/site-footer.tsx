@@ -73,6 +73,16 @@ export function SiteFooter() {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <a
+                    href="https://beauty-booking-three.vercel.app"
+                    target="_blank"
+                    rel="noopener"
+                    className="text-sm text-gray-400 transition-colors hover:text-white"
+                  >
+                    Esthetics &amp; Waxing Booth
+                  </a>
+                </li>
               </ul>
             </div>
           )}
