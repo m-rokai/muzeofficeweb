@@ -77,7 +77,7 @@ const homepageFAQs = [
   { question: "What is Muze Office?", answer: "Muze Office is a flexible workspace provider in Las Vegas and Houston offering coworking, virtual offices, private offices, meeting rooms, and event space. All memberships are month-to-month with no long-term leases." },
   { question: "Do I need a membership to use the space?", answer: "No. Day passes are available for anyone — no membership or commitment required. Walk in or book ahead. We also offer monthly memberships for hot desks, dedicated desks, and private offices." },
   { question: "Where is Muze Office located?", answer: "Two active locations: Las Vegas at 6860 Bermuda Rd, Suite 200 (10 minutes from Harry Reid International Airport via I-215 W), and Houston at 1800 Augusta Dr, 77057 (inside the 610 Loop in the Galleria / Tanglewood area). Free parking included at both." },
-  { question: "What are your hours?", answer: "Monday through Friday, 10am to 7pm. Members with dedicated desks and private offices have 24/7 access via biometric entry." },
+  { question: "What are your hours?", answer: "Coworking members have 24/7 biometric access. The front desk is staffed Monday through Friday, 10am to 7pm — that's when walk-ins, day passes, tours, and mail pickup are handled. Phones are answered Monday through Friday, 10am to 5pm — outside those hours, email access@muzeoffice.com for the fastest reply." },
   { question: "Is there parking?", answer: "Yes — free parking for all members, day pass holders, meeting room guests, and event attendees. No meters, no valet fees, no parking garage charges." },
   { question: "Can I book a meeting room without a membership?", answer: "Yes. Meeting rooms are available by the hour to anyone — no membership required. All rooms include AV equipment, video conferencing, whiteboards, and WiFi. Huddle rooms start at $25/hr." },
   { question: "Do you offer a virtual office in Las Vegas?", answer: "Yes. A virtual office in Las Vegas at Muze Office starts at $39/month (Mail Holding) for a professional business address at 6860 Bermuda Rd, Suite 200 with USPS letter mail pickup. Sandstone ($69/mo) adds package receiving from UPS, FedEx, and Amazon. Higher tiers add mail forwarding, coworking hours, and meeting room access. You can use any plan for LLC registration, Google Business Profile, and contracts. Full details and pricing at /las-vegas-virtual-office." },
@@ -155,7 +155,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1200px] flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
           <GoogleReviewsBadge />
           <div className="flex items-center gap-4 text-base text-[#74726D]">
-            <span>Mon–Fri, 10am–7pm</span>
+            <span>Phone Mon–Fri 10am–5pm</span>
             <span className="hidden sm:inline">•</span>
             <a href="tel:+17023707515" className="font-semibold text-[#1A1A1A] hover:text-[#EAA820] transition-colors">(702) 370-7515</a>
           </div>

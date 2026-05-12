@@ -165,6 +165,18 @@ export default async function LocationDetailPage({
                   </span>
                 </li>
               )}
+              <li className="flex items-center gap-3 text-sm">
+                <Mail className="h-4 w-4 shrink-0 text-[#EAA820]" />
+                <a
+                  href={`mailto:${location.email}`}
+                  className="text-[#74726D] hover:text-[#1A1A1A]"
+                >
+                  {location.email}
+                </a>
+                <span className="text-[10px] font-semibold uppercase tracking-wider text-[#EAA820]">
+                  Preferred
+                </span>
+              </li>
               {location.phone !== "TBD" && (
                 <li className="flex items-center gap-3 text-sm">
                   <Phone className="h-4 w-4 shrink-0 text-[#EAA820]" />
@@ -176,18 +188,13 @@ export default async function LocationDetailPage({
                   </a>
                 </li>
               )}
-              <li className="flex items-center gap-3 text-sm">
-                <Mail className="h-4 w-4 shrink-0 text-[#EAA820]" />
-                <a
-                  href={`mailto:${location.email}`}
-                  className="text-[#74726D] hover:text-[#1A1A1A]"
-                >
-                  {location.email}
-                </a>
-              </li>
-              <li className="flex items-center gap-3 text-sm text-[#74726D]">
-                <Clock className="h-4 w-4 shrink-0 text-[#EAA820]" />
-                Mon&ndash;Fri, 10 am &ndash; 7 pm
+              <li className="flex items-start gap-3 text-sm text-[#74726D]">
+                <Clock className="mt-0.5 h-4 w-4 shrink-0 text-[#EAA820]" />
+                <span>
+                  Phone: Mon&ndash;Fri, 10 am &ndash; 5 pm
+                  <br />
+                  Front desk: Mon&ndash;Fri, 10 am &ndash; 7 pm
+                </span>
               </li>
             </ul>
 

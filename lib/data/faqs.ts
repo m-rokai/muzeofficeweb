@@ -57,7 +57,7 @@ const coworkingFAQs: FAQ[] = [
   {
     question: "What memberships are available?",
     answer:
-      "We offer three options: Day Pass ($25/day) for drop-in access, Hot Desk ($350/mo) for shared desk access with meeting room credits and mail handling, and Dedicated Desk ($399/mo) for a reserved desk with personal storage and 24/7 access.",
+      "We offer three options: Day Pass ($25/day) for drop-in walk-in access during front-desk hours, Hot Desk ($350/mo) for any-desk 24/7 biometric access with meeting room credits and mail handling, and Dedicated Desk ($399/mo) which adds a reserved desk, personal storage, and a business address with mail.",
   },
   {
     question: "Can I book a meeting room as a coworking member?",
@@ -354,7 +354,7 @@ const dayPassFAQs: FAQ[] = [
   {
     question: "What are the Day Pass hours?",
     answer:
-      "Monday through Friday, 10am to 7pm, which is when the front desk is staffed and the coworking area is open to non-members. 24/7 access is reserved for Dedicated Desk and Private Office members with biometric entry.",
+      "Day Pass walk-ins are Monday through Friday, 10am to 7pm — that's when the front desk is staffed to check you in and process your $25. Any monthly coworking membership (Hot Desk, Dedicated Desk, or Private Office) includes 24/7 biometric access; the limited hours apply only to walk-in Day Passes.",
   },
   {
     question: "Is parking free with a Day Pass?",
@@ -364,7 +364,7 @@ const dayPassFAQs: FAQ[] = [
   {
     question: "What's the difference between a Day Pass and a Hot Desk membership?",
     answer:
-      "A Day Pass is $25 per day with no commitment — right for drop-in use. A Hot Desk is $350/month for any-desk business-hours access, plus meeting room credits, mail handling, and community events. The math flips in Hot Desk's favor around the 14th-15th day per month. If you're in the space more than about a week a month, Hot Desk is usually the better deal.",
+      "A Day Pass is $25 per day with no commitment — right for drop-in use during front-desk hours. A Hot Desk is $350/month for any-desk 24/7 biometric access, plus meeting room credits, mail handling, and community events. The math flips in Hot Desk's favor around the 14th-15th day per month. If you're in the space more than about a week a month, Hot Desk is usually the better deal — and you also get late-night and weekend access that Day Pass doesn't include.",
   },
 ];
 
@@ -372,22 +372,22 @@ const hotDeskFAQs: FAQ[] = [
   {
     question: "What's included with a Hot Desk membership?",
     answer:
-      "A Hot Desk at $350/month includes any-desk access in the coworking area during business hours, monthly meeting room credits, mail handling, community-event access, phone booths, printing, unlimited coffee, on-site Muze Cafe, and free parking. Month-to-month with 30 days' notice to cancel.",
+      "A Hot Desk at $350/month includes any-desk 24/7 biometric access in the coworking area, monthly meeting room credits, mail handling, community-event access, phone booths, printing, unlimited coffee, on-site Muze Cafe, and free parking. Month-to-month with 30 days' notice to cancel.",
   },
   {
     question: "Is a Hot Desk 24/7?",
     answer:
-      "No. Hot Desk is a business-hours product — Monday through Friday, 10am to 7pm, which is when the front desk is staffed. If you need 24/7 access, weekend access, or early-morning / late-night hours, Dedicated Desk at $399/month adds biometric 24/7 entry.",
+      "Yes. Hot Desk members get 24/7 biometric access just like every other monthly coworking tier. The front desk is staffed Monday through Friday, 10am to 7pm for walk-ins and day passes, but Hot Desk members come and go anytime via biometric entry. The upgrade to Dedicated Desk at $399/month is about a reserved desk, personal storage, and a business address — not hours.",
   },
   {
     question: "Do I get my own reserved desk with a Hot Desk?",
     answer:
-      "No. Hot Desk is any-desk access — you sit wherever is open in the shared coworking area each day. If you want a reserved desk you can leave a monitor and keyboard on, plus personal storage, upgrade to Dedicated Desk at $399/month.",
+      "No. Hot Desk is any-desk access — you sit wherever is open in the shared coworking area each day. If you want a reserved desk you can leave a monitor and keyboard on, plus personal storage and a business address with mail, upgrade to Dedicated Desk at $399/month.",
   },
   {
     question: "Do Hot Desk members get a business address?",
     answer:
-      "Hot Desk includes mail handling at your Muze Office location — you can receive LLC, tax, and business correspondence there and pick it up during business hours. A formal business-address-only product (with package receiving and mail forwarding) is the Virtual Office tier. Dedicated Desk ($399/mo) bundles a business address as part of the tier.",
+      "Hot Desk includes mail handling at your Muze Office location — you can receive LLC, tax, and business correspondence there and pick it up while the front desk is staffed (Mon–Fri 10am–7pm). A formal business-address-only product (with package receiving and mail forwarding) is the Virtual Office tier. Dedicated Desk ($399/mo) bundles a business address as part of the tier.",
   },
   {
     question: "How many meeting room hours come with Hot Desk?",
@@ -405,12 +405,12 @@ const dedicatedDeskFAQs: FAQ[] = [
   {
     question: "What's included with a Dedicated Desk membership?",
     answer:
-      "A Dedicated Desk at $399/month includes everything in Hot Desk — meeting room credits, mail handling, phone booths, WiFi, coffee, parking, community events — plus a reserved desk that's yours every day, personal storage, 24/7 biometric access to the building, and a business address with mail you can use for LLC filings, Google Business Profile, and contracts.",
+      "A Dedicated Desk at $399/month includes everything in Hot Desk — 24/7 biometric access, meeting room credits, mail handling, phone booths, WiFi, coffee, parking, community events — plus a reserved desk that's yours every day, personal storage, and a business address with mail you can use for LLC filings, Google Business Profile, and contracts.",
   },
   {
     question: "How is the 24/7 access provided?",
     answer:
-      "Via biometric entry — you're enrolled on your first day as a Dedicated Desk member, and once that's set up you have 24/7 access to the building via the side entrance. Hot Desk and Day Pass do not include biometric or 24/7 access.",
+      "Via biometric entry — every monthly coworking member (Hot Desk, Dedicated Desk, or Private Office) is enrolled on their first day, and once that's set up you have 24/7 access to the building via the side entrance. Day Pass walk-ins use the front entrance during staffed hours (Mon–Fri 10am–7pm).",
   },
   {
     question: "Is the business address real, or a PO Box?",

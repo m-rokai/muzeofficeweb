@@ -22,7 +22,7 @@ import { BRAND } from "@/lib/utils/constants";
 export const metadata: Metadata = {
   title: "Contact Muze Office — Las Vegas (702) 370-7515 & Houston",
   description:
-    "Las Vegas: 6860 Bermuda Rd, Suite 200, NV 89119. Houston: 1800 Augusta Dr, TX 77057. Call (702) 370-7515 or email access@muzeoffice.com. Mon–Fri 10am–7pm.",
+    "Las Vegas: 6860 Bermuda Rd, Suite 200, NV 89119. Houston: 1800 Augusta Dr, TX 77057. Email access@muzeoffice.com (preferred) or call (702) 370-7515 Mon–Fri 10am–5pm.",
   alternates: { canonical: "/contact" },
 };
 
@@ -78,6 +78,18 @@ export default function ContactPage() {
                     </span>
                   </li>
                   <li className="flex items-center gap-3 text-sm">
+                    <Mail className="h-4 w-4 shrink-0 text-[#EAA820]" />
+                    <a
+                      href="mailto:access@muzeoffice.com"
+                      className="text-[#74726D] transition-colors hover:text-[#1A1A1A]"
+                    >
+                      access@muzeoffice.com
+                    </a>
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#EAA820]">
+                      Preferred
+                    </span>
+                  </li>
+                  <li className="flex items-center gap-3 text-sm">
                     <Phone className="h-4 w-4 shrink-0 text-[#EAA820]" />
                     <a
                       href="tel:+17023707515"
@@ -86,18 +98,13 @@ export default function ContactPage() {
                       (702) 370-7515
                     </a>
                   </li>
-                  <li className="flex items-center gap-3 text-sm">
-                    <Mail className="h-4 w-4 shrink-0 text-[#EAA820]" />
-                    <a
-                      href="mailto:access@muzeoffice.com"
-                      className="text-[#74726D] transition-colors hover:text-[#1A1A1A]"
-                    >
-                      access@muzeoffice.com
-                    </a>
-                  </li>
-                  <li className="flex items-center gap-3 text-sm text-[#74726D]">
-                    <Clock className="h-4 w-4 shrink-0 text-[#EAA820]" />
-                    Mon&ndash;Fri, 10 am &ndash; 7 pm
+                  <li className="flex items-start gap-3 text-sm text-[#74726D]">
+                    <Clock className="mt-0.5 h-4 w-4 shrink-0 text-[#EAA820]" />
+                    <span>
+                      Phone: Mon&ndash;Fri, 10 am &ndash; 5 pm
+                      <br />
+                      Front desk: Mon&ndash;Fri, 10 am &ndash; 7 pm
+                    </span>
                   </li>
                 </ul>
 
@@ -143,6 +150,9 @@ export default function ContactPage() {
                     >
                       access@muzeoffice.com
                     </a>
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#EAA820]">
+                      Preferred
+                    </span>
                   </li>
                 </ul>
               </CardContent>
