@@ -20,9 +20,9 @@ import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/components/mar
 import { BRAND } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
-  title: "Contact Muze Office — Las Vegas (702) 370-7515 & Houston",
+  title: "Contact Us — Las Vegas Workspace, Book a Tour",
   description:
-    "Las Vegas: 6860 Bermuda Rd, Suite 200, NV 89119. Houston: 1800 Augusta Dr, TX 77057. Email access@muzeoffice.com (preferred) or call (702) 370-7515 Mon–Fri 10am–5pm.",
+    "Visit Muze Office Las Vegas at 6860 Bermuda Rd, Suite 200, NV 89119 — free parking, book a tour. Houston opening 2026. Email access@muzeoffice.com (preferred) or call (702) 370-7515, Mon–Fri 10am–5pm.",
   alternates: { canonical: "/contact" },
 };
 

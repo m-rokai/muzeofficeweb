@@ -43,7 +43,7 @@ import { BRAND } from "@/lib/utils/constants";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: "Muze Office — Flexible Workspace in Las Vegas & Houston",
+  title: { absolute: "Muze Office — Flexible Workspace in Las Vegas & Houston" },
   description:
     "Flexible workspace at 6860 Bermuda Rd in Las Vegas — coworking, private offices, meeting rooms. Month-to-month, free parking, on-site cafe. Houston coming soon.",
   alternates: { canonical: "/" },

@@ -20,9 +20,9 @@ import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/components/mar
 import { BRAND } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
-  title: "Book a Tour — Muze Office Las Vegas & Houston",
+  title: "Book a Free Tour — Las Vegas Workspace",
   description:
-    "Free tour of Muze Office Las Vegas (6860 Bermuda Rd) or Houston (1800 Augusta Dr). See coworking desks, private offices, meeting rooms. Call (702) 370-7515.",
+    "Free tour of Muze Office Las Vegas at 6860 Bermuda Rd — see coworking desks, private offices, and meeting rooms. Call (702) 370-7515 or book online. Houston opening 2026.",
   alternates: { canonical: "/book-a-tour" },
 };
 

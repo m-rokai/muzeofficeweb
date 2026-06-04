@@ -21,7 +21,7 @@ import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/components/mar
 import { BRAND } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
-  title: "Workspace Memberships at Muze Office",
+  title: "Workspace Memberships in Las Vegas — Virtual Office to Private Suite",
   description:
     "Explore flexible workspace memberships at Muze Office: virtual offices from $39/mo, coworking from $25/day, private offices, meeting rooms, and event space. All month-to-month in Las Vegas.",
   alternates: { canonical: "/workspace-memberships" },

@@ -54,9 +54,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Virtual Office in Las Vegas",
     heroSubtitle:
       "A real Las Vegas business address on Bermuda Rd in a staffed commercial suite — not a PO Box. Use it for your LLC filings, Nevada state registrations, Google Business Profile, and business mail. Mail forwarding included on Opal and Diamond plans.",
-    metaTitle: "Virtual Office in Las Vegas | Real Address from $39/mo | Muze Office",
+    metaTitle: "Virtual Office in Las Vegas — Real Address from $39/mo",
     metaDescription:
-      "Get a virtual office in Las Vegas with a real business address at 6860 Bermuda Rd. From $39/mo. LLC-ready, Google Business Profile-eligible, mail forwarding on Opal and Diamond. Month-to-month.",
+      "Get a virtual office in Las Vegas with a real business address at 6860 Bermuda Rd — not a PO box. From $39/mo, LLC-ready, Google Business Profile-eligible, mail forwarding on Opal and Diamond. Month-to-month. Get your address.",
     heroImage: "/images/hero/virtual-office.jpg",
     useCases: [
       "LLC filings and Nevada business registration",
@@ -261,7 +261,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Day Pass at Muze Office Las Vegas",
     heroSubtitle:
       "Drop in for a single day of focused work — no membership, no setup, no commitment. Walk in with a laptop, plug into fast WiFi, and keep your day moving.",
-    metaTitle: "Day Pass Las Vegas Coworking | $25 | Muze Office",
+    metaTitle: "Day Pass Coworking Las Vegas — $25, Walk-In",
     metaDescription:
       "Day pass coworking in Las Vegas for $25 at 6860 Bermuda Rd, Suite 200. Walk-in, no membership. Real desk, fast WiFi, unlimited coffee, free parking. 10 min from LAS.",
     heroImage: "/images/hero/coworking-space.jpg",
@@ -351,7 +351,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Hot Desk in Las Vegas",
     heroSubtitle:
       "Any-desk monthly coworking for remote workers and consultants in the space three-to-five days a week. Meeting room credits, mail handling, and community events included — all on month-to-month terms.",
-    metaTitle: "Hot Desk Las Vegas | $350/mo | Muze Office",
+    metaTitle: "Hot Desk Las Vegas — $350/mo, 24/7 Access",
     metaDescription:
       "Hot Desk coworking in Las Vegas for $350/month at 6860 Bermuda Rd, Suite 200. Any-desk 24/7 biometric access, meeting room credits, mail handling, free parking. Month-to-month.",
     heroImage: "/images/hero/coworking-space.jpg",
@@ -442,7 +442,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Dedicated Desk in Las Vegas",
     heroSubtitle:
       "Your own reserved desk, personal storage, 24/7 biometric access, meeting room credits, and a business address with mail. Month-to-month terms — the most committed coworking tier short of a private office.",
-    metaTitle: "Dedicated Desk Las Vegas | $399/mo | Muze Office",
+    metaTitle: "Dedicated Desk Las Vegas — $399/mo, Reserved",
     metaDescription:
       "Dedicated Desk coworking in Las Vegas for $399/month at 6860 Bermuda Rd, Suite 200. Reserved desk, personal storage, 24/7 biometric entry, business address, meeting room credits.",
     heroImage: "/images/hero/coworking-space.jpg",
@@ -727,9 +727,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Meeting Rooms in Las Vegas",
     heroSubtitle:
       "Professional meeting spaces available by the hour. AV equipment, video conferencing, whiteboards, and free parking included. Book online instantly.",
-    metaTitle: "Meeting Rooms Las Vegas | From $25/hr",
+    metaTitle: "Meeting Space & Rooms Las Vegas — From $25/hr",
     metaDescription:
-      "Book professional meeting rooms in Las Vegas from $25/hr. AV equipment, video conferencing, free parking included. Huddle rooms to boardrooms for 2-14 people.",
+      "Book meeting space in Las Vegas from $25/hr — no food & beverage minimum, AV and video conferencing included, free parking. Huddle rooms to boardrooms for 2–14 people. Reserve online.",
     heroImage: "/images/hero/meeting-room.jpg",
     useCases: [
       "Client presentations and pitches",
@@ -918,9 +918,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Event Space in Las Vegas",
     heroSubtitle:
       "Host corporate events, workshops, networking mixers, and private gatherings. Full AV, flexible layouts, and on-site catering from Muze Cafe.",
-    metaTitle: "Event Space Las Vegas | From $99/hr",
+    metaTitle: "Event Space Las Vegas — From $99/hr, No F&B Minimum",
     metaDescription:
-      "Rent event space in Las Vegas from $99/hr (varies by room). Full AV, flexible layouts, catering available. 10% off bookings of 8+ hours. Corporate events, workshops, and private gatherings.",
+      "Rent event space in Las Vegas from $99/hr — full AV, flexible layouts, on-site catering from Muze Cafe, no food & beverage minimum. Corporate events, workshops, mixers. 10% off 8+ hours. Book a walkthrough.",
     heroImage: "/images/hero/event-space.jpg",
     useCases: [
       "Corporate workshops and training sessions",
@@ -1220,7 +1220,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Virtual Office in Houston",
     heroSubtitle:
       "A real Houston business address on Augusta Dr in the Galleria — not a P.O. Box. Use it for your Texas LLC, Google Business Profile, contracts, and mail. Meeting rooms included.",
-    metaTitle: "Virtual Office in Houston | Real Galleria Address from $39/mo | Muze Office",
+    metaTitle: "Virtual Office in Houston — Real Galleria Address from $39/mo",
     metaDescription:
       "Get a virtual office in Houston with a real Galleria business address at 1800 Augusta Dr. From $39/mo. Texas LLC ready, GBP eligible, mail forwarding, meeting rooms included. Month-to-month.",
     heroImage: "/images/hero/virtual-office.jpg",
@@ -1513,7 +1513,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Hot Desk in Houston",
     heroSubtitle:
       "Any-desk monthly coworking in the Galleria for remote workers and consultants in the space three-to-five days a week. Meeting room credits, mail handling, and community events included — all on month-to-month terms.",
-    metaTitle: "Hot Desk Houston | $350/mo | Muze Office",
+    metaTitle: "Hot Desk Houston — $350/mo, 24/7 Access",
     metaDescription:
       "Hot Desk coworking in Houston at 1800 Augusta Dr in the Galleria — $350/month, any-desk 24/7 biometric access, meeting room credits, mail handling, free parking. Month-to-month.",
     heroImage: "/images/hero/coworking-space.jpg",
@@ -1604,7 +1604,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Dedicated Desk in Houston",
     heroSubtitle:
       "Your own reserved desk in the Galleria, personal storage, 24/7 biometric access, meeting room credits, and a business address with mail. Month-to-month terms — the most committed coworking tier short of a private office.",
-    metaTitle: "Dedicated Desk Houston | $399/mo | Muze",
+    metaTitle: "Dedicated Desk Houston — $399/mo, Reserved",
     metaDescription:
       "Dedicated Desk coworking in Houston at 1800 Augusta Dr in the Galleria — $399/month, reserved desk, personal storage, 24/7 biometric entry, business address, meeting room credits.",
     heroImage: "/images/hero/coworking-space.jpg",
