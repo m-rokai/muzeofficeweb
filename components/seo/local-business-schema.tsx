@@ -80,6 +80,16 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
         }
       : undefined,
     priceRange: "$25-$899",
+    aggregateRating:
+      location.rating && location.reviewCount
+        ? {
+            "@type": "AggregateRating",
+            ratingValue: location.rating,
+            reviewCount: location.reviewCount,
+            bestRating: 5,
+            worstRating: 1,
+          }
+        : undefined,
     sameAs,
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "High-Speed WiFi", value: true },

@@ -18,6 +18,7 @@ import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { PricingCard } from "@/components/marketing/pricing-card";
 import { FAQSection } from "@/components/marketing/faq-section";
 import { CTASection } from "@/components/marketing/cta-section";
+import { GoogleReviewsBadge } from "@/components/marketing/google-reviews-badge";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 import { ServiceSchema } from "@/components/seo/service-schema";
 import { OptixBookingWidget } from "@/components/marketing/optix-booking-widget";
@@ -220,6 +221,17 @@ export default async function CityServicePage({ params }: PageProps) {
               )}
             </div>
           </FadeIn>
+          {!isComingSoon && location.rating && (
+            <FadeIn delay={0.6}>
+              <div className="flex justify-center">
+                <GoogleReviewsBadge
+                  rating={location.rating}
+                  reviewCount={location.reviewCount}
+                  href={location.externalProfiles?.gbp}
+                />
+              </div>
+            </FadeIn>
+          )}
         </div>
       </section>
 

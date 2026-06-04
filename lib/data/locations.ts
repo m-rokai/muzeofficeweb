@@ -26,6 +26,10 @@ export interface Location {
   nearbyLandmarks: { name: string; distance: string }[];
   services: string[];
   taxAdvantage: string;
+  /** Verified Google Business Profile rating + review count. Set ONLY when
+   *  confirmed against the live GBP — drives review stars and aggregateRating. */
+  rating?: number;
+  reviewCount?: number;
   /** External profile URLs for this specific location, used in JSON-LD `sameAs`. */
   externalProfiles?: {
     yelp?: string;
@@ -99,6 +103,8 @@ export const locations: Location[] = [
     ],
     taxAdvantage:
       "Nevada has no state income tax, no corporate income tax, and no franchise tax.",
+    rating: 4.6,
+    reviewCount: 9,
     externalProfiles: {
       yelp: "https://www.yelp.com/biz/muze-office-bermuda-las-vegas",
     },
