@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import { locations } from "@/lib/data/locations";
 import { BRAND } from "@/lib/utils/constants";
 import { getAllPosts } from "@/lib/blog";
+import { people } from "@/lib/data/people";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = BRAND.url;
@@ -98,5 +99,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     }));
 
-  return [...staticPages, ...locationPages, ...cityServicePages, ...blogPosts];
+  // Author profile pages — Person entity surface for E-E-A-T signals
+  const authorPages: MetadataRoute.Sitemap = people.map((p) => ({
+    url: `${baseUrl}/authors/${p.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
+  }));
+
+  return [
+    ...staticPages,
+    ...locationPages,
+    ...cityServicePages,
+    ...blogPosts,
+    ...authorPages,
+  ];
 }

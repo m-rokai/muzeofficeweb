@@ -162,6 +162,7 @@ const nextConfig: NextConfig = {
     return [
       { source: "/blog/:slug.md", destination: "/md/blog/:slug" },
       { source: "/locations/:city.md", destination: "/md/locations/:city" },
+      { source: "/authors/:slug.md", destination: "/md/authors/:slug" },
       { source: "/:slug.md", destination: "/md/:slug" },
     ];
   },

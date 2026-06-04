@@ -18,6 +18,7 @@ import { mdxComponents } from "@/components/blog/mdx-components";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { JsonLd } from "@/components/seo/json-ld";
 import { BRAND } from "@/lib/utils/constants";
+import { getPersonByName } from "@/lib/data/people";
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -69,6 +70,15 @@ export default async function BlogPostPage({
     .slice(0, 3);
 
   const canonicalUrl = `${BRAND.url}/blog/${post.slug}`;
+  const authorPerson = getPersonByName(post.author);
+  const authorNode: Record<string, unknown> = authorPerson
+    ? {
+        "@type": "Person",
+        "@id": authorPerson.schemaId,
+        name: authorPerson.name,
+        url: `${BRAND.url}/authors/${authorPerson.slug}`,
+      }
+    : { "@type": "Person", name: post.author };
   const blogPostingSchema: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "BlogPosting",
@@ -77,10 +87,7 @@ export default async function BlogPostPage({
     image: post.image ? `${BRAND.url}${post.image}` : undefined,
     datePublished: post.date,
     dateModified: post.date,
-    author: {
-      "@type": "Person",
-      name: post.author,
-    },
+    author: authorNode,
     publisher: {
       "@type": "Organization",
       name: BRAND.name,
@@ -130,7 +137,17 @@ export default async function BlogPostPage({
               {post.title}
             </h1>
             <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-[#74726D]">
-              <span>{post.author}</span>
+              {authorPerson ? (
+                <Link
+                  href={`/authors/${authorPerson.slug}`}
+                  className="hover:text-[#1A1A1A] hover:underline"
+                  rel="author"
+                >
+                  {authorPerson.name}
+                </Link>
+              ) : (
+                <span>{post.author}</span>
+              )}
               <span>·</span>
               <span>{formatDate(post.date)}</span>
               <span>·</span>

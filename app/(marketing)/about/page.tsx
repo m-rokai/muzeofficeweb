@@ -16,7 +16,9 @@ import { cn } from "@/lib/utils";
 import { Section } from "@/components/layout/section";
 import { CTASection } from "@/components/marketing/cta-section";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/marketing/animate";
+import { PersonSchema } from "@/components/seo/person-schema";
 import { BRAND } from "@/lib/utils/constants";
+import { ZACHARY_DEVON_DUONG } from "@/lib/data/people";
 
 export const metadata: Metadata = {
   title: "About Muze Office — Modern Workspaces That Inspire",
@@ -64,8 +66,10 @@ const stats = [
 ];
 
 export default function AboutPage() {
+  const founder = ZACHARY_DEVON_DUONG;
   return (
     <>
+      <PersonSchema person={founder} />
       {/* Hero */}
       <section className="relative flex min-h-[60vh] items-end bg-[#1A1A1A] px-6 pb-16 pt-32">
         <Image
@@ -98,7 +102,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-[800px]">
           <FadeIn>
             <h2 className="font-[family-name:var(--font-plus-jakarta)] text-2xl font-semibold md:text-3xl">
-              Why we started Muze Office
+              Why {founder.shortName} started Muze Office
             </h2>
           </FadeIn>
           <div className="mt-6 flex flex-col gap-4 text-base leading-relaxed text-[#74726D]">
@@ -106,12 +110,13 @@ export default function AboutPage() {
               <p>
                 Traditional office leases were built for a different era — multi-year
                 commitments, hidden costs, and rigid terms that don&apos;t match how
-                modern professionals work. We founded Muze Office to change that.
+                modern professionals work. {founder.name} founded Muze Office to
+                change that.
               </p>
             </FadeIn>
             <FadeIn delay={0.15}>
               <p>
-                Our mission is simple: provide flexible, high-quality workspace that
+                The mission is simple: provide flexible, high-quality workspace that
                 adapts to you. Whether you&apos;re a freelancer who needs a desk for
                 the day, a startup that needs a private office for three months, or a
                 remote worker who needs a professional address and meeting space, Muze
@@ -120,14 +125,57 @@ export default function AboutPage() {
             </FadeIn>
             <FadeIn delay={0.2}>
               <p>
-                We started in Las Vegas with a space on Bermuda Road — 10 minutes from
-                the airport, free parking, and a full-service cafe on-site.
+                Muze started in Las Vegas with a space on Bermuda Road — 10 minutes
+                from the airport, free parking, and a full-service cafe on-site.
                 Houston is next, near the Galleria and Texas Medical Center. Both
                 locations share the same commitment: no long-term leases, no hidden
                 fees, and a workspace you actually enjoy walking into.
               </p>
             </FadeIn>
           </div>
+        </div>
+      </Section>
+
+      {/* Founder */}
+      <Section variant="gray">
+        <div className="mx-auto max-w-[800px]">
+          <FadeIn>
+            <p className="text-xs font-medium uppercase tracking-wider text-[#EAA820]">
+              Founder
+            </p>
+            <h2 className="mt-2 font-[family-name:var(--font-plus-jakarta)] text-2xl font-semibold md:text-3xl">
+              Meet {founder.name}
+            </h2>
+            <p className="mt-2 text-sm text-[#74726D]">{founder.jobTitle}</p>
+          </FadeIn>
+          <div className="mt-6 flex flex-col gap-4 text-base leading-relaxed text-[#1A1A1A]">
+            {founder.bio.map((paragraph, i) => (
+              <FadeIn key={i} delay={0.1 + i * 0.05}>
+                <p>{paragraph}</p>
+              </FadeIn>
+            ))}
+          </div>
+          <FadeIn delay={0.3}>
+            <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+              <Link
+                href={`/authors/${founder.slug}`}
+                className="font-medium text-[#EAA820] hover:underline"
+              >
+                Read more about {founder.shortName} &rarr;
+              </Link>
+              {founder.sameAs.map((url) => (
+                <a
+                  key={url}
+                  href={url}
+                  rel="me noopener noreferrer"
+                  target="_blank"
+                  className="text-[#74726D] hover:text-[#1A1A1A] hover:underline"
+                >
+                  Instagram
+                </a>
+              ))}
+            </div>
+          </FadeIn>
         </div>
       </Section>
 

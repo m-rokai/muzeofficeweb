@@ -2,6 +2,7 @@ import { BRAND } from "@/lib/utils/constants";
 import { locations } from "@/lib/data/locations";
 import { cityServiceData } from "@/lib/data/city-services";
 import { getAllPosts } from "@/lib/blog";
+import { people } from "@/lib/data/people";
 
 export const dynamic = "force-static";
 
@@ -49,6 +50,16 @@ function buildLlmsTxt(): string {
     }
     lines.push("");
   }
+
+  // People — names the canonical Person entity behind the brand
+  lines.push("## People");
+  lines.push("");
+  for (const person of people) {
+    lines.push(
+      `- [${person.name}](${BRAND.url}/authors/${person.slug}.md): ${person.jobTitle}. ${person.shortBio}`
+    );
+  }
+  lines.push("");
 
   // Static pages
   lines.push("## Primary Pages");

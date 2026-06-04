@@ -3,6 +3,7 @@ import { locations } from "@/lib/data/locations";
 import { services } from "@/lib/data/services";
 import { cityServiceData } from "@/lib/data/city-services";
 import { getAllPosts } from "@/lib/blog";
+import { ZACHARY_DEVON_DUONG } from "@/lib/data/people";
 
 type StaticPageRenderer = () => string;
 
@@ -56,6 +57,7 @@ function renderHome(): string {
 }
 
 function renderAbout(): string {
+  const founder = ZACHARY_DEVON_DUONG;
   return [
     "# About Muze Office",
     "",
@@ -66,7 +68,7 @@ function renderAbout(): string {
     "## Company",
     "",
     "- Legal entity: Muze International Corporation",
-    "- Founded by Zac Young",
+    `- Founder: [${founder.name}](${BRAND.url}/authors/${founder.slug}) — ${founder.jobTitle}`,
     "- Sister brand: https://muzeofficefranchise.com",
     "",
     "## Positioning",
