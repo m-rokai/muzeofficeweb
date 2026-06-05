@@ -76,12 +76,12 @@ const coreServices = services.filter((s) =>
 const homepageFAQs = [
   { question: "What is Muze Office?", answer: "Muze Office is a flexible workspace provider in Las Vegas and Houston offering coworking, virtual offices, private offices, meeting rooms, and event space. All memberships are month-to-month with no long-term leases." },
   { question: "Do I need a membership to use the space?", answer: "No. Day passes are available for anyone — no membership or commitment required. Walk in or book ahead. We also offer monthly memberships for hot desks, dedicated desks, and private offices." },
-  { question: "Where is Muze Office located?", answer: "Two active locations: Las Vegas at 6860 Bermuda Rd, Suite 200 (10 minutes from Harry Reid International Airport via I-215 W), and Houston at 1800 Augusta Dr, 77057 (inside the 610 Loop in the Galleria / Tanglewood area). Free parking included at both." },
+  { question: "Where is Muze Office located?", answer: "Muze Office is open in Las Vegas at 6860 Bermuda Rd, Suite 200 (10 minutes from Harry Reid International Airport via I-215 W), with free parking. A second flagship opens in Houston in 2026 at 1800 Augusta Dr, 77057 (inside the 610 Loop in the Galleria / Tanglewood area) — join the waitlist for early access." },
   { question: "What are your hours?", answer: "Coworking members have 24/7 biometric access. The front desk is staffed Monday through Friday, 10am to 7pm — that's when walk-ins, day passes, tours, and mail pickup are handled. Phones are answered Monday through Friday, 10am to 5pm — outside those hours, email access@muzeoffice.com for the fastest reply." },
   { question: "Is there parking?", answer: "Yes — free parking for all members, day pass holders, meeting room guests, and event attendees. No meters, no valet fees, no parking garage charges." },
   { question: "Can I book a meeting room without a membership?", answer: "Yes. Meeting rooms are available by the hour to anyone — no membership required. All rooms include AV equipment, video conferencing, whiteboards, and WiFi. Huddle rooms start at $25/hr." },
   { question: "Do you offer a virtual office in Las Vegas?", answer: "Yes. A virtual office in Las Vegas at Muze Office starts at $39/month (Mail Holding) for a professional business address at 6860 Bermuda Rd, Suite 200 with USPS letter mail pickup. Sandstone ($69/mo) adds package receiving from UPS, FedEx, and Amazon. Higher tiers add mail forwarding, coworking hours, and meeting room access. You can use any plan for LLC registration, Google Business Profile, and contracts. Full details and pricing at /las-vegas-virtual-office." },
-  { question: "Do you offer a virtual office in Houston?", answer: "Yes. A virtual office in Houston at Muze Office starts at $39/month (Mail Holding) for a professional Galleria business address at 1800 Augusta Dr with USPS letter mail pickup. Sandstone ($69/mo) adds UPS, FedEx, and Amazon package receiving. Higher tiers add mail forwarding, coworking hours, and meeting room access. The address satisfies Texas LLC filings, Google Business Profile, and most banks. Full details and pricing at /houston-virtual-office." },
+  { question: "Do you offer a virtual office in Houston?", answer: "Soon. Muze Office Houston opens in 2026, and a virtual office there will start at $39/month (Mail Holding) for a professional Galleria business address at 1800 Augusta Dr with USPS letter mail pickup. Sandstone ($69/mo) will add UPS, FedEx, and Amazon package receiving; higher tiers will add mail forwarding, coworking hours, and meeting room access. The address will satisfy Texas LLC filings, Google Business Profile, and most banks. Join the waitlist for early access — details and pricing at /houston-virtual-office." },
   { question: "Are there long-term contracts?", answer: "No. All Muze Office memberships are month-to-month. Cancel anytime with 30 days' notice. No long-term lease required." },
 ];
 
@@ -114,7 +114,7 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn delay={0.35}>
             <p className="mt-6 max-w-[580px] text-lg leading-relaxed text-gray-300 md:text-xl">
-              Muze Office is month-to-month coworking, virtual offices, private offices, meeting rooms, and event space in Las Vegas (6860 Bermuda Rd, Suite 200) and Houston (1800 Augusta Dr, Galleria / Tanglewood). No long-term leases. Free parking. Two active locations.
+              Muze Office is month-to-month coworking, virtual offices, private offices, meeting rooms, and event space in Las Vegas (6860 Bermuda Rd, Suite 200), with a second flagship opening in Houston in 2026 (1800 Augusta Dr, Galleria / Tanglewood). No long-term leases. Free parking.
             </p>
           </FadeIn>
           <FadeIn delay={0.5}>
@@ -293,7 +293,7 @@ export default function HomePage() {
                 Coworking in Las Vegas &amp; Houston
               </h2>
               <p className="mt-4 max-w-[600px] text-lg text-[#74726D]">
-                Two active locations: 6860 Bermuda Rd in Las Vegas (10 minutes from Harry Reid International Airport) and 1800 Augusta Dr in Houston (inside the 610 Loop in the Galleria / Tanglewood area). Free parking at both.
+                Open in Las Vegas at 6860 Bermuda Rd (10 minutes from Harry Reid International Airport), with a second flagship opening in Houston in 2026 at 1800 Augusta Dr (inside the 610 Loop in the Galleria / Tanglewood area). Free parking.
               </p>
             </div>
             <Link href="/locations" className={cn(buttonVariants({ variant: "outline" }), "w-fit rounded-xl h-12 px-6 text-base")}>

@@ -10,7 +10,7 @@ import { renderStaticPageMarkdown } from "@/lib/markdown/render-static-page";
 export const dynamic = "force-static";
 
 export function generateStaticParams() {
-  // City-service slugs (all) — Houston active now, so include both cities.
+  // City-service slugs (all) — both cities; Houston pages are noindex until launch (~2026).
   const cityServiceSlugs = Object.keys(cityServiceData);
   // Static page slugs
   const staticSlugs = [

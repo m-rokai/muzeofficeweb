@@ -56,9 +56,9 @@ export default function LocationsPage() {
               Our Locations
             </h1>
             <p className="mt-4 text-base text-[#74726D] md:text-lg">
-              Two active locations — Las Vegas (6860 Bermuda Rd, Suite 200) and
-              Houston (1800 Augusta Dr in the Galleria / Tanglewood area). Free
-              parking at both.
+              Open in Las Vegas (6860 Bermuda Rd, Suite 200), with a second
+              flagship opening in Houston in 2026 (1800 Augusta Dr in the
+              Galleria / Tanglewood area). Free parking.
             </p>
           </div>
         </FadeIn>

@@ -558,12 +558,12 @@ const locationsOverviewFAQs: FAQ[] = [
   {
     question: "Where is Muze Office located?",
     answer:
-      "Two active locations: Las Vegas at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 (10 minutes from Harry Reid International Airport, off I-215); and Houston at 1800 Augusta Dr, Houston, TX 77057 (inside the 610 Loop in the Galleria / Tanglewood area).",
+      "Open in Las Vegas at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 (10 minutes from Harry Reid International Airport, off I-215). A second flagship is opening in Houston in 2026 at 1800 Augusta Dr, Houston, TX 77057 (inside the 610 Loop in the Galleria / Tanglewood area).",
   },
   {
     question: "Which cities are open?",
     answer:
-      "Both Las Vegas and Houston are open and accepting members, day pass visitors, and meeting room bookings.",
+      "Las Vegas is open now and accepting members, day pass visitors, and meeting room bookings at 6860 Bermuda Rd, Suite 200. Houston opens in 2026 — join the waitlist for early access and founding-member pricing.",
   },
   {
     question: "How do I find the Houston location?",

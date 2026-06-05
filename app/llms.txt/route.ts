@@ -15,11 +15,11 @@ function buildLlmsTxt(): string {
   lines.push("# Muze Office");
   lines.push("");
   lines.push(
-    "> Flexible workspace in Las Vegas and Houston — coworking, virtual offices, private offices, meeting rooms, and event space. Month-to-month memberships, free parking, no long-term leases."
+    "> Flexible workspace in Las Vegas (Houston opening 2026) — coworking, virtual offices, private offices, meeting rooms, and event space. Month-to-month memberships, free parking, no long-term leases."
   );
   lines.push("");
   lines.push(
-    "Muze Office runs two staffed commercial locations (Las Vegas and Houston). Every page on this site also has a plain-markdown twin at the same path with a `.md` suffix — e.g. `/las-vegas-coworking.md`. A full content dump is available at `/llms-full.txt`."
+    "Muze Office runs a staffed commercial location in Las Vegas, with a second flagship opening in Houston in 2026. Every page on this site also has a plain-markdown twin at the same path with a `.md` suffix — e.g. `/las-vegas-coworking.md`. A full content dump is available at `/llms-full.txt`."
   );
   lines.push("");
 
