@@ -37,9 +37,9 @@ const authorOverrides: Record<string, string> = {
   "clara.carrera@alphacomarketing.com": "Muze Office Team",
   "ana.carrino@alphacomarketing.com": "Muze Office Team",
   "miriondo@alphacomarketing.com": "Muze Office Team",
-  // Legitimate lowercase display names — proper case
-  "mariano iriondo": "Mariano Iriondo",
-  "ana carrino": "Ana Carrino",
+  // Not employees / not real contributors — attribute to the team
+  "mariano iriondo": "Muze Office Team",
+  "ana carrino": "Muze Office Team",
 };
 
 function normalizeAuthor(raw: string | undefined): string {
