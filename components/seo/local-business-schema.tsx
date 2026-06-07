@@ -47,7 +47,11 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
     url: locationUrl,
     telephone: location.phone !== "TBD" ? location.phone : undefined,
     email: location.email,
-    parentOrganization: { "@id": `${BRAND.url}/#organization` },
+    parentOrganization: {
+      "@type": "Organization",
+      "@id": `${BRAND.url}/#organization`,
+      name: BRAND.name,
+    },
     address: {
       "@type": "PostalAddress",
       streetAddress: address.street !== "TBD" ? address.street : undefined,

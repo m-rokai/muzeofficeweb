@@ -17,7 +17,11 @@ export function PersonSchema({ person }: PersonSchemaProps) {
     description: person.shortBio,
     url: `${BRAND.url}/authors/${person.slug}`,
     sameAs: person.sameAs,
-    worksFor: { "@id": `${BRAND.url}/#organization` },
+    worksFor: {
+      "@type": "Organization",
+      "@id": `${BRAND.url}/#organization`,
+      name: BRAND.name,
+    },
     knowsAbout: [
       "Coworking",
       "Virtual office services",

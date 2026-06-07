@@ -62,8 +62,13 @@ export default async function AuthorProfilePage({
     url: profileUrl,
     name: `${person.name} — ${person.jobTitle}`,
     description: person.shortBio,
-    mainEntity: { "@id": person.schemaId },
-    isPartOf: { "@id": `${BRAND.url}/#website` },
+    mainEntity: { "@type": "Person", "@id": person.schemaId, name: person.name },
+    isPartOf: {
+      "@type": "WebSite",
+      "@id": `${BRAND.url}/#website`,
+      name: BRAND.name,
+      url: BRAND.url,
+    },
   };
 
   return (
