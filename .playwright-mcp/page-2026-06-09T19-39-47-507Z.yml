@@ -1,0 +1,276 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Muze Office — home" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Muze Office" [ref=e5]
+      - navigation [ref=e6]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: /
+        - link "Locations" [ref=e8] [cursor=pointer]:
+          - /url: /locations
+        - link "Memberships" [ref=e9] [cursor=pointer]:
+          - /url: /workspace-memberships
+        - link "Events" [ref=e10] [cursor=pointer]:
+          - /url: /las-vegas-event-space
+        - link "About" [ref=e11] [cursor=pointer]:
+          - /url: /about
+        - link "Contact" [ref=e12] [cursor=pointer]:
+          - /url: /contact
+        - link "Blog" [ref=e13] [cursor=pointer]:
+          - /url: /blog
+      - generic [ref=e14]:
+        - link "(702) 370-7515" [ref=e15] [cursor=pointer]:
+          - /url: tel:+17023707515
+          - img [ref=e16]
+          - text: (702) 370-7515
+        - link "Book a Tour" [ref=e18] [cursor=pointer]:
+          - /url: https://muzeoffice.optixapp.com/book/tour/
+  - main [ref=e19]:
+    - navigation "Breadcrumb" [ref=e20]:
+      - list [ref=e21]:
+        - listitem [ref=e22]:
+          - link "Home" [ref=e23] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e24]:
+          - img [ref=e25]
+          - generic [ref=e27]: Contact
+    - generic [ref=e31]:
+      - heading "Get in Touch" [level=1] [ref=e32]
+      - paragraph [ref=e33]: Have a question about workspace memberships, tours, or availability? Reach out and we'll get back to you within one business day.
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - generic [ref=e40]:
+          - generic [ref=e41]:
+            - heading "Muze Office Las Vegas" [level=2] [ref=e42]
+            - generic [ref=e43]: Open
+          - list [ref=e44]:
+            - listitem [ref=e45]:
+              - img [ref=e46]
+              - generic [ref=e49]:
+                - text: 6860 Bermuda Rd, Suite 200
+                - text: Las Vegas, NV 89119
+            - listitem [ref=e50]:
+              - img [ref=e51]
+              - link "access@muzeoffice.com" [ref=e54] [cursor=pointer]:
+                - /url: mailto:access@muzeoffice.com
+              - generic [ref=e55]: Preferred
+            - listitem [ref=e56]:
+              - img [ref=e57]
+              - link "(702) 370-7515" [ref=e59] [cursor=pointer]:
+                - /url: tel:+17023707515
+            - listitem [ref=e60]:
+              - img [ref=e61]
+              - generic [ref=e64]:
+                - text: "Phone: Mon–Fri, 10 am – 5 pm"
+                - text: "Front desk: Mon–Fri, 10 am – 7 pm"
+          - link "View Location Details" [ref=e65] [cursor=pointer]:
+            - /url: /locations/las-vegas
+        - generic [ref=e68]:
+          - generic [ref=e69]:
+            - heading "Muze Office Houston" [level=2] [ref=e70]
+            - generic [ref=e71]: Coming Soon
+          - paragraph [ref=e72]: Inside the 610 Loop in the Galleria / Tanglewood area. Free parking on-site — no Post Oak garage fees.
+          - list [ref=e73]:
+            - listitem [ref=e74]:
+              - img [ref=e75]
+              - generic [ref=e78]: 1800 Augusta Dr, Houston, TX 77057
+            - listitem [ref=e79]:
+              - img [ref=e80]
+              - link "access@muzeoffice.com" [ref=e83] [cursor=pointer]:
+                - /url: mailto:access@muzeoffice.com
+              - generic [ref=e84]: Preferred
+        - generic [ref=e87]:
+          - img [ref=e88]
+          - paragraph [ref=e91]: 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119
+          - link "Open in Google Maps" [ref=e92] [cursor=pointer]:
+            - /url: https://www.google.com/maps/place/6860+Bermuda+Rd+Suite+200,+Las+Vegas,+NV+89119
+            - text: Open in Google Maps
+            - img [ref=e93]
+      - generic [ref=e98]:
+        - heading "Send us a message" [level=2] [ref=e99]
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - text: Leave this field empty
+            - textbox [ref=e102]
+          - generic [ref=e103]:
+            - generic [ref=e104]:
+              - text: Name
+              - generic [ref=e105]: "*"
+            - textbox "Name *" [ref=e106]:
+              - /placeholder: Your full name
+          - generic [ref=e107]:
+            - generic [ref=e108]:
+              - text: Email
+              - generic [ref=e109]: "*"
+            - textbox "Email *" [ref=e110]:
+              - /placeholder: you@company.com
+          - generic [ref=e111]:
+            - generic [ref=e112]: Phone
+            - textbox "Phone" [ref=e113]:
+              - /placeholder: (555) 123-4567
+          - generic [ref=e114]:
+            - generic [ref=e115]: Company (optional)
+            - textbox "Company (optional)" [ref=e116]:
+              - /placeholder: Your company name
+          - generic [ref=e117]:
+            - generic [ref=e118]:
+              - text: I'm interested in
+              - generic [ref=e119]: "*"
+            - combobox "I'm interested in *" [ref=e120]:
+              - generic [ref=e121]: Select an option
+              - img: ▼
+            - textbox [ref=e122]
+          - generic [ref=e123]:
+            - generic [ref=e124]:
+              - text: Message
+              - generic [ref=e125]: "*"
+            - textbox "Message *" [ref=e126]:
+              - /placeholder: Tell us about your workspace needs...
+          - generic [ref=e127]:
+            - button "Send Message" [ref=e128]
+            - paragraph [ref=e129]:
+              - text: Prefer to talk?
+              - link "Call (702) 370-7515" [ref=e130] [cursor=pointer]:
+                - /url: tel:+17023707515
+              - text: .
+    - generic [ref=e132]:
+      - heading "Prefer to visit in person?" [level=2] [ref=e134]
+      - paragraph [ref=e136]: Schedule a tour and see the space firsthand. Walk through coworking, private offices, meeting rooms, and the on-site cafe.
+      - generic [ref=e138]:
+        - link "Book a Tour" [ref=e139] [cursor=pointer]:
+          - /url: https://muzeoffice.optixapp.com/book/tour/
+        - link "(702) 370-7515" [ref=e140] [cursor=pointer]:
+          - /url: tel:+17023707515
+          - img
+          - text: (702) 370-7515
+  - contentinfo [ref=e141]:
+    - generic [ref=e142]:
+      - generic [ref=e143]:
+        - generic [ref=e144]:
+          - link "Muze Office — home" [ref=e145] [cursor=pointer]:
+            - /url: /
+            - img "Muze Office" [ref=e146]
+          - paragraph [ref=e147]: Flexible workspace in Las Vegas and Houston — month-to-month memberships, no long-term leases.
+          - link "Muze Office Franchise →" [ref=e148] [cursor=pointer]:
+            - /url: https://muzeofficefranchise.com
+        - generic [ref=e149]:
+          - heading "Las Vegas" [level=3] [ref=e150]
+          - list [ref=e151]:
+            - listitem [ref=e152]:
+              - link "Las Vegas Location" [ref=e153] [cursor=pointer]:
+                - /url: /locations/las-vegas
+            - listitem [ref=e154]:
+              - link "Virtual Office" [ref=e155] [cursor=pointer]:
+                - /url: /las-vegas-virtual-office
+            - listitem [ref=e156]:
+              - link "Coworking" [ref=e157] [cursor=pointer]:
+                - /url: /las-vegas-coworking
+            - listitem [ref=e158]:
+              - link "Day Pass" [ref=e159] [cursor=pointer]:
+                - /url: /las-vegas-day-pass
+            - listitem [ref=e160]:
+              - link "Hot Desk" [ref=e161] [cursor=pointer]:
+                - /url: /las-vegas-hot-desk
+            - listitem [ref=e162]:
+              - link "Dedicated Desk" [ref=e163] [cursor=pointer]:
+                - /url: /las-vegas-dedicated-desk
+            - listitem [ref=e164]:
+              - link "Flexible Workspaces" [ref=e165] [cursor=pointer]:
+                - /url: /las-vegas-flexible-workspaces
+            - listitem [ref=e166]:
+              - link "Private Office" [ref=e167] [cursor=pointer]:
+                - /url: /las-vegas-private-office
+            - listitem [ref=e168]:
+              - link "Meeting Rooms" [ref=e169] [cursor=pointer]:
+                - /url: /las-vegas-meeting-rooms
+            - listitem [ref=e170]:
+              - link "Conference Rooms" [ref=e171] [cursor=pointer]:
+                - /url: /las-vegas-conference-rooms
+            - listitem [ref=e172]:
+              - link "Event Space" [ref=e173] [cursor=pointer]:
+                - /url: /las-vegas-event-space
+            - listitem [ref=e174]:
+              - link "Airport Coworking" [ref=e175] [cursor=pointer]:
+                - /url: /las-vegas-airport-coworking
+            - listitem [ref=e176]:
+              - link "Convention Coworking" [ref=e177] [cursor=pointer]:
+                - /url: /las-vegas-convention-coworking
+            - listitem [ref=e178]:
+              - link "Esthetics & Waxing Booth" [ref=e179] [cursor=pointer]:
+                - /url: https://beauty-booking-three.vercel.app
+        - generic [ref=e180]:
+          - generic [ref=e181]:
+            - heading "Company" [level=3] [ref=e182]
+            - list [ref=e183]:
+              - listitem [ref=e184]:
+                - link "Home" [ref=e185] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e186]:
+                - link "Locations" [ref=e187] [cursor=pointer]:
+                  - /url: /locations
+              - listitem [ref=e188]:
+                - link "Memberships" [ref=e189] [cursor=pointer]:
+                  - /url: /workspace-memberships
+              - listitem [ref=e190]:
+                - link "Events" [ref=e191] [cursor=pointer]:
+                  - /url: /las-vegas-event-space
+              - listitem [ref=e192]:
+                - link "Blog" [ref=e193] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e194]:
+                - link "FAQ" [ref=e195] [cursor=pointer]:
+                  - /url: /#faq
+              - listitem [ref=e196]:
+                - link "Privacy Policy" [ref=e197] [cursor=pointer]:
+                  - /url: /privacy-policy
+              - listitem [ref=e198]:
+                - link "About" [ref=e199] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e200]:
+                - link "Contact" [ref=e201] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e202]:
+                - link "Book a Tour" [ref=e203] [cursor=pointer]:
+                  - /url: /book-a-tour
+          - generic [ref=e204]:
+            - heading "Contact" [level=3] [ref=e205]
+            - list [ref=e206]:
+              - listitem [ref=e207]:
+                - img [ref=e208]
+                - link "6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119" [ref=e211] [cursor=pointer]:
+                  - /url: /locations/las-vegas
+              - listitem [ref=e212]:
+                - img [ref=e213]
+                - link "access@muzeoffice.com" [ref=e216] [cursor=pointer]:
+                  - /url: mailto:access@muzeoffice.com
+                - generic [ref=e217]: Preferred
+              - listitem [ref=e218]:
+                - link "(702) 370-7515" [ref=e219] [cursor=pointer]:
+                  - /url: tel:+17023707515
+                  - img [ref=e220]
+                  - text: (702) 370-7515
+              - listitem [ref=e222]:
+                - img [ref=e223]
+                - generic [ref=e226]:
+                  - text: "Phone: Mon–Fri, 10am–5pm"
+                  - text: "Front desk: Mon–Fri, 10am–7pm"
+      - generic [ref=e227]:
+        - paragraph [ref=e228]: © 2023–2026 Muze International Corporation. All rights reserved.
+        - list [ref=e229]:
+          - listitem [ref=e230]:
+            - link "Twitter (X)" [ref=e231] [cursor=pointer]:
+              - /url: https://x.com/muzeoffice
+          - listitem [ref=e232]:
+            - link "Instagram" [ref=e233] [cursor=pointer]:
+              - /url: https://instagram.com/muzeoffice
+          - listitem [ref=e234]:
+            - link "LinkedIn" [ref=e235] [cursor=pointer]:
+              - /url: https://linkedin.com/company/muzeoffice
+          - listitem [ref=e236]:
+            - link "Facebook" [ref=e237] [cursor=pointer]:
+              - /url: https://facebook.com/muzeoffice
+          - listitem [ref=e238]:
+            - link "TikTok" [ref=e239] [cursor=pointer]:
+              - /url: https://tiktok.com/@muzeoffice
+  - alert [ref=e240]

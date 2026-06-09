@@ -12,6 +12,9 @@ interface PricingCardProps {
   highlighted?: boolean;
   ctaLabel: string;
   ctaHref: string;
+  /** Fires a cta_click analytics event via the EngagementTracker. */
+  trackingName?: string;
+  trackingLocation?: string;
 }
 
 export function PricingCard({
@@ -22,7 +25,10 @@ export function PricingCard({
   highlighted = false,
   ctaLabel,
   ctaHref,
+  trackingName,
+  trackingLocation,
 }: PricingCardProps) {
+  const isExternal = ctaHref.startsWith("http");
   return (
     <Card
       className={cn(
@@ -72,18 +78,37 @@ export function PricingCard({
       </div>
 
       <div className="px-4 pb-4 pt-2">
-        <Link
-          href={ctaHref}
-          className={cn(
-            buttonVariants({ size: "lg" }),
-            "w-full rounded-[12px] text-center",
-            highlighted
-              ? "bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
-              : "bg-[#1A1A1A] text-white hover:bg-[#1A1A1A]/80"
-          )}
-        >
-          {ctaLabel}
-        </Link>
+        {isExternal ? (
+          <a
+            href={ctaHref}
+            data-cta={trackingName}
+            data-cta-location={trackingLocation}
+            className={cn(
+              buttonVariants({ size: "lg" }),
+              "w-full rounded-[12px] text-center",
+              highlighted
+                ? "bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
+                : "bg-[#1A1A1A] text-white hover:bg-[#1A1A1A]/80"
+            )}
+          >
+            {ctaLabel}
+          </a>
+        ) : (
+          <Link
+            href={ctaHref}
+            data-cta={trackingName}
+            data-cta-location={trackingLocation}
+            className={cn(
+              buttonVariants({ size: "lg" }),
+              "w-full rounded-[12px] text-center",
+              highlighted
+                ? "bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
+                : "bg-[#1A1A1A] text-white hover:bg-[#1A1A1A]/80"
+            )}
+          >
+            {ctaLabel}
+          </Link>
+        )}
       </div>
     </Card>
   );

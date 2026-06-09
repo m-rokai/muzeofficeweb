@@ -212,6 +212,19 @@ export default async function CityServicePage({ params }: PageProps) {
               >
                 {primaryCtaLabel}
               </Link>
+              {!isComingSoon && isVirtualOffice && (
+                <a
+                  href={BRAND.booking.signupUrl}
+                  data-cta="signup_online"
+                  data-cta-location={`city_service_${cityService}_hero`}
+                  className={cn(
+                    buttonVariants({ size: "lg" }),
+                    "rounded-lg bg-white text-[#1A1A1A] hover:bg-gray-200"
+                  )}
+                >
+                  Sign Up Online
+                </a>
+              )}
               {!isComingSoon && location.phone !== "TBD" && (
                 <a
                   href={`tel:${location.phoneRaw}`}
@@ -272,10 +285,24 @@ export default async function CityServicePage({ params }: PageProps) {
                       ? "Join Waitlist"
                       : hasOnlineBooking
                         ? "Book Online"
-                      : "Get Started"
+                      : "Sign Up Online"
                     : "Contact Us"
                 }
-                ctaHref={hasOnlineBooking ? "#book-online" : "/contact"}
+                ctaHref={
+                  hasOnlineBooking
+                    ? "#book-online"
+                    : !isComingSoon && tier.price !== null
+                      ? BRAND.booking.signupUrl
+                      : "/contact"
+                }
+                trackingName={
+                  hasOnlineBooking
+                    ? "book_online"
+                    : !isComingSoon && tier.price !== null
+                      ? "signup_online"
+                      : "contact_us"
+                }
+                trackingLocation={`city_service_${cityService}_pricing`}
               />
             </StaggerItem>
           ))}

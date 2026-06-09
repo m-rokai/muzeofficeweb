@@ -19,6 +19,7 @@ export const BRAND = {
   },
   booking: {
     tourUrl: "https://muzeoffice.optixapp.com/book/tour/",
+    signupUrl: "https://muzeoffice.optixapp.com/signup/",
   },
 } as const;
 

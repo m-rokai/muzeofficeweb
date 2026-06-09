@@ -1,0 +1,552 @@
+- generic [active] [ref=e1]:
+  - banner [ref=e2]:
+    - generic [ref=e3]:
+      - link "Muze Office — home" [ref=e4] [cursor=pointer]:
+        - /url: /
+        - img "Muze Office" [ref=e5]
+      - navigation [ref=e6]:
+        - link "Home" [ref=e7] [cursor=pointer]:
+          - /url: /
+        - link "Locations" [ref=e8] [cursor=pointer]:
+          - /url: /locations
+        - link "Memberships" [ref=e9] [cursor=pointer]:
+          - /url: /workspace-memberships
+        - link "Events" [ref=e10] [cursor=pointer]:
+          - /url: /las-vegas-event-space
+        - link "About" [ref=e11] [cursor=pointer]:
+          - /url: /about
+        - link "Contact" [ref=e12] [cursor=pointer]:
+          - /url: /contact
+        - link "Blog" [ref=e13] [cursor=pointer]:
+          - /url: /blog
+      - generic [ref=e14]:
+        - link "(702) 370-7515" [ref=e15] [cursor=pointer]:
+          - /url: tel:+17023707515
+          - img [ref=e16]
+          - text: (702) 370-7515
+        - link "Book a Tour" [ref=e18] [cursor=pointer]:
+          - /url: https://muzeoffice.optixapp.com/book/tour/
+  - main [ref=e19]:
+    - navigation "Breadcrumb" [ref=e20]:
+      - list [ref=e21]:
+        - listitem [ref=e22]:
+          - link "Home" [ref=e23] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e24]:
+          - img [ref=e25]
+          - link "Las Vegas" [ref=e27] [cursor=pointer]:
+            - /url: /locations/las-vegas
+        - listitem [ref=e28]:
+          - img [ref=e29]
+          - generic [ref=e31]: Meeting Rooms
+    - generic [ref=e32]:
+      - img "Meeting Rooms in Las Vegas at Muze Office Las Vegas — 6860 Bermuda Rd, Suite 200, Las Vegas, NV" [ref=e34]
+      - generic [ref=e35]:
+        - heading "Meeting Rooms in Las Vegas" [level=1] [ref=e37]
+        - paragraph [ref=e39]: Professional meeting spaces available by the hour. AV equipment, video conferencing, whiteboards, and free parking included. Book online instantly.
+        - generic [ref=e41]:
+          - link "Book Online" [ref=e42] [cursor=pointer]:
+            - /url: "#book-online"
+          - link "(702) 370-7515" [ref=e43] [cursor=pointer]:
+            - /url: tel:+17023707515
+            - img
+            - text: (702) 370-7515
+        - link "Google 4.6 9 Google reviews" [ref=e47] [cursor=pointer]:
+          - /url: https://www.google.com/search?q=Muze+Office+Las+Vegas&kgmid=/g/11x2wpzbg_
+          - img "Google" [ref=e48]
+          - generic [ref=e53]:
+            - generic [ref=e54]:
+              - generic [ref=e55]: "4.6"
+              - generic [ref=e56]:
+                - img [ref=e57]
+                - img [ref=e59]
+                - img [ref=e61]
+                - img [ref=e63]
+                - img [ref=e65]
+            - generic [ref=e67]: 9 Google reviews
+    - generic [ref=e69]:
+      - generic [ref=e71]:
+        - heading "Meeting Rooms Pricing in Las Vegas" [level=2] [ref=e72]
+        - paragraph [ref=e73]: Professional meeting spaces available by the hour. AV equipment, video conferencing, and free parking included.
+      - generic [ref=e74]:
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - generic [ref=e78]:
+              - generic [ref=e79]: Huddle Room
+              - generic [ref=e80]:
+                - generic [ref=e81]: $25
+                - generic [ref=e82]: /hour
+            - list [ref=e84]:
+              - listitem [ref=e85]:
+                - img [ref=e86]
+                - generic [ref=e88]: 2-4 people
+              - listitem [ref=e89]:
+                - img [ref=e90]
+                - generic [ref=e92]: Monitor, whiteboard, WiFi
+              - listitem [ref=e93]:
+                - img [ref=e94]
+                - generic [ref=e96]: Quick syncs, 1-on-1 meetings
+          - link "Book Online" [ref=e98] [cursor=pointer]:
+            - /url: "#book-online"
+        - generic [ref=e100]:
+          - generic [ref=e101]:
+            - generic [ref=e102]:
+              - generic [ref=e103]: Most Popular
+              - generic [ref=e104]: Conference Room
+              - generic [ref=e105]:
+                - generic [ref=e106]: $50
+                - generic [ref=e107]: /hour
+            - list [ref=e109]:
+              - listitem [ref=e110]:
+                - img [ref=e111]
+                - generic [ref=e113]: 6-8 people
+              - listitem [ref=e114]:
+                - img [ref=e115]
+                - generic [ref=e117]: Large display, video conferencing
+              - listitem [ref=e118]:
+                - img [ref=e119]
+                - generic [ref=e121]: Client meetings, presentations
+          - link "Book Online" [ref=e123] [cursor=pointer]:
+            - /url: "#book-online"
+        - generic [ref=e125]:
+          - generic [ref=e126]:
+            - generic [ref=e127]:
+              - generic [ref=e128]: Boardroom
+              - generic [ref=e129]:
+                - generic [ref=e130]: $75
+                - generic [ref=e131]: /hour
+            - list [ref=e133]:
+              - listitem [ref=e134]:
+                - img [ref=e135]
+                - generic [ref=e137]: 10-14 people
+              - listitem [ref=e138]:
+                - img [ref=e139]
+                - generic [ref=e141]: Dual screens, sound system
+              - listitem [ref=e142]:
+                - img [ref=e143]
+                - generic [ref=e145]: Board meetings, workshops, depositions
+          - link "Book Online" [ref=e147] [cursor=pointer]:
+            - /url: "#book-online"
+    - generic [ref=e150]:
+      - generic [ref=e152]:
+        - heading "Book Your Meeting Room Online" [level=2] [ref=e153]
+        - paragraph [ref=e154]: Choose your room, time, and duration below. The live Optix calendar shows current availability for Muze Office meeting rooms in Las Vegas.
+      - generic [ref=e156]:
+        - iframe [ref=e158]:
+          - generic [ref=f5e3]:
+            - main [ref=f5e5]:
+              - generic [ref=f5e8]:
+                - generic [ref=f5e24]:
+                  - generic [ref=f5e25]:
+                    - generic [ref=f5e27]: g
+                    - generic [ref=f5e29]: m
+                  - strong [ref=f5e30]: Rather visit us first?
+                  - text: We'd be happy to show you around. Book a tour
+                  - generic [ref=f5e33] [cursor=pointer]: q
+                - generic [ref=f5e35]:
+                  - generic [ref=f5e46]:
+                    - heading [level=2] [ref=f5e47]
+                    - heading [level=3] [ref=f5e50]
+                  - generic [ref=f5e66]:
+                    - heading [level=2] [ref=f5e67]
+                    - heading [level=3] [ref=f5e70]
+                  - generic [ref=f5e86]:
+                    - heading [level=2] [ref=f5e87]
+                    - heading [level=3] [ref=f5e90]
+            - link "Powered by Software for better coworking spaces" [ref=f5e99] [cursor=pointer]:
+              - /url: https://www.optixapp.com
+              - generic [ref=f5e100]: Powered by
+              - img "Software for better coworking spaces" [ref=f5e101]
+        - paragraph [ref=e159]:
+          - text: Need catering, a custom setup, or help choosing a room? Call
+          - link "(702) 370-7515" [ref=e160] [cursor=pointer]:
+            - /url: tel:+17023707515
+          - text: .
+    - generic [ref=e162]:
+      - generic [ref=e164]:
+        - heading "Meeting Rooms Amenities in Las Vegas" [level=2] [ref=e165]
+        - paragraph [ref=e166]: Everything you need is included. No hidden fees.
+      - generic [ref=e167]:
+        - generic [ref=e169]:
+          - img [ref=e170]
+          - generic [ref=e173]: AV Equipment
+        - generic [ref=e175]:
+          - img [ref=e176]
+          - generic [ref=e179]: Video Conferencing
+        - generic [ref=e181]:
+          - img [ref=e182]
+          - generic [ref=e185]: High-Speed WiFi
+        - generic [ref=e187]:
+          - img [ref=e188]
+          - generic [ref=e191]: Free Parking
+        - generic [ref=e193]:
+          - img [ref=e194]
+          - generic [ref=e197]: Whiteboards
+        - generic [ref=e199]:
+          - img [ref=e200]
+          - generic [ref=e203]: Unlimited Coffee & Water
+        - generic [ref=e205]:
+          - img [ref=e206]
+          - generic [ref=e209]: On-Site Receptionist
+        - generic [ref=e211]:
+          - img [ref=e212]
+          - generic [ref=e215]: Flexible Room Setup
+    - generic [ref=e217]:
+      - generic [ref=e219]:
+        - heading "Who meeting rooms at Muze Office Las Vegas is best for" [level=2] [ref=e220]
+        - paragraph [ref=e221]: Specific situations where Muze Office is the right fit — not generic personas.
+      - generic [ref=e222]:
+        - generic [ref=e224]:
+          - generic [ref=e225]:
+            - img [ref=e226]
+            - heading "Sales reps pitching clients flying through Las Vegas" [level=3] [ref=e231]
+          - paragraph [ref=e232]: A prospect is flying into LAS for a 90-minute meeting and you need a professional conference room within 10 minutes of the terminal — not a Strip hotel ballroom with a food and beverage minimum, not a coffee shop with no privacy.
+          - list [ref=e233]:
+            - listitem [ref=e234]:
+              - img [ref=e235]
+              - generic [ref=e238]: Huddle Room at $25/hr for 2-4 people, Conference Room at $50/hr for 6-8 — no F&B minimum
+            - listitem [ref=e239]:
+              - img [ref=e240]
+              - generic [ref=e243]: Real video conferencing, large display, and whiteboards included in every room
+            - listitem [ref=e244]:
+              - img [ref=e245]
+              - generic [ref=e248]: 10 minutes from Harry Reid International Airport via I-215 W
+            - listitem [ref=e249]:
+              - img [ref=e250]
+              - generic [ref=e253]: Free parking for your prospect — no $45 Strip hotel valet charge
+        - generic [ref=e255]:
+          - generic [ref=e256]:
+            - img [ref=e257]
+            - heading "Legal teams running depositions and mediations" [level=3] [ref=e262]
+          - paragraph [ref=e263]: You need a neutral, professional setting for a deposition, mediation, or sworn testimony where the venue reads as formal enough that nobody questions it, and parking doesn't become a logistics problem for witnesses and counsel.
+          - list [ref=e264]:
+            - listitem [ref=e265]:
+              - img [ref=e266]
+              - generic [ref=e269]: Boardroom at $75/hr fits up to 14 people around a proper conference table
+            - listitem [ref=e270]:
+              - img [ref=e271]
+              - generic [ref=e274]: Dual screens and a real sound system for recorded testimony and exhibit review
+            - listitem [ref=e275]:
+              - img [ref=e276]
+              - generic [ref=e279]: Quiet off-Strip location with no tourism noise interrupting proceedings
+            - listitem [ref=e280]:
+              - img [ref=e281]
+              - generic [ref=e284]: Free parking for witnesses, counsel, and the court reporter
+        - generic [ref=e286]:
+          - generic [ref=e287]:
+            - img [ref=e288]
+            - heading "HR teams running in-person interviews for remote roles" [level=3] [ref=e293]
+          - paragraph [ref=e294]: You're recruiting for a remote-first role and a finalist is flying into Las Vegas for a half-day of in-person interviews, but your home office or a WeWork lounge is the wrong signal to send a senior candidate.
+          - list [ref=e295]:
+            - listitem [ref=e296]:
+              - img [ref=e297]
+              - generic [ref=e300]: Conference rooms with professional, neutral backdrops for candidate impressions
+            - listitem [ref=e301]:
+              - img [ref=e302]
+              - generic [ref=e305]: Book by the hour — exactly the time you need, no day-rate padding
+            - listitem [ref=e306]:
+              - img [ref=e307]
+              - generic [ref=e310]: On-site reception to greet and direct candidates when they arrive
+            - listitem [ref=e311]:
+              - img [ref=e312]
+              - generic [ref=e315]: Video conferencing included for hybrid panels with remote interviewers
+        - generic [ref=e317]:
+          - generic [ref=e318]:
+            - img [ref=e319]
+            - heading "Small businesses hosting board meetings and workshops" [level=3] [ref=e324]
+          - paragraph [ref=e325]: Your quarterly board meeting, investor update, or leadership workshop needs a space that's not your apartment, not a hotel ballroom at 5x the price, and not a restaurant back room with no AV.
+          - list [ref=e326]:
+            - listitem [ref=e327]:
+              - img [ref=e328]
+              - generic [ref=e331]: Boardroom ($75/hr) for formal board meetings and investor presentations
+            - listitem [ref=e332]:
+              - img [ref=e333]
+              - generic [ref=e336]: Conference Room ($50/hr) for working sessions, team workshops, and all-hands
+            - listitem [ref=e337]:
+              - img [ref=e338]
+              - generic [ref=e341]: Catering from on-site Muze Cafe — coffee service, pastries, sandwich trays, full lunch
+            - listitem [ref=e342]:
+              - img [ref=e343]
+              - generic [ref=e346]: Rooms reconfigure for theater, classroom, u-shape, or boardroom style
+    - generic [ref=e351]:
+      - generic [ref=e352]:
+        - heading "Why book a Las Vegas meeting room at Muze Office" [level=2] [ref=e353]
+        - paragraph [ref=e354]: "Most meeting rooms in Las Vegas fall into two categories: Strip hotels charging conference-center rates with food-and-beverage minimums, or big-box venues that only rent space by the day. Neither works for a quick client pitch, a two-hour board meeting, or a same-day legal deposition. Muze Office meeting rooms start at $25 per hour for a Huddle Room, scale up to $50 per hour for a Conference Room, and top out at $75 per hour for a full Boardroom. No food minimums, no day-rate padding, no parking fees for your attendees."
+        - paragraph [ref=e355]: Every room includes what you actually need for a professional meeting. Huddle Rooms fit two to four people and come with a large monitor, whiteboard, and WiFi — the right shape for a quick sync, a sales pitch, or a one-on-one. Conference Rooms fit six to eight and add real video conferencing hardware, which makes them practical for hybrid meetings where half the team is remote. Boardrooms seat ten to fourteen with dual screens, a proper sound system, and the table configuration you'd expect for a board meeting, workshop, or legal deposition.
+        - paragraph [ref=e356]: The location helps too. Bermuda Rd is 10 minutes from Harry Reid International Airport via I-215, which makes fly-in meetings genuinely possible — your client can land at LAS, grab a Lyft, spend an hour in a conference room, and be back at the terminal before their return flight. Everyone parks for free. Nobody has to navigate Strip traffic or pay $45 to a hotel valet.
+      - generic [ref=e357]:
+        - heading "Meeting room vs. hotel boardroom, restaurant private room, and coffee shop" [level=2] [ref=e358]
+        - paragraph [ref=e359]: Hotel boardrooms on the Strip start around $150-250 per hour for a comparable room, almost always include a food-and-beverage minimum that runs $500-1,500 on top of the room rental, and charge your attendees for parking (typically $35-45 per car, even for a one-hour meeting). They're built for large corporate events, not for a two-person pitch meeting. You're paying for a ballroom when you need a conference table.
+        - paragraph [ref=e360]: Restaurant private rooms are the default for client dinners but wrong for presentations. The AV is almost never set up for video conferencing, the lighting is designed for a meal rather than a whiteboard session, and the servers interrupting to ask about drinks break the meeting rhythm. They're great for celebrating after you close the deal — not great for the pitch itself.
+        - paragraph [ref=e361]: Coffee shops are the free option, and the cost shows up in the meeting outcome. You can't present slides, you can't run a real video call, you can't write on a whiteboard, and half the time the client can't even find parking. For any meeting that affects revenue — a sales pitch, an investor update, a negotiation — the $25 to $75 per hour to rent a real conference room pays for itself the moment it removes the distraction.
+      - generic [ref=e362]:
+        - heading "How to book a meeting room in Las Vegas" [level=2] [ref=e363]
+        - paragraph [ref=e364]: Pick the room that fits the meeting, not the room that fits your budget. A Huddle Room works for two-to-four person syncs, one-on-ones, or client check-ins — $25/hour, monitor and whiteboard, private but casual. A Conference Room fits six to eight around a single table with real video conferencing, which is what you want for sales pitches, team workshops, and hybrid meetings. A Boardroom is for ten to fourteen with dual screens and a sound system — use it for board meetings, investor updates, workshops, or legal depositions where the formality matters.
+        - paragraph [ref=e365]: Book by the hour, not by the day. Most meetings run 60-90 minutes; we'd rather you book exactly what you need than pad the reservation. Catering from the on-site Muze Cafe is available as an add-on — coffee service, pastries, sandwich trays, full lunch — and we can handle the setup before your attendees arrive.
+        - paragraph [ref=e366]: No membership is required to book a meeting room. Walk-in availability depends on the day, but same-day bookings are usually possible outside of peak hours. If you're a virtual office member or coworking member, you already have monthly meeting room credits that can cover part or all of your booking. Call us or book online, and we'll have the room prepped before your first attendee arrives.
+      - generic [ref=e367]:
+        - heading "Related services at Muze Office Las Vegas" [level=3] [ref=e368]
+        - list [ref=e369]:
+          - listitem [ref=e370]:
+            - link "Las Vegas Conference Rooms" [ref=e371] [cursor=pointer]:
+              - /url: /las-vegas-conference-rooms
+              - text: Las Vegas Conference Rooms
+              - generic [ref=e372]: →
+          - listitem [ref=e373]:
+            - link "Las Vegas Event Space" [ref=e374] [cursor=pointer]:
+              - /url: /las-vegas-event-space
+              - text: Las Vegas Event Space
+              - generic [ref=e375]: →
+          - listitem [ref=e376]:
+            - link "Las Vegas Virtual Office" [ref=e377] [cursor=pointer]:
+              - /url: /las-vegas-virtual-office
+              - text: Las Vegas Virtual Office
+              - generic [ref=e378]: →
+          - listitem [ref=e379]:
+            - link "Las Vegas Coworking" [ref=e380] [cursor=pointer]:
+              - /url: /las-vegas-coworking
+              - text: Las Vegas Coworking
+              - generic [ref=e381]: →
+    - generic [ref=e385]:
+      - img [ref=e386]
+      - heading "Meeting Rooms Location in Las Vegas" [level=2] [ref=e389]
+      - paragraph [ref=e390]: Convenient location at 6860 Bermuda Rd, Suite 200, just 10 minutes from Harry Reid International Airport. Free parking for all attendees.
+      - generic [ref=e391]:
+        - text: Muze Office Paradise
+        - text: 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119
+        - text: (702) 370-7515
+      - generic [ref=e392]:
+        - generic [ref=e393]:
+          - img [ref=e394]
+          - text: 10 minutes from Harry Reid International Airport
+        - generic [ref=e397]:
+          - img [ref=e398]
+          - text: Free parking
+        - generic [ref=e401]:
+          - img [ref=e402]
+          - text: Off I-215, away from Strip traffic
+        - generic [ref=e405]:
+          - img [ref=e406]
+          - text: South Las Vegas corridor, 89119
+        - generic [ref=e409]:
+          - img [ref=e410]
+          - text: Not a casino, not a hotel lobby — a real workspace
+    - generic [ref=e414]:
+      - generic [ref=e416]:
+        - heading "Meeting Rooms in Las Vegas — FAQ" [level=2] [ref=e417]
+        - paragraph [ref=e418]: Common questions about meeting rooms at Muze Office Las Vegas.
+      - region [ref=e424]:
+        - heading "What AV equipment is included?" [level=3] [ref=e426]:
+          - button "What AV equipment is included?" [ref=e427]:
+            - text: What AV equipment is included?
+            - img
+        - heading "How do I book a meeting room?" [level=3] [ref=e429]:
+          - button "How do I book a meeting room?" [ref=e430]:
+            - text: How do I book a meeting room?
+            - img
+        - heading "Is catering available for meetings?" [level=3] [ref=e432]:
+          - button "Is catering available for meetings?" [ref=e433]:
+            - text: Is catering available for meetings?
+            - img
+        - heading "What is the cancellation policy?" [level=3] [ref=e435]:
+          - button "What is the cancellation policy?" [ref=e436]:
+            - text: What is the cancellation policy?
+            - img
+        - heading "What room sizes and capacities are available?" [level=3] [ref=e438]:
+          - button "What room sizes and capacities are available?" [ref=e439]:
+            - text: What room sizes and capacities are available?
+            - img
+        - heading "Is parking included?" [level=3] [ref=e441]:
+          - button "Is parking included?" [ref=e442]:
+            - text: Is parking included?
+            - img
+    - generic [ref=e444]:
+      - generic [ref=e446]:
+        - heading "More on meeting rooms" [level=2] [ref=e447]
+        - paragraph [ref=e448]: Long-form reading from the Muze Office team on meeting rooms in Las Vegas.
+      - generic [ref=e450]:
+        - 'link "Meeting Rooms Near CES Las Vegas: A Professional Alternative to Hotel Ballrooms Conventions Meeting Rooms Near CES Las Vegas: A Professional Alternative to Hotel Ballrooms Need a meeting room during CES in Las Vegas? Muze Office offers professional conference rooms from $25/hr with AV, free parking, and no F&B minimums — 15 minutes from the LVCC. September 1, 2025 · 3 min read Read article" [ref=e452] [cursor=pointer]':
+          - /url: /blog/modern-meeting-room-near-ces-las-vegas
+          - 'img "Meeting Rooms Near CES Las Vegas: A Professional Alternative to Hotel Ballrooms" [ref=e454]'
+          - generic [ref=e455]:
+            - generic [ref=e456]: Conventions
+            - 'heading "Meeting Rooms Near CES Las Vegas: A Professional Alternative to Hotel Ballrooms" [level=3] [ref=e457]'
+            - paragraph [ref=e458]: Need a meeting room during CES in Las Vegas? Muze Office offers professional conference rooms from $25/hr with AV, free parking, and no F&B minimums — 15 minutes from the LVCC.
+            - generic [ref=e459]:
+              - generic [ref=e460]:
+                - generic [ref=e461]: September 1, 2025
+                - generic [ref=e462]: ·
+                - generic [ref=e463]: 3 min read
+              - generic [ref=e464]:
+                - text: Read article
+                - img [ref=e465]
+        - link "Find the Ideal Meeting Space Near Las Vegas Airport Meeting Rooms Find the Ideal Meeting Space Near Las Vegas Airport Need a professional meeting room near Harry Reid International Airport? Muze Office is 10 minutes from LAS with conference rooms from $25/hr, free parking, and full AV. August 4, 2025 · 4 min read Read article" [ref=e468] [cursor=pointer]:
+          - /url: /blog/meeting-space-near-las-vegas-airport
+          - img "Find the Ideal Meeting Space Near Las Vegas Airport" [ref=e470]
+          - generic [ref=e471]:
+            - generic [ref=e472]: Meeting Rooms
+            - heading "Find the Ideal Meeting Space Near Las Vegas Airport" [level=3] [ref=e473]
+            - paragraph [ref=e474]: Need a professional meeting room near Harry Reid International Airport? Muze Office is 10 minutes from LAS with conference rooms from $25/hr, free parking, and full AV.
+            - generic [ref=e475]:
+              - generic [ref=e476]:
+                - generic [ref=e477]: August 4, 2025
+                - generic [ref=e478]: ·
+                - generic [ref=e479]: 4 min read
+              - generic [ref=e480]:
+                - text: Read article
+                - img [ref=e481]
+        - 'link "What to Look For in Conference Rooms Near Me: Getting the Best in Las Vegas Las Vegas What to Look For in Conference Rooms Near Me: Getting the Best in Las Vegas What to look for in Las Vegas conference rooms: AV equipment, capacity, parking, F&B flexibility, and hourly pricing. Muze Office books from $25/hr with no minimums. April 30, 2025 · 3 min read Read article" [ref=e484] [cursor=pointer]':
+          - /url: /blog/what-to-look-for-in-conference-rooms-near-me-getting-the-best-in-las-vegas
+          - 'img "What to Look For in Conference Rooms Near Me: Getting the Best in Las Vegas" [ref=e486]'
+          - generic [ref=e487]:
+            - generic [ref=e488]: Las Vegas
+            - 'heading "What to Look For in Conference Rooms Near Me: Getting the Best in Las Vegas" [level=3] [ref=e489]'
+            - paragraph [ref=e490]: "What to look for in Las Vegas conference rooms: AV equipment, capacity, parking, F&B flexibility, and hourly pricing. Muze Office books from $25/hr with no minimums."
+            - generic [ref=e491]:
+              - generic [ref=e492]:
+                - generic [ref=e493]: April 30, 2025
+                - generic [ref=e494]: ·
+                - generic [ref=e495]: 3 min read
+              - generic [ref=e496]:
+                - text: Read article
+                - img [ref=e497]
+    - generic [ref=e500]:
+      - heading "Ready to Book Meeting Rooms in Las Vegas?" [level=2] [ref=e502]
+      - paragraph [ref=e504]: Reserve your room online now, or call us if you need catering, AV help, or a custom setup for your meeting.
+      - generic [ref=e506]:
+        - link "Book Online" [ref=e507] [cursor=pointer]:
+          - /url: "#book-online"
+        - link "(702) 370-7515" [ref=e508] [cursor=pointer]:
+          - /url: tel:+17023707515
+          - img
+          - text: (702) 370-7515
+  - contentinfo [ref=e509]:
+    - generic [ref=e510]:
+      - generic [ref=e511]:
+        - generic [ref=e512]:
+          - link "Muze Office — home" [ref=e513] [cursor=pointer]:
+            - /url: /
+            - img "Muze Office" [ref=e514]
+          - paragraph [ref=e515]: Flexible workspace in Las Vegas and Houston — month-to-month memberships, no long-term leases.
+          - link "Muze Office Franchise →" [ref=e516] [cursor=pointer]:
+            - /url: https://muzeofficefranchise.com
+        - generic [ref=e517]:
+          - heading "Las Vegas" [level=3] [ref=e518]
+          - list [ref=e519]:
+            - listitem [ref=e520]:
+              - link "Las Vegas Location" [ref=e521] [cursor=pointer]:
+                - /url: /locations/las-vegas
+            - listitem [ref=e522]:
+              - link "Virtual Office" [ref=e523] [cursor=pointer]:
+                - /url: /las-vegas-virtual-office
+            - listitem [ref=e524]:
+              - link "Coworking" [ref=e525] [cursor=pointer]:
+                - /url: /las-vegas-coworking
+            - listitem [ref=e526]:
+              - link "Day Pass" [ref=e527] [cursor=pointer]:
+                - /url: /las-vegas-day-pass
+            - listitem [ref=e528]:
+              - link "Hot Desk" [ref=e529] [cursor=pointer]:
+                - /url: /las-vegas-hot-desk
+            - listitem [ref=e530]:
+              - link "Dedicated Desk" [ref=e531] [cursor=pointer]:
+                - /url: /las-vegas-dedicated-desk
+            - listitem [ref=e532]:
+              - link "Flexible Workspaces" [ref=e533] [cursor=pointer]:
+                - /url: /las-vegas-flexible-workspaces
+            - listitem [ref=e534]:
+              - link "Private Office" [ref=e535] [cursor=pointer]:
+                - /url: /las-vegas-private-office
+            - listitem [ref=e536]:
+              - link "Meeting Rooms" [ref=e537] [cursor=pointer]:
+                - /url: /las-vegas-meeting-rooms
+            - listitem [ref=e538]:
+              - link "Conference Rooms" [ref=e539] [cursor=pointer]:
+                - /url: /las-vegas-conference-rooms
+            - listitem [ref=e540]:
+              - link "Event Space" [ref=e541] [cursor=pointer]:
+                - /url: /las-vegas-event-space
+            - listitem [ref=e542]:
+              - link "Airport Coworking" [ref=e543] [cursor=pointer]:
+                - /url: /las-vegas-airport-coworking
+            - listitem [ref=e544]:
+              - link "Convention Coworking" [ref=e545] [cursor=pointer]:
+                - /url: /las-vegas-convention-coworking
+            - listitem [ref=e546]:
+              - link "Esthetics & Waxing Booth" [ref=e547] [cursor=pointer]:
+                - /url: https://beauty-booking-three.vercel.app
+        - generic [ref=e548]:
+          - generic [ref=e549]:
+            - heading "Company" [level=3] [ref=e550]
+            - list [ref=e551]:
+              - listitem [ref=e552]:
+                - link "Home" [ref=e553] [cursor=pointer]:
+                  - /url: /
+              - listitem [ref=e554]:
+                - link "Locations" [ref=e555] [cursor=pointer]:
+                  - /url: /locations
+              - listitem [ref=e556]:
+                - link "Memberships" [ref=e557] [cursor=pointer]:
+                  - /url: /workspace-memberships
+              - listitem [ref=e558]:
+                - link "Events" [ref=e559] [cursor=pointer]:
+                  - /url: /las-vegas-event-space
+              - listitem [ref=e560]:
+                - link "Blog" [ref=e561] [cursor=pointer]:
+                  - /url: /blog
+              - listitem [ref=e562]:
+                - link "FAQ" [ref=e563] [cursor=pointer]:
+                  - /url: /#faq
+              - listitem [ref=e564]:
+                - link "Privacy Policy" [ref=e565] [cursor=pointer]:
+                  - /url: /privacy-policy
+              - listitem [ref=e566]:
+                - link "About" [ref=e567] [cursor=pointer]:
+                  - /url: /about
+              - listitem [ref=e568]:
+                - link "Contact" [ref=e569] [cursor=pointer]:
+                  - /url: /contact
+              - listitem [ref=e570]:
+                - link "Book a Tour" [ref=e571] [cursor=pointer]:
+                  - /url: /book-a-tour
+          - generic [ref=e572]:
+            - heading "Contact" [level=3] [ref=e573]
+            - list [ref=e574]:
+              - listitem [ref=e575]:
+                - img [ref=e576]
+                - link "6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119" [ref=e579] [cursor=pointer]:
+                  - /url: /locations/las-vegas
+              - listitem [ref=e580]:
+                - img [ref=e581]
+                - link "access@muzeoffice.com" [ref=e584] [cursor=pointer]:
+                  - /url: mailto:access@muzeoffice.com
+                - generic [ref=e585]: Preferred
+              - listitem [ref=e586]:
+                - link "(702) 370-7515" [ref=e587] [cursor=pointer]:
+                  - /url: tel:+17023707515
+                  - img [ref=e588]
+                  - text: (702) 370-7515
+              - listitem [ref=e590]:
+                - img [ref=e591]
+                - generic [ref=e594]:
+                  - text: "Phone: Mon–Fri, 10am–5pm"
+                  - text: "Front desk: Mon–Fri, 10am–7pm"
+      - generic [ref=e595]:
+        - paragraph [ref=e596]: © 2023–2026 Muze International Corporation. All rights reserved.
+        - list [ref=e597]:
+          - listitem [ref=e598]:
+            - link "Twitter (X)" [ref=e599] [cursor=pointer]:
+              - /url: https://x.com/muzeoffice
+          - listitem [ref=e600]:
+            - link "Instagram" [ref=e601] [cursor=pointer]:
+              - /url: https://instagram.com/muzeoffice
+          - listitem [ref=e602]:
+            - link "LinkedIn" [ref=e603] [cursor=pointer]:
+              - /url: https://linkedin.com/company/muzeoffice
+          - listitem [ref=e604]:
+            - link "Facebook" [ref=e605] [cursor=pointer]:
+              - /url: https://facebook.com/muzeoffice
+          - listitem [ref=e606]:
+            - link "TikTok" [ref=e607] [cursor=pointer]:
+              - /url: https://tiktok.com/@muzeoffice
+  - alert [ref=e608]
