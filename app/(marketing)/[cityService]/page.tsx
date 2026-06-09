@@ -141,11 +141,14 @@ export default async function CityServicePage({ params }: PageProps) {
   // Virtual-office shoppers want the address, not a tour of an empty desk.
   // Route them to /contact so the lead lands in access@muzeoffice.com.
   const isVirtualOffice = service.id === "virtual-office";
-  const primaryCtaHref = hasOnlineBooking
-    ? "#book-online"
-    : isVirtualOffice
-      ? "/contact"
-      : BRAND.booking.tourUrl;
+  // Coming-soon cities have no tours to book — waitlist leads go to /contact.
+  const primaryCtaHref = isComingSoon
+    ? "/contact"
+    : hasOnlineBooking
+      ? "#book-online"
+      : isVirtualOffice
+        ? "/contact"
+        : BRAND.booking.tourUrl;
   const primaryCtaLabel = isComingSoon
     ? "Join Waitlist"
     : hasOnlineBooking

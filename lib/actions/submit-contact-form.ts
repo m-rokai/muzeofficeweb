@@ -9,6 +9,10 @@ interface ContactFormData {
   company?: string;
   interest: string;
   message: string;
+  /** Honeypot field — any value means a bot filled it. */
+  website?: string;
+  /** Milliseconds between form render and submit, reported by the client. */
+  elapsedMs?: number;
 }
 
 interface ActionResult {
@@ -22,14 +26,31 @@ const interestLabels: Record<string, string> = {
   "private-office": "Private Office",
   "meeting-rooms": "Meeting Rooms",
   "event-space": "Event Space",
+  "houston-waitlist": "Houston Waitlist (opening 2026)",
   general: "General Inquiry",
 };
 
 const CONTACT_EMAIL = "access@muzeoffice.com";
+const SUCCESS_MESSAGE =
+  "Thank you! We'll get back to you within one business day.";
 
 export async function submitContactForm(
   data: ContactFormData
 ): Promise<ActionResult> {
+  // --- Spam traps: respond with success so bots can't learn which check fired ---
+  if (data.website && data.website.trim().length > 0) {
+    console.warn("[submitContactForm] honeypot filled — dropping submission");
+    return { success: true, message: SUCCESS_MESSAGE };
+  }
+  if (
+    typeof data.elapsedMs === "number" &&
+    data.elapsedMs >= 0 &&
+    data.elapsedMs < 3000
+  ) {
+    console.warn("[submitContactForm] submitted in <3s — dropping submission");
+    return { success: true, message: SUCCESS_MESSAGE };
+  }
+
   // --- Validation ---
   if (!data.name || data.name.trim().length < 2) {
     return { success: false, message: "Name is required (at least 2 characters)." };
@@ -89,10 +110,7 @@ export async function submitContactForm(
       ].join("\n"),
     });
 
-    return {
-      success: true,
-      message: "Thank you! We'll get back to you within one business day.",
-    };
+    return { success: true, message: SUCCESS_MESSAGE };
   } catch (error) {
     console.error("[submitContactForm] Resend error:", error);
     return {

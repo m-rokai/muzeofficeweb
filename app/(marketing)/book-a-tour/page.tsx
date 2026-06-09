@@ -6,7 +6,6 @@ import {
   Handshake,
   Phone,
   Clock,
-  Star,
 } from "lucide-react";
 import { buttonVariants } from "@/lib/utils/button-variants";
 import { cn } from "@/lib/utils";
@@ -15,7 +14,9 @@ import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { CTASection } from "@/components/marketing/cta-section";
 import { Card, CardContent } from "@/components/ui/card";
 import { ContactForm } from "@/components/forms/contact-form";
+import { GoogleReviewsBadge } from "@/components/marketing/google-reviews-badge";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
+import { getLocation } from "@/lib/data/locations";
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/components/marketing/animate";
 import { BRAND } from "@/lib/utils/constants";
 
@@ -47,31 +48,9 @@ const steps = [
   },
 ];
 
-const testimonials = [
-  {
-    quote:
-      "I toured on a Tuesday and was working from my desk by Thursday. The team made everything effortless.",
-    name: "Kevin M.",
-    role: "Freelance developer",
-    rating: "5.0",
-  },
-  {
-    quote:
-      "The space is clean, professional, and way better than any coffee shop. Free parking sealed the deal.",
-    name: "Sarah T.",
-    role: "Real estate agent",
-    rating: "4.9",
-  },
-  {
-    quote:
-      "I came in for a virtual office and ended up upgrading to a dedicated desk. It just felt right.",
-    name: "Daniel P.",
-    role: "Startup founder",
-    rating: "5.0",
-  },
-];
-
 export default function BookATourPage() {
+  const lasVegas = getLocation("las-vegas");
+
   return (
     <>
       <LocalBusinessSchema locationId="las-vegas" />
@@ -231,40 +210,24 @@ export default function BookATourPage() {
         </div>
       </Section>
 
-      {/* Testimonials */}
+      {/* Verified Google reviews */}
       <Section variant="gray">
         <FadeIn>
-          <div className="mb-12">
+          <div className="flex flex-col items-center gap-4 text-center">
             <h2 className="font-[family-name:var(--font-plus-jakarta)] text-3xl font-semibold md:text-4xl">
               What members say
             </h2>
+            <p className="max-w-[560px] text-base text-[#74726D]">
+              Don&apos;t take our word for it &mdash; read verified reviews from
+              real members on Google.
+            </p>
+            <GoogleReviewsBadge
+              rating={lasVegas?.rating}
+              reviewCount={lasVegas?.reviewCount}
+              href={lasVegas?.externalProfiles?.gbp}
+            />
           </div>
         </FadeIn>
-        <StaggerContainer className="grid gap-6 md:grid-cols-3">
-          {testimonials.map((t) => (
-            <StaggerItem key={t.name}>
-              <Card className="border-[#E6E4DF] bg-white">
-                <CardContent className="flex flex-col gap-4 p-6">
-                  <div className="flex items-center gap-1">
-                    {Array.from({ length: 5 }).map((_, i) => (
-                      <Star
-                        key={i}
-                        className="h-4 w-4 fill-[#EAA820] text-[#EAA820]"
-                      />
-                    ))}
-                  </div>
-                  <p className="flex-1 text-sm italic text-[#1A1A1A]">
-                    &ldquo;{t.quote}&rdquo;
-                  </p>
-                  <div>
-                    <p className="text-sm font-semibold">{t.name}</p>
-                    <p className="text-xs text-[#74726D]">{t.role}</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
       </Section>
 
       {/* CTA */}

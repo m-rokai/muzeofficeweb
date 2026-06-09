@@ -27,6 +27,7 @@ const interestOptions = [
   { value: "private-office", label: "Private Office" },
   { value: "meeting-rooms", label: "Meeting Rooms" },
   { value: "event-space", label: "Event Space" },
+  { value: "houston-waitlist", label: "Houston Waitlist (opening 2026)" },
   { value: "general", label: "General Inquiry" },
 ] as const;
 
@@ -44,6 +45,7 @@ export function ContactForm({ className }: { className?: string }) {
   const [status, setStatus] = useState<Status>("idle");
   const [serverMessage, setServerMessage] = useState("");
   const [interest, setInterest] = useState("");
+  const [startedAt] = useState(() => Date.now());
 
   function validate(formData: FormData): FormErrors {
     const errs: FormErrors = {};
@@ -87,6 +89,8 @@ export function ContactForm({ className }: { className?: string }) {
       company: ((formData.get("company") as string) ?? "").trim(),
       interest,
       message: ((formData.get("message") as string) ?? "").trim(),
+      website: ((formData.get("website") as string) ?? "").trim(),
+      elapsedMs: Date.now() - startedAt,
     };
 
     try {
@@ -153,9 +157,23 @@ export function ContactForm({ className }: { className?: string }) {
   return (
     <form
       onSubmit={handleSubmit}
-      className={cn("flex flex-col gap-5", className)}
+      className={cn("relative flex flex-col gap-5", className)}
       noValidate
     >
+      {/* Honeypot — off-screen field humans never see; bots that fill it are silently dropped */}
+      <div
+        aria-hidden="true"
+        className="absolute -left-[9999px] h-px w-px overflow-hidden"
+      >
+        <label htmlFor="contact-website">Website</label>
+        <input
+          id="contact-website"
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
       {/* Server error banner */}
       {status === "error" && serverMessage && (
         <div role="alert" className="flex items-start gap-3 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-800">
