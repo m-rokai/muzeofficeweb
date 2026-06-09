@@ -15,21 +15,12 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { submitContactForm } from "@/lib/actions/submit-contact-form";
+import { CONTACT_INTERESTS } from "@/lib/data/contact-interests";
 import { cn } from "@/lib/utils";
 
 const CONTACT_EMAIL = "access@muzeoffice.com";
 const CONTACT_PHONE_DISPLAY = "(702) 370-7515";
 const CONTACT_PHONE_TEL = "+17023707515";
-
-const interestOptions = [
-  { value: "virtual-office", label: "Virtual Office" },
-  { value: "coworking", label: "Coworking" },
-  { value: "private-office", label: "Private Office" },
-  { value: "meeting-rooms", label: "Meeting Rooms" },
-  { value: "event-space", label: "Event Space" },
-  { value: "houston-waitlist", label: "Houston Waitlist (opening 2026)" },
-  { value: "general", label: "General Inquiry" },
-] as const;
 
 interface FormErrors {
   name?: string;
@@ -89,7 +80,7 @@ export function ContactForm({ className }: { className?: string }) {
       company: ((formData.get("company") as string) ?? "").trim(),
       interest,
       message: ((formData.get("message") as string) ?? "").trim(),
-      website: ((formData.get("website") as string) ?? "").trim(),
+      honeypot: ((formData.get("muze_extra") as string) ?? "").trim(),
       elapsedMs: Date.now() - startedAt,
     };
 
@@ -160,15 +151,18 @@ export function ContactForm({ className }: { className?: string }) {
       className={cn("relative flex flex-col gap-5", className)}
       noValidate
     >
-      {/* Honeypot — off-screen field humans never see; bots that fill it are silently dropped */}
+      {/* Honeypot — off-screen field humans never see; bots that fill it are
+          silently dropped. Named so no browser/password-manager profile
+          matches it (a "website"-style name gets autofilled and would drop
+          real leads). */}
       <div
         aria-hidden="true"
         className="absolute -left-[9999px] h-px w-px overflow-hidden"
       >
-        <label htmlFor="contact-website">Website</label>
+        <label htmlFor="contact-muze-extra">Leave this field empty</label>
         <input
-          id="contact-website"
-          name="website"
+          id="contact-muze-extra"
+          name="muze_extra"
           type="text"
           tabIndex={-1}
           autoComplete="off"
@@ -291,7 +285,7 @@ export function ContactForm({ className }: { className?: string }) {
             <SelectValue placeholder="Select an option" />
           </SelectTrigger>
           <SelectContent>
-            {interestOptions.map((opt) => (
+            {CONTACT_INTERESTS.map((opt) => (
               <SelectItem key={opt.value} value={opt.value}>
                 {opt.label}
               </SelectItem>

@@ -99,7 +99,7 @@ export default function MuzeCubeWorldPage() {
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <a
                   href={BRAND.booking.tourUrl}
-                  className="inline-flex items-center justify-center rounded-lg bg-[#EAA820] px-6 py-3 text-sm font-semibold text-[#1A1A1A] transition-colors hover:bg-[#C17A28] hover:text-white"
+                  className="inline-flex items-center justify-center rounded-lg bg-[#EAA820] px-6 py-3 text-sm font-semibold text-[#1A1A1A] transition-colors hover:bg-[#C17A28]"
                 >
                   Book a Tour
                 </a>

@@ -1,6 +1,7 @@
 "use server";
 
 import nodemailer from "nodemailer";
+import { interestLabels } from "@/lib/data/contact-interests";
 
 interface ContactFormData {
   name: string;
@@ -10,7 +11,7 @@ interface ContactFormData {
   interest: string;
   message: string;
   /** Honeypot field — any value means a bot filled it. */
-  website?: string;
+  honeypot?: string;
   /** Milliseconds between form render and submit, reported by the client. */
   elapsedMs?: number;
 }
@@ -20,37 +21,39 @@ interface ActionResult {
   message: string;
 }
 
-const interestLabels: Record<string, string> = {
-  "virtual-office": "Virtual Office",
-  coworking: "Coworking",
-  "private-office": "Private Office",
-  "meeting-rooms": "Meeting Rooms",
-  "event-space": "Event Space",
-  "houston-waitlist": "Houston Waitlist (opening 2026)",
-  general: "General Inquiry",
-};
-
 // Sends from and delivers to the Gmail inbox — inquiries land in notifications@.
 const GMAIL_USER = "notifications@muzeoffice.com";
 const SUCCESS_MESSAGE =
   "Thank you! We'll get back to you within one business day.";
 
+// One transporter per warm server instance — avoids a fresh TCP+TLS+AUTH
+// handshake to Gmail on every submission.
+let transporter: nodemailer.Transporter | null = null;
+function getTransporter(appPassword: string) {
+  transporter ??= nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: { user: GMAIL_USER, pass: appPassword },
+  });
+  return transporter;
+}
+
 export async function submitContactForm(
   data: ContactFormData
 ): Promise<ActionResult> {
-  // --- Spam traps: respond with success so bots can't learn which check fired ---
-  if (data.website && data.website.trim().length > 0) {
+  // --- Spam traps ---
+  // Honeypot: hard drop, but respond with success so bots can't learn the check fired.
+  if (data.honeypot && data.honeypot.trim().length > 0) {
     console.warn("[submitContactForm] honeypot filled — dropping submission");
     return { success: true, message: SUCCESS_MESSAGE };
   }
-  if (
+  // Sub-3s submit: suspicious, but a fast autofill user is plausible —
+  // deliver the lead anyway with a flagged subject instead of dropping it.
+  const suspectedSpam =
     typeof data.elapsedMs === "number" &&
     data.elapsedMs >= 0 &&
-    data.elapsedMs < 3000
-  ) {
-    console.warn("[submitContactForm] submitted in <3s — dropping submission");
-    return { success: true, message: SUCCESS_MESSAGE };
-  }
+    data.elapsedMs < 3000;
 
   // --- Validation ---
   if (!data.name || data.name.trim().length < 2) {
@@ -80,13 +83,6 @@ export async function submitContactForm(
     };
   }
 
-  const transporter = nodemailer.createTransport({
-    host: "smtp.gmail.com",
-    port: 465,
-    secure: true,
-    auth: { user: GMAIL_USER, pass: appPassword },
-  });
-
   const interestLabel = interestLabels[data.interest] ?? data.interest;
   const name = data.name.trim();
   const email = data.email.trim();
@@ -95,11 +91,11 @@ export async function submitContactForm(
   const message = data.message.trim();
 
   try {
-    await transporter.sendMail({
+    await getTransporter(appPassword).sendMail({
       from: `"Muze Office" <${GMAIL_USER}>`,
       to: GMAIL_USER,
       replyTo: email,
-      subject: `New inquiry from ${name} — ${interestLabel}`,
+      subject: `${suspectedSpam ? "[Suspected spam] " : ""}New inquiry from ${name} — ${interestLabel}`,
       text: [
         `New contact form submission from muzeoffice.com`,
         ``,

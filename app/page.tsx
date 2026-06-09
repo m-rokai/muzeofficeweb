@@ -38,7 +38,7 @@ import { LogoCarousel } from "@/components/marketing/logo-carousel";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 import { RelatedReading } from "@/components/marketing/related-reading";
 import { services } from "@/lib/data/services";
-import { locations } from "@/lib/data/locations";
+import { locations, getLocation } from "@/lib/data/locations";
 import { BRAND } from "@/lib/utils/constants";
 import { cn } from "@/lib/utils";
 
@@ -86,7 +86,7 @@ const homepageFAQs = [
 ];
 
 export default function HomePage() {
-  const lasVegas = locations.find((l) => l.id === "las-vegas");
+  const lasVegas = getLocation("las-vegas");
   return (
     <>
       <LocalBusinessSchema locationId="las-vegas" />
@@ -226,7 +226,7 @@ export default function HomePage() {
               <Link href={`/las-vegas-${service.id}`} className="group block h-full" aria-label={`Las Vegas ${service.name}`}>
                 <Card className="h-full border-[#E6E4DF] bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <CardContent className="flex flex-col gap-5 p-7">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-white">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-[#1A1A1A]">
                       {serviceIcons[service.id]}
                     </div>
                     <h3 className="text-xl font-semibold">{service.name}</h3>
@@ -266,7 +266,7 @@ export default function HomePage() {
               <Link href={`/houston-${service.id}`} className="group block h-full" aria-label={`Houston ${service.name}`}>
                 <Card className="h-full border-[#E6E4DF] bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <CardContent className="flex flex-col gap-5 p-7">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-white">
+                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-[#1A1A1A]">
                       {serviceIcons[service.id]}
                     </div>
                     <h3 className="text-xl font-semibold">{service.name}</h3>
@@ -406,7 +406,7 @@ export default function HomePage() {
           {amenities.map((a) => (
             <StaggerItem key={a.label}>
               <div className="group flex flex-col items-center gap-3 rounded-2xl border border-transparent p-4 sm:p-6 text-center transition-all duration-300 hover:border-[#E6E4DF] hover:bg-[#F2F1ED] hover:shadow-sm">
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-white">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-[#1A1A1A]">
                   {a.icon}
                 </div>
                 <span className="text-base font-semibold">{a.label}</span>

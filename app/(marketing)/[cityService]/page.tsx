@@ -140,9 +140,10 @@ export default async function CityServicePage({ params }: PageProps) {
     (service.id === "meeting-rooms" || service.id === "day-pass");
   const isDayPass = service.id === "day-pass";
   // Virtual-office shoppers want the address, not a tour of an empty desk.
-  // Route them to /contact so the lead lands in access@muzeoffice.com.
+  // Route them to /contact so the lead arrives via the contact form.
   const isVirtualOffice = service.id === "virtual-office";
-  // Coming-soon cities have no tours to book — waitlist leads go to /contact.
+  // Coming-soon cities have no tours to book — waitlist leads go to /contact,
+  // where the form delivers to the notifications@ inbox.
   const primaryCtaHref = isComingSoon
     ? "/contact"
     : hasOnlineBooking
@@ -288,12 +289,12 @@ export default async function CityServicePage({ params }: PageProps) {
               <div className="flex flex-col items-center gap-4 text-center">
                 <h2 className="font-[family-name:var(--font-plus-jakarta)] text-3xl font-semibold text-[#1A1A1A] md:text-4xl lg:text-5xl">
                   {isDayPass
-                    ? "Book Your Day Pass Online"
+                    ? "Get Your Day Pass Online"
                     : "Book Your Meeting Room Online"}
                 </h2>
                 <p className="max-w-[640px] text-lg text-[#74726D]">
                   {isDayPass
-                    ? "Pick your date and book instantly — no tour required. A day pass gets you a desk, Wi-Fi, coffee, and free parking at Muze Office Las Vegas."
+                    ? "Sign up online in minutes — no tour required. A $25 day pass gets you a desk, Wi-Fi, coffee, and free parking at Muze Office Las Vegas."
                     : "Choose your room, time, and duration below. The live Optix calendar shows current availability for Muze Office meeting rooms in Las Vegas."}
                 </p>
               </div>
@@ -301,6 +302,7 @@ export default async function CityServicePage({ params }: PageProps) {
             <div className="mt-10">
               <OptixBookingWidget
                 venue="muzeoffice"
+                widgetType={isDayPass ? "member" : "booking"}
                 helpText={
                   isDayPass
                     ? "Questions before your first visit, or booking for a group? Call"
@@ -544,6 +546,8 @@ export default async function CityServicePage({ params }: PageProps) {
         heading={
           isComingSoon
             ? `Be First to Know About ${service.name} in ${location.name}`
+            : isDayPass
+              ? `Ready to Try a Day Pass in ${location.name}?`
             : hasOnlineBooking
               ? `Ready to Book ${service.name} in ${location.name}?`
             : isVirtualOffice
@@ -553,6 +557,8 @@ export default async function CityServicePage({ params }: PageProps) {
         subtitle={
           isComingSoon
             ? `Muze Office ${location.name} is coming soon. Join the waitlist for early access and special pricing.`
+            : isDayPass
+              ? `Sign up online and work today — desk, Wi-Fi, coffee, and free parking included. Questions before your first visit? Call us.`
             : hasOnlineBooking
               ? `Reserve your room online now, or call us if you need catering, AV help, or a custom setup for your meeting.`
             : isVirtualOffice

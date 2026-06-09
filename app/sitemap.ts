@@ -94,7 +94,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .filter((post) => !post.noindex)
     .map((post) => ({
       url: `${baseUrl}/blog/${post.slug}`,
-      lastModified: post.date ? new Date(post.date) : now,
+      lastModified: post.dateModified
+        ? new Date(post.dateModified)
+        : post.date
+          ? new Date(post.date)
+          : now,
       changeFrequency: "monthly" as const,
       priority: 0.6,
     }));
