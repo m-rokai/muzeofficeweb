@@ -137,7 +137,8 @@ export default async function CityServicePage({ params }: PageProps) {
   const hasOnlineBooking =
     !isComingSoon &&
     location.slug === "las-vegas" &&
-    service.id === "meeting-rooms";
+    (service.id === "meeting-rooms" || service.id === "day-pass");
+  const isDayPass = service.id === "day-pass";
   // Virtual-office shoppers want the address, not a tour of an empty desk.
   // Route them to /contact so the lead lands in access@muzeoffice.com.
   const isVirtualOffice = service.id === "virtual-office";
@@ -286,17 +287,26 @@ export default async function CityServicePage({ params }: PageProps) {
             <FadeIn>
               <div className="flex flex-col items-center gap-4 text-center">
                 <h2 className="font-[family-name:var(--font-plus-jakarta)] text-3xl font-semibold text-[#1A1A1A] md:text-4xl lg:text-5xl">
-                  Book Your Meeting Room Online
+                  {isDayPass
+                    ? "Book Your Day Pass Online"
+                    : "Book Your Meeting Room Online"}
                 </h2>
                 <p className="max-w-[640px] text-lg text-[#74726D]">
-                  Choose your room, time, and duration below. The live Optix
-                  calendar shows current availability for Muze Office meeting
-                  rooms in Las Vegas.
+                  {isDayPass
+                    ? "Pick your date and book instantly — no tour required. A day pass gets you a desk, Wi-Fi, coffee, and free parking at Muze Office Las Vegas."
+                    : "Choose your room, time, and duration below. The live Optix calendar shows current availability for Muze Office meeting rooms in Las Vegas."}
                 </p>
               </div>
             </FadeIn>
             <div className="mt-10">
-              <OptixBookingWidget venue="muzeoffice" />
+              <OptixBookingWidget
+                venue="muzeoffice"
+                helpText={
+                  isDayPass
+                    ? "Questions before your first visit, or booking for a group? Call"
+                    : undefined
+                }
+              />
             </div>
           </div>
         </Section>

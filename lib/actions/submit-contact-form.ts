@@ -1,6 +1,6 @@
 "use server";
 
-import { Resend } from "resend";
+import nodemailer from "nodemailer";
 
 interface ContactFormData {
   name: string;
@@ -31,6 +31,7 @@ const interestLabels: Record<string, string> = {
 };
 
 const CONTACT_EMAIL = "access@muzeoffice.com";
+const GMAIL_USER = "notifications@muzeoffice.com";
 const SUCCESS_MESSAGE =
   "Thank you! We'll get back to you within one business day.";
 
@@ -68,10 +69,10 @@ export async function submitContactForm(
     return { success: false, message: "Message must be at least 10 characters." };
   }
 
-  // --- Send via Resend ---
-  const apiKey = process.env.RESEND_API_KEY;
-  if (!apiKey) {
-    console.error("[submitContactForm] RESEND_API_KEY is not configured");
+  // --- Send via Gmail SMTP ---
+  const appPassword = process.env.GMAIL_APP_PASSWORD;
+  if (!appPassword) {
+    console.error("[submitContactForm] GMAIL_APP_PASSWORD is not configured");
     return {
       success: false,
       message:
@@ -79,7 +80,13 @@ export async function submitContactForm(
     };
   }
 
-  const resend = new Resend(apiKey);
+  const transporter = nodemailer.createTransport({
+    host: "smtp.gmail.com",
+    port: 465,
+    secure: true,
+    auth: { user: GMAIL_USER, pass: appPassword },
+  });
+
   const interestLabel = interestLabels[data.interest] ?? data.interest;
   const name = data.name.trim();
   const email = data.email.trim();
@@ -88,9 +95,9 @@ export async function submitContactForm(
   const message = data.message.trim();
 
   try {
-    await resend.emails.send({
-      from: "Muze Office <noreply@web.muzeoffice.com>",
-      to: [CONTACT_EMAIL],
+    await transporter.sendMail({
+      from: `"Muze Office" <${GMAIL_USER}>`,
+      to: CONTACT_EMAIL,
       replyTo: email,
       subject: `New inquiry from ${name} — ${interestLabel}`,
       text: [
@@ -112,7 +119,7 @@ export async function submitContactForm(
 
     return { success: true, message: SUCCESS_MESSAGE };
   } catch (error) {
-    console.error("[submitContactForm] Resend error:", error);
+    console.error("[submitContactForm] SMTP error:", error);
     return {
       success: false,
       message:

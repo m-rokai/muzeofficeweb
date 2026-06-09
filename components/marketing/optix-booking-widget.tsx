@@ -6,10 +6,12 @@ const OPTIX_SCRIPT_SRC = "https://muzeoffice.optixapp.com/web-plugin/optix.v1.js
 
 type OptixBookingWidgetProps = {
   venue: string;
+  helpText?: string;
 };
 
 export function OptixBookingWidget({
   venue,
+  helpText = "Need catering, a custom setup, or help choosing a room? Call",
 }: OptixBookingWidgetProps) {
   const widgetRef = useRef<HTMLDivElement>(null);
 
@@ -35,10 +37,10 @@ export function OptixBookingWidget({
     <div className="rounded-2xl border border-[#E6E4DF] bg-white p-3 shadow-sm sm:p-5">
       <div
         ref={widgetRef}
-        className="optix-booking-widget min-h-[560px]"
+        className="optix-member-widget min-h-[560px]"
       />
       <p className="mt-4 text-sm text-[#74726D]">
-        Need catering, a custom setup, or help choosing a room? Call{" "}
+        {helpText}{" "}
         <a
           href="tel:+17023707515"
           className="font-medium text-[#1A1A1A] underline underline-offset-2"
