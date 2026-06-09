@@ -60,6 +60,17 @@ export function SiteHeader() {
           >
             Book a Tour
           </a>
+          <a
+            href={BRAND.booking.signupUrl}
+            data-cta="signup_online"
+            data-cta-location="header_desktop"
+            className={cn(
+              buttonVariants({ size: "sm" }),
+              "rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
+            )}
+          >
+            Sign Up
+          </a>
         </div>
 
         {/* Mobile Menu */}
@@ -96,6 +107,18 @@ export function SiteHeader() {
                   className={cn(buttonVariants(), "w-full rounded-lg bg-[#1A1A1A]")}
                 >
                   Book a Tour
+                </a>
+                <a
+                  href={BRAND.booking.signupUrl}
+                  onClick={() => setOpen(false)}
+                  data-cta="signup_online"
+                  data-cta-location="header_mobile_menu"
+                  className={cn(
+                    buttonVariants(),
+                    "w-full rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
+                  )}
+                >
+                  Sign Up
                 </a>
               </div>
             </nav>
