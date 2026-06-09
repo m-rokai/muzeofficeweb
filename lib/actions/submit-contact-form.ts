@@ -115,6 +115,9 @@ export async function submitContactForm(
 
     return { success: true, message: SUCCESS_MESSAGE };
   } catch (error) {
+    // Drop the cached transporter so the next attempt re-reads the env var —
+    // a rotated app password would otherwise fail every send until redeploy.
+    transporter = null;
     console.error("[submitContactForm] SMTP error:", error);
     return {
       success: false,
