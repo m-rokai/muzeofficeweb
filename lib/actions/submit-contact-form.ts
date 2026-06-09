@@ -30,7 +30,7 @@ const interestLabels: Record<string, string> = {
   general: "General Inquiry",
 };
 
-const CONTACT_EMAIL = "access@muzeoffice.com";
+// Sends from and delivers to the Gmail inbox — inquiries land in notifications@.
 const GMAIL_USER = "notifications@muzeoffice.com";
 const SUCCESS_MESSAGE =
   "Thank you! We'll get back to you within one business day.";
@@ -97,7 +97,7 @@ export async function submitContactForm(
   try {
     await transporter.sendMail({
       from: `"Muze Office" <${GMAIL_USER}>`,
-      to: CONTACT_EMAIL,
+      to: GMAIL_USER,
       replyTo: email,
       subject: `New inquiry from ${name} — ${interestLabel}`,
       text: [
