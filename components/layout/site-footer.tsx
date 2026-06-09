@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, Clock } from "lucide-react";
+import { Mail, Phone, Clock, MapPin } from "lucide-react";
 import { footerNav } from "@/lib/data/navigation";
 import { BRAND } from "@/lib/utils/constants";
 import { locations } from "@/lib/data/locations";
@@ -163,6 +163,18 @@ export function SiteFooter() {
             <div className="flex flex-col gap-4">
               <h3 className="text-sm font-semibold">Contact</h3>
               <ul className="flex flex-col gap-3">
+                {lasVegas && (
+                  <li className="flex items-start gap-2 text-sm text-gray-400">
+                    <MapPin className="mt-0.5 h-4 w-4 shrink-0" />
+                    <Link
+                      href="/locations/las-vegas"
+                      className="transition-colors hover:text-white"
+                    >
+                      {lasVegas.address.street}, {lasVegas.address.city},{" "}
+                      {lasVegas.address.state} {lasVegas.address.zip}
+                    </Link>
+                  </li>
+                )}
                 <li className="flex items-center gap-2 text-sm">
                   <Mail className="h-4 w-4 text-gray-400" />
                   <a
@@ -199,7 +211,7 @@ export function SiteFooter() {
 
         {/* Bottom strip: copyright + socials */}
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-gray-500">
+          <p className="text-sm text-gray-400">
             &copy; 2023&ndash;{new Date().getFullYear()} Muze International
             Corporation. All rights reserved.
           </p>

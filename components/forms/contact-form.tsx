@@ -158,7 +158,7 @@ export function ContactForm({ className }: { className?: string }) {
     >
       {/* Server error banner */}
       {status === "error" && serverMessage && (
-        <div className="flex items-start gap-3 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-800">
+        <div role="alert" className="flex items-start gap-3 rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-800">
           <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
           <div>
             <p>{serverMessage}</p>
@@ -189,13 +189,17 @@ export function ContactForm({ className }: { className?: string }) {
           id="contact-name"
           name="name"
           type="text"
+          autoComplete="name"
           placeholder="Your full name"
           aria-invalid={!!errors.name}
+          aria-describedby={errors.name ? "contact-name-error" : undefined}
           disabled={isSubmitting}
           className="h-10"
         />
         {errors.name && (
-          <p className="text-xs text-red-500">{errors.name}</p>
+          <p id="contact-name-error" role="alert" className="text-xs text-red-500">
+            {errors.name}
+          </p>
         )}
       </div>
 
@@ -208,13 +212,17 @@ export function ContactForm({ className }: { className?: string }) {
           id="contact-email"
           name="email"
           type="email"
+          autoComplete="email"
           placeholder="you@company.com"
           aria-invalid={!!errors.email}
+          aria-describedby={errors.email ? "contact-email-error" : undefined}
           disabled={isSubmitting}
           className="h-10"
         />
         {errors.email && (
-          <p className="text-xs text-red-500">{errors.email}</p>
+          <p id="contact-email-error" role="alert" className="text-xs text-red-500">
+            {errors.email}
+          </p>
         )}
       </div>
 
@@ -225,6 +233,7 @@ export function ContactForm({ className }: { className?: string }) {
           id="contact-phone"
           name="phone"
           type="tel"
+          autoComplete="tel"
           placeholder="(555) 123-4567"
           disabled={isSubmitting}
           className="h-10"
@@ -238,6 +247,7 @@ export function ContactForm({ className }: { className?: string }) {
           id="contact-company"
           name="company"
           type="text"
+          autoComplete="organization"
           placeholder="Your company name"
           disabled={isSubmitting}
           className="h-10"
@@ -258,6 +268,7 @@ export function ContactForm({ className }: { className?: string }) {
             id="contact-interest"
             className="h-10 w-full"
             aria-invalid={!!errors.interest}
+            aria-describedby={errors.interest ? "contact-interest-error" : undefined}
           >
             <SelectValue placeholder="Select an option" />
           </SelectTrigger>
@@ -270,7 +281,9 @@ export function ContactForm({ className }: { className?: string }) {
           </SelectContent>
         </Select>
         {errors.interest && (
-          <p className="text-xs text-red-500">{errors.interest}</p>
+          <p id="contact-interest-error" role="alert" className="text-xs text-red-500">
+            {errors.interest}
+          </p>
         )}
       </div>
 
@@ -285,10 +298,13 @@ export function ContactForm({ className }: { className?: string }) {
           placeholder="Tell us about your workspace needs..."
           rows={5}
           aria-invalid={!!errors.message}
+          aria-describedby={errors.message ? "contact-message-error" : undefined}
           disabled={isSubmitting}
         />
         {errors.message && (
-          <p className="text-xs text-red-500">{errors.message}</p>
+          <p id="contact-message-error" role="alert" className="text-xs text-red-500">
+            {errors.message}
+          </p>
         )}
       </div>
 

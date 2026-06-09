@@ -166,6 +166,28 @@ const nextConfig: NextConfig = {
       { source: "/:slug.md", destination: "/md/:slug" },
     ];
   },
+  // Low-risk security headers (defense-in-depth). Deliberately excludes a
+  // Content-Security-Policy — that needs a Report-Only rollout first so it
+  // doesn't break the Optix booking widget / Vercel Analytics / fonts — and
+  // excludes HSTS includeSubDomains/preload to avoid forcing HTTPS on
+  // sibling subdomains (member/admin apps). HSTS itself is set at the
+  // platform level.
+  async headers() {
+    return [
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "X-Frame-Options", value: "SAMEORIGIN" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+          {
+            key: "Permissions-Policy",
+            value: "camera=(), microphone=(), geolocation=()",
+          },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

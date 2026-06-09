@@ -78,7 +78,7 @@ export function PricingCard({
             buttonVariants({ size: "lg" }),
             "w-full rounded-[12px] text-center",
             highlighted
-              ? "bg-[#EAA820] text-white hover:bg-[#C17A28]"
+              ? "bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
               : "bg-[#1A1A1A] text-white hover:bg-[#1A1A1A]/80"
           )}
         >

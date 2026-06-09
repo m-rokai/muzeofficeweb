@@ -86,7 +86,7 @@ export default async function BlogPostPage({
     description: post.description,
     image: post.image ? `${BRAND.url}${post.image}` : undefined,
     datePublished: post.date,
-    dateModified: post.date,
+    dateModified: post.dateModified || post.date,
     author: authorNode,
     publisher: {
       "@type": "Organization",
@@ -129,7 +129,7 @@ export default async function BlogPostPage({
 
           <header className="mb-10">
             {post.categories[0] && (
-              <span className="mb-4 inline-block text-xs font-medium uppercase tracking-wider text-[#EAA820]">
+              <span className="mb-4 inline-block text-xs font-medium uppercase tracking-wider text-[#8A6000]">
                 {post.categories[0]}
               </span>
             )}
@@ -168,7 +168,7 @@ export default async function BlogPostPage({
             </div>
           )}
 
-          <div className="prose prose-lg max-w-none prose-headings:font-[family-name:var(--font-plus-jakarta)] prose-headings:font-semibold prose-headings:text-[#1A1A1A] prose-p:text-[#1A1A1A] prose-p:leading-relaxed prose-a:text-[#EAA820] prose-a:no-underline hover:prose-a:underline prose-strong:text-[#1A1A1A] prose-ul:text-[#1A1A1A] prose-ol:text-[#1A1A1A] prose-li:text-[#1A1A1A] prose-blockquote:border-l-[#EAA820] prose-blockquote:text-[#74726D] prose-img:rounded-xl">
+          <div className="prose prose-lg max-w-none prose-headings:font-[family-name:var(--font-plus-jakarta)] prose-headings:font-semibold prose-headings:text-[#1A1A1A] prose-p:text-[#1A1A1A] prose-p:leading-relaxed prose-a:text-[#8A6000] prose-a:underline prose-a:underline-offset-2 prose-strong:text-[#1A1A1A] prose-ul:text-[#1A1A1A] prose-ol:text-[#1A1A1A] prose-li:text-[#1A1A1A] prose-blockquote:border-l-[#EAA820] prose-blockquote:text-[#74726D] prose-img:rounded-xl">
             <MDXRemote
               source={post.content}
               components={mdxComponents}

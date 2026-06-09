@@ -15,9 +15,11 @@ import { FadeIn, ScaleIn } from "@/components/marketing/animate";
 import { BRAND } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
-  title: "Las Vegas Coworking & Office Location — Book a Tour",
+  title: {
+    absolute: "Muze Office Locations — Las Vegas (Open) & Houston 2026",
+  },
   description:
-    "Visit Muze Office in Las Vegas at 6860 Bermuda Rd, Suite 200. Houston coming soon at 1800 Augusta Dr in the Galleria. Free parking, month-to-month memberships. Book a tour.",
+    "Muze Office locations: Las Vegas (open) at 6860 Bermuda Rd and Houston (2026) in the Galleria. Free parking, month-to-month memberships. Book a tour.",
   alternates: { canonical: "/locations" },
 };
 
@@ -95,7 +97,7 @@ export default function LocationsPage() {
                     Muze Office {loc.name}
                   </h2>
                   {loc.status === "active" && (
-                    <Badge className="bg-[#EAA820] text-white hover:bg-[#C17A28]">
+                    <Badge className="bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]">
                       Open
                     </Badge>
                   )}

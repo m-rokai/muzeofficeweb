@@ -8,6 +8,9 @@ export interface BlogPostFrontmatter {
   title: string;
   slug: string;
   date: string;
+  /** Optional ISO date of the last substantive update; emitted as
+   *  schema.org dateModified when present (falls back to `date`). */
+  dateModified?: string;
   author: string;
   description: string;
   image?: string;
@@ -64,6 +67,7 @@ function loadPostFile(filename: string): BlogPost {
     title: (data.title as string) || "Untitled",
     slug,
     date: (data.date as string) || "",
+    dateModified: data.dateModified as string | undefined,
     author: normalizeAuthor(data.author as string | undefined),
     description: (data.description as string) || "",
     image: data.image as string | undefined,

@@ -86,6 +86,7 @@ const homepageFAQs = [
 ];
 
 export default function HomePage() {
+  const lasVegas = locations.find((l) => l.id === "las-vegas");
   return (
     <>
       <LocalBusinessSchema locationId="las-vegas" />
@@ -123,7 +124,7 @@ export default function HomePage() {
                 href={BRAND.booking.tourUrl}
                 data-cta="book_tour"
                 data-cta-location="homepage_hero"
-                className={cn(buttonVariants({ size: "lg" }), "rounded-xl bg-[#EAA820] px-8 text-white hover:bg-[#C17A28] h-14 text-base font-semibold")}
+                className={cn(buttonVariants({ size: "lg" }), "rounded-xl bg-[#EAA820] px-8 text-[#1A1A1A] hover:bg-[#C17A28] h-14 text-base font-semibold")}
               >
                 Book a Free Tour
                 <ArrowRight className="ml-2 h-5 w-5" />
@@ -153,7 +154,7 @@ export default function HomePage() {
       {/* Google Reviews */}
       <section className="w-full bg-[#FAFAF7] py-6 px-6">
         <div className="mx-auto max-w-[1200px] flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
-          <GoogleReviewsBadge />
+          <GoogleReviewsBadge rating={lasVegas?.rating} reviewCount={lasVegas?.reviewCount} href={lasVegas?.externalProfiles?.gbp} />
           <div className="flex items-center gap-4 text-base text-[#74726D]">
             <span>Phone Mon–Fri 10am–5pm</span>
             <span className="hidden sm:inline">•</span>
@@ -364,7 +365,7 @@ export default function HomePage() {
               <Card className={cn("h-full border-[#E6E4DF] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-visible", plan.highlighted && "ring-2 ring-[#EAA820] relative")}>
                 {plan.highlighted && (
                   <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-10">
-                    <Badge className="bg-[#EAA820] text-white hover:bg-[#C17A28] px-5 text-sm shadow-sm">Most Popular</Badge>
+                    <Badge className="bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28] px-5 text-sm shadow-sm">Most Popular</Badge>
                   </div>
                 )}
                 <CardContent className="flex flex-col gap-5 p-7 pt-9">
@@ -383,7 +384,7 @@ export default function HomePage() {
                       </li>
                     ))}
                   </ul>
-                  <Link href={plan.href} className={cn(buttonVariants(), "mt-auto rounded-xl h-13 text-base font-semibold", plan.highlighted ? "bg-[#EAA820] text-white hover:bg-[#C17A28]" : "bg-[#1A1A1A] hover:bg-[#333]")}>
+                  <Link href={plan.href} className={cn(buttonVariants(), "mt-auto rounded-xl h-13 text-base font-semibold", plan.highlighted ? "bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]" : "bg-[#1A1A1A] text-white hover:bg-[#333]")}>
                     {plan.cta}
                   </Link>
                 </CardContent>
@@ -472,7 +473,7 @@ export default function HomePage() {
             <p className="text-sm text-[#74726D]">
               Want to hear from real members?
             </p>
-            <GoogleReviewsBadge />
+            <GoogleReviewsBadge rating={lasVegas?.rating} reviewCount={lasVegas?.reviewCount} href={lasVegas?.externalProfiles?.gbp} />
           </div>
         </FadeIn>
       </Section>

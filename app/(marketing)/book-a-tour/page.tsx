@@ -117,7 +117,7 @@ export default function BookATourPage() {
                 href={BRAND.booking.tourUrl}
                 className={cn(
                   buttonVariants({ size: "lg" }),
-                  "rounded-xl bg-[#EAA820] px-8 text-white hover:bg-[#C17A28] h-14 text-base font-semibold"
+                  "rounded-xl bg-[#EAA820] px-8 text-[#1A1A1A] hover:bg-[#C17A28] h-14 text-base font-semibold"
                 )}
               >
                 Schedule Instantly

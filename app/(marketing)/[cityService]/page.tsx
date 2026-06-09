@@ -202,7 +202,7 @@ export default async function CityServicePage({ params }: PageProps) {
                 href={primaryCtaHref}
                 className={cn(
                   buttonVariants({ size: "lg" }),
-                  "rounded-lg bg-[#EAA820] text-white hover:bg-[#C17A28]"
+                  "rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
                 )}
               >
                 {primaryCtaLabel}

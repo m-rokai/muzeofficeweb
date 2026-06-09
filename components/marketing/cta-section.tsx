@@ -54,7 +54,7 @@ export function CTASection({
               data-cta-location={ctaLocation}
               className={cn(
                 buttonVariants({ size: "lg" }),
-                "rounded-xl bg-[#EAA820] text-white hover:bg-[#C17A28] h-14 px-8 text-base font-semibold"
+                "rounded-xl bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28] h-14 px-8 text-base font-semibold"
               )}
             >
               {primaryLabel}

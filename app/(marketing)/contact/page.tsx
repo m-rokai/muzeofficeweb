@@ -18,6 +18,7 @@ import { ContactForm } from "@/components/forms/contact-form";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/components/marketing/animate";
 import { BRAND } from "@/lib/utils/constants";
+import { getLocation } from "@/lib/data/locations";
 
 export const metadata: Metadata = {
   title: "Contact Us — Las Vegas Workspace, Book a Tour",
@@ -27,6 +28,8 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  const lasVegas = getLocation("las-vegas");
+  const houston = getLocation("houston");
   return (
     <>
       <LocalBusinessSchema locationId="las-vegas" />
@@ -64,9 +67,15 @@ export default function ContactPage() {
                   <h2 className="font-[family-name:var(--font-plus-jakarta)] text-xl font-semibold">
                     Muze Office Las Vegas
                   </h2>
-                  <Badge className="bg-[#EAA820] text-white hover:bg-[#C17A28]">
-                    Open
-                  </Badge>
+                  {lasVegas?.status === "active" ? (
+                    <Badge className="bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]">
+                      Open
+                    </Badge>
+                  ) : (
+                    <Badge variant="secondary" className="text-xs">
+                      Coming Soon
+                    </Badge>
+                  )}
                 </div>
 
                 <ul className="flex flex-col gap-3">
@@ -85,7 +94,7 @@ export default function ContactPage() {
                     >
                       access@muzeoffice.com
                     </a>
-                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#EAA820]">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#8A6000]">
                       Preferred
                     </span>
                   </li>
@@ -129,9 +138,15 @@ export default function ContactPage() {
                   <h2 className="font-[family-name:var(--font-plus-jakarta)] text-xl font-semibold">
                     Muze Office Houston
                   </h2>
-                  <Badge className="bg-[#EAA820] text-white hover:bg-[#C17A28] text-xs">
-                    Open
-                  </Badge>
+                  {houston?.status === "active" ? (
+                    <Badge className="bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28] text-xs">
+                      Open
+                    </Badge>
+                  ) : (
+                    <Badge variant="secondary" className="text-xs">
+                      Coming Soon
+                    </Badge>
+                  )}
                 </div>
                 <p className="text-sm text-[#74726D]">
                   Inside the 610 Loop in the Galleria / Tanglewood area. Free
@@ -150,7 +165,7 @@ export default function ContactPage() {
                     >
                       access@muzeoffice.com
                     </a>
-                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#EAA820]">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#8A6000]">
                       Preferred
                     </span>
                   </li>
@@ -171,7 +186,7 @@ export default function ContactPage() {
                   href="https://www.google.com/maps/place/6860+Bermuda+Rd+Suite+200,+Las+Vegas,+NV+89119"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-xs text-[#EAA820] hover:underline"
+                  className="flex items-center gap-1 text-xs text-[#8A6000] hover:underline"
                 >
                   Open in Google Maps
                   <ExternalLink className="h-3 w-3" />

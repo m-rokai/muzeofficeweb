@@ -52,6 +52,10 @@ export const locations: Location[] = [
       zip: "89119",
       country: "US",
     },
+    // Approximate (~building-level) pin. schema.org GeoCoordinates is a weak
+    // ranking signal — Google uses the GBP pin + geocoded street address for
+    // map placement. Replace with the exact @lat,lng from the GBP listing URL
+    // when available rather than a geocoder guess.
     geo: { lat: 36.065, lng: -115.17 },
     phone: "(702) 370-7515",
     phoneRaw: "+17023707515",
@@ -107,6 +111,7 @@ export const locations: Location[] = [
     reviewCount: 9,
     externalProfiles: {
       yelp: "https://www.yelp.com/biz/muze-office-bermuda-las-vegas",
+      gbp: "https://www.google.com/search?q=Muze+Office+Las+Vegas&kgmid=/g/11x2wpzbg_",
     },
   },
   {
@@ -123,8 +128,8 @@ export const locations: Location[] = [
       country: "US",
     },
     geo: { lat: 29.7573, lng: -95.4868 },
-    phone: "(702) 370-7515",
-    phoneRaw: "+17023707515",
+    phone: "TBD",
+    phoneRaw: "TBD",
     email: "access@muzeoffice.com",
     hours: {
       weekdays: { open: "10:00", close: "19:00" },

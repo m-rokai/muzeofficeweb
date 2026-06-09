@@ -56,7 +56,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "A real Las Vegas business address on Bermuda Rd in a staffed commercial suite — not a PO Box. Use it for your LLC filings, Nevada state registrations, Google Business Profile, and business mail. Mail forwarding included on Opal and Diamond plans.",
     metaTitle: "Virtual Office in Las Vegas — Real Address from $39/mo",
     metaDescription:
-      "Get a virtual office in Las Vegas with a real business address at 6860 Bermuda Rd — not a PO box. From $39/mo, LLC-ready, Google Business Profile-eligible, mail forwarding on Opal and Diamond. Month-to-month. Get your address.",
+      "Virtual office in Las Vegas with a real business address at 6860 Bermuda Rd — not a PO box. From $39/mo, LLC-ready, mail forwarding, month-to-month.",
     heroImage: "/images/hero/virtual-office.jpg",
     useCases: [
       "LLC filings and Nevada business registration",
@@ -920,7 +920,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Host corporate events, workshops, networking mixers, and private gatherings. Full AV, flexible layouts, and on-site catering from Muze Cafe.",
     metaTitle: "Event Space Las Vegas — From $99/hr, No F&B Minimum",
     metaDescription:
-      "Rent event space in Las Vegas from $99/hr — full AV, flexible layouts, on-site catering from Muze Cafe, no food & beverage minimum. Corporate events, workshops, mixers. 10% off 8+ hours. Book a walkthrough.",
+      "Rent event space in Las Vegas from $99/hr — full AV, flexible layouts, on-site catering, no F&B minimum. Corporate events, workshops, mixers. Book a tour.",
     heroImage: "/images/hero/event-space.jpg",
     useCases: [
       "Corporate workshops and training sessions",
