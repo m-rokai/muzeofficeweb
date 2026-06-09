@@ -18,13 +18,15 @@ const relatedByService: Record<string, string[]> = {
     "coworking-spaces-in-las-vegas-the-best-of-both-worlds",
     "how-to-maximize-productivity-in-your-coworking-space-in-las-vegas",
   ],
+  // LV posts lead — the indexed LV money page renders the first 3, and these
+  // are the strongest LV-VO rankers in GSC.
   "virtual-office": [
+    "how-to-set-up-a-virtual-office-in-las-vegas",
     "nevada-llc-virtual-office",
-    "virtual-office-for-llc-in-texas",
-    "how-to-set-up-a-virtual-office-in-houston",
-    "best-virtual-office-providers-in-houston",
+    "virtual-office-vs-po-box-in-nevada",
     "6-advantages-of-a-virtual-office-in-las-vegas",
     "virtual-mailboxes-in-las-vegas",
+    "nevada-virtual-office-for-out-of-state-founders",
     "the-3-top-perks-of-a-virtual-business-address-in-las-vegas",
   ],
   "private-office": [

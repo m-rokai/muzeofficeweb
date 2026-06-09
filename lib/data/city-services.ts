@@ -51,9 +51,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     slug: "las-vegas-virtual-office",
     cityId: "las-vegas",
     serviceId: "virtual-office",
-    h1: "Virtual Office in Las Vegas",
+    h1: "Virtual Office in Las Vegas — Real Address from $39/mo",
     heroSubtitle:
-      "A real Las Vegas business address on Bermuda Rd in a staffed commercial suite — not a PO Box. Use it for your LLC filings, Nevada state registrations, Google Business Profile, and business mail. Mail forwarding included on Opal and Diamond plans.",
+      "A real Las Vegas virtual business address on Bermuda Rd in a staffed commercial suite — not a PO Box. Use it for your LLC filings, Nevada state registrations, Google Business Profile, and business mail. Virtual mailbox service with mail forwarding included on Opal and Diamond plans.",
     metaTitle: "Virtual Office in Las Vegas — Real Address from $39/mo",
     metaDescription:
       "Virtual office in Las Vegas with a real business address at 6860 Bermuda Rd — not a PO box. From $39/mo, LLC-ready, mail forwarding, month-to-month.",
@@ -61,7 +61,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     useCases: [
       "LLC filings and Nevada business registration",
       "Google Business Profile verification",
-      "Professional mailing address for remote founders",
+      "Virtual business address and mailbox for remote founders",
       "Mail forwarding for out-of-state owners (from Opal, $149/mo)",
       "Out-of-state businesses establishing a Las Vegas presence",
       "E-commerce sellers who need a real street address for packages",
@@ -121,12 +121,12 @@ export const cityServiceData: Record<string, CityServiceData> = {
         paragraphs: [
           "A virtual office in Las Vegas is one of the most cost-effective ways to establish a real business presence in Nevada without signing a lease. Muze Office sits at 6860 Bermuda Rd, Suite 200 in the 89119 business corridor — a real commercial building with a real suite, reception, and physical tenants, not a UPS Store counter or a ghost address. That matters when you register an LLC with the Nevada Secretary of State, verify a Google Business Profile, open a business bank account, or file paperwork that requires a street address rather than a P.O. Box.",
           "Use 6860 Bermuda Rd, Suite 200, Las Vegas NV 89119 as your business address on LLC filings, Nevada state registrations, Google Business Profile setup, and client-facing contracts. It reads as a real commercial address because it is one — the suite number is yours, the mail is delivered to the suite, and the building has a staffed reception during business hours. Banks and payment processors differ in how they treat virtual-office and commercial mail-receiving-agent (CMRA) addresses during verification — check with your specific institution before using this address on financial applications. We are not your registered agent for legal service of process; if you need that, you'll work with a separate registered agent service and can list Muze Office as your business address alongside.",
-          "Nevada's tax advantage is the other half of the equation. The state has no personal income tax, no corporate income tax, and no franchise tax on most small businesses. Pairing a Nevada virtual office with LLC formation gives you a legitimate local footprint at a fraction of what physical office space would cost. Mail Holding starts at $39 per month — a professional address with USPS letter mail notification and suite-number delivery. Sandstone ($69) adds package receiving from UPS, FedEx, and Amazon, typically the deciding factor for e-commerce sellers. Mail forwarding is included from Opal ($149) — if you live out of state or travel often, your mail gets bundled and forwarded to you on a schedule that works.",
+          "Nevada's tax advantage is the other half of the equation. The state has no personal income tax, no corporate income tax, and no franchise tax on most small businesses. Pairing a Nevada virtual office with LLC formation gives you a legitimate local footprint at a fraction of what physical office space would cost. Mail Holding starts at $39 per month — a virtual mailbox at a professional address, with USPS letter mail notification and suite-number delivery. Sandstone ($69) adds package receiving from UPS, FedEx, and Amazon, typically the deciding factor for e-commerce sellers. Mail forwarding is included from Opal ($149) — if you live out of state or travel often, your mail gets bundled and forwarded to you on a schedule that works.",
           "Beyond the address, every virtual office plan at Muze Office is backed by a real coworking space. Opal ($149) and Diamond ($249) include coworking hours and meeting room credits, so when a client flies in for a meeting you have a professional conference room to bring them to — not a Starbucks on Paradise Rd. The building is 10 minutes from Harry Reid International Airport via I-215, which makes fly-in meetings realistic for out-of-state businesses that only need a Las Vegas presence a few times a year.",
         ],
       },
       comparison: {
-        heading: "Business address vs. P.O. Box, UPS Store PMB, registered agent, and home address",
+        heading: "Virtual address vs. P.O. Box, UPS Store PMB, registered agent, and home address",
         paragraphs: [
           "A P.O. Box is the cheapest option but the most limiting. The Nevada Secretary of State will not accept a P.O. Box as your LLC's principal business address, Google Business Profile does not allow it, most banks will not use it to open a business checking account, and many payment processors and marketplaces flag P.O. Box addresses during business verification. USPS P.O. boxes also can't receive packages from UPS, FedEx, or private carriers — a hard blocker for anyone running an e-commerce or subscription business.",
           "A UPS Store PMB (Personal Mailbox) is a step up from a P.O. Box but reads as a retail mailbox rental on public filings. Muze Office operates from its own staffed commercial suite in an office building with physical tenants — you get a real business address at 6860 Bermuda Rd, Suite 200, Las Vegas NV 89119. Mail goes through the standard USPS Commercial Mail Receiving Agency process (Form 1583, which we'll walk you through when you sign up), and from the Sandstone tier ($69/mo) we accept FedEx, UPS, and Amazon packages on your behalf. The combination — a staffed commercial building, package acceptance from commercial carriers, and mail forwarding on Opal and above — is what distinguishes this from a retail mailbox rental.",
@@ -157,7 +157,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Coworking Space in Las Vegas",
     heroSubtitle:
       "Flexible shared workspace with hot desks and dedicated desks. High-speed WiFi, unlimited coffee, free parking, and a real community — not a hotel lobby.",
-    metaTitle: "Coworking Space Las Vegas | Day Pass $25",
+    metaTitle: "Coworking & Shared Office Space Las Vegas | Day Pass $25",
     metaDescription:
       "Las Vegas coworking with day passes from $25 and monthly hot desks from $350. Free parking, fast WiFi, coffee, and meeting rooms included. No long-term lease.",
     heroImage: "/images/hero/coworking-space.jpg",
@@ -623,10 +623,10 @@ export const cityServiceData: Record<string, CityServiceData> = {
     slug: "las-vegas-private-office",
     cityId: "las-vegas",
     serviceId: "private-office",
-    h1: "Private Office in Las Vegas",
+    h1: "Private Office Space in Las Vegas",
     heroSubtitle:
       "Furnished private offices with month-to-month terms. All utilities, WiFi, conference rooms, parking, and cleaning included. Move in this week.",
-    metaTitle: "Private Office Las Vegas | Month-to-Month",
+    metaTitle: "Private Office Space for Rent Las Vegas | Month-to-Month",
     metaDescription:
       "Furnished private offices in Las Vegas with month-to-month leases. WiFi, utilities, meeting rooms, and parking included. Solo offices to custom suites available.",
     heroImage: "/images/hero/private-office.jpg",
@@ -724,10 +724,10 @@ export const cityServiceData: Record<string, CityServiceData> = {
     slug: "las-vegas-meeting-rooms",
     cityId: "las-vegas",
     serviceId: "meeting-rooms",
-    h1: "Meeting Rooms in Las Vegas",
+    h1: "Meeting Rooms & Meeting Space in Las Vegas",
     heroSubtitle:
       "Professional meeting spaces available by the hour. AV equipment, video conferencing, whiteboards, and free parking included. Book online instantly.",
-    metaTitle: "Meeting Space & Rooms Las Vegas — From $25/hr",
+    metaTitle: "Meeting Room Rental Las Vegas — From $25/hr",
     metaDescription:
       "Book meeting space in Las Vegas from $25/hr — no food & beverage minimum, AV and video conferencing included, free parking. Huddle rooms to boardrooms for 2–14 people. Reserve online.",
     heroImage: "/images/hero/meeting-room.jpg",
@@ -915,7 +915,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     slug: "las-vegas-event-space",
     cityId: "las-vegas",
     serviceId: "event-space",
-    h1: "Event Space in Las Vegas",
+    h1: "Event Space & Training Rooms in Las Vegas",
     heroSubtitle:
       "Host corporate events, workshops, networking mixers, and private gatherings. Full AV, flexible layouts, and on-site catering from Muze Cafe.",
     metaTitle: "Event Space Las Vegas — From $99/hr, No F&B Minimum",

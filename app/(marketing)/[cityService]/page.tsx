@@ -142,14 +142,26 @@ export default async function CityServicePage({ params }: PageProps) {
   // Virtual-office shoppers want the address, not a tour of an empty desk.
   // Route them to /contact so the lead arrives via the contact form.
   const isVirtualOffice = service.id === "virtual-office";
+  // Contact links carry ?interest=… so the form arrives preselected and the
+  // lead email is segmented by service.
+  const CONTACT_INTEREST_BY_SERVICE: Record<string, string> = {
+    "virtual-office": "virtual-office",
+    "private-office": "private-office",
+    "meeting-rooms": "meeting-rooms",
+    "conference-rooms": "meeting-rooms",
+    "event-space": "event-space",
+  };
+  const contactHref = isComingSoon
+    ? "/contact?interest=houston-waitlist"
+    : `/contact?interest=${CONTACT_INTEREST_BY_SERVICE[service.id] ?? "coworking"}`;
   // Coming-soon cities have no tours to book — waitlist leads go to /contact,
   // where the form delivers to the notifications@ inbox.
   const primaryCtaHref = isComingSoon
-    ? "/contact"
+    ? contactHref
     : hasOnlineBooking
       ? "#book-online"
       : isVirtualOffice
-        ? "/contact"
+        ? contactHref
         : BRAND.booking.tourUrl;
   const primaryCtaLabel = isComingSoon
     ? "Join Waitlist"
@@ -293,7 +305,7 @@ export default async function CityServicePage({ params }: PageProps) {
                     ? "#book-online"
                     : !isComingSoon && tier.price !== null
                       ? BRAND.booking.signupUrl
-                      : "/contact"
+                      : contactHref
                 }
                 trackingName={
                   hasOnlineBooking
@@ -500,6 +512,32 @@ export default async function CityServicePage({ params }: PageProps) {
                         </li>
                       ))}
                     </ul>
+                  </div>
+                )}
+                {!isComingSoon && (
+                  <div className="mt-8 flex flex-wrap items-center gap-4">
+                    <a
+                      href={BRAND.booking.signupUrl}
+                      data-cta="signup_online"
+                      data-cta-location={`city_service_${cityService}_details`}
+                      className={cn(
+                        buttonVariants({ size: "lg" }),
+                        "rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
+                      )}
+                    >
+                      Sign Up Online
+                    </a>
+                    <Link
+                      href={contactHref}
+                      data-cta="contact_us"
+                      data-cta-location={`city_service_${cityService}_details`}
+                      className={cn(
+                        buttonVariants({ variant: "outline", size: "lg" }),
+                        "rounded-lg"
+                      )}
+                    >
+                      Ask a Question First
+                    </Link>
                   </div>
                 )}
               </div>

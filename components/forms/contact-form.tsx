@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { track } from "@vercel/analytics";
 import { CheckCircle2, Mail, Phone, Loader2, AlertCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -37,6 +37,17 @@ export function ContactForm({ className }: { className?: string }) {
   const [serverMessage, setServerMessage] = useState("");
   const [interest, setInterest] = useState("");
   const [startedAt] = useState(() => Date.now());
+
+  // Prefill the interest select from ?interest=… (e.g. /contact?interest=virtual-office)
+  // — read client-side so the page stays fully static.
+  useEffect(() => {
+    const param = new URLSearchParams(window.location.search).get("interest");
+    if (param && CONTACT_INTERESTS.some((i) => i.value === param)) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- URL can
+      // only be read after hydration; a lazy initializer would mismatch SSR.
+      setInterest(param);
+    }
+  }, []);
 
   function validate(formData: FormData): FormErrors {
     const errs: FormErrors = {};

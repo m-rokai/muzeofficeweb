@@ -8,6 +8,7 @@ export interface NavItem {
 export const mainNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Locations", href: "/locations" },
+  { label: "Virtual Office", href: "/las-vegas-virtual-office" },
   { label: "Memberships", href: "/workspace-memberships" },
   { label: "Events", href: "/las-vegas-event-space" },
   { label: "About", href: "/about" },

@@ -41,6 +41,36 @@ const virtualOfficeFAQs: FAQ[] = [
     answer:
       "A PO Box gives you a box number at the post office — it can't be used for LLC registration, and it looks unprofessional on a business card. A virtual office gives you a real street address with a suite number, plus access to meeting rooms, coworking, and a receptionist. It's a professional business presence without renting a full office.",
   },
+  {
+    question: "How much does a virtual office cost in Las Vegas?",
+    answer:
+      "At Muze Office, virtual office plans run $39 to $249 per month with no setup fee: Mail Holding ($39), Sandstone ($69, adds package receiving), Opal ($149, adds mail forwarding plus coworking and meeting room hours), and Diamond ($249, adds 20 coworking hours and a dedicated local phone line). Many Las Vegas providers charge $59–$99 a month plus a $50–$75 setup fee, so compare the all-in first-month cost, not just the sticker price.",
+  },
+  {
+    question: "Can I use a virtual office address to open a business bank account?",
+    answer:
+      "Banks vary. Major banks generally accept commercial mail receiving agency (CMRA) addresses on business checking accounts when you can show a completed USPS Form 1583, and online-first banks tend to prefer them. A few traditional lenders won't — check with your specific bank before applying. Our address is a real commercial suite in a staffed building, which typically verifies more smoothly than a retail mail-store address.",
+  },
+  {
+    question: "Is a virtual office legal in Nevada?",
+    answer:
+      "Yes. Virtual offices operate under standard USPS Commercial Mail Receiving Agency (CMRA) rules — you complete a notarized USPS Form 1583 authorizing us to receive mail on your behalf, and the address is then valid for Nevada LLC filings, state registrations, and Google Business Profile. What a virtual office doesn't replace is a registered agent, which is a separate legal role.",
+  },
+  {
+    question: "Can I get a Las Vegas virtual office if I don't live in Nevada?",
+    answer:
+      "Yes — most of our virtual office members are out-of-state founders establishing a Nevada presence. The notarized USPS Form 1583 can be completed with an online notary from anywhere, and plans from Opal ($149/mo) include mail forwarding so your mail reaches you wherever you are.",
+  },
+  {
+    question: "Do you offer a virtual mailbox in Las Vegas?",
+    answer:
+      "Yes — every virtual office plan works as a virtual mailbox at a real street address: we notify you when mail arrives and you pick it up at the suite during business hours. Sandstone ($69/mo) adds package receiving from UPS, FedEx, and Amazon, and Opal ($149/mo) adds scheduled mail forwarding to any address you choose.",
+  },
+  {
+    question: "Can I verify my Google Business Profile with this address?",
+    answer:
+      "Yes. A staffed commercial suite is one of the few non-leased address types Google Business Profile accepts. Submit the address, request verification by postcard or video, and we'll receive the verification mail at the suite and notify you — we don't open it. Verification typically takes 5–14 days end to end.",
+  },
 ];
 
 const coworkingFAQs: FAQ[] = [
