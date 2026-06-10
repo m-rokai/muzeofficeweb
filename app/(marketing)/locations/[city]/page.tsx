@@ -23,7 +23,10 @@ import { locations, type Location } from "@/lib/data/locations";
 import { services as allServices } from "@/lib/data/services";
 import { getFAQsForPage } from "@/lib/data/faqs";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
+import { LocationMap } from "@/components/marketing/location-map";
+import { GoogleReviewsBadge } from "@/components/marketing/google-reviews-badge";
 import { FadeIn } from "@/components/marketing/animate";
+import { Star } from "lucide-react";
 import { BRAND } from "@/lib/utils/constants";
 
 const coreServiceIds = [
@@ -342,30 +345,51 @@ export default async function LocationDetailPage({
         />
       )}
 
-      {/* Map Placeholder */}
+      {/* Map + reviews */}
       {isActive && (
         <Section variant="gray">
           <FadeIn>
-          <div className="flex flex-col items-center gap-4">
-            <div className="relative flex aspect-video w-full max-w-[800px] items-center justify-center overflow-hidden rounded-xl border border-[#E6E4DF] bg-white">
-              <div className="flex flex-col items-center gap-2 text-center">
-                <MapPin className="h-8 w-8 text-[#EAA820]" />
-                <p className="text-sm font-medium text-[#1A1A1A]">
-                  {location.address.street}, {location.address.city},{" "}
-                  {location.address.state} {location.address.zip}
-                </p>
-                <a
-                  href={`https://www.google.com/maps/place/${encodeURIComponent(`${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-1 text-xs text-[#EAA820] hover:underline"
-                >
-                  Open in Google Maps
-                  <ExternalLink className="h-3 w-3" />
-                </a>
+            <div className="mx-auto flex max-w-[800px] flex-col items-center gap-6">
+              <LocationMap
+                address={`${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}`}
+                title={`Map of Muze Office ${location.name}`}
+                className="aspect-video w-full bg-white"
+              />
+              <div className="flex flex-col items-center gap-4 text-center">
+                <GoogleReviewsBadge
+                  rating={location.rating}
+                  reviewCount={location.reviewCount}
+                  href={location.externalProfiles?.gbp}
+                />
+                <div className="flex flex-wrap items-center justify-center gap-3">
+                  <a
+                    href={`https://www.google.com/maps/place/${encodeURIComponent(`${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-xs text-[#74726D] hover:text-[#1A1A1A] hover:underline"
+                  >
+                    Open in Google Maps
+                    <ExternalLink className="h-3 w-3" />
+                  </a>
+                  {location.id === "las-vegas" && (
+                    <a
+                      href={BRAND.reviewUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      data-cta="leave_review"
+                      data-cta-location="location_page"
+                      className={cn(
+                        buttonVariants({ variant: "outline", size: "sm" }),
+                        "rounded-lg"
+                      )}
+                    >
+                      <Star className="h-4 w-4 text-[#EAA820]" />
+                      Leave a Google review
+                    </a>
+                  )}
+                </div>
               </div>
             </div>
-          </div>
           </FadeIn>
         </Section>
       )}

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { Mail, Phone, Clock, MapPin } from "lucide-react";
+import { Mail, Phone, Clock, MapPin, Star } from "lucide-react";
 import { footerNav } from "@/lib/data/navigation";
 import { BRAND } from "@/lib/utils/constants";
 import { locations } from "@/lib/data/locations";
@@ -203,6 +203,19 @@ export function SiteFooter() {
                     <br />
                     Front desk: Mon&ndash;Fri, 10am&ndash;7pm
                   </span>
+                </li>
+                <li>
+                  <a
+                    href={BRAND.reviewUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    data-cta="leave_review"
+                    data-cta-location="footer"
+                    className="flex items-center gap-2 text-sm text-gray-400 transition-colors hover:text-white"
+                  >
+                    <Star className="h-4 w-4 text-[#EAA820]" />
+                    Leave us a Google review
+                  </a>
                 </li>
               </ul>
             </div>

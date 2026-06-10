@@ -149,6 +149,16 @@ const nextConfig: NextConfig = {
     }));
 
     return withTrailingSlashVariants([
+      // Short link for review-request campaigns (QR codes, receipts, signage).
+      // Temporary (not permanent) — KEEP IN SYNC with BRAND.reviewUrl in
+      // lib/utils/constants.ts; swap for the GBP one-click g.page/r/.../review
+      // link when available.
+      {
+        source: "/review",
+        destination:
+          "https://www.google.com/search?q=Muze+Office+Las+Vegas&kgmid=/g/11x2wpzbg_",
+        permanent: false,
+      },
       ...wordpressRedirects.map((r) => ({ ...r, permanent: true })),
       ...removedBlogRedirects.map((r) => ({ ...r, permanent: true })),
       ...autoBlogRedirects,
