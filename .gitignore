@@ -44,4 +44,5 @@ next-env.d.ts
 .claude/
 ProjectPilot/
 handoff/
+.playwright-mcp/
 .env*.local

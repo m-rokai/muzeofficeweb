@@ -15,7 +15,7 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { submitContactForm } from "@/lib/actions/submit-contact-form";
-import { CONTACT_INTERESTS } from "@/lib/data/contact-interests";
+import { CONTACT_INTERESTS, interestLabels } from "@/lib/data/contact-interests";
 import { cn } from "@/lib/utils";
 
 const CONTACT_EMAIL = "access@muzeoffice.com";
@@ -43,8 +43,9 @@ export function ContactForm({ className }: { className?: string }) {
   useEffect(() => {
     const param = new URLSearchParams(window.location.search).get("interest");
     if (param && CONTACT_INTERESTS.some((i) => i.value === param)) {
-      // eslint-disable-next-line react-hooks/set-state-in-effect -- URL can
-      // only be read after hydration; a lazy initializer would mismatch SSR.
+      // Intentional: URL is only readable post-hydration, so a lazy useState
+      // initializer would cause an SSR mismatch. One-time prefill on mount.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setInterest(param);
     }
   }, []);
@@ -283,6 +284,7 @@ export function ContactForm({ className }: { className?: string }) {
           I&apos;m interested in <span className="text-red-500">*</span>
         </Label>
         <Select
+          items={interestLabels}
           value={interest}
           onValueChange={(val) => setInterest(val ?? "")}
           disabled={isSubmitting}
