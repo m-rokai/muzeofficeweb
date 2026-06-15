@@ -157,7 +157,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Coworking Space in Las Vegas",
     heroSubtitle:
       "Flexible shared workspace with hot desks and dedicated desks. High-speed WiFi, unlimited coffee, free parking, and a real community — not a hotel lobby.",
-    metaTitle: "Las Vegas Coworking — Day Pass $25",
+    metaTitle: "Las Vegas Coworking & Shared Office — $25",
     metaDescription:
       "Las Vegas coworking with day passes from $25 and monthly hot desks from $350. Free parking, fast WiFi, coffee, and meeting rooms included. No long-term lease.",
     heroImage: "/images/hero/coworking-space.jpg",
@@ -1220,7 +1220,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Virtual Office in Houston",
     heroSubtitle:
       "A real Houston business address on Augusta Dr in the Galleria — not a P.O. Box. Use it for your Texas LLC, Google Business Profile, contracts, and mail. Meeting rooms included.",
-    metaTitle: "Houston Galleria Virtual Office — $39/mo",
+    metaTitle: "Houston Virtual Office — Galleria Address $39/mo",
     metaDescription:
       "Virtual office in Houston with a real Galleria address at 1800 Augusta Dr. From $39/mo — Texas LLC ready, GBP eligible, mail forwarding. Month-to-month. Join the waitlist.",
     heroImage: "/images/hero/virtual-office.jpg",
