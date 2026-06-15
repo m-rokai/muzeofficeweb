@@ -203,7 +203,7 @@ export default function TheOpportunityPage() {
               Why coworking is more resilient than a single-revenue business
             </h2>
             <p className="mt-4 text-[#74726D] leading-relaxed">
-              Traditional office leases are binary — you're full or you're not. A well-run coworking
+              Traditional office leases are binary — you&apos;re full or you&apos;re not. A well-run coworking
               location runs four distinct revenue lines simultaneously, so a dip in one category
               rarely threatens the whole.
             </p>
@@ -251,7 +251,7 @@ export default function TheOpportunityPage() {
               Competitive edge
             </p>
             <h2 className="font-[family-name:var(--font-plus-jakarta)] text-3xl font-bold text-[#1A1A1A] sm:text-4xl">
-              Who's building the strongest locations
+              Who&apos;s building the strongest locations
             </h2>
             <p className="mt-4 text-[#74726D] leading-relaxed">
               The gap between a thriving coworking location and a struggling one usually comes down
@@ -315,7 +315,7 @@ export default function TheOpportunityPage() {
               >
                 <div>
                   <p className="font-semibold text-[#1A1A1A] text-sm">Investment & fees</p>
-                  <p className="text-xs text-[#74726D] mt-0.5">Costs, royalties, what's included</p>
+                  <p className="text-xs text-[#74726D] mt-0.5">Costs, royalties, what&apos;s included</p>
                 </div>
                 <ArrowRight className="h-4 w-4 text-[#74726D] group-hover:text-[#EAA820] transition-colors" />
               </Link>

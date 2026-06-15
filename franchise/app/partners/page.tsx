@@ -6,14 +6,12 @@ import {
   MapPin,
   LayoutGrid,
   ArrowRight,
-  CheckCircle2,
   Handshake,
   Ruler,
   CalendarCheck,
   Search,
   FileCheck,
   Wrench,
-  Rocket,
 } from "lucide-react";
 import { Section } from "@/components/layout/section";
 import { CTASection } from "@/components/marketing/cta-section";

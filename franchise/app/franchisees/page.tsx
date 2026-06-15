@@ -9,7 +9,6 @@ import {
   Building2,
   Briefcase,
   Lightbulb,
-  HeartHandshake,
   CalendarCheck,
   MapPin,
   Laptop,

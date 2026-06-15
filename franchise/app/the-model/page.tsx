@@ -16,9 +16,7 @@ import { Section } from "@/components/layout/section";
 import { CTASection } from "@/components/marketing/cta-section";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/marketing/animate";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 import { BRAND } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
