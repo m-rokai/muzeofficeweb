@@ -15,7 +15,7 @@ export function PersonSchema({ person }: PersonSchemaProps) {
     alternateName: person.alternateNames,
     jobTitle: person.jobTitle,
     description: person.shortBio,
-    url: `${BRAND.url}/authors/${person.slug}`,
+    url: `${BRAND.url}/about#${person.slug}`,
     sameAs: person.sameAs,
     worksFor: {
       "@type": "Organization",
