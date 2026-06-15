@@ -1,4 +1,3 @@
-// Stub — will be replaced by Task 4 (Batch 2) with full franchise brand constants.
 export const BRAND = {
   name: "Muze Office Franchise",
   legalName: "Muze International Corporation",
