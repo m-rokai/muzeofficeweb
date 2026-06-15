@@ -46,3 +46,8 @@ ProjectPilot/
 handoff/
 .playwright-mcp/
 .env*.local
+
+# Franchise sister-app build artifacts
+franchise/.next
+franchise/node_modules
+franchise/*.tsbuildinfo
