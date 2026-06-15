@@ -17,7 +17,7 @@ import {
 import { mdxComponents } from "@/components/blog/mdx-components";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { JsonLd } from "@/components/seo/json-ld";
-import { BRAND } from "@/lib/utils/constants";
+import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 import { getPersonByName } from "@/lib/data/people";
 
 export function generateStaticParams() {
@@ -39,12 +39,14 @@ export async function generateMetadata({
     alternates: { canonical: `/blog/${slug}` },
     ...(post.noindex && { robots: { index: false, follow: true } }),
     openGraph: {
+      ...OG_DEFAULTS,
       title: post.title,
       description: post.description,
       type: "article",
+      url: `/blog/${slug}`,
       publishedTime: post.date,
       authors: [post.author],
-      images: post.image ? [post.image] : undefined,
+      ...(post.image ? { images: [post.image] } : {}),
     },
   };
 }
@@ -90,10 +92,13 @@ export default async function BlogPostPage({
     author: authorNode,
     publisher: {
       "@type": "Organization",
+      "@id": `${BRAND.url}/#organization`,
       name: BRAND.name,
       logo: {
         "@type": "ImageObject",
         url: `${BRAND.url}/images/logo.png`,
+        width: 2048,
+        height: 2048,
       },
     },
     mainEntityOfPage: {

@@ -17,14 +17,15 @@ import { Badge } from "@/components/ui/badge";
 import { ContactForm } from "@/components/forms/contact-form";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/components/marketing/animate";
-import { BRAND } from "@/lib/utils/constants";
+import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 import { getLocation } from "@/lib/data/locations";
 
 export const metadata: Metadata = {
   title: "Contact Us — Las Vegas Workspace, Book a Tour",
   description:
-    "Visit Muze Office Las Vegas at 6860 Bermuda Rd, Suite 200, NV 89119 — free parking, book a tour. Houston opening 2026. Email access@muzeoffice.com (preferred) or call (702) 370-7515, Mon–Fri 10am–5pm.",
+    "Visit Muze Office Las Vegas at 6860 Bermuda Rd, Suite 200 — free parking, book a tour. Email access@muzeoffice.com or call (702) 370-7515, Mon–Fri 10am–5pm.",
   alternates: { canonical: "/contact" },
+  openGraph: { ...OG_DEFAULTS, type: "website", url: "/contact" },
 };
 
 export default function ContactPage() {

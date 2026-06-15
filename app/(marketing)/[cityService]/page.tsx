@@ -32,7 +32,7 @@ import { services } from "@/lib/data/services";
 import { getCityServiceData } from "@/lib/data/city-services";
 import { getFAQsForService } from "@/lib/data/faqs";
 import { getRelatedBlogSlugsForService } from "@/lib/data/blog-links";
-import { BRAND } from "@/lib/utils/constants";
+import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 import {
   generateAllCityServiceParams,
   parseCityServiceSlug,
@@ -75,9 +75,12 @@ export async function generateMetadata({
     description: data.metaDescription,
     alternates: { canonical: `/${cityService}` },
     openGraph: {
+      ...OG_DEFAULTS,
       title: data.metaTitle,
       description: data.metaDescription,
-      images: [{ url: data.heroImage, width: 1200, height: 630 }],
+      type: "website",
+      url: `/${cityService}`,
+      images: [{ url: data.heroImage, width: 1200, height: 630, alt: data.metaTitle }],
     },
     robots: isComingSoon ? { index: false, follow: true } : undefined,
   };

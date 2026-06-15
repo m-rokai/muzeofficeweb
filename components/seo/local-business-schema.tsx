@@ -4,9 +4,17 @@ import { JsonLd } from "@/components/seo/json-ld";
 
 interface LocalBusinessSchemaProps {
   locationId: string;
+  /** Emit aggregateRating. Set ONLY on pages that represent the reviewed
+   *  business itself (homepage + the Las Vegas location page) — never on the
+   *  service landing pages, where the same rating duplicated across many URLs
+   *  reads as self-serving structured data to Google. */
+  includeRating?: boolean;
 }
 
-export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
+export function LocalBusinessSchema({
+  locationId,
+  includeRating = false,
+}: LocalBusinessSchemaProps) {
   const location = getLocation(locationId);
   if (!location) return null;
 
@@ -45,7 +53,7 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
     description: `Flexible coworking, virtual offices, private offices, meeting rooms, and event space in ${address.city}, ${address.state}.${landmarkPhrase}${localCue} Free parking, high-speed WiFi, on-site cafe, and month-to-month memberships with no long-term leases.`,
     image: `${BRAND.url}/images/spaces/${location.slug}.jpg`,
     url: locationUrl,
-    telephone: location.phone !== "TBD" ? location.phone : undefined,
+    telephone: location.phoneRaw !== "TBD" ? location.phoneRaw : undefined,
     email: location.email,
     parentOrganization: {
       "@type": "Organization",
@@ -85,7 +93,7 @@ export function LocalBusinessSchema({ locationId }: LocalBusinessSchemaProps) {
       : undefined,
     priceRange: "$25-$899",
     aggregateRating:
-      location.rating && location.reviewCount
+      includeRating && location.rating && location.reviewCount
         ? {
             "@type": "AggregateRating",
             ratingValue: location.rating,

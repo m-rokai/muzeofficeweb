@@ -17,14 +17,15 @@ import { Section } from "@/components/layout/section";
 import { CTASection } from "@/components/marketing/cta-section";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/marketing/animate";
 import { PersonSchema } from "@/components/seo/person-schema";
-import { BRAND } from "@/lib/utils/constants";
+import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 import { ZACHARY_DEVON_DUONG } from "@/lib/data/people";
 
 export const metadata: Metadata = {
-  title: "About Muze Office — Modern Workspaces That Inspire",
+  title: "About Muze Office — Workspaces That Inspire",
   description:
-    "Muze Office provides flexible coworking, virtual offices, private offices, and meeting rooms in Las Vegas — and soon Houston. Month-to-month, no long-term leases.",
+    "Muze Office offers flexible coworking, virtual offices, private offices, and meeting rooms in Las Vegas — Houston coming soon. Month-to-month, no long-term leases.",
   alternates: { canonical: "/about" },
+  openGraph: { ...OG_DEFAULTS, type: "website", url: "/about" },
 };
 
 const values = [

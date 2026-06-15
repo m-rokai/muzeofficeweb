@@ -10,16 +10,20 @@ import {
 } from "@/components/marketing/animate";
 import { ArrowRight } from "lucide-react";
 import { getAllPosts, formatDate, getReadingTime } from "@/lib/blog";
+import { OG_DEFAULTS } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
-  title: "Muze Office Blog — Coworking & Virtual Office Insights",
+  title: "Coworking & Virtual Office Blog",
   description:
     "Tips, guides, and insights on coworking, virtual offices, remote work, and flexible workspace in Las Vegas and Houston from the Muze Office team.",
   alternates: { canonical: "/blog" },
   openGraph: {
+    ...OG_DEFAULTS,
     title: "Muze Office Blog — Coworking & Virtual Office Insights",
     description:
       "Tips, guides, and insights on coworking, virtual offices, remote work, and flexible workspace in Las Vegas and Houston.",
+    type: "website",
+    url: "/blog",
   },
 };
 

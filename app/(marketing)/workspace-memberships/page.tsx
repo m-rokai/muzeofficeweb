@@ -18,13 +18,14 @@ import { Card, CardContent } from "@/components/ui/card";
 import { services } from "@/lib/data/services";
 import { getFAQsForPage } from "@/lib/data/faqs";
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/components/marketing/animate";
-import { BRAND } from "@/lib/utils/constants";
+import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
-  title: "Workspace Memberships in Las Vegas — Virtual Office to Private Suite",
+  title: "Las Vegas Workspace Memberships from $39/mo",
   description:
-    "Explore flexible workspace memberships at Muze Office: virtual offices from $39/mo, coworking from $25/day, private offices, meeting rooms, and event space. All month-to-month in Las Vegas.",
+    "Flexible Las Vegas workspace memberships: virtual offices from $39/mo, coworking from $25/day, private offices, and meeting rooms. All month-to-month. Book a tour.",
   alternates: { canonical: "/workspace-memberships" },
+  openGraph: { ...OG_DEFAULTS, type: "website", url: "/workspace-memberships" },
 };
 
 const serviceIcons: Record<string, React.ReactNode> = {

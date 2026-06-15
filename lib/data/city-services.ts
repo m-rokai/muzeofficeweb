@@ -54,7 +54,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Virtual Office in Las Vegas — Real Address from $39/mo",
     heroSubtitle:
       "A real Las Vegas virtual business address on Bermuda Rd in a staffed commercial suite — not a PO Box. Use it for your LLC filings, Nevada state registrations, Google Business Profile, and business mail. Virtual mailbox service with mail forwarding included on Opal and Diamond plans.",
-    metaTitle: "Virtual Office in Las Vegas — Real Address from $39/mo",
+    metaTitle: "Las Vegas Virtual Office — Address $39/mo",
     metaDescription:
       "Virtual office in Las Vegas with a real business address at 6860 Bermuda Rd — not a PO box. From $39/mo, LLC-ready, mail forwarding, month-to-month.",
     heroImage: "/images/hero/virtual-office.jpg",
@@ -157,7 +157,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Coworking Space in Las Vegas",
     heroSubtitle:
       "Flexible shared workspace with hot desks and dedicated desks. High-speed WiFi, unlimited coffee, free parking, and a real community — not a hotel lobby.",
-    metaTitle: "Coworking & Shared Office Space Las Vegas | Day Pass $25",
+    metaTitle: "Las Vegas Coworking — Day Pass $25",
     metaDescription:
       "Las Vegas coworking with day passes from $25 and monthly hot desks from $350. Free parking, fast WiFi, coffee, and meeting rooms included. No long-term lease.",
     heroImage: "/images/hero/coworking-space.jpg",
@@ -353,7 +353,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Any-desk monthly coworking for remote workers and consultants in the space three-to-five days a week. Meeting room credits, mail handling, and community events included — all on month-to-month terms.",
     metaTitle: "Hot Desk Las Vegas — $350/mo, 24/7 Access",
     metaDescription:
-      "Hot Desk coworking in Las Vegas for $350/month at 6860 Bermuda Rd, Suite 200. Any-desk 24/7 biometric access, meeting room credits, mail handling, free parking. Month-to-month.",
+      "Hot desk coworking in Las Vegas for $350/mo at 6860 Bermuda Rd. Any-desk 24/7 biometric access, meeting credits, mail handling, free parking. Sign up online today.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Remote workers in the space three-to-five days a week",
@@ -444,7 +444,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Your own reserved desk, personal storage, 24/7 biometric access, meeting room credits, and a business address with mail. Month-to-month terms — the most committed coworking tier short of a private office.",
     metaTitle: "Dedicated Desk Las Vegas — $399/mo, Reserved",
     metaDescription:
-      "Dedicated Desk coworking in Las Vegas for $399/month at 6860 Bermuda Rd, Suite 200. Reserved desk, personal storage, 24/7 biometric entry, business address, meeting room credits.",
+      "Dedicated desk coworking in Las Vegas for $399/mo at 6860 Bermuda Rd. Reserved desk, storage, 24/7 biometric access, business address, meeting credits. Sign up online.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Remote workers who want a permanent desk and dual monitors",
@@ -533,9 +533,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Flexible Workspaces in Las Vegas",
     heroSubtitle:
       "One building, four commitment levels. Start with a $25 day pass, move up to a hot desk or dedicated desk, and grow into a private office when the team does — all month-to-month, all at 6860 Bermuda Rd.",
-    metaTitle: "Flexible Workspaces Las Vegas | Day Pass to Private Office",
+    metaTitle: "Las Vegas Flexible Workspaces from $25",
     metaDescription:
-      "Flexible workspaces in Las Vegas at 6860 Bermuda Rd, Suite 200. Day pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo, private offices for teams — month-to-month, no long-term lease.",
+      "Flexible workspaces in Las Vegas at 6860 Bermuda Rd: day pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo, private offices — month-to-month, no lease. Book a tour.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Startups scaling from 3 to 8 people without signing a new lease",
@@ -626,9 +626,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Private Office Space in Las Vegas",
     heroSubtitle:
       "Furnished private offices with month-to-month terms. All utilities, WiFi, conference rooms, parking, and cleaning included. Move in this week.",
-    metaTitle: "Private Office Space for Rent Las Vegas | Month-to-Month",
+    metaTitle: "Private Office for Rent in Las Vegas",
     metaDescription:
-      "Furnished private offices in Las Vegas with month-to-month leases. WiFi, utilities, meeting rooms, and parking included. Solo offices to custom suites available.",
+      "Furnished private offices in Las Vegas, month-to-month. WiFi, utilities, meeting rooms, and free parking included. Solo offices to custom suites. Book a tour today.",
     heroImage: "/images/hero/private-office.jpg",
     useCases: [
       "Growing startups that need their own space",
@@ -729,7 +729,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Professional meeting spaces available by the hour. AV equipment, video conferencing, whiteboards, and free parking included. Book online instantly.",
     metaTitle: "Meeting Room Rental Las Vegas — From $25/hr",
     metaDescription:
-      "Book meeting space in Las Vegas from $25/hr — no food & beverage minimum, AV and video conferencing included, free parking. Huddle rooms to boardrooms for 2–14 people. Reserve online.",
+      "Book meeting rooms in Las Vegas from $25/hr — no F&B minimum, AV and video conferencing included, free parking. Huddle rooms to boardrooms for 2–14. Reserve online.",
     heroImage: "/images/hero/meeting-room.jpg",
     useCases: [
       "Client presentations and pitches",
@@ -830,7 +830,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Corporate conference rooms by the hour for client pitches, board meetings, depositions, and investor updates. Video conferencing, dual-screen boardroom option, and free parking included.",
     metaTitle: "Conference Rooms Las Vegas | From $50/hr",
     metaDescription:
-      "Book a Las Vegas conference room at 6860 Bermuda Rd from $50/hr. Video conferencing, dual-screen boardroom, free parking. For client meetings, board meetings, depositions.",
+      "Book a Las Vegas conference room at 6860 Bermuda Rd from $50/hr — video conferencing, dual-screen boardroom, free parking. For client and board meetings. Reserve online.",
     heroImage: "/images/hero/meeting-room.jpg",
     useCases: [
       "Board meetings and quarterly reviews",
@@ -918,7 +918,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Event Space & Training Rooms in Las Vegas",
     heroSubtitle:
       "Host corporate events, workshops, networking mixers, and private gatherings. Full AV, flexible layouts, and on-site catering from Muze Cafe.",
-    metaTitle: "Event Space Las Vegas — From $99/hr, No F&B Minimum",
+    metaTitle: "Las Vegas Event Space — From $99/hr",
     metaDescription:
       "Rent event space in Las Vegas from $99/hr — full AV, flexible layouts, on-site catering, no F&B minimum. Corporate events, workshops, mixers. Book a tour.",
     heroImage: "/images/hero/event-space.jpg",
@@ -1220,9 +1220,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Virtual Office in Houston",
     heroSubtitle:
       "A real Houston business address on Augusta Dr in the Galleria — not a P.O. Box. Use it for your Texas LLC, Google Business Profile, contracts, and mail. Meeting rooms included.",
-    metaTitle: "Virtual Office in Houston — Real Galleria Address from $39/mo",
+    metaTitle: "Houston Galleria Virtual Office — $39/mo",
     metaDescription:
-      "Get a virtual office in Houston with a real Galleria business address at 1800 Augusta Dr. From $39/mo. Texas LLC ready, GBP eligible, mail forwarding, meeting rooms included. Month-to-month.",
+      "Virtual office in Houston with a real Galleria address at 1800 Augusta Dr. From $39/mo — Texas LLC ready, GBP eligible, mail forwarding. Month-to-month. Join the waitlist.",
     heroImage: "/images/hero/virtual-office.jpg",
     useCases: [
       "Remote workers who need a Houston business address",
@@ -1322,7 +1322,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Flexible shared workspace in the Galleria with hot desks and dedicated desks. High-speed WiFi, unlimited coffee, free parking, and a real community — not a hotel lobby.",
     metaTitle: "Coworking Space Houston | Day Pass $25",
     metaDescription:
-      "Houston coworking in the Galleria with day passes from $25 and monthly hot desks from $350. Free parking, fast WiFi, coffee, and meeting rooms included. No long-term lease.",
+      "Houston coworking in the Galleria — day passes from $25, hot desks from $350/mo. Free parking, fast WiFi, coffee, meeting rooms. No lease. Join the waitlist today.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Remote workers tired of working from home or coffee shops",
@@ -1425,7 +1425,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Drop in for a single day of focused work in the Galleria — no membership, no setup, no commitment. Walk in with a laptop, plug into fast WiFi, and keep your day moving.",
     metaTitle: "Day Pass Houston Coworking | $25/day",
     metaDescription:
-      "Day pass coworking in Houston at 1800 Augusta Dr in the Galleria — $25, walk-in, no membership. Real desk, fast WiFi, unlimited coffee, free parking. Inside the 610 Loop.",
+      "Day pass coworking in Houston's Galleria at 1800 Augusta Dr — $25, walk-in, no membership. Real desk, fast WiFi, free parking, inside the 610 Loop. Join the waitlist.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Freelancers and consultants here for a single Galleria-area workday",
@@ -1515,7 +1515,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Any-desk monthly coworking in the Galleria for remote workers and consultants in the space three-to-five days a week. Meeting room credits, mail handling, and community events included — all on month-to-month terms.",
     metaTitle: "Hot Desk Houston — $350/mo, 24/7 Access",
     metaDescription:
-      "Hot Desk coworking in Houston at 1800 Augusta Dr in the Galleria — $350/month, any-desk 24/7 biometric access, meeting room credits, mail handling, free parking. Month-to-month.",
+      "Hot desk coworking in Houston's Galleria at 1800 Augusta Dr — $350/mo, any-desk 24/7 access, meeting credits, mail handling, free parking. Month-to-month. Waitlist open.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Remote workers in the space three-to-five days a week",
@@ -1606,7 +1606,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Your own reserved desk in the Galleria, personal storage, 24/7 biometric access, meeting room credits, and a business address with mail. Month-to-month terms — the most committed coworking tier short of a private office.",
     metaTitle: "Dedicated Desk Houston — $399/mo, Reserved",
     metaDescription:
-      "Dedicated Desk coworking in Houston at 1800 Augusta Dr in the Galleria — $399/month, reserved desk, personal storage, 24/7 biometric entry, business address, meeting room credits.",
+      "Dedicated desk coworking in Houston's Galleria at 1800 Augusta Dr — $399/mo, reserved desk, storage, 24/7 access, business address, meeting credits. Join the waitlist.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Remote workers who want a permanent Galleria-area desk with dual monitors",
@@ -1695,9 +1695,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Flexible Workspaces in Houston",
     heroSubtitle:
       "One Galleria building, four commitment levels. Start with a day pass, move up to a hot desk or dedicated desk, and grow into a private office when the team does — all month-to-month, all at 1800 Augusta Dr.",
-    metaTitle: "Flexible Workspaces Houston | Day Pass to Private Office",
+    metaTitle: "Houston Flexible Workspaces from $25",
     metaDescription:
-      "Flexible workspaces in Houston at 1800 Augusta Dr inside the 610 Loop. Day pass, hot desk, dedicated desk, and private offices — month-to-month, no long-term lease.",
+      "Flexible workspaces in Houston's Galleria at 1800 Augusta Dr — day pass, hot desk, dedicated desk, and private offices. Month-to-month, no lease. Join the waitlist.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Startups scaling from 3 to 8 people without signing a new lease",
@@ -1790,7 +1790,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Furnished private offices with month-to-month terms in the Galleria. All utilities, WiFi, conference rooms, parking, and cleaning included. Bring a laptop.",
     metaTitle: "Private Office Houston | Month-to-Month",
     metaDescription:
-      "Furnished private offices in Houston's Galleria with month-to-month leases. WiFi, utilities, meeting rooms, and parking included. Solo offices to custom suites available.",
+      "Furnished private offices in Houston's Galleria, month-to-month. WiFi, utilities, meeting rooms, and parking included. Solo offices to custom suites. Join the waitlist.",
     heroImage: "/images/hero/private-office.jpg",
     useCases: [
       "Growing startups that need their own Houston space",
@@ -1890,7 +1890,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Professional meeting spaces in the Galleria available by the hour. AV equipment, video conferencing, whiteboards, and free parking included. Reserve by the hour.",
     metaTitle: "Meeting Rooms Houston | From $25/hr",
     metaDescription:
-      "Book professional meeting rooms in Houston's Galleria from $25/hr. AV equipment, video conferencing, free parking included. Huddle rooms to boardrooms for 2-14 people.",
+      "Meeting rooms in Houston's Galleria from $25/hr — AV, video conferencing, free parking. Huddle rooms to boardrooms for 2–14 people. Join the Houston waitlist today.",
     heroImage: "/images/hero/meeting-room.jpg",
     useCases: [
       "Client presentations and sales pitches",
@@ -1991,7 +1991,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Corporate conference rooms in the Galleria by the hour for client pitches, board meetings, depositions, and investor updates. Video conferencing, dual-screen boardroom option, and free parking included.",
     metaTitle: "Conference Rooms Houston | From $50/hr",
     metaDescription:
-      "Book a Houston conference room at 1800 Augusta Dr inside the 610 Loop from $50/hr. Video conferencing, dual-screen boardroom, free parking. Month-to-month bookings.",
+      "Book a Houston conference room in the Galleria from $50/hr — video conferencing, dual-screen boardroom, free parking. Month-to-month. Join the Houston waitlist.",
     heroImage: "/images/hero/meeting-room.jpg",
     useCases: [
       "Board meetings and quarterly reviews",
@@ -2081,7 +2081,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Host corporate events, workshops, networking mixers, and private gatherings in the Galleria. Full AV, flexible layouts, and on-site catering from Muze Cafe.",
     metaTitle: "Event Space Houston | From $99/hr",
     metaDescription:
-      "Rent event space in Houston's Galleria from $99/hr (varies by room). Full AV, flexible layouts, catering available. 10% off bookings of 8+ hours. Corporate events, workshops, and private gatherings.",
+      "Rent event space in Houston's Galleria from $99/hr — full AV, flexible layouts, catering available. 10% off 8+ hour bookings. Corporate events and mixers. Inquire now.",
     heroImage: "/images/hero/event-space.jpg",
     useCases: [
       "Corporate workshops and training sessions",
@@ -2281,7 +2281,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Flexible workspace for medical professionals, health-tech startups, and researchers working with the Texas Medical Center. HIPAA-aware private offices available.",
     metaTitle: "Medical Center Coworking Houston | TMC",
     metaDescription:
-      "Coworking in the Galleria for Texas Medical Center-adjacent professionals. For clinicians, health-tech startups, researchers, and pharma reps. HIPAA-aware private offices.",
+      "Galleria coworking for Texas Medical Center pros — clinicians, health-tech startups, researchers, and pharma reps. HIPAA-aware private offices. Join the Houston waitlist.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Medical professionals who need flexible office space",

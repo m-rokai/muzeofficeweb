@@ -12,7 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { locations } from "@/lib/data/locations";
 import { getFAQsForPage } from "@/lib/data/faqs";
 import { FadeIn, ScaleIn } from "@/components/marketing/animate";
-import { BRAND } from "@/lib/utils/constants";
+import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
   title: {
@@ -21,6 +21,7 @@ export const metadata: Metadata = {
   description:
     "Muze Office locations: Las Vegas (open) at 6860 Bermuda Rd and Houston (2026) in the Galleria. Free parking, month-to-month memberships. Book a tour.",
   alternates: { canonical: "/locations" },
+  openGraph: { ...OG_DEFAULTS, type: "website", url: "/locations" },
 };
 
 const locationImages: Record<string, string> = {

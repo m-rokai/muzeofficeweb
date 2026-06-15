@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Section } from "@/components/layout/section";
+import { OG_DEFAULTS } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy — Muze Office",
+  title: "Privacy Policy",
   description:
     "Muze Office privacy policy. Learn how we collect, use, and protect your personal information when you visit our website or use our workspace services.",
   alternates: { canonical: "/privacy-policy" },
+  openGraph: { ...OG_DEFAULTS, type: "website", url: "/privacy-policy" },
 };
 
 export default function PrivacyPolicyPage() {

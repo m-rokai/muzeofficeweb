@@ -18,13 +18,14 @@ import { GoogleReviewsBadge } from "@/components/marketing/google-reviews-badge"
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 import { getLocation } from "@/lib/data/locations";
 import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/components/marketing/animate";
-import { BRAND } from "@/lib/utils/constants";
+import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
   title: "Book a Free Tour — Las Vegas Workspace",
   description:
-    "Free tour of Muze Office Las Vegas at 6860 Bermuda Rd — see coworking desks, private offices, and meeting rooms. Call (702) 370-7515 or book online. Houston opening 2026.",
+    "Book a free tour of Muze Office Las Vegas at 6860 Bermuda Rd — see coworking desks, private offices, and meeting rooms. Call (702) 370-7515 or book online today.",
   alternates: { canonical: "/book-a-tour" },
+  openGraph: { ...OG_DEFAULTS, type: "website", url: "/book-a-tour" },
 };
 
 const steps = [

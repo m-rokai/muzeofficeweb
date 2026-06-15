@@ -27,7 +27,7 @@ import { LocationMap } from "@/components/marketing/location-map";
 import { GoogleReviewsBadge } from "@/components/marketing/google-reviews-badge";
 import { FadeIn } from "@/components/marketing/animate";
 import { Star } from "lucide-react";
-import { BRAND } from "@/lib/utils/constants";
+import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 
 const coreServiceIds = [
   "virtual-office",
@@ -63,9 +63,10 @@ export async function generateMetadata({
     location.phone !== "TBD" ? `Call ${location.phone}.` : "Coming soon.";
 
   return {
-    title: `Muze Office ${location.name} — Location, Hours & Directions`,
+    title: `Muze Office ${location.name} — Hours & Directions`,
     description: `Visit Muze Office ${location.name} at ${shortAddress}. Hours, parking, directions, and amenities. Month-to-month memberships available. ${phoneCta}`,
     alternates: { canonical: `/locations/${city}` },
+    openGraph: { ...OG_DEFAULTS, type: "website", url: `/locations/${city}` },
     // Prevent Google from indexing coming-soon pages with TBD addresses,
     // but allow crawlers to follow outbound links (internal navigation,
     // waitlist CTAs). The page stays accessible to real visitors.
@@ -102,7 +103,7 @@ export default async function LocationDetailPage({
 
   return (
     <>
-      {isActive && <LocalBusinessSchema locationId={location.id} />}
+      {isActive && <LocalBusinessSchema locationId={location.id} includeRating />}
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },

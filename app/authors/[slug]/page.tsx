@@ -6,7 +6,7 @@ import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { JsonLd } from "@/components/seo/json-ld";
 import { PersonSchema } from "@/components/seo/person-schema";
 import { FadeIn } from "@/components/marketing/animate";
-import { BRAND } from "@/lib/utils/constants";
+import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 import {
   people,
   getPersonBySlug,
@@ -31,6 +31,7 @@ export async function generateMetadata({
     description: person.shortBio,
     alternates: { canonical: `/authors/${person.slug}` },
     openGraph: {
+      ...OG_DEFAULTS,
       title: `${person.name} — ${person.jobTitle}`,
       description: person.shortBio,
       type: "profile",

@@ -91,6 +91,7 @@ export function ServiceSchema({ serviceId, cityId }: ServiceSchemaProps) {
     description: service.shortDescription,
     provider: {
       "@type": "Organization",
+      "@id": `${BRAND.url}/#organization`,
       name: BRAND.name,
       url: BRAND.url,
     },

@@ -7,10 +7,10 @@ export const BRAND = {
   blogUrl: "https://muzeoffice.com/blog",
   social: {
     twitter: "https://x.com/muzeoffice",
-    facebook: "https://facebook.com/muzeoffice",
-    instagram: "https://instagram.com/muzeoffice",
-    linkedin: "https://linkedin.com/company/muzeoffice",
-    tiktok: "https://tiktok.com/@muzeoffice",
+    facebook: "https://www.facebook.com/muzeoffice",
+    instagram: "https://www.instagram.com/muzeoffice",
+    linkedin: "https://www.linkedin.com/company/muzeoffice",
+    tiktok: "https://www.tiktok.com/@muzeoffice",
   },
   apps: {
     ios: "https://apps.apple.com/us/app/muze-office/id6450022118",
@@ -28,6 +28,26 @@ export const BRAND = {
   // review."
   reviewUrl: "https://www.google.com/search?q=Muze+Office+Las+Vegas&kgmid=/g/11x2wpzbg_",
 } as const;
+
+/**
+ * Shared Open Graph defaults. Next.js shallow-merges (replaces) the whole
+ * `openGraph` object per page, so any page that sets its own `openGraph` must
+ * spread these back in or it loses the site-wide image/siteName/locale.
+ * `url` is intentionally omitted — set it per page to that page's canonical,
+ * since Next only emits og:url when `openGraph.url` is explicitly provided.
+ */
+export const OG_DEFAULTS = {
+  siteName: "Muze Office",
+  locale: "en_US",
+  images: [
+    {
+      url: "/images/og/default.png",
+      width: 2048,
+      height: 2048,
+      alt: "Muze Office — Coworking, Virtual Offices & Private Offices in Las Vegas & Houston",
+    },
+  ],
+};
 
 export const COLORS = {
   gold: "#EAA820",

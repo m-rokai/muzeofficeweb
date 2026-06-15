@@ -39,7 +39,7 @@ import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 import { RelatedReading } from "@/components/marketing/related-reading";
 import { services } from "@/lib/data/services";
 import { locations, getLocation } from "@/lib/data/locations";
-import { BRAND } from "@/lib/utils/constants";
+import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -47,6 +47,7 @@ export const metadata: Metadata = {
   description:
     "Flexible workspace at 6860 Bermuda Rd in Las Vegas — coworking, private offices, meeting rooms. Month-to-month, free parking, on-site cafe. Houston coming soon.",
   alternates: { canonical: "/" },
+  openGraph: { ...OG_DEFAULTS, type: "website", url: "/" },
 };
 
 const serviceIcons: Record<string, React.ReactNode> = {
@@ -89,7 +90,7 @@ export default function HomePage() {
   const lasVegas = getLocation("las-vegas");
   return (
     <>
-      <LocalBusinessSchema locationId="las-vegas" />
+      <LocalBusinessSchema locationId="las-vegas" includeRating />
       {/* Hero */}
       <section className="relative flex min-h-[90vh] items-end overflow-hidden bg-[#1A1A1A] px-6 pb-20 pt-32">
         <Image

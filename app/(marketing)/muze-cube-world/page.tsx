@@ -20,13 +20,14 @@ import {
   StaggerContainer,
   StaggerItem,
 } from "@/components/marketing/animate";
-import { BRAND } from "@/lib/utils/constants";
+import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
-  title: "Muze + Cube World — Workspace Meets Furniture Showroom | Muze Office",
+  title: "Muze + Cube World — Coworking Furniture Showroom",
   description:
-    "Muze Office Las Vegas is furnished by Cube World USA — a working coworking space and live furniture showroom at 6860 Bermuda Rd. Lounge, work, host events, and shop the pieces around you.",
+    "Muze Office Las Vegas is a working coworking space and live Cube World furniture showroom at 6860 Bermuda Rd. Work, host events, and shop the pieces around you.",
   alternates: { canonical: "/muze-cube-world" },
+  openGraph: { ...OG_DEFAULTS, type: "website", url: "/muze-cube-world" },
 };
 
 const amenities = [
