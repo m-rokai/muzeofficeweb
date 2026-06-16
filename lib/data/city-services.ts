@@ -727,7 +727,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Meeting Rooms & Meeting Space in Las Vegas",
     heroSubtitle:
       "Professional meeting spaces available by the hour. AV equipment, video conferencing, whiteboards, and free parking included. Book online instantly.",
-    metaTitle: "Meeting Room Rental Las Vegas — From $25/hr",
+    metaTitle: "Meeting Rooms & Meeting Space Las Vegas $25/hr",
     metaDescription:
       "Book meeting rooms in Las Vegas from $25/hr — no F&B minimum, AV and video conferencing included, free parking. Huddle rooms to boardrooms for 2–14. Reserve online.",
     heroImage: "/images/hero/meeting-room.jpg",

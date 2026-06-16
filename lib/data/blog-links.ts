@@ -27,13 +27,11 @@ const relatedByService: Record<string, string[]> = {
     "6-advantages-of-a-virtual-office-in-las-vegas",
     "virtual-mailboxes-in-las-vegas",
     "nevada-virtual-office-for-out-of-state-founders",
-    "the-3-top-perks-of-a-virtual-business-address-in-las-vegas",
   ],
   "private-office": [
     "private-office-vs-coworking-space",
     "5-benefits-of-private-office-space-in-las-vegas",
     "how-to-choose-private-office-space-rent",
-    "advantages-of-our-private-office-space",
     "private-office-for-seeking-confidentiality",
   ],
   "meeting-rooms": [

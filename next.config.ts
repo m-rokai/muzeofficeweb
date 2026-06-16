@@ -108,6 +108,18 @@ const removedBlogRedirects = [
   { source: "/blog/how-to-choose-the-right-office-furniture-for-comfort-and-functionality", destination: "/blog" },
   { source: "/the-ultimate-guide-to-office-acoustics-creating-a-sound-environment-for-work", destination: "/blog" },
   { source: "/blog/the-ultimate-guide-to-office-acoustics-creating-a-sound-environment-for-work", destination: "/blog" },
+
+  // Consolidated duplicate / thin posts (2026-06-15 cannibalization audit) → surviving post
+  { source: "/the-3-top-perks-of-a-virtual-business-address-in-las-vegas", destination: "/blog/6-advantages-of-a-virtual-office-in-las-vegas" },
+  { source: "/blog/the-3-top-perks-of-a-virtual-business-address-in-las-vegas", destination: "/blog/6-advantages-of-a-virtual-office-in-las-vegas" },
+  { source: "/top-benefits-of-a-virtual-office-in-vegas-for-remote-teams", destination: "/blog/6-advantages-of-a-virtual-office-in-las-vegas" },
+  { source: "/blog/top-benefits-of-a-virtual-office-in-vegas-for-remote-teams", destination: "/blog/6-advantages-of-a-virtual-office-in-las-vegas" },
+  { source: "/why-businesses-switch-from-physical-to-virtual-mailboxes-in-las-vegas", destination: "/blog/virtual-mailboxes-in-las-vegas" },
+  { source: "/blog/why-businesses-switch-from-physical-to-virtual-mailboxes-in-las-vegas", destination: "/blog/virtual-mailboxes-in-las-vegas" },
+  { source: "/advantages-of-our-private-office-space", destination: "/blog/5-benefits-of-private-office-space-in-las-vegas" },
+  { source: "/blog/advantages-of-our-private-office-space", destination: "/blog/5-benefits-of-private-office-space-in-las-vegas" },
+  { source: "/budgeting-for-a-successful-event", destination: "/blog/how-to-budget-a-corporate-event-in-las-vegas" },
+  { source: "/blog/budgeting-for-a-successful-event", destination: "/blog/how-to-budget-a-corporate-event-in-las-vegas" },
 ];
 
 type RedirectRule = {
