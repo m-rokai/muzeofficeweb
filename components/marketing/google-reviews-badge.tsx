@@ -8,15 +8,13 @@ interface GoogleReviewsBadgeProps {
   /** Optional — only render a review count if the caller can verify it
    *  against the live Google Business Profile. */
   reviewCount?: number;
-  /** Optional Google Business Profile URL. Defaults to a search URL for
-   *  "Muze Office Las Vegas" which Google will resolve to the verified
-   *  listing once a stable GBP URL is available. */
+  /** Optional link target. Defaults to the Google Business Profile
+   *  "write a review" short link, so the review box opens directly. */
   href?: string;
   className?: string;
 }
 
-const DEFAULT_HREF =
-  "https://www.google.com/search?q=Muze+Office+Las+Vegas&hl=en";
+const DEFAULT_HREF = "https://g.page/r/CYjtMKmRvwKKEBM/review";
 
 export function GoogleReviewsBadge({
   rating,

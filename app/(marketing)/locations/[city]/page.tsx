@@ -103,7 +103,7 @@ export default async function LocationDetailPage({
 
   return (
     <>
-      {isActive && <LocalBusinessSchema locationId={location.id} includeRating />}
+      {isActive && <LocalBusinessSchema locationId={location.id} />}
       <Breadcrumbs
         items={[
           { label: "Home", href: "/" },

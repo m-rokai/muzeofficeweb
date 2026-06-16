@@ -90,7 +90,7 @@ export default function HomePage() {
   const lasVegas = getLocation("las-vegas");
   return (
     <>
-      <LocalBusinessSchema locationId="las-vegas" includeRating />
+      <LocalBusinessSchema locationId="las-vegas" />
       {/* Hero */}
       <section className="relative flex min-h-[90vh] items-end overflow-hidden bg-[#1A1A1A] px-6 pb-20 pt-32">
         <Image

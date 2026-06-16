@@ -4,16 +4,10 @@ import { JsonLd } from "@/components/seo/json-ld";
 
 interface LocalBusinessSchemaProps {
   locationId: string;
-  /** Emit aggregateRating. Set ONLY on pages that represent the reviewed
-   *  business itself (homepage + the Las Vegas location page) — never on the
-   *  service landing pages, where the same rating duplicated across many URLs
-   *  reads as self-serving structured data to Google. */
-  includeRating?: boolean;
 }
 
 export function LocalBusinessSchema({
   locationId,
-  includeRating = false,
 }: LocalBusinessSchemaProps) {
   const location = getLocation(locationId);
   if (!location) return null;
@@ -92,16 +86,13 @@ export function LocalBusinessSchema({
         }
       : undefined,
     priceRange: "$25-$899",
-    aggregateRating:
-      includeRating && location.rating && location.reviewCount
-        ? {
-            "@type": "AggregateRating",
-            ratingValue: location.rating,
-            reviewCount: location.reviewCount,
-            bestRating: 5,
-            worstRating: 1,
-          }
-        : undefined,
+    // NO aggregateRating here, by design. This CoworkingSpace (a LocalBusiness
+    // subtype) is describing itself, so a self-hosted rating is "self-serving"
+    // and ineligible for review-snippet stars under Google policy — it only
+    // produces GSC "invalid object type for field" errors, never stars. The
+    // real 4.6★ rating lives on the Google Business Profile and surfaces in
+    // Maps / the local pack. location.rating & location.reviewCount still feed
+    // the visible <GoogleReviewsBadge> UI — never route them back into JSON-LD.
     sameAs,
     amenityFeature: [
       { "@type": "LocationFeatureSpecification", name: "High-Speed WiFi", value: true },

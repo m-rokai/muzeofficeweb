@@ -21,12 +21,9 @@ export const BRAND = {
     tourUrl: "https://muzeoffice.optixapp.com/book/tour/",
     signupUrl: "https://muzeoffice.optixapp.com/signup/",
   },
-  // Where "Leave a review" CTAs (and /review) point. TODO: replace with the
-  // one-click short link from the GBP dashboard ("Get more reviews" →
-  // https://g.page/r/XXXX/review) so the review box opens directly. Until then
-  // this lands the user on the verified GBP listing where they click "Write a
-  // review."
-  reviewUrl: "https://www.google.com/search?q=Muze+Office+Las+Vegas&kgmid=/g/11x2wpzbg_",
+  // Where "Leave a review" CTAs (and /review) point: the GBP one-click
+  // "write a review" short link, so the review box opens directly.
+  reviewUrl: "https://g.page/r/CYjtMKmRvwKKEBM/review",
 } as const;
 
 /**
