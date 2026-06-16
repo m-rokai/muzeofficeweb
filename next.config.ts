@@ -161,16 +161,11 @@ const nextConfig: NextConfig = {
     }));
 
     return withTrailingSlashVariants([
-      // Short link for review-request campaigns (QR codes, receipts, signage).
-      // Temporary (not permanent) — KEEP IN SYNC with BRAND.reviewUrl in
-      // lib/utils/constants.ts; swap for the GBP one-click g.page/r/.../review
-      // link when available.
-      {
-        source: "/review",
-        destination:
-          "https://www.google.com/search?q=Muze+Office+Las+Vegas&kgmid=/g/11x2wpzbg_",
-        permanent: false,
-      },
+      // NOTE: the /review review-campaign short link is handled in proxy.ts,
+      // NOT here — Next.js does not apply a next.config redirect with an
+      // external destination at this layer (the path falls through to the
+      // [cityService] catch-all and 404s). proxy.ts redirects it to
+      // BRAND.reviewUrl. Keep external-destination redirects in proxy.ts.
       ...wordpressRedirects.map((r) => ({ ...r, permanent: true })),
       ...removedBlogRedirects.map((r) => ({ ...r, permanent: true })),
       ...autoBlogRedirects,

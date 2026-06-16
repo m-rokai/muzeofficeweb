@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { BRAND } from "@/lib/utils/constants";
 
 const CANONICAL_HOST = "muzeoffice.com";
 const LEGACY_WWW_HOST = "www.muzeoffice.com";
@@ -16,6 +17,18 @@ const LEGACY_WWW_HOST = "www.muzeoffice.com";
  * Both checks are folded into a single 308 when they both apply.
  */
 export function proxy(request: NextRequest) {
+  // Review-campaign short link (QR codes, receipts, signage). Handled here
+  // rather than in next.config `redirects()` because Next does NOT apply a
+  // config redirect with an EXTERNAL destination at that layer — /review
+  // otherwise falls through to the [cityService] catch-all and 404s. Points
+  // to BRAND.reviewUrl (single source of truth) with a 307 (temporary).
+  if (
+    request.nextUrl.pathname === "/review" ||
+    request.nextUrl.pathname === "/review/"
+  ) {
+    return NextResponse.redirect(BRAND.reviewUrl, 307);
+  }
+
   // Use a plain URL instead of request.nextUrl.clone(): NextURL reapplies
   // the incoming request's trailing-slash flag in its href serializer, which
   // silently undoes pathname edits made here.
