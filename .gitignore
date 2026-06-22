@@ -46,3 +46,4 @@ ProjectPilot/
 handoff/
 .playwright-mcp/
 .env*.local
+.img-staging/
