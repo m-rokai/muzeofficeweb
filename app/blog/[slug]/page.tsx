@@ -15,6 +15,7 @@ import {
   getReadingTime,
 } from "@/lib/blog";
 import { mdxComponents } from "@/components/blog/mdx-components";
+import { BlogCta } from "@/components/blog/blog-cta";
 import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { JsonLd } from "@/components/seo/json-ld";
 import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
@@ -180,6 +181,14 @@ export default async function BlogPostPage({
               options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
             />
           </div>
+
+          {/* Template-level conversion CTA — derived from the post's topic so
+              every indexable post funnels its high-intent readers toward the
+              matching money page / waitlist. Kept out of the MDX source so the
+              raw-markdown mirrors stay clean. */}
+          {!post.noindex && (
+            <BlogCta categories={post.categories} slug={post.slug} />
+          )}
         </div>
       </Section>
 
