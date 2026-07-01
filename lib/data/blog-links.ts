@@ -18,15 +18,20 @@ const relatedByService: Record<string, string[]> = {
     "coworking-spaces-in-las-vegas-the-best-of-both-worlds",
     "how-to-maximize-productivity-in-your-coworking-space-in-las-vegas",
   ],
-  // LV posts lead — the indexed LV money page renders the first 3, and these
-  // are the strongest LV-VO rankers in GSC.
+  // The indexed LV money page renders the first 3. We deliberately lead with
+  // complementary decision/hub posts — NOT `how-to-set-up-a-virtual-office-in-
+  // las-vegas`, which is an exact-match competitor for the money page's own
+  // head term (and was demoted hard in the June 2026 update). It stays in the
+  // array for long-tail value but sits below the rendered top-3.
   "virtual-office": [
-    "how-to-set-up-a-virtual-office-in-las-vegas",
     "nevada-llc-virtual-office",
+    "virtual-office-for-llc",
     "virtual-office-vs-po-box-in-nevada",
+    "virtual-office-cost",
     "6-advantages-of-a-virtual-office-in-las-vegas",
     "virtual-mailboxes-in-las-vegas",
     "nevada-virtual-office-for-out-of-state-founders",
+    "how-to-set-up-a-virtual-office-in-las-vegas",
   ],
   "private-office": [
     "private-office-vs-coworking-space",

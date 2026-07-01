@@ -44,7 +44,7 @@ const virtualOfficeFAQs: FAQ[] = [
   {
     question: "How much does a virtual office cost in Las Vegas?",
     answer:
-      "At Muze Office, virtual office plans run $39 to $249 per month with no setup fee: Mail Holding ($39), Sandstone ($69, adds package receiving), Opal ($149, adds mail forwarding plus coworking and meeting room hours), and Diamond ($249, adds 20 coworking hours and a dedicated local phone line). Many Las Vegas providers charge $59–$99 a month plus a $50–$75 setup fee, so compare the all-in first-month cost, not just the sticker price.",
+      "At Muze Office, virtual office plans run $39 to $249 per month with a one-time $25 setup fee: Mail Holding ($39), Sandstone ($69, adds package receiving), Opal ($149, adds mail forwarding plus coworking and meeting room hours), and Diamond ($249, adds 20 coworking hours and a dedicated local phone line). Many Las Vegas providers charge $59–$99 a month plus a $50–$75 setup fee, so compare the all-in first-month cost, not just the sticker price.",
   },
   {
     question: "Can I use a virtual office address to open a business bank account?",
@@ -427,7 +427,7 @@ const hotDeskFAQs: FAQ[] = [
   {
     question: "Is there a long-term contract?",
     answer:
-      "No. Hot Desk is month-to-month with 30 days' notice to cancel. No setup fees, no personal guaranty, no 12-month commitment. You can pause a month if you're traveling — just let the team know in advance.",
+      "No. Hot Desk is month-to-month with 30 days' notice to cancel. There's a one-time $25 setup fee, but no personal guaranty and no 12-month commitment. You can pause a month if you're traveling — just let the team know in advance.",
   },
 ];
 
@@ -460,7 +460,7 @@ const dedicatedDeskFAQs: FAQ[] = [
   {
     question: "Is Dedicated Desk month-to-month?",
     answer:
-      "Yes. Month-to-month with 30 days' notice to cancel. No setup fees, no personal guaranty, no long-term lease. If you outgrow the shared area and need walls, the upgrade path to Private Office is clean.",
+      "Yes. Month-to-month with 30 days' notice to cancel. There's a one-time $25 setup fee, but no personal guaranty and no long-term lease. If you outgrow the shared area and need walls, the upgrade path to Private Office is clean.",
   },
 ];
 
@@ -565,7 +565,7 @@ const workspaceMembershipsFAQs: FAQ[] = [
   {
     question: "Are memberships month-to-month, or is there a contract?",
     answer:
-      "Virtual Office, Coworking, and Private Office memberships are month-to-month — no long-term lease, no personal guaranty, no setup fees — cancellable with 30 days' notice. Meeting Rooms and Event Space are booked hourly or by package; see those pages for cancellation windows.",
+      "Virtual Office, Coworking, and Private Office memberships are month-to-month — a one-time $25 setup fee, no long-term lease, and no personal guaranty — cancellable with 30 days' notice. Meeting Rooms and Event Space are booked hourly or by package; see those pages for cancellation windows.",
   },
   {
     question: "What's included with every membership?",

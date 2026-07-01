@@ -438,7 +438,7 @@ export default function HomePage() {
             {
               icon: <Users className="h-6 w-6" />,
               title: "No long-term leases",
-              body: "Every plan is month-to-month with 30 days' notice to cancel. No setup fees, no personal guaranty, no multi-year contracts.",
+              body: "Every plan is month-to-month with 30 days' notice to cancel — a one-time $25 setup fee, no personal guaranty, no multi-year contracts.",
             },
             {
               icon: <Car className="h-6 w-6" />,

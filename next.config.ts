@@ -120,6 +120,34 @@ const removedBlogRedirects = [
   { source: "/blog/advantages-of-our-private-office-space", destination: "/blog/5-benefits-of-private-office-space-in-las-vegas" },
   { source: "/budgeting-for-a-successful-event", destination: "/blog/how-to-budget-a-corporate-event-in-las-vegas" },
   { source: "/blog/budgeting-for-a-successful-event", destination: "/blog/how-to-budget-a-corporate-event-in-las-vegas" },
+
+  // Thin generic business-tips / off-topic posts retired 2026-07-01 (spam-update
+  // content hardening): zero GSC clicks, no local/coworking nexus, ghost bylines.
+  // Each → closest surviving service page or the blog index.
+  { source: "/throwing-a-successful-event-for-your-business-tips-and-tricks", destination: "/las-vegas-event-space" },
+  { source: "/blog/throwing-a-successful-event-for-your-business-tips-and-tricks", destination: "/las-vegas-event-space" },
+  { source: "/5-tips-to-help-your-small-business-convert-more-leads", destination: "/blog" },
+  { source: "/blog/5-tips-to-help-your-small-business-convert-more-leads", destination: "/blog" },
+  { source: "/top-5-strategies-for-small-businesses-to-improve-customer-retention", destination: "/blog" },
+  { source: "/blog/top-5-strategies-for-small-businesses-to-improve-customer-retention", destination: "/blog" },
+  { source: "/boosting-employee-engagement-in-a-small-business", destination: "/blog" },
+  { source: "/blog/boosting-employee-engagement-in-a-small-business", destination: "/blog" },
+  { source: "/mastering-customer-complaint-handling-in-2024", destination: "/blog" },
+  { source: "/blog/mastering-customer-complaint-handling-in-2024", destination: "/blog" },
+  { source: "/creating-a-productive-morning-routine", destination: "/blog" },
+  { source: "/blog/creating-a-productive-morning-routine", destination: "/blog" },
+  { source: "/outsourcing-vs-in-house-which-is-the-best-choice-for-small-businesses", destination: "/blog" },
+  { source: "/blog/outsourcing-vs-in-house-which-is-the-best-choice-for-small-businesses", destination: "/blog" },
+  { source: "/harnessing-the-power-of-social-media-for-business-growth-in-2024", destination: "/blog" },
+  { source: "/blog/harnessing-the-power-of-social-media-for-business-growth-in-2024", destination: "/blog" },
+  { source: "/transitioning-from-remote-to-hybrid-work", destination: "/las-vegas-coworking" },
+  { source: "/blog/transitioning-from-remote-to-hybrid-work", destination: "/las-vegas-coworking" },
+  { source: "/embracing-the-future-latest-trends-in-remote-work", destination: "/las-vegas-coworking" },
+  { source: "/blog/embracing-the-future-latest-trends-in-remote-work", destination: "/las-vegas-coworking" },
+  { source: "/maximizing-small-office-spaces", destination: "/workspace-memberships" },
+  { source: "/blog/maximizing-small-office-spaces", destination: "/workspace-memberships" },
+  { source: "/ai-in-modern-workspace", destination: "/blog" },
+  { source: "/blog/ai-in-modern-workspace", destination: "/blog" },
 ];
 
 type RedirectRule = {
