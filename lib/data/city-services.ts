@@ -15,8 +15,30 @@ export interface BestForPersona {
   fit: string[];
 }
 
+export interface CostComparisonRow {
+  provider: string;
+  monthly: string;
+  setup: string;
+  firstMonth: string;
+  /** Render this row visually emphasized (the Muze row). */
+  highlight?: boolean;
+  /** Small-print caveat rendered under the provider name (e.g. surcharges). */
+  note?: string;
+}
+
 export interface LongFormBody {
   whyChoose: LongFormSection;
+  /** Optional provider price-comparison table rendered directly under the
+   *  pricing grid. Muze's transparency wedge — no LV competitor shows
+   *  setup-fee-inclusive first-month pricing. Competitor figures must be
+   *  real published rates with an as-of date in the disclaimer, never
+   *  invented; drop a row rather than guess. */
+  costComparison?: {
+    heading: string;
+    intro: string;
+    rows: CostComparisonRow[];
+    disclaimer: string;
+  };
   /** Rich "who it's best for" personas. When present, the page template
    *  renders these as a card grid in place of the simple useCases grid.
    *  Active LV slugs have this; Houston coming-soon slugs do not. */
@@ -133,6 +155,47 @@ export const cityServiceData: Record<string, CityServiceData> = {
           "A registered agent service solves one specific problem: receiving legal service of process for your LLC. It does not give you a usable business address, does not forward your mail, does not let you meet clients, and does not appear on your marketing materials. Muze Office is not your registered agent — we are a business address and mail service. If you already have a registered agent, a virtual office sits alongside it: the registered agent handles lawsuits, the virtual office handles everything else.",
           "Using your home address is the path of least resistance, but it comes with real costs. It becomes a public record once you file your LLC, it exposes your family to anyone who searches for your business, and in many Nevada HOAs and residential zones it technically violates covenants for commercial mail receipt. For a few hundred dollars a year, a Muze Office business address removes that risk entirely and gives you a cleaner professional footprint.",
         ],
+      },
+      costComparison: {
+        heading: "What month one actually costs, provider by provider",
+        intro:
+          "Most virtual office providers advertise the monthly rate and collect a setup fee at checkout. The honest comparison is what your first month costs all-in — monthly rate plus the one-time setup fee:",
+        rows: [
+          {
+            provider: "Muze Office",
+            monthly: "$39",
+            setup: "$25 flat",
+            firstMonth: "$64",
+            highlight: true,
+          },
+          {
+            provider: "Business Suites International",
+            monthly: "$39",
+            setup: "$50",
+            firstMonth: "$89",
+            note: "Plus a 30% handling fee on forwarded mail",
+          },
+          {
+            provider: "Opus Virtual Offices",
+            monthly: "$99",
+            setup: "Not advertised",
+            firstMonth: "$99+",
+          },
+          {
+            provider: "Davinci Virtual",
+            monthly: "From $50",
+            setup: "$150–$199",
+            firstMonth: "$200+",
+          },
+          {
+            provider: "Alliance Virtual Offices",
+            monthly: "From $59",
+            setup: "$200",
+            firstMonth: "$259+",
+          },
+        ],
+        disclaimer:
+          "Competitor figures are published rates for comparable Las Vegas virtual office plans, verified June–July 2026; they vary by location and plan tier, so confirm current pricing with each provider. Muze pricing is our actual rate: $39/mo Mail Holding plus a one-time $25 setup fee, month-to-month, with no mail-forwarding surcharges.",
       },
       howToGetStarted: {
         heading: "How to get started with a Las Vegas business address",
@@ -918,7 +981,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Event Space & Training Rooms in Las Vegas",
     heroSubtitle:
       "Host corporate events, workshops, networking mixers, and private gatherings. Full AV, flexible layouts, and on-site catering from Muze Cafe.",
-    metaTitle: "Las Vegas Event Space — From $99/hr",
+    metaTitle: "Las Vegas Event Space — From $99/hr, No F&B Minimum",
     metaDescription:
       "Rent event space in Las Vegas from $99/hr — full AV, flexible layouts, on-site catering, no F&B minimum. Corporate events, workshops, mixers. Book a tour.",
     heroImage: "/images/hero/event-space.jpg",

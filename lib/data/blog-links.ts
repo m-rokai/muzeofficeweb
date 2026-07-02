@@ -39,17 +39,22 @@ const relatedByService: Record<string, string[]> = {
     "how-to-choose-private-office-space-rent",
     "private-office-for-seeking-confidentiality",
   ],
+  // Same routing rule as virtual-office below: `meeting-space-near-las-vegas-
+  // airport` holds "meeting space in las vegas" (pos ~29, Jul 2026) while the
+  // /las-vegas-meeting-rooms money page sits ~70 — so it stays OUT of the
+  // rendered top-3 here and on conference-rooms. It keeps its top-3 slot on
+  // airport-coworking, where it's on-topic rather than a head-term competitor.
   "meeting-rooms": [
     "modern-meeting-room-near-ces-las-vegas",
-    "meeting-space-near-las-vegas-airport",
     "what-to-look-for-in-conference-rooms-near-me-getting-the-best-in-las-vegas",
     "podcasting-rooms-in-las-vegas",
+    "meeting-space-near-las-vegas-airport",
   ],
   "conference-rooms": [
     "what-to-look-for-in-conference-rooms-near-me-getting-the-best-in-las-vegas",
     "modern-meeting-room-near-ces-las-vegas",
-    "meeting-space-near-las-vegas-airport",
     "podcasting-rooms-in-las-vegas",
+    "meeting-space-near-las-vegas-airport",
   ],
   "event-space": [
     "how-to-find-the-perfect-event-space-in-las-vegas",

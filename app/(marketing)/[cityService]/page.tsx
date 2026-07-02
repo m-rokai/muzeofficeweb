@@ -324,6 +324,81 @@ export default async function CityServicePage({ params }: PageProps) {
         </StaggerContainer>
       </Section>
 
+      {/* ── First-month cost comparison (transparency wedge) ── */}
+      {pageData.longFormBody?.costComparison && (
+        <Section variant="gray" id="cost-comparison">
+          <FadeIn>
+            <div className="flex flex-col items-center gap-4 text-center">
+              <h2 className="font-[family-name:var(--font-plus-jakarta)] text-3xl font-semibold text-[#1A1A1A] md:text-4xl lg:text-5xl">
+                {pageData.longFormBody.costComparison.heading}
+              </h2>
+              <p className="max-w-[640px] text-lg text-[#74726D]">
+                {pageData.longFormBody.costComparison.intro}
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn>
+            <div className="mx-auto mt-10 max-w-[860px]">
+              <div className="overflow-x-auto rounded-xl border border-[#E6E4DF] bg-white">
+                <table className="w-full border-collapse text-left">
+                  <thead>
+                    <tr>
+                      {[
+                        "Provider",
+                        "Monthly",
+                        "One-time setup",
+                        "First month all-in",
+                      ].map((header) => (
+                        <th
+                          key={header}
+                          className="border-b border-[#E6E4DF] px-4 py-3 text-sm font-semibold uppercase tracking-wide text-[#74726D]"
+                        >
+                          {header}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {pageData.longFormBody.costComparison.rows.map((row) => (
+                      <tr
+                        key={row.provider}
+                        className={row.highlight ? "bg-[#F2F1ED]" : undefined}
+                      >
+                        <td className="border-b border-[#E6E4DF] px-4 py-3 text-base font-medium text-[#1A1A1A]">
+                          {row.provider}
+                          {row.note && (
+                            <span className="block text-sm font-normal text-[#74726D]">
+                              {row.note}
+                            </span>
+                          )}
+                        </td>
+                        <td className="border-b border-[#E6E4DF] px-4 py-3 text-base text-[#1A1A1A]">
+                          {row.monthly}
+                        </td>
+                        <td className="border-b border-[#E6E4DF] px-4 py-3 text-base text-[#1A1A1A]">
+                          {row.setup}
+                        </td>
+                        <td
+                          className={cn(
+                            "border-b border-[#E6E4DF] px-4 py-3 text-base text-[#1A1A1A]",
+                            row.highlight && "font-semibold"
+                          )}
+                        >
+                          {row.firstMonth}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <p className="mt-4 text-sm text-[#74726D]">
+                {pageData.longFormBody.costComparison.disclaimer}
+              </p>
+            </div>
+          </FadeIn>
+        </Section>
+      )}
+
       {hasOnlineBooking && (
         <Section variant="gray" id="book-online">
           <div className="mx-auto max-w-[1100px]">
