@@ -330,7 +330,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Freelancers and consultants here for a single day of focused work",
-      "CES, SEMA, NAB, and MAGIC attendees escaping the convention floor",
+      "CES, SEMA, NAB, MAGIC, Black Hat, and DEF CON attendees escaping the convention floor",
       "Remote workers testing the space before committing to a membership",
       "Traveling professionals with one meeting or one deliverable in town",
       "Freelance creatives who need a professional Zoom backdrop",
@@ -992,6 +992,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Private parties and celebrations",
       "Seminars and panel discussions",
       "Team retreats and offsites",
+      "Hackathon teams, CTF crews, and sprint teams needing a private war room",
     ],
     locationCallout:
       "6860 Bermuda Rd, Suite 200 — 10 minutes from Harry Reid International Airport. Free parking for all guests. On-site catering by Muze Cafe.",
@@ -1039,6 +1040,17 @@ export const cityServiceData: Record<string, CityServiceData> = {
             "Space reconfigures between work mode and party mode without moving venues",
             "Climate-controlled indoor venue — reliable regardless of Las Vegas summer heat or winter wind",
             "Muze Cafe catering handles breakfast, lunch, and an evening reception without a separate vendor",
+          ],
+        },
+        {
+          persona: "Hackathon teams, CTF crews, and corporate sprint teams",
+          scenario:
+            "Your team needs a private room for a full day — laptops out, door closed, no interruptions — to build, compete, or ship during a hackathon, CTF, or an internal sprint.",
+          fit: [
+            "Book by the hour, with a flat 10% discount on bookings of 8+ hours for a full day of heads-down building",
+            "Door closes for a private room — no shared floor, no walk-by traffic during a crunch",
+            "Fast WiFi handles multiple laptops and video calls without slowing down",
+            "Free parking for the whole team, and Muze Cafe catering keeps the room fed without a break in momentum",
           ],
         },
       ],
@@ -1180,7 +1192,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "convention-coworking",
     h1: "Convention Coworking in Las Vegas",
     heroSubtitle:
-      "In town for CES, SEMA, NAB, or MAGIC? Skip the hotel lobby and get a real workspace with fast WiFi, free parking, and meeting rooms.",
+      "In town for CES, SEMA, NAB, MAGIC, Black Hat, or DEF CON? Skip the hotel lobby and get a real workspace with fast WiFi, free parking, and meeting rooms.",
     metaTitle: "Convention Coworking Las Vegas | CES, SEMA",
     metaDescription:
       "Coworking for Las Vegas convention attendees. Day passes from $25, weekly passes available. Skip the hotel lobby — real desks, fast WiFi, free parking.",
@@ -1190,6 +1202,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "SEMA Show visitors and vendors",
       "NAB Show media professionals",
       "MAGIC fashion industry visitors",
+      "Black Hat and DEF CON security professionals",
       "Convention exhibitors who need meeting space",
       "Business travelers here for trade shows",
     ],
@@ -1245,7 +1258,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       whyChoose: {
         heading: "Why choose convention coworking in Las Vegas at Muze Office",
         paragraphs: [
-          "Las Vegas hosts more major conventions than any other US city. CES in January fills the Las Vegas Convention Center with 130,000+ attendees. SEMA Show in November brings 160,000. World of Concrete, MAGIC, NAB Show, ConExpo, RSNA, Black Hat, Money 20/20, Adobe Summit, Dreamforce West, and dozens of smaller industry events bring waves of business travelers to the city throughout the year. For anyone attending these shows as an exhibitor, a business development rep, a buyer, or an executive scoping deals, the experience of trying to actually work during convention week is consistently painful — and it's the exact problem Muze Office solves.",
+          "Las Vegas hosts more major conventions than any other US city. CES in January fills the Las Vegas Convention Center with 130,000+ attendees. SEMA Show in November brings 160,000. World of Concrete, MAGIC, NAB Show, ConExpo, RSNA, Black Hat, DEF CON, Money 20/20, Adobe Summit, Dreamforce West, and dozens of smaller industry events bring waves of business travelers to the city throughout the year. For anyone attending these shows as an exhibitor, a business development rep, a buyer, or an executive scoping deals, the experience of trying to actually work during convention week is consistently painful — and it's the exact problem Muze Office solves.",
           "During a major convention, every Strip hotel room and every hotel business center is at capacity. WiFi in the convention center is throttled to the point where video calls don't work. Hotel lobbies are packed with people taking the same meetings you want to take. Hotel room work setups are ergonomically miserable for more than an hour. The coffee shops and QSRs around the LVCC and Strip have lines 30-deep between sessions. If you need to take a private client call, prep for a pitch, or process a follow-up email after a booth meeting, you're out of good options.",
           "Muze Office during convention week is a different experience. We're off-Strip, in the 89119 business corridor, which means our space doesn't fill up with the convention crowd. You can drive over during a lunch break or between sessions, grab a desk, take a clean call, work through email, and head back to the show. Free parking, fast WiFi, private phone booths, and meeting rooms are all available without reservations for most time slots. For a week of conventions it costs far less than a single hotel business-center day pass.",
         ],

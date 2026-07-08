@@ -45,6 +45,7 @@ const relatedByService: Record<string, string[]> = {
   // rendered top-3 here and on conference-rooms. It keeps its top-3 slot on
   // airport-coworking, where it's on-topic rather than a head-term competitor.
   "meeting-rooms": [
+    "where-to-work-during-black-hat-def-con-las-vegas",
     "modern-meeting-room-near-ces-las-vegas",
     "what-to-look-for-in-conference-rooms-near-me-getting-the-best-in-las-vegas",
     "podcasting-rooms-in-las-vegas",
@@ -59,6 +60,7 @@ const relatedByService: Record<string, string[]> = {
   "event-space": [
     "how-to-find-the-perfect-event-space-in-las-vegas",
     "3-tips-to-organize-a-successful-event-at-small-party-venues-in-las-vegas",
+    "where-to-work-during-black-hat-def-con-las-vegas",
     "where-to-work-during-sema-show-las-vegas",
     "where-to-work-during-nab-show-las-vegas",
     "where-to-work-during-magic-las-vegas",
@@ -96,7 +98,13 @@ const relatedByService: Record<string, string[]> = {
     "day-pass-coworking-las-vegas",
     "where-to-work-during-magic-las-vegas",
   ],
+  // Seasonal rotation: the timed convention post for the NEXT upcoming major
+  // show gets a rendered top-3 slot here and on meeting-rooms/event-space.
+  // Rotate during the monthly SEO session. Currently Black Hat/DEF CON
+  // (Aug 1-9, 2026); after mid-August, rotate to the next show and restore
+  // `podcasting-rooms-in-las-vegas` to the meeting-rooms top-3.
   "convention-coworking": [
+    "where-to-work-during-black-hat-def-con-las-vegas",
     "benefits-of-coworking-near-ces-las-vegas",
     "modern-meeting-room-near-ces-las-vegas",
     "where-to-work-during-sema-show-las-vegas",
