@@ -262,7 +262,7 @@ const conventionCoworkingFAQs: FAQ[] = [
   {
     question: "Do I need to reserve in advance?",
     answer:
-      "Visits are by appointment — book your day pass or meeting room online, even same-day, and we'll have it ready. During major convention weeks we recommend booking a day or two ahead since demand is high. Day passes and meeting rooms can be reserved online or through the Muze Office app.",
+      "Yes — everything is self-serve through the Muze Office app or online booking. Reserve your day pass or meeting room (even same-day) and it's ready when you arrive; only first-time tours need an appointment. During major convention weeks we recommend booking a day or two ahead since demand is high.",
   },
   {
     question: "Is there parking?",

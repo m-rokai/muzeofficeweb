@@ -2337,7 +2337,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         paragraphs: [
           "Start with a day pass if you haven't worked from Muze Office before. $25 gets you a real desk for the day with WiFi, coffee, parking, and phone booth access — enough to see whether the space, the commute, and the vibe work for you before you commit to anything monthly.",
           "If you like the space and want to come in regularly, move up to a Hot Desk membership (month-to-month, any available desk in the shared workspace, meeting room credits, mail handling). If you want your own reserved desk that you can leave equipment on permanently, the Dedicated Desk tier adds personal storage and 24/7 biometric access.",
-          "Tours take about 15 minutes and are the easiest way to see the Augusta Dr building, test the WiFi from the desk you'd actually use, and meet the community before you commit. You can also book a day pass online — even same-day — for business hours (Monday through Friday, 10am to 7pm) and pick it up at the front desk.",
+          "Tours take about 15 minutes and are the easiest way to see the Augusta Dr building, test the WiFi from the desk you'd actually use, and meet the community before you commit. You can also book a day pass online — even same-day — for business hours (Monday through Friday, 10am to 7pm); your booking is your pass, ready when you arrive.",
         ],
       },
       relatedServices: [
