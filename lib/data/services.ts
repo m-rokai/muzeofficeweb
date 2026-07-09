@@ -139,7 +139,7 @@ export const services: Service[] = [
     name: "Day Pass",
     shortName: "Day Pass",
     shortDescription:
-      "Drop-in coworking for a single day — no membership, no commitment. Real desk, fast WiFi, unlimited coffee, and free parking included.",
+      "Same-day coworking booked online for a single day — no membership, no commitment. Real desk, fast WiFi, unlimited coffee, and free parking included.",
     icon: "Coffee",
     tiers: [
       {
@@ -247,7 +247,7 @@ export const services: Service[] = [
         price: 25,
         priceUnit: "day",
         features: [
-          "Drop-in for a single day — no membership, no commitment",
+          "Book online, even same-day — no membership, no commitment",
           "Shared desk, fast WiFi, coffee, free parking",
           "Phone booths for private calls",
         ],
@@ -534,7 +534,7 @@ export const services: Service[] = [
         priceUnit: "day",
         features: [
           "Desk, WiFi, coffee, parking",
-          "Walk in or book ahead",
+          "Book online — even same-day",
           "No membership required",
         ],
       },

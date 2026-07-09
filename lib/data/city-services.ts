@@ -241,7 +241,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You've been working from home since 2020, productivity is slipping, and the Starbucks on Paradise Rd is loud by 10am with WiFi that dies the moment your 2pm Zoom call starts.",
           fit: [
-            "$25 day pass — walk in Monday through Friday, no membership required, no commitment",
+            "$25 day pass — book online, even same-day, Monday through Friday, no membership required, no commitment",
             "Real desks and chairs built for full-day work sessions, not lounge seating",
             "Fast WiFi designed for video calls — not cafe-tier bandwidth that breaks during a presentation",
             "Phone booths for private calls without gate announcements or other patrons in the background",
@@ -265,7 +265,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           fit: [
             "Day passes at $25 — pay only for the days you're actually in town",
             "10 minutes from Harry Reid International if you fly in and out the same day",
-            "Meeting rooms bookable by the hour for impromptu client drop-ins or prospect pitches",
+            "Meeting rooms bookable by the hour for last-minute client meetings or prospect pitches",
             "Free parking — no circling Strip side streets between back-to-back meetings",
           ],
         },
@@ -300,9 +300,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to get started with coworking in Las Vegas",
         paragraphs: [
-          "If you're not sure whether coworking is right for you, start with a $25 day pass. Walk in Monday through Friday between 10am and 7pm, or book online and we'll have a spot ready when you arrive. Day passes include everything — desk, WiFi, coffee, parking, phone booths, meeting room availability. No credit card holds, no long forms, no pressure to sign up.",
+          "If you're not sure whether coworking is right for you, start with a $25 day pass. Book online — even same-day — and come in Monday through Friday between 10am and 7pm; we'll have a spot ready when you arrive. Day passes include everything — desk, WiFi, coffee, parking, phone booths, meeting room availability. No credit card holds, no long forms, no pressure to sign up.",
           "Once you've used us for a week or two and know you want to be here most days, the Hot Desk membership ($350/month) is the natural next step. Hot Desk members can use any available desk in the shared workspace, with 24/7 biometric access plus meeting room credits, mail handling, and full access to community events. If you want your own reserved spot that you can leave your monitor and dual keyboard setup on, upgrade to Dedicated Desk ($399/month) which adds a permanent desk, personal storage, and a business address with mail.",
-          "Each coworking tier has its own detail page if you want to dig into the specifics: the Day Pass ($25/day, drop-in, walk-in during front-desk hours) at /las-vegas-day-pass, the Hot Desk ($350/month, any-desk 24/7 biometric access) at /las-vegas-hot-desk, and the Dedicated Desk ($399/month, reserved desk, business address with mail) at /las-vegas-dedicated-desk. Everything is month-to-month. We don't do annual contracts, cancellation fees, or setup charges. Book a free tour if you want to see the space first, or just show up with a laptop.",
+          "Each coworking tier has its own detail page if you want to dig into the specifics: the Day Pass ($25/day, booked online, even same-day, during front-desk hours) at /las-vegas-day-pass, the Hot Desk ($350/month, any-desk 24/7 biometric access) at /las-vegas-hot-desk, and the Dedicated Desk ($399/month, reserved desk, business address with mail) at /las-vegas-dedicated-desk. Everything is month-to-month. We don't do annual contracts, cancellation fees, or setup charges. Book a free tour if you want to see the space first, or book a same-day day pass online and bring your laptop.",
         ],
       },
       relatedServices: [
@@ -323,10 +323,10 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "day-pass",
     h1: "Day Pass at Muze Office Las Vegas",
     heroSubtitle:
-      "Drop in for a single day of focused work — no membership, no setup, no commitment. Walk in with a laptop, plug into fast WiFi, and keep your day moving.",
-    metaTitle: "Day Pass Coworking Las Vegas — $25, Walk-In",
+      "Book a single day of focused work online — no membership, no setup, no commitment. Reserve online, even same-day, plug into fast WiFi, and keep your day moving.",
+    metaTitle: "Day Pass Coworking Las Vegas — $25, Book Online",
     metaDescription:
-      "Day pass coworking in Las Vegas for $25 at 6860 Bermuda Rd, Suite 200. Walk-in, no membership. Real desk, fast WiFi, unlimited coffee, free parking. 10 min from LAS.",
+      "Day pass coworking in Las Vegas for $25 at 6860 Bermuda Rd, Suite 200. Book online, no membership. Real desk, fast WiFi, unlimited coffee, free parking. 10 min from LAS.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Freelancers and consultants here for a single day of focused work",
@@ -337,16 +337,16 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Anyone whose coffee shop just asked them to buy another drink",
     ],
     locationCallout:
-      "6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 — 10 minutes from Harry Reid International Airport, off I-215, with free parking on-site. Walk in Monday through Friday, 10am to 7pm.",
+      "6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 — 10 minutes from Harry Reid International Airport, off I-215, with free parking on-site. Book online — even same-day — and come in Monday through Friday, 10am to 7pm.",
     longFormBody: {
       bestFor: [
         {
-          persona: "Drop-in professionals with one focused day in town",
+          persona: "Day-pass professionals with one focused day in town",
           scenario:
             "You're in Las Vegas for 24 to 48 hours — one client meeting, one deliverable, one stretch of heads-down time — and you need a real desk for the afternoon without signing up for anything, paying a setup fee, or explaining yourself at a coffee shop counter.",
           fit: [
             "$25 flat for the day — desk, WiFi, coffee, parking, phone booths, everything",
-            "No membership, no credit card hold, no signup forms — walk in, show ID, sit down",
+            "No membership, no credit card hold, no signup forms — book online, show ID, sit down",
             "Phone booths for private calls without airport PA announcements in the background",
             "Free parking so a $25 day is actually a $25 day — no $40 Strip valet on top",
           ],
@@ -377,14 +377,14 @@ export const cityServiceData: Record<string, CityServiceData> = {
         heading: "Why the Day Pass at Muze Office Las Vegas",
         paragraphs: [
           "Most people who need a real workspace for a single day in Las Vegas end up at the wrong place for the wrong reason. Coffee shops on Paradise Rd and the Strip fill up by 10am and the WiFi collapses the moment you try to screen-share. Hotel lobbies are crowded, noisy, and mostly out of seats with outlets. Airport lounges at LAS charge $50-65 for a crowded counter that isn't a desk. Hotel business centers run $15-30 for a windowless room with a decade-old desktop. The $25 Day Pass at Muze Office replaces all of those with a single clean option: a real desk, a real chair, fast WiFi built for video calls, unlimited coffee, free parking, and phone booths when you need a private call.",
-          "The Day Pass is a walk-in product. Show up Monday through Friday between 10am and 7pm, drop your ID at the front desk, and you're at a working desk within five minutes. You can book online if you want to lock in a spot during a busy convention week or Strip event, but most days walk-in availability is not a problem. Day pass holders get the same WiFi, the same coffee, the same phone booths, and the same cafe access as monthly members — the only thing they don't get is 24/7 access and meeting-room credits (meeting rooms are bookable by the hour separately).",
+          "The Day Pass is booked online, even same-day. Reserve your spot, come in Monday through Friday between 10am and 7pm, show your ID at the front desk, and you're at a working desk within five minutes. Booking ahead — it takes about two minutes — means your desk is ready and the space is never oversold, which matters most during a busy convention week or Strip event. Day pass holders get the same WiFi, the same coffee, the same phone booths, and the same cafe access as monthly members — the only thing they don't get is 24/7 access and meeting-room credits (meeting rooms are bookable by the hour separately).",
           "The location is the part that makes the Day Pass practical for out-of-town visitors. 6860 Bermuda Rd, Suite 200 sits in the 89119 business corridor off I-215, 10 minutes from Harry Reid International Airport and well away from Strip tourist traffic. That means you can fly into LAS in the morning, rent a car, spend the middle of the day working, make a client meeting, and be back at the terminal before your return flight — all with free parking, no Strip traffic, and a clean place to take the calls that matter.",
         ],
       },
       comparison: {
         heading: "Day Pass vs. a monthly Hot Desk or Dedicated Desk",
         paragraphs: [
-          "If you're in town for a single day or a small handful of days a month, the Day Pass at $25/day is the right product. It's walk-in, it's low-commitment, and it covers every core amenity you'd use on a short visit. A single Day Pass costs roughly the same as a day of cafe-hopping ($15-25 in drinks) but replaces the noise, the unreliable WiFi, and the implied buy-another-drink pressure with a real workspace.",
+          "If you're in town for a single day or a small handful of days a month, the Day Pass at $25/day is the right product. It's booked online in minutes, it's low-commitment, and it covers every core amenity you'd use on a short visit. A single Day Pass costs roughly the same as a day of cafe-hopping ($15-25 in drinks) but replaces the noise, the unreliable WiFi, and the implied buy-another-drink pressure with a real workspace.",
           "If you end up needing the space more than about a week per month, the Hot Desk at $350/month is the natural upgrade. Hot Desk members get any-desk 24/7 biometric access, monthly meeting room credits, mail handling, and full access to community events — the math flips in Hot Desk's favor somewhere around the 14th or 15th day in the space, and you also pick up late-night and weekend access the Day Pass doesn't include. For your own reserved desk you can leave a monitor on, personal storage, meeting room credits, and a business address with mail, Dedicated Desk at $399/month is the next step. If you're using the space daily, Dedicated Desk is the shape that fits.",
           "The three products are genuinely differentiated, not marketing rebrandings of the same thing. Pick the one whose commitment level matches how you actually plan to use the space. Start with a Day Pass if you're not sure — we'd rather you try us for a day and upgrade on your own timeline than sign up for something you don't end up using.",
         ],
@@ -392,7 +392,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to use a Day Pass at Muze Office Las Vegas",
         paragraphs: [
-          "Walk in Monday through Friday between 10am and 7pm at 6860 Bermuda Rd, Suite 200. Show your ID at the front desk, pay for the Day Pass ($25), and we'll point you to an open desk. The whole process takes about five minutes. If you're arriving during a major convention week (CES, SEMA, NAB, MAGIC, etc.) it's worth booking online the day before so your spot is reserved — but most days, walk-in is fine.",
+          "Book your Day Pass online — even same-day — then come in Monday through Friday between 10am and 7pm at 6860 Bermuda Rd, Suite 200. Show your ID at the front desk, and we'll point you to an open desk. The whole process takes about five minutes. Booking ahead matters most if you're arriving during a major convention week (CES, SEMA, NAB, MAGIC, etc.) — reserve the day before so your spot is guaranteed.",
           "The Day Pass covers desk access, WiFi, unlimited coffee and water, free parking, phone-booth access for private calls, printing, and the on-site Muze Cafe. Meeting rooms are a separate booking at $25-$75/hour and can be reserved by the hour online. If you need to take a client call during your day, a Huddle Room ($25/hr) is usually the right call.",
           "If you come back more than one week a month, move to a Hot Desk or Dedicated Desk. See /las-vegas-hot-desk for any-desk 24/7 biometric access, or /las-vegas-dedicated-desk to add a reserved desk and a business address with mail.",
         ],
@@ -475,7 +475,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       comparison: {
         heading: "Hot Desk vs. Day Pass and Dedicated Desk",
         paragraphs: [
-          "Against the Day Pass, Hot Desk wins on cost once you're in the space more than about 14 days a month. A Day Pass at $25 × 15 days is already $375, and at 20 days you're up to $500 — a Hot Desk at $350 is cheaper starting in week three and gets progressively cheaper the more you come in. Hot Desk also adds 24/7 biometric access, meeting room credits, and mail handling, none of which the Day Pass includes (Day Pass is a walk-in product during front-desk hours). Day Pass stays the right call if you're only in town for a handful of days per month; Hot Desk takes over once the space becomes part of your weekly rhythm.",
+          "Against the Day Pass, Hot Desk wins on cost once you're in the space more than about 14 days a month. A Day Pass at $25 × 15 days is already $375, and at 20 days you're up to $500 — a Hot Desk at $350 is cheaper starting in week three and gets progressively cheaper the more you come in. Hot Desk also adds 24/7 biometric access, meeting room credits, and mail handling, none of which the Day Pass includes (Day Pass is booked online for front-desk hours). Day Pass stays the right call if you're only in town for a handful of days per month; Hot Desk takes over once the space becomes part of your weekly rhythm.",
           "Against Dedicated Desk, the difference is desk-reservation and a business address, not hours-of-access — both tiers include 24/7 biometric entry. Dedicated Desk adds a reserved desk you can leave a monitor on, personal storage, and a business address with mail you can use on LLC filings and contracts. For remote workers who are fine with any open desk and don't need a permanent physical footprint, Hot Desk is the right fit at $350. For members who want to leave a dual-monitor rig set up between sessions, claim a specific spot, or skip a separate Virtual Office subscription, Dedicated Desk at $399 adds those pieces.",
           "The Hot Desk tier is designed for people who are committed to being in the space most weekdays but flexible about which specific desk they sit at. If that's you — a remote worker, a solo consultant, a freelancer with a professional client roster — Hot Desk is the product that matches the commitment level without overpaying for reserved-desk infrastructure you won't use.",
         ],
@@ -649,7 +649,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       whyChoose: {
         heading: "Why choose flexible workspaces in Las Vegas at Muze Office",
         paragraphs: [
-          "Most people who land on a flexible-workspaces search aren't asking about coworking specifically or private offices specifically — they're trying to figure out what shape their workspace should take six months from now when they're bigger, smaller, or in a different phase of a project. The honest answer is that you probably don't need to decide today. Muze Office runs the full stack under one roof at 6860 Bermuda Rd, Suite 200: drop-in day passes at $25, Hot Desk memberships at $350/month, Dedicated Desks at $399/month, private offices for teams of 1-10+, and virtual-office plans from $39/month for people who only need the address. Every monthly tier includes 24/7 biometric access. Every tier is month-to-month. You can start with a day pass, move up to a hot desk once you know you'll be in the space most weekdays, grow into a dedicated desk when you want a reserved spot and a business address, and move into a private office when the team outgrows the shared floor — all without changing buildings, commutes, or business addresses.",
+          "Most people who land on a flexible-workspaces search aren't asking about coworking specifically or private offices specifically — they're trying to figure out what shape their workspace should take six months from now when they're bigger, smaller, or in a different phase of a project. The honest answer is that you probably don't need to decide today. Muze Office runs the full stack under one roof at 6860 Bermuda Rd, Suite 200: same-day day passes at $25, Hot Desk memberships at $350/month, Dedicated Desks at $399/month, private offices for teams of 1-10+, and virtual-office plans from $39/month for people who only need the address. Every monthly tier includes 24/7 biometric access. Every tier is month-to-month. You can start with a day pass, move up to a hot desk once you know you'll be in the space most weekdays, grow into a dedicated desk when you want a reserved spot and a business address, and move into a private office when the team outgrows the shared floor — all without changing buildings, commutes, or business addresses.",
           "The flexibility argument is really an argument about risk. A traditional commercial lease in Las Vegas is typically a 12-to-36 month commitment with a personal guaranty, a security deposit of one or two months, a tenant-improvement allowance that locks you into a specific buildout, CAM fees on top of base rent, and a painful exit if headcount changes. A flexible-workspace plan at Muze Office is month-to-month with 30 days' notice to cancel. That difference compounds when you're a startup that might double in size, a remote-first company that might decide it doesn't need Las Vegas at all, or a consultant whose client roster changes every quarter. The cost of being wrong on a 24-month lease is six figures; the cost of being wrong on a $350/month hot desk is $350.",
           "The other half of the pitch is that the whole stack is genuinely the same space. The day-pass holder, the hot-desk member, the dedicated-desk member, and the private-office tenant all park in the same lot, walk through the same lobby, use the same conference rooms, drink coffee at the same on-site cafe, and show up to the same community events. When you upgrade, you're not changing your commute or your professional identity — you're just getting more or less space depending on what you need this quarter.",
         ],
@@ -665,7 +665,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to pick a flexible workspace at Muze Office Las Vegas",
         paragraphs: [
-          "Start with a Day Pass ($25). It's the lowest-risk way to try the space, test the WiFi on a real video call, see how the commute works from where you live, and meet the community before committing to a monthly plan. Day passes are walk-in Monday through Friday, 10am to 7pm — show ID at the front desk and you're at a working desk in five minutes. See /las-vegas-day-pass for the details.",
+          "Start with a Day Pass ($25). It's the lowest-risk way to try the space, test the WiFi on a real video call, see how the commute works from where you live, and meet the community before committing to a monthly plan. Day passes are booked online — even same-day — Monday through Friday, 10am to 7pm — show ID at the front desk and you're at a working desk in five minutes. See /las-vegas-day-pass for the details.",
           "Once you've decided you'll be in the space most weekdays, Hot Desk ($350/month) at /las-vegas-hot-desk is the any-desk 24/7 membership most people settle into. If you want your own reserved desk, personal storage, and a business address with mail, Dedicated Desk ($399/month) at /las-vegas-dedicated-desk is the next step up. For teams of 2 to 10+ who need walls, Private Office at /las-vegas-private-office runs month-to-month with all utilities, WiFi, cleaning, and conference rooms included — tours are the fastest way to get real pricing. For founders and remote-first companies that only need the address, see /las-vegas-virtual-office for Mail Holding ($39/mo), Sandstone ($69/mo), Opal ($149/mo), and Diamond ($249/mo) plans.",
           "You can move between tiers any time. Hot Desk members who want a reserved desk upgrade to Dedicated Desk. Dedicated Desk members whose teams grow move into a Private Office. Private-office tenants who scale back for a quarter can step down to a desk. Nothing about the address, the commute, the parking, or the community changes when you do — only the shape of the space.",
         ],
@@ -872,7 +872,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         paragraphs: [
           "Pick the room that fits the meeting, not the room that fits your budget. A Huddle Room works for two-to-four person syncs, one-on-ones, or client check-ins — $25/hour, monitor and whiteboard, private but casual. A Conference Room fits six to eight around a single table with real video conferencing, which is what you want for sales pitches, team workshops, and hybrid meetings. A Boardroom is for ten to fourteen with dual screens and a sound system — use it for board meetings, investor updates, workshops, or legal depositions where the formality matters.",
           "Book by the hour, not by the day. Most meetings run 60-90 minutes; we'd rather you book exactly what you need than pad the reservation. Catering from the on-site Muze Cafe is available as an add-on — coffee service, pastries, sandwich trays, full lunch — and we can handle the setup before your attendees arrive.",
-          "No membership is required to book a meeting room. Walk-in availability depends on the day, but same-day bookings are usually possible outside of peak hours. If you're a virtual office member or coworking member, you already have monthly meeting room credits that can cover part or all of your booking. Call us or book online, and we'll have the room prepped before your first attendee arrives.",
+          "No membership is required to book a meeting room. Same-day bookings are usually possible outside of peak hours. If you're a virtual office member or coworking member, you already have monthly meeting room credits that can cover part or all of your booking. Book online or call us, and we'll have the room prepped before your first attendee arrives.",
         ],
       },
       relatedServices: [
@@ -925,7 +925,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           fit: [
             "Conference Room at $50/hr for 6-8 people with large display and video conferencing included",
             "Off-Strip location means no fighting convention traffic, no casino noise, and no F&B minimum",
-            "Walk-in availability is often possible outside peak hours — book by the hour, exactly what you need",
+            "Same-day booking is often possible outside peak hours — book by the hour, exactly what you need",
             "Free parking instead of a $45 Strip hotel valet charge for your prospect",
           ],
         },
@@ -961,7 +961,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         heading: "How to book a Las Vegas conference room",
         paragraphs: [
           "Pick the room that fits the meeting, not the one that fits your budget. The Conference Room at $50 per hour is the right call for 6-8 person client meetings, sales pitches, interviews, and investor updates — it comes with a large display, real video conferencing, and whiteboards. The Boardroom at $75 per hour is the step up for 10-14 people with dual screens and a sound system — use it for board meetings, workshops, all-hands sessions, and legal depositions where the formality of the setup matters.",
-          "Book by the hour, not by the day. Most conference-room bookings run 60 to 120 minutes and there is no reason to pad the reservation. Walk-in availability depends on the day but same-day bookings are usually possible outside of peak hours, and Muze Cafe can handle coffee service, pastries, sandwich trays, or a full catered lunch as an add-on so you are not coordinating a separate caterer.",
+          "Book by the hour, not by the day. Most conference-room bookings run 60 to 120 minutes and there is no reason to pad the reservation. Same-day bookings are usually possible outside of peak hours, and Muze Cafe can handle coffee service, pastries, sandwich trays, or a full catered lunch as an add-on so you are not coordinating a separate caterer.",
           "If you end up booking conference rooms regularly, becoming a virtual office or coworking member is often cheaper. Opal and Diamond virtual-office tiers include monthly meeting-room hours that can be applied to a conference-room booking, and dedicated-desk coworking members receive monthly meeting-room credits as part of their plan. Book a one-off room first, and talk to us about credits on a plan if the math starts to favor it.",
         ],
       },
@@ -1092,7 +1092,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "airport-coworking",
     h1: "Airport Coworking in Las Vegas",
     heroSubtitle:
-      "Just 10 minutes from Harry Reid International Airport. Drop in with a day pass — no membership required. Fast WiFi, free parking, and real desks.",
+      "Just 10 minutes from Harry Reid International Airport. Book a day pass online, even same-day — no membership required. Fast WiFi, free parking, and real desks.",
     metaTitle: "Airport Coworking Las Vegas | Near LAS",
     metaDescription:
       "Coworking near Las Vegas airport (LAS). Day passes from $25. 10 minutes from Harry Reid International. Free parking, fast WiFi, no membership required.",
@@ -1125,7 +1125,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You're in town for one meeting — landed at LAS in the morning, meeting at noon, flying out that evening — and you need a professional workspace between arrival and the meeting, not a hotel you aren't even staying at.",
           fit: [
-            "No reservation needed — walk in with a day pass when you land",
+            "Book a day pass online before you land — it takes about two minutes",
             "10 minutes from the airport and 10 minutes from most Strip hotels",
             "Meeting rooms bookable by the hour if your client meeting happens here",
             "Free parking for your rental car",
@@ -1174,7 +1174,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         heading: "How to get to Muze Office from Harry Reid International",
         paragraphs: [
           "The drive from Harry Reid International Airport takes about 10 minutes depending on traffic. The simplest route is to take I-215 W from the airport exit and get off at the Bermuda Rd exit, then head north for less than a mile. Google Maps or Apple Maps will route you correctly if you search for 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119. Lyft and Uber rides from the airport typically run $15-25 depending on surge pricing. If you're picking up a rental car, we have free parking on-site — you can leave your luggage in the trunk and just grab your laptop bag.",
-          "Day passes don't require a reservation, but booking ahead guarantees your spot during peak hours. You can walk in Monday through Friday between 10am and 7pm, show your ID at the front desk, and be at a working desk within five minutes. If you need a specific phone booth or meeting room for a scheduled call, book that online before you land so it's held for your arrival.",
+          "Book your day pass online before you land — it takes about two minutes and means your desk is ready when you arrive. Come in Monday through Friday between 10am and 7pm, show your ID at the front desk, and you're at a working desk within five minutes. If you need a specific phone booth or meeting room for a scheduled call, book that online too so it's held for your arrival.",
           "Most airport travelers spend two to five hours with us — long enough to take a handful of calls, finish a deliverable, or prep for a meeting. When you're done, you're back at the terminal in ten minutes. If your trip extends beyond a single day and you end up working with us multiple times, the day passes make sense; if you start visiting Las Vegas more regularly, a Hot Desk membership at $350/month becomes the better deal.",
         ],
       },
@@ -1260,7 +1260,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         paragraphs: [
           "Las Vegas hosts more major conventions than any other US city. CES in January fills the Las Vegas Convention Center with 130,000+ attendees. SEMA Show in November brings 160,000. World of Concrete, MAGIC, NAB Show, ConExpo, RSNA, Black Hat, DEF CON, Money 20/20, Adobe Summit, Dreamforce West, and dozens of smaller industry events bring waves of business travelers to the city throughout the year. For anyone attending these shows as an exhibitor, a business development rep, a buyer, or an executive scoping deals, the experience of trying to actually work during convention week is consistently painful — and it's the exact problem Muze Office solves.",
           "During a major convention, every Strip hotel room and every hotel business center is at capacity. WiFi in the convention center is throttled to the point where video calls don't work. Hotel lobbies are packed with people taking the same meetings you want to take. Hotel room work setups are ergonomically miserable for more than an hour. The coffee shops and QSRs around the LVCC and Strip have lines 30-deep between sessions. If you need to take a private client call, prep for a pitch, or process a follow-up email after a booth meeting, you're out of good options.",
-          "Muze Office during convention week is a different experience. We're off-Strip, in the 89119 business corridor, which means our space doesn't fill up with the convention crowd. You can drive over during a lunch break or between sessions, grab a desk, take a clean call, work through email, and head back to the show. Free parking, fast WiFi, private phone booths, and meeting rooms are all available without reservations for most time slots. For a week of conventions it costs far less than a single hotel business-center day pass.",
+          "Muze Office during convention week is a different experience. We're off-Strip, in the 89119 business corridor, which means our space doesn't fill up with the convention crowd. You can drive over during a lunch break or between sessions, grab a desk, take a clean call, work through email, and head back to the show. Free parking, fast WiFi, private phone booths, and meeting rooms are all available with a quick online booking — even same-day — for most time slots. For a week of conventions it costs far less than a single hotel business-center day pass.",
         ],
       },
       comparison: {
@@ -1274,9 +1274,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to use Muze Office during your Las Vegas convention",
         paragraphs: [
-          "If you're in town for a single day or two, a $25 day pass is the simplest option. Walk in during business hours, no reservation required for most days, and you'll have a desk and WiFi within minutes. If you're taking a client call during convention week, book a Huddle Room ($25/hour) in advance so you know you'll have a private, professional setting — much better than trying to find a quiet corner in a hotel lobby.",
+          "If you're in town for a single day or two, a $25 day pass is the simplest option. Book online — even same-day — during business hours, and you'll have a desk and WiFi within minutes of arriving. If you're taking a client call during convention week, book a Huddle Room ($25/hour) in advance so you know you'll have a private, professional setting — much better than trying to find a quiet corner in a hotel lobby.",
           "If you're exhibiting at a full-week show like CES, SEMA, or NAB, ask about our weekly pass. It gives you unlimited Monday-through-Friday access for significantly less than five separate day passes, and it's the right call if you expect to need a workspace every day of the convention. Dedicated coworking members get a permanent place to leave equipment and work between show days, and private office tenants can use the space as a temporary Las Vegas HQ during show weeks.",
-          "The drive from most Strip hotels and from the Las Vegas Convention Center takes 10-15 minutes depending on traffic. Take I-15 S or Paradise Rd to I-215 W and get off at Bermuda Rd. Free parking is included, which matters a lot during convention week when Strip garages are charging peak pricing of $45-60 per day. Book a meeting room in advance for any client calls you need to take; walk in for general desk access.",
+          "The drive from most Strip hotels and from the Las Vegas Convention Center takes 10-15 minutes depending on traffic. Take I-15 S or Paradise Rd to I-215 W and get off at Bermuda Rd. Free parking is included, which matters a lot during convention week when Strip garages are charging peak pricing of $45-60 per day. Book a meeting room in advance for any client calls you need to take, and book your day pass online for general desk access.",
         ],
       },
       relatedServices: [
@@ -1417,7 +1417,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You've been working from home since 2020, productivity is slipping, and the Starbucks on Westheimer is loud by 10am with WiFi that dies the moment your 2pm Zoom call starts.",
           fit: [
-            "$25 day pass — walk in Monday through Friday, no membership required, no commitment",
+            "$25 day pass — book online, even same-day, Monday through Friday, no membership required, no commitment",
             "Real desks and chairs built for full-day work sessions, not lounge seating or bar-height counters",
             "Fast WiFi designed for video calls — not cafe-tier bandwidth that breaks during a presentation",
             "Phone booths for private calls without the espresso machine or other patrons in the background",
@@ -1441,7 +1441,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           fit: [
             "Day passes at $25 — pay only for the days you're actually in town",
             "Central Galleria location — inside the Loop and within 15 minutes of downtown, the Medical Center, and most Inner Loop client offices",
-            "Meeting rooms bookable by the hour for impromptu client drop-ins or prospect pitches",
+            "Meeting rooms bookable by the hour for last-minute client meetings or prospect pitches",
             "Free parking — no $8-15/day Post Oak garage fees between back-to-back meetings",
           ],
         },
@@ -1476,9 +1476,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to get started with coworking in Houston",
         paragraphs: [
-          "If you're not sure whether coworking is right for you, start with a $25 day pass. Walk in Monday through Friday between 10am and 7pm, or book online and we'll have a spot ready when you arrive. Day passes include everything — desk, WiFi, coffee, parking, phone booths, meeting room availability. No credit card holds, no long forms, no pressure to sign up.",
+          "If you're not sure whether coworking is right for you, start with a $25 day pass. Book online — even same-day — and come in Monday through Friday between 10am and 7pm; we'll have a spot ready when you arrive. Day passes include everything — desk, WiFi, coffee, parking, phone booths, meeting room availability. No credit card holds, no long forms, no pressure to sign up.",
           "Once you've used us for a week or two and know you want to be here most days, the Hot Desk membership ($350/month) is the natural next step. Hot Desk members can use any available desk in the shared workspace, get meeting room credits, mail handling, and full access to community events. If you want your own reserved spot that you can leave your monitor and dual keyboard setup on, upgrade to Dedicated Desk ($399/month) which adds a permanent desk, personal storage, and 24/7 biometric access.",
-          "Everything is month-to-month. If you need to pause your membership for a month because you're traveling, just let us know. If you want to bring a client in for a meeting, you can book a conference room by the hour or use your included credits. Book a free tour if you want to see the space first, or just show up with a laptop.",
+          "Everything is month-to-month. If you need to pause your membership for a month because you're traveling, just let us know. If you want to bring a client in for a meeting, you can book a conference room by the hour or use your included credits. Book a free tour if you want to see the space first, or book a same-day day pass online and bring your laptop.",
         ],
       },
       relatedServices: [
@@ -1498,10 +1498,10 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "day-pass",
     h1: "Day Pass at Muze Office Houston",
     heroSubtitle:
-      "Drop in for a single day of focused work in the Galleria — no membership, no setup, no commitment. Walk in with a laptop, plug into fast WiFi, and keep your day moving.",
+      "Book a single day of focused work in the Galleria online — no membership, no setup, no commitment. Reserve online, even same-day, plug into fast WiFi, and keep your day moving.",
     metaTitle: "Day Pass Houston Coworking | $25/day",
     metaDescription:
-      "Day pass coworking in Houston's Galleria at 1800 Augusta Dr — $25, walk-in, no membership. Real desk, fast WiFi, free parking, inside the 610 Loop. Join the waitlist.",
+      "Day pass coworking in Houston's Galleria at 1800 Augusta Dr — $25, book online, no membership. Real desk, fast WiFi, free parking, inside the 610 Loop. Join the waitlist.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Freelancers and consultants here for a single Galleria-area workday",
@@ -1516,12 +1516,12 @@ export const cityServiceData: Record<string, CityServiceData> = {
     longFormBody: {
       bestFor: [
         {
-          persona: "Drop-in professionals with one focused day in Houston",
+          persona: "Day-pass professionals with one focused day in Houston",
           scenario:
             "You're in Houston for 24 to 48 hours — one client meeting, one deliverable, one stretch of heads-down time inside the 610 Loop — and you need a real desk for the afternoon without signing up for anything, paying a setup fee, or explaining yourself at a coffee shop counter.",
           fit: [
             "$25 flat for the day — desk, WiFi, coffee, parking, phone booths, everything",
-            "No membership, no credit card hold, no signup forms — walk in, show ID, sit down",
+            "No membership, no credit card hold, no signup forms — book online, show ID, sit down",
             "Phone booths for private calls without espresso-machine noise in the background",
             "Free parking so a $25 day is actually a $25 day — no $8-15 Post Oak garage fee on top",
           ],
@@ -1552,14 +1552,14 @@ export const cityServiceData: Record<string, CityServiceData> = {
         heading: "Why the Day Pass at Muze Office Houston",
         paragraphs: [
           "Most people who need a real workspace for a single day in Houston end up at the wrong place for the wrong reason. Coffee shops in Montrose and Rice Village fill up by late morning and the WiFi collapses the moment you try to screen-share. Hotel lobbies in the Galleria and downtown are crowded and mostly out of seats with outlets. Hotel business centers run $15-30 for a windowless room with a decade-old desktop. The $25 Day Pass at Muze Office Houston replaces all of those with a single clean option: a real desk, a real chair, fast WiFi built for video calls, unlimited coffee, free parking, and phone booths when you need a private call.",
-          "The Day Pass is a walk-in product. Show up during business hours at 1800 Augusta Dr, drop your ID at the front desk, and you're at a working desk within five minutes. You can book online if you want to lock in a spot during a busy week, but most days walk-in availability is not a problem. Day pass holders get the same WiFi, the same coffee, the same phone booths, and the same cafe access as monthly members — the only thing they don't get is 24/7 access and meeting-room credits (meeting rooms are bookable by the hour separately).",
+          "The Day Pass is booked online, even same-day. Reserve your spot, show up during business hours at 1800 Augusta Dr, show your ID at the front desk, and you're at a working desk within five minutes. Booking ahead — it takes about two minutes — means your desk is ready and the space is never oversold, which matters most during a busy week. Day pass holders get the same WiFi, the same coffee, the same phone booths, and the same cafe access as monthly members — the only thing they don't get is 24/7 access and meeting-room credits (meeting rooms are bookable by the hour separately).",
           "The location makes the Day Pass practical for visitors from across the metro. 1800 Augusta Dr sits inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, and it pulls comfortably from Memorial, Uptown, West University, Bellaire, River Oaks, and downtown without ever fighting 59 or 290 traffic. That means you can drive in from any direction, work for half a day, make a client meeting, and head back — with free parking, no Post Oak garage fee, and a clean place to take the calls that matter.",
         ],
       },
       comparison: {
         heading: "Day Pass vs. a monthly Hot Desk or Dedicated Desk",
         paragraphs: [
-          "If you're in the space a single day or a small handful of days a month, the Day Pass at $25/day is the right product. It's walk-in, it's low-commitment, and it covers every core amenity you'd use on a short visit. A single Day Pass costs roughly the same as a day of cafe-hopping ($15-25 in drinks) but replaces the noise, the unreliable WiFi, and the implied buy-another-drink pressure with a real workspace.",
+          "If you're in the space a single day or a small handful of days a month, the Day Pass at $25/day is the right product. It's booked online in minutes, it's low-commitment, and it covers every core amenity you'd use on a short visit. A single Day Pass costs roughly the same as a day of cafe-hopping ($15-25 in drinks) but replaces the noise, the unreliable WiFi, and the implied buy-another-drink pressure with a real workspace.",
           "If you end up needing the space more than about a week per month, the Hot Desk at $350/month is the natural upgrade. Hot Desk members get any-desk 24/7 biometric access, monthly meeting room credits, mail handling, and full access to community events — the math flips in Hot Desk's favor somewhere around the 14th or 15th day in the space, and you also pick up late-night and weekend access the Day Pass doesn't include. For your own reserved desk you can leave a monitor on, personal storage, meeting room credits, and a business address with mail, Dedicated Desk at $399/month is the next step.",
           "The three products are genuinely differentiated, not marketing rebrandings of the same thing. Pick the one whose commitment level matches how you actually plan to use the space. Start with a Day Pass if you're not sure — we'd rather you try us for a day and upgrade on your own timeline than sign up for something you don't end up using.",
         ],
@@ -1567,7 +1567,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to use a Day Pass at Muze Office Houston",
         paragraphs: [
-          "Muze Office Houston is opening soon at 1800 Augusta Dr. Join the waitlist to lock in pre-launch pricing and to get the opening-day schedule for Day Passes. When we open, walk-in Day Passes will be available during business hours — show your ID at the front desk, pay $25, and we'll point you to an open desk. Booking online the day before guarantees a spot during busier weeks.",
+          "Muze Office Houston is opening soon at 1800 Augusta Dr. Join the waitlist to lock in pre-launch pricing and to get the opening-day schedule for Day Passes. When we open, Day Passes will be booked online, even same-day, and available during business hours — show your ID at the front desk, pay $25, and we'll point you to an open desk. Booking online the day before guarantees a spot during busier weeks.",
           "The Day Pass will cover desk access, WiFi, unlimited coffee and water, free parking, phone-booth access for private calls, printing, and the on-site Muze Cafe. Meeting rooms will be a separate booking at $25-$75/hour and reservable by the hour online. If you need to take a client call during your day, a Huddle Room will be the right call.",
           "If you come back more than one week a month, move to a Hot Desk or Dedicated Desk. See /houston-hot-desk for any-desk 24/7 biometric access, or /houston-dedicated-desk to add a reserved desk and a business address with mail.",
         ],
@@ -1650,7 +1650,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       comparison: {
         heading: "Hot Desk vs. Day Pass and Dedicated Desk",
         paragraphs: [
-          "Against the Day Pass, Hot Desk wins on cost once you're in the space more than about 14 days a month. A Day Pass at $25 × 15 days is already $375, and at 20 days you're up to $500 — a Hot Desk at $350 is cheaper starting in week three and gets progressively cheaper the more you come in. Hot Desk also adds 24/7 biometric access, meeting room credits, and mail handling, none of which the Day Pass includes (Day Pass is a walk-in product during front-desk hours). Day Pass stays the right call if you're only in the space a handful of days per month; Hot Desk takes over once it becomes part of your weekly rhythm.",
+          "Against the Day Pass, Hot Desk wins on cost once you're in the space more than about 14 days a month. A Day Pass at $25 × 15 days is already $375, and at 20 days you're up to $500 — a Hot Desk at $350 is cheaper starting in week three and gets progressively cheaper the more you come in. Hot Desk also adds 24/7 biometric access, meeting room credits, and mail handling, none of which the Day Pass includes (Day Pass is booked online for front-desk hours). Day Pass stays the right call if you're only in the space a handful of days per month; Hot Desk takes over once it becomes part of your weekly rhythm.",
           "Against Dedicated Desk, the difference is desk-reservation and a business address, not hours-of-access — both tiers include 24/7 biometric entry. Dedicated Desk adds a reserved desk you can leave a monitor on, personal storage, and a business address with mail you can use on LLC filings and contracts. For remote workers who are fine with any open desk and don't need a permanent physical footprint, Hot Desk is the right fit at $350. For members who want to leave a dual-monitor rig set up between sessions, claim a specific spot, or skip a separate Virtual Office subscription, Dedicated Desk at $399 adds those pieces.",
           "The Hot Desk tier is designed for people who are committed to being in the space most weekdays but flexible about which specific desk they sit at. If that's you — a remote worker, a solo consultant, a freelancer with a professional client roster — Hot Desk is the product that matches the commitment level without overpaying for reserved-desk infrastructure you won't use.",
         ],
@@ -1824,7 +1824,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       whyChoose: {
         heading: "Why choose flexible workspaces in Houston at Muze Office",
         paragraphs: [
-          "Most people who land on a flexible-workspaces search aren't asking about coworking specifically or private offices specifically — they're trying to figure out what shape their workspace should take six months from now when they're bigger, smaller, or in a different phase of a project. The honest answer is that you probably don't need to decide today. Muze Office Houston is opening at 1800 Augusta Dr inside the 610 Loop with the full stack under one roof: drop-in day passes, Hot Desk memberships at $350/month, Dedicated Desks at $399/month, private offices for teams of 1-10+, and virtual-office plans for people who only need the address. Every tier is month-to-month. You can start with a day pass, move up to a hot desk once you know you'll be in the space most weekdays, grow into a dedicated desk when you want 24/7 access and a permanent spot, and move into a private office when the team outgrows the shared floor — all without changing buildings, commutes, or business addresses.",
+          "Most people who land on a flexible-workspaces search aren't asking about coworking specifically or private offices specifically — they're trying to figure out what shape their workspace should take six months from now when they're bigger, smaller, or in a different phase of a project. The honest answer is that you probably don't need to decide today. Muze Office Houston is opening at 1800 Augusta Dr inside the 610 Loop with the full stack under one roof: same-day day passes, Hot Desk memberships at $350/month, Dedicated Desks at $399/month, private offices for teams of 1-10+, and virtual-office plans for people who only need the address. Every tier is month-to-month. You can start with a day pass, move up to a hot desk once you know you'll be in the space most weekdays, grow into a dedicated desk when you want 24/7 access and a permanent spot, and move into a private office when the team outgrows the shared floor — all without changing buildings, commutes, or business addresses.",
           "The flexibility argument is really an argument about risk. A traditional commercial lease in the Galleria or Uptown is typically a 12-to-36 month commitment with a personal guaranty, a security deposit of one or two months, a tenant-improvement allowance that locks you into a specific buildout, CAM fees on top of base rent, and a painful exit if headcount changes. A flexible-workspace plan at Muze Office Houston will be month-to-month with 30 days' notice to cancel. That difference compounds when you're a startup that might double in size, a remote-first company that might decide it doesn't need Houston at all, or a consultant whose client roster changes every quarter.",
           "The other half of the pitch is that the whole stack is genuinely the same space. The day-pass holder, the hot-desk member, the dedicated-desk member, and the private-office tenant will all park in the same lot, walk through the same lobby, use the same conference rooms, drink coffee at the same on-site cafe, and show up to the same community events. When you upgrade, you're not changing your commute or your professional identity — you're just getting more or less space depending on what you need this quarter.",
         ],
@@ -2046,7 +2046,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         paragraphs: [
           "Pick the room that fits the meeting, not the room that fits your budget. A Huddle Room works for two-to-four person syncs, one-on-ones, or client check-ins — $25/hour, monitor and whiteboard, private but casual. A Conference Room fits six to eight around a single table with real video conferencing, which is what you want for sales pitches, team workshops, and hybrid meetings. A Boardroom is for ten to fourteen with dual screens and a sound system — use it for board meetings, investor updates, workshops, or legal depositions where the formality matters.",
           "Book by the hour, not by the day. Most meetings run 60-90 minutes; we'd rather you book exactly what you need than pad the reservation. Catering from the on-site Muze Cafe is available as an add-on — coffee service, pastries, sandwich trays, full lunch — and we can handle the setup before your attendees arrive.",
-          "No membership is required to book a meeting room. Walk-in availability depends on the day, but same-day bookings are usually possible outside of peak hours. If you're a virtual office member or coworking member, you already have monthly meeting room credits that can cover part or all of your booking. Contact us to reserve, and we'll have the room prepped before your first attendee arrives.",
+          "No membership is required to book a meeting room. Same-day bookings are usually possible outside of peak hours. If you're a virtual office member or coworking member, you already have monthly meeting room credits that can cover part or all of your booking. Contact us to reserve, and we'll have the room prepped before your first attendee arrives.",
         ],
       },
       relatedServices: [
@@ -2337,7 +2337,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         paragraphs: [
           "Start with a day pass if you haven't worked from Muze Office before. $25 gets you a real desk for the day with WiFi, coffee, parking, and phone booth access — enough to see whether the space, the commute, and the vibe work for you before you commit to anything monthly.",
           "If you like the space and want to come in regularly, move up to a Hot Desk membership (month-to-month, any available desk in the shared workspace, meeting room credits, mail handling). If you want your own reserved desk that you can leave equipment on permanently, the Dedicated Desk tier adds personal storage and 24/7 biometric access.",
-          "Tours take about 15 minutes and are the easiest way to see the Augusta Dr building, test the WiFi from the desk you'd actually use, and meet the community before you commit. You can also just walk in during business hours (Monday through Friday, 10am to 7pm) and buy a day pass at the front desk.",
+          "Tours take about 15 minutes and are the easiest way to see the Augusta Dr building, test the WiFi from the desk you'd actually use, and meet the community before you commit. You can also book a day pass online — even same-day — for business hours (Monday through Friday, 10am to 7pm) and pick it up at the front desk.",
         ],
       },
       relatedServices: [
@@ -2435,9 +2435,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to get started with Medical Center-adjacent coworking",
         paragraphs: [
-          "If you're a rep, consultant, or researcher who visits Houston irregularly, start with day passes at $25. Walk in, use a desk for the day, book a meeting room by the hour if you need privacy, and head back to the TMC when your next meeting is on the schedule. No commitment, no monthly fee until you know the space works for how you actually use it.",
+          "If you're a rep, consultant, or researcher who visits Houston irregularly, start with day passes at $25. Book online, even same-day, use a desk for the day, book a meeting room by the hour if you need privacy, and head back to the TMC when your next meeting is on the schedule. No commitment, no monthly fee until you know the space works for how you actually use it.",
           "If you're a telehealth provider, a health-tech founder, or a Houston-based professional working with TMC accounts full-time, the monthly Hot Desk ($350) or Dedicated Desk ($399) is the right entry point. Both include meeting room credits and mail handling. HIPAA-aware private offices are available for clinical visits and confidential product conversations — talk to us about office sizing (Solo, Team, or Custom Suite) based on how many people need simultaneous private space.",
-          "Tours take about 15 minutes and are the easiest way to see the space, check the drive time from your TMC base of operations, and walk through which office layout works for your specific clinical or research use case. You can book a tour online or just walk in during business hours.",
+          "Tours take about 15 minutes and are the easiest way to see the space, check the drive time from your TMC base of operations, and walk through which office layout works for your specific clinical or research use case. Book a tour online at /book-a-tour.",
         ],
       },
       relatedServices: [

@@ -87,7 +87,7 @@ const coworkingFAQs: FAQ[] = [
   {
     question: "What memberships are available?",
     answer:
-      "We offer three options: Day Pass ($25/day) for drop-in walk-in access during front-desk hours, Hot Desk ($350/mo) for any-desk 24/7 biometric access with meeting room credits and mail handling, and Dedicated Desk ($399/mo) which adds a reserved desk, personal storage, and a business address with mail.",
+      "We offer three options: Day Pass ($25/day) booked online, even same-day, for front-desk hours, Hot Desk ($350/mo) for any-desk 24/7 biometric access with meeting room credits and mail handling, and Dedicated Desk ($399/mo) which adds a reserved desk, personal storage, and a business address with mail.",
   },
   {
     question: "Can I book a meeting room as a coworking member?",
@@ -115,7 +115,7 @@ const meetingRoomFAQs: FAQ[] = [
   {
     question: "How do I book a meeting room?",
     answer:
-      "For Las Vegas meeting rooms, book online directly from the Las Vegas Meeting Rooms page — select room size, date, and time for instant confirmation. For Houston meeting rooms, use our contact form or call us to reserve. Walk-in bookings are available based on availability at both locations.",
+      "For Las Vegas meeting rooms, book online directly from the Las Vegas Meeting Rooms page — select room size, date, and time for instant confirmation. For Houston meeting rooms, use our contact form or call us to reserve. Same-day bookings are available based on availability at both locations.",
   },
   {
     question: "Is catering available for meetings?",
@@ -219,7 +219,7 @@ const airportCoworkingFAQs: FAQ[] = [
   {
     question: "What are the hours?",
     answer:
-      "Our coworking space is open Monday through Friday, 10 AM to 7 PM. Just drop in with a day pass — no membership or reservation required.",
+      "Our coworking space is open Monday through Friday, 10 AM to 7 PM. Book a day pass online — even same-day, it takes about two minutes — no membership required.",
   },
   {
     question: "Is parking free?",
@@ -229,12 +229,12 @@ const airportCoworkingFAQs: FAQ[] = [
   {
     question: "Do I need a membership?",
     answer:
-      "No. Our Day Pass ($25) gives you full access for the day — desk, WiFi, coffee, and parking. No membership, no commitment. Just walk in or book ahead.",
+      "No. Our Day Pass ($25) gives you full access for the day — desk, WiFi, coffee, and parking. No membership, no commitment. Book online, even same-day.",
   },
   {
     question: "Can I book a meeting room?",
     answer:
-      "Yes. Meeting rooms are available from $25/hr with AV equipment included. Book online or walk in based on availability. Great for meeting a client before your flight.",
+      "Yes. Meeting rooms are available from $25/hr with AV equipment included. Book online, even same-day, based on availability. Great for meeting a client before your flight.",
   },
 ];
 
@@ -262,7 +262,7 @@ const conventionCoworkingFAQs: FAQ[] = [
   {
     question: "Do I need to reserve in advance?",
     answer:
-      "Walk-ins are welcome, but we recommend booking ahead during major convention weeks. Day passes and meeting rooms can be reserved online or through the Muze Office app.",
+      "Visits are by appointment — book your day pass or meeting room online, even same-day, and we'll have it ready. During major convention weeks we recommend booking a day or two ahead since demand is high. Day passes and meeting rooms can be reserved online or through the Muze Office app.",
   },
   {
     question: "Is there parking?",
@@ -379,12 +379,12 @@ const dayPassFAQs: FAQ[] = [
   {
     question: "Do I need a membership or reservation to use a Day Pass?",
     answer:
-      "No. Day Passes are walk-in. Show up Monday through Friday between 10am and 7pm at your Muze Office location, show your ID at the front desk, pay $25, and you're at a working desk within five minutes. Contact the front desk if you want to lock in a spot during a particularly busy week.",
+      "No membership required, but yes, book first. Reserve your Day Pass online — even same-day, it takes about two minutes — for Monday through Friday between 10am and 7pm at your Muze Office location. Show your ID at the front desk, pay $25, and you're at a working desk within five minutes. Booking ahead means your desk is ready when you arrive.",
   },
   {
     question: "What are the Day Pass hours?",
     answer:
-      "Day Pass walk-ins are Monday through Friday, 10am to 7pm — that's when the front desk is staffed to check you in and process your $25. Any monthly coworking membership (Hot Desk, Dedicated Desk, or Private Office) includes 24/7 biometric access; the limited hours apply only to walk-in Day Passes.",
+      "Day Pass bookings are Monday through Friday, 10am to 7pm — that's when the front desk is staffed to check you in and process your $25. Any monthly coworking membership (Hot Desk, Dedicated Desk, or Private Office) includes 24/7 biometric access; the limited hours apply only to Day Pass bookings.",
   },
   {
     question: "Is parking free with a Day Pass?",
@@ -394,7 +394,7 @@ const dayPassFAQs: FAQ[] = [
   {
     question: "What's the difference between a Day Pass and a Hot Desk membership?",
     answer:
-      "A Day Pass is $25 per day with no commitment — right for drop-in use during front-desk hours. A Hot Desk is $350/month for any-desk 24/7 biometric access, plus meeting room credits, mail handling, and community events. The math flips in Hot Desk's favor around the 14th-15th day per month. If you're in the space more than about a week a month, Hot Desk is usually the better deal — and you also get late-night and weekend access that Day Pass doesn't include.",
+      "A Day Pass is $25 per day with no commitment — booked online, even same-day, for front-desk hours. A Hot Desk is $350/month for any-desk 24/7 biometric access, plus meeting room credits, mail handling, and community events. The math flips in Hot Desk's favor around the 14th-15th day per month. If you're in the space more than about a week a month, Hot Desk is usually the better deal — and you also get late-night and weekend access that Day Pass doesn't include.",
   },
 ];
 
@@ -407,7 +407,7 @@ const hotDeskFAQs: FAQ[] = [
   {
     question: "Is a Hot Desk 24/7?",
     answer:
-      "Yes. Hot Desk members get 24/7 biometric access just like every other monthly coworking tier. The front desk is staffed Monday through Friday, 10am to 7pm for walk-ins and day passes, but Hot Desk members come and go anytime via biometric entry. The upgrade to Dedicated Desk at $399/month is about a reserved desk, personal storage, and a business address — not hours.",
+      "Yes. Hot Desk members get 24/7 biometric access just like every other monthly coworking tier. The front desk is staffed Monday through Friday, 10am to 7pm for Day Pass check-ins, but Hot Desk members come and go anytime via biometric entry. The upgrade to Dedicated Desk at $399/month is about a reserved desk, personal storage, and a business address — not hours.",
   },
   {
     question: "Do I get my own reserved desk with a Hot Desk?",
@@ -440,7 +440,7 @@ const dedicatedDeskFAQs: FAQ[] = [
   {
     question: "How is the 24/7 access provided?",
     answer:
-      "Via biometric entry — every monthly coworking member (Hot Desk, Dedicated Desk, or Private Office) is enrolled on their first day, and once that's set up you have 24/7 access to the building via the side entrance. Day Pass walk-ins use the front entrance during staffed hours (Mon–Fri 10am–7pm).",
+      "Via biometric entry — every monthly coworking member (Hot Desk, Dedicated Desk, or Private Office) is enrolled on their first day, and once that's set up you have 24/7 access to the building via the side entrance. Day Pass bookings use the front entrance during staffed hours (Mon–Fri 10am–7pm).",
   },
   {
     question: "Is the business address real, or a PO Box?",
