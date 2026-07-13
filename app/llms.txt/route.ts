@@ -19,7 +19,7 @@ function buildLlmsTxt(): string {
   );
   lines.push("");
   lines.push(
-    "Muze Office runs a staffed commercial location in Las Vegas, with a second flagship opening in Houston in 2026. Every page on this site also has a plain-markdown twin at the same path with a `.md` suffix — e.g. `/las-vegas-coworking.md`. A full content dump is available at `/llms-full.txt`."
+    "Muze Office runs a staffed commercial location in Las Vegas. An independently operated Muze Office franchise location is planned for Houston in 2026. Every page on this site also has a plain-markdown twin at the same path with a `.md` suffix — e.g. `/las-vegas-coworking.md`. A full content dump is available at `/llms-full.txt`."
   );
   lines.push("");
 
@@ -74,7 +74,7 @@ function buildLlmsTxt(): string {
     {
       path: "contact",
       label: "Contact",
-      desc: "Phone, email, addresses, and hours for both locations.",
+      desc: "Las Vegas contact details plus Houston opening and early-access information.",
     },
     {
       path: "book-a-tour",

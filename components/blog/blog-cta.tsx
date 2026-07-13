@@ -34,7 +34,7 @@ const TOPIC_CTAS: Record<Topic, BlogCtaConfig> = {
   vo: {
     heading: "Set up your Las Vegas virtual office",
     subtitle:
-      "A real Bermuda Rd business address for your LLC, Google Business Profile, and mail — from $39/mo, month-to-month, no lease.",
+      "A real Bermuda Rd business address for mail, contracts, and qualifying filings — from $39/mo, month-to-month, no lease.",
     primary: {
       label: "See virtual office plans",
       href: "/las-vegas-virtual-office",
@@ -102,10 +102,10 @@ const TOPIC_CTAS: Record<Topic, BlogCtaConfig> = {
 const HOUSTON_CTA: BlogCtaConfig = {
   heading: "Muze Office Houston opens in 2026",
   subtitle:
-    "Join the waitlist for early access to a Galleria-area virtual office, coworking, and private offices — with founding-member pricing.",
+    "Join early access for verified opening updates and planned virtual office, coworking, and private office availability near the Galleria.",
   primary: {
-    label: "Join the Houston waitlist",
-    href: "/contact?interest=houston-waitlist",
+    label: "Join Houston early access",
+    href: "/locations/houston#waitlist",
     event: "blog_cta_houston_waitlist",
   },
 };

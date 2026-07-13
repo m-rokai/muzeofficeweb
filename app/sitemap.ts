@@ -12,67 +12,58 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     {
       url: baseUrl,
-      lastModified: now,
       changeFrequency: "weekly",
       priority: 1.0,
     },
     {
       url: `${baseUrl}/about`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/contact`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
       url: `${baseUrl}/book-a-tour`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/workspace-memberships`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/locations`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
       url: `${baseUrl}/privacy-policy`,
-      lastModified: now,
       changeFrequency: "yearly",
       priority: 0.3,
     },
     {
       url: `${baseUrl}/blog`,
-      lastModified: now,
       changeFrequency: "weekly",
       priority: 0.6,
     },
     {
       url: `${baseUrl}/muze-cube-world`,
-      lastModified: now,
       changeFrequency: "monthly",
       priority: 0.5,
     },
   ];
 
-  // Location detail pages — only include active locations so Google
-  // does not index "coming soon" pages with TBD addresses.
+  // Include active locations plus Houston's substantive pre-opening hub.
+  // Other future locations stay excluded until their address and launch
+  // information are confirmed.
   const locationPages: MetadataRoute.Sitemap = locations
-    .filter((loc) => loc.status === "active")
+    .filter((loc) => loc.status === "active" || loc.slug === "houston")
     .map((loc) => ({
       url: `${baseUrl}/locations/${loc.slug}`,
-      lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.8,
     }));
@@ -83,7 +74,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .flatMap((loc) =>
       loc.services.map((serviceSlug) => ({
         url: `${baseUrl}/${loc.slug}-${serviceSlug}`,
-        lastModified: now,
         changeFrequency: "monthly" as const,
         priority: 0.8,
       }))
@@ -106,7 +96,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Author profile pages — Person entity surface for E-E-A-T signals
   const authorPages: MetadataRoute.Sitemap = people.map((p) => ({
     url: `${baseUrl}/authors/${p.slug}`,
-    lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.5,
   }));

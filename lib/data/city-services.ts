@@ -75,14 +75,14 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "virtual-office",
     h1: "Virtual Office in Las Vegas — Real Address from $39/mo",
     heroSubtitle:
-      "A real Las Vegas virtual business address on Bermuda Rd in a staffed commercial suite — not a PO Box. Use it for your LLC filings, Nevada state registrations, Google Business Profile, and business mail. Virtual mailbox service with mail forwarding included on Opal and Diamond plans.",
+      "A real Las Vegas virtual business address on Bermuda Rd in a staffed commercial suite — not a PO Box. Use it for business mail, contracts, and filings that accept a commercial mail-receiving address. Virtual mailbox service with mail forwarding included on Opal and Diamond plans.",
     metaTitle: "Las Vegas Virtual Office — Address $39/mo",
     metaDescription:
-      "Virtual office in Las Vegas with a real business address at 6860 Bermuda Rd — not a PO box. From $39/mo, LLC-ready, mail forwarding, month-to-month.",
+      "Virtual office in Las Vegas with a real business address at 6860 Bermuda Rd — not a PO box. From $39/mo, mail forwarding, month-to-month.",
     heroImage: "/images/hero/virtual-office.jpg",
     useCases: [
       "LLC filings and Nevada business registration",
-      "Google Business Profile verification",
+      "Business mail and contract address",
       "Virtual business address and mailbox for remote founders",
       "Mail forwarding for out-of-state owners (from Opal, $149/mo)",
       "Out-of-state businesses establishing a Las Vegas presence",
@@ -101,7 +101,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
             "6860 Bermuda Rd, Suite 200 is a real commercial building with physical tenants and suite-level mail delivery",
             "Mail Holding at $39/month covers the LLC-only use case without paying for services you won't use",
             "Nevada has no personal income tax, no corporate income tax, and no franchise tax on most small businesses",
-            "Address is ready to use once you complete and notarize USPS Form 1583 — the standard CMRA paperwork for mail receipt",
+            "Mail service can begin after the provider accepts your USPS Form 1583 and required identification",
           ],
         },
         {
@@ -111,7 +111,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           fit: [
             "Sandstone at $69/month adds package receiving from UPS, FedEx, Amazon, and signature-required mail",
             "A real commercial street address can help meet the address-verification requirements that P.O. Boxes typically fail — check each payment processor or marketplace for their specific policy",
-            "Keeps your home address off LLC filings, Google Business Profile, and Whois records",
+            "Keeps your home address off contracts, public-facing materials, and Whois records",
             "Package arrival notifications let you schedule pickup instead of racing the carrier",
           ],
         },
@@ -141,8 +141,8 @@ export const cityServiceData: Record<string, CityServiceData> = {
       whyChoose: {
         heading: "Why a virtual office in Las Vegas at Muze Office",
         paragraphs: [
-          "A virtual office in Las Vegas is one of the most cost-effective ways to establish a real business presence in Nevada without signing a lease. Muze Office sits at 6860 Bermuda Rd, Suite 200 in the 89119 business corridor — a real commercial building with a real suite, reception, and physical tenants, not a UPS Store counter or a ghost address. That matters when you register an LLC with the Nevada Secretary of State, verify a Google Business Profile, open a business bank account, or file paperwork that requires a street address rather than a P.O. Box.",
-          "Use 6860 Bermuda Rd, Suite 200, Las Vegas NV 89119 as your business address on LLC filings, Nevada state registrations, Google Business Profile setup, and client-facing contracts. It reads as a real commercial address because it is one — the suite number is yours, the mail is delivered to the suite, and the building has a staffed reception during business hours. Banks and payment processors differ in how they treat virtual-office and commercial mail-receiving-agent (CMRA) addresses during verification — check with your specific institution before using this address on financial applications. We are not your registered agent for legal service of process; if you need that, you'll work with a separate registered agent service and can list Muze Office as your business address alongside.",
+          "A virtual office in Las Vegas is one of the most cost-effective ways to establish a commercial mailing presence without signing a lease. Muze Office sits at 6860 Bermuda Rd, Suite 200 in the 89119 business corridor — a real commercial building with a real suite, reception, and physical tenants, not a UPS Store counter or a ghost address. That matters when a contract, institution, or filing accepts a commercial street address rather than a P.O. Box.",
+          "Use 6860 Bermuda Rd, Suite 200, Las Vegas NV 89119 as your business address on contracts, marketing materials, and filings that accept a commercial mail-receiving address. Banks, payment processors, and agencies set their own requirements, so confirm with the institution before applying. We are not your registered agent for legal service of process. A virtual-office-only plan also does not make a business eligible for a Google Business Profile; Google's requirements depend on the business itself operating, receiving customers, staffing the location, and maintaining signage there.",
           "Nevada's tax advantage is the other half of the equation. The state has no personal income tax, no corporate income tax, and no franchise tax on most small businesses. Pairing a Nevada virtual office with LLC formation gives you a legitimate local footprint at a fraction of what physical office space would cost. Mail Holding starts at $39 per month — a virtual mailbox at a professional address, with USPS letter mail notification and suite-number delivery. Sandstone ($69) adds package receiving from UPS, FedEx, and Amazon, typically the deciding factor for e-commerce sellers. Mail forwarding is included from Opal ($149) — if you live out of state or travel often, your mail gets bundled and forwarded to you on a schedule that works.",
           "Beyond the address, every virtual office plan at Muze Office is backed by a real coworking space. Opal ($149) and Diamond ($249) include coworking hours and meeting room credits, so when a client flies in for a meeting you have a professional conference room to bring them to — not a Starbucks on Paradise Rd. The building is 10 minutes from Harry Reid International Airport via I-215, which makes fly-in meetings realistic for out-of-state businesses that only need a Las Vegas presence a few times a year.",
         ],
@@ -150,7 +150,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       comparison: {
         heading: "Virtual address vs. P.O. Box, UPS Store PMB, registered agent, and home address",
         paragraphs: [
-          "A P.O. Box is the cheapest option but the most limiting. The Nevada Secretary of State will not accept a P.O. Box as your LLC's principal business address, Google Business Profile does not allow it, most banks will not use it to open a business checking account, and many payment processors and marketplaces flag P.O. Box addresses during business verification. USPS P.O. boxes also can't receive packages from UPS, FedEx, or private carriers — a hard blocker for anyone running an e-commerce or subscription business.",
+          "A P.O. Box is the cheapest option but the most limiting. It cannot receive packages from UPS, FedEx, or private carriers, and some institutions require a street address instead. Confirm the address requirements for your specific filing, bank, payment processor, marketplace, or licensing body before applying.",
           "A UPS Store PMB (Personal Mailbox) is a step up from a P.O. Box but reads as a retail mailbox rental on public filings. Muze Office operates from its own staffed commercial suite in an office building with physical tenants — you get a real business address at 6860 Bermuda Rd, Suite 200, Las Vegas NV 89119. Mail goes through the standard USPS Commercial Mail Receiving Agency process (Form 1583, which we'll walk you through when you sign up), and from the Sandstone tier ($69/mo) we accept FedEx, UPS, and Amazon packages on your behalf. The combination — a staffed commercial building, package acceptance from commercial carriers, and mail forwarding on Opal and above — is what distinguishes this from a retail mailbox rental.",
           "A registered agent service solves one specific problem: receiving legal service of process for your LLC. It does not give you a usable business address, does not forward your mail, does not let you meet clients, and does not appear on your marketing materials. Muze Office is not your registered agent — we are a business address and mail service. If you already have a registered agent, a virtual office sits alongside it: the registered agent handles lawsuits, the virtual office handles everything else.",
           "Using your home address is the path of least resistance, but it comes with real costs. It becomes a public record once you file your LLC, it exposes your family to anyone who searches for your business, and in many Nevada HOAs and residential zones it technically violates covenants for commercial mail receipt. For a few hundred dollars a year, a Muze Office business address removes that risk entirely and gives you a cleaner professional footprint.",
@@ -200,8 +200,8 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to get started with a Las Vegas business address",
         paragraphs: [
-          "Pick the tier that matches how you actually use mail. If you only need a business address for your LLC filing and Google Business Profile and rarely receive physical mail, start with Mail Holding at $39/mo — letter mail notification and suite-number pickup, no package receiving. If you ship and receive packages from UPS, FedEx, or Amazon, upgrade to Sandstone at $69/mo. If you want mail forwarding so you never come in to collect mail in person, Opal ($149) is the entry tier that includes mail forwarding, plus 4 coworking hours and 2 meeting room hours per month. Diamond ($249) steps that up to 20 coworking hours, 6 meeting room hours, and a dedicated local phone line.",
-          "After you sign up, the main administrative step is completing USPS Form 1583 — the federal form that authorizes a Commercial Mail Receiving Agency to receive mail on your behalf. The form needs to be notarized; an online notary service or a local notary public can handle that, and you upload the completed form to us. Once it's on file, you can start updating your LLC records, Nevada Secretary of State filings, Google Business Profile, bank, and marketing materials with the new business address.",
+          "Pick the tier that matches how you actually use mail. If you only need a business address for contracts or filings that accept a commercial mail-receiving address and rarely receive physical mail, start with Mail Holding at $39/mo — letter mail notification and suite-number pickup, no package receiving. If you ship and receive packages from UPS, FedEx, or Amazon, upgrade to Sandstone at $69/mo. If you want mail forwarding so you never come in to collect mail in person, Opal ($149) is the entry tier that includes mail forwarding, plus 4 coworking hours and 2 meeting room hours per month. Diamond ($249) steps that up to 20 coworking hours, 6 meeting room hours, and a dedicated local phone line.",
+          "After you sign up, the main administrative step is completing USPS Form 1583, which authorizes a Commercial Mail Receiving Agency to receive mail on your behalf. The current form permits identity verification in the CMRA employee's physical or live virtual presence, or acknowledgment before a notary. Mail service begins after the provider accepts the form and required identification. You can then use the address where the receiving institution permits it. A virtual-office-only plan is not, by itself, eligible for Google Business Profile verification.",
           "Plans are month-to-month. You can start with Mail Holding for a basic LLC address, upgrade to Sandstone when your package volume picks up, step up to Opal when you want mail forwarding, and move to Diamond the first time you need regular coworking access and a local phone line. Book a tour if you want to see the space first, or contact us to get started.",
         ],
       },
@@ -469,7 +469,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         paragraphs: [
           "The Hot Desk at $350/month is the middle product in the coworking tier stack and it's the one that fits the largest share of members. You get any-desk 24/7 biometric access plus monthly meeting room credits, mail handling, community-event access, phone booths, printing, unlimited coffee, and free parking. The tradeoff versus Dedicated Desk is that you don't have a reserved seat, no personal storage, and no business address with mail; the tradeoff versus Day Pass is that you're paying monthly rather than per visit and getting 24/7 access, meeting credits, and mail handling on top.",
           "It's an any-desk product, not a reserved-desk product. Hot Desk members sit wherever's open in the shared coworking area each day — that's the reason the tier exists at $350 rather than $399. If you want to plug in a dual-monitor rig and leave it there, claim a corner you keep coming back to, or use 6860 Bermuda Rd, Suite 200 as a business address on LLC filings and contracts, Dedicated Desk ($399) is the right shape, not Hot Desk. Both tiers include 24/7 biometric access, so hours-of-access isn't the deciding factor.",
-          "The mail handling piece is a real perk that often gets overlooked in the tier comparison. Hot Desk members can have LLC, tax, and business correspondence sent to 6860 Bermuda Rd, Suite 200 and pick it up while the front desk is staffed (Mon–Fri 10am–7pm) — a Nevada street address with a suite number that works for LLC filings, Google Business Profile, and contracts. It's not the same product as Virtual Office (no package receiving, no mail forwarding, no dedicated business-address-only plan), but for someone who's already at the space most weekdays, the mail-handling inclusion solves the mail problem without a second subscription.",
+          "The mail handling piece is a real perk that often gets overlooked in the tier comparison. Hot Desk members can have tax and business correspondence sent to 6860 Bermuda Rd, Suite 200 and pick it up while the front desk is staffed (Mon–Fri 10am–7pm). The address can be used on contracts and filings that accept a commercial mail-receiving address. It's not the same product as Virtual Office (no package receiving, no mail forwarding, no dedicated business-address-only plan), but for someone who's already at the space most weekdays, the mail-handling inclusion solves the mail problem without a second subscription.",
         ],
       },
       comparison: {
@@ -535,12 +535,12 @@ export const cityServiceData: Record<string, CityServiceData> = {
         {
           persona: "Solo founders running a Nevada business daily",
           scenario:
-            "You've filed an LLC in Nevada, you're running the business out of Las Vegas daily, and you want a real business address you can use on LLC filings, contracts, and Google Business Profile — plus 24/7 access so you can match client time zones on either coast.",
+            "You've filed an LLC in Nevada, you're running the business out of Las Vegas daily, and you want a real business address for contracts and qualifying filings — plus 24/7 access so you can match client time zones on either coast.",
           fit: [
             "Business address and mail handling are included in the $399 tier — no second Virtual Office subscription needed",
             "24/7 biometric access for 6am calls to East Coast clients or 10pm calls to Tokyo partners",
             "Nevada has no state income tax, no corporate income tax, and no franchise tax on most small businesses",
-            "Address can be used for LLC filings, Google Business Profile, and contracts — it's a real commercial suite, not a mailbox",
+            "Address can be used for contracts and qualifying filings — it's a real commercial suite, not a mailbox",
           ],
         },
         {
@@ -558,9 +558,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
       whyChoose: {
         heading: "Why choose a Dedicated Desk in Las Vegas at Muze Office",
         paragraphs: [
-          "The Dedicated Desk at $399/month is the top of the coworking tier stack. You get everything Hot Desk includes — 24/7 biometric access, meeting room credits, mail handling, phone booths, fast WiFi, unlimited coffee, free parking, community events — plus three things that make the tier distinct: a reserved desk that's yours every day, personal storage for equipment and files, and a Las Vegas business address with mail you can use on LLC filings, Google Business Profile, and contracts. It's the product for members whose work has graduated past 'I'll sit wherever' into 'I want to plug in a dual-monitor rig and leave it there.'",
+          "The Dedicated Desk at $399/month is the top of the coworking tier stack. You get everything Hot Desk includes — 24/7 biometric access, meeting room credits, mail handling, phone booths, fast WiFi, unlimited coffee, free parking, community events — plus three things that make the tier distinct: a reserved desk that's yours every day, personal storage for equipment and files, and a Las Vegas business address with mail for contracts and qualifying filings. It's the product for members whose work has graduated past 'I'll sit wherever' into 'I want to plug in a dual-monitor rig and leave it there.'",
           "The reserved-desk-plus-storage piece is the part that flips the math for a lot of members. Hot Desk at $350 is any-desk access; Dedicated Desk at $399 lets you claim a specific spot, leave a monitor and keyboard plugged in between sessions, store equipment, files, and headphones in a personal cubby, and not pack a bag every night. If you're in the space daily and you've found yourself drifting back to the same desk anyway, the $49/month delta turns that drift into a real reservation — and the business-address-and-mail piece often pays for itself by replacing a separate Virtual Office subscription.",
-          "The business-address-and-mail inclusion is the other differentiator. Dedicated Desk members can have LLC filings, tax correspondence, and business mail delivered to 6860 Bermuda Rd, Suite 200 — a real commercial suite number, not a PO Box, accepted by the Nevada Secretary of State and registered agents. The address is also usable for Google Business Profile and contracts. That's one reason some members drop a separate Virtual Office subscription when they move up to Dedicated Desk — the mail-and-address piece is bundled in.",
+          "The business-address-and-mail inclusion is the other differentiator. Dedicated Desk members can have tax correspondence and business mail delivered to 6860 Bermuda Rd, Suite 200 — a real commercial suite number, not a PO Box. Confirm filing requirements with the relevant agency, and remember that registered-agent and Google Business Profile requirements are separate. That's one reason some members drop a separate Virtual Office subscription when they move up to Dedicated Desk — the mail-and-address piece is bundled in.",
         ],
       },
       comparison: {
@@ -1295,10 +1295,10 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "virtual-office",
     h1: "Virtual Office in Houston",
     heroSubtitle:
-      "A real Houston business address on Augusta Dr in the Galleria — not a P.O. Box. Use it for your Texas LLC, Google Business Profile, contracts, and mail. Meeting rooms included.",
+      "A real Houston business address on Augusta Dr in the Galleria — not a P.O. Box. Use it for mail, contracts, and filings that accept a commercial mail-receiving address. Meeting rooms included.",
     metaTitle: "Houston Virtual Office — Galleria Address $39/mo",
     metaDescription:
-      "Virtual office in Houston with a real Galleria address at 1800 Augusta Dr. From $39/mo — Texas LLC ready, GBP eligible, mail forwarding. Month-to-month. Join the waitlist.",
+      "Planned Houston virtual office at 1800 Augusta Dr near the Galleria. Join early access for confirmed opening, address-service, and pricing updates.",
     heroImage: "/images/hero/virtual-office.jpg",
     useCases: [
       "Remote workers who need a Houston business address",
@@ -1320,7 +1320,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
             "1800 Augusta Dr, Suite 200 is a real commercial building in Houston's Galleria / Tanglewood area with physical tenants and suite-level mail delivery",
             "Mail Holding at $39/month covers the LLC-only use case without paying for services you won't use",
             "Texas has no state personal income tax, which is part of the reason founders file here in the first place",
-            "Address is ready to use once you complete and notarize USPS Form 1583 — the standard CMRA paperwork for mail receipt",
+            "Mail service can begin after the provider accepts your USPS Form 1583 and required identification",
           ],
         },
         {
@@ -1330,7 +1330,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           fit: [
             "Sandstone at $69/month adds package receiving from UPS, FedEx, Amazon, and signature-required mail",
             "A real commercial street address can help meet the address-verification requirements that P.O. Boxes typically fail — check each payment processor or marketplace for their specific policy",
-            "Keeps your home address off Texas LLC filings, Google Business Profile, and carrier shipping labels",
+            "Keeps your home address off contracts, public-facing materials, and carrier shipping labels",
             "Package arrival notifications let you schedule pickup instead of racing the carrier at a residential door",
           ],
         },
@@ -1360,7 +1360,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       whyChoose: {
         heading: "Why choose a Houston virtual office at Muze Office",
         paragraphs: [
-          "A Houston virtual office is one of the most cost-effective ways to establish a real business presence in Texas without signing a lease. Muze Office Houston sits at 1800 Augusta Dr in the Galleria / Tanglewood area — a commercial building inside the 610 Loop with a real suite, reception, and physical tenants, not a UPS Store counter or a ghost address in a suburban strip mall. That matters when you register an LLC with the Texas Secretary of State, verify a Google Business Profile, open a business bank account, or file paperwork that requires a street address rather than a P.O. Box.",
+          "A Houston virtual office is one of the most cost-effective ways to establish a commercial mailing presence in Texas without signing a lease. Muze Office Houston sits at 1800 Augusta Dr in the Galleria / Tanglewood area — a commercial building inside the 610 Loop with a real suite, reception, and physical tenants, not a UPS Store counter or a ghost address in a suburban strip mall. That matters when a contract, institution, or filing accepts a street address rather than a P.O. Box.",
           "Texas's tax structure is the other half of the equation. The state has no personal income tax, which is one of the most common reasons founders form entities here and relocate their operating companies from California, New York, and Illinois. Pairing a Texas LLC with a real Houston address gives you a legitimate local footprint in the fourth-largest city in the country at a fraction of what physical office space inside the Loop would cost. Our Mail Holding tier starts at $39 per month — a professional address with USPS letter mail notification and suite-number delivery. For $69 (Sandstone) you add package receiving from UPS, FedEx, and Amazon, which is typically the deciding factor for e-commerce sellers and remote consultants.",
           "Beyond the address, every virtual office plan at Muze Office is backed by a real coworking space. Opal ($149) and Diamond ($249) include coworking hours and meeting room credits, so when a client flies in for a meeting you have a professional conference room to bring them to — not a coffee shop on Post Oak. The building is a short drive from both George Bush Intercontinental (IAH) and William P. Hobby (HOU), which makes fly-in meetings realistic for out-of-state businesses that only need a Houston presence a few times a year.",
         ],
@@ -1368,7 +1368,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       comparison: {
         heading: "Virtual office vs. P.O. Box, registered agent, and home address",
         paragraphs: [
-          "A P.O. Box is the cheapest option but the most limiting. The Texas Secretary of State expects a physical street address on many business filings, Google Business Profile does not accept P.O. Boxes, most banks will not use one to open a business checking account, and many payment processors and marketplaces flag P.O. Box addresses during business verification. USPS P.O. boxes also can't receive packages from UPS, FedEx, or private carriers — a hard blocker for anyone running an e-commerce or subscription business out of Houston.",
+          "A P.O. Box is the cheapest option but the most limiting. It cannot receive packages from UPS, FedEx, or private carriers, and some institutions require a street address instead. Confirm the address requirements for your specific filing, bank, payment processor, marketplace, or licensing body before applying.",
           "A registered agent service in Texas solves one specific problem: receiving legal service of process for your LLC. It does not give you a usable business address, does not forward your mail, does not let you meet clients, and does not appear on your marketing materials. If you already have a Texas registered agent, a virtual office sits alongside it — the registered agent handles lawsuits, the virtual office handles everything else.",
           "Using your home address is the path of least resistance, but it comes with real costs. It becomes a public record once you file your LLC, it exposes your family to anyone who searches for your business, and many Houston HOAs — especially in Tanglewood, Memorial, and Bellaire — limit commercial mail receipt in residentially zoned areas. For a few hundred dollars a year, a Muze Office virtual office removes that risk entirely and gives you a cleaner professional footprint inside the Loop.",
         ],
@@ -1376,8 +1376,8 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to get started with a Houston virtual office",
         paragraphs: [
-          "Pick the tier that matches how you actually use mail. If you only need an address for your Texas LLC and Google Business Profile and rarely receive physical mail, start with Mail Holding at $39. If you ship and receive packages, upgrade to Sandstone at $69. If you want the address plus occasional use of the space, Opal ($149) includes 4 coworking hours and 2 meeting room hours per month, and Diamond ($249) steps that up to 20 coworking hours and 6 meeting room hours with a dedicated local phone line.",
-          "After you sign up, the main administrative step is completing USPS Form 1583 — the federal form that authorizes a Commercial Mail Receiving Agency to receive mail on your behalf. The form needs to be notarized; an online notary service or a local Houston notary public can handle that, and you upload the completed form to us. Once it's on file, you can start updating your LLC records, Google Business Profile, bank, and marketing materials with the new Augusta Dr address.",
+          "Pick the tier that matches how you actually use mail. If you only need an address for contracts or filings that accept a commercial mail-receiving address and rarely receive physical mail, start with Mail Holding at $39. If you ship and receive packages, upgrade to Sandstone at $69. If you want the address plus occasional use of the space, Opal ($149) includes 4 coworking hours and 2 meeting room hours per month, and Diamond ($249) steps that up to 20 coworking hours and 6 meeting room hours with a dedicated local phone line.",
+          "After launch and signup, the main administrative step will be completing USPS Form 1583, which authorizes a Commercial Mail Receiving Agency to receive mail on your behalf. The current form permits identity verification in the CMRA employee's physical or live virtual presence, or acknowledgment before a notary. Mail service will begin only after the provider accepts the form and required identification. You can then use the address where the receiving institution permits it. A virtual-office-only plan is not, by itself, eligible for Google Business Profile verification.",
           "Plans are month-to-month. You can start with Mail Holding, upgrade to Sandstone when your package volume picks up, and move to Opal or Diamond the first time you need a conference room for a client meeting in the Galleria. Join the waitlist to reserve your address before we open, or contact us to get started.",
         ],
       },
@@ -1644,7 +1644,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         paragraphs: [
           "The Hot Desk at $350/month is the middle product in the coworking tier stack and it's the one that fits the largest share of members. You get any-desk 24/7 biometric access plus monthly meeting room credits, mail handling, community-event access, phone booths, printing, unlimited coffee, and free parking. The tradeoff versus Dedicated Desk is that you don't have a reserved seat, no personal storage, and no business address with mail; the tradeoff versus Day Pass is that you're paying monthly rather than per visit and getting 24/7 access, meeting credits, and mail handling on top.",
           "It's an any-desk product, not a reserved-desk product. Hot Desk members sit wherever's open in the shared coworking area each day — that's the reason the tier exists at $350 rather than $399. If you want to plug in a dual-monitor rig and leave it there, claim a corner you keep coming back to, or use 1800 Augusta Dr as a business address on LLC filings and contracts, Dedicated Desk ($399) is the right shape, not Hot Desk. Both tiers include 24/7 biometric access, so hours-of-access isn't the deciding factor.",
-          "The mail handling piece is a real perk that often gets overlooked in the tier comparison. Hot Desk members can have LLC, tax, and business correspondence sent to 1800 Augusta Dr and pick it up while the front desk is staffed (Mon–Fri 10am–7pm) — a Texas street address with a suite number that works for LLC filings, Google Business Profile, and contracts. It's not the same product as Virtual Office (no package receiving, no mail forwarding, no dedicated business-address-only plan), but for someone who's already at the space most weekdays, the mail-handling inclusion solves the mail problem without a second subscription.",
+          "The mail handling piece is a real perk that often gets overlooked in the tier comparison. Hot Desk members can have tax and business correspondence sent to 1800 Augusta Dr and pick it up while the front desk is staffed (Mon–Fri 10am–7pm). The address can be used on contracts and filings that accept a commercial mail-receiving address. It's not the same product as Virtual Office (no package receiving, no mail forwarding, no dedicated business-address-only plan), but for someone who's already at the space most weekdays, the mail-handling inclusion solves the mail problem without a second subscription.",
         ],
       },
       comparison: {
@@ -1710,12 +1710,12 @@ export const cityServiceData: Record<string, CityServiceData> = {
         {
           persona: "Solo founders running a Texas business daily",
           scenario:
-            "You've filed an LLC in Texas, you're running the business out of Houston daily, and you want a real business address you can use on LLC filings, contracts, and Google Business Profile — plus 24/7 access so you can match client time zones on either coast.",
+            "You've filed an LLC in Texas, you're running the business out of Houston daily, and you want a real business address for contracts and qualifying filings — plus 24/7 access so you can match client time zones on either coast.",
           fit: [
             "Business address and mail handling are included in the $399 tier — no second Virtual Office subscription needed",
             "24/7 biometric access for 6am calls to East Coast clients or 10pm calls to West Coast partners",
             "Texas has no state personal income tax — a frequent reason founders relocate here",
-            "Address can be used for LLC filings, Google Business Profile, and contracts — it's a real commercial suite, not a mailbox",
+            "Address can be used for contracts and qualifying filings — it's a real commercial suite, not a mailbox",
           ],
         },
         {
@@ -1733,9 +1733,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
       whyChoose: {
         heading: "Why choose a Dedicated Desk in Houston at Muze Office",
         paragraphs: [
-          "The Dedicated Desk at $399/month is the top of the coworking tier stack. You get everything Hot Desk includes — meeting room credits, mail handling, phone booths, fast WiFi, unlimited coffee, free parking, community events — plus four things that make the tier distinct: a reserved desk that's yours every day, personal storage for equipment and files, 24/7 biometric entry, and a Houston business address with mail you can use on LLC filings, Google Business Profile, and contracts. It's the product for members whose work has graduated past 'I'll sit wherever' into 'I want to plug in a dual-monitor rig and leave it there.'",
+          "The Dedicated Desk at $399/month is the top of the coworking tier stack. You get everything Hot Desk includes — meeting room credits, mail handling, phone booths, fast WiFi, unlimited coffee, free parking, community events — plus four things that make the tier distinct: a reserved desk that's yours every day, personal storage for equipment and files, 24/7 biometric entry, and a Houston business address with mail for contracts and qualifying filings. It's the product for members whose work has graduated past 'I'll sit wherever' into 'I want to plug in a dual-monitor rig and leave it there.'",
           "The reserved-desk-plus-storage piece is the part that flips the math for a lot of members. Hot Desk at $350 is any-desk access; Dedicated Desk at $399 lets you claim a specific spot, leave a monitor and keyboard plugged in between sessions, store equipment, files, and headphones in a personal cubby, and not pack a bag every night. If you're in the space daily and you've found yourself drifting back to the same desk anyway, the $49/month delta turns that drift into a real reservation — and the business-address-and-mail piece often pays for itself by replacing a separate Virtual Office subscription.",
-          "The business-address-and-mail inclusion is the other differentiator. Dedicated Desk members can have LLC filings, tax correspondence, and business mail delivered to 1800 Augusta Dr — a real commercial suite number, not a PO Box, accepted by the Texas Secretary of State and registered agents. The address is also usable for Google Business Profile and contracts. That's one reason some members drop a separate Virtual Office subscription when they move up to Dedicated Desk — the mail-and-address piece is bundled in.",
+          "The business-address-and-mail inclusion is the other differentiator. Dedicated Desk members can have tax correspondence and business mail delivered to 1800 Augusta Dr — a real commercial suite number, not a PO Box. Confirm filing requirements with the relevant agency, and remember that registered-agent and Google Business Profile requirements are separate. That's one reason some members drop a separate Virtual Office subscription when they move up to Dedicated Desk — the mail-and-address piece is bundled in.",
         ],
       },
       comparison: {

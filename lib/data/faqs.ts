@@ -9,12 +9,12 @@ const virtualOfficeFAQs: FAQ[] = [
   {
     question: "Do I get a real street address or a PO Box?",
     answer:
-      "You get a real street address with a suite number — not a PO Box. You can use it on your website, business cards, LLC filings, and Google Business Profile. Our address is 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119.",
+      "You get a real street address with a suite number — not a PO Box. You can use it on your website, business cards, contracts, and filings that accept a commercial mail-receiving address. Our address is 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119.",
   },
   {
     question: "Can I use this address to register my LLC?",
     answer:
-      "Yes. Our address works for LLC registration, business licensing, Google Business Profile verification, and contracts. Note that a Nevada registered agent (the person or service authorized to receive legal service of process for your LLC) is a separate role — if you need one, you can pair a registered agent service with your Muze Office virtual office.",
+      "A commercial mail-receiving address can be used for LLC filings, business licensing, and contracts when the relevant agency accepts it. A Nevada registered agent (the person or service authorized to receive legal service of process for your LLC) is a separate role; Muze Office does not provide that service. Confirm the address requirements for your filing with the agency or a Nevada attorney.",
   },
   {
     question: "How does mail handling work?",
@@ -34,7 +34,7 @@ const virtualOfficeFAQs: FAQ[] = [
   {
     question: "What's included in each virtual office package?",
     answer:
-      "Mail Holding ($39/mo): professional Las Vegas business address with suite number, USPS letter mail pickup, and LLC/Google Business registration — letters only, no packages. Sandstone ($69/mo): adds package receiving from UPS, FedEx, and Amazon plus signature-required mail. Opal ($149/mo): adds mail forwarding, 4 coworking hours, and 2 meeting room hours. Diamond ($249/mo): adds 20 coworking hours, 6 meeting room hours, and a dedicated local phone line.",
+      "Mail Holding ($39/mo): professional Las Vegas business address with suite number and USPS letter mail pickup — letters only, no packages. Sandstone ($69/mo): adds package receiving from UPS, FedEx, and Amazon plus signature-required mail. Opal ($149/mo): adds mail forwarding, 4 coworking hours, and 2 meeting room hours. Diamond ($249/mo): adds 20 coworking hours, 6 meeting room hours, and a dedicated local phone line.",
   },
   {
     question: "What's the difference between a virtual office and a PO Box?",
@@ -49,17 +49,17 @@ const virtualOfficeFAQs: FAQ[] = [
   {
     question: "Can I use a virtual office address to open a business bank account?",
     answer:
-      "Banks vary. Major banks generally accept commercial mail receiving agency (CMRA) addresses on business checking accounts when you can show a completed USPS Form 1583, and online-first banks tend to prefer them. A few traditional lenders won't — check with your specific bank before applying. Our address is a real commercial suite in a staffed building, which typically verifies more smoothly than a retail mail-store address.",
+      "Banks set their own address and identity-verification rules. A commercial mail-receiving address may be accepted as a mailing address, but some institutions also require a separate physical address. Check with your bank before applying; Muze Office cannot guarantee approval.",
   },
   {
     question: "Is a virtual office legal in Nevada?",
     answer:
-      "Yes. Virtual offices operate under standard USPS Commercial Mail Receiving Agency (CMRA) rules — you complete a notarized USPS Form 1583 authorizing us to receive mail on your behalf, and the address is then valid for Nevada LLC filings, state registrations, and Google Business Profile. What a virtual office doesn't replace is a registered agent, which is a separate legal role.",
+      "Yes. Virtual offices operate under USPS Commercial Mail Receiving Agency (CMRA) rules. Before mail service begins, you complete USPS Form 1583 and present the required identification; the current form permits verification in the physical or live virtual presence of the CMRA, or acknowledgment before a notary. Whether an address is accepted for a particular filing depends on that agency's rules. A virtual office does not replace a registered agent, which is a separate legal role.",
   },
   {
     question: "Can I get a Las Vegas virtual office if I don't live in Nevada?",
     answer:
-      "Yes — most of our virtual office members are out-of-state founders establishing a Nevada presence. The notarized USPS Form 1583 can be completed with an online notary from anywhere, and plans from Opal ($149/mo) include mail forwarding so your mail reaches you wherever you are.",
+      "Yes. USPS Form 1583 can be completed remotely using the CMRA's live virtual identity-verification process or, where available, acknowledgment before an online notary. Plans from Opal ($149/mo) include mail forwarding so your mail can reach you outside Nevada.",
   },
   {
     question: "Do you offer a virtual mailbox in Las Vegas?",
@@ -67,9 +67,9 @@ const virtualOfficeFAQs: FAQ[] = [
       "Yes — every virtual office plan works as a virtual mailbox at a real street address: we notify you when mail arrives and you pick it up at the suite during business hours. Sandstone ($69/mo) adds package receiving from UPS, FedEx, and Amazon, and Opal ($149/mo) adds scheduled mail forwarding to any address you choose.",
   },
   {
-    question: "Can I verify my Google Business Profile with this address?",
+    question: "Can I use this address for a Google Business Profile?",
     answer:
-      "Yes. A staffed commercial suite is one of the few non-leased address types Google Business Profile accepts. Submit the address, request verification by postcard or video, and we'll receive the verification mail at the suite and notify you — we don't open it. Verification typically takes 5–14 days end to end.",
+      "A virtual-office address alone does not make a business eligible for a Google Business Profile. Google requires the business itself to operate here, receive customers during stated hours, be staffed by its own team, and maintain permanent signage. If you meet those requirements, review Google's current guidelines before applying; Muze Office cannot guarantee verification or listing eligibility.",
   },
 ];
 
@@ -115,7 +115,7 @@ const meetingRoomFAQs: FAQ[] = [
   {
     question: "How do I book a meeting room?",
     answer:
-      "For Las Vegas meeting rooms, book online directly from the Las Vegas Meeting Rooms page — select room size, date, and time for instant confirmation. For Houston meeting rooms, use our contact form or call us to reserve. Same-day bookings are available based on availability at both locations.",
+      "For Las Vegas meeting rooms, book online directly from the Las Vegas Meeting Rooms page — select room size, date, and time for instant confirmation. Houston is not accepting meeting-room reservations yet; join Houston early access for opening and availability updates.",
   },
   {
     question: "Is catering available for meetings?",
@@ -275,7 +275,7 @@ const galleriaCoworkingFAQs: FAQ[] = [
   {
     question: "Where exactly is the Houston Galleria location?",
     answer:
-      "Our Houston location will be near the Galleria / Uptown district, accessible from I-610 West Loop and close to Post Oak Blvd. Exact address to be announced.",
+      "The planned location is 1800 Augusta Dr, Houston, TX 77057, in the Galleria / Tanglewood area with access from I-610 West Loop and Woodway Dr. The location is not open yet.",
   },
   {
     question: "What memberships will be available?",
@@ -285,7 +285,7 @@ const galleriaCoworkingFAQs: FAQ[] = [
   {
     question: "Is parking included?",
     answer:
-      "Yes. Free parking is included for all members and day pass visitors at our Houston Galleria location — no Post Oak garage fees.",
+      "On-site parking is planned for the Houston location. Final access details will be confirmed before opening.",
   },
   {
     question: "Where is the Houston location?",
@@ -295,12 +295,12 @@ const galleriaCoworkingFAQs: FAQ[] = [
   {
     question: "Are meeting rooms available?",
     answer:
-      "Yes. Our Houston location offers huddle rooms, conference rooms, and a boardroom — all equipped with AV and video conferencing and bookable by the hour.",
+      "Meeting rooms are part of the planned Houston workspace mix, but reservations are not open yet. Join early access for confirmed room types, pricing, and booking dates.",
   },
   {
     question: "Can I use my Las Vegas membership in Houston?",
     answer:
-      "We offer multi-city membership options so members can work from either Las Vegas or Houston. Contact us for details.",
+      "Multi-city access has not been finalized. Join Houston early access and tell us what membership you need so we can share confirmed options before opening.",
   },
 ];
 
@@ -435,7 +435,7 @@ const dedicatedDeskFAQs: FAQ[] = [
   {
     question: "What's included with a Dedicated Desk membership?",
     answer:
-      "A Dedicated Desk at $399/month includes everything in Hot Desk — 24/7 biometric access, meeting room credits, mail handling, phone booths, WiFi, coffee, parking, community events — plus a reserved desk that's yours every day, personal storage, and a business address with mail you can use for LLC filings, Google Business Profile, and contracts.",
+      "A Dedicated Desk at $399/month includes everything in Hot Desk — 24/7 biometric access, meeting room credits, mail handling, phone booths, WiFi, coffee, parking, community events — plus a reserved desk that's yours every day, personal storage, and a business address with mail for contracts and filings that accept a commercial mail-receiving address.",
   },
   {
     question: "How is the 24/7 access provided?",
@@ -445,7 +445,7 @@ const dedicatedDeskFAQs: FAQ[] = [
   {
     question: "Is the business address real, or a PO Box?",
     answer:
-      "It's a real commercial suite address at your Muze Office location — not a PO Box. Accepted by the Secretary of State for LLC filings, usable on Google Business Profile, and usable on contracts. Some members drop a separate Virtual Office subscription when they move up to Dedicated Desk because the mail-and-address piece is already bundled in.",
+      "It's a real commercial suite address at your Muze Office location — not a PO Box. It can be used on contracts and on filings that accept a commercial mail-receiving address. A registered-agent address and Google Business Profile eligibility have separate legal and policy requirements. Some members drop a separate Virtual Office subscription when they move up to Dedicated Desk because the mail-and-address piece is already bundled in.",
   },
   {
     question: "What's the difference between Dedicated Desk and a Private Office?",
@@ -468,12 +468,12 @@ const houstonVirtualOfficeFAQs: FAQ[] = [
   {
     question: "Do I get a real street address or a PO Box?",
     answer:
-      "You get a real street address with a suite number — not a PO Box. You can use it on your website, business cards, LLC filings, and Google Business Profile. Our Houston address is 1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area.",
+      "You get a real street address with a suite number — not a PO Box. You can use it on your website, business cards, contracts, and filings that accept a commercial mail-receiving address. Our Houston address is 1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area.",
   },
   {
     question: "Can I use this address to register my Texas LLC?",
     answer:
-      "Yes. Our Houston address works for Texas LLC registration with the Secretary of State, business licensing, Google Business Profile verification, and contracts. Note that a Texas registered agent (the person or service authorized to receive legal service of process for your LLC) is a separate role — if you need one, you can pair a registered agent service with your Muze Office Houston virtual office.",
+      "A commercial mail-receiving address can be used for Texas LLC filings, business licensing, and contracts when the relevant agency accepts it. A Texas registered agent (the person or service authorized to receive legal service of process for your LLC) is a separate role; Muze Office does not provide that service. Confirm the address requirements for your filing with the agency or a Texas attorney.",
   },
   {
     question: "How does mail handling work?",
@@ -493,7 +493,7 @@ const houstonVirtualOfficeFAQs: FAQ[] = [
   {
     question: "What's included in each virtual office package?",
     answer:
-      "Mail Holding ($39/mo): professional Houston business address with suite number, USPS letter mail pickup, and LLC/Google Business registration — letters only, no packages. Sandstone ($69/mo): adds package receiving from UPS, FedEx, and Amazon plus signature-required mail. Opal ($149/mo): adds mail forwarding, 4 coworking hours, and 2 meeting room hours. Diamond ($249/mo): adds 20 coworking hours, 6 meeting room hours, and a dedicated local phone line.",
+      "Mail Holding ($39/mo): professional Houston business address with suite number and USPS letter mail pickup — letters only, no packages. Sandstone ($69/mo): adds package receiving from UPS, FedEx, and Amazon plus signature-required mail. Opal ($149/mo): adds mail forwarding, 4 coworking hours, and 2 meeting room hours. Diamond ($249/mo): adds 20 coworking hours, 6 meeting room hours, and a dedicated local phone line.",
   },
   {
     question: "What's the difference between a virtual office and a PO Box?",
@@ -588,12 +588,12 @@ const locationsOverviewFAQs: FAQ[] = [
   {
     question: "Where is Muze Office located?",
     answer:
-      "Open in Las Vegas at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 (10 minutes from Harry Reid International Airport, off I-215). A second flagship is opening in Houston in 2026 at 1800 Augusta Dr, Houston, TX 77057 (inside the 610 Loop in the Galleria / Tanglewood area).",
+      "Open in Las Vegas at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 (10 minutes from Harry Reid International Airport, off I-215). An independently operated Muze Office franchise location is planned for Houston in 2026 at 1800 Augusta Dr, Houston, TX 77057 in the Galleria / Tanglewood area.",
   },
   {
     question: "Which cities are open?",
     answer:
-      "Las Vegas is open now and accepting members, day pass visitors, and meeting room bookings at 6860 Bermuda Rd, Suite 200. Houston opens in 2026 — join the waitlist for early access and founding-member pricing.",
+      "Las Vegas is open now and accepting members, day pass visitors, and meeting room bookings at 6860 Bermuda Rd, Suite 200. Houston is planned to open in 2026; join early access for confirmed timing and availability updates.",
   },
   {
     question: "How do I find the Houston location?",
@@ -601,9 +601,9 @@ const locationsOverviewFAQs: FAQ[] = [
       "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, 15 minutes from the Texas Medical Center, and 25 minutes from George Bush Intercontinental (IAH) and William P. Hobby (HOU).",
   },
   {
-    question: "Do you offer multi-city memberships?",
+    question: "Will multi-city memberships be available?",
     answer:
-      "Yes. Multi-city membership options are available so members can work from either Las Vegas or Houston. Contact us for details.",
+      "Multi-city access has not been finalized for Houston. Las Vegas memberships are available now; join Houston early access for confirmed launch options.",
   },
   {
     question: "Is parking available at each location?",
@@ -651,7 +651,7 @@ const lasVegasLocationFAQs: FAQ[] = [
   {
     question: "Can I use the Las Vegas address for my LLC?",
     answer:
-      "Yes. 6860 Bermuda Rd, Suite 200 is a real commercial address you can use for LLC registration, Google Business Profile, contracts, and business licensing. A registered agent is a separate role — pair a registered agent service with the virtual office if you need one.",
+      "6860 Bermuda Rd, Suite 200 is a real commercial address for contracts and filings that accept a commercial mail-receiving address. A registered agent is a separate role, and Google Business Profile eligibility depends on Google's operating-location, customer-access, staffing, and signage requirements.",
   },
 ];
 
@@ -664,22 +664,22 @@ const houstonLocationFAQs: FAQ[] = [
   {
     question: "How far is Muze Office Houston from IAH and Hobby airports?",
     answer:
-      "About 25 minutes by car from George Bush Intercontinental (IAH) and 25 minutes from William P. Hobby (HOU). The Galleria location makes fly-in client meetings practical from either airport.",
+      "Travel time varies significantly with Houston traffic. The planned Galleria / Tanglewood location is accessible from I-610; check live directions from George Bush Intercontinental (IAH) or William P. Hobby (HOU) before traveling.",
   },
   {
     question: "What are your hours in Houston?",
     answer:
-      "The space is staffed Monday through Friday, 10 AM to 7 PM. Dedicated Desk and Private Office members have 24/7 access via biometric entry.",
+      "Houston is not open yet, so it does not have customer or front-desk hours. Opening timing and operating hours will be announced to the early-access list when confirmed.",
   },
   {
     question: "Is there free parking at the Houston location?",
     answer:
-      "Yes. Parking is free for every member, day pass visitor, meeting room guest, and event attendee at 1800 Augusta Dr. No meters, no valet, no garage fees.",
+      "On-site parking is planned at 1800 Augusta Dr. Final member and visitor parking details will be confirmed before the location opens.",
   },
   {
     question: "What services are available at Muze Office Houston?",
     answer:
-      "Virtual Office (from $39/mo), Coworking (Day Pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo), Private Office (contact for pricing), Meeting Rooms (from $25/hr), and Event Space (from $99/hr). All month-to-month.",
+      "No Houston services are active yet. The planned mix includes virtual office services, coworking, private offices, meeting rooms, and event space. Join early access and select the workspace type you need; availability and Houston pricing will be confirmed before sales open.",
   },
   {
     question: "Does Texas have state income tax?",
@@ -689,7 +689,7 @@ const houstonLocationFAQs: FAQ[] = [
   {
     question: "Can I use the Houston address for my Texas LLC?",
     answer:
-      "Yes. 1800 Augusta Dr, Houston, TX 77057 is a real commercial address you can use for Texas LLC registration, Google Business Profile, contracts, and business licensing. A Texas registered agent is a separate role — pair a registered agent service with the virtual office if you need one.",
+      "Not yet. Muze Office is not currently offering address or mail-receiving service at 1800 Augusta Dr. After launch, acceptance will depend on each agency's rules; a Texas registered agent remains a separate legal role, and Google Business Profile eligibility depends on how the tenant actually operates at the location.",
   },
 ];
 

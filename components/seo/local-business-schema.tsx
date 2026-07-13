@@ -41,8 +41,8 @@ export function LocalBusinessSchema({
 
   const data: Record<string, unknown> = {
     "@context": "https://schema.org",
-    "@type": "CoworkingSpace",
-    "@id": `${locationUrl}#coworkingspace`,
+    "@type": "LocalBusiness",
+    "@id": `${locationUrl}#localbusiness`,
     name: location.nickname,
     description: `Flexible coworking, virtual offices, private offices, meeting rooms, and event space in ${address.city}, ${address.state}.${landmarkPhrase}${localCue} Free parking, high-speed WiFi, on-site cafe, and month-to-month memberships with no long-term leases.`,
     image: `${BRAND.url}/images/spaces/${location.slug}.jpg`,
@@ -86,8 +86,8 @@ export function LocalBusinessSchema({
         }
       : undefined,
     priceRange: "$25-$899",
-    // NO aggregateRating here, by design. This CoworkingSpace (a LocalBusiness
-    // subtype) is describing itself, so a self-hosted rating is "self-serving"
+    // NO aggregateRating here, by design. This LocalBusiness is describing
+    // itself, so a self-hosted rating is "self-serving"
     // and ineligible for review-snippet stars under Google policy — it only
     // produces GSC "invalid object type for field" errors, never stars. The
     // real 4.6★ rating lives on the Google Business Profile and surfaces in

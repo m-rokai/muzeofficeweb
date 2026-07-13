@@ -123,7 +123,7 @@ function renderBookATour(): string {
     "",
     `**Canonical URL:** ${BRAND.url}/book-a-tour`,
     "",
-    "Schedule a 20–30 minute walkthrough of the coworking floor, private offices, meeting rooms, and on-site cafe. Tours are free and available at both locations.",
+    "Schedule a 20–30 minute walkthrough of the Las Vegas coworking floor, private offices, meeting rooms, and on-site cafe. Houston is not open for tours yet; join early access for launch updates.",
     "",
     "## Las Vegas",
     "",

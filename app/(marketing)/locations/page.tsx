@@ -60,8 +60,9 @@ export default function LocationsPage() {
             </h1>
             <p className="mt-4 text-base text-[#74726D] md:text-lg">
               Open in Las Vegas (6860 Bermuda Rd, Suite 200), with a second
-              flagship opening in Houston in 2026 (1800 Augusta Dr in the
-              Galleria / Tanglewood area). Free parking.
+              independently operated franchise location planned for Houston in 2026 (1800 Augusta Dr in the
+              Galleria / Tanglewood area). Las Vegas has free parking; Houston
+              parking details will be confirmed before opening.
             </p>
           </div>
         </FadeIn>
@@ -81,7 +82,7 @@ export default function LocationsPage() {
                   alt={
                     loc.slug === "las-vegas"
                       ? `Muze Office ${loc.name} coworking and private office building at 6860 Bermuda Rd, Suite 200, 10 minutes from Harry Reid International Airport`
-                      : `Muze Office ${loc.name} coworking and private office building at 1800 Augusta Dr inside the 610 Loop in the Galleria / Tanglewood area`
+                      : "Houston skyline representing the planned Muze Office Galleria-area location"
                   }
                   fill
                   className="object-cover"
