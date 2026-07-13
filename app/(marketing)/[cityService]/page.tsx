@@ -171,7 +171,7 @@ export default async function CityServicePage({ params }: PageProps) {
         ? contactHref
         : isEventSpace
           ? contactHref
-        : BRAND.booking.tourUrl;
+          : BRAND.booking.tourUrl;
   const primaryCtaLabel = isComingSoon
     ? "Join Waitlist"
     : hasOnlineBooking
@@ -180,7 +180,7 @@ export default async function CityServicePage({ params }: PageProps) {
         ? `Get My ${location.name} Address`
         : isEventSpace
           ? "Check Date & Availability"
-        : "Book a Tour";
+          : "Book a Tour";
 
   return (
     <>
