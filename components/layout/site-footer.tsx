@@ -37,8 +37,8 @@ export function SiteFooter() {
               />
             </Link>
             <p className="text-sm text-gray-400">
-              Flexible workspace in Las Vegas and Houston &mdash; month-to-month
-              memberships, no long-term leases.
+              Flexible workspace open in Las Vegas, with an independently
+              operated Houston franchise location planned for 2026.
             </p>
             <a
               href="https://muzeofficefranchise.com"
@@ -87,8 +87,8 @@ export function SiteFooter() {
             </div>
           )}
 
-          {/* Houston city-services */}
-          {houston && houston.status === "active" && (
+          {/* Houston launch hub — service links stay hidden until opening. */}
+          {houston && (
             <div className="flex flex-col gap-4">
               <h3 className="text-sm font-semibold">Houston</h3>
               <ul className="flex flex-col gap-2">
@@ -97,19 +97,32 @@ export function SiteFooter() {
                     href="/locations/houston"
                     className="text-sm text-gray-400 transition-colors hover:text-white"
                   >
-                    Houston Location
+                    Houston Galleria &mdash; Opening 2026
                   </Link>
                 </li>
-                {houston.services.map((serviceId) => (
-                  <li key={`hou-${serviceId}`}>
+                {houston.status !== "active" && (
+                  <li>
                     <Link
-                      href={`/houston-${serviceId}`}
-                      className="text-sm text-gray-400 transition-colors hover:text-white"
+                      href="/locations/houston#waitlist"
+                      data-cta="houston_waitlist"
+                      data-cta-location="footer"
+                      className="text-sm text-[#EAA820] transition-colors hover:text-white"
                     >
-                      {cityServiceLabel(serviceId)}
+                      Join Houston early access
                     </Link>
                   </li>
-                ))}
+                )}
+                {houston.status === "active" &&
+                  houston.services.map((serviceId) => (
+                    <li key={`hou-${serviceId}`}>
+                      <Link
+                        href={`/houston-${serviceId}`}
+                        className="text-sm text-gray-400 transition-colors hover:text-white"
+                      >
+                        {cityServiceLabel(serviceId)}
+                      </Link>
+                    </li>
+                  ))}
               </ul>
             </div>
           )}

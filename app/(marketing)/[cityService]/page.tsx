@@ -1,4 +1,4 @@
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -94,7 +94,7 @@ const amenityLabels: Record<string, string> = {
   "meeting-rooms": "Meeting Room Access",
   coworking: "Coworking Hours",
   receptionist: "On-Site Receptionist",
-  "llc-ready": "LLC & Business Registration Ready",
+  "llc-ready": "Commercial Address for Permitted Uses",
   wifi: "High-Speed WiFi",
   parking: "Free Parking",
   coffee: "Unlimited Coffee & Water",
@@ -137,6 +137,9 @@ export default async function CityServicePage({ params }: PageProps) {
 
   const faqs = getFAQsForService(ctx.serviceId, ctx.locationId);
   const isComingSoon = location.status === "coming-soon";
+  if (isComingSoon) {
+    redirect(`/locations/${location.slug}#waitlist`);
+  }
   const hasOnlineBooking =
     !isComingSoon &&
     location.slug === "las-vegas" &&
@@ -155,10 +158,10 @@ export default async function CityServicePage({ params }: PageProps) {
     "event-space": "event-space",
   };
   const contactHref = isComingSoon
-    ? "/contact?interest=houston-waitlist"
+    ? "/locations/houston#waitlist"
     : `/contact?interest=${CONTACT_INTEREST_BY_SERVICE[service.id] ?? "coworking"}`;
-  // Coming-soon cities have no tours to book — waitlist leads go to /contact,
-  // where the form delivers to the notifications@ inbox.
+  // Coming-soon services consolidate into the substantive Houston launch hub
+  // rather than fragmenting demand across noindexed service pages.
   const primaryCtaHref = isComingSoon
     ? contactHref
     : hasOnlineBooking
@@ -699,13 +702,13 @@ export default async function CityServicePage({ params }: PageProps) {
         }
         subtitle={
           isComingSoon
-            ? `Muze Office ${location.name} is coming soon. Join the waitlist for early access and special pricing.`
+            ? `Muze Office ${location.name} is coming soon. Join early access for confirmed opening, availability, and pricing updates.`
             : isDayPass
               ? `Sign up online and work today — desk, Wi-Fi, coffee, and free parking included. Questions before your first visit? Call us.`
             : hasOnlineBooking
               ? `Reserve your room online now, or call us if you need catering, AV help, or a custom setup for your meeting.`
             : isVirtualOffice
-              ? `Pick a tier, complete USPS Form 1583, and start using ${location.address.street}, ${location.address.city} ${location.address.state} on your LLC, GBP, and contracts. Most members are live within a week.`
+              ? `Pick a tier, complete USPS Form 1583, and use the address where the receiving agency, bank, or platform permits a commercial mail-receiving address. Registered-agent and Google Business Profile requirements are separate.`
             : `Book a tour today or call us to learn more about ${service.name.toLowerCase()} at Muze Office ${location.name}.`
         }
         primaryLabel={primaryCtaLabel}

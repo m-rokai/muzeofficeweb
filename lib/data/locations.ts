@@ -136,11 +136,11 @@ export const locations: Location[] = [
       weekends: null,
     },
     localCues: [
-      "Inside the 610 Loop in the Galleria / Tanglewood area",
-      "Minutes from Post Oak Blvd and the Houston Galleria",
-      "Easy access from I-610 West Loop and Woodway Dr",
-      "Free parking on-site — no Post Oak garage fees",
-      "Month-to-month flexibility in a market dominated by long leases",
+      "Planned for the Galleria / Tanglewood area inside the 610 Loop",
+      "Near Post Oak Blvd and the Houston Galleria",
+      "Access from I-610 West Loop and Woodway Dr",
+      "On-site parking is planned; final details will be confirmed before opening",
+      "Flexible workspace options are planned; final terms are not active yet",
     ],
     neighborhoods: ["Galleria", "Tanglewood", "Uptown"],
     areaServed: [
@@ -158,13 +158,13 @@ export const locations: Location[] = [
       "West Houston",
     ],
     nearbyLandmarks: [
-      { name: "The Galleria", distance: "10 min" },
-      { name: "Post Oak Blvd", distance: "5 min" },
-      { name: "I-610 West Loop", distance: "3 min" },
-      { name: "Texas Medical Center", distance: "15 min" },
-      { name: "Downtown Houston", distance: "15 min" },
-      { name: "George Bush Intercontinental (IAH)", distance: "25 min" },
-      { name: "William P. Hobby (HOU)", distance: "25 min" },
+      { name: "The Galleria", distance: "Nearby" },
+      { name: "Post Oak Blvd", distance: "Nearby" },
+      { name: "I-610 West Loop", distance: "Nearby" },
+      { name: "Texas Medical Center", distance: "Check live traffic" },
+      { name: "Downtown Houston", distance: "Check live traffic" },
+      { name: "George Bush Intercontinental (IAH)", distance: "Check live traffic" },
+      { name: "William P. Hobby (HOU)", distance: "Check live traffic" },
     ],
     services: [
       "virtual-office",
@@ -181,9 +181,9 @@ export const locations: Location[] = [
       "medical-center-coworking",
     ],
     taxAdvantage: "Texas has no state personal income tax.",
-    externalProfiles: {
-      bbb: "https://www.bbb.org/us/tx/houston/profile/office-space-rental/muze-office-0915-90064601",
-    },
+    // Do not attach legacy Houston profiles until their old Kirby Dr NAP is
+    // updated to the new Augusta Dr opening. Conflicting sameAs data would
+    // blur the new location entity.
   },
 ];
 

@@ -74,15 +74,24 @@ const coreServices = services.filter((s) =>
   ["virtual-office", "coworking", "private-office", "meeting-rooms", "conference-rooms", "event-space"].includes(s.id)
 );
 
+const houstonServiceDescriptions: Record<string, string> = {
+  "virtual-office": "Planned business-address and mail options; not active yet.",
+  coworking: "Planned flexible desks and day access near the Galleria.",
+  "private-office": "Planned furnished offices for individuals and teams.",
+  "meeting-rooms": "Planned rooms for client meetings and team sessions.",
+  "conference-rooms": "Planned presentation and conference space.",
+  "event-space": "Planned space for workshops and business events.",
+};
+
 const homepageFAQs = [
-  { question: "What is Muze Office?", answer: "Muze Office is a flexible workspace provider in Las Vegas and Houston offering coworking, virtual offices, private offices, meeting rooms, and event space. All memberships are month-to-month with no long-term leases." },
+  { question: "What is Muze Office?", answer: "Muze Office operates flexible workspace in Las Vegas with coworking, virtual offices, private offices, meeting rooms, and event space. A Houston location is planned for 2026 and is collecting early-access interest." },
   { question: "Do I need a membership to use the space?", answer: "No. Day passes are available for anyone — no membership or commitment required. Book online, even same-day. We also offer monthly memberships for hot desks, dedicated desks, and private offices." },
-  { question: "Where is Muze Office located?", answer: "Muze Office is open in Las Vegas at 6860 Bermuda Rd, Suite 200 (10 minutes from Harry Reid International Airport via I-215 W), with free parking. A second flagship opens in Houston in 2026 at 1800 Augusta Dr, 77057 (inside the 610 Loop in the Galleria / Tanglewood area) — join the waitlist for early access." },
-  { question: "What are your hours?", answer: "Coworking members have 24/7 biometric access. The front desk is staffed Monday through Friday, 10am to 7pm — that's when booked day passes, tours, and mail pickup are handled. Phones are answered Monday through Friday, 10am to 5pm — outside those hours, email access@muzeoffice.com for the fastest reply." },
-  { question: "Is there parking?", answer: "Yes — free parking for all members, day pass holders, meeting room guests, and event attendees. No meters, no valet fees, no parking garage charges." },
-  { question: "Can I book a meeting room without a membership?", answer: "Yes. Meeting rooms are available by the hour to anyone — no membership required. All rooms include AV equipment, video conferencing, whiteboards, and WiFi. Huddle rooms start at $25/hr." },
-  { question: "Do you offer a virtual office in Las Vegas?", answer: "Yes. A virtual office in Las Vegas at Muze Office starts at $39/month (Mail Holding) for a professional business address at 6860 Bermuda Rd, Suite 200 with USPS letter mail pickup. Sandstone ($69/mo) adds package receiving from UPS, FedEx, and Amazon. Higher tiers add mail forwarding, coworking hours, and meeting room access. You can use any plan for LLC registration, Google Business Profile, and contracts. Full details and pricing at /las-vegas-virtual-office." },
-  { question: "Do you offer a virtual office in Houston?", answer: "Soon. Muze Office Houston opens in 2026, and a virtual office there will start at $39/month (Mail Holding) for a professional Galleria business address at 1800 Augusta Dr with USPS letter mail pickup. Sandstone ($69/mo) will add UPS, FedEx, and Amazon package receiving; higher tiers will add mail forwarding, coworking hours, and meeting room access. The address will satisfy Texas LLC filings, Google Business Profile, and most banks. Join the waitlist for early access — details and pricing at /houston-virtual-office." },
+  { question: "Where is Muze Office located?", answer: "Muze Office is open in Las Vegas at 6860 Bermuda Rd, Suite 200 (10 minutes from Harry Reid International Airport via I-215 W), with free parking. An independently operated Muze Office franchise location is planned for Houston in 2026 at 1800 Augusta Dr, 77057 in the Galleria / Tanglewood area." },
+  { question: "What are your hours?", answer: "At the open Las Vegas location, coworking members have 24/7 biometric access. The front desk is staffed Monday through Friday, 10am to 7pm, and phones are answered Monday through Friday, 10am to 5pm. Houston hours will be announced before opening." },
+  { question: "Is there parking?", answer: "Free parking is available at the open Las Vegas location for members, day pass holders, meeting room guests, and event attendees. On-site parking is planned for Houston; final details will be confirmed before opening." },
+  { question: "Can I book a meeting room without a membership?", answer: "Yes, at the Las Vegas location. Meeting rooms are available by the hour to anyone, with AV equipment, video conferencing, whiteboards, and WiFi. Huddle rooms start at $25/hr. Houston is not accepting bookings yet." },
+  { question: "Do you offer a virtual office in Las Vegas?", answer: "Yes. A virtual office in Las Vegas at Muze Office starts at $39/month (Mail Holding) for a professional business address at 6860 Bermuda Rd, Suite 200 with USPS letter mail pickup. Sandstone ($69/mo) adds package receiving from UPS, FedEx, and Amazon. Higher tiers add mail forwarding, coworking hours, and meeting room access. Use it for contracts and filings that accept a commercial mail-receiving address; registered-agent and Google Business Profile requirements are separate. Full details and pricing at /las-vegas-virtual-office." },
+  { question: "Do you offer a virtual office in Houston?", answer: "Not yet. Virtual office and mail services are part of the planned Houston workspace mix at 1800 Augusta Dr, but no Houston address service or pricing is active. Join Houston early access for confirmed opening and availability updates." },
   { question: "Are there long-term contracts?", answer: "No. All Muze Office memberships are month-to-month. Cancel anytime with 30 days' notice. No long-term lease required." },
 ];
 
@@ -116,7 +125,7 @@ export default function HomePage() {
           </FadeIn>
           <FadeIn delay={0.35}>
             <p className="mt-6 max-w-[580px] text-lg leading-relaxed text-gray-300 md:text-xl">
-              Muze Office is month-to-month coworking, virtual offices, private offices, meeting rooms, and event space in Las Vegas (6860 Bermuda Rd, Suite 200), with a second flagship opening in Houston in 2026 (1800 Augusta Dr, Galleria / Tanglewood). No long-term leases. Free parking.
+              Muze Office offers month-to-month coworking, virtual offices, private offices, meeting rooms, and event space in Las Vegas at 6860 Bermuda Rd, Suite 200. An independently operated Houston franchise location is planned for 2026 at 1800 Augusta Dr in the Galleria / Tanglewood area.
             </p>
           </FadeIn>
           <FadeIn delay={0.5}>
@@ -257,26 +266,25 @@ export default function HomePage() {
               Workspace in Houston
             </h2>
             <p className="mt-4 max-w-[600px] text-lg text-[#74726D]">
-              1800 Augusta Dr — inside the 610 Loop in the Galleria / Tanglewood area. Free parking, fast WiFi, month-to-month. No long-term leases.
+              Planned for 1800 Augusta Dr inside the 610 Loop in the Galleria / Tanglewood area. Houston services, hours, and pricing are not active yet.
             </p>
           </div>
         </FadeIn>
         <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {coreServices.map((service) => (
             <StaggerItem key={`hou-${service.id}`}>
-              <Link href={`/houston-${service.id}`} className="group block h-full" aria-label={`Houston ${service.name}`}>
+              <Link href="/locations/houston#waitlist" className="group block h-full" aria-label={`Join early access for Houston ${service.name}`}>
                 <Card className="h-full border-[#E6E4DF] bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <CardContent className="flex flex-col gap-5 p-7">
                     <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-[#1A1A1A]">
                       {serviceIcons[service.id]}
                     </div>
                     <h3 className="text-xl font-semibold">{service.name}</h3>
-                    <p className="text-base text-[#74726D] leading-relaxed">{service.shortDescription}</p>
-                    {service.tiers[0]?.price && (
-                      <p className="text-base font-semibold text-[#EAA820]">From ${service.tiers[0].price}/{service.tiers[0].priceUnit}</p>
-                    )}
+                    <p className="text-base text-[#74726D] leading-relaxed">
+                      {houstonServiceDescriptions[service.id]}
+                    </p>
                     <span className="mt-auto inline-flex items-center gap-1.5 text-base font-medium text-[#1A1A1A] group-hover:text-[#EAA820] transition-colors">
-                      Learn more <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      Join early access <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                     </span>
                   </CardContent>
                 </Card>
@@ -295,7 +303,7 @@ export default function HomePage() {
                 Coworking in Las Vegas &amp; Houston
               </h2>
               <p className="mt-4 max-w-[600px] text-lg text-[#74726D]">
-                Open in Las Vegas at 6860 Bermuda Rd (10 minutes from Harry Reid International Airport), with a second flagship opening in Houston in 2026 at 1800 Augusta Dr (inside the 610 Loop in the Galleria / Tanglewood area). Free parking.
+                Open in Las Vegas at 6860 Bermuda Rd with free parking, 10 minutes from Harry Reid International Airport. An independently operated Muze Office franchise location is planned for Houston in 2026 at 1800 Augusta Dr in the Galleria / Tanglewood area.
               </p>
             </div>
             <Link href="/locations" className={cn(buttonVariants({ variant: "outline" }), "w-fit rounded-xl h-12 px-6 text-base")}>
@@ -313,7 +321,7 @@ export default function HomePage() {
                     alt={
                       loc.slug === "las-vegas"
                         ? "Muze Office Las Vegas exterior at 6860 Bermuda Rd, Suite 200 near Harry Reid International Airport"
-                        : "Muze Office Houston at 1800 Augusta Dr inside the 610 Loop in the Galleria / Tanglewood area"
+                        : "Houston skyline representing the planned Muze Office Galleria-area location"
                     }
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"

@@ -32,7 +32,7 @@ export const ZACHARY_DEVON_DUONG: Person = {
   bio: [
     "Zachary Devon Duong is the founder of Muze Office and leads Muze International Corporation, the company behind the brand.",
     "He built Muze around a single conviction: flexible workspace shouldn't feel like a casino floor or a hotel lobby — it should feel like a place you actually want to work. That principle shapes every decision at Muze, from the layout of the coworking floor to the way memberships are priced.",
-    "Today Muze operates a flagship coworking, virtual office, private office, meeting room, and event space at 6860 Bermuda Rd in Las Vegas, with a second flagship opening in Houston in 2026. Zachary also leads the Muze Office Franchise program, licensing the model to independent operators.",
+    "Today Muze operates a flagship coworking, virtual office, private office, meeting room, and event space at 6860 Bermuda Rd in Las Vegas. An independently operated Muze Office franchise location is planned for Houston in 2026. Zachary also leads the Muze Office Franchise program, licensing the model to independent operators.",
   ],
   sameAs: ["https://www.instagram.com/iamzacharydevon/"],
   schemaId: `${BRAND.url}/#zachary-devon-duong`,

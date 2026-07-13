@@ -22,7 +22,7 @@ export const services: Service[] = [
     name: "Virtual Office",
     shortName: "Virtual Office",
     shortDescription:
-      "A real business address for your LLC with mail handling, mail forwarding on upper tiers, and meeting room access. No lease required.",
+      "A commercial mailing address with mail handling, mail forwarding on upper tiers, and meeting room access. No lease required.",
     icon: "Mail",
     tiers: [
       {
@@ -32,7 +32,7 @@ export const services: Service[] = [
         features: [
           "Professional business address with suite number",
           "USPS letter mail notification and pickup",
-          "Use for LLC, Google Business, contracts",
+          "Use where commercial mail-receiving addresses are accepted",
           "No package receiving",
         ],
       },
