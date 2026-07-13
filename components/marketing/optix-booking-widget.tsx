@@ -1,8 +1,33 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { track } from "@vercel/analytics";
 
 const OPTIX_SCRIPT_SRC = "https://muzeoffice.optixapp.com/web-plugin/optix.v1.js";
+
+const OPTIX_CONVERSION_EVENTS = new Set([
+  "booking_checkout",
+  "booking_confirmed",
+  "tour_confirmed",
+  "signup_checkout",
+  "signup_completed",
+  "inquiry_submitted",
+]);
+
+type OptixMessage = {
+  source?: string;
+  form?: string;
+  event?: string;
+  payload?: Record<string, unknown>;
+};
+
+function analyticsValue(value: unknown) {
+  return typeof value === "string" ||
+    typeof value === "number" ||
+    typeof value === "boolean"
+    ? value
+    : undefined;
+}
 
 type OptixBookingWidgetProps = {
   venue: string;
@@ -26,6 +51,55 @@ export function OptixBookingWidget({
     widget.innerHTML = "";
     widget.setAttribute("optix-venue", venue);
     widget.setAttribute("optix-mode", "embed");
+    widget.setAttribute("optix-tracking", "1");
+    widget.setAttribute("optix-tracking-origin", window.location.origin);
+
+    const optixOrigin = `https://${venue}.optixapp.com`;
+    const searchParams = new URLSearchParams(window.location.search);
+
+    function handleOptixMessage(message: MessageEvent<unknown>) {
+      if (message.origin !== optixOrigin || !message.data) return;
+
+      const data = message.data as OptixMessage;
+      if (
+        data.source !== "optix-form" ||
+        !data.event ||
+        !OPTIX_CONVERSION_EVENTS.has(data.event)
+      ) {
+        return;
+      }
+
+      const payload = data.payload ?? {};
+      const properties: Record<string, string | number | boolean> = {
+        form: data.form ?? "unknown",
+        page_path: window.location.pathname,
+      };
+
+      // Deliberately exclude user_email and opaque customer IDs. Conversion
+      // analytics need the product and value, not personally identifiable data.
+      const safePayloadFields = [
+        "resource_name",
+        "location_name",
+        "plan_name",
+        "pass_name",
+        "subtotal",
+        "total",
+      ] as const;
+
+      for (const field of safePayloadFields) {
+        const value = analyticsValue(payload[field]);
+        if (value !== undefined) properties[field] = value;
+      }
+
+      for (const parameter of ["utm_source", "utm_medium", "utm_campaign"] as const) {
+        const value = searchParams.get(parameter);
+        if (value) properties[parameter] = value;
+      }
+
+      track(`optix_${data.event}`, properties);
+    }
+
+    window.addEventListener("message", handleOptixMessage);
 
     const script = document.createElement("script");
     script.async = true;
@@ -33,6 +107,7 @@ export function OptixBookingWidget({
     document.body.appendChild(script);
 
     return () => {
+      window.removeEventListener("message", handleOptixMessage);
       script.remove();
     };
   }, [venue]);

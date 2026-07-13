@@ -148,6 +148,7 @@ export default async function CityServicePage({ params }: PageProps) {
   // Virtual-office shoppers want the address, not a tour of an empty desk.
   // Route them to /contact so the lead arrives via the contact form.
   const isVirtualOffice = service.id === "virtual-office";
+  const isEventSpace = service.id === "event-space";
   // Contact links carry ?interest=… so the form arrives preselected and the
   // lead email is segmented by service.
   const CONTACT_INTEREST_BY_SERVICE: Record<string, string> = {
@@ -168,14 +169,18 @@ export default async function CityServicePage({ params }: PageProps) {
       ? "#book-online"
       : isVirtualOffice
         ? contactHref
-        : BRAND.booking.tourUrl;
+        : isEventSpace
+          ? contactHref
+          : BRAND.booking.tourUrl;
   const primaryCtaLabel = isComingSoon
     ? "Join Waitlist"
     : hasOnlineBooking
       ? "Book Online"
       : isVirtualOffice
         ? `Get My ${location.name} Address`
-        : "Book a Tour";
+        : isEventSpace
+          ? "Check Date & Availability"
+          : "Book a Tour";
 
   return (
     <>
@@ -301,20 +306,26 @@ export default async function CityServicePage({ params }: PageProps) {
                   tier.price !== null
                     ? isComingSoon
                       ? "Join Waitlist"
+                      : isEventSpace
+                        ? "Check Date & Availability"
                       : hasOnlineBooking
                         ? "Book Online"
                       : "Sign Up Online"
                     : "Contact Us"
                 }
                 ctaHref={
-                  hasOnlineBooking
+                  isEventSpace
+                    ? contactHref
+                    : hasOnlineBooking
                     ? "#book-online"
                     : !isComingSoon && tier.price !== null
                       ? BRAND.booking.signupUrl
                       : contactHref
                 }
                 trackingName={
-                  hasOnlineBooking
+                  isEventSpace
+                    ? "event_space_inquiry"
+                    : hasOnlineBooking
                     ? "book_online"
                     : !isComingSoon && tier.price !== null
                       ? "signup_online"
@@ -597,17 +608,17 @@ export default async function CityServicePage({ params }: PageProps) {
                 )}
                 {!isComingSoon && (
                   <div className="mt-8 flex flex-wrap items-center gap-4">
-                    <a
-                      href={BRAND.booking.signupUrl}
-                      data-cta="signup_online"
+                    <Link
+                      href={isEventSpace ? contactHref : BRAND.booking.signupUrl}
+                      data-cta={isEventSpace ? "event_space_inquiry" : "signup_online"}
                       data-cta-location={`city_service_${cityService}_details`}
                       className={cn(
                         buttonVariants({ size: "lg" }),
                         "rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
                       )}
                     >
-                      Sign Up Online
-                    </a>
+                      {isEventSpace ? "Check Date & Availability" : "Sign Up Online"}
+                    </Link>
                     <Link
                       href={contactHref}
                       data-cta="contact_us"
@@ -698,6 +709,8 @@ export default async function CityServicePage({ params }: PageProps) {
               ? `Ready to Book ${service.name} in ${location.name}?`
             : isVirtualOffice
               ? `Ready for a Real ${location.name} Business Address?`
+            : isEventSpace
+              ? `Ready to Host Your Event in ${location.name}?`
             : `Ready to Get Started with ${service.name}?`
         }
         subtitle={
@@ -709,6 +722,8 @@ export default async function CityServicePage({ params }: PageProps) {
               ? `Reserve your room online now, or call us if you need catering, AV help, or a custom setup for your meeting.`
             : isVirtualOffice
               ? `Pick a tier, complete USPS Form 1583, and use the address where the receiving agency, bank, or platform permits a commercial mail-receiving address. Registered-agent and Google Business Profile requirements are separate.`
+            : isEventSpace
+              ? `Tell us your preferred date, guest count, and room setup. We will confirm availability and the right space for your event.`
             : `Book a tour today or call us to learn more about ${service.name.toLowerCase()} at Muze Office ${location.name}.`
         }
         primaryLabel={primaryCtaLabel}
