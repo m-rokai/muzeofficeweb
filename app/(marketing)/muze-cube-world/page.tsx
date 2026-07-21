@@ -76,8 +76,9 @@ export default function MuzeCubeWorldPage() {
       <section className="relative flex min-h-[60vh] items-end bg-[#1A1A1A] px-6 pb-16 pt-32">
         <Image
           src="/images/spaces/las-vegas.jpg"
-          alt="Inside Muze Office Las Vegas at 6860 Bermuda Rd — coworking and event space furnished by Cube World USA"
+          alt="Muze Office Las Vegas exterior at 6860 Bermuda Rd, home to the Muze Office and Cube World USA collaboration"
           fill
+          sizes="100vw"
           className="object-cover"
           priority
         />

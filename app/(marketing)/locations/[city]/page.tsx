@@ -139,6 +139,7 @@ export default async function LocationDetailPage({
               : `Muze Office ${location.name} — upcoming coworking location near the Galleria and Uptown district`
           }
           fill
+          sizes="100vw"
           className="object-cover"
           priority
         />

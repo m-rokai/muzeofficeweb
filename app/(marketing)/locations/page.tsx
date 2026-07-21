@@ -85,6 +85,7 @@ export default function LocationsPage() {
                       : "Houston skyline representing the planned Muze Office Galleria-area location"
                   }
                   fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
                   className="object-cover"
                 />
                 {loc.status === "coming-soon" && (
