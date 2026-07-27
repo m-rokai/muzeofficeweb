@@ -89,7 +89,7 @@ const homepageFAQs = [
   { question: "Where is Muze Office located?", answer: "Muze Office is open in Las Vegas at 6860 Bermuda Rd, Suite 200 (10 minutes from Harry Reid International Airport via I-215 W), with free parking. An independently operated Muze Office franchise location is planned for Houston in 2026 at 1800 Augusta Dr, 77057 in the Galleria / Tanglewood area." },
   { question: "What are your hours?", answer: "At the open Las Vegas location, coworking members have 24/7 biometric access. The front desk is staffed Monday through Friday, 10am to 7pm, and phones are answered Monday through Friday, 10am to 5pm. Houston hours will be announced before opening." },
   { question: "Is there parking?", answer: "Free parking is available at the open Las Vegas location for members, day pass holders, meeting room guests, and event attendees. On-site parking is planned for Houston; final details will be confirmed before opening." },
-  { question: "Can I book a meeting room without a membership?", answer: "Yes, at the Las Vegas location. Meeting rooms are available by the hour to anyone, with AV equipment, video conferencing, whiteboards, and WiFi. Huddle rooms start at $25/hr. Houston is not accepting bookings yet." },
+  { question: "Can I book a meeting room without a membership?", answer: "Yes, at the Las Vegas location. Meeting rooms are available by the hour to anyone, with AV equipment, video conferencing, whiteboards, and WiFi. Huddle rooms start at $39/hr, conference rooms are $69/hr, and the classroom is $99/hr. Houston is not accepting bookings yet." },
   { question: "Do you offer a virtual office in Las Vegas?", answer: "Yes. A virtual office in Las Vegas at Muze Office starts at $39/month (Mail Holding) for a professional business address at 6860 Bermuda Rd, Suite 200 with USPS letter mail pickup. Sandstone ($69/mo) adds package receiving from UPS, FedEx, and Amazon. Higher tiers add mail forwarding, coworking hours, and meeting room access. Use it for contracts and filings that accept a commercial mail-receiving address; registered-agent and Google Business Profile requirements are separate. Full details and pricing at /las-vegas-virtual-office." },
   { question: "Do you offer a virtual office in Houston?", answer: "Not yet. Virtual office and mail services are part of the planned Houston workspace mix at 1800 Augusta Dr, but no Houston address service or pricing is active. Join Houston early access for confirmed opening and availability updates." },
   { question: "Are there long-term contracts?", answer: "No. All Muze Office memberships are month-to-month. Cancel anytime with 30 days' notice. No long-term lease required." },
@@ -462,7 +462,7 @@ export default function HomePage() {
             {
               icon: <Clock className="h-6 w-6" />,
               title: "Transparent pricing",
-              body: "Day passes from $25, virtual offices from $39/mo, meeting rooms from $25/hr. No hidden fees, no F&B minimums on meeting rooms.",
+              body: "Day passes from $25, virtual offices from $39/mo, and meeting rooms from $39/hr. No hidden fees or F&B minimums on meeting rooms.",
             },
           ].map((item) => (
             <StaggerItem key={item.title}>

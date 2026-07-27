@@ -103,7 +103,7 @@ export const services: Service[] = [
         price: 350,
         priceUnit: "month",
         features: [
-          "Shared desk access during business hours",
+          "24/7 biometric member access",
           "Meeting room credits",
           "Mail handling",
           "Community events access",
@@ -178,7 +178,7 @@ export const services: Service[] = [
         price: 350,
         priceUnit: "month",
         features: [
-          "Shared desk access during business hours",
+          "24/7 biometric member access",
           "Meeting room credits",
           "Mail handling",
           "Community events access",
@@ -257,7 +257,7 @@ export const services: Service[] = [
         price: 350,
         priceUnit: "month",
         features: [
-          "Any-desk monthly membership during business hours",
+          "Any-desk membership with 24/7 biometric access",
           "Meeting room credits and mail handling",
           "Community events access",
         ],
@@ -364,7 +364,7 @@ export const services: Service[] = [
     tiers: [
       {
         name: "Huddle Room",
-        price: 25,
+        price: 39,
         priceUnit: "hour",
         features: [
           "2-4 people",
@@ -374,23 +374,24 @@ export const services: Service[] = [
       },
       {
         name: "Conference Room",
-        price: 50,
+        price: 69,
         priceUnit: "hour",
         features: [
-          "6-8 people",
+          "Up to 16 people",
+          "Two conference rooms available",
           "Large display, video conferencing",
           "Client meetings, presentations",
         ],
         highlighted: true,
       },
       {
-        name: "Boardroom",
-        price: 75,
+        name: "Classroom",
+        price: 99,
         priceUnit: "hour",
         features: [
-          "10-14 people",
-          "Dual screens, sound system",
-          "Board meetings, workshops, depositions",
+          "Up to 50 people",
+          "Presentation-ready training setup",
+          "Classes, workshops, and seminars",
         ],
       },
     ],
@@ -415,23 +416,24 @@ export const services: Service[] = [
     tiers: [
       {
         name: "Conference Room",
-        price: 50,
+        price: 69,
         priceUnit: "hour",
         features: [
-          "6-8 people",
+          "Up to 16 people",
+          "Two conference rooms available",
           "Large display, video conferencing",
           "Client meetings, presentations",
         ],
         highlighted: true,
       },
       {
-        name: "Boardroom",
-        price: 75,
+        name: "Classroom",
+        price: 99,
         priceUnit: "hour",
         features: [
-          "10-14 people",
-          "Dual screens, sound system",
-          "Board meetings, workshops, depositions",
+          "Up to 50 people",
+          "Presentation-ready training setup",
+          "Classes, workshops, and seminars",
         ],
       },
     ],
@@ -451,21 +453,31 @@ export const services: Service[] = [
     name: "Event Space",
     shortName: "Event Space",
     shortDescription:
-      "Host corporate events, workshops, and private gatherings. Hourly rates from $99/hr vary by room, with a 10% discount on bookings of 8+ hours. Full AV, flexible layouts, and on-site catering available.",
+      "Host corporate events, workshops, and private gatherings for $199/hr. A separate classroom for up to 50 people is available for $99/hr. Full AV, flexible layouts, and on-site catering available.",
     icon: "CalendarDays",
     tiers: [
       {
-        name: "Hourly",
-        price: 99,
+        name: "Event Space",
+        price: 199,
         priceUnit: "hour",
         features: [
-          "Rates start at $99/hr, vary by room",
+          "Event space is $199/hr",
           "Full AV included — projector, screen, sound system, wireless mics",
-          "Flexible seating layouts (theater, classroom, u-shape, lounge)",
+          "Flexible event layouts based on your format",
           "10% discount on bookings of 8 hours or more",
           "Catering available from on-site Muze Cafe",
         ],
         highlighted: true,
+      },
+      {
+        name: "Classroom",
+        price: 99,
+        priceUnit: "hour",
+        features: [
+          "Seats up to 50 people",
+          "Built for classes, training, and workshops",
+          "Presentation-ready layout",
+        ],
       },
     ],
     includedAmenities: [

@@ -1,7 +1,21 @@
 "use server";
 
 import nodemailer from "nodemailer";
-import { interestLabels } from "@/lib/data/contact-interests";
+import {
+  discoverySourceLabels,
+  interestLabels,
+} from "@/lib/data/contact-interests";
+
+interface ContactAttribution {
+  landingPath?: string;
+  referrerHost?: string;
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
+  utmContent?: string;
+  utmTerm?: string;
+  gclid?: string;
+}
 
 interface ContactFormData {
   name: string;
@@ -9,7 +23,9 @@ interface ContactFormData {
   phone?: string;
   company?: string;
   interest: string;
+  discoverySource?: string;
   message: string;
+  attribution?: ContactAttribution;
   /** Honeypot field — any value means a bot filled it. */
   honeypot?: string;
   /** Milliseconds between form render and submit, reported by the client. */
@@ -84,11 +100,17 @@ export async function submitContactForm(
   }
 
   const interestLabel = interestLabels[data.interest] ?? data.interest;
+  const discoverySource = data.discoverySource
+    ? discoverySourceLabels[data.discoverySource] ?? data.discoverySource
+    : "Not provided";
   const name = data.name.trim();
   const email = data.email.trim();
   const phone = data.phone?.trim() || "Not provided";
   const company = data.company?.trim() || "Not provided";
   const message = data.message.trim();
+  const attribution = data.attribution ?? {};
+  const safeValue = (value?: string) =>
+    value?.trim().slice(0, 500) || "none";
 
   try {
     await getTransporter(appPassword).sendMail({
@@ -104,6 +126,17 @@ export async function submitContactForm(
         `Phone: ${phone}`,
         `Company: ${company}`,
         `Interested in: ${interestLabel}`,
+        `How they found us: ${discoverySource}`,
+        ``,
+        `First-touch attribution:`,
+        `Landing path: ${safeValue(attribution.landingPath)}`,
+        `Referrer host: ${safeValue(attribution.referrerHost)}`,
+        `UTM source: ${safeValue(attribution.utmSource)}`,
+        `UTM medium: ${safeValue(attribution.utmMedium)}`,
+        `UTM campaign: ${safeValue(attribution.utmCampaign)}`,
+        `UTM content: ${safeValue(attribution.utmContent)}`,
+        `UTM term: ${safeValue(attribution.utmTerm)}`,
+        `Google click ID: ${safeValue(attribution.gclid)}`,
         ``,
         `Message:`,
         message,

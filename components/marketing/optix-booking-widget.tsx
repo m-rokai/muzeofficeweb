@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { track } from "@vercel/analytics";
+import { getFirstTouchAttribution } from "@/lib/analytics/attribution";
 
 const OPTIX_SCRIPT_SRC = "https://muzeoffice.optixapp.com/web-plugin/optix.v1.js";
 
@@ -55,7 +56,7 @@ export function OptixBookingWidget({
     widget.setAttribute("optix-tracking-origin", window.location.origin);
 
     const optixOrigin = `https://${venue}.optixapp.com`;
-    const searchParams = new URLSearchParams(window.location.search);
+    const attribution = getFirstTouchAttribution();
 
     function handleOptixMessage(message: MessageEvent<unknown>) {
       if (message.origin !== optixOrigin || !message.data) return;
@@ -73,6 +74,8 @@ export function OptixBookingWidget({
       const properties: Record<string, string | number | boolean> = {
         form: data.form ?? "unknown",
         page_path: window.location.pathname,
+        landing_path: attribution.landingPath,
+        referrer: attribution.referrerHost,
       };
 
       // Deliberately exclude user_email and opaque customer IDs. Conversion
@@ -91,8 +94,12 @@ export function OptixBookingWidget({
         if (value !== undefined) properties[field] = value;
       }
 
-      for (const parameter of ["utm_source", "utm_medium", "utm_campaign"] as const) {
-        const value = searchParams.get(parameter);
+      const campaignProperties = {
+        utm_source: attribution.utmSource,
+        utm_medium: attribution.utmMedium,
+        utm_campaign: attribution.utmCampaign,
+      };
+      for (const [parameter, value] of Object.entries(campaignProperties)) {
         if (value) properties[parameter] = value;
       }
 

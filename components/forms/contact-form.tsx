@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { track } from "@vercel/analytics";
-import { CheckCircle2, Mail, Phone, Loader2, AlertCircle } from "lucide-react";
+import { CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
@@ -15,7 +15,13 @@ import {
 } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { submitContactForm } from "@/lib/actions/submit-contact-form";
-import { CONTACT_INTERESTS, interestLabels } from "@/lib/data/contact-interests";
+import {
+  CONTACT_DISCOVERY_SOURCES,
+  CONTACT_INTERESTS,
+  discoverySourceLabels,
+  interestLabels,
+} from "@/lib/data/contact-interests";
+import { getFirstTouchAttribution } from "@/lib/analytics/attribution";
 import { cn } from "@/lib/utils";
 
 const CONTACT_EMAIL = "access@muzeoffice.com";
@@ -36,6 +42,7 @@ export function ContactForm({ className }: { className?: string }) {
   const [status, setStatus] = useState<Status>("idle");
   const [serverMessage, setServerMessage] = useState("");
   const [interest, setInterest] = useState("");
+  const [discoverySource, setDiscoverySource] = useState("");
   const [startedAt] = useState(() => Date.now());
 
   // Prefill the interest select from ?interest=… (e.g. /contact?interest=virtual-office)
@@ -91,7 +98,9 @@ export function ContactForm({ className }: { className?: string }) {
       phone: ((formData.get("phone") as string) ?? "").trim(),
       company: ((formData.get("company") as string) ?? "").trim(),
       interest,
+      discoverySource,
       message: ((formData.get("message") as string) ?? "").trim(),
+      attribution: getFirstTouchAttribution(),
       honeypot: ((formData.get("muze_extra") as string) ?? "").trim(),
       elapsedMs: Date.now() - startedAt,
     };
@@ -100,7 +109,14 @@ export function ContactForm({ className }: { className?: string }) {
       const result = await submitContactForm(data);
 
       if (result.success) {
-        track("contact_form_submitted", { interest });
+        const attribution = getFirstTouchAttribution();
+        track("contact_form_submitted", {
+          interest,
+          discovery_source: discoverySource || "not_provided",
+          landing_path: attribution.landingPath,
+          referrer: attribution.referrerHost,
+          utm_source: attribution.utmSource || "none",
+        });
         setStatus("sent");
         setServerMessage(result.message);
       } else {
@@ -146,6 +162,7 @@ export function ContactForm({ className }: { className?: string }) {
           onClick={() => {
             setStatus("idle");
             setInterest("");
+            setDiscoverySource("");
             setServerMessage("");
           }}
         >
@@ -310,6 +327,33 @@ export function ContactForm({ className }: { className?: string }) {
             {errors.interest}
           </p>
         )}
+      </div>
+
+      {/* Discovery source (optional, for lead-source reconciliation) */}
+      <div className="flex flex-col gap-1.5">
+        <Label htmlFor="contact-discovery-source">
+          How did you find us? (optional)
+        </Label>
+        <Select
+          items={discoverySourceLabels}
+          value={discoverySource}
+          onValueChange={(value) => setDiscoverySource(value ?? "")}
+          disabled={isSubmitting}
+        >
+          <SelectTrigger
+            id="contact-discovery-source"
+            className="h-10 w-full"
+          >
+            <SelectValue placeholder="Select a source" />
+          </SelectTrigger>
+          <SelectContent>
+            {CONTACT_DISCOVERY_SOURCES.map((source) => (
+              <SelectItem key={source.value} value={source.value}>
+                {source.label}
+              </SelectItem>
+            ))}
+          </SelectContent>
+        </Select>
       </div>
 
       {/* Message */}

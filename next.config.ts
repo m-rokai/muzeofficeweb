@@ -30,9 +30,9 @@ const wordpressRedirects = [
   { source: "/workspace-memberships/virtual-office-in-las-vegas", destination: "/las-vegas-virtual-office" },
   { source: "/workspace-memberships/coworking-las-vegas", destination: "/las-vegas-coworking" },
   { source: "/workspace-memberships/office-space-in-las-vegas", destination: "/las-vegas-private-office" },
-  { source: "/workspace-memberships/coworking-houston-texas", destination: "/houston-coworking" },
-  { source: "/workspace-memberships/virtual-office-houston-texas", destination: "/houston-virtual-office" },
-  { source: "/workspace-memberships/virtual-office-houston-texas/premium-mailing-address-services-in-houston", destination: "/houston-virtual-office" },
+  { source: "/workspace-memberships/coworking-houston-texas", destination: "/locations/houston" },
+  { source: "/workspace-memberships/virtual-office-houston-texas", destination: "/locations/houston" },
+  { source: "/workspace-memberships/virtual-office-houston-texas/premium-mailing-address-services-in-houston", destination: "/locations/houston" },
   { source: "/workspace-solutions-coworking-private-and-virtual-offices", destination: "/workspace-memberships" },
   { source: "/locations/las-vegas-coworking", destination: "/las-vegas-coworking" },
   { source: "/locations/houston-coworking", destination: "/locations/houston" },
@@ -41,7 +41,7 @@ const wordpressRedirects = [
   { source: "/events-in-houston-and-las-vegas", destination: "/las-vegas-event-space" },
   { source: "/conference-room-near-me-where-to-book-your-next-event", destination: "/las-vegas-meeting-rooms" },
   { source: "/coworking-space-near-me-how-working-in-a-coworking-space-boosts-your-productivity", destination: "/las-vegas-coworking" },
-  { source: "/office-day-pass-in-houston-at-muzeoffice", destination: "/houston-coworking" },
+  { source: "/office-day-pass-in-houston-at-muzeoffice", destination: "/locations/houston" },
   { source: "/tips-for-choosing-a-virtual-office-near-me", destination: "/las-vegas-virtual-office" },
   { source: "/make-the-most-out-of-your-virtual-office-space-in-las-vegas", destination: "/las-vegas-virtual-office" },
 ];
@@ -219,6 +219,13 @@ const nextConfig: NextConfig = {
   // platform level.
   async headers() {
     return [
+      {
+        source: "/pricing.md",
+        headers: [
+          { key: "Content-Type", value: "text/markdown; charset=utf-8" },
+          { key: "X-Robots-Tag", value: "noindex, follow" },
+        ],
+      },
       {
         source: "/:path*",
         headers: [

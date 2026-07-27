@@ -101,7 +101,18 @@ export function getPostBySlug(slug: string): BlogPost | null {
 
 export function formatDate(iso: string): string {
   if (!iso) return "";
-  const d = new Date(iso);
+  // A bare YYYY-MM-DD string is parsed as UTC by JavaScript, which makes it
+  // render as the previous calendar day in Pacific time. Treat frontmatter
+  // date-only values as local calendar dates; preserve normal parsing for
+  // full ISO timestamps.
+  const dateOnlyMatch = iso.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  const d = dateOnlyMatch
+    ? new Date(
+        Number(dateOnlyMatch[1]),
+        Number(dateOnlyMatch[2]) - 1,
+        Number(dateOnlyMatch[3])
+      )
+    : new Date(iso);
   if (isNaN(d.getTime())) return iso;
   return d.toLocaleDateString("en-US", {
     year: "numeric",

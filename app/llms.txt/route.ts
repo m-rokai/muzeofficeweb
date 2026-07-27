@@ -79,7 +79,7 @@ function buildLlmsTxt(): string {
     {
       path: "book-a-tour",
       label: "Book a Tour",
-      desc: "Free 20–30 minute walkthrough at either location.",
+      desc: "Free 20–30 minute walkthrough of the active Las Vegas location.",
     },
     {
       path: "workspace-memberships",
@@ -89,7 +89,7 @@ function buildLlmsTxt(): string {
     {
       path: "locations",
       label: "Locations Overview",
-      desc: "Both Muze Office locations with address and contact details.",
+      desc: "Active Las Vegas location and clearly labeled planned Houston location.",
     },
     { path: "blog", label: "Blog", desc: "All published blog posts." },
   ];
@@ -115,6 +115,7 @@ function buildLlmsTxt(): string {
   // Optional section
   lines.push("## Optional");
   lines.push("");
+  lines.push(`- [Current Las Vegas pricing](${BRAND.url}/pricing.md): Concise service prices, access terms, and booking links, last verified July 23, 2026.`);
   lines.push(`- [Full content dump](${BRAND.url}/llms-full.txt): All primary pages and blog posts concatenated as markdown.`);
   lines.push(`- [Sitemap](${BRAND.url}/sitemap.xml): XML sitemap of all canonical HTML URLs.`);
   lines.push("");

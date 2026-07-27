@@ -110,7 +110,7 @@ const meetingRoomFAQs: FAQ[] = [
   {
     question: "What AV equipment is included?",
     answer:
-      "Every meeting room includes a large display or monitor, video conferencing capability, high-speed WiFi, and whiteboards. The Boardroom adds dual screens and a sound system. No need to bring your own equipment.",
+      "Meeting rooms include a display or monitor, video conferencing capability, high-speed WiFi, and whiteboards. Contact us if your classroom or event requires a specific AV setup.",
   },
   {
     question: "How do I book a meeting room?",
@@ -130,7 +130,7 @@ const meetingRoomFAQs: FAQ[] = [
   {
     question: "What room sizes and capacities are available?",
     answer:
-      "We offer three sizes: Huddle Room (2-4 people, $25/hr) for quick syncs and 1-on-1s, Conference Room (6-8 people, $50/hr) for client meetings and presentations, and Boardroom (10-14 people, $75/hr) for board meetings, workshops, and depositions.",
+      "We offer a Huddle Room for 2-4 people at $39/hr, two Conference Rooms that each fit up to 16 people at $69/hr, and a Classroom that fits up to 50 people at $99/hr.",
   },
   {
     question: "Is parking included?",
@@ -141,19 +141,19 @@ const meetingRoomFAQs: FAQ[] = [
 
 const conferenceRoomFAQs: FAQ[] = [
   {
-    question: "What is the difference between a Conference Room and a Boardroom at Muze Office?",
+    question: "What is the difference between a Conference Room and the Classroom at Muze Office?",
     answer:
-      "The Conference Room ($50/hr) seats 6-8 around a single table with a large display and video conferencing — the right fit for client pitches, sales meetings, and team presentations. The Boardroom ($75/hr) seats 10-14 with dual screens and a sound system — built for board meetings, workshops, and legal depositions where the formality matters.",
+      "Each of our two Conference Rooms is $69/hr and accommodates up to 16 people for client pitches, sales meetings, team presentations, and depositions. The Classroom is $99/hr and accommodates up to 50 people for training, workshops, seminars, and larger presentations.",
   },
   {
     question: "What AV equipment is included in every conference room?",
     answer:
-      "Every conference room includes a large display, video conferencing capability, high-speed WiFi, and whiteboards. The Boardroom adds dual screens and a sound system. You do not need to bring your own equipment.",
+      "Conference rooms include a large display, video conferencing capability, high-speed WiFi, and whiteboards. Contact us before booking if your meeting requires a specific connection or AV configuration.",
   },
   {
     question: "Can I host a legal deposition or mediation in a conference room?",
     answer:
-      "Yes. The Boardroom is sized for depositions, mediations, and sworn testimony with up to 14 seats, dual screens for exhibit review, and a sound system that handles recorded testimony. Free parking is available for witnesses, counsel, and the court reporter.",
+      "Yes. Each Conference Room accommodates up to 16 people and can host depositions, mediations, and sworn testimony. Free parking is available for witnesses, counsel, and the court reporter. Confirm any specialized recording or exhibit-review requirements before booking.",
   },
   {
     question: "How do I book a conference room?",
@@ -174,9 +174,9 @@ const conferenceRoomFAQs: FAQ[] = [
 
 const eventSpaceFAQs: FAQ[] = [
   {
-    question: "What is the capacity of the event space?",
+    question: "What capacities are available for classes and events?",
     answer:
-      "Our event space accommodates up to 50 people in a theater-style layout, or 30-40 in a classroom or banquet configuration. We offer flexible layouts to match your event format.",
+      "The Classroom accommodates up to 50 people. Event-space capacity depends on the layout and event format, so contact us with your headcount before booking.",
   },
   {
     question: "Is catering available?",
@@ -201,7 +201,7 @@ const eventSpaceFAQs: FAQ[] = [
   {
     question: "What are the pricing options?",
     answer:
-      "Event space is billed hourly, with rates starting at $99/hr — the exact rate depends on which room you book. Bookings of 8 hours or more automatically get a flat 10% discount. There are no separate half-day or full-day packages — you pay for the hours you need. All rates include full AV (projector, sound system, wireless mics) and flexible seating layouts.",
+      "The Classroom is $99/hr and the Event Space is $199/hr. Bookings of 8 hours or more automatically get a flat 10% discount. There are no separate half-day or full-day packages — you pay for the hours you need.",
   },
 ];
 
@@ -234,7 +234,7 @@ const airportCoworkingFAQs: FAQ[] = [
   {
     question: "Can I book a meeting room?",
     answer:
-      "Yes. Meeting rooms are available from $25/hr with AV equipment included. Book online, even same-day, based on availability. Great for meeting a client before your flight.",
+      "Yes. Meeting rooms are available from $39/hr with AV equipment included. Book online, even same-day, based on availability. Great for meeting a client before your flight.",
   },
 ];
 
@@ -374,7 +374,7 @@ const dayPassFAQs: FAQ[] = [
   {
     question: "How much does a Day Pass cost at Muze Office?",
     answer:
-      "A Day Pass is $25. That covers a desk in the shared coworking area, high-speed WiFi, unlimited coffee and water, free parking, phone-booth access, printing, and access to the on-site Muze Cafe. Meeting rooms are a separate booking at $25-$75/hour.",
+      "A Day Pass is $25. That covers a desk in the shared coworking area, high-speed WiFi, unlimited coffee and water, free parking, phone-booth access, printing, and access to the on-site Muze Cafe. Meeting rooms are a separate booking from $39 to $99 per hour.",
   },
   {
     question: "Do I need a membership or reservation to use a Day Pass?",
@@ -422,7 +422,7 @@ const hotDeskFAQs: FAQ[] = [
   {
     question: "How many meeting room hours come with Hot Desk?",
     answer:
-      "Hot Desk includes monthly meeting room credits that you can apply to any room type — Huddle Room ($25/hr), Conference Room ($50/hr), or Boardroom ($75/hr). Additional hours beyond the credits are available at standard hourly rates. Credits don't roll over month-to-month.",
+      "Hot Desk includes monthly meeting room credits that you can apply to the Huddle Room ($39/hr), either Conference Room ($69/hr), or the Classroom ($99/hr). Additional hours beyond the credits are available at standard hourly rates. Credits don't roll over month-to-month.",
   },
   {
     question: "Is there a long-term contract?",
@@ -555,7 +555,7 @@ const workspaceMembershipsFAQs: FAQ[] = [
   {
     question: "What workspace memberships does Muze Office offer?",
     answer:
-      "Muze Office offers five workspace types in Las Vegas: Virtual Office (from $39/mo) for a business address and mail, Coworking (Day Pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo), Private Office (contact for pricing) for 1–5+ person teams, Meeting Rooms (from $25/hr), and Event Space (from $99/hr). All memberships are month-to-month.",
+      "Muze Office offers five workspace types in Las Vegas: Virtual Office (from $39/mo) for a business address and mail, Coworking (Day Pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo), Private Office (contact for pricing) for 1–5+ person teams, Meeting Rooms (from $39/hr), a Classroom ($99/hr), and Event Space ($199/hr). All memberships are month-to-month.",
   },
   {
     question: "Which membership is right for me?",
@@ -641,7 +641,7 @@ const lasVegasLocationFAQs: FAQ[] = [
   {
     question: "What services are available at Muze Office Las Vegas?",
     answer:
-      "Virtual Office (from $39/mo), Coworking (Day Pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo), Private Office (contact for pricing), Meeting Rooms (from $25/hr), and Event Space (from $99/hr). All month-to-month.",
+      "Virtual Office (from $39/mo), Coworking (Day Pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo), Private Office (contact for pricing), Meeting Rooms (from $39/hr), a Classroom ($99/hr), and Event Space ($199/hr). All memberships are month-to-month.",
   },
   {
     question: "Does Nevada have state income tax?",

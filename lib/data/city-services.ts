@@ -302,7 +302,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         paragraphs: [
           "If you're not sure whether coworking is right for you, start with a $25 day pass. Book online — even same-day — and come in Monday through Friday between 10am and 7pm; we'll have a spot ready when you arrive. Day passes include everything — desk, WiFi, coffee, parking, phone booths, meeting room availability. No credit card holds, no long forms, no pressure to sign up.",
           "Once you've used us for a week or two and know you want to be here most days, the Hot Desk membership ($350/month) is the natural next step. Hot Desk members can use any available desk in the shared workspace, with 24/7 biometric access plus meeting room credits, mail handling, and full access to community events. If you want your own reserved spot that you can leave your monitor and dual keyboard setup on, upgrade to Dedicated Desk ($399/month) which adds a permanent desk, personal storage, and a business address with mail.",
-          "Each coworking tier has its own detail page if you want to dig into the specifics: the Day Pass ($25/day, booked online, even same-day, during front-desk hours) at /las-vegas-day-pass, the Hot Desk ($350/month, any-desk 24/7 biometric access) at /las-vegas-hot-desk, and the Dedicated Desk ($399/month, reserved desk, business address with mail) at /las-vegas-dedicated-desk. Everything is month-to-month. We don't do annual contracts, cancellation fees, or setup charges. Book a free tour if you want to see the space first, or book a same-day day pass online and bring your laptop.",
+          "Each coworking tier has its own detail page if you want to dig into the specifics: the Day Pass ($25/day, booked online, even same-day, during front-desk hours) at /las-vegas-day-pass, the Hot Desk ($350/month, any-desk 24/7 biometric access) at /las-vegas-hot-desk, and the Dedicated Desk ($399/month, reserved desk, business address with mail) at /las-vegas-dedicated-desk. Everything is month-to-month. Day Passes have no setup fee; monthly memberships have a one-time $25 setup fee, no annual contract, and no cancellation fee when you give the required 30 days' notice. Book a free tour if you want to see the space first, or book a same-day day pass online and bring your laptop.",
         ],
       },
       relatedServices: [
@@ -393,7 +393,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         heading: "How to use a Day Pass at Muze Office Las Vegas",
         paragraphs: [
           "Book your Day Pass online — even same-day — then come in Monday through Friday between 10am and 7pm at 6860 Bermuda Rd, Suite 200. Show your ID at the front desk, and we'll point you to an open desk. The whole process takes about five minutes. Booking ahead matters most if you're arriving during a major convention week (CES, SEMA, NAB, MAGIC, etc.) — reserve the day before so your spot is guaranteed.",
-          "The Day Pass covers desk access, WiFi, unlimited coffee and water, free parking, phone-booth access for private calls, printing, and the on-site Muze Cafe. Meeting rooms are a separate booking at $25-$75/hour and can be reserved by the hour online. If you need to take a client call during your day, a Huddle Room ($25/hr) is usually the right call.",
+          "The Day Pass covers desk access, WiFi, unlimited coffee and water, free parking, phone-booth access for private calls, printing, and the on-site Muze Cafe. Meeting rooms are a separate booking from $39 to $99 per hour and can be reserved by the hour online. If you need to take a client call during your day, a Huddle Room ($39/hr) is usually the right call.",
           "If you come back more than one week a month, move to a Hot Desk or Dedicated Desk. See /las-vegas-hot-desk for any-desk 24/7 biometric access, or /las-vegas-dedicated-desk to add a reserved desk and a business address with mail.",
         ],
       },
@@ -790,9 +790,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Meeting Rooms & Meeting Space in Las Vegas",
     heroSubtitle:
       "Professional meeting spaces available by the hour. AV equipment, video conferencing, whiteboards, and free parking included. Book online instantly.",
-    metaTitle: "Meeting Rooms & Meeting Space Las Vegas $25/hr",
+    metaTitle: "Meeting Rooms & Meeting Space Las Vegas $39/hr",
     metaDescription:
-      "Book meeting rooms in Las Vegas from $25/hr — no F&B minimum, AV and video conferencing included, free parking. Huddle rooms to boardrooms for 2–14. Reserve online.",
+      "Book Las Vegas meeting rooms from $39/hr. Two conference rooms fit up to 16 each; the $99/hr classroom fits 50. AV, WiFi, and free parking included.",
     heroImage: "/images/hero/meeting-room.jpg",
     useCases: [
       "Client presentations and pitches",
@@ -811,7 +811,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "A prospect is flying into LAS for a 90-minute meeting and you need a professional conference room within 10 minutes of the terminal — not a Strip hotel ballroom with a food and beverage minimum, not a coffee shop with no privacy.",
           fit: [
-            "Huddle Room at $25/hr for 2-4 people, Conference Room at $50/hr for 6-8 — no F&B minimum",
+            "Huddle Room at $39/hr for 2-4 people; two Conference Rooms at $69/hr, each fitting up to 16 — no F&B minimum",
             "Real video conferencing, large display, and whiteboards included in every room",
             "10 minutes from Harry Reid International Airport via I-215 W",
             "Free parking for your prospect — no $45 Strip hotel valet charge",
@@ -822,8 +822,8 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You need a neutral, professional setting for a deposition, mediation, or sworn testimony where the venue reads as formal enough that nobody questions it, and parking doesn't become a logistics problem for witnesses and counsel.",
           fit: [
-            "Boardroom at $75/hr fits up to 14 people around a proper conference table",
-            "Dual screens and a real sound system for recorded testimony and exhibit review",
+            "Conference Room at $69/hr fits up to 16 people around a proper conference table",
+            "Display, video conferencing, WiFi, and whiteboards are included",
             "Quiet off-Strip location with no tourism noise interrupting proceedings",
             "Free parking for witnesses, counsel, and the court reporter",
           ],
@@ -844,18 +844,18 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "Your quarterly board meeting, investor update, or leadership workshop needs a space that's not your apartment, not a hotel ballroom at 5x the price, and not a restaurant back room with no AV.",
           fit: [
-            "Boardroom ($75/hr) for formal board meetings and investor presentations",
-            "Conference Room ($50/hr) for working sessions, team workshops, and all-hands",
+            "Conference Room ($69/hr) for formal board meetings, investor presentations, and working sessions",
+            "Classroom ($99/hr) for training, workshops, seminars, and larger presentations with up to 50 people",
             "Catering from on-site Muze Cafe — coffee service, pastries, sandwich trays, full lunch",
-            "Rooms reconfigure for theater, classroom, u-shape, or boardroom style",
+            "Flexible layouts are available based on the room and meeting format",
           ],
         },
       ],
       whyChoose: {
         heading: "Why book a Las Vegas meeting room at Muze Office",
         paragraphs: [
-          "Most meeting rooms in Las Vegas fall into two categories: Strip hotels charging conference-center rates with food-and-beverage minimums, or big-box venues that only rent space by the day. Neither works for a quick client pitch, a two-hour board meeting, or a same-day legal deposition. Muze Office meeting rooms start at $25 per hour for a Huddle Room, scale up to $50 per hour for a Conference Room, and top out at $75 per hour for a full Boardroom. No food minimums, no day-rate padding, no parking fees for your attendees.",
-          "Every room includes what you actually need for a professional meeting. Huddle Rooms fit two to four people and come with a large monitor, whiteboard, and WiFi — the right shape for a quick sync, a sales pitch, or a one-on-one. Conference Rooms fit six to eight and add real video conferencing hardware, which makes them practical for hybrid meetings where half the team is remote. Boardrooms seat ten to fourteen with dual screens, a proper sound system, and the table configuration you'd expect for a board meeting, workshop, or legal deposition.",
+          "Most meeting rooms in Las Vegas fall into two categories: Strip hotels charging conference-center rates with food-and-beverage minimums, or big-box venues that only rent space by the day. Neither works for a quick client pitch, a two-hour board meeting, or a same-day legal deposition. Muze Office meeting rooms start at $39 per hour for a Huddle Room. We have two Conference Rooms at $69 per hour that each fit up to 16 people, plus a Classroom at $99 per hour for groups of up to 50. No food minimums, no day-rate padding, no parking fees for your attendees.",
+          "Every room includes what you actually need for a professional meeting. The Huddle Room fits two to four people and comes with a monitor, whiteboard, and WiFi — the right shape for a quick sync, a sales pitch, or a one-on-one. Each Conference Room accommodates up to 16 and includes video conferencing hardware for client meetings, depositions, and hybrid sessions. The Classroom accommodates up to 50 for training, workshops, seminars, and larger presentations.",
           "The location helps too. Bermuda Rd is 10 minutes from Harry Reid International Airport via I-215, which makes fly-in meetings genuinely possible — your client can land at LAS, grab a Lyft, spend an hour in a conference room, and be back at the terminal before their return flight. Everyone parks for free. Nobody has to navigate Strip traffic or pay $45 to a hotel valet.",
         ],
       },
@@ -864,13 +864,13 @@ export const cityServiceData: Record<string, CityServiceData> = {
         paragraphs: [
           "Hotel boardrooms on the Strip start around $150-250 per hour for a comparable room, almost always include a food-and-beverage minimum that runs $500-1,500 on top of the room rental, and charge your attendees for parking (typically $35-45 per car, even for a one-hour meeting). They're built for large corporate events, not for a two-person pitch meeting. You're paying for a ballroom when you need a conference table.",
           "Restaurant private rooms are the default for client dinners but wrong for presentations. The AV is almost never set up for video conferencing, the lighting is designed for a meal rather than a whiteboard session, and the servers interrupting to ask about drinks break the meeting rhythm. They're great for celebrating after you close the deal — not great for the pitch itself.",
-          "Coffee shops are the free option, and the cost shows up in the meeting outcome. You can't present slides, you can't run a real video call, you can't write on a whiteboard, and half the time the client can't even find parking. For any meeting that affects revenue — a sales pitch, an investor update, a negotiation — the $25 to $75 per hour to rent a real conference room pays for itself the moment it removes the distraction.",
+          "Coffee shops are the free option, and the cost shows up in the meeting outcome. You can't present slides, you can't run a real video call, you can't write on a whiteboard, and half the time the client can't even find parking. For any meeting that affects revenue — a sales pitch, an investor update, a negotiation — the $39 to $99 per hour to rent a real meeting room pays for itself the moment it removes the distraction.",
         ],
       },
       howToGetStarted: {
         heading: "How to book a meeting room in Las Vegas",
         paragraphs: [
-          "Pick the room that fits the meeting, not the room that fits your budget. A Huddle Room works for two-to-four person syncs, one-on-ones, or client check-ins — $25/hour, monitor and whiteboard, private but casual. A Conference Room fits six to eight around a single table with real video conferencing, which is what you want for sales pitches, team workshops, and hybrid meetings. A Boardroom is for ten to fourteen with dual screens and a sound system — use it for board meetings, investor updates, workshops, or legal depositions where the formality matters.",
+          "Pick the room that fits the meeting. The Huddle Room works for two-to-four-person syncs, one-on-ones, or client check-ins at $39/hour. Either Conference Room fits up to 16 people at $69/hour for sales pitches, board meetings, workshops, depositions, and hybrid meetings. The Classroom fits up to 50 at $99/hour for training, seminars, and larger presentations.",
           "Book by the hour, not by the day. Most meetings run 60-90 minutes; we'd rather you book exactly what you need than pad the reservation. Catering from the on-site Muze Cafe is available as an add-on — coffee service, pastries, sandwich trays, full lunch — and we can handle the setup before your attendees arrive.",
           "No membership is required to book a meeting room. Same-day bookings are usually possible outside of peak hours. If you're a virtual office member or coworking member, you already have monthly meeting room credits that can cover part or all of your booking. Book online or call us, and we'll have the room prepped before your first attendee arrives.",
         ],
@@ -890,10 +890,10 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "conference-rooms",
     h1: "Conference Rooms in Las Vegas",
     heroSubtitle:
-      "Corporate conference rooms by the hour for client pitches, board meetings, depositions, and investor updates. Video conferencing, dual-screen boardroom option, and free parking included.",
-    metaTitle: "Conference Rooms Las Vegas | From $50/hr",
+      "Two corporate conference rooms available by the hour for client pitches, board meetings, depositions, and investor updates. Each fits up to 16 people, with video conferencing and free parking included.",
+    metaTitle: "Conference Rooms Las Vegas | $69/hr",
     metaDescription:
-      "Book a Las Vegas conference room at 6860 Bermuda Rd from $50/hr — video conferencing, dual-screen boardroom, free parking. For client and board meetings. Reserve online.",
+      "Book either Las Vegas conference room for $69/hr at 6860 Bermuda Rd. Each fits up to 16 people, with video conferencing and free parking included.",
     heroImage: "/images/hero/meeting-room.jpg",
     useCases: [
       "Board meetings and quarterly reviews",
@@ -912,8 +912,8 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You're counsel flying into LAS for a half-day deposition or mediation and you need a neutral, professional Nevada venue — not a hotel suite, not a rented apartment, not a courthouse annex. The witness, opposing counsel, and the court reporter all need to find the same address easily and park without a meter hassle.",
           fit: [
-            "Boardroom at $75/hr seats up to 14 around a proper conference table for counsel, witness, and court reporter",
-            "Dual screens and a sound system make exhibit review and recorded testimony straightforward",
+            "Conference Room at $69/hr seats up to 16 for counsel, witness, and court reporter",
+            "Display, video conferencing, WiFi, and whiteboards are included",
             "Free parking on-site for every attendee — no Strip valet charge, no metered street parking",
             "10 minutes from Harry Reid International via I-215 W, so fly-in morning depositions are realistic",
           ],
@@ -923,7 +923,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You're in Las Vegas for CES, SEMA, NAB, or another major convention and you need a one-hour client meeting or investor pitch somewhere quieter than a Strip hotel lobby, a casino cafe, or the convention center floor — with real AV instead of a laptop on a cocktail table.",
           fit: [
-            "Conference Room at $50/hr for 6-8 people with large display and video conferencing included",
+            "Conference Room at $69/hr for up to 16 people with large display and video conferencing included",
             "Off-Strip location means no fighting convention traffic, no casino noise, and no F&B minimum",
             "Same-day booking is often possible outside peak hours — book by the hour, exactly what you need",
             "Free parking instead of a $45 Strip hotel valet charge for your prospect",
@@ -934,18 +934,18 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "Your quarterly board meeting or an investor update needs a space that reads as a real company — not your living room, not a WeWork lounge, not a restaurant private room where servers interrupt the pitch to ask about drinks.",
           fit: [
-            "Boardroom ($75/hr) for formal board meetings with dual screens and a sound system",
-            "Conference Room ($50/hr) for 6-8 person investor updates and working sessions",
+            "Conference Room ($69/hr) for formal board meetings, investor updates, and working sessions with up to 16 people",
+            "Two Conference Rooms are available, making simultaneous sessions possible",
             "Catering from on-site Muze Cafe — coffee service, pastries, sandwich trays, full lunch — one point of contact",
-            "Rooms reconfigure for theater, classroom, u-shape, or boardroom style depending on how you want the meeting to feel",
+            "The separate Classroom ($99/hr) is available for training and presentations with up to 50 people",
           ],
         },
       ],
       whyChoose: {
         heading: "Why book a Las Vegas conference room at Muze Office",
         paragraphs: [
-          "Most Las Vegas conference rooms sit inside a Strip hotel's business center, and the pricing reflects it — $150 to $250 per hour for a room the same size as ours, almost always with a food-and-beverage minimum that adds $500 to $1,500 on top of the rental, and parking fees that your attendees pay separately. Muze Office conference rooms start at $50 per hour for the 6-8 person Conference Room and $75 per hour for the 10-14 person Boardroom. No F&B minimum, no day-rate padding, no parking charges for the people you invite.",
-          "The equipment is actually built for the kind of meetings that happen in a conference room. Every Conference Room includes a large display with real video conferencing hardware, WiFi fast enough to run a live screen share, and whiteboards — the basics that most hotel business centers either charge extra for or do not provide at all. The Boardroom steps up to dual screens and a sound system, which is what you want for a board meeting, a legal deposition, or an investor pitch where the formality matters.",
+          "Most Las Vegas conference rooms sit inside a Strip hotel's business center, and the pricing reflects it — $150 to $250 per hour for a room the same size as ours, almost always with a food-and-beverage minimum that adds $500 to $1,500 on top of the rental, and parking fees that your attendees pay separately. Muze Office has two Conference Rooms at $69 per hour, and each accommodates up to 16 people. No F&B minimum, no day-rate padding, no parking charges for the people you invite.",
+          "The equipment is built for the kind of meetings that happen in a conference room. Both Conference Rooms include a large display with video conferencing hardware, WiFi fast enough to run a live screen share, and whiteboards — the basics that most hotel business centers either charge extra for or do not provide at all.",
           "Location helps too. 6860 Bermuda Rd, Suite 200 sits in the 89119 business corridor off I-215, about 10 minutes from Harry Reid International Airport and well away from Strip tourist traffic. That makes fly-in morning meetings genuinely possible — counsel or a prospect lands at LAS, grabs a Lyft, spends an hour in a conference room, and is back at the terminal before their return flight. Everyone parks for free, there is no casino noise bleeding through the walls, and the space reads as a real workspace rather than a hotel ballroom.",
         ],
       },
@@ -953,14 +953,14 @@ export const cityServiceData: Record<string, CityServiceData> = {
         heading: "Conference room vs. hotel business center, home office, and coffee shop",
         paragraphs: [
           "Hotel business centers on the Strip are built for large corporate events and priced for travelers on expense accounts. A comparable room rents for $150 to $250 per hour before you add the food-and-beverage minimum, which typically runs $500 to $1,500 on a half-day booking whether you want it or not. Parking is billed separately at $35 to $45 per car, which every attendee notices. For a routine two-hour board meeting or a one-hour pitch, the math does not hold up — you are paying for ballroom infrastructure when you need a conference table.",
-          "A home office is cheap and convenient, but it is the wrong signal when you are running a client pitch, a formal board meeting, or a deposition. Clients read your office as a signal about how you run your business. A sworn witness reads your living-room sofa as a reason to question the seriousness of the proceeding. For meetings that affect revenue, a neutral professional venue is table stakes, and $50 to $75 per hour is the cheapest insurance you will buy against a bad impression.",
+          "A home office is cheap and convenient, but it is the wrong signal when you are running a client pitch, a formal board meeting, or a deposition. Clients read your office as a signal about how you run your business. A sworn witness reads your living-room sofa as a reason to question the seriousness of the proceeding. For meetings that affect revenue, a neutral professional venue is table stakes, and $69 per hour is inexpensive insurance against a bad impression.",
           "Coffee shops are the default free option and the cost shows up in the meeting outcome. Starbucks cannot run a real video call without ambient noise leaking in, has no privacy for confidential discussions, and does not support presentations, whiteboards, or a proper conference table. For anyone whose meeting outcome affects a deal, a case, or a round of funding, a real conference room pays for itself the moment it removes the distraction.",
         ],
       },
       howToGetStarted: {
         heading: "How to book a Las Vegas conference room",
         paragraphs: [
-          "Pick the room that fits the meeting, not the one that fits your budget. The Conference Room at $50 per hour is the right call for 6-8 person client meetings, sales pitches, interviews, and investor updates — it comes with a large display, real video conferencing, and whiteboards. The Boardroom at $75 per hour is the step up for 10-14 people with dual screens and a sound system — use it for board meetings, workshops, all-hands sessions, and legal depositions where the formality of the setup matters.",
+          "Either Conference Room is $69 per hour and accommodates up to 16 people for client meetings, sales pitches, interviews, investor updates, board meetings, workshops, and legal depositions. If you need a presentation or training format for a larger group, the separate Classroom is $99 per hour and accommodates up to 50 people.",
           "Book by the hour, not by the day. Most conference-room bookings run 60 to 120 minutes and there is no reason to pad the reservation. Same-day bookings are usually possible outside of peak hours, and Muze Cafe can handle coffee service, pastries, sandwich trays, or a full catered lunch as an add-on so you are not coordinating a separate caterer.",
           "If you end up booking conference rooms regularly, becoming a virtual office or coworking member is often cheaper. Opal and Diamond virtual-office tiers include monthly meeting-room hours that can be applied to a conference-room booking, and dedicated-desk coworking members receive monthly meeting-room credits as part of their plan. Book a one-off room first, and talk to us about credits on a plan if the math starts to favor it.",
         ],
@@ -981,9 +981,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Event Space & Training Rooms in Las Vegas",
     heroSubtitle:
       "Host corporate events, workshops, networking mixers, and private gatherings. Full AV, flexible layouts, and on-site catering from Muze Cafe.",
-    metaTitle: "Las Vegas Event Space — From $99/hr, No F&B Minimum",
+    metaTitle: "Las Vegas Event Space $199/hr | Classroom $99/hr",
     metaDescription:
-      "Rent event space in Las Vegas from $99/hr — full AV, flexible layouts, on-site catering, no F&B minimum. Corporate events, workshops, mixers. Book a tour.",
+      "Rent Las Vegas event space for $199/hr or a classroom for up to 50 people for $99/hr. Full AV, flexible layouts, catering, and free parking.",
     heroImage: "/images/hero/event-space.jpg",
     useCases: [
       "Corporate workshops and training sessions",
@@ -1001,9 +1001,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
         {
           persona: "Corporate training and workshop organizers",
           scenario:
-            "You're running a multi-hour or all-day training for 20-60 attendees and need a venue with real AV, configurable seating, and predictable catering pricing — not a $10k Strip hotel ballroom quote with a five-figure F&B minimum.",
+            "You're running a multi-hour or all-day training for up to 50 attendees and need a venue with real AV, classroom seating, and predictable catering pricing — not a $10k Strip hotel ballroom quote with a five-figure F&B minimum.",
           fit: [
-            "Hourly rates from $99 (varies by room) with a flat 10% discount on bookings of 8+ hours",
+            "Classroom for up to 50 people at $99/hr, with a flat 10% discount on bookings of 8+ hours",
             "Projector, screen, sound system, and wireless mics included — not billed separately",
             "Flexible seating — theater, classroom, u-shape, lounge — reconfigured for your event",
             "Catering from the on-site Muze Cafe handles coffee service, lunch, and snack breaks",
@@ -1025,7 +1025,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You're organizing a monthly industry mixer, community meetup, or real-estate networking night and you need a venue that looks professional without eating your entire event budget on the room alone.",
           fit: [
-            "Hourly rates from $99 for short, tight events — pay only for the time you need",
+            "Event space at $199/hr for mixers, launches, receptions, and private events",
             "No food-and-beverage minimum — bring outside catering or add Muze Cafe separately",
             "Layout flexes for standing mingling, seated presentations, or hybrid formats",
             "Free parking for every guest so nobody leaves before the event ends",
@@ -1058,7 +1058,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         heading: "Why choose Muze Office for your Las Vegas event",
         paragraphs: [
           "Las Vegas is built for mega-events, and the venues reflect it. Strip ballrooms start around $3,000 to $8,000 for a half-day rental, almost always with a five-figure food-and-beverage minimum, parking fees on top, and an AV team you have to hire separately. For a corporate workshop, a product launch for 40 people, a networking mixer, or a private client dinner, that's massively oversized. You're paying for infrastructure designed to host 500 people when you need space for 40.",
-          "Muze Office event space is the right-sized alternative. Hourly rates start at $99 per hour and vary by which room you book, with a flat 10% discount applied automatically to any booking of 8 hours or more — enough for a morning working session plus an evening celebration in one day. Full AV is included — projector, screen, sound system, wireless microphones, flexible lighting — and we can rearrange the seating layout for your specific event, whether that's theater-style for a presentation, classroom for a workshop, or open for a mixer. The on-site Muze Cafe handles catering directly, which means one point of contact for both the space and the food rather than juggling a venue contact and an outside caterer.",
+          "Muze Office offers two clear large-room options: the Classroom is $99 per hour and accommodates up to 50 people for training, workshops, seminars, and presentations; the Event Space is $199 per hour for mixers, launches, receptions, and private gatherings. A flat 10% discount applies automatically to bookings of 8 hours or more. Full AV is included, and the on-site Muze Cafe handles catering directly, which means one point of contact for both the space and the food rather than juggling a venue contact and an outside caterer.",
           "The off-Strip location is part of the appeal for locals. Most Las Vegas residents avoid the Strip entirely for anything that isn't a tourist activity — the traffic is brutal, parking is expensive, and the driving distance from the suburbs adds 30-45 minutes to every attendee's evening. Muze Office is in the 89119 business corridor off I-215, which is easy to reach from Summerlin, Henderson, North Las Vegas, and the airport without ever touching the Strip. Free parking for every guest is included, which matters more than most people realize until they've planned an event where attendees had to pay $40 each just to show up.",
         ],
       },
@@ -1073,8 +1073,8 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to book event space in Las Vegas",
         paragraphs: [
-          "Event space is booked hourly, with rates starting at $99/hour that vary depending on which room fits your event. A one-to-two hour booking works for a lunch-and-learn, a small pitch meeting, or a short workshop. A four-hour block is the sweet spot for most workshops, training sessions, product demos, or extended team offsites. Bookings of 8 hours or more get a flat 10% discount automatically — the right structure for conferences, all-day retreats, or events with multiple sessions and breaks. We don't charge separate half-day or full-day package rates; you only pay for the hours you actually book.",
-          "Once you know your time block, talk to our event coordinator about layout and catering. We can configure the space for theater-style (rows of chairs facing the front — maximizes capacity for presentations), classroom-style (tables and chairs — works for workshops where attendees need to take notes), u-shape or boardroom (for discussions), or open/lounge (for networking mixers and receptions). Catering from Muze Cafe ranges from coffee-and-pastry service for morning sessions to full plated meals for evening events.",
+          "Choose the Classroom at $99/hour for up to 50 people when you need training, workshop, seminar, or presentation seating. Choose the Event Space at $199/hour for mixers, launches, receptions, and private gatherings. Bookings of 8 hours or more get a flat 10% discount automatically, and you pay only for the hours you need.",
+          "Once you know your time block, talk to our event coordinator about layout and catering. Available layouts depend on the room and event format. Catering from Muze Cafe ranges from coffee-and-pastry service for morning sessions to full plated meals for evening events.",
           "Book a walkthrough before you commit to a specific room and time. Most of our clients decide on their exact setup after they see the space in person — the dimensions on a floor plan don't always match your mental model for how many people will fit comfortably. Walkthroughs are free, take about 15 minutes, and you can bring whoever's planning the event with you. Once you lock in the date, we handle setup and breakdown on either side of your block, so you show up when you're ready and leave when you're done.",
         ],
       },
@@ -1147,7 +1147,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You're flying into LAS to facilitate a workshop or client session and you need a prep spot between landing and your session — plus a backup meeting room in case the client venue falls through.",
           fit: [
-            "Day Pass ($25) plus Meeting Room ($25/hr Huddle or $50/hr Conference) combo if you need both",
+            "Day Pass ($25) plus Meeting Room ($39/hr Huddle or $69/hr Conference) combo if you need both",
             "AV equipment in meeting rooms matches what you'd expect at a corporate venue",
             "Quiet desks to prep slides or review notes before your session",
             "Same-day bookings possible outside of peak hours",
@@ -1274,7 +1274,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to use Muze Office during your Las Vegas convention",
         paragraphs: [
-          "If you're in town for a single day or two, a $25 day pass is the simplest option. Book online — even same-day — during business hours, and you'll have a desk and WiFi within minutes of arriving. If you're taking a client call during convention week, book a Huddle Room ($25/hour) in advance so you know you'll have a private, professional setting — much better than trying to find a quiet corner in a hotel lobby.",
+          "If you're in town for a single day or two, a $25 day pass is the simplest option. Book online — even same-day — during business hours, and you'll have a desk and WiFi within minutes of arriving. If you're taking a client call during convention week, book a Huddle Room ($39/hour) in advance so you know you'll have a private, professional setting — much better than trying to find a quiet corner in a hotel lobby.",
           "If you're exhibiting at a full-week show like CES, SEMA, or NAB, ask about our weekly pass. It gives you unlimited Monday-through-Friday access for significantly less than five separate day passes, and it's the right call if you expect to need a workspace every day of the convention. Dedicated coworking members get a permanent place to leave equipment and work between show days, and private office tenants can use the space as a temporary Las Vegas HQ during show weeks.",
           "The drive from most Strip hotels and from the Las Vegas Convention Center takes 10-15 minutes depending on traffic. Take I-15 S or Paradise Rd to I-215 W and get off at Bermuda Rd. Free parking is included, which matters a lot during convention week when Strip garages are charging peak pricing of $45-60 per day. Book a meeting room in advance for any client calls you need to take, and book your day pass online for general desk access.",
         ],
@@ -1568,7 +1568,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         heading: "How to use a Day Pass at Muze Office Houston",
         paragraphs: [
           "Muze Office Houston is opening soon at 1800 Augusta Dr. Join the waitlist to lock in pre-launch pricing and to get the opening-day schedule for Day Passes. When we open, Day Passes will be booked online, even same-day, and available during business hours — show your ID at the front desk, pay $25, and we'll point you to an open desk. Booking online the day before guarantees a spot during busier weeks.",
-          "The Day Pass will cover desk access, WiFi, unlimited coffee and water, free parking, phone-booth access for private calls, printing, and the on-site Muze Cafe. Meeting rooms will be a separate booking at $25-$75/hour and reservable by the hour online. If you need to take a client call during your day, a Huddle Room will be the right call.",
+          "The Day Pass will cover desk access, WiFi, unlimited coffee and water, free parking, phone-booth access for private calls, printing, and the on-site Muze Cafe. Meeting rooms will be a separate hourly booking; final Houston room inventory and pricing will be announced before opening.",
           "If you come back more than one week a month, move to a Hot Desk or Dedicated Desk. See /houston-hot-desk for any-desk 24/7 biometric access, or /houston-dedicated-desk to add a reserved desk and a business address with mail.",
         ],
       },
@@ -1964,9 +1964,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Meeting Rooms in Houston",
     heroSubtitle:
       "Professional meeting spaces in the Galleria available by the hour. AV equipment, video conferencing, whiteboards, and free parking included. Reserve by the hour.",
-    metaTitle: "Meeting Rooms Houston | From $25/hr",
+    metaTitle: "Meeting Rooms Houston | Join the Waitlist",
     metaDescription:
-      "Meeting rooms in Houston's Galleria from $25/hr — AV, video conferencing, free parking. Huddle rooms to boardrooms for 2–14 people. Join the Houston waitlist today.",
+      "Professional meeting rooms are planned for Muze Office Houston. Join the waitlist for confirmed room inventory, capacity, amenities, and opening pricing.",
     heroImage: "/images/hero/meeting-room.jpg",
     useCases: [
       "Client presentations and sales pitches",
@@ -1985,8 +1985,8 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "A prospect is flying into IAH or Hobby for a 90-minute meeting, or driving in from Sugar Land or The Woodlands, and you need a professional conference room in a central Galleria location — not a Post Oak hotel ballroom with a food and beverage minimum, not a coffee shop with no privacy.",
           fit: [
-            "Huddle Room at $25/hr for 2-4 people, Conference Room at $50/hr for 6-8 — no F&B minimum",
-            "Real video conferencing, large display, and whiteboards included in every room",
+            "Hourly meeting-room options are planned for the Houston location",
+            "Final room capacities, equipment, and pricing will be announced before opening",
             "Inside the 610 Loop, minutes from Post Oak Blvd — central for clients coming from any direction",
             "Free parking for your prospect — no Post Oak garage fee or valet charge",
           ],
@@ -1996,8 +1996,8 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You need a neutral, professional Houston setting for a deposition, mediation, or sworn testimony where the venue reads as formal enough that nobody questions it, and parking doesn't become a logistics problem for witnesses and counsel.",
           fit: [
-            "Boardroom at $75/hr fits up to 14 people around a proper conference table",
-            "Dual screens and a real sound system for recorded testimony and exhibit review",
+            "Professional meeting space is planned for depositions and mediations",
+            "Final room configuration and included equipment will be announced before opening",
             "Quiet Tanglewood-adjacent location with no retail noise interrupting proceedings",
             "Free parking for witnesses, counsel, and the court reporter",
           ],
@@ -2018,18 +2018,18 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "Your quarterly board meeting, investor update, or leadership workshop needs a space that's not your apartment, not a Galleria hotel ballroom at 5x the price, and not a restaurant back room with no AV.",
           fit: [
-            "Boardroom ($75/hr) for formal board meetings and investor presentations",
-            "Conference Room ($50/hr) for working sessions, team workshops, and all-hands",
+            "Professional rooms are planned for formal meetings and investor presentations",
+            "Flexible meeting space is planned for working sessions and team workshops",
             "Catering from on-site Muze Cafe — coffee service, pastries, sandwich trays, full lunch",
-            "Rooms reconfigure for theater, classroom, u-shape, or boardroom style",
+            "Rooms are planned to support presentation, training, u-shape, or conference-table layouts",
           ],
         },
       ],
       whyChoose: {
         heading: "Why book a Houston meeting room at Muze Office",
         paragraphs: [
-          "Most meeting rooms in the Galleria and Uptown area fall into two categories: Post Oak hotels charging conference-center rates with food-and-beverage minimums, or big-box venues that only rent space by the day. Neither works for a quick client pitch, a two-hour board meeting, or a same-day legal deposition. Muze Office meeting rooms start at $25 per hour for a Huddle Room, scale up to $50 per hour for a Conference Room, and top out at $75 per hour for a full Boardroom. No food minimums, no day-rate padding, no parking fees for your attendees.",
-          "Every room includes what you actually need for a professional meeting. Huddle Rooms fit two to four people and come with a large monitor, whiteboard, and WiFi — the right shape for a quick sync, a sales pitch, or a one-on-one. Conference Rooms fit six to eight and add real video conferencing hardware, which makes them practical for hybrid meetings where half the team is remote. Boardrooms seat ten to fourteen with dual screens, a proper sound system, and the table configuration you'd expect for a board meeting, workshop, or legal deposition.",
+          "Most meeting rooms in the Galleria and Uptown area fall into two categories: Post Oak hotels charging conference-center rates with food-and-beverage minimums, or big-box venues that only rent space by the day. Muze Office Houston is planned as a flexible hourly alternative for client pitches, team meetings, workshops, and depositions.",
+          "The Houston location has not opened, so its room names, capacities, equipment, and hourly rates are not yet final. Join the waitlist for the confirmed inventory and opening pricing rather than relying on the Las Vegas room lineup.",
           "The location helps too. 1800 Augusta Dr is inside the 610 Loop in the Galleria, which pulls comfortably from Memorial, Tanglewood, West U, Bellaire, River Oaks, and downtown — and it's 25 minutes from both IAH and Hobby, which makes fly-in meetings genuinely workable. Everyone parks for free. Nobody has to navigate a Post Oak garage or pay for valet.",
         ],
       },
@@ -2038,13 +2038,13 @@ export const cityServiceData: Record<string, CityServiceData> = {
         paragraphs: [
           "Hotel boardrooms in the Galleria and downtown start around $150-250 per hour for a comparable room, almost always include a food-and-beverage minimum that runs $500-1,500 on top of the room rental, and charge your attendees for parking (typically $12-25 per car for day parking, more for valet). They're built for large corporate events, not for a two-person pitch meeting. You're paying for a ballroom when you need a conference table.",
           "Restaurant private rooms are the default for client dinners but wrong for presentations. The AV is almost never set up for video conferencing, the lighting is designed for a meal rather than a whiteboard session, and the servers interrupting to ask about drinks break the meeting rhythm. They're great for celebrating after you close the deal — not great for the pitch itself.",
-          "Coffee shops are the free option, and the cost shows up in the meeting outcome. You can't present slides, you can't run a real video call, you can't write on a whiteboard, and half the time the client can't even find parking inside the Loop during lunch hour. For any meeting that affects revenue — a sales pitch, an investor update, a negotiation — the $25 to $75 per hour to rent a real Houston conference room pays for itself the moment it removes the distraction.",
+          "Coffee shops are the free option, and the cost shows up in the meeting outcome. You can't present slides, you can't run a real video call, you can't write on a whiteboard, and half the time the client can't even find parking inside the Loop during lunch hour. For any meeting that affects revenue, a private professional setting can remove those distractions.",
         ],
       },
       howToGetStarted: {
         heading: "How to book a meeting room in Houston",
         paragraphs: [
-          "Pick the room that fits the meeting, not the room that fits your budget. A Huddle Room works for two-to-four person syncs, one-on-ones, or client check-ins — $25/hour, monitor and whiteboard, private but casual. A Conference Room fits six to eight around a single table with real video conferencing, which is what you want for sales pitches, team workshops, and hybrid meetings. A Boardroom is for ten to fourteen with dual screens and a sound system — use it for board meetings, investor updates, workshops, or legal depositions where the formality matters.",
+          "Choose a room based on the number of attendees, meeting format, privacy needs, and required presentation equipment. Final Houston room options and pricing will be published before reservations open.",
           "Book by the hour, not by the day. Most meetings run 60-90 minutes; we'd rather you book exactly what you need than pad the reservation. Catering from the on-site Muze Cafe is available as an add-on — coffee service, pastries, sandwich trays, full lunch — and we can handle the setup before your attendees arrive.",
           "No membership is required to book a meeting room. Same-day bookings are usually possible outside of peak hours. If you're a virtual office member or coworking member, you already have monthly meeting room credits that can cover part or all of your booking. Contact us to reserve, and we'll have the room prepped before your first attendee arrives.",
         ],
@@ -2064,10 +2064,10 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "conference-rooms",
     h1: "Conference Rooms in Houston",
     heroSubtitle:
-      "Corporate conference rooms in the Galleria by the hour for client pitches, board meetings, depositions, and investor updates. Video conferencing, dual-screen boardroom option, and free parking included.",
-    metaTitle: "Conference Rooms Houston | From $50/hr",
+      "Corporate conference rooms are planned for the Galleria location for client pitches, board meetings, depositions, and investor updates.",
+    metaTitle: "Conference Rooms Houston | Join the Waitlist",
     metaDescription:
-      "Book a Houston conference room in the Galleria from $50/hr — video conferencing, dual-screen boardroom, free parking. Month-to-month. Join the Houston waitlist.",
+      "Conference rooms are planned for Muze Office Houston. Join the waitlist for confirmed capacity, equipment, availability, and opening pricing.",
     heroImage: "/images/hero/meeting-room.jpg",
     useCases: [
       "Board meetings and quarterly reviews",
@@ -2086,8 +2086,8 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You're running a half-day deposition, mediation, or sworn testimony and need a neutral Galleria-area venue where witnesses, opposing counsel, and the court reporter can all find the same address, park on-site, and focus on the record — not navigate a Post Oak garage or a hotel lobby.",
           fit: [
-            "Boardroom at $75/hr seats up to 14 around a proper conference table for counsel, witness, and court reporter",
-            "Dual screens and a sound system make exhibit review and recorded testimony straightforward",
+            "Professional conference space is planned for counsel, witnesses, and court reporters",
+            "Final room capacity and included equipment will be confirmed before opening",
             "Free parking on-site for every attendee — no Post Oak garage fee or valet charge",
             "Quiet, Tanglewood-adjacent location with no retail or restaurant noise interrupting proceedings",
           ],
@@ -2097,7 +2097,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "A prospect is flying into IAH or Hobby for a 60-90 minute meeting, or driving in from Sugar Land, The Woodlands, or Katy, and you need a central Galleria conference room with real AV — not a Post Oak hotel ballroom with a food-and-beverage minimum or a coffee shop with no privacy.",
           fit: [
-            "Conference Room at $50/hr for 6-8 people with large display and video conferencing included",
+            "Hourly conference-room options are planned for client meetings and presentations",
             "Inside the 610 Loop and minutes from Post Oak Blvd — central for clients coming from any direction",
             "Free parking for your prospect — no Post Oak garage fee or valet charge",
             "Book by the hour, exactly what you need — no F&B minimum, no day-rate padding",
@@ -2108,18 +2108,18 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "Your quarterly board meeting, investor update, or leadership offsite needs a Houston venue that reads as a real company — not a living room, not a Galleria hotel ballroom at 5x the price, not a restaurant private room where servers interrupt the pitch.",
           fit: [
-            "Boardroom ($75/hr) for formal board meetings with dual screens and a sound system",
-            "Conference Room ($50/hr) for 6-8 person investor updates and working sessions",
+            "Professional rooms are planned for formal board meetings and investor updates",
+            "Flexible conference space is planned for working sessions and leadership workshops",
             "Catering from on-site Muze Cafe — coffee service, pastries, sandwich trays, full lunch — one point of contact",
-            "Rooms reconfigure for theater, classroom, u-shape, or boardroom style depending on how you want the meeting to feel",
+            "Rooms are planned to support presentation, training, u-shape, or conference-table layouts",
           ],
         },
       ],
       whyChoose: {
         heading: "Why book a Houston conference room at Muze Office",
         paragraphs: [
-          "Most Houston conference rooms sit inside a Galleria or downtown hotel's business center, and the pricing reflects it — $150 to $250 per hour for a comparable room, almost always with a food-and-beverage minimum that adds $500 to $1,500 on top of the rental, and parking billed separately to every attendee. Muze Office conference rooms start at $50 per hour for the 6-8 person Conference Room and $75 per hour for the 10-14 person Boardroom. No F&B minimum, no day-rate padding, no parking charges for the people you invite.",
-          "The equipment is built for the meetings that actually happen in a conference room. Every Conference Room includes a large display with real video conferencing hardware, WiFi fast enough to run a live screen share, and whiteboards — the basics that most hotel business centers charge extra for or do not provide at all. The Boardroom steps up to dual screens and a sound system, which is what you want for a board meeting, a legal deposition, or an investor pitch where the formality matters.",
+          "Most Houston conference rooms sit inside a Galleria or downtown hotel's business center, often with food-and-beverage minimums and parking billed separately. Muze Office Houston is planned as a more flexible option for professional meetings in the Galleria area.",
+          "The Houston location has not opened, so its conference-room inventory, capacities, equipment, and rates are not yet final. Join the waitlist for confirmed details before reservations open.",
           "Location helps too. 1800 Augusta Dr is inside the 610 Loop in the Galleria, which pulls comfortably from Memorial, Tanglewood, West University, Bellaire, River Oaks, and downtown — and it is about 25 minutes from both IAH and Hobby, which makes fly-in morning meetings workable. Everyone parks for free on-site. Nobody has to navigate a Post Oak garage or pay for valet.",
         ],
       },
@@ -2127,14 +2127,14 @@ export const cityServiceData: Record<string, CityServiceData> = {
         heading: "Conference room vs. hotel business center, home office, and coffee shop",
         paragraphs: [
           "Hotel business centers in the Galleria and downtown Houston are built for large corporate events and priced accordingly. A comparable room rents for $150 to $250 per hour before the food-and-beverage minimum, which typically adds $500 to $1,500 on a half-day booking whether you want it or not. Parking is billed separately — $12 to $25 per car for day parking, more for valet — which every attendee notices. For a routine two-hour board meeting or a one-hour pitch, the math does not hold up.",
-          "A home office is cheap and convenient, but it is the wrong signal when you are running a client pitch, a formal board meeting, or a deposition. Clients and sworn witnesses read your office as a signal about how seriously you treat the meeting. For anything that affects revenue, a deal, a case, or a round of funding, a neutral professional venue is table stakes, and $50 to $75 per hour is cheap insurance against a bad impression.",
+          "A home office is cheap and convenient, but it can be the wrong setting for a client pitch, formal board meeting, or deposition. For anything that affects revenue, a deal, a case, or a round of funding, a neutral professional venue can support a stronger impression.",
           "Coffee shops are the default free option and the cost shows up in the meeting outcome. A Galleria-area coffee shop cannot run a real video call without ambient noise leaking in, has no privacy for confidential discussion, and does not support presentations, whiteboards, or a proper conference table. Finding parking inside the Loop at lunch hour is its own problem. For a meeting that matters, a real conference room pays for itself the moment it removes the distraction.",
         ],
       },
       howToGetStarted: {
         heading: "How to book a Houston conference room",
         paragraphs: [
-          "Pick the room that fits the meeting, not the one that fits your budget. The Conference Room at $50 per hour is the right call for 6-8 person client meetings, sales pitches, interviews, and investor updates — large display, real video conferencing, and whiteboards included. The Boardroom at $75 per hour is the step up for 10-14 people with dual screens and a sound system — use it for board meetings, workshops, all-hands sessions, and legal depositions where the formality of the setup matters.",
+          "Choose a conference room based on attendance, meeting format, privacy needs, and required presentation equipment. Final Houston room options and pricing will be published before reservations open.",
           "Book by the hour, not by the day. Most conference-room bookings run 60 to 120 minutes and there is no reason to pad the reservation. Catering from the on-site Muze Cafe is available as an add-on — coffee service, pastries, sandwich trays, full lunch — so you are not coordinating a separate caterer.",
           "If you end up booking conference rooms regularly, becoming a virtual office or coworking member can be cheaper. Opal and Diamond virtual-office tiers include monthly meeting-room hours that can be applied to a conference-room booking, and dedicated-desk coworking members receive monthly meeting-room credits as part of their plan. Muze Office Houston is opening soon at 1800 Augusta Dr — join the waitlist to lock in pre-launch pricing.",
         ],
@@ -2155,9 +2155,9 @@ export const cityServiceData: Record<string, CityServiceData> = {
     h1: "Event Space in Houston",
     heroSubtitle:
       "Host corporate events, workshops, networking mixers, and private gatherings in the Galleria. Full AV, flexible layouts, and on-site catering from Muze Cafe.",
-    metaTitle: "Event Space Houston | From $99/hr",
+    metaTitle: "Event Space Houston | Join the Waitlist",
     metaDescription:
-      "Rent event space in Houston's Galleria from $99/hr — full AV, flexible layouts, catering available. 10% off 8+ hour bookings. Corporate events and mixers. Inquire now.",
+      "Event space is planned for Muze Office Houston. Join the waitlist for confirmed capacity, amenities, availability, and opening pricing.",
     heroImage: "/images/hero/event-space.jpg",
     useCases: [
       "Corporate workshops and training sessions",
@@ -2176,7 +2176,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You're running a multi-hour or all-day training for 20-60 attendees and need a Houston venue with real AV, configurable seating, and predictable catering pricing — not a $10k Galleria hotel ballroom quote with a five-figure F&B minimum.",
           fit: [
-            "Hourly rates from $99 (varies by room) with a flat 10% discount on bookings of 8+ hours",
+            "Hourly event options are planned; final rates will be announced before opening",
             "Projector, screen, sound system, and wireless mics included — not billed separately",
             "Flexible seating — theater, classroom, u-shape, lounge — reconfigured for your event",
             "Catering from the on-site Muze Cafe handles coffee service, lunch, and snack breaks",
@@ -2198,7 +2198,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You're organizing a monthly industry mixer, community meetup, or real-estate networking night and you need a Houston venue that looks professional without eating your entire event budget on the room alone.",
           fit: [
-            "Hourly rates from $99 for short, tight events — pay only for the time you need",
+            "Hourly booking options are planned so organizers can reserve only the time they need",
             "No food-and-beverage minimum — bring outside catering or add Muze Cafe separately",
             "Layout flexes for standing mingling, seated presentations, or hybrid formats",
             "Free parking for every guest so nobody leaves before the event ends",
@@ -2220,7 +2220,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         heading: "Why choose Muze Office for your Houston event",
         paragraphs: [
           "Houston's event market is big, and the venues reflect it. Galleria and downtown ballrooms start around $2,500 to $6,000 for a half-day rental, almost always with a five-figure food-and-beverage minimum, parking fees on top, and an AV team you have to hire separately. For a corporate workshop, a product launch for 40 people, a networking mixer, or a private client dinner, that's massively oversized. You're paying for infrastructure designed to host 500 people when you need space for 40.",
-          "Muze Office Houston event space is the right-sized alternative. Hourly rates start at $99 per hour and vary by which room you book, with a flat 10% discount applied automatically to any booking of 8 hours or more — enough for a morning working session plus an evening celebration in one day. Full AV is included — projector, screen, sound system, wireless microphones, flexible lighting — and we can rearrange the seating layout for your specific event, whether that's theater-style for a presentation, classroom for a workshop, or open for a mixer. The on-site Muze Cafe handles catering directly, which means one point of contact for both the space and the food rather than juggling a venue contact and an outside caterer.",
+          "Muze Office Houston is planned as a right-sized alternative for workshops, launches, mixers, and team events. Because the location has not opened, final capacity, equipment, layouts, catering options, discounts, and hourly rates will be announced before event reservations open.",
           "The inside-the-Loop Galleria location is part of the appeal for Houston locals. Most Houston professionals avoid the downtown parking garages and the West 610 Loop gridlock at rush hour if they can help it, and our Augusta Dr address is easy to reach from Memorial, River Oaks, West U, Bellaire, Tanglewood, and Uptown without getting on a freeway at all. Free parking for every guest is included, which matters more than most people realize until they've planned an event where attendees had to pay $15-25 each just to park.",
         ],
       },
@@ -2235,8 +2235,8 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to book event space in Houston",
         paragraphs: [
-          "Event space is booked hourly, with rates starting at $99/hour that vary depending on which room fits your event. A one-to-two hour booking works for a lunch-and-learn, a small pitch meeting, or a short workshop. A four-hour block is the sweet spot for most workshops, training sessions, product demos, or extended team offsites. Bookings of 8 hours or more get a flat 10% discount automatically — the right structure for conferences, all-day retreats, or events with multiple sessions and breaks. We don't charge separate half-day or full-day package rates; you only pay for the hours you actually book.",
-          "Once you know your time block, talk to our event coordinator about layout and catering. We can configure the space for theater-style (rows of chairs facing the front — maximizes capacity for presentations), classroom-style (tables and chairs — works for workshops where attendees need to take notes), u-shape or boardroom (for discussions), or open/lounge (for networking mixers and receptions). Catering from Muze Cafe ranges from coffee-and-pastry service for morning sessions to full plated meals for evening events.",
+          "Hourly booking is planned for the Houston event space. Final room capacity, pricing, minimum booking time, and any full-day discounts will be confirmed before reservations open.",
+          "Once reservations open, talk to our event coordinator about layout and catering. Planned formats include presentation seating, tables and chairs for workshops, u-shape or conference-table seating for discussions, and open layouts for mixers. Final options will be confirmed before booking.",
           "Book a walkthrough before you commit to a specific room and time. Most of our clients decide on their exact setup after they see the space in person — the dimensions on a floor plan don't always match your mental model for how many people will fit comfortably. Walkthroughs are free, take about 15 minutes, and you can bring whoever's planning the event with you. Once you lock in the date, we handle setup and breakdown on either side of your block, so you show up when you're ready and leave when you're done.",
         ],
       },

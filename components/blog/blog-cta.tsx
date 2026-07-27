@@ -45,7 +45,7 @@ const TOPIC_CTAS: Record<Topic, BlogCtaConfig> = {
   event: {
     heading: "Host your event at Muze Office",
     subtitle:
-      "Event space in Las Vegas from $99/hr with AV and catering — and no food & beverage minimum.",
+      "Las Vegas event space for $199/hr, plus a 50-person classroom for $99/hr — with AV and catering available.",
     primary: {
       label: "See event space",
       href: "/las-vegas-event-space",
@@ -56,7 +56,7 @@ const TOPIC_CTAS: Record<Topic, BlogCtaConfig> = {
   meeting: {
     heading: "Book a Las Vegas meeting room",
     subtitle:
-      "Meeting and conference rooms by the hour from $25 — AV, video conferencing, whiteboards, and free parking.",
+      "Meeting and conference rooms by the hour from $39 — AV, video conferencing, whiteboards, and free parking.",
     primary: {
       label: "See meeting rooms",
       href: "/las-vegas-meeting-rooms",

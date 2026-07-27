@@ -142,6 +142,9 @@ export default async function BlogPostPage({
             <h1 className="font-[family-name:var(--font-plus-jakarta)] text-3xl font-semibold leading-tight text-[#1A1A1A] md:text-4xl lg:text-5xl">
               {post.title}
             </h1>
+            <p className="mt-5 text-lg leading-relaxed text-[#5F5D58] md:text-xl">
+              {post.description}
+            </p>
             <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-[#74726D]">
               {authorPerson ? (
                 <Link
@@ -155,7 +158,13 @@ export default async function BlogPostPage({
                 <span>{post.author}</span>
               )}
               <span>·</span>
-              <span>{formatDate(post.date)}</span>
+              <span>Published {formatDate(post.date)}</span>
+              {post.dateModified && post.dateModified !== post.date && (
+                <>
+                  <span>·</span>
+                  <span>Updated {formatDate(post.dateModified)}</span>
+                </>
+              )}
               <span>·</span>
               <span>{getReadingTime(post.content)}</span>
             </div>

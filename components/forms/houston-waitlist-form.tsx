@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { submitContactForm } from "@/lib/actions/submit-contact-form";
+import { getFirstTouchAttribution } from "@/lib/analytics/attribution";
 
 const WORKSPACE_OPTIONS = [
   { value: "virtual-office", label: "Virtual office / business address" },
@@ -52,18 +53,7 @@ export function HoustonWaitlistForm() {
     const timelineLabel =
       TIMELINE_OPTIONS.find((option) => option.value === timeline)?.label ??
       "Not provided";
-    const currentUrl = new URL(window.location.href);
-    const referrerHost = document.referrer
-      ? new URL(document.referrer).hostname
-      : "direct";
-    const attribution = {
-      sourcePath: window.location.pathname,
-      referrerHost,
-      utmSource: currentUrl.searchParams.get("utm_source") ?? "",
-      utmMedium: currentUrl.searchParams.get("utm_medium") ?? "",
-      utmCampaign: currentUrl.searchParams.get("utm_campaign") ?? "",
-      gclid: currentUrl.searchParams.get("gclid") ?? "",
-    };
+    const attribution = getFirstTouchAttribution();
 
     setStatus("submitting");
     setServerMessage("");
@@ -79,13 +69,14 @@ export function HoustonWaitlistForm() {
           "Houston early-access request.",
           `Workspace interest: ${workspaceLabel}.`,
           `Expected timing: ${timelineLabel}.`,
-          `Source path: ${attribution.sourcePath}.`,
+          `Source path: ${attribution.landingPath}.`,
           `Referrer host: ${attribution.referrerHost}.`,
           `UTM source: ${attribution.utmSource || "none"}.`,
           `UTM medium: ${attribution.utmMedium || "none"}.`,
           `UTM campaign: ${attribution.utmCampaign || "none"}.`,
           `Google click ID: ${attribution.gclid || "none"}.`,
         ].join(" "),
+        attribution,
         honeypot: String(formData.get("muze_extra") ?? "").trim(),
         elapsedMs: Date.now() - startedAt,
       });
@@ -94,7 +85,7 @@ export function HoustonWaitlistForm() {
         track("houston_waitlist_submitted", {
           workspace,
           timeline,
-          source_path: attribution.sourcePath,
+          source_path: attribution.landingPath,
           referrer: attribution.referrerHost,
           utm_source: attribution.utmSource || "none",
           utm_medium: attribution.utmMedium || "none",

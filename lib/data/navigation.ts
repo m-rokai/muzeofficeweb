@@ -8,9 +8,18 @@ export interface NavItem {
 export const mainNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Locations", href: "/locations" },
-  { label: "Virtual Office", href: "/las-vegas-virtual-office" },
-  { label: "Memberships", href: "/workspace-memberships" },
-  { label: "Events", href: "/las-vegas-event-space" },
+  {
+    label: "Workspaces",
+    href: "/workspace-memberships",
+    children: [
+      { label: "Coworking", href: "/las-vegas-coworking" },
+      { label: "Day Pass", href: "/las-vegas-day-pass" },
+      { label: "Private Offices", href: "/las-vegas-private-office" },
+      { label: "Meeting Rooms", href: "/las-vegas-meeting-rooms" },
+      { label: "Virtual Office", href: "/las-vegas-virtual-office" },
+      { label: "Event Space", href: "/las-vegas-event-space" },
+    ],
+  },
   { label: "About", href: "/about" },
   { label: "Contact", href: "/contact" },
   { label: "Blog", href: "/blog" },

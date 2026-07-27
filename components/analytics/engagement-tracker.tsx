@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { track } from "@vercel/analytics";
+import { captureFirstTouchAttribution } from "@/lib/analytics/attribution";
 
 /**
  * Single delegated click listener that fires Vercel Analytics events for
@@ -11,6 +12,8 @@ import { track } from "@vercel/analytics";
  */
 export function EngagementTracker() {
   useEffect(() => {
+    captureFirstTouchAttribution();
+
     function handler(event: MouseEvent) {
       const target = event.target as HTMLElement | null;
       if (!target) return;

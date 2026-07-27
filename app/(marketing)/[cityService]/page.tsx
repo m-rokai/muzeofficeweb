@@ -4,10 +4,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import {
   MapPin,
-  Clock,
-  Car,
-  Wifi,
-  Coffee,
   Phone,
   Users,
   CheckCircle2,
@@ -28,7 +24,6 @@ import { buttonVariants } from "@/lib/utils/button-variants";
 import { cn } from "@/lib/utils";
 
 import { locations } from "@/lib/data/locations";
-import { services } from "@/lib/data/services";
 import { getCityServiceData } from "@/lib/data/city-services";
 import { getFAQsForService } from "@/lib/data/faqs";
 import { getRelatedBlogSlugsForService } from "@/lib/data/blog-links";
@@ -181,6 +176,25 @@ export default async function CityServicePage({ params }: PageProps) {
         : isEventSpace
           ? "Check Date & Availability"
           : "Book a Tour";
+  const pageSections = [
+    { href: "#pricing", label: "Pricing", show: true },
+    { href: "#book-online", label: "Book online", show: hasOnlineBooking },
+    { href: "#amenities", label: "What’s included", show: true },
+    {
+      href: pageData.longFormBody?.bestFor?.length
+        ? "#best-for"
+        : "#use-cases",
+      label: "Best for",
+      show: true,
+    },
+    {
+      href: "#details",
+      label: "Details",
+      show: Boolean(pageData.longFormBody),
+    },
+    { href: "#location", label: "Location", show: true },
+    { href: "#faq", label: "FAQ", show: faqs.length > 0 },
+  ].filter((item) => item.show);
 
   return (
     <>
@@ -275,6 +289,28 @@ export default async function CityServicePage({ params }: PageProps) {
           )}
         </div>
       </section>
+
+      {/* Compact wayfinding keeps the buying information scannable without
+          hiding or duplicating any of the page's substantive content. */}
+      <nav
+        aria-label={`${service.name} page sections`}
+        className="border-b border-[#E6E4DF] bg-white"
+      >
+        <div className="mx-auto flex max-w-[1200px] items-center gap-2 overflow-x-auto px-4 py-3 sm:px-6">
+          <span className="mr-2 shrink-0 text-xs font-semibold uppercase tracking-wider text-[#74726D]">
+            On this page
+          </span>
+          {pageSections.map((item) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="shrink-0 rounded-full border border-[#E6E4DF] bg-[#FAFAF7] px-3 py-1.5 text-sm font-medium text-[#1A1A1A] transition-colors hover:border-[#EAA820] hover:text-[#8A6000] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#EAA820] focus-visible:ring-offset-2"
+            >
+              {item.label}
+            </a>
+          ))}
+        </div>
+      </nav>
 
       {/* ── Pricing ───────────────────────────────────────── */}
       <Section variant="white" id="pricing">
@@ -673,22 +709,11 @@ export default async function CityServicePage({ params }: PageProps) {
 
       {/* ── FAQ ───────────────────────────────────────────── */}
       {faqs.length > 0 && (
-        <Section variant="white" id="faq">
-          <FadeIn>
-            <div className="flex flex-col items-center gap-4 text-center">
-              <h2 className="font-[family-name:var(--font-plus-jakarta)] text-3xl font-semibold text-[#1A1A1A] md:text-4xl lg:text-5xl">
-                {service.name} in {location.name} — FAQ
-              </h2>
-              <p className="max-w-[560px] text-lg text-[#74726D]">
-                Common questions about {service.name.toLowerCase()} at Muze Office{" "}
-                {location.name}.
-              </p>
-            </div>
-          </FadeIn>
-          <div className="mx-auto mt-12 max-w-[800px]">
-            <FAQSection faqs={faqs} />
-          </div>
-        </Section>
+        <FAQSection
+          faqs={faqs}
+          heading={`${service.name} in ${location.name} — FAQ`}
+          description={`Common questions about ${service.name.toLowerCase()} at Muze Office ${location.name}.`}
+        />
       )}
 
       {/* ── Related Reading ───────────────────────────────── */}
