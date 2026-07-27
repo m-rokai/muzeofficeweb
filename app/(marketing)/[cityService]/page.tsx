@@ -215,77 +215,66 @@ export default async function CityServicePage({ params }: PageProps) {
             alt={`${pageData.h1} at Muze Office ${location.name} — ${location.address.street !== "TBD" ? `${location.address.street}, ${location.address.city}, ${location.address.state}` : location.address.city}`}
             fill
             className="object-cover opacity-40"
-            priority
-            fetchPriority="high"
+            preload
             sizes="100vw"
           />
         </div>
         <div className="relative mx-auto flex max-w-[1200px] flex-col items-center gap-6 px-4 sm:px-6 py-20 sm:py-32 text-center md:py-40">
           {isComingSoon && (
-            <FadeIn delay={0.1}>
-              <span className="inline-block rounded-full bg-[#EAA820]/20 px-4 py-1 text-sm font-semibold text-[#EAA820]">
-                Coming Soon to {location.name}
-              </span>
-            </FadeIn>
+            <span className="inline-block rounded-full bg-[#EAA820]/20 px-4 py-1 text-sm font-semibold text-[#EAA820]">
+              Coming Soon to {location.name}
+            </span>
           )}
-          <FadeIn delay={0.2}>
-            <h1 className="font-[family-name:var(--font-plus-jakarta)] text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">
-              {pageData.h1}
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.35}>
-            <p className="max-w-[640px] text-lg text-gray-300">
-              {pageData.heroSubtitle}
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.5}>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Link
-                href={primaryCtaHref}
+          <h1 className="font-[family-name:var(--font-plus-jakarta)] text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">
+            {pageData.h1}
+          </h1>
+          <p className="max-w-[640px] text-lg text-gray-300">
+            {pageData.heroSubtitle}
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href={primaryCtaHref}
+              className={cn(
+                buttonVariants({ size: "lg" }),
+                "rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
+              )}
+            >
+              {primaryCtaLabel}
+            </Link>
+            {!isComingSoon && isVirtualOffice && (
+              <a
+                href={BRAND.booking.signupUrl}
+                data-cta="signup_online"
+                data-cta-location={`city_service_${cityService}_hero`}
                 className={cn(
                   buttonVariants({ size: "lg" }),
-                  "rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
+                  "rounded-lg bg-white text-[#1A1A1A] hover:bg-gray-200"
                 )}
               >
-                {primaryCtaLabel}
-              </Link>
-              {!isComingSoon && isVirtualOffice && (
-                <a
-                  href={BRAND.booking.signupUrl}
-                  data-cta="signup_online"
-                  data-cta-location={`city_service_${cityService}_hero`}
-                  className={cn(
-                    buttonVariants({ size: "lg" }),
-                    "rounded-lg bg-white text-[#1A1A1A] hover:bg-gray-200"
-                  )}
-                >
-                  Sign Up Online
-                </a>
-              )}
-              {!isComingSoon && location.phone !== "TBD" && (
-                <a
-                  href={`tel:${location.phoneRaw}`}
-                  className={cn(
-                    buttonVariants({ variant: "outline", size: "lg" }),
-                    "rounded-lg border-white/50 bg-transparent text-white hover:bg-white/10 hover:text-white"
-                  )}
-                >
-                  <Phone className="h-4 w-4" />
-                  {location.phone}
-                </a>
-              )}
-            </div>
-          </FadeIn>
+                Sign Up Online
+              </a>
+            )}
+            {!isComingSoon && location.phone !== "TBD" && (
+              <a
+                href={`tel:${location.phoneRaw}`}
+                className={cn(
+                  buttonVariants({ variant: "outline", size: "lg" }),
+                  "rounded-lg border-white/50 bg-transparent text-white hover:bg-white/10 hover:text-white"
+                )}
+              >
+                <Phone className="h-4 w-4" />
+                {location.phone}
+              </a>
+            )}
+          </div>
           {!isComingSoon && location.rating && (
-            <FadeIn delay={0.6}>
-              <div className="flex justify-center">
-                <GoogleReviewsBadge
-                  rating={location.rating}
-                  reviewCount={location.reviewCount}
-                  href={location.externalProfiles?.gbp}
-                />
-              </div>
-            </FadeIn>
+            <div className="flex justify-center">
+              <GoogleReviewsBadge
+                rating={location.rating}
+                reviewCount={location.reviewCount}
+                href={location.externalProfiles?.gbp}
+              />
+            </div>
           )}
         </div>
       </section>

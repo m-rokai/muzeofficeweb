@@ -106,58 +106,47 @@ export default function HomePage() {
           src="/images/hero/coworking-space.jpg"
           alt="Muze Office coworking lounge at 6860 Bermuda Rd, Suite 200 in Las Vegas, with open desks, natural light, and a view toward the on-site cafe"
           fill
-          priority
-          fetchPriority="high"
+          preload
           sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-black/30" />
         <div className="relative z-10 mx-auto w-full max-w-[1200px]">
-          <FadeIn delay={0.1}>
-            <Badge className="mb-6 bg-[#EAA820]/20 text-[#EAA820] border border-[#EAA820]/30 hover:bg-[#EAA820]/30 text-sm px-3 py-1">
-              <MapPin className="mr-1.5 h-3.5 w-3.5" /> 10 min from Harry Reid Airport
-            </Badge>
-          </FadeIn>
-          <FadeIn delay={0.2}>
-            <h1 className="max-w-[780px] text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-5xl lg:text-6xl">
-              Flexible Workspace in Las Vegas — Coworking, Private Offices &amp; Meeting Rooms
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.35}>
-            <p className="mt-6 max-w-[580px] text-lg leading-relaxed text-gray-300 md:text-xl">
-              Muze Office offers month-to-month coworking, virtual offices, private offices, meeting rooms, and event space in Las Vegas at 6860 Bermuda Rd, Suite 200. An independently operated Houston franchise location is planned for 2026 at 1800 Augusta Dr in the Galleria / Tanglewood area.
-            </p>
-          </FadeIn>
-          <FadeIn delay={0.5}>
-            <div className="mt-10 flex flex-wrap gap-4">
-              <a
-                href={BRAND.booking.tourUrl}
-                data-cta="book_tour"
-                data-cta-location="homepage_hero"
-                className={cn(buttonVariants({ size: "lg" }), "rounded-xl bg-[#EAA820] px-8 text-[#1A1A1A] hover:bg-[#C17A28] h-14 text-base font-semibold")}
-              >
-                Book a Free Tour
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
-              <Link
-                href="/locations"
-                data-cta="find_your_desk"
-                data-cta-location="homepage_hero"
-                className={cn(buttonVariants({ variant: "outline", size: "lg" }), "rounded-xl border-white/50 bg-transparent px-8 text-white hover:bg-white/10 hover:text-white h-14 text-base")}
-              >
-                Find Your Desk
-              </Link>
-            </div>
-          </FadeIn>
-          <FadeIn delay={0.65}>
-            <div className="mt-10 flex flex-wrap items-center gap-3 sm:gap-6 text-base text-gray-400">
-              <span>Month-to-month, no leases</span>
-              <Separator orientation="vertical" className="h-4 bg-gray-600" />
-              <span>Free parking</span>
-              <Separator orientation="vertical" className="h-4 bg-gray-600" />
-              <span className="hidden sm:inline">Mon&ndash;Fri, 10am&ndash;7pm</span>
-            </div>
-          </FadeIn>
+          <Badge className="mb-6 bg-[#EAA820]/20 text-[#EAA820] border border-[#EAA820]/30 hover:bg-[#EAA820]/30 text-sm px-3 py-1">
+            <MapPin className="mr-1.5 h-3.5 w-3.5" /> 10 min from Harry Reid Airport
+          </Badge>
+          <h1 className="max-w-[780px] text-4xl font-bold leading-[1.08] tracking-tight text-white md:text-5xl lg:text-6xl">
+            Flexible Workspace in Las Vegas — Coworking, Private Offices &amp; Meeting Rooms
+          </h1>
+          <p className="mt-6 max-w-[580px] text-lg leading-relaxed text-gray-300 md:text-xl">
+            Muze Office offers month-to-month coworking, virtual offices, private offices, meeting rooms, and event space in Las Vegas at 6860 Bermuda Rd, Suite 200. An independently operated Houston franchise location is planned for 2026 at 1800 Augusta Dr in the Galleria / Tanglewood area.
+          </p>
+          <div className="mt-10 flex flex-wrap gap-4">
+            <a
+              href={BRAND.booking.tourUrl}
+              data-cta="book_tour"
+              data-cta-location="homepage_hero"
+              className={cn(buttonVariants({ size: "lg" }), "rounded-xl bg-[#EAA820] px-8 text-[#1A1A1A] hover:bg-[#C17A28] h-14 text-base font-semibold")}
+            >
+              Book a Free Tour
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+            <Link
+              href="/locations"
+              data-cta="find_your_desk"
+              data-cta-location="homepage_hero"
+              className={cn(buttonVariants({ variant: "outline", size: "lg" }), "rounded-xl border-white/50 bg-transparent px-8 text-white hover:bg-white/10 hover:text-white h-14 text-base")}
+            >
+              Find Your Desk
+            </Link>
+          </div>
+          <div className="mt-10 flex flex-wrap items-center gap-3 sm:gap-6 text-base text-gray-400">
+            <span>Month-to-month, no leases</span>
+            <Separator orientation="vertical" className="h-4 bg-gray-600" />
+            <span>Free parking</span>
+            <Separator orientation="vertical" className="h-4 bg-gray-600" />
+            <span className="hidden sm:inline">Mon&ndash;Fri, 10am&ndash;7pm</span>
+          </div>
         </div>
       </section>
 
