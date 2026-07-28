@@ -15,7 +15,9 @@ export function LocalBusinessSchema({
   const { address, geo, hours } = location;
 
   const openingHours: string[] = [];
-  if (hours.weekdays) {
+  if (hours.is24Hours) {
+    openingHours.push("Mo-Su 00:00-23:59");
+  } else if (hours.weekdays) {
     openingHours.push(`Mo-Fr ${hours.weekdays.open}-${hours.weekdays.close}`);
   }
 
@@ -71,18 +73,29 @@ export function LocalBusinessSchema({
       "@type": "City",
       name: area,
     })),
+    openingHours: openingHours.length > 0 ? openingHours : undefined,
     openingHoursSpecification: openingHours.length > 0
       ? {
           "@type": "OpeningHoursSpecification",
-          dayOfWeek: [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-          ],
-          opens: hours.weekdays?.open,
-          closes: hours.weekdays?.close,
+          dayOfWeek: hours.is24Hours
+            ? [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday",
+              ]
+            : [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+              ],
+          opens: hours.is24Hours ? "00:00" : hours.weekdays?.open,
+          closes: hours.is24Hours ? "23:59" : hours.weekdays?.close,
         }
       : undefined,
     priceRange: "$25-$899",
@@ -113,7 +126,8 @@ export function LocalBusinessSchema({
           itemOffered: {
             "@type": "Service",
             name: "Day Pass",
-            description: "Hot desk access for the day with WiFi, coffee, and free parking.",
+            description:
+              "Same-day coworking access until midnight with gigabit fiber WiFi, Herman Miller desks and chairs, coffee, bottled water, and free parking.",
           },
         },
         {

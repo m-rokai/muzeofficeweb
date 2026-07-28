@@ -17,7 +17,7 @@ export function Section({
     <section
       id={id}
       className={cn(
-        "w-full py-16 px-4 sm:px-6 md:py-24",
+        "w-full scroll-mt-24 py-16 px-4 sm:px-6 md:py-24",
         variant === "white" && "bg-[#FAFAF7] text-[#1A1A1A]",
         variant === "gray" && "bg-[#F2F1ED] text-[#1A1A1A]",
         variant === "dark" && "bg-[#1A1A1A] text-white",

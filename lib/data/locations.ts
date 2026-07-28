@@ -17,7 +17,11 @@ export interface Location {
   phone: string;
   phoneRaw: string;
   email: string;
-  hours: { weekdays: { open: string; close: string }; weekends: null };
+  hours: {
+    is24Hours: boolean;
+    weekdays: { open: string; close: string };
+    weekends: null;
+  };
   localCues: string[];
   /** Primary neighborhoods this location is physically in. */
   neighborhoods: string[];
@@ -61,10 +65,12 @@ export const locations: Location[] = [
     phoneRaw: "+17023707515",
     email: "access@muzeoffice.com",
     hours: {
-      weekdays: { open: "10:00", close: "19:00" },
+      is24Hours: true,
+      weekdays: { open: "00:00", close: "23:59" },
       weekends: null,
     },
     localCues: [
+      "Open 24/7",
       "10 minutes from Harry Reid International Airport",
       "Free parking",
       "Off I-215, away from Strip traffic",
@@ -132,6 +138,7 @@ export const locations: Location[] = [
     phoneRaw: "TBD",
     email: "access@muzeoffice.com",
     hours: {
+      is24Hours: false,
       weekdays: { open: "10:00", close: "19:00" },
       weekends: null,
     },

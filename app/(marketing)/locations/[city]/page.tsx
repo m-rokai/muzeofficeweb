@@ -161,7 +161,7 @@ export default async function LocationDetailPage({
             </div>
             <p className="mt-4 max-w-[560px] text-base leading-relaxed text-gray-300 md:text-lg">
               {isActive
-                ? `Flexible workspace at ${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}. Month-to-month memberships with free parking.`
+                ? `Open 24/7 at ${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}. Same-day Day Passes and month-to-month memberships with free parking.`
                 : `An independently operated Muze Office franchise location is planned at ${location.address.street} in Houston's Galleria / Tanglewood area. Join early access for verified opening updates; no Houston memberships or address services are active yet.`}
             </p>
             {isHoustonLaunchPage && (
@@ -275,6 +275,8 @@ export default async function LocationDetailPage({
                 <Clock className="mt-0.5 h-4 w-4 shrink-0 text-[#EAA820]" />
                 {isActive ? (
                   <span>
+                    Workspace access: 24/7
+                    <br />
                     Phone: Mon&ndash;Fri, 10 am &ndash; 5 pm
                     <br />
                     Front desk: Mon&ndash;Fri, 10 am &ndash; 7 pm

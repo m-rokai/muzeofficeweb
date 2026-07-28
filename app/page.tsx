@@ -85,9 +85,9 @@ const houstonServiceDescriptions: Record<string, string> = {
 
 const homepageFAQs = [
   { question: "What is Muze Office?", answer: "Muze Office operates flexible workspace in Las Vegas with coworking, virtual offices, private offices, meeting rooms, and event space. A Houston location is planned for 2026 and is collecting early-access interest." },
-  { question: "Do I need a membership to use the space?", answer: "No. Day passes are available for anyone — no membership or commitment required. Book online, even same-day. We also offer monthly memberships for hot desks, dedicated desks, and private offices." },
+  { question: "Do I need a membership to use the space?", answer: "No. A $25 Day Pass is available without a membership or commitment. Buy and activate it online the same day and work until midnight. We also offer monthly memberships for hot desks, dedicated desks, and private offices." },
   { question: "Where is Muze Office located?", answer: "Muze Office is open in Las Vegas at 6860 Bermuda Rd, Suite 200 (10 minutes from Harry Reid International Airport via I-215 W), with free parking. An independently operated Muze Office franchise location is planned for Houston in 2026 at 1800 Augusta Dr, 77057 in the Galleria / Tanglewood area." },
-  { question: "What are your hours?", answer: "At the open Las Vegas location, coworking members have 24/7 biometric access. The front desk is staffed Monday through Friday, 10am to 7pm, and phones are answered Monday through Friday, 10am to 5pm. Houston hours will be announced before opening." },
+  { question: "What are your hours?", answer: "The Las Vegas workspace is open 24/7. A Day Pass can be bought and activated online the same day and used until midnight. The front desk is staffed Monday through Friday, 10am to 7pm, and phones are answered Monday through Friday, 10am to 5pm. Houston hours will be announced before opening." },
   { question: "Is there parking?", answer: "Free parking is available at the open Las Vegas location for members, day pass holders, meeting room guests, and event attendees. On-site parking is planned for Houston; final details will be confirmed before opening." },
   { question: "Can I book a meeting room without a membership?", answer: "Yes, at the Las Vegas location. Meeting rooms are available by the hour to anyone, with AV equipment, video conferencing, whiteboards, and WiFi. Huddle rooms start at $39/hr, conference rooms are $69/hr, and the classroom is $99/hr. Houston is not accepting bookings yet." },
   { question: "Do you offer a virtual office in Las Vegas?", answer: "Yes. A virtual office in Las Vegas at Muze Office starts at $39/month (Mail Holding) for a professional business address at 6860 Bermuda Rd, Suite 200 with USPS letter mail pickup. Sandstone ($69/mo) adds package receiving from UPS, FedEx, and Amazon. Higher tiers add mail forwarding, coworking hours, and meeting room access. Use it for contracts and filings that accept a commercial mail-receiving address; registered-agent and Google Business Profile requirements are separate. Full details and pricing at /las-vegas-virtual-office." },
@@ -145,7 +145,7 @@ export default function HomePage() {
             <Separator orientation="vertical" className="h-4 bg-gray-600" />
             <span>Free parking</span>
             <Separator orientation="vertical" className="h-4 bg-gray-600" />
-            <span className="hidden sm:inline">Mon&ndash;Fri, 10am&ndash;7pm</span>
+            <span className="hidden sm:inline">Las Vegas open 24/7</span>
           </div>
         </div>
       </section>
@@ -173,7 +173,7 @@ export default function HomePage() {
             { value: "$25", label: "Day Pass", icon: <Coffee className="h-6 w-6" /> },
             { value: "$39", label: "Virtual Office", icon: <Mail className="h-6 w-6" /> },
             { value: "10 min", label: "From LAS Airport", icon: <MapPin className="h-6 w-6" /> },
-            { value: "24/7", label: "Member Access", icon: <Clock className="h-6 w-6" /> },
+            { value: "24/7", label: "Las Vegas Access", icon: <Clock className="h-6 w-6" /> },
           ].map((stat, i) => (
             <FadeIn key={stat.label} delay={i * 0.1} direction="up">
               <div className="flex flex-col items-center gap-1.5 border-r border-[#E6E4DF] py-10 last:border-r-0">

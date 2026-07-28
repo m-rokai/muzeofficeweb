@@ -52,6 +52,13 @@ export function renderCityServiceMarkdown(slug: string): string | null {
     lines.push(`**Phone:** ${location.phone}`);
   }
   lines.push(`**Email:** ${location.email}`);
+  lines.push(
+    `**Access:** ${
+      location.hours.is24Hours
+        ? "Open 24/7"
+        : `Monday–Friday, ${location.hours.weekdays.open}–${location.hours.weekdays.close}`
+    }`
+  );
   lines.push("");
 
   // Hero subtitle
@@ -177,7 +184,11 @@ export function renderCityMarkdown(locationId: string): string | null {
   }
   lines.push(`**Email:** ${location.email}`);
   lines.push(
-    `**Hours:** Monday–Friday, ${location.hours.weekdays.open}–${location.hours.weekdays.close}`
+    `**Hours:** ${
+      location.hours.is24Hours
+        ? "Open 24/7"
+        : `Monday–Friday, ${location.hours.weekdays.open}–${location.hours.weekdays.close}`
+    }`
   );
   lines.push(`**Status:** ${location.status}`);
   lines.push("");

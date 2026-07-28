@@ -1,7 +1,6 @@
 import { BRAND } from "@/lib/utils/constants";
 import { locations } from "@/lib/data/locations";
 import { services } from "@/lib/data/services";
-import { cityServiceData } from "@/lib/data/city-services";
 import { getAllPosts } from "@/lib/blog";
 import { ZACHARY_DEVON_DUONG } from "@/lib/data/people";
 
@@ -98,7 +97,13 @@ function renderContact(): string {
     lines.push(`- **Address:** ${lv.address.street}, ${lv.address.city}, ${lv.address.state} ${lv.address.zip}`);
     lines.push(`- **Phone:** ${lv.phone}`);
     lines.push(`- **Email:** ${lv.email}`);
-    lines.push(`- **Hours:** Monday–Friday, ${lv.hours.weekdays.open}–${lv.hours.weekdays.close}`);
+    lines.push(
+      `- **Hours:** ${
+        lv.hours.is24Hours
+          ? "Open 24/7"
+          : `Monday–Friday, ${lv.hours.weekdays.open}–${lv.hours.weekdays.close}`
+      }`
+    );
   }
   lines.push("");
   lines.push("## Houston");
@@ -107,7 +112,13 @@ function renderContact(): string {
     lines.push(`- **Address:** ${hou.address.street}, ${hou.address.city}, ${hou.address.state} ${hou.address.zip}`);
     if (hou.phone !== "TBD") lines.push(`- **Phone:** ${hou.phone}`);
     lines.push(`- **Email:** ${hou.email}`);
-    lines.push(`- **Hours:** Monday–Friday, ${hou.hours.weekdays.open}–${hou.hours.weekdays.close}`);
+    lines.push(
+      `- **Hours:** ${
+        hou.hours.is24Hours
+          ? "Open 24/7"
+          : `Monday–Friday, ${hou.hours.weekdays.open}–${hou.hours.weekdays.close}`
+      }`
+    );
   }
   lines.push("");
   lines.push("## Book a Tour");
@@ -198,7 +209,11 @@ function renderLocationsIndex(): string {
     if (loc.phone !== "TBD") lines.push(`- **Phone:** ${loc.phone}`);
     lines.push(`- **Email:** ${loc.email}`);
     lines.push(
-      `- **Hours:** Monday–Friday, ${loc.hours.weekdays.open}–${loc.hours.weekdays.close}`
+      `- **Hours:** ${
+        loc.hours.is24Hours
+          ? "Open 24/7"
+          : `Monday–Friday, ${loc.hours.weekdays.open}–${loc.hours.weekdays.close}`
+      }`
     );
     lines.push(`- **Page:** ${BRAND.url}/locations/${loc.slug}`);
     lines.push(`- **Markdown:** ${BRAND.url}/locations/${loc.slug}.md`);

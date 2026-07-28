@@ -7,6 +7,8 @@ import {
   Phone,
   Users,
   CheckCircle2,
+  Clock3,
+  Zap,
 } from "lucide-react";
 
 import { Section } from "@/components/layout/section";
@@ -91,6 +93,11 @@ const amenityLabels: Record<string, string> = {
   receptionist: "On-Site Receptionist",
   "llc-ready": "Commercial Address for Permitted Uses",
   wifi: "High-Speed WiFi",
+  "gigabit-wifi": "Gigabit Fiber WiFi",
+  "quiet-workspace": "Quiet Coworking Area",
+  "bottled-water-coffee": "Free Bottled Water & Coffee",
+  "ergonomic-chairs": "Ergonomic Herman Miller Chairs",
+  "height-adjustable-desks": "Herman Miller Height-Adjustable Desks",
   parking: "Free Parking",
   coffee: "Unlimited Coffee & Water",
   cafe: "On-Site Muze Cafe",
@@ -225,12 +232,44 @@ export default async function CityServicePage({ params }: PageProps) {
               Coming Soon to {location.name}
             </span>
           )}
-          <h1 className="font-[family-name:var(--font-plus-jakarta)] text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">
+          <h1 className="text-balance font-[family-name:var(--font-plus-jakarta)] text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">
             {pageData.h1}
           </h1>
-          <p className="max-w-[640px] text-lg text-gray-300">
+          <p className="max-w-[640px] text-pretty text-lg text-gray-300">
             {pageData.heroSubtitle}
           </p>
+          {isDayPass ? (
+            <div className="grid w-full max-w-[680px] gap-2 rounded-2xl bg-black/45 p-2 text-left shadow-[0_12px_36px_rgba(0,0,0,0.28)] ring-1 ring-white/20 backdrop-blur-sm sm:grid-cols-2">
+              <div className="flex items-center gap-3 rounded-xl bg-white/10 px-4 py-3">
+                <Clock3
+                  className="h-5 w-5 shrink-0 text-[#EAA820]"
+                  aria-hidden="true"
+                />
+                <div>
+                  <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-[#EAA820]">
+                    Las Vegas access
+                  </span>
+                  <span className="block font-semibold text-white">
+                    Open 24 hours, 7 days a week
+                  </span>
+                </div>
+              </div>
+              <div className="flex items-center gap-3 rounded-xl bg-white/10 px-4 py-3">
+                <Zap
+                  className="h-5 w-5 shrink-0 text-[#EAA820]"
+                  aria-hidden="true"
+                />
+                <div>
+                  <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-[#EAA820]">
+                    Need a desk today?
+                  </span>
+                  <span className="block font-semibold text-white">
+                    Activate today and work until midnight
+                  </span>
+                </div>
+              </div>
+            </div>
+          ) : null}
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               href={primaryCtaHref}
@@ -450,7 +489,7 @@ export default async function CityServicePage({ params }: PageProps) {
                 </h2>
                 <p className="max-w-[640px] text-lg text-[#74726D]">
                   {isDayPass
-                    ? "Sign up online in minutes — no tour required. A $25 day pass gets you a desk, Wi-Fi, coffee, and free parking at Muze Office Las Vegas."
+                    ? "Buy and activate your $25 pass online in minutes, even same-day. Work in our quiet coworking area until midnight with gigabit fiber WiFi, bottled water, coffee, ergonomic Herman Miller furniture, and free parking."
                     : "Choose your room, time, and duration below. The live Optix calendar shows current availability for Muze Office meeting rooms in Las Vegas."}
                 </p>
               </div>
@@ -731,7 +770,7 @@ export default async function CityServicePage({ params }: PageProps) {
           isComingSoon
             ? `Muze Office ${location.name} is coming soon. Join early access for confirmed opening, availability, and pricing updates.`
             : isDayPass
-              ? `Sign up online and work today — desk, Wi-Fi, coffee, and free parking included. Questions before your first visit? Call us.`
+              ? `Buy and activate online today, then work until midnight — gigabit fiber WiFi, bottled water, coffee, Herman Miller furniture, and free parking included. Bring your laptop; monitors are not provided.`
             : hasOnlineBooking
               ? `Reserve your room online now, or call us if you need catering, AV help, or a custom setup for your meeting.`
             : isVirtualOffice

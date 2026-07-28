@@ -77,7 +77,7 @@ const coworkingFAQs: FAQ[] = [
   {
     question: "What are the coworking hours?",
     answer:
-      "Our coworking space is open Monday through Friday, 10 AM to 7 PM. Dedicated desk members with 24/7 access can use the space anytime via biometric entry.",
+      "Muze Office Las Vegas is open 24 hours a day, seven days a week. A $25 Day Pass can be bought and activated online the same day and remains valid until midnight. Monthly members have ongoing 24/7 access.",
   },
   {
     question: "Is parking free?",
@@ -87,7 +87,7 @@ const coworkingFAQs: FAQ[] = [
   {
     question: "What memberships are available?",
     answer:
-      "We offer three options: Day Pass ($25/day) booked online, even same-day, for front-desk hours, Hot Desk ($350/mo) for any-desk 24/7 biometric access with meeting room credits and mail handling, and Dedicated Desk ($399/mo) which adds a reserved desk, personal storage, and a business address with mail.",
+      "We offer three options: Day Pass ($25/day), which you can buy and activate online the same day and use until midnight; Hot Desk ($350/mo) for ongoing any-desk 24/7 access with meeting room credits and mail handling; and Dedicated Desk ($399/mo), which adds a reserved desk, personal storage, and a business address with mail.",
   },
   {
     question: "Can I book a meeting room as a coworking member?",
@@ -97,7 +97,7 @@ const coworkingFAQs: FAQ[] = [
   {
     question: "Do you offer day passes?",
     answer:
-      "Yes. A Day Pass is $25 and includes an open desk in the shared workspace, high-speed WiFi, unlimited coffee and water, and free parking. No membership or commitment required.",
+      "Yes. A Day Pass is $25 and includes a quiet coworking area, gigabit fiber WiFi, free bottled water and coffee, an ergonomic Herman Miller chair, a Herman Miller height-adjustable desk, phone booths, printing, and free parking. Buy and activate it online the same day and work until midnight. Bring your laptop; monitors are not provided.",
   },
   {
     question: "What amenities are included?",
@@ -219,7 +219,7 @@ const airportCoworkingFAQs: FAQ[] = [
   {
     question: "What are the hours?",
     answer:
-      "Our coworking space is open Monday through Friday, 10 AM to 7 PM. Book a day pass online — even same-day, it takes about two minutes — no membership required.",
+      "Muze Office Las Vegas is open 24/7. Buy and activate a $25 Day Pass online the same day and use the space until midnight — no membership required.",
   },
   {
     question: "Is parking free?",
@@ -374,17 +374,17 @@ const dayPassFAQs: FAQ[] = [
   {
     question: "How much does a Day Pass cost at Muze Office?",
     answer:
-      "A Day Pass is $25. That covers a desk in the shared coworking area, high-speed WiFi, unlimited coffee and water, free parking, phone-booth access, printing, and access to the on-site Muze Cafe. Meeting rooms are a separate booking from $39 to $99 per hour.",
+      "A Day Pass is $25. That covers a quiet coworking area, gigabit fiber WiFi, free bottled water and coffee, an ergonomic Herman Miller chair, a Herman Miller height-adjustable desk, free parking, phone-booth access, printing, and the on-site Muze Cafe. Bring your laptop; monitors are not provided. Meeting rooms are a separate booking from $39 to $99 per hour.",
   },
   {
     question: "Do I need a membership or reservation to use a Day Pass?",
     answer:
-      "No membership required, but yes, book first. Reserve your Day Pass online — even same-day, it takes about two minutes — for Monday through Friday between 10am and 7pm at your Muze Office location. Show your ID at the front desk, pay $25, and you're at a working desk within five minutes. Booking ahead means your desk is ready when you arrive.",
+      "No membership is required. Buy and activate your $25 Day Pass online, even the same day you need it. Activation takes only a few minutes, and your pass remains valid until midnight that day.",
   },
   {
     question: "What are the Day Pass hours?",
     answer:
-      "Day Pass bookings are Monday through Friday, 10am to 7pm — that's when the front desk is staffed to check you in and process your $25. Any monthly coworking membership (Hot Desk, Dedicated Desk, or Private Office) includes 24/7 biometric access; the limited hours apply only to Day Pass bookings.",
+      "Muze Office Las Vegas is open 24 hours a day, seven days a week. You can buy and activate a Day Pass online the same day and use the workspace until midnight. A Day Pass expires at midnight on its activation day; monthly memberships provide ongoing 24/7 access.",
   },
   {
     question: "Is parking free with a Day Pass?",
@@ -394,7 +394,7 @@ const dayPassFAQs: FAQ[] = [
   {
     question: "What's the difference between a Day Pass and a Hot Desk membership?",
     answer:
-      "A Day Pass is $25 per day with no commitment — booked online, even same-day, for front-desk hours. A Hot Desk is $350/month for any-desk 24/7 biometric access, plus meeting room credits, mail handling, and community events. The math flips in Hot Desk's favor around the 14th-15th day per month. If you're in the space more than about a week a month, Hot Desk is usually the better deal — and you also get late-night and weekend access that Day Pass doesn't include.",
+      "A Day Pass is $25 with no commitment. Buy and activate it online the same day and use the workspace until midnight. A Hot Desk is $350/month for continuing any-desk 24/7 access, plus meeting room credits, mail handling, and community events. The math flips in Hot Desk's favor around the 14th or 15th day per month.",
   },
 ];
 
@@ -407,7 +407,7 @@ const hotDeskFAQs: FAQ[] = [
   {
     question: "Is a Hot Desk 24/7?",
     answer:
-      "Yes. Hot Desk members get 24/7 biometric access just like every other monthly coworking tier. The front desk is staffed Monday through Friday, 10am to 7pm for Day Pass check-ins, but Hot Desk members come and go anytime via biometric entry. The upgrade to Dedicated Desk at $399/month is about a reserved desk, personal storage, and a business address — not hours.",
+      "Yes. Hot Desk members get ongoing 24/7 access just like every other monthly coworking tier. The Las Vegas workspace itself is open 24/7; a Day Pass is limited to its activation day and expires at midnight, while a Hot Desk membership continues all month. The upgrade to Dedicated Desk at $399/month is about a reserved desk, personal storage, and a business address — not hours.",
   },
   {
     question: "Do I get my own reserved desk with a Hot Desk?",
@@ -440,7 +440,7 @@ const dedicatedDeskFAQs: FAQ[] = [
   {
     question: "How is the 24/7 access provided?",
     answer:
-      "Via biometric entry — every monthly coworking member (Hot Desk, Dedicated Desk, or Private Office) is enrolled on their first day, and once that's set up you have 24/7 access to the building via the side entrance. Day Pass bookings use the front entrance during staffed hours (Mon–Fri 10am–7pm).",
+      "Monthly coworking members (Hot Desk, Dedicated Desk, or Private Office) are enrolled for ongoing 24/7 entry on their first day. Day Pass users buy and activate access online for a single calendar day; the pass expires at midnight.",
   },
   {
     question: "Is the business address real, or a PO Box?",
@@ -631,7 +631,7 @@ const lasVegasLocationFAQs: FAQ[] = [
   {
     question: "What are your hours in Las Vegas?",
     answer:
-      "The space is staffed Monday through Friday, 10 AM to 7 PM. Dedicated Desk and Private Office members have 24/7 access via biometric entry.",
+      "The Las Vegas workspace is open 24/7. A Day Pass can be bought and activated online the same day and used until midnight. The front desk is staffed Monday through Friday, 10 AM to 7 PM, and phones are answered Monday through Friday, 10 AM to 5 PM.",
   },
   {
     question: "Is there free parking at the Las Vegas location?",
