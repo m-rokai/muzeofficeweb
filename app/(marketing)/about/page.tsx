@@ -164,6 +164,14 @@ export default function AboutPage() {
               >
                 Read more about {founder.shortName} &rarr;
               </Link>
+              <a
+                href="https://canvasrebel.com/meet-zachary-devon-duong/"
+                rel="noopener noreferrer"
+                target="_blank"
+                className="font-medium text-[#EAA820] hover:underline"
+              >
+                Featured in CanvasRebel &rarr;
+              </a>
               {founder.sameAs.map((url) => (
                 <a
                   key={url}
