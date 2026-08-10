@@ -20,6 +20,19 @@ import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { JsonLd } from "@/components/seo/json-ld";
 import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 import { getPersonByName } from "@/lib/data/people";
+import {
+  classifyBlogTopic,
+  getEditorialCategories,
+  isHoustonBlog,
+} from "@/lib/blog-topic";
+
+// Keep this airport-intent article indexed and useful, but do not reinforce
+// its accidental ownership of the broad "meeting space in Las Vegas" query
+// from every meeting-room article while the commercial-page transfer is
+// monitored.
+const RELATED_ROUTING_EXCLUSIONS = new Set([
+  "meeting-space-near-las-vegas-airport",
+]);
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -61,15 +74,34 @@ export default async function BlogPostPage({
   const post = getPostBySlug(slug);
   if (!post) notFound();
 
-  // Related posts: same first category, excluding self and noindexed posts, max 3
+  // Related posts: normalized editorial topic first, then meaningful category
+  // overlap and freshness. Geography labels are not treated as topics, and
+  // pre-launch Houston articles stay within the Houston cluster.
+  const postTopic = classifyBlogTopic(post.slug, post.categories);
+  const postCategories = getEditorialCategories(post.categories);
+  const postIsHouston = isHoustonBlog(post.slug, post.categories);
   const relatedPosts = getAllPosts()
     .filter(
       (p) =>
         p.slug !== post.slug &&
         !p.noindex &&
-        post.categories[0] &&
-        p.categories.includes(post.categories[0])
+        !RELATED_ROUTING_EXCLUSIONS.has(p.slug) &&
+        classifyBlogTopic(p.slug, p.categories) === postTopic &&
+        isHoustonBlog(p.slug, p.categories) === postIsHouston
     )
+    .map((p) => {
+      const categories = getEditorialCategories(p.categories);
+      const categoryOverlap = [...postCategories].filter((category) =>
+        categories.has(category)
+      ).length;
+      return { post: p, categoryOverlap };
+    })
+    .sort(
+      (a, b) =>
+        b.categoryOverlap - a.categoryOverlap ||
+        b.post.date.localeCompare(a.post.date)
+    )
+    .map(({ post: relatedPost }) => relatedPost)
     .slice(0, 3);
 
   const canonicalUrl = `${BRAND.url}/blog/${post.slug}`;

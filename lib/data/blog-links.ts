@@ -49,13 +49,11 @@ const relatedByService: Record<string, string[]> = {
     "modern-meeting-room-near-ces-las-vegas",
     "what-to-look-for-in-conference-rooms-near-me-getting-the-best-in-las-vegas",
     "podcasting-rooms-in-las-vegas",
-    "meeting-space-near-las-vegas-airport",
   ],
   "conference-rooms": [
     "what-to-look-for-in-conference-rooms-near-me-getting-the-best-in-las-vegas",
     "modern-meeting-room-near-ces-las-vegas",
     "podcasting-rooms-in-las-vegas",
-    "meeting-space-near-las-vegas-airport",
   ],
   "event-space": [
     "how-to-find-the-perfect-event-space-in-las-vegas",

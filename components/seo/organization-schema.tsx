@@ -7,7 +7,7 @@ export function OrganizationSchema() {
     "@type": "Organization",
     "@id": `${BRAND.url}/#organization`,
     name: BRAND.name,
-    alternateName: ["Muze", "Muze Coworking", "Muze Office Las Vegas", "Muze Office Houston"],
+    alternateName: ["Muze", "Muze Coworking", "Muze Office Las Vegas"],
     legalName: BRAND.legalName,
     url: BRAND.url,
     logo: `${BRAND.url}/images/logo.png`,
