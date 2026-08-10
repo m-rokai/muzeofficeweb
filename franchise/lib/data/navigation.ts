@@ -8,10 +8,9 @@ export const mainNav: NavItem[] = [
   { label: "The Opportunity", href: "/the-opportunity" },
   { label: "The Model", href: "/the-model" },
   { label: "Investment", href: "/investment" },
-  { label: "Who It's For", href: "/franchisees" },
-  { label: "Why Muze", href: "/why-muze" },
-  { label: "FAQ", href: "/faq" },
-  { label: "About", href: "/about" },
+  { label: "Who It's For", href: "/who-its-for" },
+  { label: "Markets", href: "/available-markets" },
+  { label: "Support", href: "/training-and-support" },
 ];
 
 export const footerNav = {
@@ -19,15 +18,19 @@ export const footerNav = {
     { label: "The Opportunity", href: "/the-opportunity" },
     { label: "The Muze Model", href: "/the-model" },
     { label: "Investment & Fees", href: "/investment" },
+    { label: "Available Markets", href: "/available-markets" },
+    { label: "Training & Support", href: "/training-and-support" },
     { label: "Why Muze", href: "/why-muze" },
   ],
   audiences: [
+    { label: "Who It's For", href: "/who-its-for" },
     { label: "Franchisees", href: "/franchisees" },
     { label: "Investors", href: "/investors" },
     { label: "Real-Estate Partners", href: "/partners" },
   ],
   company: [
     { label: "About", href: "/about" },
+    { label: "Insights", href: "/insights" },
     { label: "FAQ", href: "/faq" },
     { label: "Contact", href: "/contact" },
     { label: "Book a Discovery Call", href: "/discovery-call" },

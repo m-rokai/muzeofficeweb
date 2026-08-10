@@ -12,22 +12,63 @@ import {
   CheckCircle2,
   ArrowRight,
   Info,
+  Eye,
+  Wallet,
+  Target,
+  UserCheck,
+  FileText,
 } from "lucide-react";
 import { Section } from "@/components/layout/section";
 import { CTASection } from "@/components/marketing/cta-section";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/marketing/animate";
 import { BreadcrumbSchema } from "@/components/seo/breadcrumb-schema";
+import { JsonLd } from "@/components/seo/json-ld";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
 import { BRAND } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
-  title: "Investment & Fees",
+  title: "How Much Does a Coworking Franchise Cost? Investment & Fees",
   description:
-    "What it costs to open a Muze Office coworking franchise: initial investment range, franchise fee, ongoing royalties, financing options, and timeline to open. All figures are illustrative — get exact numbers on a discovery call.",
+    "How much it costs to open a Muze Office coworking franchise: total investment range, franchise fee, royalty and brand-fund percentages, liquid capital required, financing, and timeline. We publish every fee up front. Figures are illustrative until your FDD.",
   alternates: { canonical: "/investment" },
 };
+
+// Quick-facts table — the snippet-bait "at a glance" answer. Every value is an
+// illustrative Item 7 placeholder until replaced with verified FDD figures.
+const quickFacts = [
+  { label: "Total initial investment", token: "{{INVESTMENT_RANGE}}" },
+  { label: "Initial franchise fee", token: "{{FRANCHISE_FEE}}" },
+  { label: "Ongoing royalty", token: "{{ROYALTY}}", note: "of gross revenue" },
+  { label: "Brand & marketing fund", token: "{{MARKETING_FEE}}", note: "of gross revenue" },
+  { label: "Liquid capital required", token: "{{LIQUID_CAPITAL}}" },
+  { label: "Net worth required", token: "{{NET_WORTH}}" },
+];
+
+// "Is this right for you?" qualification traits — no financial claims.
+const ownerProfile = [
+  {
+    icon: Target,
+    title: "You want a B2B, recurring-revenue business",
+    body: "A Muze Office earns from memberships, virtual offices, private suites, meeting rooms, and events — recurring revenue lines, not one-off transactions.",
+  },
+  {
+    icon: UserCheck,
+    title: "You're an operator or investor — experience optional",
+    body: "Owner-operators and semi-absentee investors both fit the model. Coworking experience is not required; the playbook and training fill the gap.",
+  },
+  {
+    icon: Wallet,
+    title: "You meet the capital requirements",
+    body: "Opening a location requires {{LIQUID_CAPITAL}} in liquid capital and {{NET_WORTH}} in net worth. These figures are illustrative placeholders until your FDD.",
+  },
+  {
+    icon: CheckCircle2,
+    title: "You're ready to invest in your community",
+    body: "The strongest operators are present in their market — building local relationships, hosting events, and growing membership in a city they know.",
+  },
+];
 
 const investmentBreakdown = [
   { label: "Franchise / license fee", token: "{{FRANCHISE_FEE}}", note: "One-time, paid at signing" },
@@ -101,6 +142,31 @@ export default function InvestmentPage() {
           { name: "Investment & Fees", path: "/investment" },
         ]}
       />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          "@id": `${BRAND.url}/investment#franchise-investment`,
+          name: "Muze Office Coworking Franchise",
+          serviceType: "Coworking & flexible-workspace franchise opportunity",
+          provider: { "@id": `${BRAND.url}/#organization` },
+          areaServed: { "@type": "Country", name: "United States" },
+          audience: {
+            "@type": "BusinessAudience",
+            name: "Prospective coworking franchisees and investors",
+          },
+          // NOTE: add `offers.priceSpecification` (priceCurrency USD + the verified
+          // Item 7 total investment range) here once real FDD figures are available.
+          // Left omitted intentionally — never publish a fabricated franchise price.
+          offers: {
+            "@type": "Offer",
+            category: "Franchise",
+            priceCurrency: "USD",
+            url: `${BRAND.url}/investment`,
+          },
+          url: `${BRAND.url}/investment`,
+        }}
+      />
 
       {/* Hero */}
       <Section variant="dark" id="hero">
@@ -110,13 +176,13 @@ export default function InvestmentPage() {
               Investment & Fees
             </Badge>
             <h1 className="font-[family-name:var(--font-plus-jakarta)] text-4xl font-bold leading-tight text-white sm:text-5xl lg:text-6xl">
-              What it costs to open a Muze Office
+              What a Muze Office coworking franchise costs
             </h1>
             <p className="text-lg leading-relaxed text-gray-400 max-w-[640px]">
-              Every number on this page is an illustrative placeholder. Real figures vary by market,
-              space size, and buildout condition — and are disclosed fully during the discovery
-              process and in the required legal documents. Book a call to get the numbers for your
-              specific situation.
+              Here&apos;s the full cost of opening a Muze Office — the total investment, the franchise
+              fee, and the ongoing royalty and brand-fund fees most franchisors keep hidden until
+              late in the process. Every figure is an illustrative placeholder until it&apos;s confirmed
+              in your Franchise Disclosure Document.
             </p>
             <div className="flex flex-wrap gap-4 mt-2">
               <Link
@@ -142,6 +208,23 @@ export default function InvestmentPage() {
 
       {/* Initial investment range card */}
       <Section variant="white" id="initial-investment">
+        {/* Direct-answer block (featured-snippet / AI-answer bait) */}
+        <FadeIn>
+          <div className="mb-12 max-w-[820px]">
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#EAA820] mb-3">
+              The short answer
+            </p>
+            <p className="font-[family-name:var(--font-plus-jakarta)] text-xl font-medium leading-relaxed text-[#1A1A1A] sm:text-2xl">
+              A Muze Office coworking franchise has an estimated total investment of{" "}
+              <span className="text-[#EAA820]">{"{{INVESTMENT_RANGE}}"}</span>, including a{" "}
+              {"{{FRANCHISE_FEE}}"} initial franchise fee, with a {"{{ROYALTY}}"} ongoing royalty
+              and a {"{{MARKETING_FEE}}"} brand-fund contribution. You&apos;ll typically need{" "}
+              {"{{LIQUID_CAPITAL}}"} in liquid capital to open. Every figure here is an illustrative
+              placeholder until it&apos;s confirmed in your Franchise Disclosure Document.
+            </p>
+          </div>
+        </FadeIn>
+
         <FadeIn>
           <div className="mb-10 max-w-[620px]">
             <p className="text-xs font-semibold uppercase tracking-widest text-[#EAA820] mb-3">
@@ -177,6 +260,45 @@ export default function InvestmentPage() {
               <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#EAA820]/10">
                 <DollarSign className="h-8 w-8 text-[#EAA820]" />
               </div>
+            </div>
+          </div>
+        </FadeIn>
+
+        {/* Transparency wedge + quick-facts table */}
+        <FadeIn>
+          <div className="mb-6 flex items-start gap-3 rounded-xl border border-[#EAA820]/30 bg-[#EAA820]/5 p-5">
+            <Eye className="mt-0.5 h-5 w-5 shrink-0 text-[#EAA820]" />
+            <p className="text-sm leading-relaxed text-[#1A1A1A]">
+              <strong className="font-semibold">We publish every fee up front.</strong> Most
+              coworking franchisors show you the total investment but hide the royalty and
+              marketing-fund percentages until you&apos;re deep in their sales process. We don&apos;t — the
+              numbers below are the same ones disclosed in our FDD.
+            </p>
+          </div>
+        </FadeIn>
+
+        <FadeIn>
+          <div className="mb-10 rounded-xl border border-[#E6E4DF] overflow-hidden">
+            <div className="bg-[#F2F1ED] px-6 py-4">
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#74726D]">
+                The numbers at a glance (illustrative placeholders)
+              </p>
+            </div>
+            <div className="flex flex-col divide-y divide-[#E6E4DF]">
+              {quickFacts.map((f) => (
+                <div
+                  key={f.label}
+                  className="flex items-center justify-between gap-4 px-6 py-4"
+                >
+                  <p className="text-sm font-medium text-[#1A1A1A]">{f.label}</p>
+                  <p className="font-[family-name:var(--font-plus-jakarta)] text-base font-bold text-[#1A1A1A] whitespace-nowrap">
+                    {f.token}
+                    {f.note && (
+                      <span className="ml-1.5 text-xs font-normal text-[#74726D]">{f.note}</span>
+                    )}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </FadeIn>
@@ -373,6 +495,117 @@ export default function InvestmentPage() {
         </FadeIn>
       </Section>
 
+      {/* Is this right for you? — qualification */}
+      <Section variant="white" id="qualification">
+        <FadeIn>
+          <div className="mb-12 max-w-[620px]">
+            <p className="text-xs font-semibold uppercase tracking-widest text-[#EAA820] mb-3">
+              Is this right for you?
+            </p>
+            <h2 className="font-[family-name:var(--font-plus-jakarta)] text-3xl font-bold text-[#1A1A1A] sm:text-4xl">
+              Who the Muze Office model fits
+            </h2>
+            <p className="mt-4 text-[#74726D] leading-relaxed">
+              A franchise is a serious commitment, and not every prospect is the right fit. The
+              strongest Muze Office owners tend to share a few things in common.
+            </p>
+          </div>
+        </FadeIn>
+        <StaggerContainer className="grid gap-6 sm:grid-cols-2">
+          {ownerProfile.map((p) => {
+            const Icon = p.icon;
+            return (
+              <StaggerItem key={p.title}>
+                <div className="flex gap-5 rounded-xl border border-[#E6E4DF] p-6 h-full">
+                  <div className="mt-0.5 flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#EAA820]/10">
+                    <Icon className="h-5 w-5 text-[#EAA820]" />
+                  </div>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="font-[family-name:var(--font-plus-jakarta)] text-base font-semibold text-[#1A1A1A]">
+                      {p.title}
+                    </h3>
+                    <p className="text-sm leading-relaxed text-[#74726D]">{p.body}</p>
+                  </div>
+                </div>
+              </StaggerItem>
+            );
+          })}
+        </StaggerContainer>
+        <FadeIn>
+          <div className="mt-8">
+            <Link
+              href="/who-its-for"
+              className="inline-flex items-center gap-2 text-sm font-semibold text-[#1A1A1A] underline underline-offset-4 hover:text-[#EAA820] transition-colors"
+              data-cta="view_who_its_for"
+              data-cta-location="investment_qualification"
+            >
+              See who the Muze Office franchise is for
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </FadeIn>
+      </Section>
+
+      {/* Financial performance / Item 19 — earnings-free placeholder */}
+      <Section variant="gray" id="financial-performance">
+        <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
+          <FadeIn>
+            <div className="flex flex-col gap-5">
+              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-[#EAA820]/10">
+                <FileText className="h-6 w-6 text-[#EAA820]" />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-widest text-[#EAA820] mb-2">
+                  Financial performance
+                </p>
+                <h2 className="font-[family-name:var(--font-plus-jakarta)] text-2xl font-bold text-[#1A1A1A] sm:text-3xl">
+                  What a Muze Office can earn
+                </h2>
+              </div>
+              <p className="text-[#74726D] leading-relaxed">
+                The honest answer: we don&apos;t publish earnings, revenue, or profit figures on this
+                website — and you should be cautious of any franchisor that does. Under the FTC
+                Franchise Rule, financial-performance information may only be shared through Item 19
+                of the Franchise Disclosure Document, backed by a reasonable basis and written
+                substantiation.
+              </p>
+              <p className="text-[#74726D] leading-relaxed">
+                When you request our FDD, you&apos;ll see exactly what we&apos;re able to represent about the
+                model&apos;s performance — with the assumptions and context behind it.
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <div className="rounded-xl border border-[#E6E4DF] bg-white p-6">
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#74726D] mb-4">
+                Item 19 — financial performance representation
+              </p>
+              <div className="rounded-lg border border-dashed border-[#E6E4DF] bg-[#FAFAF7] p-5">
+                <p className="text-sm leading-relaxed text-[#74726D]">{"{{ITEM_19_SUMMARY}}"}</p>
+                <p className="mt-4 text-xs leading-relaxed text-[#74726D]">
+                  {"{{ITEM_19_ADMONITION}}"} — e.g. &ldquo;Some outlets have earned this amount. Your
+                  individual results may differ. There is no assurance that you&apos;ll earn as much.&rdquo;
+                  Written substantiation available on reasonable request.
+                </p>
+              </div>
+              <p className="mt-4 text-xs text-[#74726D]">
+                Placeholder — drop in the verbatim Item 19 figures and required admonition from the
+                current FDD before go-live, or leave routed to &ldquo;request the FDD.&rdquo; No earnings claim
+                is made until then.
+              </p>
+              <Link
+                href="/contact"
+                className="mt-5 inline-flex h-11 items-center justify-center rounded-lg bg-[#1A1A1A] px-6 text-sm font-semibold text-white hover:bg-[#333] transition-colors"
+                data-cta="request_fdd"
+                data-cta-location="investment_item19"
+              >
+                Request the FDD
+              </Link>
+            </div>
+          </FadeIn>
+        </div>
+      </Section>
+
       {/* Financing & timeline */}
       <Section variant="white" id="financing-timeline">
         <div className="grid gap-12 lg:grid-cols-2">
@@ -399,6 +632,12 @@ export default function InvestmentPage() {
                   combination of personal capital, SBA loans, business lines of credit, and investor
                   partners. The discovery call is the right place to discuss capital structure for
                   your situation.
+                </p>
+                <p className="mt-4 text-sm text-[#74726D] leading-relaxed">
+                  <strong className="text-[#1A1A1A]">Plan for the ramp.</strong> Like any new
+                  location, a Muze Office takes time to build membership. That&apos;s why several months
+                  of working capital are built into the investment range above — so you&apos;re funded
+                  through the ramp-up period, not caught short.
                 </p>
               </div>
             </div>

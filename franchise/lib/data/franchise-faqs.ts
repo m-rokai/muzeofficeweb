@@ -50,6 +50,26 @@ export const franchiseFAQs: FAQ[] = [
       "Often, yes. If you control office or retail square footage, our partner track helps you evaluate converting it into a branded Muze Office. We assess the space's fit on the discovery call.",
   },
   {
+    question: "How much liquid capital and net worth do I need?",
+    answer:
+      "Opening a Muze Office typically requires {{LIQUID_CAPITAL}} in liquid capital and {{NET_WORTH}} in net worth. These are illustrative placeholders until confirmed in your Franchise Disclosure Document, and they help ensure you're funded through buildout and the early ramp-up period.",
+  },
+  {
+    question: "Is financing available?",
+    answer:
+      "Muze does not provide direct financing. Most franchisees fund through a mix of personal capital, SBA loans, business lines of credit, and investor partners. We can point you toward third-party lenders, but approval and terms are theirs to set — we don't guarantee financing.",
+  },
+  {
+    question: "What is an FDD, and when do I receive it?",
+    answer:
+      "The Franchise Disclosure Document (FDD) is the legally required document detailing the franchise — fees, obligations, and any financial-performance representations. You receive it during the discovery process, and the FTC requires at least 14 days between when you receive it and when you sign or pay anything. That waiting period is a buyer protection: time to review it with your own legal and financial advisors.",
+  },
+  {
+    question: "How much can a Muze Office franchise earn?",
+    answer:
+      "We don't publish earnings, revenue, or profit figures on this website — and you should be cautious of any franchisor that does. Under the FTC Franchise Rule, financial-performance information may only be shared through Item 19 of the FDD, where it's backed by a reasonable basis and written substantiation. Request our FDD to review what we're able to represent.",
+  },
+  {
     question: "Is this a registered franchise?",
     answer:
       "{{LEGAL_STRUCTURE}} This website is informational only and is not a franchise offering; a franchise is offered solely through the applicable disclosure documents where required by law.",

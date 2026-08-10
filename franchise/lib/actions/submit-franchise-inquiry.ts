@@ -5,6 +5,7 @@ import {
   validateInquiry,
   isSuspectedSpam,
   buildEmailText,
+  buildConfirmationEmail,
   buildLeadPayload,
   type InquiryInput,
 } from "@/lib/actions/franchise-inquiry-core";
@@ -70,13 +71,31 @@ export async function submitFranchiseInquiry(data: InquiryInput): Promise<Action
   }
 
   try {
-    await getTransporter(appPassword).sendMail({
+    const mailer = getTransporter(appPassword);
+    await mailer.sendMail({
       from: `"Muze Office Franchise" <${GMAIL_USER}>`,
       to: FRANCHISE_INBOX,
       replyTo: payload.email,
       subject: `${suspectedSpam ? "[Suspected spam] " : ""}[Franchise] ${payload.name} — ${payload.track.label || "track unspecified"}`,
       text: buildEmailText(data, suspectedSpam),
     });
+
+    // Speed-to-lead: auto-acknowledge the prospect. Non-blocking — the lead is
+    // already captured above, so a confirmation failure must not fail the submit.
+    // Skipped for suspected spam to avoid emailing bot-supplied addresses.
+    if (!suspectedSpam) {
+      const confirmation = buildConfirmationEmail(data);
+      mailer
+        .sendMail({
+          from: `"Muze Office Franchise" <${GMAIL_USER}>`,
+          to: payload.email,
+          replyTo: FRANCHISE_INBOX,
+          subject: confirmation.subject,
+          text: confirmation.text,
+        })
+        .catch((e) => console.error("[submitFranchiseInquiry] confirmation email failed:", e));
+    }
+
     return { success: true, message: SUCCESS_MESSAGE };
   } catch (error) {
     transporter = null; // drop cache so a rotated password is re-read next attempt

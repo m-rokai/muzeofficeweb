@@ -4,6 +4,7 @@ import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { MobileCTA } from "@/components/layout/mobile-cta";
 import { OrganizationSchema } from "@/components/seo/organization-schema";
+import { WebsiteSchema } from "@/components/seo/website-schema";
 import { EngagementTracker } from "@/components/analytics/engagement-tracker";
 import { Analytics } from "@vercel/analytics/next";
 import { BRAND } from "@/lib/utils/constants";
@@ -47,6 +48,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     >
       <body className="flex min-h-full flex-col font-sans">
         <OrganizationSchema />
+        <WebsiteSchema />
         <SiteHeader />
         <main className="flex-1 pb-[68px] md:pb-0">{children}</main>
         <SiteFooter />

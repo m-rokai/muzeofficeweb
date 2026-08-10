@@ -10,9 +10,8 @@ import {
   Workflow,
   DollarSign,
   Users,
-  BadgeCheck,
-  HelpCircle,
-  Building2,
+  MapPin,
+  LifeBuoy,
   Phone,
   ArrowUpRight,
   X,
@@ -26,10 +25,9 @@ const NAV_ICONS: Record<string, React.ElementType> = {
   "/the-opportunity": TrendingUp,
   "/the-model": Workflow,
   "/investment": DollarSign,
-  "/franchisees": Users,
-  "/why-muze": BadgeCheck,
-  "/faq": HelpCircle,
-  "/about": Building2,
+  "/who-its-for": Users,
+  "/available-markets": MapPin,
+  "/training-and-support": LifeBuoy,
 };
 
 const EASE = [0.22, 1, 0.36, 1] as const;

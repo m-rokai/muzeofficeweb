@@ -1,4 +1,5 @@
 import { trackLabels, capitalLabels, timelineLabels } from "@/lib/data/inquiry-options";
+import { BRAND } from "@/lib/utils/constants";
 
 export interface InquiryInput {
   name: string;
@@ -91,4 +92,39 @@ export function buildEmailText(d: InquiryInput, suspectedSpam: boolean): string 
     `--- CRM payload (JSON) ---`,
     JSON.stringify(p, null, 2),
   ].join("\n");
+}
+
+/**
+ * Auto-confirmation sent to the prospect immediately on submit.
+ * Speed-to-lead: acknowledges receipt, sets the one-business-day expectation,
+ * and offers the self-serve scheduling link so motivated prospects can book now.
+ * Contains no earnings/financial-performance claims.
+ */
+export function buildConfirmationEmail(d: InquiryInput): { subject: string; text: string } {
+  const p = buildLeadPayload(d);
+  const firstName = p.name.split(/\s+/)[0] || p.name;
+  return {
+    subject: "Thanks for your interest in a Muze Office franchise",
+    text: [
+      `Hi ${firstName},`,
+      ``,
+      `Thanks for reaching out about the Muze Office coworking franchise opportunity. We've received your details and a member of our franchise team will follow up within one business day.`,
+      ``,
+      `Want to move faster? You can book your discovery call directly here:`,
+      BRAND.scheduling.discoveryCallUrl,
+      ``,
+      `For reference, here's what you shared:`,
+      `• Path: ${p.track.label || "Not specified"}`,
+      `• Target market: ${p.market}`,
+      `• Timeline: ${p.timeline.label || "Not provided"}`,
+      ``,
+      `Questions in the meantime? Just reply to this email or call ${BRAND.phoneDisplay}.`,
+      ``,
+      `— The Muze Office Franchise Team`,
+      BRAND.url.replace(/^https?:\/\//, ""),
+      ``,
+      `—`,
+      `This message is for informational purposes only and is not an offer to sell, or the solicitation of an offer to buy, a franchise. A franchise is offered only by a Franchise Disclosure Document.`,
+    ].join("\n"),
+  };
 }

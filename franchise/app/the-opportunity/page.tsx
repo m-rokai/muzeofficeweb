@@ -11,6 +11,7 @@ import {
   Layers,
   ShieldCheck,
   ArrowRight,
+  CheckCircle2,
 } from "lucide-react";
 import { Section } from "@/components/layout/section";
 import { CTASection } from "@/components/marketing/cta-section";
@@ -153,6 +154,57 @@ export default function TheOpportunityPage() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#1A1A1A]/40 to-transparent" />
       </div>
+
+      {/* What is a coworking franchise? — category definition (informational / AI) */}
+      <Section variant="gray" id="what-is-a-coworking-franchise">
+        <div className="grid gap-10 lg:grid-cols-[1.4fr_1fr] lg:items-start">
+          <FadeIn>
+            <div className="flex flex-col gap-5 max-w-[680px]">
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#EAA820]">
+                The basics
+              </p>
+              <h2 className="font-[family-name:var(--font-plus-jakarta)] text-3xl font-bold text-[#1A1A1A] sm:text-4xl">
+                What is a coworking franchise?
+              </h2>
+              <p className="text-[#74726D] leading-relaxed">
+                A coworking franchise lets you open and operate a flexible-workspace location —
+                shared desks, private offices, virtual-office plans, and meeting rooms — under an
+                established brand and a proven operating system, instead of building one from
+                scratch. You own the local business; the franchisor provides the brand, technology,
+                pricing playbook, training, and ongoing support, usually within a protected
+                territory.
+              </p>
+              <p className="text-[#74726D] leading-relaxed">
+                The model earns recurring revenue from monthly memberships and recurring services,
+                diversified across several products so the business doesn&apos;t depend on any single
+                category. With Muze Office, that system is already proven at a live Las Vegas
+                flagship — you&apos;re adopting a working playbook, not a theory.
+              </p>
+            </div>
+          </FadeIn>
+          <FadeIn delay={0.1}>
+            <div className="rounded-xl border border-[#E6E4DF] bg-white p-6">
+              <p className="text-xs font-semibold uppercase tracking-widest text-[#74726D] mb-4">
+                What the franchise gives you
+              </p>
+              <ul className="flex flex-col gap-3">
+                {[
+                  "An established brand and marketing system",
+                  "A proven technology and booking platform",
+                  "An operations and pricing playbook",
+                  "Site selection, training, and launch support",
+                  "A protected local territory",
+                ].map((item) => (
+                  <li key={item} className="flex items-start gap-3">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-[#EAA820]" />
+                    <span className="text-sm text-[#1A1A1A]">{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </FadeIn>
+        </div>
+      </Section>
 
       {/* Demand drivers */}
       <Section variant="white" id="demand">
@@ -304,6 +356,18 @@ export default function TheOpportunityPage() {
                 <div>
                   <p className="font-semibold text-[#1A1A1A] text-sm">How the model works</p>
                   <p className="text-xs text-[#74726D] mt-0.5">Brand, tech, playbook, support</p>
+                </div>
+                <ArrowRight className="h-4 w-4 text-[#74726D] group-hover:text-[#EAA820] transition-colors" />
+              </Link>
+              <Link
+                href="/who-its-for"
+                className="group flex items-center justify-between rounded-xl border border-[#E6E4DF] bg-white px-6 py-5 hover:border-[#EAA820] hover:shadow-sm transition-all"
+                data-cta="view_who_its_for"
+                data-cta-location="opportunity_links"
+              >
+                <div>
+                  <p className="font-semibold text-[#1A1A1A] text-sm">Who it&apos;s for</p>
+                  <p className="text-xs text-[#74726D] mt-0.5">Owner-operator or semi-absentee</p>
                 </div>
                 <ArrowRight className="h-4 w-4 text-[#74726D] group-hover:text-[#EAA820] transition-colors" />
               </Link>

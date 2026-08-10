@@ -124,6 +124,15 @@ const investmentIncludes = [
   "Ongoing operational guidance",
 ];
 
+// ─── By the numbers (honest, verifiable — no fabricated counts or earnings) ───
+
+const byTheNumbers = [
+  { value: "1", label: "Proven flagship — open & operating in Las Vegas" },
+  { value: "6", label: "Revenue lines from a single location" },
+  { value: "2026", label: "Houston market in development" },
+  { value: "100%", label: "Of fees disclosed up front — no hidden royalties" },
+];
+
 // ────────────────────────────────────────────────────────────────────────────
 
 export default function HomePage() {
@@ -197,6 +206,20 @@ export default function HomePage() {
           </FadeIn>
         </div>
       </section>
+
+      {/* ── 1b. BY THE NUMBERS ───────────────────────────────────────────── */}
+      <Section variant="white" id="by-the-numbers">
+        <StaggerContainer className="grid grid-cols-2 gap-x-6 gap-y-10 sm:gap-8 lg:grid-cols-4 lg:divide-x lg:divide-[#E6E4DF]">
+          {byTheNumbers.map((stat) => (
+            <StaggerItem key={stat.label} className="lg:px-8 lg:first:pl-0">
+              <p className="font-[family-name:var(--font-plus-jakarta)] text-3xl font-bold tracking-tight text-[#1A1A1A] sm:text-4xl">
+                {stat.value}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-[#74726D]">{stat.label}</p>
+            </StaggerItem>
+          ))}
+        </StaggerContainer>
+      </Section>
 
       {/* ── 2. THREE TRACKS ──────────────────────────────────────────────── */}
       <Section variant="gray" id="tracks">
