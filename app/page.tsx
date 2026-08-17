@@ -43,9 +43,9 @@ import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
-  title: { absolute: "Muze Office — Flexible Workspace in Las Vegas & Houston" },
+  title: { absolute: "Muze Office — Coworking & Flexible Workspace in Las Vegas" },
   description:
-    "Flexible workspace at 6860 Bermuda Rd in Las Vegas — coworking, private offices, meeting rooms. Month-to-month, free parking, on-site cafe. Houston coming soon.",
+    "Coworking, private offices, virtual offices, meeting rooms, and event space at 6860 Bermuda Rd in Las Vegas. Month-to-month, free parking, on-site cafe.",
   alternates: { canonical: "/" },
   openGraph: { ...OG_DEFAULTS, type: "website", url: "/" },
 };
@@ -74,22 +74,13 @@ const coreServices = services.filter((s) =>
   ["virtual-office", "coworking", "private-office", "meeting-rooms", "conference-rooms", "event-space"].includes(s.id)
 );
 
-const houstonServiceDescriptions: Record<string, string> = {
-  "virtual-office": "Planned business-address and mail options; not active yet.",
-  coworking: "Planned flexible desks and day access near the Galleria.",
-  "private-office": "Planned furnished offices for individuals and teams.",
-  "meeting-rooms": "Planned rooms for client meetings and team sessions.",
-  "conference-rooms": "Planned presentation and conference space.",
-  "event-space": "Planned space for workshops and business events.",
-};
-
 const homepageFAQs = [
-  { question: "What is Muze Office?", answer: "Muze Office operates flexible workspace in Las Vegas with coworking, virtual offices, private offices, meeting rooms, and event space. A Houston location is planned for 2026 and is collecting early-access interest." },
+  { question: "What is Muze Office?", answer: "Muze Office operates flexible workspace in Las Vegas with coworking, virtual offices, private offices, meeting rooms, and event space." },
   { question: "Do I need a membership to use the space?", answer: "No. A $25 Day Pass is available without a membership or commitment. Buy and activate it online the same day and work until midnight. We also offer monthly memberships for hot desks, dedicated desks, and private offices." },
-  { question: "Where is Muze Office located?", answer: "Muze Office is open in Las Vegas at 6860 Bermuda Rd, Suite 200 (10 minutes from Harry Reid International Airport via I-215 W), with free parking. An independently operated Muze Office franchise location is planned for Houston in 2026 at 1800 Augusta Dr, 77057 in the Galleria / Tanglewood area." },
-  { question: "What are your hours?", answer: "The Las Vegas workspace is open 24/7. A Day Pass can be bought and activated online the same day and used until midnight. The front desk is staffed Monday through Friday, 10am to 7pm, and phones are answered Monday through Friday, 10am to 5pm. Houston hours will be announced before opening." },
-  { question: "Is there parking?", answer: "Free parking is available at the open Las Vegas location for members, day pass holders, meeting room guests, and event attendees. On-site parking is planned for Houston; final details will be confirmed before opening." },
-  { question: "Can I book a meeting room without a membership?", answer: "Yes, at the Las Vegas location. Meeting rooms are available by the hour to anyone, with AV equipment, video conferencing, whiteboards, and WiFi. Huddle rooms start at $39/hr, conference rooms are $69/hr, and the classroom is $99/hr. Houston is not accepting bookings yet." },
+  { question: "Where is Muze Office located?", answer: "Muze Office is open in Las Vegas at 6860 Bermuda Rd, Suite 200, 10 minutes from Harry Reid International Airport via I-215 W, with free parking." },
+  { question: "What are your hours?", answer: "The Las Vegas workspace is open 24/7. A Day Pass can be bought and activated online the same day and used until midnight. The front desk is staffed Monday through Friday, 10am to 7pm, and phones are answered Monday through Friday, 10am to 5pm." },
+  { question: "Is there parking?", answer: "Free parking is available at the Las Vegas location for members, day pass holders, meeting room guests, and event attendees." },
+  { question: "Can I book a meeting room without a membership?", answer: "Yes. Las Vegas meeting rooms are available by the hour to anyone, with AV equipment, video conferencing, whiteboards, and WiFi. Huddle rooms start at $39/hr, conference rooms are $69/hr, and the classroom is $99/hr." },
   { question: "Do you offer a virtual office in Las Vegas?", answer: "Yes. A virtual office in Las Vegas at Muze Office starts at $39/month (Mail Holding) for a professional business address at 6860 Bermuda Rd, Suite 200 with USPS letter mail pickup. Sandstone ($69/mo) adds package receiving from UPS, FedEx, and Amazon. Higher tiers add mail forwarding, coworking hours, and meeting room access. Use it for contracts and filings that accept a commercial mail-receiving address; registered-agent and Google Business Profile requirements are separate. Full details and pricing at /las-vegas-virtual-office." },
   { question: "Do you offer a virtual office in Houston?", answer: "Not yet. Virtual office and mail services are part of the planned Houston workspace mix at 1800 Augusta Dr, but no Houston address service or pricing is active. Join Houston early access for confirmed opening and availability updates." },
   { question: "Are there long-term contracts?", answer: "No. All Muze Office memberships are month-to-month. Cancel anytime with 30 days' notice. No long-term lease required." },
@@ -106,7 +97,7 @@ export default function HomePage() {
           src="/images/hero/coworking-space.jpg"
           alt="Muze Office coworking lounge at 6860 Bermuda Rd, Suite 200 in Las Vegas, with open desks, natural light, and a view toward the on-site cafe"
           fill
-          preload
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover"
         />
@@ -119,7 +110,7 @@ export default function HomePage() {
             Flexible Workspace in Las Vegas — Coworking, Private Offices &amp; Meeting Rooms
           </h1>
           <p className="mt-6 max-w-[580px] text-lg leading-relaxed text-gray-300 md:text-xl">
-            Muze Office offers month-to-month coworking, virtual offices, private offices, meeting rooms, and event space in Las Vegas at 6860 Bermuda Rd, Suite 200. An independently operated Houston franchise location is planned for 2026 at 1800 Augusta Dr in the Galleria / Tanglewood area.
+            Muze Office offers month-to-month coworking, virtual offices, private offices, meeting rooms, and event space in Las Vegas at 6860 Bermuda Rd, Suite 200.
           </p>
           <div className="mt-10 flex flex-wrap gap-4">
             <a
@@ -222,7 +213,13 @@ export default function HomePage() {
         <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {coreServices.map((service) => (
             <StaggerItem key={`lv-${service.id}`}>
-              <Link href={`/las-vegas-${service.id}`} className="group block h-full" aria-label={`Las Vegas ${service.name}`}>
+              <Link
+                href={`/las-vegas-${service.id}`}
+                data-cta={`explore_${service.id}`}
+                data-cta-location="homepage_services"
+                className="group block h-full"
+                aria-label={`Las Vegas ${service.name}`}
+              >
                 <Card className="h-full border-[#E6E4DF] bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <CardContent className="flex flex-col gap-5 p-7">
                     <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-[#1A1A1A]">
@@ -244,43 +241,37 @@ export default function HomePage() {
         </StaggerContainer>
       </Section>
 
-      {/* Services — Houston */}
+      {/* Planned Houston location — one clear pre-launch destination rather
+          than six inactive service cards competing with Las Vegas offers. */}
       <Section variant="white">
         <FadeIn>
-          <div className="mb-14">
-            <Badge className="mb-4 bg-[#EAA820]/10 text-[#EAA820] border border-[#EAA820]/20 text-sm px-3 py-1">
-              <MapPin className="mr-1.5 h-3.5 w-3.5" /> Houston
-            </Badge>
-            <h2 className="text-3xl font-semibold md:text-4xl lg:text-5xl">
-              Workspace in Houston
-            </h2>
-            <p className="mt-4 max-w-[600px] text-lg text-[#74726D]">
-              Planned for 1800 Augusta Dr inside the 610 Loop in the Galleria / Tanglewood area. Houston services, hours, and pricing are not active yet.
-            </p>
-          </div>
+          <Link
+            href="/locations/houston#waitlist"
+            data-cta="houston_waitlist"
+            data-cta-location="homepage_houston_feature"
+            className="group block"
+            aria-label="Explore the planned Muze Office Houston location and join early access"
+          >
+            <Card className="overflow-hidden border-[#E6E4DF] bg-[#F7F6F3] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <CardContent className="flex flex-col gap-8 p-8 md:flex-row md:items-center md:justify-between md:p-10">
+                <div className="max-w-[720px]">
+                  <Badge className="mb-4 border border-[#EAA820]/20 bg-[#EAA820]/10 px-3 py-1 text-sm text-[#8A6000]">
+                    <MapPin className="mr-1.5 h-3.5 w-3.5" /> Planned Houston location
+                  </Badge>
+                  <h2 className="text-3xl font-semibold md:text-4xl">
+                    Houston Galleria — opening in 2026
+                  </h2>
+                  <p className="mt-4 text-lg leading-relaxed text-[#74726D]">
+                    An independently operated Muze Office franchise is planned for 1800 Augusta Dr in the Galleria / Tanglewood area. Services, hours, pricing, and address use are not active yet.
+                  </p>
+                </div>
+                <span className="inline-flex shrink-0 items-center gap-2 text-base font-semibold text-[#1A1A1A] transition-colors group-hover:text-[#8A6000]">
+                  View Houston plans <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </span>
+              </CardContent>
+            </Card>
+          </Link>
         </FadeIn>
-        <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {coreServices.map((service) => (
-            <StaggerItem key={`hou-${service.id}`}>
-              <Link href="/locations/houston#waitlist" className="group block h-full" aria-label={`Join early access for Houston ${service.name}`}>
-                <Card className="h-full border-[#E6E4DF] bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                  <CardContent className="flex flex-col gap-5 p-7">
-                    <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-[#1A1A1A]">
-                      {serviceIcons[service.id]}
-                    </div>
-                    <h3 className="text-xl font-semibold">{service.name}</h3>
-                    <p className="text-base text-[#74726D] leading-relaxed">
-                      {houstonServiceDescriptions[service.id]}
-                    </p>
-                    <span className="mt-auto inline-flex items-center gap-1.5 text-base font-medium text-[#1A1A1A] group-hover:text-[#EAA820] transition-colors">
-                      Join early access <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </span>
-                  </CardContent>
-                </Card>
-              </Link>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
       </Section>
 
       {/* Locations */}
@@ -289,13 +280,18 @@ export default function HomePage() {
           <div className="mb-14 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 className="text-3xl font-semibold md:text-4xl lg:text-5xl">
-                Coworking in Las Vegas &amp; Houston
+                Las Vegas open now; Houston planned for 2026
               </h2>
               <p className="mt-4 max-w-[600px] text-lg text-[#74726D]">
                 Open in Las Vegas at 6860 Bermuda Rd with free parking, 10 minutes from Harry Reid International Airport. An independently operated Muze Office franchise location is planned for Houston in 2026 at 1800 Augusta Dr in the Galleria / Tanglewood area.
               </p>
             </div>
-            <Link href="/locations" className={cn(buttonVariants({ variant: "outline" }), "w-fit rounded-xl h-12 px-6 text-base")}>
+            <Link
+              href="/locations"
+              data-cta="view_locations"
+              data-cta-location="homepage_locations"
+              className={cn(buttonVariants({ variant: "outline" }), "w-fit rounded-xl h-12 px-6 text-base")}
+            >
               View All Locations
             </Link>
           </div>
@@ -332,7 +328,12 @@ export default function HomePage() {
                   ) : (
                     <p className="mt-1 text-base text-[#74726D]">Location details coming soon</p>
                   )}
-                  <Link href={`/locations/${loc.slug}`} className={cn(buttonVariants(), "mt-auto rounded-xl bg-[#1A1A1A] hover:bg-[#333] h-12 px-6 text-base w-fit")}>
+                  <Link
+                    href={`/locations/${loc.slug}`}
+                    data-cta={loc.status === "coming-soon" ? "houston_waitlist" : "explore_location"}
+                    data-cta-location="homepage_location_card"
+                    className={cn(buttonVariants(), "mt-auto rounded-xl bg-[#1A1A1A] hover:bg-[#333] h-12 px-6 text-base w-fit")}
+                  >
                     {loc.status === "coming-soon" ? `${loc.name} Waitlist` : `Explore ${loc.name}`} <ArrowRight className="ml-1.5 h-4 w-4" />
                   </Link>
                 </CardContent>
@@ -350,15 +351,15 @@ export default function HomePage() {
               Coworking &amp; virtual office plans — no long-term leases
             </h2>
             <p className="mx-auto mt-4 max-w-[640px] text-lg text-[#74726D]">
-              <Link href="/las-vegas-day-pass" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Day Pass $25</Link>, <Link href="/las-vegas-hot-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Hot Desk $350/mo</Link>, <Link href="/las-vegas-dedicated-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Dedicated Desk $399/mo</Link>, and <Link href="/las-vegas-virtual-office" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Virtual Office plans</Link> from $39/mo. All memberships are month-to-month with free parking, WiFi, coffee, and meeting room access.
+              <Link href="/las-vegas-day-pass" data-cta="view_day_pass" data-cta-location="homepage_pricing_intro" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Day Pass $25</Link>, <Link href="/las-vegas-hot-desk" data-cta="view_hot_desk" data-cta-location="homepage_pricing_intro" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Hot Desk $350/mo</Link>, <Link href="/las-vegas-dedicated-desk" data-cta="view_dedicated_desk" data-cta-location="homepage_pricing_intro" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Dedicated Desk $399/mo</Link>, and <Link href="/las-vegas-virtual-office" data-cta="view_virtual_office" data-cta-location="homepage_pricing_intro" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Virtual Office plans</Link> from $39/mo. All memberships are month-to-month with free parking, WiFi, coffee, and meeting room access.
             </p>
           </div>
         </FadeIn>
         <StaggerContainer className="grid gap-6 md:grid-cols-3 mt-4">
           {[
-            { name: "Day Pass", price: "$25", unit: "/day", description: "Book a single day online, even same-day — no membership, no setup, no commitment. Reserve online and bring your laptop.", features: ["Hot desk access", "High-speed WiFi", "Unlimited coffee & tea", "Free parking"], cta: "See Day Pass Details", href: "/las-vegas-day-pass", highlighted: false },
-            { name: "Dedicated Desk", price: "$399", unit: "/month", description: "Your own reserved desk, personal storage, 24/7 biometric access, and a business address with mail.", features: ["24/7 access", "Reserved desk & storage", "Meeting room credits", "Business address & mail"], cta: "See Dedicated Desk Details", href: "/las-vegas-dedicated-desk", highlighted: true },
-            { name: "Private Office", price: "Custom", unit: "", description: "Enclosed, lockable offices for 2-10 people. Fully furnished and customizable.", features: ["24/7 access", "Furnished & customizable", "All utilities included", "Conference room credits"], cta: "Book a Tour", href: BRAND.booking.tourUrl, highlighted: false },
+            { name: "Day Pass", price: "$25", unit: "/day", description: "Book a single day online, even same-day — no membership, no setup, no commitment. Reserve online and bring your laptop.", features: ["Hot desk access", "High-speed WiFi", "Unlimited coffee & tea", "Free parking"], cta: "See Day Pass Details", href: "/las-vegas-day-pass", trackingName: "view_day_pass", highlighted: false },
+            { name: "Dedicated Desk", price: "$399", unit: "/month", description: "Your own reserved desk, personal storage, 24/7 biometric access, and a business address with mail.", features: ["24/7 access", "Reserved desk & storage", "Meeting room credits", "Business address & mail"], cta: "See Dedicated Desk Details", href: "/las-vegas-dedicated-desk", trackingName: "view_dedicated_desk", highlighted: true },
+            { name: "Private Office", price: "Custom", unit: "", description: "Enclosed, lockable offices for 2-10 people. Fully furnished and customizable.", features: ["24/7 access", "Furnished & customizable", "All utilities included", "Conference room credits"], cta: "Book a Tour", href: BRAND.booking.tourUrl, trackingName: "book_tour", highlighted: false },
           ].map((plan) => (
             <StaggerItem key={plan.name} className={plan.highlighted ? "pt-3" : ""}>
               <Card className={cn("h-full border-[#E6E4DF] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-visible", plan.highlighted && "ring-2 ring-[#EAA820] relative")}>
@@ -383,7 +384,12 @@ export default function HomePage() {
                       </li>
                     ))}
                   </ul>
-                  <Link href={plan.href} className={cn(buttonVariants(), "mt-auto rounded-xl h-13 text-base font-semibold", plan.highlighted ? "bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]" : "bg-[#1A1A1A] text-white hover:bg-[#333]")}>
+                  <Link
+                    href={plan.href}
+                    data-cta={plan.trackingName}
+                    data-cta-location="homepage_pricing_card"
+                    className={cn(buttonVariants(), "mt-auto rounded-xl h-13 text-base font-semibold", plan.highlighted ? "bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]" : "bg-[#1A1A1A] text-white hover:bg-[#333]")}
+                  >
                     {plan.cta}
                   </Link>
                 </CardContent>
@@ -477,21 +483,17 @@ export default function HomePage() {
         </FadeIn>
       </Section>
 
-      {/* Featured posts — surfaces specific blog URLs from the homepage so
-          unindexed posts get a strong internal-link signal from the highest
-          authority page on the site. */}
+      {/* Featured posts with distinct informational intent. Commercial service
+          pages already receive prominent links from the Las Vegas cards above. */}
       <RelatedReading
         slugs={[
-          "how-to-set-up-a-virtual-office-in-las-vegas",
-          "how-to-set-up-a-virtual-office-in-houston",
-          "virtual-office-vs-po-box-in-nevada",
-          "6-advantages-of-a-virtual-office-in-las-vegas",
-          "5-benefits-of-private-office-space-in-las-vegas",
-          "meeting-space-near-las-vegas-airport",
+          "where-to-work-during-black-hat-def-con-las-vegas",
+          "day-pass-vs-coworking-membership",
+          "private-office-vs-coworking-space",
         ]}
         heading="From the Muze Office blog"
-        subtitle="Practical guides on virtual offices, coworking, and flexible workspace in Las Vegas and Houston."
-        limit={6}
+        subtitle="Practical guides for choosing and using flexible workspace in Las Vegas."
+        limit={3}
       />
 
       {/* FAQ */}

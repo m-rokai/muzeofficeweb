@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { track } from "@vercel/analytics";
 import { CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 import { Input } from "@/components/ui/input";
@@ -44,10 +44,12 @@ export function ContactForm({ className }: { className?: string }) {
   const [interest, setInterest] = useState("");
   const [discoverySource, setDiscoverySource] = useState("");
   const [startedAt] = useState(() => Date.now());
+  const startedTracking = useRef(false);
 
   // Prefill the interest select from ?interest=… (e.g. /contact?interest=virtual-office)
   // — read client-side so the page stays fully static.
   useEffect(() => {
+    track("contact_form_view", { source_path: window.location.pathname });
     const param = new URLSearchParams(window.location.search).get("interest");
     if (param && CONTACT_INTERESTS.some((i) => i.value === param)) {
       // Intentional: URL is only readable post-hydration, so a lazy useState
@@ -56,6 +58,12 @@ export function ContactForm({ className }: { className?: string }) {
       setInterest(param);
     }
   }, []);
+
+  function trackStart() {
+    if (startedTracking.current) return;
+    startedTracking.current = true;
+    track("contact_form_start", { source_path: window.location.pathname });
+  }
 
   function validate(formData: FormData): FormErrors {
     const errs: FormErrors = {};
@@ -164,6 +172,7 @@ export function ContactForm({ className }: { className?: string }) {
             setInterest("");
             setDiscoverySource("");
             setServerMessage("");
+            startedTracking.current = false;
           }}
         >
           Send another message
@@ -177,6 +186,7 @@ export function ContactForm({ className }: { className?: string }) {
   return (
     <form
       onSubmit={handleSubmit}
+      onFocusCapture={trackStart}
       className={cn("relative flex flex-col gap-5", className)}
       noValidate
     >
@@ -382,6 +392,8 @@ export function ContactForm({ className }: { className?: string }) {
         <Button
           type="submit"
           disabled={isSubmitting}
+          data-cta="contact_form_submit"
+          data-cta-location="contact_form"
           className="h-11 rounded-lg bg-[#1A1A1A] text-white hover:bg-[#333] disabled:opacity-70"
         >
           {isSubmitting ? (

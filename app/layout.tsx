@@ -29,11 +29,11 @@ const plusJakarta = Plus_Jakarta_Sans({
 export const metadata: Metadata = {
   title: {
     default:
-      "Muze Office — Coworking, Virtual Offices & Private Offices in Las Vegas & Houston",
+      "Muze Office — Coworking & Flexible Workspace in Las Vegas",
     template: "%s | Muze Office",
   },
   description:
-    "Muze Office: coworking, virtual offices, private offices, and meeting rooms in Las Vegas and Houston. Month-to-month. Day pass from $25. Virtual office from $39/mo.",
+    "Coworking, virtual offices, private offices, and meeting rooms in Las Vegas. Month-to-month, with a $25 day pass and virtual office plans from $39/mo. Houston opening in 2026.",
   metadataBase: new URL("https://muzeoffice.com"),
   openGraph: {
     siteName: "Muze Office",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         url: "/images/og/default.png",
         width: 2048,
         height: 2048,
-        alt: "Muze Office — Coworking, Virtual Offices & Private Offices in Las Vegas & Houston",
+        alt: "Muze Office coworking and flexible workspace in Las Vegas",
       },
     ],
   },

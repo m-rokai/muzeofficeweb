@@ -1,7 +1,7 @@
 export const BRAND = {
   name: "Muze Office",
   legalName: "Muze International Corporation",
-  tagline: "Flexible workspaces in Las Vegas & Houston",
+  tagline: "Flexible workspace open in Las Vegas, with Houston planned for 2026",
   email: "access@muzeoffice.com",
   url: "https://muzeoffice.com",
   blogUrl: "https://muzeoffice.com/blog",
@@ -41,7 +41,7 @@ export const OG_DEFAULTS = {
       url: "/images/og/default.png",
       width: 2048,
       height: 2048,
-      alt: "Muze Office — Coworking, Virtual Offices & Private Offices in Las Vegas & Houston",
+      alt: "Muze Office coworking and flexible workspace in Las Vegas",
     },
   ],
 };

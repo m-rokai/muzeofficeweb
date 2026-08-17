@@ -67,7 +67,7 @@ export async function generateMetadata({
 
   if (isHoustonLaunchPage) {
     return {
-      title: "Houston Virtual Office & Coworking — Opening 2026",
+      title: "Muze Office Houston — Galleria Opening 2026",
       description:
         "Join Muze Office Houston early access for planned virtual office, coworking, private offices, and meeting rooms at 1800 Augusta Dr. Services are not active yet.",
       alternates: { canonical: `/locations/${city}` },
@@ -75,7 +75,7 @@ export async function generateMetadata({
         ...OG_DEFAULTS,
         type: "website",
         url: `/locations/${city}`,
-        title: "Houston Virtual Office & Coworking — Opening 2026",
+        title: "Muze Office Houston — Galleria Opening 2026",
         description:
           "Join early access for Houston opening updates, planned coworking, virtual office, private office, and meeting space availability.",
       },
@@ -141,7 +141,7 @@ export default async function LocationDetailPage({
           fill
           sizes="100vw"
           className="object-cover"
-          priority
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/60" />
         <div className="relative z-10 mx-auto w-full max-w-[1200px]">
@@ -150,7 +150,7 @@ export default async function LocationDetailPage({
             <div className="flex items-center gap-3">
               <h1 className="font-[family-name:var(--font-plus-jakarta)] text-4xl font-semibold text-white md:text-5xl">
                 {isHoustonLaunchPage
-                  ? "Houston Virtual Office & Coworking, Opening in 2026"
+                  ? "Muze Office Houston, Opening in 2026"
                   : `Muze Office ${location.name}`}
               </h1>
               {!isActive && (

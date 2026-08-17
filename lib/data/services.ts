@@ -523,7 +523,7 @@ export const services: Service[] = [
       },
       {
         name: "Meeting Room",
-        price: 25,
+        price: 39,
         priceUnit: "hour",
         features: [
           "AV equipment included",
@@ -575,7 +575,7 @@ export const services: Service[] = [
       },
       {
         name: "Meeting Room",
-        price: 25,
+        price: 39,
         priceUnit: "hour",
         features: [
           "Impress clients in a real conference room",

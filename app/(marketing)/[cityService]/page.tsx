@@ -1,4 +1,4 @@
-import { notFound, redirect } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -140,7 +140,7 @@ export default async function CityServicePage({ params }: PageProps) {
   const faqs = getFAQsForService(ctx.serviceId, ctx.locationId);
   const isComingSoon = location.status === "coming-soon";
   if (isComingSoon) {
-    redirect(`/locations/${location.slug}#waitlist`);
+    permanentRedirect(`/locations/${location.slug}#waitlist`);
   }
   const hasOnlineBooking =
     !isComingSoon &&
@@ -222,7 +222,7 @@ export default async function CityServicePage({ params }: PageProps) {
             alt={`${pageData.h1} at Muze Office ${location.name} — ${location.address.street !== "TBD" ? `${location.address.street}, ${location.address.city}, ${location.address.state}` : location.address.city}`}
             fill
             className="object-cover opacity-40"
-            preload
+            fetchPriority="high"
             sizes="100vw"
           />
         </div>

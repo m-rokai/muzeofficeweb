@@ -4,6 +4,11 @@ import { buttonVariants } from "@/lib/utils/button-variants";
 import { cn } from "@/lib/utils";
 import { BRAND } from "@/lib/utils/constants";
 import { getLocation } from "@/lib/data/locations";
+import {
+  classifyBlogTopic,
+  isHoustonBlog,
+  type BlogTopic,
+} from "@/lib/blog-topic";
 
 /**
  * End-of-article conversion CTA for blog posts. Rendered TEMPLATE-LEVEL from
@@ -28,9 +33,9 @@ interface BlogCtaConfig {
 
 const TOUR_URL = BRAND.booking.tourUrl;
 
-type Topic = "vo" | "event" | "meeting" | "private" | "coworking" | "general";
+type CtaTopic = "vo" | "event" | "meeting" | "private" | "coworking" | "general";
 
-const TOPIC_CTAS: Record<Topic, BlogCtaConfig> = {
+const TOPIC_CTAS: Record<CtaTopic, BlogCtaConfig> = {
   vo: {
     heading: "Set up your Las Vegas virtual office",
     subtitle:
@@ -110,20 +115,16 @@ const HOUSTON_CTA: BlogCtaConfig = {
   },
 };
 
-/** Lowercase and strip punctuation/hyphens so slugs and categories share a
- *  vocabulary ("virtual-office" and "Virtual Office" both become "virtual office"). */
-function normalize(text: string): string {
-  return text.toLowerCase().replace(/[^a-z0-9]+/g, " ");
-}
-
-function classifyTopic(text: string): Topic | null {
-  if (/virtual office|virtual mailbox/.test(text)) return "vo";
-  if (/event space|party venue/.test(text)) return "event";
-  if (/meeting room|conference room/.test(text)) return "meeting";
-  if (/private off/.test(text)) return "private";
-  if (/cowork|convention|freelancer/.test(text)) return "coworking";
-  return null;
-}
+const CTA_TOPIC_BY_BLOG_TOPIC: Record<BlogTopic, CtaTopic> = {
+  "virtual-office": "vo",
+  "meeting-rooms": "meeting",
+  coworking: "coworking",
+  "day-pass": "coworking",
+  "private-office": "private",
+  "event-space": "event",
+  conventions: "coworking",
+  general: "general",
+};
 
 /**
  * Pick the conversion offer for a post. The blog's categories are
@@ -132,13 +133,10 @@ function classifyTopic(text: string): Topic | null {
  * Any Houston post is gated to the waitlist regardless of topic.
  */
 export function getBlogCtaConfig(categories: string[], slug = ""): BlogCtaConfig {
-  const slugText = normalize(slug);
-  const categoryText = normalize(categories.join(" "));
+  if (isHoustonBlog(slug, categories)) return HOUSTON_CTA;
 
-  if (/houston/.test(`${slugText} ${categoryText}`)) return HOUSTON_CTA;
-
-  const topic = classifyTopic(slugText) ?? classifyTopic(categoryText) ?? "general";
-  return TOPIC_CTAS[topic];
+  const topic = classifyBlogTopic(slug, categories);
+  return TOPIC_CTAS[CTA_TOPIC_BY_BLOG_TOPIC[topic]];
 }
 
 function CtaButton({

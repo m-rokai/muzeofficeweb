@@ -16,7 +16,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ContactForm } from "@/components/forms/contact-form";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
-import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/components/marketing/animate";
+import { FadeIn } from "@/components/marketing/animate";
 import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 import { getLocation } from "@/lib/data/locations";
 

@@ -17,7 +17,7 @@ import { FAQSection } from "@/components/marketing/faq-section";
 import { Card, CardContent } from "@/components/ui/card";
 import { services } from "@/lib/data/services";
 import { getFAQsForPage } from "@/lib/data/faqs";
-import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/components/marketing/animate";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/marketing/animate";
 import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {

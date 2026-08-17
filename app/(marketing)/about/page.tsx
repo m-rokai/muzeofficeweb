@@ -6,13 +6,7 @@ import {
   Users,
   Briefcase,
   DoorOpen,
-  MapPin,
-  CalendarCheck,
-  Clock,
-  Plane,
 } from "lucide-react";
-import { buttonVariants } from "@/lib/utils/button-variants";
-import { cn } from "@/lib/utils";
 import { Section } from "@/components/layout/section";
 import { CTASection } from "@/components/marketing/cta-section";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/marketing/animate";
@@ -78,7 +72,7 @@ export default function AboutPage() {
           alt="Inside Muze Office Las Vegas — open coworking area with desks, natural light, and members working alongside the on-site cafe"
           fill
           className="object-cover"
-          priority
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/60" />
         <div className="relative z-10 mx-auto w-full max-w-[1200px]">

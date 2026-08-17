@@ -148,6 +148,16 @@ const removedBlogRedirects = [
   { source: "/blog/maximizing-small-office-spaces", destination: "/workspace-memberships" },
   { source: "/ai-in-modern-workspace", destination: "/blog" },
   { source: "/blog/ai-in-modern-workspace", destination: "/blog" },
+
+  // Stale virtual-office posts retired 2026-07-28: near-zero GSC demand and
+  // obsolete or unsupported package claims. Consolidate into the current,
+  // fact-checked commercial page.
+  { source: "/ultimate-benefit-of-a-virtual-office-in-las-vegas", destination: "/las-vegas-virtual-office" },
+  { source: "/blog/ultimate-benefit-of-a-virtual-office-in-las-vegas", destination: "/las-vegas-virtual-office" },
+  { source: "/maximize-your-success-with-a-virtual-office-space-in-las-vegas", destination: "/las-vegas-virtual-office" },
+  { source: "/blog/maximize-your-success-with-a-virtual-office-space-in-las-vegas", destination: "/las-vegas-virtual-office" },
+  { source: "/young-workers-hub-find-a-virtual-office-in-las-vegas", destination: "/las-vegas-virtual-office" },
+  { source: "/blog/young-workers-hub-find-a-virtual-office-in-las-vegas", destination: "/las-vegas-virtual-office" },
 ];
 
 type RedirectRule = {
@@ -176,6 +186,9 @@ function withTrailingSlashVariants(routes: RedirectRule[]): RedirectRule[] {
 
 const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
+  turbopack: {
+    root: path.resolve(process.cwd()),
+  },
   async redirects() {
     // Order matters: explicit redirects first, then the auto-generated
     // blog slug redirects. Next.js uses first-match-wins, so explicit
