@@ -22,9 +22,9 @@ export function EngagementTracker() {
       // attributed (anchor or button), and beats href-pattern matching
       // because the same href can mean different things in different slots.
       const ctaEl = target.closest?.("[data-cta]") as HTMLElement | null;
+      const cta = ctaEl?.dataset.cta;
+      const location = ctaEl?.dataset.ctaLocation;
       if (ctaEl) {
-        const cta = ctaEl.dataset.cta;
-        const location = ctaEl.dataset.ctaLocation;
         if (cta) track("cta_click", location ? { cta, location } : { cta });
       }
 
@@ -44,10 +44,16 @@ export function EngagementTracker() {
         return;
       }
 
-      if (href.startsWith("http") && !href.includes("muzeoffice.com")) {
+      if (href.startsWith("http")) {
         try {
-          const host = new URL(href).host;
-          track("outbound_click", { host });
+          const url = new URL(href);
+          if (url.hostname === window.location.hostname) return;
+          track("outbound_click", {
+            host: url.host,
+            source_path: window.location.pathname,
+            ...(cta ? { cta } : {}),
+            ...(location ? { location } : {}),
+          });
         } catch {
           // Ignore malformed URLs.
         }

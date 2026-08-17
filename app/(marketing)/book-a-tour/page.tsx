@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import {
   CalendarCheck,
   MapPin,
@@ -17,7 +16,7 @@ import { ContactForm } from "@/components/forms/contact-form";
 import { GoogleReviewsBadge } from "@/components/marketing/google-reviews-badge";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 import { getLocation } from "@/lib/data/locations";
-import { FadeIn, StaggerContainer, StaggerItem, ScaleIn } from "@/components/marketing/animate";
+import { FadeIn, StaggerContainer, StaggerItem } from "@/components/marketing/animate";
 import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
@@ -95,6 +94,8 @@ export default function BookATourPage() {
             <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
               <a
                 href={BRAND.booking.tourUrl}
+                data-cta="book_tour"
+                data-cta-location="book_tour_hero"
                 className={cn(
                   buttonVariants({ size: "lg" }),
                   "rounded-xl bg-[#EAA820] px-8 text-[#1A1A1A] hover:bg-[#C17A28] h-14 text-base font-semibold"

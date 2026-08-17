@@ -23,7 +23,7 @@ export function SiteHeader() {
             alt="Muze Office"
             width={2048}
             height={2048}
-            priority
+            loading="eager"
             sizes="64px"
             className="h-16 w-16 object-contain"
           />

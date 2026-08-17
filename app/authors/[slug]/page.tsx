@@ -26,13 +26,14 @@ export async function generateMetadata({
   const { slug } = await params;
   const person = getPersonBySlug(slug);
   if (!person) return {};
+  const profileTitle = `${person.name} — ${person.jobTitle}`;
   return {
-    title: `${person.name} — ${person.jobTitle}`,
+    title: { absolute: profileTitle },
     description: person.shortBio,
     alternates: { canonical: `/authors/${person.slug}` },
     openGraph: {
       ...OG_DEFAULTS,
-      title: `${person.name} — ${person.jobTitle}`,
+      title: profileTitle,
       description: person.shortBio,
       type: "profile",
       url: `${BRAND.url}/authors/${person.slug}`,

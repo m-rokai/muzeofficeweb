@@ -508,7 +508,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Your own reserved desk, personal storage, 24/7 biometric access, meeting room credits, and a business address with mail. Month-to-month terms — the most committed coworking tier short of a private office.",
     metaTitle: "Dedicated Desk Las Vegas — $399/mo, Reserved",
     metaDescription:
-      "Dedicated desk coworking in Las Vegas for $399/mo at 6860 Bermuda Rd. Reserved desk, storage, 24/7 biometric access, business address, meeting credits. Sign up online.",
+      "Dedicated desk coworking in Las Vegas for $399/mo. Reserved desk, storage, 24/7 access, business address, meeting credits, and free parking. Sign up online.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Remote workers who want a permanent desk and dual monitors",

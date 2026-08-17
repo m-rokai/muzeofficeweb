@@ -36,6 +36,7 @@ const relatedByService: Record<string, string[]> = {
   "private-office": [
     "private-office-vs-coworking-space",
     "5-benefits-of-private-office-space-in-las-vegas",
+    "coworking-for-therapists-las-vegas",
     "how-to-choose-private-office-space-rent",
     "private-office-for-seeking-confidentiality",
   ],

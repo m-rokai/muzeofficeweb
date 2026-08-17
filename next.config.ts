@@ -186,6 +186,9 @@ function withTrailingSlashVariants(routes: RedirectRule[]): RedirectRule[] {
 
 const nextConfig: NextConfig = {
   skipTrailingSlashRedirect: true,
+  turbopack: {
+    root: path.resolve(process.cwd()),
+  },
   async redirects() {
     // Order matters: explicit redirects first, then the auto-generated
     // blog slug redirects. Next.js uses first-match-wins, so explicit

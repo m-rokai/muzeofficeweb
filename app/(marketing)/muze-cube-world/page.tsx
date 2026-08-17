@@ -80,7 +80,7 @@ export default function MuzeCubeWorldPage() {
           fill
           sizes="100vw"
           className="object-cover"
-          priority
+          fetchPriority="high"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/60" />
         <div className="relative z-10 mx-auto w-full max-w-[1200px]">

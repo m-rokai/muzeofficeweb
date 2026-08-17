@@ -222,7 +222,7 @@ export default async function CityServicePage({ params }: PageProps) {
             alt={`${pageData.h1} at Muze Office ${location.name} — ${location.address.street !== "TBD" ? `${location.address.street}, ${location.address.city}, ${location.address.state}` : location.address.city}`}
             fill
             className="object-cover opacity-40"
-            preload
+            fetchPriority="high"
             sizes="100vw"
           />
         </div>

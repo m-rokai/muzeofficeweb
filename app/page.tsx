@@ -97,7 +97,7 @@ export default function HomePage() {
           src="/images/hero/coworking-space.jpg"
           alt="Muze Office coworking lounge at 6860 Bermuda Rd, Suite 200 in Las Vegas, with open desks, natural light, and a view toward the on-site cafe"
           fill
-          preload
+          fetchPriority="high"
           sizes="100vw"
           className="object-cover"
         />
@@ -213,7 +213,13 @@ export default function HomePage() {
         <StaggerContainer className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {coreServices.map((service) => (
             <StaggerItem key={`lv-${service.id}`}>
-              <Link href={`/las-vegas-${service.id}`} className="group block h-full" aria-label={`Las Vegas ${service.name}`}>
+              <Link
+                href={`/las-vegas-${service.id}`}
+                data-cta={`explore_${service.id}`}
+                data-cta-location="homepage_services"
+                className="group block h-full"
+                aria-label={`Las Vegas ${service.name}`}
+              >
                 <Card className="h-full border-[#E6E4DF] bg-white transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
                   <CardContent className="flex flex-col gap-5 p-7">
                     <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-[#F2F1ED] text-[#EAA820] transition-colors group-hover:bg-[#EAA820] group-hover:text-[#1A1A1A]">
@@ -241,6 +247,8 @@ export default function HomePage() {
         <FadeIn>
           <Link
             href="/locations/houston#waitlist"
+            data-cta="houston_waitlist"
+            data-cta-location="homepage_houston_feature"
             className="group block"
             aria-label="Explore the planned Muze Office Houston location and join early access"
           >
@@ -278,7 +286,12 @@ export default function HomePage() {
                 Open in Las Vegas at 6860 Bermuda Rd with free parking, 10 minutes from Harry Reid International Airport. An independently operated Muze Office franchise location is planned for Houston in 2026 at 1800 Augusta Dr in the Galleria / Tanglewood area.
               </p>
             </div>
-            <Link href="/locations" className={cn(buttonVariants({ variant: "outline" }), "w-fit rounded-xl h-12 px-6 text-base")}>
+            <Link
+              href="/locations"
+              data-cta="view_locations"
+              data-cta-location="homepage_locations"
+              className={cn(buttonVariants({ variant: "outline" }), "w-fit rounded-xl h-12 px-6 text-base")}
+            >
               View All Locations
             </Link>
           </div>
@@ -315,7 +328,12 @@ export default function HomePage() {
                   ) : (
                     <p className="mt-1 text-base text-[#74726D]">Location details coming soon</p>
                   )}
-                  <Link href={`/locations/${loc.slug}`} className={cn(buttonVariants(), "mt-auto rounded-xl bg-[#1A1A1A] hover:bg-[#333] h-12 px-6 text-base w-fit")}>
+                  <Link
+                    href={`/locations/${loc.slug}`}
+                    data-cta={loc.status === "coming-soon" ? "houston_waitlist" : "explore_location"}
+                    data-cta-location="homepage_location_card"
+                    className={cn(buttonVariants(), "mt-auto rounded-xl bg-[#1A1A1A] hover:bg-[#333] h-12 px-6 text-base w-fit")}
+                  >
                     {loc.status === "coming-soon" ? `${loc.name} Waitlist` : `Explore ${loc.name}`} <ArrowRight className="ml-1.5 h-4 w-4" />
                   </Link>
                 </CardContent>
@@ -333,15 +351,15 @@ export default function HomePage() {
               Coworking &amp; virtual office plans — no long-term leases
             </h2>
             <p className="mx-auto mt-4 max-w-[640px] text-lg text-[#74726D]">
-              <Link href="/las-vegas-day-pass" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Day Pass $25</Link>, <Link href="/las-vegas-hot-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Hot Desk $350/mo</Link>, <Link href="/las-vegas-dedicated-desk" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Dedicated Desk $399/mo</Link>, and <Link href="/las-vegas-virtual-office" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Virtual Office plans</Link> from $39/mo. All memberships are month-to-month with free parking, WiFi, coffee, and meeting room access.
+              <Link href="/las-vegas-day-pass" data-cta="view_day_pass" data-cta-location="homepage_pricing_intro" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Day Pass $25</Link>, <Link href="/las-vegas-hot-desk" data-cta="view_hot_desk" data-cta-location="homepage_pricing_intro" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Hot Desk $350/mo</Link>, <Link href="/las-vegas-dedicated-desk" data-cta="view_dedicated_desk" data-cta-location="homepage_pricing_intro" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Dedicated Desk $399/mo</Link>, and <Link href="/las-vegas-virtual-office" data-cta="view_virtual_office" data-cta-location="homepage_pricing_intro" className="underline decoration-[#EAA820]/50 underline-offset-4 hover:text-[#1A1A1A]">Virtual Office plans</Link> from $39/mo. All memberships are month-to-month with free parking, WiFi, coffee, and meeting room access.
             </p>
           </div>
         </FadeIn>
         <StaggerContainer className="grid gap-6 md:grid-cols-3 mt-4">
           {[
-            { name: "Day Pass", price: "$25", unit: "/day", description: "Book a single day online, even same-day — no membership, no setup, no commitment. Reserve online and bring your laptop.", features: ["Hot desk access", "High-speed WiFi", "Unlimited coffee & tea", "Free parking"], cta: "See Day Pass Details", href: "/las-vegas-day-pass", highlighted: false },
-            { name: "Dedicated Desk", price: "$399", unit: "/month", description: "Your own reserved desk, personal storage, 24/7 biometric access, and a business address with mail.", features: ["24/7 access", "Reserved desk & storage", "Meeting room credits", "Business address & mail"], cta: "See Dedicated Desk Details", href: "/las-vegas-dedicated-desk", highlighted: true },
-            { name: "Private Office", price: "Custom", unit: "", description: "Enclosed, lockable offices for 2-10 people. Fully furnished and customizable.", features: ["24/7 access", "Furnished & customizable", "All utilities included", "Conference room credits"], cta: "Book a Tour", href: BRAND.booking.tourUrl, highlighted: false },
+            { name: "Day Pass", price: "$25", unit: "/day", description: "Book a single day online, even same-day — no membership, no setup, no commitment. Reserve online and bring your laptop.", features: ["Hot desk access", "High-speed WiFi", "Unlimited coffee & tea", "Free parking"], cta: "See Day Pass Details", href: "/las-vegas-day-pass", trackingName: "view_day_pass", highlighted: false },
+            { name: "Dedicated Desk", price: "$399", unit: "/month", description: "Your own reserved desk, personal storage, 24/7 biometric access, and a business address with mail.", features: ["24/7 access", "Reserved desk & storage", "Meeting room credits", "Business address & mail"], cta: "See Dedicated Desk Details", href: "/las-vegas-dedicated-desk", trackingName: "view_dedicated_desk", highlighted: true },
+            { name: "Private Office", price: "Custom", unit: "", description: "Enclosed, lockable offices for 2-10 people. Fully furnished and customizable.", features: ["24/7 access", "Furnished & customizable", "All utilities included", "Conference room credits"], cta: "Book a Tour", href: BRAND.booking.tourUrl, trackingName: "book_tour", highlighted: false },
           ].map((plan) => (
             <StaggerItem key={plan.name} className={plan.highlighted ? "pt-3" : ""}>
               <Card className={cn("h-full border-[#E6E4DF] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-visible", plan.highlighted && "ring-2 ring-[#EAA820] relative")}>
@@ -366,7 +384,12 @@ export default function HomePage() {
                       </li>
                     ))}
                   </ul>
-                  <Link href={plan.href} className={cn(buttonVariants(), "mt-auto rounded-xl h-13 text-base font-semibold", plan.highlighted ? "bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]" : "bg-[#1A1A1A] text-white hover:bg-[#333]")}>
+                  <Link
+                    href={plan.href}
+                    data-cta={plan.trackingName}
+                    data-cta-location="homepage_pricing_card"
+                    className={cn(buttonVariants(), "mt-auto rounded-xl h-13 text-base font-semibold", plan.highlighted ? "bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]" : "bg-[#1A1A1A] text-white hover:bg-[#333]")}
+                  >
                     {plan.cta}
                   </Link>
                 </CardContent>
