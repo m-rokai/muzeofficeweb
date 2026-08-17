@@ -11,7 +11,6 @@ import {
   Navigation,
   Landmark,
   CheckCircle,
-  ArrowRight,
 } from "lucide-react";
 import { buttonVariants } from "@/lib/utils/button-variants";
 import { cn } from "@/lib/utils";
@@ -313,7 +312,7 @@ export default async function LocationDetailPage({
               {isActive ? "Available Services" : "Planned workspace options"}
             </h2>
             <ul className="flex flex-col gap-3">
-            {locationServices.map((service) => (
+              {locationServices.map((service) => (
                 <li key={service!.id}>
                   <Link
                     href={
@@ -334,16 +333,6 @@ export default async function LocationDetailPage({
                 </li>
               ))}
             </ul>
-            {isHoustonLaunchPage && (
-              <Link
-                href="/houston-virtual-office"
-                data-cta="houston_virtual_office"
-                data-cta-location="houston_location_services"
-                className="group mt-2 flex items-center gap-2 rounded-lg border border-[#EAA820]/40 bg-[#FFF9E9] p-4 text-sm font-semibold text-[#8A6000] hover:border-[#EAA820]"
-              >
-                Explore Houston virtual office early access <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            )}
           </div>
           </FadeIn>
 
