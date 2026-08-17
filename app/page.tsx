@@ -264,6 +264,9 @@ export default function HomePage() {
                   <p className="mt-4 text-lg leading-relaxed text-[#74726D]">
                     An independently operated Muze Office franchise is planned for 1800 Augusta Dr in the Galleria / Tanglewood area. Services, hours, pricing, and address use are not active yet.
                   </p>
+                  <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-[#8A6000]">
+                    Explore Houston virtual office early access <ArrowRight className="h-4 w-4" />
+                  </span>
                 </div>
                 <span className="inline-flex shrink-0 items-center gap-2 text-base font-semibold text-[#1A1A1A] transition-colors group-hover:text-[#8A6000]">
                   View Houston plans <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />

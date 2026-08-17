@@ -55,6 +55,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.5,
     },
+    {
+      url: `${baseUrl}/houston-virtual-office`,
+      changeFrequency: "monthly",
+      priority: 0.9,
+    },
   ];
 
   // Include active locations plus Houston's substantive pre-opening hub.
