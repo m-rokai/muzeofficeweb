@@ -246,11 +246,11 @@ export default function HomePage() {
       <Section variant="white">
         <FadeIn>
           <Link
-            href="/locations/houston#waitlist"
-            data-cta="houston_waitlist"
+            href="/houston-virtual-office"
+            data-cta="houston_virtual_office"
             data-cta-location="homepage_houston_feature"
             className="group block"
-            aria-label="Explore the planned Muze Office Houston location and join early access"
+            aria-label="Explore Houston virtual office early access"
           >
             <Card className="overflow-hidden border-[#E6E4DF] bg-[#F7F6F3] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <CardContent className="flex flex-col gap-8 p-8 md:flex-row md:items-center md:justify-between md:p-10">
@@ -269,7 +269,7 @@ export default function HomePage() {
                   </span>
                 </div>
                 <span className="inline-flex shrink-0 items-center gap-2 text-base font-semibold text-[#1A1A1A] transition-colors group-hover:text-[#8A6000]">
-                  View Houston plans <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  Explore Houston virtual office <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </span>
               </CardContent>
             </Card>

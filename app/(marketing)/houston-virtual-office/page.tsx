@@ -10,7 +10,7 @@ import { OG_DEFAULTS } from "@/lib/utils/constants";
 export const metadata: Metadata = {
   title: "Houston Virtual Office | Galleria Opening 2026",
   description:
-    "Explore Muze Office Houston virtual office early access for the planned 2026 Galleria opening at 1800 Augusta Dr. Address and mail services are not active yet; join the waitlist for confirmed details.",
+    "Join early access for Muze Office Houston's planned 2026 virtual office at 1800 Augusta Dr in the Galleria. Services are pre-opening and not active yet.",
   alternates: { canonical: "/houston-virtual-office" },
   openGraph: {
     ...OG_DEFAULTS,
@@ -84,7 +84,7 @@ export default function HoustonVirtualOfficePage() {
               What is planned
             </p>
             <h2 className="mt-3 font-[family-name:var(--font-plus-jakarta)] text-3xl font-semibold text-[#1A1A1A]">
-              A commercial bridge for Houston founders planning ahead
+              Plan your Houston virtual office before opening
             </h2>
             <p className="mt-5 leading-relaxed text-[#74726D]">
               The Houston location is planned for 2026 at 1800 Augusta Dr in
