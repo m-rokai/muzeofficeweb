@@ -62,6 +62,8 @@ export function CTASection({
             {showPhone && (
               <a
                 href="tel:+17023707515"
+                data-cta="call"
+                data-cta-location={`${ctaLocation}_phone`}
                 className={cn(
                   buttonVariants({ variant: "outline", size: "lg" }),
                   "rounded-xl border-white/50 bg-transparent text-white hover:bg-white/10 hover:text-white h-14 px-8 text-base"

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useRef, useState } from "react";
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/analytics/track";
 import { getFirstTouchAttribution } from "@/lib/analytics/attribution";
 
 const OPTIX_SCRIPT_SRC = "https://muzeoffice.optixapp.com/web-plugin/optix.v1.js";
@@ -122,20 +122,30 @@ type OptixBookingWidgetProps = {
    *  booking calendar, "member" mounts the plan signup flow. */
   widgetType?: "booking" | "member";
   helpText?: string;
+  fallbackHref?: string;
+  fallbackLabel?: string;
 };
 
 export function OptixBookingWidget({
   venue,
   widgetType = "booking",
   helpText = "Need catering, a custom setup, or help choosing a room? Call",
+  fallbackHref =
+    widgetType === "booking"
+      ? "https://muzeoffice.optixapp.com/book/"
+      : "https://muzeoffice.optixapp.com/signup/",
+  fallbackLabel =
+    widgetType === "booking"
+      ? "Open booking in new tab"
+      : "Open signup in new tab",
 }: OptixBookingWidgetProps) {
   const widgetRef = useRef<OptixWidgetElement>(null);
   const observerTargetRef = useRef<HTMLDivElement>(null);
   const widgetId = `muze-optix-${useId()}`;
   const [loadAttempt, setLoadAttempt] = useState(0);
   const [loadState, setLoadState] = useState<
-    "idle" | "loading" | "ready" | "error"
-  >("idle");
+    "armed" | "loading" | "ready" | "error"
+  >("armed");
 
   useEffect(() => {
     const widget = widgetRef.current;
@@ -242,6 +252,8 @@ export function OptixBookingWidget({
   useEffect(() => {
     const optixOrigin = `https://${venue}.optixapp.com`;
     const attribution = getFirstTouchAttribution();
+    let confirmationRedirectStarted = false;
+    let redirectTimer: number | undefined;
 
     function handleOptixMessage(message: MessageEvent<unknown>) {
       if (message.origin !== optixOrigin || !message.data) return;
@@ -289,12 +301,25 @@ export function OptixBookingWidget({
       }
 
       track(`optix_${data.event}`, properties);
+
+      if (
+        !confirmationRedirectStarted &&
+        (data.event === "booking_confirmed" ||
+          data.event === "tour_confirmed" ||
+          data.event === "signup_completed")
+      ) {
+        confirmationRedirectStarted = true;
+        redirectTimer = window.setTimeout(() => {
+          window.location.assign("/thanks");
+        }, 500);
+      }
     }
 
     window.addEventListener("message", handleOptixMessage);
 
     return () => {
       window.removeEventListener("message", handleOptixMessage);
+      if (redirectTimer) window.clearTimeout(redirectTimer);
     };
   }, [venue]);
 
@@ -318,17 +343,29 @@ export function OptixBookingWidget({
                   ? "Loading live availability…"
                   : loadState === "error"
                     ? "Live availability could not load."
-                    : "See live availability and book online when you’re ready."}
+                    : "Live availability will load as this section comes into view."}
               </p>
-              {loadState !== "loading" ? (
+              {loadState === "error" ? (
+                <a
+                  href={fallbackHref}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  data-cta="optix_fallback"
+                  data-cta-location="optix_widget_error"
+                  className="mt-4 inline-flex min-h-11 items-center justify-center rounded-full bg-[#1A1A1A] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#333333] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1A1A1A]"
+                >
+                  Open full booking page <span aria-hidden="true">→</span>
+                </a>
+              ) : null}
+              {loadState === "error" ? (
                 <button
                   type="button"
                   onClick={() => setLoadAttempt((attempt) => attempt + 1)}
-                  className="mt-4 inline-flex min-h-11 items-center justify-center rounded-full bg-[#1A1A1A] px-6 py-3 text-sm font-medium text-white transition-colors hover:bg-[#333333] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1A1A1A]"
+                  data-cta="optix_retry"
+                  data-cta-location="optix_widget_error"
+                  className="mt-3 block w-full text-sm font-medium text-[#1A1A1A] underline underline-offset-4"
                 >
-                  {loadState === "error"
-                    ? "Try loading availability again"
-                    : "Load live availability"}
+                  Try loading availability again
                 </button>
               ) : null}
             </div>
@@ -339,12 +376,24 @@ export function OptixBookingWidget({
         {helpText}{" "}
         <a
           href="tel:+17023707515"
+          data-cta="call"
+          data-cta-location="optix_widget_help"
           className="font-medium text-[#1A1A1A] underline underline-offset-2"
         >
           (702) 370-7515
         </a>
         .
       </p>
+      <a
+        href={fallbackHref}
+        target="_blank"
+        rel="noopener noreferrer"
+        data-cta="optix_fallback"
+        data-cta-location="optix_widget_footer"
+        className="mt-2 inline-flex text-sm font-medium text-[#1A1A1A] underline underline-offset-4"
+      >
+        {fallbackLabel} <span aria-hidden="true">↗</span>
+      </a>
     </div>
   );
 }

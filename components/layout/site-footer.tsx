@@ -17,13 +17,12 @@ const cityServiceLabel = (serviceId: string): string => {
 
 export function SiteFooter() {
   const lasVegas = locations.find((l) => l.id === "las-vegas");
-  const houston = locations.find((l) => l.id === "houston");
 
   return (
     <footer className="w-full bg-[#1A1A1A] text-white">
       <div className="mx-auto max-w-[1200px] px-6 py-12">
         {/* Top section: brand + city-service link columns */}
-        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
           {/* Brand */}
           <div className="flex flex-col gap-6">
             <Link href="/" aria-label="Muze Office — home">
@@ -37,8 +36,8 @@ export function SiteFooter() {
               />
             </Link>
             <p className="text-sm text-gray-400">
-              Flexible workspace open in Las Vegas, with an independently
-              operated Houston franchise location planned for 2026.
+              Flexible coworking, virtual offices, private offices, and
+              meeting rooms in Las Vegas.
             </p>
             <a
               href="https://muzeofficefranchise.com"
@@ -73,56 +72,6 @@ export function SiteFooter() {
                     </Link>
                   </li>
                 ))}
-                <li>
-                  <a
-                    href="https://beauty-booking-three.vercel.app"
-                    target="_blank"
-                    rel="noopener"
-                    className="text-sm text-gray-400 transition-colors hover:text-white"
-                  >
-                    Esthetics &amp; Waxing Booth
-                  </a>
-                </li>
-              </ul>
-            </div>
-          )}
-
-          {/* Houston launch hub — service links stay hidden until opening. */}
-          {houston && (
-            <div className="flex flex-col gap-4">
-              <h3 className="text-sm font-semibold">Houston</h3>
-              <ul className="flex flex-col gap-2">
-                <li>
-                  <Link
-                    href="/locations/houston"
-                    className="text-sm text-gray-400 transition-colors hover:text-white"
-                  >
-                    Houston Galleria &mdash; Opening 2026
-                  </Link>
-                </li>
-                {houston.status !== "active" && (
-                  <li>
-                    <Link
-                      href="/locations/houston#waitlist"
-                      data-cta="houston_waitlist"
-                      data-cta-location="footer"
-                      className="text-sm text-[#EAA820] transition-colors hover:text-white"
-                    >
-                      Join Houston early access
-                    </Link>
-                  </li>
-                )}
-                {houston.status === "active" &&
-                  houston.services.map((serviceId) => (
-                    <li key={`hou-${serviceId}`}>
-                      <Link
-                        href={`/houston-${serviceId}`}
-                        className="text-sm text-gray-400 transition-colors hover:text-white"
-                      >
-                        {cityServiceLabel(serviceId)}
-                      </Link>
-                    </li>
-                  ))}
               </ul>
             </div>
           )}
@@ -212,11 +161,11 @@ export function SiteFooter() {
                 <li className="flex items-start gap-2 text-sm text-gray-400">
                   <Clock className="mt-0.5 h-4 w-4 shrink-0" />
                   <span>
-                    Workspace access: 24/7
+                    Open 24/7 for members
                     <br />
-                    Phone: Mon&ndash;Fri, 10am&ndash;5pm
+                    Phone Mon&ndash;Fri, 10am&ndash;5pm
                     <br />
-                    Front desk: Mon&ndash;Fri, 10am&ndash;7pm
+                    Staffed Mon&ndash;Fri, 10am&ndash;7pm
                   </span>
                 </li>
                 <li>

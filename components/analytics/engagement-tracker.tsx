@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { track } from "@vercel/analytics";
+import { track } from "@/lib/analytics/track";
 import { captureFirstTouchAttribution } from "@/lib/analytics/attribution";
 
 /**
@@ -35,12 +35,12 @@ export function EngagementTracker() {
       if (!href) return;
 
       if (href.startsWith("tel:")) {
-        track("phone_click", { number: href.replace("tel:", "") });
+        track("tel_click", { number: href.replace("tel:", "") });
         return;
       }
 
       if (href.startsWith("mailto:")) {
-        track("email_click", { address: href.replace("mailto:", "") });
+        track("mailto_click", { address: href.replace("mailto:", "") });
         return;
       }
 

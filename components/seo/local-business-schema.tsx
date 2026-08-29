@@ -10,7 +10,9 @@ export function LocalBusinessSchema({
   locationId,
 }: LocalBusinessSchemaProps) {
   const location = getLocation(locationId);
-  if (!location) return null;
+  // Do not publish LocalBusiness markup for a planned location. Structured
+  // data must describe an operating business that users can visit now.
+  if (!location || location.status !== "active") return null;
 
   const { address, geo, hours } = location;
 
@@ -46,7 +48,7 @@ export function LocalBusinessSchema({
     "@type": "LocalBusiness",
     "@id": `${locationUrl}#localbusiness`,
     name: location.nickname,
-    description: `Flexible coworking, virtual offices, private offices, meeting rooms, and event space in ${address.city}, ${address.state}.${landmarkPhrase}${localCue} Free parking, high-speed WiFi, on-site cafe, and month-to-month memberships with no long-term leases.`,
+    description: `Flexible coworking, virtual offices, private offices, meeting rooms, and event space in ${address.city}, ${address.state}.${landmarkPhrase}${localCue} Staffed Mon–Fri, 10am–7pm. Free parking, high-speed WiFi, on-site cafe, and month-to-month memberships with no long-term leases.`,
     image: `${BRAND.url}/images/spaces/${location.slug}.jpg`,
     url: locationUrl,
     telephone: location.phoneRaw !== "TBD" ? location.phoneRaw : undefined,
@@ -135,7 +137,7 @@ export function LocalBusinessSchema({
           itemOffered: {
             "@type": "Service",
             name: "Dedicated Desk",
-            description: "Your own reserved desk with 24/7 access, storage, and mail handling.",
+            description: "Your own reserved desk, storage, mail handling, and a workspace that is open 24/7 for members.",
           },
         },
         {

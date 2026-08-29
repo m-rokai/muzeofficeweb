@@ -28,7 +28,6 @@ export function PersonSchema({ person }: PersonSchemaProps) {
       "Flexible workspace",
       "Private office leasing",
       "Las Vegas commercial real estate",
-      "Houston commercial real estate",
       "Workspace franchising",
     ],
   };

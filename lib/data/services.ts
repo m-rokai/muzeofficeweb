@@ -319,6 +319,8 @@ export const services: Service[] = [
       "Furnished private offices with month-to-month terms. All utilities, WiFi, conference rooms, and parking included.",
     icon: "Lock",
     tiers: [
+      // TODO(Robert): Supply the approved private-office "from $X/mo" anchor.
+      // Keep these prices null until then; never infer a public price.
       {
         name: "Solo Office",
         price: null,

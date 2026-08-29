@@ -223,7 +223,10 @@ export function renderCityMarkdown(locationId: string): string | null {
 
   // Services at this location
   const cityServiceSlugs = Object.values(cityServiceData)
-    .filter((entry) => entry.cityId === location.id)
+    .filter(
+      (entry) =>
+        entry.cityId === location.id && location.status === "active",
+    )
     .map((entry) => entry.slug);
 
   if (cityServiceSlugs.length > 0) {

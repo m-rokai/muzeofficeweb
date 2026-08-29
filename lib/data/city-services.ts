@@ -323,10 +323,10 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "day-pass",
     h1: "Day Pass at Muze Office Las Vegas",
     heroSubtitle:
-      "Our Las Vegas workspace is open 24/7. Buy and activate a $25 Day Pass online the same day, then work in a quiet area until midnight.",
-    metaTitle: "Las Vegas Day Pass — $25, Open 24/7",
+      "Day pass access: same-day activation until midnight. Members: 24/7. Buy a $25 Day Pass online and work in a quiet Las Vegas workspace.",
+    metaTitle: "Las Vegas Day Pass — $25, Access Until Midnight",
     metaDescription:
-      "Las Vegas coworking day pass for $25. Open 24/7; buy and activate online the same day and work until midnight. Gigabit WiFi and Herman Miller furniture.",
+      "Las Vegas coworking day pass for $25. Day pass access: same-day activation until midnight. Members: 24/7. Gigabit WiFi and Herman Miller furniture.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Freelancers and consultants here for a single day of focused work",
@@ -337,7 +337,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Anyone whose coffee shop just asked them to buy another drink",
     ],
     locationCallout:
-      "Open 24/7 at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 — 10 minutes from Harry Reid International Airport, off I-215, with free parking on-site. Buy and activate your Day Pass online the same day; it stays valid until midnight.",
+      "Day pass access: same-day activation until midnight. Members: 24/7. Find us at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 — 10 minutes from Harry Reid International Airport, off I-215, with free parking on-site.",
     longFormBody: {
       bestFor: [
         {
@@ -378,7 +378,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
         heading: "Why the Day Pass at Muze Office Las Vegas",
         paragraphs: [
           "Most people who need a real workspace for a single day in Las Vegas end up at the wrong place for the wrong reason. Coffee shops on Paradise Rd and the Strip fill up by 10am and the WiFi collapses the moment you try to screen-share. Hotel lobbies are crowded, noisy, and mostly out of seats with outlets. Airport lounges at LAS charge $50-65 for a crowded counter that isn't a desk. Hotel business centers run $15-30 for a windowless room with a decade-old desktop. The $25 Day Pass at Muze Office replaces all of those with a quiet workspace, an ergonomic Herman Miller chair and height-adjustable desk, gigabit fiber WiFi, bottled water, coffee, free parking, and phone booths when you need a private call. Bring your laptop; monitors are not provided.",
-          "Muze Office Las Vegas is open 24 hours a day, seven days a week. Buy and activate your Day Pass online — even the same day — and use the workspace until midnight. Booking takes only a few minutes, and your pass is ready without a membership or setup fee. Day pass holders get the same quiet coworking area, gigabit WiFi, bottled water, coffee, ergonomic furniture, phone booths, printing, and cafe access as monthly members. Meeting rooms are separate hourly bookings.",
+          "Day pass access: same-day activation until midnight. Members: 24/7. Booking takes only a few minutes, and your pass is ready without a membership or setup fee. Day pass holders get the same quiet coworking area, gigabit WiFi, bottled water, coffee, ergonomic furniture, phone booths, printing, and cafe access as monthly members. Meeting rooms are separate hourly bookings.",
           "The location is the part that makes the Day Pass practical for out-of-town visitors. 6860 Bermuda Rd, Suite 200 sits in the 89119 business corridor off I-215, 10 minutes from Harry Reid International Airport and well away from Strip tourist traffic. That means you can fly into LAS in the morning, rent a car, spend the middle of the day working, make a client meeting, and be back at the terminal before your return flight — all with free parking, no Strip traffic, and a clean place to take the calls that matter.",
         ],
       },
@@ -393,7 +393,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       howToGetStarted: {
         heading: "How to use a Day Pass at Muze Office Las Vegas",
         paragraphs: [
-          "Buy and activate your Day Pass online — even the same day — for 6860 Bermuda Rd, Suite 200. The Las Vegas space is open 24/7, and your pass remains active until midnight on the day you activate it. The process takes only a few minutes. Booking ahead still makes sense during major convention weeks (CES, SEMA, NAB, MAGIC, etc.) so your plans are settled before you arrive.",
+          "Buy and activate your Day Pass online — even the same day — for 6860 Bermuda Rd, Suite 200. Day pass access: same-day activation until midnight. Members: 24/7. The process takes only a few minutes. Booking ahead still makes sense during major convention weeks (CES, SEMA, NAB, MAGIC, etc.) so your plans are settled before you arrive.",
           "The Day Pass covers a quiet coworking area, gigabit fiber WiFi, free bottled water and coffee, an ergonomic Herman Miller chair, a Herman Miller height-adjustable desk, free parking, phone-booth access, printing, and the on-site Muze Cafe. Bring your laptop because monitors are not provided. Meeting rooms are a separate booking from $39 to $99 per hour.",
           "If you come back more than one week a month, move to a Hot Desk or Dedicated Desk. See /las-vegas-hot-desk for any-desk 24/7 biometric access, or /las-vegas-dedicated-desk to add a reserved desk and a business address with mail.",
         ],

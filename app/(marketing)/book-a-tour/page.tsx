@@ -188,7 +188,7 @@ export default function BookATourPage() {
                   </li>
                   <li className="flex items-center gap-2">
                     <Clock className="h-4 w-4 shrink-0 text-[#EAA820]" />
-                    Mon&ndash;Fri, 10 am &ndash; 7 pm
+                    Staffed Mon&ndash;Fri, 10am&ndash;7pm
                   </li>
                   <li className="flex items-center gap-2">
                     <Phone className="h-4 w-4 shrink-0 text-[#EAA820]" />

@@ -20,6 +20,7 @@ import { GoogleReviewsBadge } from "@/components/marketing/google-reviews-badge"
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 import { ServiceSchema } from "@/components/seo/service-schema";
 import { OptixBookingWidget } from "@/components/marketing/optix-booking-widget";
+import { EmailCapture } from "@/components/forms/email-capture";
 import { RelatedReading } from "@/components/marketing/related-reading";
 import { FadeIn, StaggerContainer, StaggerItem } from "@/components/marketing/animate";
 import { buttonVariants } from "@/lib/utils/button-variants";
@@ -142,11 +143,21 @@ export default async function CityServicePage({ params }: PageProps) {
   if (isComingSoon) {
     permanentRedirect(`/locations/${location.slug}#waitlist`);
   }
-  const hasOnlineBooking =
-    !isComingSoon &&
-    location.slug === "las-vegas" &&
-    (service.id === "meeting-rooms" || service.id === "day-pass");
+  const embeddedWidgetType =
+    !isComingSoon && location.slug === "las-vegas"
+      ? ({
+          "virtual-office": "member",
+          coworking: "member",
+          "day-pass": "member",
+          "hot-desk": "member",
+          "dedicated-desk": "member",
+          "meeting-rooms": "booking",
+          "conference-rooms": "booking",
+        } as const)[service.id]
+      : undefined;
+  const hasOnlineBooking = Boolean(embeddedWidgetType);
   const isDayPass = service.id === "day-pass";
+  const isEmbeddedSignup = embeddedWidgetType === "member" && !isDayPass;
   // Virtual-office shoppers want the address, not a tour of an empty desk.
   // Route them to /contact so the lead arrives via the contact form.
   const isVirtualOffice = service.id === "virtual-office";
@@ -177,7 +188,9 @@ export default async function CityServicePage({ params }: PageProps) {
   const primaryCtaLabel = isComingSoon
     ? "Join Waitlist"
     : hasOnlineBooking
-      ? "Book Online"
+      ? isEmbeddedSignup
+        ? "Sign Up Online"
+        : "Book Online"
       : isVirtualOffice
         ? `Get My ${location.name} Address`
         : isEventSpace
@@ -185,7 +198,11 @@ export default async function CityServicePage({ params }: PageProps) {
           : "Book a Tour";
   const pageSections = [
     { href: "#pricing", label: "Pricing", show: true },
-    { href: "#book-online", label: "Book online", show: hasOnlineBooking },
+    {
+      href: "#book-online",
+      label: isEmbeddedSignup ? "Sign up online" : "Book online",
+      show: hasOnlineBooking,
+    },
     { href: "#amenities", label: "What’s included", show: true },
     {
       href: pageData.longFormBody?.bestFor?.length
@@ -246,11 +263,11 @@ export default async function CityServicePage({ params }: PageProps) {
                   aria-hidden="true"
                 />
                 <div>
-                  <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-[#EAA820]">
-                    Las Vegas access
-                  </span>
+                  <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-[#EAA820]">Access</span>
                   <span className="block font-semibold text-white">
-                    Open 24 hours, 7 days a week
+                    {isComingSoon
+                      ? "Hours available when this location opens"
+                      : "Day pass access: same-day activation until midnight. Members: 24/7."}
                   </span>
                 </div>
               </div>
@@ -273,6 +290,16 @@ export default async function CityServicePage({ params }: PageProps) {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               href={primaryCtaHref}
+              data-cta={
+                hasOnlineBooking
+                  ? isEmbeddedSignup
+                    ? "signup_online"
+                    : "book_online"
+                  : isEventSpace
+                    ? "event_space_inquiry"
+                    : "contact_us"
+              }
+              data-cta-location={`city_service_${cityService}_hero`}
               className={cn(
                 buttonVariants({ size: "lg" }),
                 "rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
@@ -280,22 +307,11 @@ export default async function CityServicePage({ params }: PageProps) {
             >
               {primaryCtaLabel}
             </Link>
-            {!isComingSoon && isVirtualOffice && (
-              <a
-                href={BRAND.booking.signupUrl}
-                data-cta="signup_online"
-                data-cta-location={`city_service_${cityService}_hero`}
-                className={cn(
-                  buttonVariants({ size: "lg" }),
-                  "rounded-lg bg-white text-[#1A1A1A] hover:bg-gray-200"
-                )}
-              >
-                Sign Up Online
-              </a>
-            )}
             {!isComingSoon && location.phone !== "TBD" && (
               <a
                 href={`tel:${location.phoneRaw}`}
+                data-cta="call"
+                data-cta-location={`city_service_${cityService}_hero`}
                 className={cn(
                   buttonVariants({ variant: "outline", size: "lg" }),
                   "rounded-lg border-white/50 bg-transparent text-white hover:bg-white/10 hover:text-white"
@@ -373,7 +389,9 @@ export default async function CityServicePage({ params }: PageProps) {
                       : isEventSpace
                         ? "Check Date & Availability"
                       : hasOnlineBooking
-                        ? "Book Online"
+                        ? isEmbeddedSignup
+                          ? "Sign Up Online"
+                          : "Book Online"
                       : "Sign Up Online"
                     : "Contact Us"
                 }
@@ -390,7 +408,9 @@ export default async function CityServicePage({ params }: PageProps) {
                   isEventSpace
                     ? "event_space_inquiry"
                     : hasOnlineBooking
-                    ? "book_online"
+                    ? isEmbeddedSignup
+                      ? "signup_online"
+                      : "book_online"
                     : !isComingSoon && tier.price !== null
                       ? "signup_online"
                       : "contact_us"
@@ -477,7 +497,7 @@ export default async function CityServicePage({ params }: PageProps) {
         </Section>
       )}
 
-      {hasOnlineBooking && (
+      {hasOnlineBooking && embeddedWidgetType && (
         <Section variant="gray" id="book-online">
           <div className="mx-auto max-w-[1100px]">
             <FadeIn>
@@ -485,19 +505,33 @@ export default async function CityServicePage({ params }: PageProps) {
                 <h2 className="font-[family-name:var(--font-plus-jakarta)] text-3xl font-semibold text-[#1A1A1A] md:text-4xl lg:text-5xl">
                   {isDayPass
                     ? "Get Your Day Pass Online"
-                    : "Book Your Meeting Room Online"}
+                    : isEmbeddedSignup
+                      ? `Start Your ${service.name} Signup Online`
+                      : `Book Your ${service.name} Online`}
                 </h2>
                 <p className="max-w-[640px] text-lg text-[#74726D]">
                   {isDayPass
                     ? "Buy and activate your $25 pass online in minutes, even same-day. Work in our quiet coworking area until midnight with gigabit fiber WiFi, bottled water, coffee, ergonomic Herman Miller furniture, and free parking."
-                    : "Choose your room, time, and duration below. The live Optix calendar shows current availability for Muze Office meeting rooms in Las Vegas."}
+                    : isEmbeddedSignup
+                      ? `Choose your ${service.name.toLowerCase()} plan and complete signup below without leaving MuzeOffice.com.`
+                      : "Choose your room, time, and duration below. The live Optix calendar shows current availability for Muze Office meeting rooms in Las Vegas."}
                 </p>
               </div>
             </FadeIn>
             <div className="mt-10">
               <OptixBookingWidget
                 venue="muzeoffice"
-                widgetType={isDayPass ? "member" : "booking"}
+                widgetType={embeddedWidgetType}
+                fallbackHref={
+                  isEmbeddedSignup
+                    ? BRAND.booking.signupUrl
+                    : "https://muzeoffice.optixapp.com/book/"
+                }
+                fallbackLabel={
+                  isEmbeddedSignup
+                    ? "Open signup in new tab"
+                    : "Open booking in new tab"
+                }
                 helpText={
                   isDayPass
                     ? "Questions before your first visit, or booking for a group? Call"
@@ -673,15 +707,31 @@ export default async function CityServicePage({ params }: PageProps) {
                 {!isComingSoon && (
                   <div className="mt-8 flex flex-wrap items-center gap-4">
                     <Link
-                      href={isEventSpace ? contactHref : BRAND.booking.signupUrl}
-                      data-cta={isEventSpace ? "event_space_inquiry" : "signup_online"}
+                      href={
+                        isEventSpace
+                          ? contactHref
+                          : hasOnlineBooking
+                            ? "#book-online"
+                            : BRAND.booking.signupUrl
+                      }
+                      data-cta={
+                        isEventSpace
+                          ? "event_space_inquiry"
+                          : isEmbeddedSignup
+                            ? "signup_online"
+                            : "book_online"
+                      }
                       data-cta-location={`city_service_${cityService}_details`}
                       className={cn(
                         buttonVariants({ size: "lg" }),
                         "rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
                       )}
                     >
-                      {isEventSpace ? "Check Date & Availability" : "Sign Up Online"}
+                      {isEventSpace
+                        ? "Check Date & Availability"
+                        : isEmbeddedSignup
+                          ? "Sign Up Online"
+                          : "Book Online"}
                     </Link>
                     <Link
                       href={contactHref}
@@ -744,6 +794,10 @@ export default async function CityServicePage({ params }: PageProps) {
         />
       )}
 
+      {(isDayPass || isVirtualOffice) && (
+        <EmailCapture placement={`city_service_${cityService}_after_faq`} />
+      )}
+
       {/* ── Related Reading ───────────────────────────────── */}
       <RelatedReading
         slugs={getRelatedBlogSlugsForService(service.id)}
@@ -759,7 +813,9 @@ export default async function CityServicePage({ params }: PageProps) {
             : isDayPass
               ? `Ready to Try a Day Pass in ${location.name}?`
             : hasOnlineBooking
-              ? `Ready to Book ${service.name} in ${location.name}?`
+              ? isEmbeddedSignup
+                ? `Ready to Start ${service.name} in ${location.name}?`
+                : `Ready to Book ${service.name} in ${location.name}?`
             : isVirtualOffice
               ? `Ready for a Real ${location.name} Business Address?`
             : isEventSpace
@@ -772,7 +828,9 @@ export default async function CityServicePage({ params }: PageProps) {
             : isDayPass
               ? `Buy and activate online today, then work until midnight — gigabit fiber WiFi, bottled water, coffee, Herman Miller furniture, and free parking included. Bring your laptop; monitors are not provided.`
             : hasOnlineBooking
-              ? `Reserve your room online now, or call us if you need catering, AV help, or a custom setup for your meeting.`
+              ? isEmbeddedSignup
+                ? `Choose your plan and complete signup here without leaving MuzeOffice.com, or call us if you want help choosing the right fit.`
+                : `Reserve your room online now, or call us if you need catering, AV help, or a custom setup for your meeting.`
             : isVirtualOffice
               ? `Pick a tier, complete USPS Form 1583, and use the address where the receiving agency, bank, or platform permits a commercial mail-receiving address. Registered-agent and Google Business Profile requirements are separate.`
             : isEventSpace
@@ -781,6 +839,7 @@ export default async function CityServicePage({ params }: PageProps) {
         }
         primaryLabel={primaryCtaLabel}
         primaryHref={primaryCtaHref}
+        ctaName={isEmbeddedSignup ? "signup_online" : hasOnlineBooking ? "book_online" : undefined}
         showPhone={!isComingSoon && location.phone !== "TBD"}
         ctaLocation={`city_service_${cityService}_bottom`}
         phone={location.phone}

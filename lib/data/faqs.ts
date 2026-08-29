@@ -77,7 +77,7 @@ const coworkingFAQs: FAQ[] = [
   {
     question: "What are the coworking hours?",
     answer:
-      "Muze Office Las Vegas is open 24 hours a day, seven days a week. A $25 Day Pass can be bought and activated online the same day and remains valid until midnight. Monthly members have ongoing 24/7 access.",
+      "Open 24/7 for members. Day pass access: same-day activation until midnight. Members: 24/7. Staffed Mon–Fri, 10am–7pm.",
   },
   {
     question: "Is parking free?",
@@ -219,7 +219,7 @@ const airportCoworkingFAQs: FAQ[] = [
   {
     question: "What are the hours?",
     answer:
-      "Muze Office Las Vegas is open 24/7. Buy and activate a $25 Day Pass online the same day and use the space until midnight — no membership required.",
+      "Day pass access: same-day activation until midnight. Members: 24/7. No membership is required for a $25 Day Pass.",
   },
   {
     question: "Is parking free?",
@@ -588,32 +588,22 @@ const locationsOverviewFAQs: FAQ[] = [
   {
     question: "Where is Muze Office located?",
     answer:
-      "Open in Las Vegas at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 (10 minutes from Harry Reid International Airport, off I-215). An independently operated Muze Office franchise location is planned for Houston in 2026 at 1800 Augusta Dr, Houston, TX 77057 in the Galleria / Tanglewood area.",
+      "Muze Office is open in Las Vegas at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119, about 10 minutes from Harry Reid International Airport via I-215.",
   },
   {
-    question: "Which cities are open?",
+    question: "Is the Las Vegas location open?",
     answer:
-      "Las Vegas is open now and accepting members, day pass visitors, and meeting room bookings at 6860 Bermuda Rd, Suite 200. Houston is planned to open in 2026; join early access for confirmed timing and availability updates.",
+      "Yes. Las Vegas is accepting members, same-day Day Pass visitors, meeting-room bookings, and scheduled tours.",
   },
   {
-    question: "How do I find the Houston location?",
+    question: "Is parking available?",
     answer:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, 15 minutes from the Texas Medical Center, and 25 minutes from George Bush Intercontinental (IAH) and William P. Hobby (HOU).",
-  },
-  {
-    question: "Will multi-city memberships be available?",
-    answer:
-      "Multi-city access has not been finalized for Houston. Las Vegas memberships are available now; join Houston early access for confirmed launch options.",
-  },
-  {
-    question: "Is parking available at each location?",
-    answer:
-      "Yes. Free parking is included at our Las Vegas location for all members, day pass visitors, meeting room guests, and event attendees. Houston will also include parking when it opens.",
+      "Yes. Free parking is included for Las Vegas members, day pass visitors, meeting room guests, and event attendees.",
   },
   {
     question: "How do I schedule a tour?",
     answer:
-      "For Las Vegas, book a free tour through our booking page or call (702) 370-7515. For Houston, reach out via our contact page to join the waitlist and get notified about pre-opening tours.",
+      "Book a free Las Vegas tour through the booking page or call (702) 370-7515 during phone hours.",
   },
 ];
 
@@ -631,7 +621,7 @@ const lasVegasLocationFAQs: FAQ[] = [
   {
     question: "What are your hours in Las Vegas?",
     answer:
-      "The Las Vegas workspace is open 24/7. A Day Pass can be bought and activated online the same day and used until midnight. The front desk is staffed Monday through Friday, 10 AM to 7 PM, and phones are answered Monday through Friday, 10 AM to 5 PM.",
+      "Open 24/7 for members. Staffed Mon–Fri, 10am–7pm. Phone Mon–Fri, 10am–5pm. Day pass access: same-day activation until midnight. Members: 24/7.",
   },
   {
     question: "Is there free parking at the Las Vegas location?",

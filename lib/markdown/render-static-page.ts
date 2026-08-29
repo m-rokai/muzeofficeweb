@@ -20,7 +20,7 @@ function renderHome(): string {
   lines.push("# Muze Office");
   lines.push("");
   lines.push(
-    "> Flexible workspace in Las Vegas and Houston — coworking, virtual offices, private offices, meeting rooms, and event space. Month-to-month. Free parking. No long-term leases."
+    "> Flexible workspace in Las Vegas — coworking, virtual offices, private offices, meeting rooms, and event space. Month-to-month. Free parking. No long-term leases."
   );
   lines.push("");
   lines.push(`**Canonical URL:** ${BRAND.url}/`);
@@ -60,7 +60,7 @@ function renderAbout(): string {
   return [
     "# About Muze Office",
     "",
-    "> Muze Office provides flexible coworking, virtual offices, private offices, meeting rooms, and event space in Las Vegas and Houston. No long-term leases. Month-to-month memberships designed for modern professionals.",
+    "> Muze Office provides flexible coworking, virtual offices, private offices, meeting rooms, and event space in Las Vegas. No long-term leases. Month-to-month memberships designed for modern professionals.",
     "",
     `**Canonical URL:** ${BRAND.url}/about`,
     "",
@@ -77,14 +77,12 @@ function renderAbout(): string {
     "## Locations",
     "",
     "- Las Vegas — 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119. 10 minutes from Harry Reid International Airport via I-215.",
-    "- Houston — 1800 Augusta Dr, Houston, TX 77057. Inside the 610 Loop in the Galleria / Tanglewood area.",
     "",
   ].join("\n");
 }
 
 function renderContact(): string {
   const lv = locations.find((l) => l.id === "las-vegas");
-  const hou = locations.find((l) => l.id === "houston");
   const lines: string[] = [
     "# Contact Muze Office",
     "",
@@ -97,28 +95,9 @@ function renderContact(): string {
     lines.push(`- **Address:** ${lv.address.street}, ${lv.address.city}, ${lv.address.state} ${lv.address.zip}`);
     lines.push(`- **Phone:** ${lv.phone}`);
     lines.push(`- **Email:** ${lv.email}`);
-    lines.push(
-      `- **Hours:** ${
-        lv.hours.is24Hours
-          ? "Open 24/7"
-          : `Monday–Friday, ${lv.hours.weekdays.open}–${lv.hours.weekdays.close}`
-      }`
-    );
-  }
-  lines.push("");
-  lines.push("## Houston");
-  lines.push("");
-  if (hou) {
-    lines.push(`- **Address:** ${hou.address.street}, ${hou.address.city}, ${hou.address.state} ${hou.address.zip}`);
-    if (hou.phone !== "TBD") lines.push(`- **Phone:** ${hou.phone}`);
-    lines.push(`- **Email:** ${hou.email}`);
-    lines.push(
-      `- **Hours:** ${
-        hou.hours.is24Hours
-          ? "Open 24/7"
-          : `Monday–Friday, ${hou.hours.weekdays.open}–${hou.hours.weekdays.close}`
-      }`
-    );
+    lines.push("- **Member access:** Open 24/7 for members");
+    lines.push("- **Front desk:** Staffed Mon–Fri, 10am–7pm");
+    lines.push("- **Phone:** Phone Mon–Fri, 10am–5pm");
   }
   lines.push("");
   lines.push("## Book a Tour");
@@ -134,7 +113,7 @@ function renderBookATour(): string {
     "",
     `**Canonical URL:** ${BRAND.url}/book-a-tour`,
     "",
-    "Schedule a 20–30 minute walkthrough of the Las Vegas coworking floor, private offices, meeting rooms, and on-site cafe. Houston is not open for tours yet; join early access for launch updates.",
+    "Schedule a 20–30 minute walkthrough of the Las Vegas coworking floor, private offices, meeting rooms, and on-site cafe.",
     "",
     "## Las Vegas",
     "",
@@ -142,12 +121,7 @@ function renderBookATour(): string {
     "- (702) 370-7515",
     "- 10 minutes from Harry Reid International Airport",
     "",
-    "## Houston",
-    "",
-    "- 1800 Augusta Dr, Houston, TX 77057",
-    "- Inside the 610 Loop in the Galleria / Tanglewood area",
-    "",
-    "Email access@muzeoffice.com to book a tour at either location.",
+    "Email access@muzeoffice.com to book a Las Vegas tour.",
     "",
   ].join("\n");
 }
@@ -208,17 +182,17 @@ function renderLocationsIndex(): string {
     );
     if (loc.phone !== "TBD") lines.push(`- **Phone:** ${loc.phone}`);
     lines.push(`- **Email:** ${loc.email}`);
-    lines.push(
-      `- **Hours:** ${
-        loc.hours.is24Hours
-          ? "Open 24/7"
-          : `Monday–Friday, ${loc.hours.weekdays.open}–${loc.hours.weekdays.close}`
-      }`
-    );
+    lines.push("- **Member access:** Open 24/7 for members");
+    lines.push("- **Front desk:** Staffed Mon–Fri, 10am–7pm");
+    lines.push("- **Phone hours:** Phone Mon–Fri, 10am–5pm");
     lines.push(`- **Page:** ${BRAND.url}/locations/${loc.slug}`);
     lines.push(`- **Markdown:** ${BRAND.url}/locations/${loc.slug}.md`);
     lines.push("");
   }
+  lines.push("## Muze Office Houston");
+  lines.push("");
+  lines.push(`- **Status:** Coming 2026 — ${BRAND.url}/locations/houston`);
+  lines.push("");
   return lines.join("\n");
 }
 
@@ -229,7 +203,7 @@ function renderBlogIndex(): string {
     "",
     `**Canonical URL:** ${BRAND.url}/blog`,
     "",
-    `${posts.length} published posts on coworking, virtual offices, Nevada LLCs, Las Vegas / Houston business, and flexible workspace strategy.`,
+    `${posts.length} published posts on coworking, virtual offices, Nevada LLCs, Las Vegas business, and flexible workspace strategy.`,
     "",
     "## All Posts",
     "",

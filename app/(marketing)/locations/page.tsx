@@ -26,18 +26,10 @@ export const metadata: Metadata = {
 
 const locationImages: Record<string, string> = {
   "las-vegas": "/images/spaces/las-vegas.jpg",
-  houston: "/images/spaces/houston.jpg",
 };
 
 const locationServices: Record<string, string[]> = {
   "las-vegas": [
-    "Virtual Office",
-    "Coworking",
-    "Private Office",
-    "Meeting Rooms",
-    "Event Space",
-  ],
-  houston: [
     "Virtual Office",
     "Coworking",
     "Private Office",
@@ -59,10 +51,8 @@ export default function LocationsPage() {
               Our Locations
             </h1>
             <p className="mt-4 text-base text-[#74726D] md:text-lg">
-              Open in Las Vegas (6860 Bermuda Rd, Suite 200), with a second
-              independently operated franchise location planned for Houston in 2026 (1800 Augusta Dr in the
-              Galleria / Tanglewood area). Las Vegas has free parking; Houston
-              parking details will be confirmed before opening.
+              Open in Las Vegas at 6860 Bermuda Rd, Suite 200, with free
+              parking and flexible month-to-month workspace options.
             </p>
           </div>
         </FadeIn>
@@ -70,8 +60,8 @@ export default function LocationsPage() {
 
       {/* Location Cards */}
       <Section variant="gray">
-        <div className="grid gap-8 md:grid-cols-2">
-          {locations.map((loc, i) => (
+        <div className="grid max-w-[760px] gap-8">
+          {locations.filter((loc) => loc.status === "active").map((loc, i) => (
             <ScaleIn key={loc.id} delay={i * 0.15}>
             <Card
               className="overflow-hidden border-[#E6E4DF] bg-white"
@@ -79,45 +69,28 @@ export default function LocationsPage() {
               <div className="relative aspect-[16/9] w-full">
                 <Image
                   src={locationImages[loc.slug] ?? "/images/spaces/las-vegas.jpg"}
-                  alt={
-                    loc.slug === "las-vegas"
-                      ? `Muze Office ${loc.name} coworking and private office building at 6860 Bermuda Rd, Suite 200, 10 minutes from Harry Reid International Airport`
-                      : "Houston skyline representing the planned Muze Office Galleria-area location"
-                  }
+                  alt={`Muze Office ${loc.name} coworking and private office building at 6860 Bermuda Rd, Suite 200, 10 minutes from Harry Reid International Airport`}
                   fill
                   sizes="(min-width: 768px) 50vw, 100vw"
                   className="object-cover"
                 />
-                {loc.status === "coming-soon" && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-                    <Badge className="bg-white text-[#1A1A1A]">Coming Soon</Badge>
-                  </div>
-                )}
               </div>
               <CardContent className="flex flex-col gap-3 p-6">
                 <div className="flex items-center gap-2">
                   <h2 className="font-[family-name:var(--font-plus-jakarta)] text-xl font-semibold">
                     Muze Office {loc.name}
                   </h2>
-                  {loc.status === "active" && (
-                    <Badge className="bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]">
-                      Open
-                    </Badge>
-                  )}
+                  <Badge className="bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]">
+                    Open
+                  </Badge>
                 </div>
 
                 <div className="flex items-start gap-2 text-sm text-[#74726D]">
                   <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#EAA820]" />
-                  {loc.address.street !== "TBD" ? (
-                    <span>
-                      {loc.address.street}, {loc.address.city},{" "}
-                      {loc.address.state} {loc.address.zip}
-                    </span>
-                  ) : (
-                    <span>
-                      {loc.address.city}, {loc.address.state} &mdash; Address TBD
-                    </span>
-                  )}
+                  <span>
+                    {loc.address.street}, {loc.address.city},{" "}
+                    {loc.address.state} {loc.address.zip}
+                  </span>
                 </div>
 
                 {loc.phone !== "TBD" && (
@@ -156,19 +129,28 @@ export default function LocationsPage() {
                     "mt-4 w-fit rounded-lg bg-[#1A1A1A]"
                   )}
                 >
-                  {loc.status === "active" ? `Explore ${loc.name}` : `${loc.name} Waitlist`}
+                  Explore {loc.name}
                 </Link>
               </CardContent>
             </Card>
             </ScaleIn>
           ))}
         </div>
+        <Link
+          href="/locations/houston"
+          data-cta="houston_location"
+          data-cta-location="locations_index_row"
+          className="mt-8 flex max-w-[760px] items-center justify-between rounded-2xl border border-[#E6E4DF] bg-white px-5 py-4 text-sm font-semibold text-[#1A1A1A] transition-colors hover:border-[#EAA820]"
+        >
+          <span>Muze Office Houston</span>
+          <span className="text-[#8A6000]">Coming 2026 →</span>
+        </Link>
       </Section>
 
       {/* FAQ */}
       <FAQSection
         heading="Muze Office locations — FAQ"
-        description="Answers to common questions about our Las Vegas location and upcoming Houston opening."
+        description="Answers to common questions about visiting our Las Vegas workspace."
         faqs={faqs}
       />
 

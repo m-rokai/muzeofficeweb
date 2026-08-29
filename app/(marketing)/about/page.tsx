@@ -17,7 +17,7 @@ import { ZACHARY_DEVON_DUONG } from "@/lib/data/people";
 export const metadata: Metadata = {
   title: "About Muze Office — Workspaces That Inspire",
   description:
-    "Muze Office offers flexible coworking, virtual offices, private offices, and meeting rooms in Las Vegas — Houston coming soon. Month-to-month, no long-term leases.",
+    "Muze Office offers flexible coworking, virtual offices, private offices, and meeting rooms in Las Vegas. Month-to-month, no long-term leases.",
   alternates: { canonical: "/about" },
   openGraph: { ...OG_DEFAULTS, type: "website", url: "/about" },
 };
@@ -51,7 +51,7 @@ const values = [
 
 // Every stat here is verifiable from services.ts or locations.ts. Earlier
 // versions of this page quoted an unverified "500+ professionals" and "2
-// locations" (misleading while Houston is coming-soon); those were replaced
+// locations" (misleading while only Las Vegas is active); those were replaced
 // with pricing and location facts that can be checked directly.
 const stats = [
   { value: "From $25", label: "Day pass — no membership" },
@@ -122,9 +122,8 @@ export default function AboutPage() {
               <p>
                 Muze started in Las Vegas with a space on Bermuda Road — 10 minutes
                 from the airport, free parking, and a full-service cafe on-site.
-                Houston is next, near the Galleria and Texas Medical Center. Both
-                locations share the same commitment: no long-term leases, no hidden
-                fees, and a workspace you actually enjoy walking into.
+                It combines no long-term leases, transparent terms, and a workspace
+                you actually enjoy walking into.
               </p>
             </FadeIn>
           </div>

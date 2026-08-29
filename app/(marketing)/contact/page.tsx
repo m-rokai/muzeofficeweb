@@ -30,7 +30,6 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   const lasVegas = getLocation("las-vegas");
-  const houston = getLocation("houston");
   return (
     <>
       <LocalBusinessSchema locationId="las-vegas" />
@@ -111,9 +110,9 @@ export default function ContactPage() {
                   <li className="flex items-start gap-3 text-sm text-[#74726D]">
                     <Clock className="mt-0.5 h-4 w-4 shrink-0 text-[#EAA820]" />
                     <span>
-                      Phone: Mon&ndash;Fri, 10 am &ndash; 5 pm
+                      Phone Mon&ndash;Fri, 10am&ndash;5pm
                       <br />
-                      Front desk: Mon&ndash;Fri, 10 am &ndash; 7 pm
+                      Staffed Mon&ndash;Fri, 10am&ndash;7pm
                     </span>
                   </li>
                 </ul>
@@ -127,50 +126,6 @@ export default function ContactPage() {
                 >
                   View Location Details
                 </Link>
-              </CardContent>
-            </Card>
-            </FadeIn>
-
-            {/* Houston */}
-            <FadeIn delay={0.2}>
-            <Card className="border-[#E6E4DF] bg-white">
-              <CardContent className="flex flex-col gap-4 p-6">
-                <div className="flex items-center gap-2">
-                  <h2 className="font-[family-name:var(--font-plus-jakarta)] text-xl font-semibold">
-                    Muze Office Houston
-                  </h2>
-                  {houston?.status === "active" ? (
-                    <Badge className="bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28] text-xs">
-                      Open
-                    </Badge>
-                  ) : (
-                    <Badge variant="secondary" className="text-xs">
-                      Coming Soon
-                    </Badge>
-                  )}
-                </div>
-                <p className="text-sm text-[#74726D]">
-                  Inside the 610 Loop in the Galleria / Tanglewood area. Free
-                  parking on-site — no Post Oak garage fees.
-                </p>
-                <ul className="flex flex-col gap-3">
-                  <li className="flex items-start gap-3 text-sm text-[#74726D]">
-                    <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-[#EAA820]" />
-                    <span>1800 Augusta Dr, Houston, TX 77057</span>
-                  </li>
-                  <li className="flex items-center gap-3 text-sm text-[#74726D]">
-                    <Mail className="h-4 w-4 shrink-0 text-[#EAA820]" />
-                    <a
-                      href="mailto:access@muzeoffice.com"
-                      className="transition-colors hover:text-[#1A1A1A]"
-                    >
-                      access@muzeoffice.com
-                    </a>
-                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[#8A6000]">
-                      Preferred
-                    </span>
-                  </li>
-                </ul>
               </CardContent>
             </Card>
             </FadeIn>

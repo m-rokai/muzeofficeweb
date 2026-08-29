@@ -15,11 +15,11 @@ function buildLlmsTxt(): string {
   lines.push("# Muze Office");
   lines.push("");
   lines.push(
-    "> Flexible workspace in Las Vegas (Houston opening 2026) — coworking, virtual offices, private offices, meeting rooms, and event space. Month-to-month memberships, free parking, no long-term leases."
+    "> Flexible workspace in Las Vegas — coworking, virtual offices, private offices, meeting rooms, and event space. Month-to-month memberships, free parking, no long-term leases."
   );
   lines.push("");
   lines.push(
-    "Muze Office runs a staffed commercial location in Las Vegas. An independently operated Muze Office franchise location is planned for Houston in 2026. Every page on this site also has a plain-markdown twin at the same path with a `.md` suffix — e.g. `/las-vegas-coworking.md`. A full content dump is available at `/llms-full.txt`."
+    "Muze Office runs a staffed commercial location in Las Vegas. Every page on this site also has a plain-markdown twin at the same path with a `.md` suffix — e.g. `/las-vegas-coworking.md`. A full content dump is available at `/llms-full.txt`."
   );
   lines.push("");
 
@@ -74,7 +74,7 @@ function buildLlmsTxt(): string {
     {
       path: "contact",
       label: "Contact",
-      desc: "Las Vegas contact details plus Houston opening and early-access information.",
+      desc: "Las Vegas address, staffed hours, phone, email, and inquiry form.",
     },
     {
       path: "book-a-tour",
@@ -89,7 +89,7 @@ function buildLlmsTxt(): string {
     {
       path: "locations",
       label: "Locations Overview",
-      desc: "Active Las Vegas location and clearly labeled planned Houston location.",
+      desc: "Active and planned Muze Office locations.",
     },
     { path: "blog", label: "Blog", desc: "All published blog posts." },
   ];

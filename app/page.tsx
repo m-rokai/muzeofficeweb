@@ -35,6 +35,7 @@ import {
 } from "@/components/marketing/animate";
 import { GoogleReviewsBadge } from "@/components/marketing/google-reviews-badge";
 import { LogoCarousel } from "@/components/marketing/logo-carousel";
+import { Testimonials } from "@/components/marketing/testimonials";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
 import { RelatedReading } from "@/components/marketing/related-reading";
 import { services } from "@/lib/data/services";
@@ -66,7 +67,7 @@ const amenities = [
   { icon: <UtensilsCrossed className="h-7 w-7" />, label: "On-Site Cafe", desc: "Hot meals, not just snacks" },
   { icon: <PhoneIcon className="h-7 w-7" />, label: "Phone Booths", desc: "Private calls, no noise" },
   { icon: <Printer className="h-7 w-7" />, label: "Printing & Scanning", desc: "Color and B&W" },
-  { icon: <Fingerprint className="h-7 w-7" />, label: "Biometric Access", desc: "24/7 for members" },
+  { icon: <Fingerprint className="h-7 w-7" />, label: "Biometric Access", desc: "Open 24/7 for members" },
   { icon: <MonitorSmartphone className="h-7 w-7" />, label: "Conference Rooms", desc: "AV and video ready" },
 ];
 
@@ -78,11 +79,10 @@ const homepageFAQs = [
   { question: "What is Muze Office?", answer: "Muze Office operates flexible workspace in Las Vegas with coworking, virtual offices, private offices, meeting rooms, and event space." },
   { question: "Do I need a membership to use the space?", answer: "No. A $25 Day Pass is available without a membership or commitment. Buy and activate it online the same day and work until midnight. We also offer monthly memberships for hot desks, dedicated desks, and private offices." },
   { question: "Where is Muze Office located?", answer: "Muze Office is open in Las Vegas at 6860 Bermuda Rd, Suite 200, 10 minutes from Harry Reid International Airport via I-215 W, with free parking." },
-  { question: "What are your hours?", answer: "The Las Vegas workspace is open 24/7. A Day Pass can be bought and activated online the same day and used until midnight. The front desk is staffed Monday through Friday, 10am to 7pm, and phones are answered Monday through Friday, 10am to 5pm." },
+  { question: "What are your hours?", answer: "Open 24/7 for members. Staffed Mon–Fri, 10am–7pm. Phone Mon–Fri, 10am–5pm. Day pass access: same-day activation until midnight. Members: 24/7." },
   { question: "Is there parking?", answer: "Free parking is available at the Las Vegas location for members, day pass holders, meeting room guests, and event attendees." },
   { question: "Can I book a meeting room without a membership?", answer: "Yes. Las Vegas meeting rooms are available by the hour to anyone, with AV equipment, video conferencing, whiteboards, and WiFi. Huddle rooms start at $39/hr, conference rooms are $69/hr, and the classroom is $99/hr." },
   { question: "Do you offer a virtual office in Las Vegas?", answer: "Yes. A virtual office in Las Vegas at Muze Office starts at $39/month (Mail Holding) for a professional business address at 6860 Bermuda Rd, Suite 200 with USPS letter mail pickup. Sandstone ($69/mo) adds package receiving from UPS, FedEx, and Amazon. Higher tiers add mail forwarding, coworking hours, and meeting room access. Use it for contracts and filings that accept a commercial mail-receiving address; registered-agent and Google Business Profile requirements are separate. Full details and pricing at /las-vegas-virtual-office." },
-  { question: "Do you offer a virtual office in Houston?", answer: "Not yet. Virtual office and mail services are part of the planned Houston workspace mix at 1800 Augusta Dr, but no Houston address service or pricing is active. Join Houston early access for confirmed opening and availability updates." },
   { question: "Are there long-term contracts?", answer: "No. All Muze Office memberships are month-to-month. Cancel anytime with 30 days' notice. No long-term lease required." },
 ];
 
@@ -136,7 +136,7 @@ export default function HomePage() {
             <Separator orientation="vertical" className="h-4 bg-gray-600" />
             <span>Free parking</span>
             <Separator orientation="vertical" className="h-4 bg-gray-600" />
-            <span className="hidden sm:inline">Las Vegas open 24/7</span>
+            <span className="hidden sm:inline">Open 24/7 for members</span>
           </div>
         </div>
       </section>
@@ -146,7 +146,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-[1200px] flex flex-col items-center gap-3 sm:flex-row sm:justify-between">
           <GoogleReviewsBadge rating={lasVegas?.rating} reviewCount={lasVegas?.reviewCount} href={lasVegas?.externalProfiles?.gbp} />
           <div className="flex items-center gap-4 text-base text-[#74726D]">
-            <span>Phone Mon–Fri 10am–5pm</span>
+            <span>Phone Mon–Fri, 10am–5pm</span>
             <span className="hidden sm:inline">•</span>
             <a href="tel:+17023707515" className="font-semibold text-[#1A1A1A] hover:text-[#EAA820] transition-colors">(702) 370-7515</a>
           </div>
@@ -156,6 +156,8 @@ export default function HomePage() {
       {/* Logo Carousel */}
       <LogoCarousel />
 
+      <Testimonials />
+
       {/* Stats Bar — every value here is verifiable from services.ts /
           locations.ts. Don't add unverified social-proof counts. */}
       <section className="w-full border-b border-[#E6E4DF] bg-[#FAFAF7]">
@@ -164,7 +166,7 @@ export default function HomePage() {
             { value: "$25", label: "Day Pass", icon: <Coffee className="h-6 w-6" /> },
             { value: "$39", label: "Virtual Office", icon: <Mail className="h-6 w-6" /> },
             { value: "10 min", label: "From LAS Airport", icon: <MapPin className="h-6 w-6" /> },
-            { value: "24/7", label: "Las Vegas Access", icon: <Clock className="h-6 w-6" /> },
+            { value: "Open 24/7", label: "for members", icon: <Clock className="h-6 w-6" /> },
           ].map((stat, i) => (
             <FadeIn key={stat.label} delay={i * 0.1} direction="up">
               <div className="flex flex-col items-center gap-1.5 border-r border-[#E6E4DF] py-10 last:border-r-0">
@@ -241,49 +243,17 @@ export default function HomePage() {
         </StaggerContainer>
       </Section>
 
-      {/* Planned Houston location — one clear pre-launch destination rather
-          than six inactive service cards competing with Las Vegas offers. */}
-      <Section variant="white">
-        <FadeIn>
-          <Link
-            href="/locations/houston#waitlist"
-            data-cta="houston_waitlist"
-            data-cta-location="homepage_houston_feature"
-            className="group block"
-            aria-label="Explore the planned Muze Office Houston location and join early access"
-          >
-            <Card className="overflow-hidden border-[#E6E4DF] bg-[#F7F6F3] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
-              <CardContent className="flex flex-col gap-8 p-8 md:flex-row md:items-center md:justify-between md:p-10">
-                <div className="max-w-[720px]">
-                  <Badge className="mb-4 border border-[#EAA820]/20 bg-[#EAA820]/10 px-3 py-1 text-sm text-[#8A6000]">
-                    <MapPin className="mr-1.5 h-3.5 w-3.5" /> Planned Houston location
-                  </Badge>
-                  <h2 className="text-3xl font-semibold md:text-4xl">
-                    Houston Galleria — opening in 2026
-                  </h2>
-                  <p className="mt-4 text-lg leading-relaxed text-[#74726D]">
-                    An independently operated Muze Office franchise is planned for 1800 Augusta Dr in the Galleria / Tanglewood area. Services, hours, pricing, and address use are not active yet.
-                  </p>
-                </div>
-                <span className="inline-flex shrink-0 items-center gap-2 text-base font-semibold text-[#1A1A1A] transition-colors group-hover:text-[#8A6000]">
-                  View Houston plans <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </span>
-              </CardContent>
-            </Card>
-          </Link>
-        </FadeIn>
-      </Section>
-
       {/* Locations */}
       <Section>
         <FadeIn>
           <div className="mb-14 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 className="text-3xl font-semibold md:text-4xl lg:text-5xl">
-                Las Vegas open now; Houston planned for 2026
+                Visit Muze Office Las Vegas
               </h2>
               <p className="mt-4 max-w-[600px] text-lg text-[#74726D]">
-                Open in Las Vegas at 6860 Bermuda Rd with free parking, 10 minutes from Harry Reid International Airport. An independently operated Muze Office franchise location is planned for Houston in 2026 at 1800 Augusta Dr in the Galleria / Tanglewood area.
+                Open at 6860 Bermuda Rd with free parking, 10 minutes from
+                Harry Reid International Airport.
               </p>
             </div>
             <Link
@@ -296,45 +266,32 @@ export default function HomePage() {
             </Link>
           </div>
         </FadeIn>
-        <div className="grid gap-6 md:grid-cols-2">
-          {locations.map((loc, i) => (
+        <div className="grid max-w-[720px] gap-6">
+          {locations.filter((loc) => loc.status === "active").map((loc, i) => (
             <ScaleIn key={loc.id} delay={i * 0.15}>
               <Card className="group overflow-hidden border-[#E6E4DF] transition-all duration-300 hover:shadow-lg">
                 <div className="relative aspect-[16/9] overflow-hidden">
                   <Image
-                    src={`/images/spaces/${loc.slug === "las-vegas" ? "las-vegas" : "houston"}.jpg`}
-                    alt={
-                      loc.slug === "las-vegas"
-                        ? "Muze Office Las Vegas exterior at 6860 Bermuda Rd, Suite 200 near Harry Reid International Airport"
-                        : "Houston skyline representing the planned Muze Office Galleria-area location"
-                    }
+                    src="/images/spaces/las-vegas.jpg"
+                    alt="Muze Office Las Vegas exterior at 6860 Bermuda Rd, Suite 200 near Harry Reid International Airport"
                     fill
                     sizes="(min-width: 768px) 50vw, 100vw"
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  {loc.status === "coming-soon" && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/40">
-                      <Badge className="bg-white/90 text-[#1A1A1A] text-base px-5 py-2">Coming Soon</Badge>
-                    </div>
-                  )}
                 </div>
                 <CardContent className="flex flex-col p-7 min-h-[200px]">
                   <h3 className="text-2xl font-semibold">{loc.name}</h3>
                   <p className="mt-2 text-base text-[#74726D]">
                     {loc.address.street !== "TBD" ? `${loc.address.street}, ${loc.address.city}, ${loc.address.state} ${loc.address.zip}` : `${loc.address.city}, ${loc.address.state}`}
                   </p>
-                  {loc.phone !== "TBD" ? (
-                    <p className="mt-1 text-base text-[#74726D]">{loc.phone}</p>
-                  ) : (
-                    <p className="mt-1 text-base text-[#74726D]">Location details coming soon</p>
-                  )}
+                  <p className="mt-1 text-base text-[#74726D]">{loc.phone}</p>
                   <Link
                     href={`/locations/${loc.slug}`}
-                    data-cta={loc.status === "coming-soon" ? "houston_waitlist" : "explore_location"}
+                    data-cta="explore_location"
                     data-cta-location="homepage_location_card"
                     className={cn(buttonVariants(), "mt-auto rounded-xl bg-[#1A1A1A] hover:bg-[#333] h-12 px-6 text-base w-fit")}
                   >
-                    {loc.status === "coming-soon" ? `${loc.name} Waitlist` : `Explore ${loc.name}`} <ArrowRight className="ml-1.5 h-4 w-4" />
+                    Explore {loc.name} <ArrowRight className="ml-1.5 h-4 w-4" />
                   </Link>
                 </CardContent>
               </Card>
@@ -359,7 +316,9 @@ export default function HomePage() {
           {[
             { name: "Day Pass", price: "$25", unit: "/day", description: "Book a single day online, even same-day — no membership, no setup, no commitment. Reserve online and bring your laptop.", features: ["Hot desk access", "High-speed WiFi", "Unlimited coffee & tea", "Free parking"], cta: "See Day Pass Details", href: "/las-vegas-day-pass", trackingName: "view_day_pass", highlighted: false },
             { name: "Dedicated Desk", price: "$399", unit: "/month", description: "Your own reserved desk, personal storage, 24/7 biometric access, and a business address with mail.", features: ["24/7 access", "Reserved desk & storage", "Meeting room credits", "Business address & mail"], cta: "See Dedicated Desk Details", href: "/las-vegas-dedicated-desk", trackingName: "view_dedicated_desk", highlighted: true },
-            { name: "Private Office", price: "Custom", unit: "", description: "Enclosed, lockable offices for 2-10 people. Fully furnished and customizable.", features: ["24/7 access", "Furnished & customizable", "All utilities included", "Conference room credits"], cta: "Book a Tour", href: BRAND.booking.tourUrl, trackingName: "book_tour", highlighted: false },
+            // TODO(Robert): Replace "Custom" with the approved "from $X/mo"
+            // price anchor once X is supplied. Pricing must not be invented.
+            { name: "Private Office", price: "Custom", unit: "", description: "Enclosed, lockable offices for 2-10 people. Fully furnished and customizable.", features: ["Open 24/7 for members", "Furnished & customizable", "All utilities included", "Conference room credits"], cta: "Book a Tour", href: BRAND.booking.tourUrl, trackingName: "book_tour", highlighted: false },
           ].map((plan) => (
             <StaggerItem key={plan.name} className={plan.highlighted ? "pt-3" : ""}>
               <Card className={cn("h-full border-[#E6E4DF] transition-all duration-300 hover:shadow-lg hover:-translate-y-1 overflow-visible", plan.highlighted && "ring-2 ring-[#EAA820] relative")}>

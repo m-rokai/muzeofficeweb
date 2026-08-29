@@ -23,7 +23,9 @@ export function LogoCarousel() {
     <section className="w-full border-y border-[#E6E4DF] bg-[#FAFAF7] py-10 overflow-hidden">
       <div className="mx-auto max-w-[1200px] px-6">
         <p className="mb-8 text-center text-sm font-medium tracking-wide text-[#74726D] uppercase">
-          Teams from companies like these have worked at Muze Office
+          {/* TODO(Robert): Confirm each logo and the exact member, guest, or
+              project-team relationship before changing this wording. */}
+          Organizations represented across member and guest teams
         </p>
       </div>
       <div className="relative">

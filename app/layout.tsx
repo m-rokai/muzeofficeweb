@@ -4,8 +4,10 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { MobileCTA } from "@/components/layout/mobile-cta";
+import { EmailCapture } from "@/components/forms/email-capture";
 import { OrganizationSchema } from "@/components/seo/organization-schema";
 import { EngagementTracker } from "@/components/analytics/engagement-tracker";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import "./globals.css";
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
     template: "%s | Muze Office",
   },
   description:
-    "Coworking, virtual offices, private offices, and meeting rooms in Las Vegas. Month-to-month, with a $25 day pass and virtual office plans from $39/mo. Houston opening in 2026.",
+    "Coworking, virtual offices, private offices, and meeting rooms in Las Vegas. Month-to-month, with a $25 day pass and virtual office plans from $39/mo.",
   metadataBase: new URL("https://muzeoffice.com"),
   openGraph: {
     siteName: "Muze Office",
@@ -54,6 +56,9 @@ export const metadata: Metadata = {
     creator: "@muzeoffice",
     images: ["/images/og/default.png"],
   },
+  verification: process.env.NEXT_PUBLIC_GSC_TOKEN
+    ? { google: process.env.NEXT_PUBLIC_GSC_TOKEN }
+    : undefined,
 };
 
 export default function RootLayout({
@@ -70,9 +75,11 @@ export default function RootLayout({
         <OrganizationSchema />
         <SiteHeader />
         <main className="flex-1 pb-[68px] md:pb-0">{children}</main>
+        <EmailCapture placement="global_footer" />
         <SiteFooter />
         <MobileCTA />
         <EngagementTracker />
+        <GoogleAnalytics />
         <Analytics />
         <Script
           src="https://analytics.ahrefs.com/analytics.js"

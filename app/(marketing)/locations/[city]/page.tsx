@@ -161,7 +161,7 @@ export default async function LocationDetailPage({
             </div>
             <p className="mt-4 max-w-[560px] text-base leading-relaxed text-gray-300 md:text-lg">
               {isActive
-                ? `Open 24/7 at ${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}. Same-day Day Passes and month-to-month memberships with free parking.`
+                ? `Open 24/7 for members at ${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}. Same-day Day Passes and month-to-month memberships with free parking.`
                 : `An independently operated Muze Office franchise location is planned at ${location.address.street} in Houston's Galleria / Tanglewood area. Join early access for verified opening updates; no Houston memberships or address services are active yet.`}
             </p>
             {isHoustonLaunchPage && (
@@ -275,11 +275,11 @@ export default async function LocationDetailPage({
                 <Clock className="mt-0.5 h-4 w-4 shrink-0 text-[#EAA820]" />
                 {isActive ? (
                   <span>
-                    Workspace access: 24/7
+                    Open 24/7 for members
                     <br />
-                    Phone: Mon&ndash;Fri, 10 am &ndash; 5 pm
+                    Phone Mon&ndash;Fri, 10am&ndash;5pm
                     <br />
-                    Front desk: Mon&ndash;Fri, 10 am &ndash; 7 pm
+                    Staffed Mon&ndash;Fri, 10am&ndash;7pm
                   </span>
                 ) : (
                   <span>
@@ -388,43 +388,6 @@ export default async function LocationDetailPage({
           </FadeIn>
         </div>
       </Section>
-
-      {/* On-site Amenities (LV only) */}
-      {isActive && location.slug === "las-vegas" && (
-        <Section variant="gray">
-          <FadeIn>
-            <div className="mx-auto flex max-w-[800px] flex-col gap-6">
-              <div>
-                <h2 className="font-[family-name:var(--font-plus-jakarta)] text-2xl font-semibold">
-                  On-site Amenities
-                </h2>
-                <p className="mt-2 text-sm text-[#74726D]">
-                  Partner businesses operating inside the building. Members and
-                  guests can book directly.
-                </p>
-              </div>
-              <a
-                href="https://beauty-booking-three.vercel.app"
-                target="_blank"
-                rel="noopener"
-                className="group flex flex-col gap-2 rounded-xl border border-[#E6E4DF] bg-white p-6 transition-colors hover:border-[#EAA820]"
-              >
-                <h3 className="font-[family-name:var(--font-plus-jakarta)] text-lg font-semibold text-[#1A1A1A]">
-                  Ashley Lacy Esthetics
-                </h3>
-                <p className="text-sm text-[#74726D]">
-                  On-site esthetician booth &mdash; facials, waxing, lash, and
-                  body treatments. Open 7 days a week. Book online with a
-                  deposit.
-                </p>
-                <span className="text-sm font-medium text-[#EAA820] group-hover:underline">
-                  Book a facial &rarr;
-                </span>
-              </a>
-            </div>
-          </FadeIn>
-        </Section>
-      )}
 
       {isHoustonLaunchPage && (
         <Section variant="gray">

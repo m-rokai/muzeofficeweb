@@ -31,7 +31,7 @@ export interface Location {
   services: string[];
   taxAdvantage: string;
   /** Verified Google Business Profile rating + review count. Set ONLY when
-   *  confirmed against the live GBP — drives review stars and aggregateRating. */
+   *  confirmed against the live GBP; used for visible review badges only. */
   rating?: number;
   reviewCount?: number;
   /** External profile URLs for this specific location, used in JSON-LD `sameAs`. */
@@ -65,12 +65,15 @@ export const locations: Location[] = [
     phoneRaw: "+17023707515",
     email: "access@muzeoffice.com",
     hours: {
-      is24Hours: true,
-      weekdays: { open: "00:00", close: "23:59" },
+      // Public business hours describe staffed/front-desk availability. Member
+      // access is documented separately so structured data does not imply that
+      // the front desk is staffed around the clock.
+      is24Hours: false,
+      weekdays: { open: "10:00", close: "19:00" },
       weekends: null,
     },
     localCues: [
-      "Open 24/7",
+      "Open 24/7 for members",
       "10 minutes from Harry Reid International Airport",
       "Free parking",
       "Off I-215, away from Strip traffic",
