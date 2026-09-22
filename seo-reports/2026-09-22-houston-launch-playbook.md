@@ -21,7 +21,7 @@ The site is now **launch-ready behind a single switch**. Everything below is ord
 - Fixed a bug: once Houston was switched to active, the hub would still have shown the "Opening 2026" pre-launch title (metadata was keyed on the address, not on status).
 - Legacy WordPress Houston URLs (`/workspace-memberships/coworking-houston-texas`, `/…/virtual-office-houston-texas`, `/locations/houston-coworking`, `/office-day-pass-in-houston-at-muzeoffice`) automatically point to the matching live service page once Houston is active. They carry the old site's Houston link equity.
 
-### Houston: pre-opening visibility (live now)
+### Houston: pre-opening visibility (takes effect on deploy)
 - The `/locations/houston` hub gets a keyword-bearing title, "Muze Office Houston — Galleria Coworking, Opening {Month Year}", which picks up the month automatically once `openingDate` is set.
 - New section on the hub: "Coworking, offices, and meeting space in the Galleria area". It gives each planned service its own heading (coworking/day passes, virtual office and business address, private offices, meeting/conference rooms, event/training space, access from across Houston). Until the service pages open, the hub is the only indexable Houston URL, so it now covers those terms.
 - All 12 Houston service pages were rewritten so they contain **no unconfirmed claims** (no prices, Las Vegas tier names, 24/7 access, suite number, or "free" parking). The copy is written for opening day. Metadata no longer says "waitlist".
