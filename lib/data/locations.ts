@@ -207,7 +207,7 @@ export const locations: Location[] = [
       weekends: null,
     },
     localCues: [
-      "Planned for the Galleria / Tanglewood area inside the 610 Loop",
+      "Planned for the Galleria / Tanglewood area, just off the I-610 West Loop",
       "Near Post Oak Blvd and the Houston Galleria",
       "Access from I-610 West Loop and Woodway Dr",
       "On-site parking is planned; final details will be confirmed before opening",

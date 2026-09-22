@@ -150,8 +150,8 @@ export default function ContactPage() {
                   )}
                 </div>
                 <p className="text-sm text-[#74726D]">
-                  Inside the 610 Loop in the Galleria / Tanglewood area. Free
-                  parking on-site — no Post Oak garage fees.
+                  Galleria / Tanglewood area, just off the I-610 West Loop.
+                  Parking details will be confirmed before opening.
                 </p>
                 <ul className="flex flex-col gap-3">
                   <li className="flex items-start gap-3 text-sm text-[#74726D]">

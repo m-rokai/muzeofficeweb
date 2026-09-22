@@ -77,7 +77,7 @@ function renderAbout(): string {
     "## Locations",
     "",
     "- Las Vegas — 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119. 10 minutes from Harry Reid International Airport via I-215.",
-    "- Houston — 1800 Augusta Dr, Houston, TX 77057. Inside the 610 Loop in the Galleria / Tanglewood area.",
+    "- Houston — 1800 Augusta Dr, Houston, TX 77057. In the Galleria / Tanglewood area, just off the I-610 West Loop.",
     "",
   ].join("\n");
 }
@@ -145,7 +145,7 @@ function renderBookATour(): string {
     "## Houston",
     "",
     "- 1800 Augusta Dr, Houston, TX 77057",
-    "- Inside the 610 Loop in the Galleria / Tanglewood area",
+    "- Galleria / Tanglewood area, just off the I-610 West Loop",
     "",
     "Email access@muzeoffice.com to book a tour at either location.",
     "",

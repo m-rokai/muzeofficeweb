@@ -523,7 +523,7 @@ export default async function LocationDetailPage({
               <p className="mt-3 leading-relaxed text-[#74726D]">
                 Muze Office Houston is being built for people who work in and
                 around Uptown, Tanglewood, Briargrove, and Memorial and want a
-                professional base inside the 610 Loop without signing a
+                professional base near Post Oak without signing a
                 multi-year lease. Here is what is planned. Pricing and
                 availability will be confirmed before opening, and early-access
                 members hear first.

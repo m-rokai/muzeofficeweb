@@ -275,32 +275,32 @@ const galleriaCoworkingFAQs: FAQ[] = [
   {
     question: "Where exactly is the Houston Galleria location?",
     answer:
-      "The planned location is 1800 Augusta Dr, Houston, TX 77057, in the Galleria / Tanglewood area with access from I-610 West Loop and Woodway Dr. The location is not open yet.",
+      "1800 Augusta Dr, Houston, TX 77057, in the Galleria / Tanglewood area near Post Oak Blvd, with access from the I-610 West Loop and Woodway Dr.",
   },
   {
-    question: "What memberships will be available?",
+    question: "What memberships are available?",
     answer:
-      "We'll offer Day Passes, Hot Desk monthly memberships, and Dedicated Desk monthly memberships — the same flexible options as our Las Vegas location. Pricing will be announced closer to opening.",
+      "Day passes, hot desk memberships (any open desk in the shared area), and dedicated desk memberships (a reserved desk of your own), plus meeting rooms by the hour. Current Houston pricing and plan details are on the Galleria coworking page, or contact the team.",
   },
   {
-    question: "Is parking included?",
+    question: "Is there parking?",
     answer:
-      "On-site parking is planned for the Houston location. Final access details will be confirmed before opening.",
+      "Parking details for members and guests are confirmed by the Houston team — ask when you book.",
   },
   {
-    question: "Where is the Houston location?",
+    question: "How do I get there from the rest of Houston?",
     answer:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd and the Houston Galleria.",
+      "The building is just off the I-610 West Loop and Woodway Dr, a short drive from Memorial, Briargrove, River Oaks, West University, Bellaire, and downtown. From the Energy Corridor or Westchase, I-10 or Westheimer toward the West Loop are the usual routes.",
   },
   {
     question: "Are meeting rooms available?",
     answer:
-      "Meeting rooms are part of the planned Houston workspace mix, but reservations are not open yet. Join early access for confirmed room types, pricing, and booking dates.",
+      "Yes. Meeting rooms are booked by the hour for client meetings, interviews, and team sessions. See the Houston Meeting Rooms page for current room options and pricing.",
   },
   {
     question: "Can I use my Las Vegas membership in Houston?",
     answer:
-      "Multi-city access has not been finalized. Join Houston early access and tell us what membership you need so we can share confirmed options before opening.",
+      "Muze Office Houston is independently operated as a Muze Office franchise, and Houston plans and pricing may differ from Las Vegas. Contact the Houston team to ask whether any multi-location options apply to your membership.",
   },
 ];
 
@@ -308,32 +308,32 @@ const medicalCenterCoworkingFAQs: FAQ[] = [
   {
     question: "How close is the space to the Texas Medical Center?",
     answer:
-      "Our Houston location will be approximately 15 minutes from the Texas Medical Center, accessible via I-610 West Loop.",
+      "1800 Augusta Dr is a short drive from the Texas Medical Center via the I-610 West Loop. Travel time depends heavily on traffic, especially at rush hour and around hospital shift changes.",
   },
   {
-    question: "Are HIPAA-aware private offices available?",
+    question: "Are there private offices suitable for healthcare work?",
     answer:
-      "Yes. We'll offer private offices suitable for telehealth consultations and other healthcare-related work that requires additional privacy considerations.",
+      "Private offices with lockable doors suit telehealth sessions and other work that needs a closed room. Your practice remains responsible for its own HIPAA policies and safeguards. Ask the team which offices are available, or book a tour to see them.",
   },
   {
     question: "Is this space designed for medical professionals?",
     answer:
-      "While our space is open to all professionals, we've designed it with medical professionals, health-tech startups, and researchers in mind. Features include private phone booths, quiet work areas, and HIPAA-aware office options.",
+      "The space is open to all professionals. For medical and health-tech work, the useful pieces are phone booths for private calls, quiet desks, meeting rooms, and private offices when a conversation needs a door.",
   },
   {
-    question: "Will there be day passes available?",
+    question: "Are day passes available?",
     answer:
-      "Yes. Day passes will be available for medical professionals who need flexible workspace near the Medical Center without a monthly commitment.",
+      "Yes. Day passes work well for reps, consultants, and researchers who need a desk near the Medical Center without a monthly commitment. Current Houston pricing is on the Medical Center coworking page.",
   },
   {
     question: "Where is this Houston location?",
     answer:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop, approximately 15 minutes from the Texas Medical Center via I-610 West Loop.",
+      "1800 Augusta Dr, Houston, TX 77057, in the Galleria / Tanglewood area just off the I-610 West Loop — a short drive from the Texas Medical Center.",
   },
   {
-    question: "What amenities will be included?",
+    question: "What amenities are included?",
     answer:
-      "High-speed WiFi, parking, coffee, phone booths, meeting rooms, biometric access, and an on-site cafe. Dedicated desk members will also get mail handling and personal storage.",
+      "WiFi, coffee, phone booths, and meeting rooms, with private offices for confidential work. What each membership includes is listed with current Houston pricing on the page.",
   },
 ];
 
@@ -468,7 +468,7 @@ const houstonVirtualOfficeFAQs: FAQ[] = [
   {
     question: "Do I get a real street address or a PO Box?",
     answer:
-      "You get a real street address with a suite number — not a PO Box. You can use it on your website, business cards, contracts, and filings that accept a commercial mail-receiving address. Our Houston address is 1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area.",
+      "You get a real street address — not a PO Box. You can use it on your website, business cards, contracts, and filings that accept a commercial mail-receiving address. The Houston address is 1800 Augusta Dr, Houston, TX 77057, in the Galleria / Tanglewood area near Post Oak Blvd.",
   },
   {
     question: "Can I use this address to register my Texas LLC?",
@@ -478,32 +478,271 @@ const houstonVirtualOfficeFAQs: FAQ[] = [
   {
     question: "How does mail handling work?",
     answer:
-      "We receive your mail at your suite address. You get a notification when mail arrives, and you can pick it up during business hours. Our Opal and Diamond plans also include mail forwarding to any address you choose.",
+      "Once your USPS Form 1583 and identification are accepted, mail addressed to you is received at 1800 Augusta Dr. How you get it — in-person pickup, package receiving, or forwarding — depends on your plan. Current Houston plan details are listed on the virtual office page.",
   },
   {
     question: "Do virtual office plans include meeting room access?",
     answer:
-      "Yes. The Opal plan includes 2 meeting room hours per month, and the Diamond plan includes 6 hours per month. Additional hours can be booked at our standard hourly rate. All rooms include AV equipment and video conferencing.",
+      "Some Houston virtual office plans bundle coworking and meeting-room hours, and meeting rooms can also be booked separately by the hour. See current plan details and pricing on the Houston virtual office page or ask the team.",
   },
   {
     question: "Are there long-term contracts?",
     answer:
-      "No. All virtual office plans are month-to-month with no long-term commitment required. You can upgrade, downgrade, or cancel with 30 days' notice.",
+      "Houston plan terms are listed with current pricing on the virtual office page, and the team confirms them before you sign up. A virtual office is built for businesses that want a Houston address without taking on an office lease.",
   },
   {
     question: "What's included in each virtual office package?",
     answer:
-      "Mail Holding ($39/mo): professional Houston business address with suite number and USPS letter mail pickup — letters only, no packages. Sandstone ($69/mo): adds package receiving from UPS, FedEx, and Amazon plus signature-required mail. Opal ($149/mo): adds mail forwarding, 4 coworking hours, and 2 meeting room hours. Diamond ($249/mo): adds 20 coworking hours, 6 meeting room hours, and a dedicated local phone line.",
+      "Houston plans range from a mail-only business address to plans that add package receiving from carriers like UPS, FedEx, and Amazon, mail forwarding, and bundled coworking and meeting-room hours. See current Houston plans and pricing on the virtual office page or contact the team.",
   },
   {
     question: "What's the difference between a virtual office and a PO Box?",
     answer:
-      "A PO Box gives you a box number at the post office — it can't be used for LLC registration, and it looks unprofessional on a business card. A virtual office gives you a real street address with a suite number, plus access to meeting rooms, coworking, and a receptionist. It's a professional business presence without renting a full office.",
+      "A PO Box gives you a box number at the post office — it can't accept packages from private carriers like UPS or FedEx, and many filings and institutions require a street address instead. A virtual office gives you a real street address at 1800 Augusta Dr, plus access to meeting rooms and coworking when you need them.",
+  },
+  {
+    question: "Can I use this address for a Google Business Profile?",
+    answer:
+      "A virtual-office-only plan is not, by itself, eligible for Google Business Profile verification. Google requires the business itself to operate at the address, serve customers there during stated hours, and meet its other guidelines. Review Google's current rules before applying; Muze Office cannot guarantee verification.",
   },
   {
     question: "How close is Muze Office to Houston airports?",
     answer:
-      "About 25 minutes by car from George Bush Intercontinental (IAH) and 25 minutes from William P. Hobby (HOU). The 1800 Augusta Dr location sits inside the 610 Loop in the Galleria area, making fly-in client meetings practical from either airport.",
+      "George Bush Intercontinental (IAH) and William P. Hobby (HOU) are both a freeway drive from 1800 Augusta Dr, which sits just off the I-610 West Loop in the Galleria area. Drive times vary a lot with Houston traffic, so check live directions before scheduling a fly-in meeting.",
+  },
+];
+
+const houstonCoworkingFAQs: FAQ[] = [
+  {
+    question: "What coworking options are available in Houston?",
+    answer:
+      "Muze Office Houston offers day passes, hot desk memberships (any open desk in the shared area), and dedicated desk memberships (a reserved desk of your own), plus meeting rooms by the hour. Current Houston pricing and what each plan includes are listed on the Houston coworking page.",
+  },
+  {
+    question: "Where is the Houston coworking space?",
+    answer:
+      "1800 Augusta Dr, Houston, TX 77057, in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr.",
+  },
+  {
+    question: "Is there parking?",
+    answer:
+      "Parking details for members and guests are confirmed by the Houston team — ask when you book.",
+  },
+  {
+    question: "Can I try the space before joining?",
+    answer:
+      "Yes. Book a tour, or come in on a day pass and work a full day before you decide on a monthly membership.",
+  },
+  {
+    question: "Can I book a meeting room as a coworking member?",
+    answer:
+      "Yes. Meeting rooms can be booked by the hour, and some Houston plans include meeting-room time. See current plan details on the Houston coworking page or ask the team.",
+  },
+  {
+    question: "Are Houston plans the same as Las Vegas?",
+    answer:
+      "Not necessarily. Muze Office Houston is independently operated as a Muze Office franchise, and Houston pricing and plan details may differ from Las Vegas. Use the Houston pages or contact the Houston team for current details.",
+  },
+];
+
+const houstonDayPassFAQs: FAQ[] = [
+  {
+    question: "How much is a day pass in Houston?",
+    answer:
+      "Current Houston day-pass pricing is listed on the Houston day pass page. You can also contact the team with questions before you book.",
+  },
+  {
+    question: "Do I need a membership to use a day pass?",
+    answer:
+      "No. A day pass is a single day in the shared workspace with no membership and no monthly commitment.",
+  },
+  {
+    question: "What does a Houston day pass include?",
+    answer:
+      "A desk in the shared workspace, WiFi, coffee, and access to phone booths for private calls. Meeting rooms are booked separately by the hour.",
+  },
+  {
+    question: "Is there parking with a day pass?",
+    answer:
+      "Parking details for members and guests are confirmed by the Houston team — ask when you book.",
+  },
+  {
+    question: "When does a hot desk make more sense than day passes?",
+    answer:
+      "If you're in the space more than about a week a month, compare the hot desk membership — past a certain number of days, a monthly plan costs less than paying per day. Current Houston pricing for both is on the day pass page.",
+  },
+];
+
+const houstonHotDeskFAQs: FAQ[] = [
+  {
+    question: "What is a hot desk?",
+    answer:
+      "Monthly access to any open desk in the shared coworking area — you sit wherever is free each day. It's for people who are in the space several days a week but don't need a reserved seat.",
+  },
+  {
+    question: "How is a hot desk different from a dedicated desk?",
+    answer:
+      "A dedicated desk is reserved for you every day, so you can leave a monitor and keyboard set up between sessions. A hot desk is any open desk and costs less. Compare current Houston pricing on the hot desk page.",
+  },
+  {
+    question: "What does the Houston hot desk plan include?",
+    answer:
+      "What's included — meeting-room time, mail handling, member access hours — is listed with current pricing on the Houston hot desk page. The team can walk you through it before you sign up.",
+  },
+  {
+    question: "Can I use 1800 Augusta Dr as my business address with a hot desk?",
+    answer:
+      "Ask the team whether mail handling is part of the Houston hot desk plan. If you need a business mailing address with package receiving or forwarding, a Houston virtual office plan covers that. Mail service begins only after USPS Form 1583 is accepted.",
+  },
+  {
+    question: "Where is the Houston hot desk space?",
+    answer:
+      "1800 Augusta Dr, Houston, TX 77057, in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr.",
+  },
+];
+
+const houstonDedicatedDeskFAQs: FAQ[] = [
+  {
+    question: "What is a dedicated desk?",
+    answer:
+      "A desk in the shared coworking area that's reserved for you every day. It's for members who are in the space daily and want a permanent setup rather than sitting wherever is open.",
+  },
+  {
+    question: "Can I leave equipment on my desk?",
+    answer:
+      "Yes — that's the point of a dedicated desk. Your monitor, keyboard, and other gear stay where you left them between sessions. Ask the team about storage options.",
+  },
+  {
+    question: "Does a dedicated desk include a business address?",
+    answer:
+      "Check the current Houston plan details on the dedicated desk page. If you need a business mailing address, a Houston virtual office plan can be added alongside your desk. A virtual-office-only plan is not, by itself, eligible for Google Business Profile verification.",
+  },
+  {
+    question: "What's the difference between a dedicated desk and a private office?",
+    answer:
+      "A dedicated desk is a reserved seat in the open coworking area — community, shared noise level, no walls. A private office is a lockable room with walls and a door, right for members who need privacy for confidential client calls or regulatory reasons. If you rarely need a closed door, a dedicated desk is usually enough.",
+  },
+  {
+    question: "Where is the Houston dedicated desk space?",
+    answer:
+      "1800 Augusta Dr, Houston, TX 77057, in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr.",
+  },
+];
+
+const houstonPrivateOfficeFAQs: FAQ[] = [
+  {
+    question: "What sizes of private office are available in Houston?",
+    answer:
+      "Muze Office Houston has private offices for solo professionals and small teams. Availability changes, so ask the team which sizes are open or book a tour to see them.",
+  },
+  {
+    question: "How much does a private office cost in Houston?",
+    answer:
+      "Private office pricing depends on office size and availability, so the Houston team quotes it on a tour or on request.",
+  },
+  {
+    question: "What's included with a Houston private office?",
+    answer:
+      "Private office tenants work in a building where the WiFi, meeting rooms, phone booths, and shared areas are already running. The exact inclusions and terms for each Houston office are covered on a tour.",
+  },
+  {
+    question: "Can I bring clients to my office?",
+    answer:
+      "Yes. Meet clients in your office, or book a meeting room when you need more space. On-site parking at 1800 Augusta Dr makes client visits easier.",
+  },
+  {
+    question: "Are private offices suitable for healthcare or telehealth work?",
+    answer:
+      "Private offices with lockable doors suit telehealth sessions and confidential conversations. Your practice remains responsible for its own HIPAA policies and safeguards.",
+  },
+];
+
+const houstonMeetingRoomFAQs: FAQ[] = [
+  {
+    question: "How do I book a meeting room in Houston?",
+    answer:
+      "See current room options and pricing on the Houston Meeting Rooms page, or contact the team with your date, time, and headcount.",
+  },
+  {
+    question: "What room sizes are available?",
+    answer:
+      "Room options and capacities are listed on the Houston Meeting Rooms page. If you're not sure which fits, tell the team how many people are coming and the format of the meeting.",
+  },
+  {
+    question: "What equipment is in the rooms?",
+    answer:
+      "Tell the team what you need when you book — a screen for slides, video conferencing, a whiteboard — and they'll confirm what the room has.",
+  },
+  {
+    question: "Is there parking for attendees?",
+    answer:
+      "Parking details for members and guests are confirmed by the Houston team — ask when you book.",
+  },
+  {
+    question: "Can I host a deposition or mediation?",
+    answer:
+      "Yes. Meeting rooms work for depositions and mediations. Confirm room size and any recording or exhibit requirements with the team before booking.",
+  },
+  {
+    question: "Is catering available?",
+    answer:
+      "Ask the team about coffee and food options when you book.",
+  },
+];
+
+const houstonConferenceRoomFAQs: FAQ[] = [
+  {
+    question: "How do I book a Houston conference room?",
+    answer:
+      "See current conference-room options and pricing on the Houston Conference Rooms page, or contact the team with your date, time, headcount, and meeting format.",
+  },
+  {
+    question: "How many people fit in a conference room?",
+    answer:
+      "Capacities are listed with each room on the Houston Conference Rooms page. For a larger group or an unusual layout, check with the team before booking.",
+  },
+  {
+    question: "Can I host a legal deposition or mediation in a conference room?",
+    answer:
+      "Yes. Conference rooms work for depositions, mediations, and sworn testimony, and the location just off the I-610 West Loop is easy for witnesses, counsel, and the court reporter to reach. Confirm any recording or exhibit-review requirements before booking.",
+  },
+  {
+    question: "Is there parking for attendees?",
+    answer:
+      "Parking details for members and guests are confirmed by the Houston team — ask when you book.",
+  },
+  {
+    question: "Do memberships include conference-room time?",
+    answer:
+      "Some Houston virtual office and coworking plans include meeting-room hours that can go toward a booking. Plan details are listed on each Houston service page.",
+  },
+];
+
+const houstonEventSpaceFAQs: FAQ[] = [
+  {
+    question: "How many people does the Houston event space hold?",
+    answer:
+      "Capacity depends on the layout — a seated presentation holds a different number than a standing mixer. Contact the team with your headcount and format to confirm fit.",
+  },
+  {
+    question: "How is event space priced?",
+    answer:
+      "Event space is booked by the hour. Current Houston pricing is listed on the event space page, or the team can quote your event.",
+  },
+  {
+    question: "Is catering available?",
+    answer:
+      "Ask the team about catering when you book, including whether you can bring your own caterer.",
+  },
+  {
+    question: "Is there parking for guests?",
+    answer:
+      "Parking details for members and guests are confirmed by the Houston team — ask when you book.",
+  },
+  {
+    question: "Can I see the space before booking?",
+    answer:
+      "Yes. Book a walkthrough to see the room and plan the layout with whoever is organizing the event.",
   },
 ];
 
@@ -513,6 +752,16 @@ const houstonVirtualOfficeFAQs: FAQ[] = [
 export const faqsByService: FAQsByService = {
   "virtual-office": virtualOfficeFAQs,
   "houston-virtual-office": houstonVirtualOfficeFAQs,
+  "houston-coworking": houstonCoworkingFAQs,
+  "houston-day-pass": houstonDayPassFAQs,
+  "houston-hot-desk": houstonHotDeskFAQs,
+  "houston-dedicated-desk": houstonDedicatedDeskFAQs,
+  "houston-private-office": houstonPrivateOfficeFAQs,
+  "houston-meeting-rooms": houstonMeetingRoomFAQs,
+  "houston-conference-rooms": houstonConferenceRoomFAQs,
+  "houston-event-space": houstonEventSpaceFAQs,
+  "houston-galleria-coworking": galleriaCoworkingFAQs,
+  "houston-medical-center-coworking": medicalCenterCoworkingFAQs,
   coworking: coworkingFAQs,
   "day-pass": dayPassFAQs,
   "hot-desk": hotDeskFAQs,
@@ -598,7 +847,7 @@ const locationsOverviewFAQs: FAQ[] = [
   {
     question: "How do I find the Houston location?",
     answer:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, 15 minutes from the Texas Medical Center, and 25 minutes from George Bush Intercontinental (IAH) and William P. Hobby (HOU).",
+      "1800 Augusta Dr, Houston, TX 77057 — in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr, with freeway access to the Texas Medical Center, George Bush Intercontinental (IAH), and William P. Hobby (HOU). The Houston location is not open yet.",
   },
   {
     question: "Will multi-city memberships be available?",
@@ -608,7 +857,7 @@ const locationsOverviewFAQs: FAQ[] = [
   {
     question: "Is parking available at each location?",
     answer:
-      "Yes. Free parking is included at our Las Vegas location for all members, day pass visitors, meeting room guests, and event attendees. Houston will also include parking when it opens.",
+      "Yes. Free parking is included at our Las Vegas location for all members, day pass visitors, meeting room guests, and event attendees. On-site parking is planned for Houston; details will be confirmed before opening.",
   },
   {
     question: "How do I schedule a tour?",
@@ -659,7 +908,7 @@ const houstonLocationFAQs: FAQ[] = [
   {
     question: "What is the address for Muze Office Houston?",
     answer:
-      "1800 Augusta Dr, Houston, TX 77057. It's a real commercial suite in the Galleria / Tanglewood area inside the 610 Loop — not a PO Box or mail-drop storefront — minutes from Post Oak Blvd.",
+      "1800 Augusta Dr, Houston, TX 77057 — a commercial building in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr. Muze Office Houston is an independently operated Muze Office franchise and is not open yet.",
   },
   {
     question: "How far is Muze Office Houston from IAH and Hobby airports?",
@@ -669,22 +918,22 @@ const houstonLocationFAQs: FAQ[] = [
   {
     question: "What are your hours in Houston?",
     answer:
-      "Houston is not open yet, so it does not have customer or front-desk hours. Opening timing and operating hours will be announced to the early-access list when confirmed.",
+      "Houston is not open yet, so it does not have customer or front-desk hours. Opening timing and operating hours will be announced to the early-access list at /locations/houston#waitlist when confirmed.",
   },
   {
-    question: "Is there free parking at the Houston location?",
+    question: "Is there parking at the Houston location?",
     answer:
       "On-site parking is planned at 1800 Augusta Dr. Final member and visitor parking details will be confirmed before the location opens.",
   },
   {
     question: "What services are available at Muze Office Houston?",
     answer:
-      "No Houston services are active yet. The planned mix includes virtual office services, coworking, private offices, meeting rooms, and event space. Join early access and select the workspace type you need; availability and Houston pricing will be confirmed before sales open.",
+      "No Houston services are active yet. The planned mix includes virtual office services, coworking, private offices, meeting rooms, and event space. Join the early-access list at /locations/houston#waitlist and select the workspace type you need; availability and Houston pricing will be confirmed before sales open, and pricing may differ from Las Vegas.",
   },
   {
     question: "Does Texas have state income tax?",
     answer:
-      "No. Texas has no state personal income tax. This is one reason many out-of-state founders form Texas LLCs and use a real Houston address like Muze Office Houston for their business filings.",
+      "No. Texas has no state personal income tax. This is one reason many out-of-state founders form Texas LLCs and look for a real Houston business address.",
   },
   {
     question: "Can I use the Houston address for my Texas LLC?",

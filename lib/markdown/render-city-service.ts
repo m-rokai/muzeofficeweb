@@ -137,7 +137,11 @@ export function renderCityServiceMarkdown(slug: string): string | null {
   }
 
   // FAQs
-  const faqs = getFAQsForService(data.serviceId);
+  // Same rule as the page: generic service FAQs describe the standard
+  // catalog; other locations only get FAQs written for them.
+  const faqs = location.usesStandardCatalog
+    ? getFAQsForService(data.serviceId, location.id)
+    : getFAQsForService(`${location.id}-${data.serviceId}`);
   if (faqs.length > 0) {
     lines.push("## Frequently Asked Questions");
     lines.push("");
