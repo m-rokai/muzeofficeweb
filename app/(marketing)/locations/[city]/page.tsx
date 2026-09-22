@@ -20,6 +20,7 @@ import { CTASection } from "@/components/marketing/cta-section";
 import { FAQSection } from "@/components/marketing/faq-section";
 import { Badge } from "@/components/ui/badge";
 import { locations, type Location } from "@/lib/data/locations";
+import { cityServiceData } from "@/lib/data/city-services";
 import { services as allServices } from "@/lib/data/services";
 import { getFAQsForPage } from "@/lib/data/faqs";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
@@ -83,7 +84,10 @@ export async function generateMetadata({
   }
 
   return {
-    title: `Muze Office ${location.name} — Hours & Directions`,
+    title:
+      location.slug === "las-vegas"
+        ? { absolute: "Muze Office Las Vegas — 24/7 Coworking, Hours & Directions" }
+        : `Muze Office ${location.name} — Hours & Directions`,
     description: `Visit Muze Office ${location.name} at ${shortAddress}. Hours, parking, directions, and amenities. Month-to-month memberships available. ${phoneCta}`,
     alternates: { canonical: `/locations/${city}` },
     openGraph: { ...OG_DEFAULTS, type: "website", url: `/locations/${city}` },
@@ -115,6 +119,13 @@ export default async function LocationDetailPage({
 
   const locationServices = getLocationServices(location);
   const isActive = location.status === "active";
+  const lasVegasServicePages =
+    location.slug === "las-vegas" && isActive
+      ? location.services.flatMap((serviceId) => {
+          const page = cityServiceData[`${location.slug}-${serviceId}`];
+          return page ? [page] : [];
+        })
+      : [];
   const isHoustonLaunchPage = location.slug === "houston" && !isActive;
   const imageSlug = location.slug === "las-vegas" ? "las-vegas" : "houston";
   const faqs = getFAQsForPage(`locations/${location.slug}`);
@@ -312,26 +323,47 @@ export default async function LocationDetailPage({
               {isActive ? "Available Services" : "Planned workspace options"}
             </h2>
             <ul className="flex flex-col gap-3">
-              {locationServices.map((service) => (
-                <li key={service!.id}>
-                  <Link
-                    href={
-                      isActive
-                        ? `/${location.slug}-${service!.id}`
-                        : "#waitlist"
-                    }
-                    className="group flex items-center gap-3 text-sm text-[#74726D] transition-colors hover:text-[#1A1A1A]"
-                  >
-                    <CheckCircle className="h-4 w-4 text-[#EAA820]" />
-                    <span>{service!.name}</span>
-                    {isActive && service!.tiers[0]?.price && (
-                      <span className="ml-auto text-xs text-[#EAA820]">
-                        From ${service!.tiers[0].price}/{service!.tiers[0].priceUnit}
-                      </span>
-                    )}
-                  </Link>
-                </li>
-              ))}
+              {lasVegasServicePages.length > 0
+                ? lasVegasServicePages.map((page) => {
+                    const service = allServices.find((item) => item.id === page.serviceId);
+                    const firstTier = service?.tiers[0];
+                    return (
+                      <li key={page.slug}>
+                        <Link
+                          href={`/${page.slug}`}
+                          className="group flex items-center gap-3 text-sm text-[#74726D] transition-colors hover:text-[#1A1A1A]"
+                        >
+                          <CheckCircle className="h-4 w-4 text-[#EAA820]" />
+                          <span>{page.h1}</span>
+                          {firstTier?.price && (
+                            <span className="ml-auto text-xs text-[#EAA820]">
+                              From ${firstTier.price}/{firstTier.priceUnit}
+                            </span>
+                          )}
+                        </Link>
+                      </li>
+                    );
+                  })
+                : locationServices.map((service) => (
+                    <li key={service!.id}>
+                      <Link
+                        href={
+                          isActive
+                            ? `/${location.slug}-${service!.id}`
+                            : "#waitlist"
+                        }
+                        className="group flex items-center gap-3 text-sm text-[#74726D] transition-colors hover:text-[#1A1A1A]"
+                      >
+                        <CheckCircle className="h-4 w-4 text-[#EAA820]" />
+                        <span>{service!.name}</span>
+                        {isActive && service!.tiers[0]?.price && (
+                          <span className="ml-auto text-xs text-[#EAA820]">
+                            From ${service!.tiers[0].price}/{service!.tiers[0].priceUnit}
+                          </span>
+                        )}
+                      </Link>
+                    </li>
+                  ))}
             </ul>
           </div>
           </FadeIn>

@@ -273,6 +273,8 @@ export default async function CityServicePage({ params }: PageProps) {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               href={primaryCtaHref}
+              data-cta="hero_primary"
+              data-cta-location={`city_service_${cityService}_hero`}
               className={cn(
                 buttonVariants({ size: "lg" }),
                 "rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
