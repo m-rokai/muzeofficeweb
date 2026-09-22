@@ -14,8 +14,12 @@ export function LocalBusinessSchema({
 
   const { address, geo, hours } = location;
 
+  // Hours reach JSON-LD only once confirmed (hours.display set), so
+  // placeholder hours for a new location never conflict with its GBP.
   const openingHours: string[] = [];
-  if (hours.is24Hours) {
+  if (!hours.display) {
+    // unconfirmed — omit
+  } else if (hours.is24Hours) {
     openingHours.push("Mo-Su 00:00-23:59");
   } else if (hours.weekdays) {
     openingHours.push(`Mo-Fr ${hours.weekdays.open}-${hours.weekdays.close}`);
@@ -46,7 +50,7 @@ export function LocalBusinessSchema({
     "@type": "LocalBusiness",
     "@id": `${locationUrl}#localbusiness`,
     name: location.nickname,
-    description: `Flexible coworking, virtual offices, private offices, meeting rooms, and event space in ${address.city}, ${address.state}.${landmarkPhrase}${localCue} Free parking, high-speed WiFi, on-site cafe, and month-to-month memberships with no long-term leases.`,
+    description: `Flexible coworking, virtual offices, private offices, meeting rooms, and event space in ${address.city}, ${address.state}.${landmarkPhrase}${localCue}${location.id === "las-vegas" ? " Free parking, high-speed WiFi, on-site cafe, and month-to-month memberships with no long-term leases." : ""}`,
     image: `${BRAND.url}/images/spaces/${location.slug}.jpg`,
     url: locationUrl,
     telephone: location.phoneRaw !== "TBD" ? location.phoneRaw : undefined,
@@ -98,7 +102,7 @@ export function LocalBusinessSchema({
           closes: hours.is24Hours ? "23:59" : hours.weekdays?.close,
         }
       : undefined,
-    priceRange: "$25-$899",
+    priceRange: location.usesStandardCatalog ? "$25-$899" : undefined,
     // NO aggregateRating here, by design. This LocalBusiness is describing
     // itself, so a self-hosted rating is "self-serving"
     // and ineligible for review-snippet stars under Google policy — it only
@@ -107,17 +111,14 @@ export function LocalBusinessSchema({
     // Maps / the local pack. location.rating & location.reviewCount still feed
     // the visible <GoogleReviewsBadge> UI — never route them back into JSON-LD.
     sameAs,
-    amenityFeature: [
-      { "@type": "LocationFeatureSpecification", name: "High-Speed WiFi", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Free Parking", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Unlimited Coffee & Tea", value: true },
-      { "@type": "LocationFeatureSpecification", name: "On-Site Cafe", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Phone Booths", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Printing & Scanning", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Biometric Access", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Conference Rooms", value: true },
-    ],
-    hasOfferCatalog: {
+    amenityFeature: location.amenities.map((name) => ({
+      "@type": "LocationFeatureSpecification",
+      name,
+      value: true,
+    })),
+    // The catalog describes Las Vegas products (e.g. day pass until
+    // midnight); other locations publish it once their plans are confirmed.
+    hasOfferCatalog: !location.usesStandardCatalog ? undefined : {
       "@type": "OfferCatalog",
       name: "Workspace Plans",
       itemListElement: [

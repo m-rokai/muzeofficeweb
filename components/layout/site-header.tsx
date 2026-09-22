@@ -3,15 +3,19 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { ChevronDown, Menu, Phone } from "lucide-react";
 import { buttonVariants } from "@/lib/utils/button-variants";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { mainNav } from "@/lib/data/navigation";
-import { BRAND } from "@/lib/utils/constants";
+import { getPathContact } from "@/lib/utils/path-contact";
 import { cn } from "@/lib/utils";
 
 export function SiteHeader() {
   const [open, setOpen] = useState(false);
+  // Location-aware actions: Houston pages get Houston contact paths, never
+  // the Las Vegas phone line or booking portal.
+  const contact = getPathContact(usePathname());
 
   return (
     <header className="sticky top-0 z-50 w-full bg-[#FAFAF7]/95 backdrop-blur supports-[backdrop-filter]:bg-[#FAFAF7]/80 border-b border-[#E6E4DF]">
@@ -71,32 +75,36 @@ export function SiteHeader() {
 
         {/* Desktop CTA */}
         <div className="hidden items-center gap-3 md:flex">
+          {contact.phoneRaw && (
+            <a
+              href={`tel:${contact.phoneRaw}`}
+              className="flex items-center gap-1.5 text-sm text-[#74726D] hover:text-[#1A1A1A]"
+            >
+              <Phone className="h-3.5 w-3.5" />
+              {contact.phone}
+            </a>
+          )}
           <a
-            href="tel:+17023707515"
-            className="flex items-center gap-1.5 text-sm text-[#74726D] hover:text-[#1A1A1A]"
-          >
-            <Phone className="h-3.5 w-3.5" />
-            (702) 370-7515
-          </a>
-          <a
-            href={BRAND.booking.tourUrl}
-            data-cta="book_tour"
+            href={contact.primary.href}
+            data-cta={contact.primary.trackingName}
             data-cta-location="header_desktop"
             className={cn(buttonVariants({ size: "sm" }), "rounded-lg bg-[#1A1A1A] hover:bg-[#333]")}
           >
-            Book a Tour
+            {contact.primary.label}
           </a>
-          <a
-            href={BRAND.booking.signupUrl}
-            data-cta="signup_online"
-            data-cta-location="header_desktop"
-            className={cn(
-              buttonVariants({ size: "sm" }),
-              "rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
-            )}
-          >
-            Sign Up
-          </a>
+          {contact.signupHref && (
+            <a
+              href={contact.signupHref}
+              data-cta="signup_online"
+              data-cta-location="header_desktop"
+              className={cn(
+                buttonVariants({ size: "sm" }),
+                "rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
+              )}
+            >
+              Sign Up
+            </a>
+          )}
         </div>
 
         {/* Mobile Menu */}
@@ -142,34 +150,38 @@ export function SiteHeader() {
                 )
               )}
               <div className="mt-4 flex flex-col gap-3 border-t border-[#E6E4DF] pt-4">
+                {contact.phoneRaw && (
+                  <a
+                    href={`tel:${contact.phoneRaw}`}
+                    className="flex items-center gap-2 text-sm text-[#74726D]"
+                  >
+                    <Phone className="h-4 w-4" />
+                    {contact.phone}
+                  </a>
+                )}
                 <a
-                  href="tel:+17023707515"
-                  className="flex items-center gap-2 text-sm text-[#74726D]"
-                >
-                  <Phone className="h-4 w-4" />
-                  (702) 370-7515
-                </a>
-                <a
-                  href={BRAND.booking.tourUrl}
+                  href={contact.primary.href}
                   onClick={() => setOpen(false)}
-                  data-cta="book_tour"
+                  data-cta={contact.primary.trackingName}
                   data-cta-location="header_mobile_menu"
                   className={cn(buttonVariants(), "w-full rounded-lg bg-[#1A1A1A]")}
                 >
-                  Book a Tour
+                  {contact.primary.label}
                 </a>
-                <a
-                  href={BRAND.booking.signupUrl}
-                  onClick={() => setOpen(false)}
-                  data-cta="signup_online"
-                  data-cta-location="header_mobile_menu"
-                  className={cn(
-                    buttonVariants(),
-                    "w-full rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
-                  )}
-                >
-                  Sign Up
-                </a>
+                {contact.signupHref && (
+                  <a
+                    href={contact.signupHref}
+                    onClick={() => setOpen(false)}
+                    data-cta="signup_online"
+                    data-cta-location="header_mobile_menu"
+                    className={cn(
+                      buttonVariants(),
+                      "w-full rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
+                    )}
+                  >
+                    Sign Up
+                  </a>
+                )}
               </div>
             </nav>
           </SheetContent>

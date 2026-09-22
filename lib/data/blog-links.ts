@@ -46,10 +46,10 @@ const relatedByService: Record<string, string[]> = {
   // rendered top-3 here and on conference-rooms. It keeps its top-3 slot on
   // airport-coworking, where it's on-topic rather than a head-term competitor.
   "meeting-rooms": [
-    "where-to-work-during-black-hat-def-con-las-vegas",
+    "where-to-work-during-g2e-las-vegas",
     "modern-meeting-room-near-ces-las-vegas",
-    "what-to-look-for-in-conference-rooms-near-me-getting-the-best-in-las-vegas",
     "podcasting-rooms-in-las-vegas",
+    "what-to-look-for-in-conference-rooms-near-me-getting-the-best-in-las-vegas",
   ],
   "conference-rooms": [
     "what-to-look-for-in-conference-rooms-near-me-getting-the-best-in-las-vegas",
@@ -59,7 +59,7 @@ const relatedByService: Record<string, string[]> = {
   "event-space": [
     "how-to-find-the-perfect-event-space-in-las-vegas",
     "3-tips-to-organize-a-successful-event-at-small-party-venues-in-las-vegas",
-    "where-to-work-during-black-hat-def-con-las-vegas",
+    "where-to-work-during-g2e-las-vegas",
     "where-to-work-during-sema-show-las-vegas",
     "where-to-work-during-nab-show-las-vegas",
     "where-to-work-during-magic-las-vegas",
@@ -99,11 +99,11 @@ const relatedByService: Record<string, string[]> = {
   ],
   // Seasonal rotation: the timed convention post for the NEXT upcoming major
   // show gets a rendered top-3 slot here and on meeting-rooms/event-space.
-  // Rotate during the monthly SEO session. Currently Black Hat/DEF CON
-  // (Aug 1-9, 2026); after mid-August, rotate to the next show and restore
-  // `podcasting-rooms-in-las-vegas` to the meeting-rooms top-3.
+  // Rotate during the monthly SEO session. Currently G2E (Sep 28-Oct 1,
+  // 2026); in early October rotate to `where-to-work-during-aws-reinvent-las-
+  // vegas` (Dec 2026), then CES in December.
   "convention-coworking": [
-    "where-to-work-during-black-hat-def-con-las-vegas",
+    "where-to-work-during-g2e-las-vegas",
     "benefits-of-coworking-near-ces-las-vegas",
     "modern-meeting-room-near-ces-las-vegas",
     "where-to-work-during-sema-show-las-vegas",
@@ -128,6 +128,21 @@ const relatedByService: Record<string, string[]> = {
   ],
 };
 
-export function getRelatedBlogSlugsForService(serviceId: string): string[] {
+// Houston service pages get Houston/Texas and location-neutral reading
+// instead of Las Vegas-branded posts.
+const houstonRelated = [
+  "best-virtual-office-providers-in-houston",
+  "how-to-set-up-a-virtual-office-in-houston",
+  "virtual-office-vs-po-box-in-texas",
+  "what-is-a-flexible-workspace",
+  "day-pass-vs-coworking-membership",
+  "private-office-vs-coworking-space",
+];
+
+export function getRelatedBlogSlugsForService(
+  serviceId: string,
+  locationId?: string,
+): string[] {
+  if (locationId === "houston") return houstonRelated;
   return relatedByService[serviceId] ?? [];
 }

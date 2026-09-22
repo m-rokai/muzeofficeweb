@@ -11,7 +11,32 @@ export interface Location {
   name: string;
   nickname: string;
   slug: string;
+  /**
+   * Launch switch. Flipping a location to "active" makes its 12 service pages
+   * indexable (200 instead of a temporary redirect to the hub), adds them to
+   * the sitemap / llms.txt, and publishes LocalBusiness + Service JSON-LD.
+   * See seo-reports/2026-09-22-houston-launch-playbook.md before flipping.
+   */
   status: "active" | "coming-soon";
+  /** ISO date (YYYY-MM-DD) the location opens. Shown on the pre-opening hub
+   *  and in its title; set it the moment the date is confirmed. */
+  openingDate?: string;
+  /**
+   * True only when this location sells the catalog in services.ts exactly as
+   * written there — same tiers, prices, inclusions, and service blurbs (today
+   * that catalog is Las Vegas). When false, pricing cards, price-bearing
+   * JSON-LD (offers, priceRange, offer catalog), generic service FAQs,
+   * catalog amenities, and markdown price tables are replaced with
+   * location-safe content and a "contact for pricing" path, so a location
+   * can go live before its price sheet is final.
+   */
+  usesStandardCatalog: boolean;
+  /** Location-specific Optix (or other) booking URLs. Omit and CTAs fall back
+   *  to the contact form, which is always safe. */
+  booking?: { tourUrl?: string; signupUrl?: string };
+  /** Amenities confirmed for THIS location — published as JSON-LD
+   *  amenityFeature. Only list what a visitor will actually find. */
+  amenities: string[];
   address: LocationAddress;
   geo: { lat: number; lng: number };
   phone: string;
@@ -21,6 +46,10 @@ export interface Location {
     is24Hours: boolean;
     weekdays: { open: string; close: string };
     weekends: null;
+    /** Human-readable hours lines for the location page. Set only once the
+     *  hours are confirmed — it also gates openingHours in JSON-LD, so
+     *  placeholder hours never reach Google. */
+    display?: string[];
   };
   localCues: string[];
   /** Primary neighborhoods this location is physically in. */
@@ -49,6 +78,21 @@ export const locations: Location[] = [
     nickname: "Muze Office Paradise",
     slug: "las-vegas",
     status: "active",
+    usesStandardCatalog: true,
+    booking: {
+      tourUrl: "https://muzeoffice.optixapp.com/book/tour/",
+      signupUrl: "https://muzeoffice.optixapp.com/signup/",
+    },
+    amenities: [
+      "High-Speed WiFi",
+      "Free Parking",
+      "Unlimited Coffee & Tea",
+      "On-Site Cafe",
+      "Phone Booths",
+      "Printing & Scanning",
+      "Biometric Access",
+      "Conference Rooms",
+    ],
     address: {
       street: "6860 Bermuda Rd, Suite 200",
       city: "Las Vegas",
@@ -68,6 +112,11 @@ export const locations: Location[] = [
       is24Hours: true,
       weekdays: { open: "00:00", close: "23:59" },
       weekends: null,
+      display: [
+        "Workspace access: 24/7",
+        "Phone: Mon–Fri, 10 am – 5 pm",
+        "Front desk: Mon–Fri, 10 am – 7 pm",
+      ],
     },
     localCues: [
       "Open 24/7",
@@ -126,6 +175,16 @@ export const locations: Location[] = [
     nickname: "Muze Office Houston",
     slug: "houston",
     status: "coming-soon",
+    // TODO(launch): set openingDate as soon as it is confirmed (YYYY-MM-DD).
+    // Pricing is not final and may differ from Las Vegas — keep false until
+    // Houston tiers are confirmed and match services.ts (or add per-location
+    // tiers).
+    usesStandardCatalog: false,
+    // TODO(launch): add the Houston Optix tourUrl / signupUrl if the
+    // franchise uses its own booking portal; until then CTAs use the contact
+    // form. Never point Houston CTAs at the Las Vegas Optix portal.
+    // TODO(launch): list only amenities confirmed on-site in Houston.
+    amenities: ["High-Speed WiFi", "Phone Booths", "Conference Rooms"],
     address: {
       street: "1800 Augusta Dr",
       city: "Houston",
@@ -134,11 +193,16 @@ export const locations: Location[] = [
       country: "US",
     },
     geo: { lat: 29.7573, lng: -95.4868 },
+    // TODO(launch): suite number (append to street, e.g. "1800 Augusta Dr,
+    // Suite X"), local phone, and hours must match the Houston Google
+    // Business Profile character-for-character (NAP consistency).
     phone: "TBD",
     phoneRaw: "TBD",
     email: "access@muzeoffice.com",
     hours: {
       is24Hours: false,
+      // TODO(launch): placeholder. Confirm, then add `display` lines (which
+      // also publishes these hours in LocalBusiness JSON-LD).
       weekdays: { open: "10:00", close: "19:00" },
       weekends: null,
     },
@@ -193,6 +257,31 @@ export const locations: Location[] = [
     // blur the new location entity.
   },
 ];
+
+/** "October 2026" style label for an ISO opening date, or null if unset. */
+export function formatOpeningMonth(location: Location): string | null {
+  if (!location.openingDate) return null;
+  const date = new Date(`${location.openingDate}T12:00:00Z`);
+  if (Number.isNaN(date.getTime())) return null;
+  return date.toLocaleDateString("en-US", {
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
+
+/** "October 15, 2026" style label for an ISO opening date, or null if unset. */
+export function formatOpeningDate(location: Location): string | null {
+  if (!location.openingDate) return null;
+  const date = new Date(`${location.openingDate}T12:00:00Z`);
+  if (Number.isNaN(date.getTime())) return null;
+  return date.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  });
+}
 
 export function getLocation(id: string): Location | undefined {
   return locations.find((l) => l.id === id);

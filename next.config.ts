@@ -1,6 +1,15 @@
 import type { NextConfig } from "next";
 import fs from "node:fs";
 import path from "node:path";
+import { locations } from "./lib/data/locations";
+
+// Legacy WordPress Houston URLs carry the old site's Houston equity. Before
+// opening they consolidate into the pre-opening hub; once Houston is switched
+// to active they go straight to the matching live service page.
+const houstonIsLive =
+  locations.find((l) => l.id === "houston")?.status === "active";
+const houstonDest = (liveSlug: string) =>
+  houstonIsLive ? liveSlug : "/locations/houston";
 
 /**
  * Read all blog post slugs from content/blog/ at build time.
@@ -30,18 +39,18 @@ const wordpressRedirects = [
   { source: "/workspace-memberships/virtual-office-in-las-vegas", destination: "/las-vegas-virtual-office" },
   { source: "/workspace-memberships/coworking-las-vegas", destination: "/las-vegas-coworking" },
   { source: "/workspace-memberships/office-space-in-las-vegas", destination: "/las-vegas-private-office" },
-  { source: "/workspace-memberships/coworking-houston-texas", destination: "/locations/houston" },
-  { source: "/workspace-memberships/virtual-office-houston-texas", destination: "/locations/houston" },
-  { source: "/workspace-memberships/virtual-office-houston-texas/premium-mailing-address-services-in-houston", destination: "/locations/houston" },
+  { source: "/workspace-memberships/coworking-houston-texas", destination: houstonDest("/houston-coworking") },
+  { source: "/workspace-memberships/virtual-office-houston-texas", destination: houstonDest("/houston-virtual-office") },
+  { source: "/workspace-memberships/virtual-office-houston-texas/premium-mailing-address-services-in-houston", destination: houstonDest("/houston-virtual-office") },
   { source: "/workspace-solutions-coworking-private-and-virtual-offices", destination: "/workspace-memberships" },
   { source: "/locations/las-vegas-coworking", destination: "/las-vegas-coworking" },
-  { source: "/locations/houston-coworking", destination: "/locations/houston" },
+  { source: "/locations/houston-coworking", destination: houstonDest("/houston-coworking") },
   { source: "/locations/south-main-coworking", destination: "/locations/houston" },
   { source: "/events-in-las-vegas", destination: "/las-vegas-event-space" },
   { source: "/events-in-houston-and-las-vegas", destination: "/las-vegas-event-space" },
   { source: "/conference-room-near-me-where-to-book-your-next-event", destination: "/las-vegas-meeting-rooms" },
   { source: "/coworking-space-near-me-how-working-in-a-coworking-space-boosts-your-productivity", destination: "/las-vegas-coworking" },
-  { source: "/office-day-pass-in-houston-at-muzeoffice", destination: "/locations/houston" },
+  { source: "/office-day-pass-in-houston-at-muzeoffice", destination: houstonDest("/houston-day-pass") },
   { source: "/tips-for-choosing-a-virtual-office-near-me", destination: "/las-vegas-virtual-office" },
   { source: "/make-the-most-out-of-your-virtual-office-space-in-las-vegas", destination: "/las-vegas-virtual-office" },
 ];

@@ -1,4 +1,4 @@
-import { notFound, permanentRedirect } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
@@ -29,7 +29,7 @@ import { locations } from "@/lib/data/locations";
 import { getCityServiceData } from "@/lib/data/city-services";
 import { getFAQsForService } from "@/lib/data/faqs";
 import { getRelatedBlogSlugsForService } from "@/lib/data/blog-links";
-import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
+import { OG_DEFAULTS } from "@/lib/utils/constants";
 import {
   generateAllCityServiceParams,
   parseCityServiceSlug,
@@ -122,6 +122,23 @@ const amenityLabels: Record<string, string> = {
   hipaa: "HIPAA-Aware Private Offices",
 };
 
+/** Inclusions that hold at any Muze Office location. Brand-specific or
+ *  building-specific ones (furniture brands, 24/7 biometric entry, free
+ *  parking, the cafe) only show where the standard catalog applies. */
+const LOCATION_NEUTRAL_AMENITIES = new Set([
+  "business-address",
+  "mail-handling",
+  "meeting-rooms",
+  "wifi",
+  "phone-booths",
+  "av-equipment",
+  "video-conferencing",
+  "whiteboards",
+  "flexible-setup",
+  "furnished",
+  "address",
+]);
+
 /* ── Page ──────────────────────────────────────────────────── */
 
 export default async function CityServicePage({ params }: PageProps) {
@@ -137,13 +154,27 @@ export default async function CityServicePage({ params }: PageProps) {
   const pageData = getCityServiceData(cityService);
   if (!pageData) notFound();
 
-  const faqs = getFAQsForService(ctx.serviceId, ctx.locationId);
+  // Generic service FAQs, blurbs, and amenity lists describe the standard
+  // (Las Vegas) catalog. A location with its own catalog only shows FAQs
+  // written for it and generic, location-neutral inclusions.
+  const standardCatalog = result.location.usesStandardCatalog;
+  const faqs = standardCatalog
+    ? getFAQsForService(ctx.serviceId, ctx.locationId)
+    : getFAQsForService(`${ctx.locationId}-${ctx.serviceId}`);
   const isComingSoon = location.status === "coming-soon";
   if (isComingSoon) {
-    permanentRedirect(`/locations/${location.slug}#waitlist`);
+    // Temporary (307), not permanent: these URLs become real, indexable
+    // pages the day the location opens. A 308 would be cached by browsers
+    // and tell Google the hub is the permanent home of these URLs.
+    redirect(`/locations/${location.slug}#waitlist`);
   }
+  // Booking links and prices are per location. A location without its own
+  // booking portal or confirmed price sheet falls back to the contact form —
+  // never to another city's portal or prices.
+  const signupUrl = location.booking?.signupUrl;
+  const tourUrl = location.booking?.tourUrl;
+  const hasPhone = location.phone !== "TBD";
   const hasOnlineBooking =
-    !isComingSoon &&
     location.slug === "las-vegas" &&
     (service.id === "meeting-rooms" || service.id === "day-pass");
   const isDayPass = service.id === "day-pass";
@@ -160,29 +191,21 @@ export default async function CityServicePage({ params }: PageProps) {
     "conference-rooms": "meeting-rooms",
     "event-space": "event-space",
   };
-  const contactHref = isComingSoon
-    ? "/locations/houston#waitlist"
-    : `/contact?interest=${CONTACT_INTEREST_BY_SERVICE[service.id] ?? "coworking"}`;
+  const contactHref = `/contact?interest=${CONTACT_INTEREST_BY_SERVICE[service.id] ?? "coworking"}`;
   // Coming-soon services consolidate into the substantive Houston launch hub
   // rather than fragmenting demand across noindexed service pages.
-  const primaryCtaHref = isComingSoon
-    ? contactHref
-    : hasOnlineBooking
-      ? "#book-online"
-      : isVirtualOffice
-        ? contactHref
-        : isEventSpace
-          ? contactHref
-          : BRAND.booking.tourUrl;
-  const primaryCtaLabel = isComingSoon
-    ? "Join Waitlist"
-    : hasOnlineBooking
-      ? "Book Online"
-      : isVirtualOffice
-        ? `Get My ${location.name} Address`
-        : isEventSpace
-          ? "Check Date & Availability"
-          : "Book a Tour";
+  const primaryCtaHref = hasOnlineBooking
+    ? "#book-online"
+    : isVirtualOffice || isEventSpace
+      ? contactHref
+      : (tourUrl ?? contactHref);
+  const primaryCtaLabel = hasOnlineBooking
+    ? "Book Online"
+    : isVirtualOffice
+      ? `Get My ${location.name} Address`
+      : isEventSpace
+        ? "Check Date & Availability"
+        : "Book a Tour";
   const pageSections = [
     { href: "#pricing", label: "Pricing", show: true },
     { href: "#book-online", label: "Book online", show: hasOnlineBooking },
@@ -205,7 +228,7 @@ export default async function CityServicePage({ params }: PageProps) {
 
   return (
     <>
-      {!isComingSoon && <LocalBusinessSchema locationId={ctx.locationId} />}
+      <LocalBusinessSchema locationId={ctx.locationId} />
       <ServiceSchema serviceId={ctx.serviceId} cityId={ctx.locationId} />
       <Breadcrumbs
         items={[
@@ -227,18 +250,13 @@ export default async function CityServicePage({ params }: PageProps) {
           />
         </div>
         <div className="relative mx-auto flex max-w-[1200px] flex-col items-center gap-6 px-4 sm:px-6 py-20 sm:py-32 text-center md:py-40">
-          {isComingSoon && (
-            <span className="inline-block rounded-full bg-[#EAA820]/20 px-4 py-1 text-sm font-semibold text-[#EAA820]">
-              Coming Soon to {location.name}
-            </span>
-          )}
           <h1 className="text-balance font-[family-name:var(--font-plus-jakarta)] text-3xl font-bold text-white sm:text-4xl md:text-5xl lg:text-6xl">
             {pageData.h1}
           </h1>
           <p className="max-w-[640px] text-pretty text-lg text-gray-300">
             {pageData.heroSubtitle}
           </p>
-          {isDayPass ? (
+          {isDayPass && location.hours.is24Hours ? (
             <div className="grid w-full max-w-[680px] gap-2 rounded-2xl bg-black/45 p-2 text-left shadow-[0_12px_36px_rgba(0,0,0,0.28)] ring-1 ring-white/20 backdrop-blur-sm sm:grid-cols-2">
               <div className="flex items-center gap-3 rounded-xl bg-white/10 px-4 py-3">
                 <Clock3
@@ -247,7 +265,7 @@ export default async function CityServicePage({ params }: PageProps) {
                 />
                 <div>
                   <span className="block text-xs font-semibold uppercase tracking-[0.16em] text-[#EAA820]">
-                    Las Vegas access
+                    {location.name} access
                   </span>
                   <span className="block font-semibold text-white">
                     Open 24 hours, 7 days a week
@@ -273,6 +291,8 @@ export default async function CityServicePage({ params }: PageProps) {
           <div className="flex flex-wrap items-center justify-center gap-4">
             <Link
               href={primaryCtaHref}
+              data-cta="hero_primary"
+              data-cta-location={`city_service_${cityService}_hero`}
               className={cn(
                 buttonVariants({ size: "lg" }),
                 "rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
@@ -280,9 +300,9 @@ export default async function CityServicePage({ params }: PageProps) {
             >
               {primaryCtaLabel}
             </Link>
-            {!isComingSoon && isVirtualOffice && (
+            {isVirtualOffice && signupUrl && (
               <a
-                href={BRAND.booking.signupUrl}
+                href={signupUrl}
                 data-cta="signup_online"
                 data-cta-location={`city_service_${cityService}_hero`}
                 className={cn(
@@ -293,7 +313,7 @@ export default async function CityServicePage({ params }: PageProps) {
                 Sign Up Online
               </a>
             )}
-            {!isComingSoon && location.phone !== "TBD" && (
+            {hasPhone && (
               <a
                 href={`tel:${location.phoneRaw}`}
                 className={cn(
@@ -306,7 +326,7 @@ export default async function CityServicePage({ params }: PageProps) {
               </a>
             )}
           </div>
-          {!isComingSoon && location.rating && (
+          {location.rating && (
             <div className="flex justify-center">
               <GoogleReviewsBadge
                 rating={location.rating}
@@ -345,65 +365,92 @@ export default async function CityServicePage({ params }: PageProps) {
         <FadeIn>
           <div className="flex flex-col items-center gap-4 text-center">
             <h2 className="font-[family-name:var(--font-plus-jakarta)] text-3xl font-semibold text-[#1A1A1A] md:text-4xl lg:text-5xl">
-              {service.name} Pricing in {location.name}
+              {service.name} {standardCatalog ? "Pricing" : "Plans"} in{" "}
+              {location.name}
             </h2>
             <p className="max-w-[560px] text-lg text-[#74726D]">
-              {service.shortDescription}
+              {standardCatalog ? service.shortDescription : pageData.heroSubtitle}
             </p>
           </div>
         </FadeIn>
-        <StaggerContainer
-          className={cn(
-            "mt-12 grid gap-6 md:grid-cols-2",
-            service.tiers.length >= 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"
-          )}
-        >
-          {service.tiers.map((tier) => (
-            <StaggerItem key={tier.name}>
-              <PricingCard
-                name={tier.name}
-                price={tier.price}
-                priceUnit={tier.priceUnit}
-                features={tier.features}
-                highlighted={tier.highlighted}
-                ctaLabel={
-                  tier.price !== null
-                    ? isComingSoon
-                      ? "Join Waitlist"
-                      : isEventSpace
+        {standardCatalog ? (
+          <StaggerContainer
+            className={cn(
+              "mt-12 grid gap-6 md:grid-cols-2",
+              service.tiers.length >= 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"
+            )}
+          >
+            {service.tiers.map((tier) => {
+              const tierSignupUrl =
+                tier.price !== null ? signupUrl : undefined;
+              return (
+                <StaggerItem key={tier.name}>
+                  <PricingCard
+                    name={tier.name}
+                    price={tier.price}
+                    priceUnit={tier.priceUnit}
+                    features={tier.features}
+                    highlighted={tier.highlighted}
+                    ctaLabel={
+                      isEventSpace
                         ? "Check Date & Availability"
-                      : hasOnlineBooking
-                        ? "Book Online"
-                      : "Sign Up Online"
-                    : "Contact Us"
-                }
-                ctaHref={
-                  isEventSpace
-                    ? contactHref
-                    : hasOnlineBooking
-                    ? "#book-online"
-                    : !isComingSoon && tier.price !== null
-                      ? BRAND.booking.signupUrl
-                      : contactHref
-                }
-                trackingName={
-                  isEventSpace
-                    ? "event_space_inquiry"
-                    : hasOnlineBooking
-                    ? "book_online"
-                    : !isComingSoon && tier.price !== null
-                      ? "signup_online"
-                      : "contact_us"
-                }
-                trackingLocation={`city_service_${cityService}_pricing`}
-              />
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+                        : hasOnlineBooking
+                          ? "Book Online"
+                          : tierSignupUrl
+                            ? "Sign Up Online"
+                            : "Contact Us"
+                    }
+                    ctaHref={
+                      isEventSpace
+                        ? contactHref
+                        : hasOnlineBooking
+                          ? "#book-online"
+                          : (tierSignupUrl ?? contactHref)
+                    }
+                    trackingName={
+                      isEventSpace
+                        ? "event_space_inquiry"
+                        : hasOnlineBooking
+                          ? "book_online"
+                          : tierSignupUrl
+                            ? "signup_online"
+                            : "contact_us"
+                    }
+                    trackingLocation={`city_service_${cityService}_pricing`}
+                  />
+                </StaggerItem>
+              );
+            })}
+          </StaggerContainer>
+        ) : (
+          // Prices not yet confirmed for this location: never show another
+          // city's price sheet. Route the buyer to a quote instead.
+          <FadeIn>
+            <div className="mx-auto mt-10 flex max-w-[640px] flex-col items-center gap-5 rounded-2xl border border-[#E6E4DF] bg-[#FAFAF7] p-8 text-center">
+              <p className="text-base leading-relaxed text-[#74726D]">
+                {location.name} rates for {service.name.toLowerCase()} are
+                quoted directly by the Muze Office {location.name} team. Tell
+                us how you plan to use the space and we&apos;ll send current
+                pricing and availability for {location.address.street}.
+              </p>
+              <Link
+                href={contactHref}
+                data-cta="contact_us"
+                data-cta-location={`city_service_${cityService}_pricing`}
+                className={cn(
+                  buttonVariants({ size: "lg" }),
+                  "rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]"
+                )}
+              >
+                Get {location.name} Pricing
+              </Link>
+            </div>
+          </FadeIn>
+        )}
       </Section>
 
       {/* ── First-month cost comparison (transparency wedge) ── */}
-      {pageData.longFormBody?.costComparison && (
+      {standardCatalog && pageData.longFormBody?.costComparison && (
         <Section variant="gray" id="cost-comparison">
           <FadeIn>
             <div className="flex flex-col items-center gap-4 text-center">
@@ -517,12 +564,19 @@ export default async function CityServicePage({ params }: PageProps) {
               {service.name} Amenities in {location.name}
             </h2>
             <p className="max-w-[560px] text-lg text-[#74726D]">
-              Everything you need is included. No hidden fees.
+              {standardCatalog
+                ? "Everything you need is included. No hidden fees."
+                : `Confirm current inclusions with the Muze Office ${location.name} team.`}
             </p>
           </div>
         </FadeIn>
         <StaggerContainer className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {service.includedAmenities.map((amenityId) => (
+          {service.includedAmenities
+            .filter(
+              (amenityId) =>
+                standardCatalog || LOCATION_NEUTRAL_AMENITIES.has(amenityId)
+            )
+            .map((amenityId) => (
             <StaggerItem key={amenityId}>
               <div className="flex items-start gap-3 rounded-xl border border-[#E6E4DF] bg-white p-4">
                 <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#EAA820]" />
@@ -670,10 +724,10 @@ export default async function CityServicePage({ params }: PageProps) {
                     </ul>
                   </div>
                 )}
-                {!isComingSoon && (
-                  <div className="mt-8 flex flex-wrap items-center gap-4">
+                <div className="mt-8 flex flex-wrap items-center gap-4">
+                  {(isEventSpace || signupUrl) && (
                     <Link
-                      href={isEventSpace ? contactHref : BRAND.booking.signupUrl}
+                      href={isEventSpace ? contactHref : signupUrl!}
                       data-cta={isEventSpace ? "event_space_inquiry" : "signup_online"}
                       data-cta-location={`city_service_${cityService}_details`}
                       className={cn(
@@ -683,19 +737,19 @@ export default async function CityServicePage({ params }: PageProps) {
                     >
                       {isEventSpace ? "Check Date & Availability" : "Sign Up Online"}
                     </Link>
-                    <Link
-                      href={contactHref}
-                      data-cta="contact_us"
-                      data-cta-location={`city_service_${cityService}_details`}
-                      className={cn(
-                        buttonVariants({ variant: "outline", size: "lg" }),
-                        "rounded-lg"
-                      )}
-                    >
-                      Ask a Question First
-                    </Link>
-                  </div>
-                )}
+                  )}
+                  <Link
+                    href={contactHref}
+                    data-cta="contact_us"
+                    data-cta-location={`city_service_${cityService}_details`}
+                    className={cn(
+                      buttonVariants({ variant: "outline", size: "lg" }),
+                      "rounded-lg"
+                    )}
+                  >
+                    Ask a Question First
+                  </Link>
+                </div>
               </div>
             </FadeIn>
           </div>
@@ -713,16 +767,18 @@ export default async function CityServicePage({ params }: PageProps) {
             <p className="text-lg text-[#74726D]">
               {pageData.locationCallout}
             </p>
-            {!isComingSoon && (
-              <address className="not-italic text-sm text-gray-700">
-                <span className="font-semibold">{location.nickname}</span>
-                <br />
-                {location.address.street}, {location.address.city},{" "}
-                {location.address.state} {location.address.zip}
-                <br />
-                {location.phone}
-              </address>
-            )}
+            <address className="not-italic text-sm text-gray-700">
+              <span className="font-semibold">{location.nickname}</span>
+              <br />
+              {location.address.street}, {location.address.city},{" "}
+              {location.address.state} {location.address.zip}
+              {hasPhone && (
+                <>
+                  <br />
+                  {location.phone}
+                </>
+              )}
+            </address>
             <div className="flex flex-wrap gap-6 text-sm text-gray-600">
               {location.localCues.map((cue) => (
                 <div key={cue} className="flex items-center gap-2">
@@ -746,7 +802,7 @@ export default async function CityServicePage({ params }: PageProps) {
 
       {/* ── Related Reading ───────────────────────────────── */}
       <RelatedReading
-        slugs={getRelatedBlogSlugsForService(service.id)}
+        slugs={getRelatedBlogSlugsForService(service.id, location.id)}
         heading={`More on ${service.name.toLowerCase()}`}
         subtitle={`Long-form reading from the Muze Office team on ${service.name.toLowerCase()} in ${location.name}.`}
       />
@@ -754,9 +810,7 @@ export default async function CityServicePage({ params }: PageProps) {
       {/* ── CTA ───────────────────────────────────────────── */}
       <CTASection
         heading={
-          isComingSoon
-            ? `Be First to Know About ${service.name} in ${location.name}`
-            : isDayPass
+          isDayPass
               ? `Ready to Try a Day Pass in ${location.name}?`
             : hasOnlineBooking
               ? `Ready to Book ${service.name} in ${location.name}?`
@@ -767,9 +821,7 @@ export default async function CityServicePage({ params }: PageProps) {
             : `Ready to Get Started with ${service.name}?`
         }
         subtitle={
-          isComingSoon
-            ? `Muze Office ${location.name} is coming soon. Join early access for confirmed opening, availability, and pricing updates.`
-            : isDayPass
+          isDayPass && hasOnlineBooking
               ? `Buy and activate online today, then work until midnight — gigabit fiber WiFi, bottled water, coffee, Herman Miller furniture, and free parking included. Bring your laptop; monitors are not provided.`
             : hasOnlineBooking
               ? `Reserve your room online now, or call us if you need catering, AV help, or a custom setup for your meeting.`
@@ -777,11 +829,13 @@ export default async function CityServicePage({ params }: PageProps) {
               ? `Pick a tier, complete USPS Form 1583, and use the address where the receiving agency, bank, or platform permits a commercial mail-receiving address. Registered-agent and Google Business Profile requirements are separate.`
             : isEventSpace
               ? `Tell us your preferred date, guest count, and room setup. We will confirm availability and the right space for your event.`
-            : `Book a tour today or call us to learn more about ${service.name.toLowerCase()} at Muze Office ${location.name}.`
+            : isDayPass
+              ? `Tell us the day you need a desk and we will confirm day pass availability at ${location.address.street}.`
+            : `Book a tour today or contact us to learn more about ${service.name.toLowerCase()} at Muze Office ${location.name}.`
         }
         primaryLabel={primaryCtaLabel}
         primaryHref={primaryCtaHref}
-        showPhone={!isComingSoon && location.phone !== "TBD"}
+        showPhone={hasPhone}
         ctaLocation={`city_service_${cityService}_bottom`}
         phone={location.phone}
       />

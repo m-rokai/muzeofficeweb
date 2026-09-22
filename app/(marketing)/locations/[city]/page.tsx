@@ -19,7 +19,13 @@ import { Breadcrumbs } from "@/components/layout/breadcrumbs";
 import { CTASection } from "@/components/marketing/cta-section";
 import { FAQSection } from "@/components/marketing/faq-section";
 import { Badge } from "@/components/ui/badge";
-import { locations, type Location } from "@/lib/data/locations";
+import {
+  locations,
+  formatOpeningDate,
+  formatOpeningMonth,
+  type Location,
+} from "@/lib/data/locations";
+import { cityServiceData } from "@/lib/data/city-services";
 import { services as allServices } from "@/lib/data/services";
 import { getFAQsForPage } from "@/lib/data/faqs";
 import { LocalBusinessSchema } from "@/components/seo/local-business-schema";
@@ -37,6 +43,39 @@ const coreServiceIds = [
   "meeting-rooms",
   "conference-rooms",
   "event-space",
+];
+
+const houstonPlannedServices = [
+  {
+    title: "Coworking and day passes near the Galleria",
+    description:
+      "Drop-in and monthly desks for remote employees, consultants, and visiting teams who need reliable WiFi and a quiet place to take calls, not a table at a coffee shop on Westheimer.",
+  },
+  {
+    title: "Virtual office and Houston business address",
+    description:
+      "A commercial mail-receiving address at 1800 Augusta Dr, Houston, TX 77057 with mail handling. Service starts after USPS Form 1583 and identification are accepted.",
+  },
+  {
+    title: "Private offices",
+    description:
+      "Furnished, lockable offices for solo professionals and small teams who need a door that closes for confidential client work, month to month instead of a long-term lease.",
+  },
+  {
+    title: "Meeting and conference rooms by the hour",
+    description:
+      "Rooms with screens for client meetings, interviews, and team sessions, a short drive from Post Oak Blvd, the I-610 West Loop, and the Energy Corridor.",
+  },
+  {
+    title: "Event and training space",
+    description:
+      "Room for workshops, trainings, and small company events in Uptown Houston, with layouts planned for presentations and group sessions.",
+  },
+  {
+    title: "Easy access from across Houston",
+    description:
+      "Off Woodway Dr near the I-610 West Loop, with routes to River Oaks, Bellaire, Westchase, downtown, and the Texas Medical Center. Parking details will be confirmed before opening.",
+  },
 ];
 
 export function generateStaticParams() {
@@ -60,31 +99,41 @@ export async function generateMetadata({
       : `${location.address.city}, ${location.address.state}`;
 
   const isComingSoon = location.status !== "active";
-  const isHoustonLaunchPage =
-    location.slug === "houston" && location.address.street !== "TBD";
+  // Keyed on status (not address) so the pre-opening title disappears the
+  // moment Houston is switched to active.
+  const isHoustonLaunchPage = location.slug === "houston" && isComingSoon;
   const phoneCta =
-    location.phone !== "TBD" ? `Call ${location.phone}.` : "Coming soon.";
+    location.phone !== "TBD" ? `Call ${location.phone}.` : "";
 
   if (isHoustonLaunchPage) {
+    const opening = formatOpeningMonth(location) ?? "2026";
+    const openingDay = formatOpeningDate(location);
+    // Pre-opening hub: target the service + neighborhood terms Houston
+    // searchers use, stay explicit that the location is not open yet.
+    const title = `Muze Office Houston — Galleria Coworking, Opening ${opening}`;
+    const description = `Coworking, private offices, virtual office addresses, and meeting rooms planned at 1800 Augusta Dr near the Galleria and Uptown${openingDay ? `, opening ${openingDay}` : ""}. Join early access for launch pricing.`;
     return {
-      title: "Muze Office Houston — Galleria Opening 2026",
-      description:
-        "Join Muze Office Houston early access for planned virtual office, coworking, private offices, and meeting rooms at 1800 Augusta Dr. Services are not active yet.",
+      title: { absolute: title },
+      description,
       alternates: { canonical: `/locations/${city}` },
       openGraph: {
         ...OG_DEFAULTS,
         type: "website",
         url: `/locations/${city}`,
-        title: "Muze Office Houston — Galleria Opening 2026",
-        description:
-          "Join early access for Houston opening updates, planned coworking, virtual office, private office, and meeting space availability.",
+        title,
+        description,
       },
     };
   }
 
   return {
-    title: `Muze Office ${location.name} — Hours & Directions`,
-    description: `Visit Muze Office ${location.name} at ${shortAddress}. Hours, parking, directions, and amenities. Month-to-month memberships available. ${phoneCta}`,
+    title: {
+      absolute:
+        location.slug === "las-vegas"
+          ? "Muze Office Las Vegas — 24/7 Coworking, Hours & Directions"
+          : `Muze Office ${location.name} — Coworking, Hours & Directions`,
+    },
+    description: `Visit Muze Office ${location.name} at ${shortAddress}. Hours, parking, directions, and amenities. Month-to-month memberships available. ${phoneCta}`.trim(),
     alternates: { canonical: `/locations/${city}` },
     openGraph: { ...OG_DEFAULTS, type: "website", url: `/locations/${city}` },
     // Generic future locations stay out of search until their address and
@@ -92,6 +141,13 @@ export async function generateMetadata({
     // substantive, transparent pre-opening hub.
     robots: isComingSoon ? { index: false, follow: true } : undefined,
   };
+}
+
+/** Every live service page for an active location (hub → spoke links). */
+function getLocationServicePages(location: Location) {
+  return location.services
+    .map((sid) => cityServiceData[`${location.slug}-${sid}`])
+    .filter(Boolean);
 }
 
 function getLocationServices(location: Location) {
@@ -116,6 +172,12 @@ export default async function LocationDetailPage({
   const locationServices = getLocationServices(location);
   const isActive = location.status === "active";
   const isHoustonLaunchPage = location.slug === "houston" && !isActive;
+  const servicePages = isActive ? getLocationServicePages(location) : [];
+  const hasPhone = location.phone !== "TBD";
+  const tourHref =
+    location.booking?.tourUrl ?? "/contact?interest=coworking";
+  const openingMonth = formatOpeningMonth(location);
+  const openingDay = formatOpeningDate(location);
   const imageSlug = location.slug === "las-vegas" ? "las-vegas" : "houston";
   const faqs = getFAQsForPage(`locations/${location.slug}`);
 
@@ -150,7 +212,7 @@ export default async function LocationDetailPage({
             <div className="flex items-center gap-3">
               <h1 className="font-[family-name:var(--font-plus-jakarta)] text-4xl font-semibold text-white md:text-5xl">
                 {isHoustonLaunchPage
-                  ? "Muze Office Houston, Opening in 2026"
+                  ? `Muze Office Houston, Opening ${openingDay ?? openingMonth ?? "in 2026"}`
                   : `Muze Office ${location.name}`}
               </h1>
               {!isActive && (
@@ -161,7 +223,9 @@ export default async function LocationDetailPage({
             </div>
             <p className="mt-4 max-w-[560px] text-base leading-relaxed text-gray-300 md:text-lg">
               {isActive
-                ? `Open 24/7 at ${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}. Same-day Day Passes and month-to-month memberships with free parking.`
+                ? location.slug === "las-vegas"
+                  ? `Open 24/7 at ${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}. Same-day Day Passes and month-to-month memberships with free parking.`
+                  : `Coworking, private offices, virtual office addresses, and meeting rooms at ${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}. Month-to-month memberships.`
                 : `An independently operated Muze Office franchise location is planned at ${location.address.street} in Houston's Galleria / Tanglewood area. Join early access for verified opening updates; no Houston memberships or address services are active yet.`}
             </p>
             {isHoustonLaunchPage && (
@@ -260,7 +324,7 @@ export default async function LocationDetailPage({
                   Preferred
                 </span>
               </li>
-              {location.phone !== "TBD" && (
+              {hasPhone && (
                 <li className="flex items-center gap-3 text-sm">
                   <Phone className="h-4 w-4 shrink-0 text-[#EAA820]" />
                   <a
@@ -273,19 +337,22 @@ export default async function LocationDetailPage({
               )}
               <li className="flex items-start gap-3 text-sm text-[#74726D]">
                 <Clock className="mt-0.5 h-4 w-4 shrink-0 text-[#EAA820]" />
-                {isActive ? (
+                {location.hours.display ? (
                   <span>
-                    Workspace access: 24/7
-                    <br />
-                    Phone: Mon&ndash;Fri, 10 am &ndash; 5 pm
-                    <br />
-                    Front desk: Mon&ndash;Fri, 10 am &ndash; 7 pm
+                    {location.hours.display.map((line, i) => (
+                      <span key={line}>
+                        {i > 0 && <br />}
+                        {line}
+                      </span>
+                    ))}
                   </span>
                 ) : (
                   <span>
-                    Planned opening: 2026
+                    {isActive
+                      ? "Opening day"
+                      : `Planned opening: ${openingDay ?? openingMonth ?? "2026"}`}
                     <br />
-                    Hours and opening date: to be announced
+                    Hours: to be announced
                   </span>
                 )}
               </li>
@@ -293,7 +360,7 @@ export default async function LocationDetailPage({
 
             {isActive && (
               <a
-                href={BRAND.booking.tourUrl}
+                href={tourHref}
                 className={cn(
                   buttonVariants({ size: "lg" }),
                   "w-fit rounded-lg bg-[#1A1A1A]"
@@ -312,26 +379,40 @@ export default async function LocationDetailPage({
               {isActive ? "Available Services" : "Planned workspace options"}
             </h2>
             <ul className="flex flex-col gap-3">
-              {locationServices.map((service) => (
-                <li key={service!.id}>
-                  <Link
-                    href={
-                      isActive
-                        ? `/${location.slug}-${service!.id}`
-                        : "#waitlist"
-                    }
-                    className="group flex items-center gap-3 text-sm text-[#74726D] transition-colors hover:text-[#1A1A1A]"
-                  >
-                    <CheckCircle className="h-4 w-4 text-[#EAA820]" />
-                    <span>{service!.name}</span>
-                    {isActive && service!.tiers[0]?.price && (
-                      <span className="ml-auto text-xs text-[#EAA820]">
-                        From ${service!.tiers[0].price}/{service!.tiers[0].priceUnit}
-                      </span>
-                    )}
-                  </Link>
-                </li>
-              ))}
+              {isActive
+                ? servicePages.map((page) => {
+                    const service = allServices.find(
+                      (s) => s.id === page.serviceId
+                    );
+                    const firstTier = service?.tiers[0];
+                    return (
+                      <li key={page.slug}>
+                        <Link
+                          href={`/${page.slug}`}
+                          className="group flex items-center gap-3 text-sm text-[#74726D] transition-colors hover:text-[#1A1A1A]"
+                        >
+                          <CheckCircle className="h-4 w-4 shrink-0 text-[#EAA820]" />
+                          <span>{page.h1}</span>
+                          {location.usesStandardCatalog && firstTier?.price && (
+                            <span className="ml-auto shrink-0 text-xs text-[#EAA820]">
+                              From ${firstTier.price}/{firstTier.priceUnit}
+                            </span>
+                          )}
+                        </Link>
+                      </li>
+                    );
+                  })
+                : locationServices.map((service) => (
+                    <li key={service!.id}>
+                      <Link
+                        href="#waitlist"
+                        className="group flex items-center gap-3 text-sm text-[#74726D] transition-colors hover:text-[#1A1A1A]"
+                      >
+                        <CheckCircle className="h-4 w-4 text-[#EAA820]" />
+                        <span>{service!.name}</span>
+                      </Link>
+                    </li>
+                  ))}
             </ul>
           </div>
           </FadeIn>
@@ -426,6 +507,60 @@ export default async function LocationDetailPage({
         </Section>
       )}
 
+      {/* Pre-opening service overview: gives the one indexable Houston URL
+          real coverage of the service + neighborhood terms until the
+          individual service pages go live at opening. */}
+      {isHoustonLaunchPage && (
+        <Section>
+          <FadeIn>
+            <div className="mb-8 max-w-[720px]">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8A6000]">
+                Planned at 1800 Augusta Dr
+              </p>
+              <h2 className="mt-3 font-[family-name:var(--font-plus-jakarta)] text-3xl font-semibold text-[#1A1A1A]">
+                Coworking, offices, and meeting space in the Galleria area
+              </h2>
+              <p className="mt-3 leading-relaxed text-[#74726D]">
+                Muze Office Houston is being built for people who work in and
+                around Uptown, Tanglewood, Briargrove, and Memorial and want a
+                professional base inside the 610 Loop without signing a
+                multi-year lease. Here is what is planned. Pricing and
+                availability will be confirmed before opening, and early-access
+                members hear first.
+              </p>
+            </div>
+          </FadeIn>
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+            {houstonPlannedServices.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-xl border border-[#E6E4DF] bg-white p-6"
+              >
+                <h3 className="font-[family-name:var(--font-plus-jakarta)] text-lg font-semibold text-[#1A1A1A]">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-[#74726D]">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-8">
+            <a
+              href="#waitlist"
+              data-cta="houston_waitlist"
+              data-cta-location="houston_planned_services"
+              className={cn(
+                buttonVariants({ size: "lg" }),
+                "rounded-lg bg-[#1A1A1A]"
+              )}
+            >
+              Get opening pricing
+            </a>
+          </div>
+        </Section>
+      )}
+
       {isHoustonLaunchPage && (
         <Section variant="gray">
           <FadeIn>
@@ -502,11 +637,13 @@ export default async function LocationDetailPage({
                 className="aspect-video w-full bg-white"
               />
               <div className="flex flex-col items-center gap-4 text-center">
-                <GoogleReviewsBadge
-                  rating={location.rating}
-                  reviewCount={location.reviewCount}
-                  href={location.externalProfiles?.gbp}
-                />
+                {location.externalProfiles?.gbp && (
+                  <GoogleReviewsBadge
+                    rating={location.rating}
+                    reviewCount={location.reviewCount}
+                    href={location.externalProfiles.gbp}
+                  />
+                )}
                 <div className="flex flex-wrap items-center justify-center gap-3">
                   <a
                     href={`https://www.google.com/maps/place/${encodeURIComponent(`${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}`)}`}
@@ -553,8 +690,9 @@ export default async function LocationDetailPage({
             : "Get notified when our Houston location opens. Reach out with questions or early interest."
         }
         primaryLabel={isActive ? "Book a Tour" : "Join Houston early access"}
-        primaryHref={isActive ? BRAND.booking.tourUrl : "#waitlist"}
-        showPhone={isActive}
+        primaryHref={isActive ? tourHref : "#waitlist"}
+        showPhone={isActive && hasPhone}
+        phone={location.phone}
         ctaLocation={`location_${location.slug}_bottom`}
       />
     </>

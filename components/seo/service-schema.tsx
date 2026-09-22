@@ -66,11 +66,15 @@ export function ServiceSchema({ serviceId, cityId }: ServiceSchemaProps) {
   // locations with a real address, phone, and operating status.
   if (location.status !== "active") return null;
 
-  const offers = service.tiers
+  // Offers carry prices; publish them only where this location's prices
+  // are confirmed to match the tiers in services.ts.
+  const tiers = location.usesStandardCatalog ? service.tiers : [];
+
+  const offers = tiers
     .map(buildOffer)
     .filter((o): o is Record<string, unknown> => o !== null);
 
-  const catalogItems = service.tiers
+  const catalogItems = tiers
     .filter((tier) => tier.price !== null)
     .map((tier) => ({
       "@type": "Offer",
@@ -88,7 +92,10 @@ export function ServiceSchema({ serviceId, cityId }: ServiceSchemaProps) {
     "@type": "Service",
     serviceType: service.name,
     name: `${service.name} in ${location.name}`,
-    description: service.shortDescription,
+    // shortDescription describes the standard (Las Vegas) catalog.
+    description: location.usesStandardCatalog
+      ? service.shortDescription
+      : `${service.name} at Muze Office ${location.name}, ${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}.`,
     provider: {
       "@type": "Organization",
       "@id": `${BRAND.url}/#organization`,

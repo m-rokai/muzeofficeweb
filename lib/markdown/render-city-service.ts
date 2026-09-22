@@ -10,7 +10,16 @@ function formatPrice(price: number | null, unit: string): string {
   return `$${price}/${unit}`;
 }
 
-function renderTiers(service: Service): string {
+/** Confirmed hours only — unconfirmed placeholder hours are never published. */
+function formatHours(location: Location): string {
+  if (!location.hours.display) return "To be confirmed";
+  return location.hours.display.join("; ");
+}
+
+function renderTiers(service: Service, location: Location): string {
+  if (!location.usesStandardCatalog) {
+    return `${location.name} pricing is quoted directly by the local team — contact ${location.email}.`;
+  }
   if (service.tiers.length === 0) return "";
   const lines: string[] = [];
   lines.push("| Tier | Price | Features |");
@@ -52,13 +61,7 @@ export function renderCityServiceMarkdown(slug: string): string | null {
     lines.push(`**Phone:** ${location.phone}`);
   }
   lines.push(`**Email:** ${location.email}`);
-  lines.push(
-    `**Access:** ${
-      location.hours.is24Hours
-        ? "Open 24/7"
-        : `Monday–Friday, ${location.hours.weekdays.open}–${location.hours.weekdays.close}`
-    }`
-  );
+  lines.push(`**Access:** ${formatHours(location)}`);
   lines.push("");
 
   // Hero subtitle
@@ -81,7 +84,7 @@ export function renderCityServiceMarkdown(slug: string): string | null {
   }
 
   // Pricing
-  const pricingTable = renderTiers(service);
+  const pricingTable = renderTiers(service, location);
   if (pricingTable) {
     lines.push("## Pricing");
     lines.push("");
@@ -183,13 +186,7 @@ export function renderCityMarkdown(locationId: string): string | null {
     lines.push(`**Phone:** ${location.phone}`);
   }
   lines.push(`**Email:** ${location.email}`);
-  lines.push(
-    `**Hours:** ${
-      location.hours.is24Hours
-        ? "Open 24/7"
-        : `Monday–Friday, ${location.hours.weekdays.open}–${location.hours.weekdays.close}`
-    }`
-  );
+  lines.push(`**Hours:** ${formatHours(location)}`);
   lines.push(`**Status:** ${location.status}`);
   lines.push("");
 
@@ -226,7 +223,8 @@ export function renderCityMarkdown(locationId: string): string | null {
     .filter((entry) => entry.cityId === location.id)
     .map((entry) => entry.slug);
 
-  if (cityServiceSlugs.length > 0) {
+  // Pre-opening service URLs redirect to the hub, so only list them live.
+  if (location.status === "active" && cityServiceSlugs.length > 0) {
     lines.push("## Services at This Location");
     lines.push("");
     for (const slug of cityServiceSlugs) {

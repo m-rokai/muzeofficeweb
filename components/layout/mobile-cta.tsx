@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/lib/utils/button-variants";
 import { BRAND } from "@/lib/utils/constants";
+import { getPathContact, isHoustonPath } from "@/lib/utils/path-contact";
 
 const DEFAULT_CTA = {
   href: BRAND.booking.tourUrl,
@@ -60,21 +61,27 @@ const CTA_BY_PATH: Record<
 
 export function MobileCTA() {
   const pathname = usePathname();
-  const cta = CTA_BY_PATH[pathname] ?? DEFAULT_CTA;
+  const contact = getPathContact(pathname);
+  const cta = isHoustonPath(pathname)
+    ? contact.primary
+    : (CTA_BY_PATH[pathname] ?? DEFAULT_CTA);
+  const phoneRaw = contact.phoneRaw;
 
   return (
     <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-[#E6E4DF] bg-[#FAFAF7]/95 backdrop-blur p-3 md:hidden">
       <div className="flex items-center gap-2">
-        <a
-          href="tel:+17023707515"
-          className={cn(
-            buttonVariants({ variant: "outline", size: "lg" }),
-            "flex-1 rounded-xl h-11 text-sm"
-          )}
-        >
-          <Phone className="h-4 w-4 mr-1.5" />
-          Call Now
-        </a>
+        {phoneRaw && (
+          <a
+            href={`tel:${phoneRaw}`}
+            className={cn(
+              buttonVariants({ variant: "outline", size: "lg" }),
+              "flex-1 rounded-xl h-11 text-sm"
+            )}
+          >
+            <Phone className="h-4 w-4 mr-1.5" />
+            Call Now
+          </a>
+        )}
         <a
           href={cta.href}
           data-cta={cta.trackingName}

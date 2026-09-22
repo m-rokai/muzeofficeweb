@@ -1296,10 +1296,10 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "virtual-office",
     h1: "Virtual Office in Houston",
     heroSubtitle:
-      "A real Houston business address on Augusta Dr in the Galleria — not a P.O. Box. Use it for mail, contracts, and filings that accept a commercial mail-receiving address. Meeting rooms included.",
-    metaTitle: "Houston Virtual Office — Galleria Address $39/mo",
+      "A real Houston business address at 1800 Augusta Dr in the Galleria / Tanglewood area — not a P.O. Box. Use it for mail, contracts, and filings that accept a commercial mail-receiving address.",
+    metaTitle: "Houston Virtual Office — Galleria Address",
     metaDescription:
-      "Planned Houston virtual office at 1800 Augusta Dr near the Galleria. Join early access for confirmed opening, address-service, and pricing updates.",
+      "Houston virtual office at 1800 Augusta Dr in the Galleria / Uptown area — a real street address for mail, contracts, and Texas filings. Contact us today.",
     heroImage: "/images/hero/virtual-office.jpg",
     useCases: [
       "Remote workers who need a Houston business address",
@@ -1310,29 +1310,29 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Medical professionals and reps near the Texas Medical Center",
     ],
     locationCallout:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area. Minutes from Post Oak Blvd with free parking on-site.",
+      "1800 Augusta Dr, Houston, TX 77057 — in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr. On-site parking.",
     longFormBody: {
       bestFor: [
         {
           persona: "Out-of-state founders forming a Texas LLC",
           scenario:
-            "You're a California, New York, or Illinois founder filing an LLC in Texas and you need a real Houston street address the Secretary of State will accept — not a P.O. Box, not a UPS Store counter, not a residential condo that doesn't belong on a public filing.",
+            "You're a California, New York, or Illinois founder filing an LLC in Texas and you need a real Houston street address — not a P.O. Box, not a shipping-store counter, not a residential condo that doesn't belong on a public filing.",
           fit: [
-            "1800 Augusta Dr, Suite 200 is a real commercial building in Houston's Galleria / Tanglewood area with physical tenants and suite-level mail delivery",
-            "Mail Holding at $39/month covers the LLC-only use case without paying for services you won't use",
+            "1800 Augusta Dr is a commercial building in Houston's Galleria / Tanglewood area, not a residential address or a mail-drop storefront",
+            "A mail-only plan covers the LLC-address use case without paying for coworking time you won't use",
             "Texas has no state personal income tax, which is part of the reason founders file here in the first place",
-            "Mail service can begin after the provider accepts your USPS Form 1583 and required identification",
+            "Mail service begins after the provider accepts your USPS Form 1583 and required identification",
           ],
         },
         {
           persona: "E-commerce sellers who need real package receiving in Houston",
           scenario:
-            "You run a Shopify, Amazon FBA, or Etsy business and you need a commercial Houston address that can sign for UPS, FedEx, and Amazon returns without exposing your home address on public filings, marketplace profiles, or your Whois record.",
+            "You run a Shopify, Amazon FBA, or Etsy business and you need a commercial Houston address that can take UPS, FedEx, and Amazon deliveries without exposing your home address on public filings, marketplace profiles, or your Whois record.",
           fit: [
-            "Sandstone at $69/month adds package receiving from UPS, FedEx, Amazon, and signature-required mail",
+            "Plans with package receiving handle carrier deliveries and returns, so they don't pile up on your porch",
             "A real commercial street address can help meet the address-verification requirements that P.O. Boxes typically fail — check each payment processor or marketplace for their specific policy",
             "Keeps your home address off contracts, public-facing materials, and carrier shipping labels",
-            "Package arrival notifications let you schedule pickup instead of racing the carrier at a residential door",
+            "Pick up at Augusta Dr on your own schedule, or choose a plan with mail forwarding",
           ],
         },
         {
@@ -1340,46 +1340,46 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You work from home most days, but once or twice a month a client flies into IAH or Hobby, or drives in from The Woodlands or Sugar Land, and asks for an in-person meeting — and you need a professional conference room, not a Starbucks on Westheimer.",
           fit: [
-            "Opal at $149/month includes 4 coworking hours and 2 meeting room hours — enough for occasional in-person work",
-            "Diamond at $249/month scales to 20 coworking hours, 6 meeting room hours, and a dedicated local phone line",
-            "Meeting rooms include AV equipment, video conferencing, and whiteboards — not just a table in a lobby",
-            "Inside-the-Loop Galleria location pulls from west Houston, downtown, and the Medical Center within a 15-minute drive",
+            "Plans that bundle coworking and meeting-room hours cover a few in-person days a month",
+            "Meeting rooms can also be booked by the hour when a client visit comes up",
+            "Occasional coworking time gives you a quiet place to prep before the meeting",
+            "The Galleria / Uptown location is central for clients coming from Memorial, River Oaks, downtown, or the Energy Corridor",
           ],
         },
         {
           persona: "Licensed pros, agents, and brokers with address requirements",
           scenario:
-            "Your Texas license, brokerage, or professional board expects a verifiable street-addressed office that isn't your home, and you want something that reads as a professional operation on business cards, TREC records, and state filings.",
+            "Your Texas license, brokerage, or professional board expects a verifiable street address that isn't your home, and you want something that reads as a professional operation on business cards, TREC records, and state filings.",
           fit: [
-            "A commercial Galleria suite with reception presence can help meet address requirements for professional licenses — verify your specific board's rules",
-            "Receives letter mail from state regulators, TREC, MLS boards, and insurers at the suite",
-            "Conference rooms by the hour when you need to close a deal face-to-face",
-            "Month-to-month — flexible if you change brokerages, expand, or relocate within Texas",
+            "A commercial Galleria-area address can help meet address requirements for professional licenses — verify your specific board's rules",
+            "Receives letter mail from state regulators, TREC, MLS boards, and insurers",
+            "Meeting rooms by the hour when you need to close a deal face-to-face",
+            "Keeps your home address off license lookups and client paperwork",
           ],
         },
       ],
       whyChoose: {
         heading: "Why choose a Houston virtual office at Muze Office",
         paragraphs: [
-          "A Houston virtual office is one of the most cost-effective ways to establish a commercial mailing presence in Texas without signing a lease. Muze Office Houston sits at 1800 Augusta Dr in the Galleria / Tanglewood area — a commercial building inside the 610 Loop with a real suite, reception, and physical tenants, not a UPS Store counter or a ghost address in a suburban strip mall. That matters when a contract, institution, or filing accepts a street address rather than a P.O. Box.",
-          "Texas's tax structure is the other half of the equation. The state has no personal income tax, which is one of the most common reasons founders form entities here and relocate their operating companies from California, New York, and Illinois. Pairing a Texas LLC with a real Houston address gives you a legitimate local footprint in the fourth-largest city in the country at a fraction of what physical office space inside the Loop would cost. Our Mail Holding tier starts at $39 per month — a professional address with USPS letter mail notification and suite-number delivery. For $69 (Sandstone) you add package receiving from UPS, FedEx, and Amazon, which is typically the deciding factor for e-commerce sellers and remote consultants.",
-          "Beyond the address, every virtual office plan at Muze Office is backed by a real coworking space. Opal ($149) and Diamond ($249) include coworking hours and meeting room credits, so when a client flies in for a meeting you have a professional conference room to bring them to — not a coffee shop on Post Oak. The building is a short drive from both George Bush Intercontinental (IAH) and William P. Hobby (HOU), which makes fly-in meetings realistic for out-of-state businesses that only need a Houston presence a few times a year.",
+          "A Houston virtual office is one of the simplest ways to establish a commercial mailing presence in Texas without signing a lease. Muze Office Houston is at 1800 Augusta Dr in the Galleria / Tanglewood area, just off the I-610 West Loop near Post Oak Blvd — a commercial building, not a shipping-store counter or a ghost address in a suburban strip center. That matters when a contract, institution, or filing accepts a street address rather than a P.O. Box.",
+          "Texas's tax structure is the other half of the equation. The state has no personal income tax, which is one of the most common reasons founders form entities here and move operating companies from California, New York, and Illinois. Pairing a Texas LLC with a real Houston address gives you a local footprint in the fourth-largest city in the country for far less than leased office space in Uptown. Plans range from a mail-only address to options with package receiving, mail forwarding, and bundled coworking and meeting-room hours — see current Houston pricing on this page or contact the team.",
+          "Because the address belongs to a working coworking space, you have somewhere to take the meeting when a client flies in through IAH or Hobby, or drives in from Katy or The Woodlands. That makes a Houston presence practical for out-of-state businesses that only need to be in town a few times a year. Muze Office Houston is independently operated as a Muze Office franchise, and the local team can walk you through which plan fits how you'll actually use it.",
         ],
       },
       comparison: {
         heading: "Virtual office vs. P.O. Box, registered agent, and home address",
         paragraphs: [
           "A P.O. Box is the cheapest option but the most limiting. It cannot receive packages from UPS, FedEx, or private carriers, and some institutions require a street address instead. Confirm the address requirements for your specific filing, bank, payment processor, marketplace, or licensing body before applying.",
-          "A registered agent service in Texas solves one specific problem: receiving legal service of process for your LLC. It does not give you a usable business address, does not forward your mail, does not let you meet clients, and does not appear on your marketing materials. If you already have a Texas registered agent, a virtual office sits alongside it — the registered agent handles lawsuits, the virtual office handles everything else.",
-          "Using your home address is the path of least resistance, but it comes with real costs. It becomes a public record once you file your LLC, it exposes your family to anyone who searches for your business, and many Houston HOAs — especially in Tanglewood, Memorial, and Bellaire — limit commercial mail receipt in residentially zoned areas. For a few hundred dollars a year, a Muze Office virtual office removes that risk entirely and gives you a cleaner professional footprint inside the Loop.",
+          "A registered agent service in Texas solves one specific problem: receiving legal service of process for your LLC. It does not give you a usable business address, does not forward your mail, does not let you meet clients, and does not appear on your marketing materials. If you already have a Texas registered agent, a virtual office sits alongside it — the registered agent handles legal service, the virtual office handles everything else.",
+          "Using your home address is the path of least resistance, but it comes with real costs. It becomes a public record once you file your LLC, it exposes your family to anyone who searches for your business, and deed restrictions in many Houston neighborhoods limit running a business from a residential address. A virtual office keeps your home out of those records and gives you a cleaner professional footprint in the Galleria.",
         ],
       },
       howToGetStarted: {
         heading: "How to get started with a Houston virtual office",
         paragraphs: [
-          "Pick the tier that matches how you actually use mail. If you only need an address for contracts or filings that accept a commercial mail-receiving address and rarely receive physical mail, start with Mail Holding at $39. If you ship and receive packages, upgrade to Sandstone at $69. If you want the address plus occasional use of the space, Opal ($149) includes 4 coworking hours and 2 meeting room hours per month, and Diamond ($249) steps that up to 20 coworking hours and 6 meeting room hours with a dedicated local phone line.",
-          "After launch and signup, the main administrative step will be completing USPS Form 1583, which authorizes a Commercial Mail Receiving Agency to receive mail on your behalf. The current form permits identity verification in the CMRA employee's physical or live virtual presence, or acknowledgment before a notary. Mail service will begin only after the provider accepts the form and required identification. You can then use the address where the receiving institution permits it. A virtual-office-only plan is not, by itself, eligible for Google Business Profile verification.",
-          "Plans are month-to-month. You can start with Mail Holding, upgrade to Sandstone when your package volume picks up, and move to Opal or Diamond the first time you need a conference room for a client meeting in the Galleria. Join the waitlist to reserve your address before we open, or contact us to get started.",
+          "Pick the plan that matches how you actually use mail. If you only need an address for contracts or filings and rarely receive physical mail, a mail-only plan is enough. If you ship and receive packages, choose a plan with package receiving. If you want the address plus occasional use of the space, look at the plans that bundle coworking and meeting-room hours. Current Houston plan details and pricing are listed on this page, or the team can walk you through them.",
+          "After you sign up, the main administrative step is completing USPS Form 1583, which authorizes a Commercial Mail Receiving Agency to receive mail on your behalf. The current form permits identity verification in the CMRA employee's physical or live virtual presence, or acknowledgment before a notary. Mail service begins only after the provider accepts the form and required identification. You can then use the address where the receiving institution permits it. A virtual-office-only plan is not, by itself, eligible for Google Business Profile verification.",
+          "Start with the plan you need today. When your package volume picks up or you need a conference room for a client meeting in the Galleria, ask the team about moving to a different plan. Contact us to get started, or book a tour to see 1800 Augusta Dr in person.",
         ],
       },
       relatedServices: [
@@ -1396,10 +1396,10 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "coworking",
     h1: "Coworking Space in Houston",
     heroSubtitle:
-      "Flexible shared workspace in the Galleria with hot desks and dedicated desks. High-speed WiFi, unlimited coffee, free parking, and a real community — not a hotel lobby.",
-    metaTitle: "Coworking Space Houston | Day Pass $25",
+      "Shared workspace in the Galleria / Uptown area with day passes, hot desks, and dedicated desks. WiFi, coffee, phone booths, meeting rooms, and a real community — not a hotel lobby.",
+    metaTitle: "Coworking Space Houston — Galleria / Uptown",
     metaDescription:
-      "Houston coworking in the Galleria — day passes from $25, hot desks from $350/mo. Free parking, fast WiFi, coffee, meeting rooms. No lease. Join the waitlist today.",
+      "Coworking at 1800 Augusta Dr in Houston's Galleria / Uptown area — day passes, hot desks, dedicated desks, and meeting rooms near Post Oak Blvd. Book a tour.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Remote workers tired of working from home or coffee shops",
@@ -1410,17 +1410,17 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Sales reps and consultants between client meetings",
     ],
     locationCallout:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area. Free parking on-site, minutes from Post Oak Blvd.",
+      "1800 Augusta Dr, Houston, TX 77057 — in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr. On-site parking.",
     longFormBody: {
       bestFor: [
         {
           persona: "Remote workers burned out on home and Houston coffee shops",
           scenario:
-            "You've been working from home since 2020, productivity is slipping, and the Starbucks on Westheimer is loud by 10am with WiFi that dies the moment your 2pm Zoom call starts.",
+            "You've been working from home since 2020, productivity is slipping, and the Starbucks on Westheimer is loud by mid-morning with WiFi that dies the moment your 2pm Zoom call starts.",
           fit: [
-            "$25 day pass — book online, even same-day, Monday through Friday, no membership required, no commitment",
+            "Day passes let you try a full workday without signing up for a membership",
             "Real desks and chairs built for full-day work sessions, not lounge seating or bar-height counters",
-            "Fast WiFi designed for video calls — not cafe-tier bandwidth that breaks during a presentation",
+            "WiFi set up for a workspace, not shared with a cafe full of customers",
             "Phone booths for private calls without the espresso machine or other patrons in the background",
           ],
         },
@@ -1429,8 +1429,8 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You run a design, copywriting, or consulting practice from your laptop and want a professional backdrop for client Zoom calls, plus peers around you to bounce ideas off without forced networking events.",
           fit: [
-            "Hot Desk at $350/month gives you any-desk access any weekday",
-            "Dedicated Desk at $399/month reserves a permanent spot you can leave your monitor and keyboard on",
+            "Hot desk membership for any open desk in the shared area",
+            "Dedicated desk if you want a permanent spot you can leave your monitor and keyboard on",
             "Private phone booths for client calls that need a clean background and no interruptions",
             "Community of other solo pros and small-business founders — organic networking, no forced mixers",
           ],
@@ -1438,12 +1438,12 @@ export const cityServiceData: Record<string, CityServiceData> = {
         {
           persona: "Out-of-town business travelers spending a few days in Houston",
           scenario:
-            "You're based elsewhere but fly or drive into Houston for two or three days a month of client meetings, and you need a professional workspace inside the Loop to take calls, update your CRM, and prep between appointments.",
+            "You're based elsewhere but fly or drive into Houston for two or three days a month of client meetings, and you need a professional workspace near the Galleria to take calls, update your CRM, and prep between appointments.",
           fit: [
-            "Day passes at $25 — pay only for the days you're actually in town",
-            "Central Galleria location — inside the Loop and within 15 minutes of downtown, the Medical Center, and most Inner Loop client offices",
+            "Day passes — pay only for the days you're actually in town",
+            "Galleria / Uptown location near Post Oak Blvd, a short drive from Greenway Plaza, River Oaks, and the West Loop office corridor",
             "Meeting rooms bookable by the hour for last-minute client meetings or prospect pitches",
-            "Free parking — no $8-15/day Post Oak garage fees between back-to-back meetings",
+            "On-site parking, so you're not circling a Post Oak garage between back-to-back meetings",
           ],
         },
         {
@@ -1451,41 +1451,41 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "Your team grew past the point where meeting at your apartment or a Second Ward coffee shop still works, but you're nowhere near ready to sign a three-year Class B lease and pay for buildout and furniture in a Greenway Plaza tower.",
           fit: [
-            "Hot Desk or Dedicated Desk memberships let the team work together in a shared area",
+            "Hot desk or dedicated desk memberships let the team work together in a shared area",
             "Conference rooms for weekly standups without scheduling your living room or a Starbucks table",
-            "Clean upgrade path to a Team Office (2-4 people, lockable private room) when you're ready",
-            "Month-to-month — no long-term commitment while you're still validating product-market fit",
+            "Clean upgrade path to a private office in the same building when you're ready",
+            "No multi-year lease while you're still validating product-market fit",
           ],
         },
       ],
       whyChoose: {
         heading: "Why choose coworking in Houston at Muze Office",
         paragraphs: [
-          "Houston's coworking market is dominated by two extremes: the big-box corporate operators downtown and in Greenway Plaza charging corporate rates and pushing long annual contracts dressed up as flexible plans, or the scrappy independent spaces scattered from the Heights to Midtown that trade polish for character. Muze Office sits in the middle, intentionally. We're at 1800 Augusta Dr in the Galleria / Tanglewood area — inside the 610 Loop, minutes from Post Oak Blvd, easy to reach from Memorial, Uptown, West U, Bellaire, and Tanglewood without ever fighting 59 or 290 traffic. It's a neighborhood built for people who work for a living, not for people passing through for a convention.",
-          "The coworking product is simple: a $25 day pass gets you a real desk, high-speed WiFi built for video calls, unlimited coffee from the on-site Muze Cafe, free parking, and access to phone booths when you need a private call. Monthly members upgrade to a Hot Desk ($350) or Dedicated Desk ($399) with 24/7 biometric access, meeting room credits, mail handling, and a permanent spot to leave your monitor and keyboard. Everything is month-to-month. You can start with a day pass, try us for a week, and upgrade only when you know it's the right fit.",
+          "Houston's coworking market tends to split into two extremes: large national operators in the downtown and Post Oak towers, often built around annual agreements, and small independent spaces scattered from the Heights to Midtown that trade polish for character. Muze Office sits in the middle, intentionally. We're at 1800 Augusta Dr in the Galleria / Tanglewood area, just off the I-610 West Loop near Post Oak Blvd — easy to reach from Memorial, Uptown, Briargrove, River Oaks, West University, and Bellaire. It's a neighborhood built for people who work for a living, not for people passing through for a convention.",
+          "The coworking product is simple. A day pass gets you a real desk, WiFi built for video calls, coffee, and access to phone booths when you need a private call. A hot desk membership lets you use any open desk in the shared area every month, and a dedicated desk reserves a permanent spot where your monitor and keyboard stay put. What each Houston plan includes — meeting-room time, mail handling, member access hours — is listed with current pricing on this page. You can start with a day pass and upgrade only when you know it's the right fit.",
           "The community is the part that's hardest to describe on a pricing page. Muze Office attracts remote workers, founders of small businesses that actually exist, consultants, sales reps between meetings, and solo professionals who got tired of working from their kitchen table in Memorial or their apartment in Midtown. The energy during the day is focused and friendly — not the forced-networking vibe of a launch party, and not the dead silence of a government building.",
         ],
       },
       comparison: {
         heading: "Coworking vs. coffee shops, home office, and hotel business centers",
         paragraphs: [
-          "Coffee shops are the default for most remote workers in Houston, and they work until they don't. The Montrose and Rice Village cafes get loud by 10am, WiFi slows to a crawl when 40 other people are on it, the tables are the wrong height for a full-day work session, and most staff will politely nudge you along after two or three hours. A single day of cafe-hopping also ends up costing $15-25 in drinks — roughly the same as a Muze day pass, with none of the amenities.",
+          "Coffee shops are the default for most remote workers in Houston, and they work until they don't. The Montrose and Rice Village cafes get loud by mid-morning, WiFi slows to a crawl when 40 other people are on it, the tables are the wrong height for a full-day work session, and most staff will politely nudge you along after two or three hours. A day of cafe-hopping also adds up in drinks you didn't really want, with none of the amenities of a workspace.",
           "Working from home sounds ideal until your first back-to-back video call day. Most Houston apartments and townhomes have thin walls, unreliable residential internet during peak hours, and family members who don't understand why a 2pm Zoom means you can't also start laundry. Summer humidity and the occasional tropical storm also mean the 'just work from the patio' option disappears for months at a time.",
-          "Hotel business centers are the worst of all three — typically $15-30 per day for a cramped desk in a windowless room, plus $30-50 for valet parking because most Galleria and downtown hotels no longer offer free self-parking. The WiFi is slow, the printers usually charge per page, and the setup is built for checking email, not for running a business. At Muze Office you get a real desk, a real chair, real WiFi, and free parking — all-in for less than a single day at a Post Oak hotel business center.",
+          "Hotel business centers are the worst of the three — usually a cramped desk in a windowless room, with self-parking or valet billed separately at many Galleria and downtown hotels. The WiFi is built for checking email, the printers often charge per page, and nothing about the setup is designed for running a business. At Muze Office you get a real desk, a real chair, WiFi built for a full workday, and on-site parking.",
         ],
       },
       howToGetStarted: {
         heading: "How to get started with coworking in Houston",
         paragraphs: [
-          "If you're not sure whether coworking is right for you, start with a $25 day pass. Book online — even same-day — and come in Monday through Friday between 10am and 7pm; we'll have a spot ready when you arrive. Day passes include everything — desk, WiFi, coffee, parking, phone booths, meeting room availability. No credit card holds, no long forms, no pressure to sign up.",
-          "Once you've used us for a week or two and know you want to be here most days, the Hot Desk membership ($350/month) is the natural next step. Hot Desk members can use any available desk in the shared workspace, get meeting room credits, mail handling, and full access to community events. If you want your own reserved spot that you can leave your monitor and dual keyboard setup on, upgrade to Dedicated Desk ($399/month) which adds a permanent desk, personal storage, and 24/7 biometric access.",
-          "Everything is month-to-month. If you need to pause your membership for a month because you're traveling, just let us know. If you want to bring a client in for a meeting, you can book a conference room by the hour or use your included credits. Book a free tour if you want to see the space first, or book a same-day day pass online and bring your laptop.",
+          "If you're not sure whether coworking is right for you, start with a day pass. Come in for a full workday, test the WiFi on a real video call, try the phone booths, and see whether the drive from your side of town works. No membership, no long forms, no pressure to sign up.",
+          "Once you've used the space for a week or two and know you want to be here most days, a hot desk membership is the natural next step — any available desk in the shared workspace, on a monthly plan. If you want your own reserved spot where you can leave a monitor and a dual-keyboard setup, upgrade to a dedicated desk. Current Houston pricing and what each plan includes are shown on this page, or the team can walk you through them.",
+          "If you want to bring a client in for a meeting, conference rooms can be booked by the hour. Book a tour if you want to see 1800 Augusta Dr first, or contact us with questions about which plan fits the way you work.",
         ],
       },
       relatedServices: [
-        { slug: "houston-day-pass", label: "Houston Day Pass ($25/day)" },
-        { slug: "houston-hot-desk", label: "Houston Hot Desk ($350/mo)" },
-        { slug: "houston-dedicated-desk", label: "Houston Dedicated Desk ($399/mo)" },
+        { slug: "houston-day-pass", label: "Houston Day Pass" },
+        { slug: "houston-hot-desk", label: "Houston Hot Desk" },
+        { slug: "houston-dedicated-desk", label: "Houston Dedicated Desk" },
         { slug: "houston-galleria-coworking", label: "Galleria Coworking Houston" },
         { slug: "houston-virtual-office", label: "Houston Virtual Office" },
         { slug: "houston-meeting-rooms", label: "Houston Meeting Rooms" },
@@ -1499,83 +1499,83 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "day-pass",
     h1: "Day Pass at Muze Office Houston",
     heroSubtitle:
-      "Book a single day of focused work in the Galleria online — no membership, no setup, no commitment. Reserve online, even same-day, plug into fast WiFi, and keep your day moving.",
-    metaTitle: "Day Pass Houston Coworking | $25/day",
+      "One day of focused work in the Galleria / Uptown area — no membership, no commitment. A real desk, WiFi, and a quiet place to take calls between meetings.",
+    metaTitle: "Day Pass Coworking Houston — Galleria",
     metaDescription:
-      "Day pass coworking in Houston's Galleria at 1800 Augusta Dr — $25, book online, no membership. Real desk, fast WiFi, free parking, inside the 610 Loop. Join the waitlist.",
+      "Day pass coworking at 1800 Augusta Dr in Houston's Galleria / Uptown area — a real desk, WiFi, and phone booths for the day, no membership. Contact us to book.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Freelancers and consultants here for a single Galleria-area workday",
       "Out-of-town business travelers in Houston for one or two days",
       "Remote workers testing the space before committing to a membership",
-      "Professionals with one client meeting inside the 610 Loop",
+      "Professionals with one client meeting near Post Oak Blvd",
       "Freelance creatives who need a professional Zoom backdrop",
       "Anyone tired of Montrose or Rice Village coffee shops at lunch hour",
     ],
     locationCallout:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, with free parking on-site. Opening soon.",
+      "1800 Augusta Dr, Houston, TX 77057 — in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr. On-site parking.",
     longFormBody: {
       bestFor: [
         {
           persona: "Day-pass professionals with one focused day in Houston",
           scenario:
-            "You're in Houston for 24 to 48 hours — one client meeting, one deliverable, one stretch of heads-down time inside the 610 Loop — and you need a real desk for the afternoon without signing up for anything, paying a setup fee, or explaining yourself at a coffee shop counter.",
+            "You're in Houston for 24 to 48 hours — one client meeting, one deliverable, one stretch of heads-down time near the Galleria — and you need a real desk for the afternoon without signing up for a membership or explaining yourself at a coffee shop counter.",
           fit: [
-            "$25 flat for the day — desk, WiFi, coffee, parking, phone booths, everything",
-            "No membership, no credit card hold, no signup forms — book online, show ID, sit down",
+            "One day, one price, no membership attached — current Houston day-pass pricing is on this page",
+            "No monthly commitment — book the day, show up, sit down",
             "Phone booths for private calls without espresso-machine noise in the background",
-            "Free parking so a $25 day is actually a $25 day — no $8-15 Post Oak garage fee on top",
+            "On-site parking at the building instead of circling for a Post Oak garage",
           ],
         },
         {
           persona: "Out-of-town visitors to the Galleria and Uptown district",
           scenario:
-            "You're visiting Houston for a convention, a client meeting, or a family visit and you need two or three real work hours between activities — not a hotel lobby seat or a Rice Village coffee shop packed at lunch hour.",
+            "You're visiting Houston for a conference, a client meeting, or a family visit and you need two or three real work hours between activities — not a hotel lobby seat or a Rice Village coffee shop packed at lunch hour.",
           fit: [
-            "Central Galleria location — inside the Loop and 15 minutes from downtown, the Medical Center, and most Inner Loop offices",
-            "Fast WiFi that actually supports video calls during peak hours",
+            "Galleria / Uptown location, a short drive from Greenway Plaza, River Oaks, and the West Loop office corridor",
+            "WiFi set up for video calls, not a hotel lobby's guest network",
             "Quiet space to close deals, send follow-ups, or prep for the next day's meetings",
-            "Free parking versus Post Oak garage rates of $8-15/day during Galleria business hours",
+            "Easy access from I-610 and Woodway Dr between appointments",
           ],
         },
         {
           persona: "Freelancers testing the space before a monthly plan",
           scenario:
-            "You've been working from a Houston apartment or a Heights townhome and you're considering a coworking membership — but you don't want to sign up for anything before you've actually spent a full day in the space to test WiFi, noise level, commute, and the rest.",
+            "You've been working from a Houston apartment or a Heights townhome and you're considering a coworking membership — but you don't want to sign up for anything before you've spent a full day in the space to test the WiFi, noise level, commute, and the rest.",
           fit: [
-            "One-day trial lets you try every amenity before committing — WiFi, phone booths, coffee, parking, the vibe",
-            "If you come back more than about a week a month, the Hot Desk at $350/month starts to pay for itself",
-            "No upsell at the door — pay $25, work, leave, decide later",
+            "A one-day trial lets you try the WiFi, phone booths, coffee, and the commute before committing",
+            "If you find yourself coming in more than about a week a month, compare the hot desk membership on this page",
+            "No upsell at the door — work for the day, then decide",
           ],
         },
       ],
       whyChoose: {
         heading: "Why the Day Pass at Muze Office Houston",
         paragraphs: [
-          "Most people who need a real workspace for a single day in Houston end up at the wrong place for the wrong reason. Coffee shops in Montrose and Rice Village fill up by late morning and the WiFi collapses the moment you try to screen-share. Hotel lobbies in the Galleria and downtown are crowded and mostly out of seats with outlets. Hotel business centers run $15-30 for a windowless room with a decade-old desktop. The $25 Day Pass at Muze Office Houston replaces all of those with a single clean option: a real desk, a real chair, fast WiFi built for video calls, unlimited coffee, free parking, and phone booths when you need a private call.",
-          "The Day Pass is booked online, even same-day. Reserve your spot, show up during business hours at 1800 Augusta Dr, show your ID at the front desk, and you're at a working desk within five minutes. Booking ahead — it takes about two minutes — means your desk is ready and the space is never oversold, which matters most during a busy week. Day pass holders get the same WiFi, the same coffee, the same phone booths, and the same cafe access as monthly members — the only thing they don't get is 24/7 access and meeting-room credits (meeting rooms are bookable by the hour separately).",
-          "The location makes the Day Pass practical for visitors from across the metro. 1800 Augusta Dr sits inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, and it pulls comfortably from Memorial, Uptown, West University, Bellaire, River Oaks, and downtown without ever fighting 59 or 290 traffic. That means you can drive in from any direction, work for half a day, make a client meeting, and head back — with free parking, no Post Oak garage fee, and a clean place to take the calls that matter.",
+          "Most people who need a real workspace for a single day in Houston end up somewhere that doesn't fit. Coffee shops in Montrose and Rice Village fill up by late morning and the WiFi collapses the moment you try to screen-share. Hotel lobbies around the Galleria are crowded and short on outlets, and hotel business centers are usually a windowless room with an aging desktop. A day pass at Muze Office Houston replaces all of that with one clean option: a real desk, a real chair, WiFi built for video calls, coffee, and phone booths when you need a private call.",
+          "The day pass is for people who want the workspace without the membership. Day-pass holders work in the same shared area, on the same WiFi, with the same phone booths as monthly members. Meeting rooms are booked separately by the hour, so you can add one for a client conversation without upgrading anything else.",
+          "The location makes the day pass practical for visitors from across the metro. 1800 Augusta Dr sits in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop, and it's an easy drive from Memorial, Uptown, West University, Bellaire, River Oaks, and downtown. Drive in, work for half a day, make a client meeting, and head back — with on-site parking and a quiet place to take the calls that matter.",
         ],
       },
       comparison: {
         heading: "Day Pass vs. a monthly Hot Desk or Dedicated Desk",
         paragraphs: [
-          "If you're in the space a single day or a small handful of days a month, the Day Pass at $25/day is the right product. It's booked online in minutes, it's low-commitment, and it covers every core amenity you'd use on a short visit. A single Day Pass costs roughly the same as a day of cafe-hopping ($15-25 in drinks) but replaces the noise, the unreliable WiFi, and the implied buy-another-drink pressure with a real workspace.",
-          "If you end up needing the space more than about a week per month, the Hot Desk at $350/month is the natural upgrade. Hot Desk members get any-desk 24/7 biometric access, monthly meeting room credits, mail handling, and full access to community events — the math flips in Hot Desk's favor somewhere around the 14th or 15th day in the space, and you also pick up late-night and weekend access the Day Pass doesn't include. For your own reserved desk you can leave a monitor on, personal storage, meeting room credits, and a business address with mail, Dedicated Desk at $399/month is the next step.",
-          "The three products are genuinely differentiated, not marketing rebrandings of the same thing. Pick the one whose commitment level matches how you actually plan to use the space. Start with a Day Pass if you're not sure — we'd rather you try us for a day and upgrade on your own timeline than sign up for something you don't end up using.",
+          "If you're in the space a single day or a small handful of days a month, the day pass is the right product. It's low-commitment and covers every core amenity you'd use on a short visit — and it replaces the noise, unreliable WiFi, and buy-another-drink pressure of a coffee shop with a real workspace.",
+          "If you end up needing the space more than about a week a month, compare the hot desk membership. It's a monthly plan for any open desk in the shared area, and past a certain number of days per month it becomes the better value. Current Houston pricing for both is on this page, so you can run the math against your own schedule. If you want your own reserved desk you can leave a monitor on, a dedicated desk is the next step.",
+          "The three products are genuinely differentiated, not marketing rebrandings of the same thing. Pick the one whose commitment level matches how you actually plan to use the space. Start with a day pass if you're not sure — we'd rather you try us for a day and upgrade on your own timeline than sign up for something you don't end up using.",
         ],
       },
       howToGetStarted: {
         heading: "How to use a Day Pass at Muze Office Houston",
         paragraphs: [
-          "Muze Office Houston is opening soon at 1800 Augusta Dr. Join the waitlist to lock in pre-launch pricing and to get the opening-day schedule for Day Passes. When we open, Day Passes will be booked online, even same-day, and available during business hours — show your ID at the front desk, pay $25, and we'll point you to an open desk. Booking online the day before guarantees a spot during busier weeks.",
-          "The Day Pass will cover desk access, WiFi, unlimited coffee and water, free parking, phone-booth access for private calls, printing, and the on-site Muze Cafe. Meeting rooms will be a separate hourly booking; final Houston room inventory and pricing will be announced before opening.",
-          "If you come back more than one week a month, move to a Hot Desk or Dedicated Desk. See /houston-hot-desk for any-desk 24/7 biometric access, or /houston-dedicated-desk to add a reserved desk and a business address with mail.",
+          "Check day-pass availability and current pricing on this page, then reserve your day or contact the Houston team. Arrive at 1800 Augusta Dr, park on-site, and settle in at an open desk. Booking ahead is the easiest way to make sure a spot is ready during a busy week.",
+          "A day pass covers a desk in the shared workspace, WiFi, coffee, and phone booths for private calls. Meeting rooms are a separate hourly booking — see /houston-meeting-rooms if you need one for part of the day.",
+          "If you come back more than about a week a month, move to a hot desk or dedicated desk. See /houston-hot-desk for an any-desk monthly membership, or /houston-dedicated-desk for a reserved desk of your own.",
         ],
       },
       relatedServices: [
-        { slug: "houston-hot-desk", label: "Houston Hot Desk ($350/mo)" },
-        { slug: "houston-dedicated-desk", label: "Houston Dedicated Desk ($399/mo)" },
+        { slug: "houston-hot-desk", label: "Houston Hot Desk" },
+        { slug: "houston-dedicated-desk", label: "Houston Dedicated Desk" },
         { slug: "houston-coworking", label: "Houston Coworking (overview)" },
         { slug: "houston-galleria-coworking", label: "Galleria Coworking Houston" },
         { slug: "houston-medical-center-coworking", label: "Medical Center Coworking Houston" },
@@ -1589,84 +1589,83 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "hot-desk",
     h1: "Hot Desk in Houston",
     heroSubtitle:
-      "Any-desk monthly coworking in the Galleria for remote workers and consultants in the space three-to-five days a week. Meeting room credits, mail handling, and community events included — all on month-to-month terms.",
-    metaTitle: "Hot Desk Houston — $350/mo, 24/7 Access",
+      "Any-desk monthly coworking in the Galleria / Uptown area for remote workers and consultants who are in the space several days a week and don't need the same seat every day.",
+    metaTitle: "Hot Desk Houston — Galleria Coworking",
     metaDescription:
-      "Hot desk coworking in Houston's Galleria at 1800 Augusta Dr — $350/mo, any-desk 24/7 access, meeting credits, mail handling, free parking. Month-to-month. Waitlist open.",
+      "Hot desk coworking at 1800 Augusta Dr in Houston's Galleria / Uptown area — any open desk on a monthly plan, near Post Oak Blvd. See plans or book a tour.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Remote workers in the space three-to-five days a week",
       "Consultants who don't care which specific desk they sit at",
-      "Freelancers who want meeting room credits without a private office",
-      "Solo founders using mail handling for LLC and business correspondence",
+      "Freelancers who want a real workspace without a private office",
+      "Solo founders who want a Galleria-area base for client work",
       "Recent home-office escapees tired of kitchen-table Zoom calls",
       "Out-of-town founders running a Texas business a few days a month",
     ],
     locationCallout:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, with free parking on-site. Opening soon.",
+      "1800 Augusta Dr, Houston, TX 77057 — in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr. On-site parking.",
     longFormBody: {
       bestFor: [
         {
           persona: "Remote workers in the space 3–5 days a week",
           scenario:
-            "Your employer is fully remote or hybrid, your apartment or townhome is not a great place to do heads-down work, and you want a professional space to go to most weekdays — without paying for a reserved desk you don't actually need since any open spot is fine.",
+            "Your employer is fully remote or hybrid, your apartment or townhome is not a great place to do heads-down work, and you want a professional space to go to most weekdays — without paying for a reserved desk you don't need, since any open spot is fine.",
           fit: [
-            "$350/month for any-desk access any weekday — sit wherever is open",
-            "Meeting room credits for client calls, team syncs, and interviews",
-            "Mail handling included, so LLC and business mail can come to the Galleria address",
-            "Community events access — organic networking with other remote workers, founders, and consultants",
+            "Monthly any-desk access — sit wherever is open",
+            "Meeting rooms nearby for client calls, team syncs, and interviews",
+            "Phone booths for calls that need privacy",
+            "A community of other remote workers, founders, and consultants — organic networking, no forced mixers",
           ],
         },
         {
           persona: "Consultants and independent advisors running a small practice",
           scenario:
-            "You run a consulting, advisory, or coaching practice out of your laptop, you want a professional Galleria-area backdrop for client Zoom calls, and you want monthly meeting room credits for the occasional in-person client visit — without the cost of a private office you'd sit in alone most days.",
+            "You run a consulting, advisory, or coaching practice out of your laptop, you want a professional Galleria-area backdrop for client Zoom calls, and you want a meeting room down the hall for the occasional in-person client visit — without the cost of a private office you'd sit in alone most days.",
           fit: [
             "Shared desk anywhere in the coworking area — find the quiet corner you like each day",
-            "Meeting room credits for in-person client meetings and pitch sessions",
+            "Meeting rooms for in-person client meetings and pitch sessions",
             "Phone booths for confidential client calls without a living-room or townhome background",
-            "Month-to-month terms so you can pause or cancel when a client roster changes",
+            "A monthly plan instead of a multi-year office lease when your client roster changes",
           ],
         },
         {
-          persona: "Freelancers past the Day Pass stage but not ready for Dedicated Desk",
+          persona: "Freelancers past the Day Pass stage but not ready for a Dedicated Desk",
           scenario:
-            "You've been day-passing at Muze Office Houston for a few weeks, you know you want to be in the space most days, but you don't need your own reserved desk or a business address — sitting wherever's open in the shared area is fine, and you want the freedom to come in early or stay late without thinking about front-desk hours.",
+            "You've been using day passes at Muze Office Houston for a few weeks, you know you want to be in the space most days, but you don't need your own reserved desk — sitting wherever's open in the shared area is fine.",
           fit: [
-            "Math flips from Day Pass to Hot Desk around the 14th-15th day per month",
-            "Meeting room credits turn into real value once client calls become a weekly thing",
-            "Mail handling lets you use the 1800 Augusta Dr address for LLC and business correspondence",
-            "If you outgrow Hot Desk later, Dedicated Desk ($399/mo) adds a reserved desk, personal storage, and a business address with mail",
+            "Once you're in more than about a week a month, a monthly membership usually beats paying per day — compare current Houston pricing on this page",
+            "A consistent place to work most weekdays without reserving a specific desk",
+            "An easy step up to a dedicated desk if you later want a reserved spot",
           ],
         },
       ],
       whyChoose: {
         heading: "Why choose a Hot Desk in Houston at Muze Office",
         paragraphs: [
-          "The Hot Desk at $350/month is the middle product in the coworking tier stack and it's the one that fits the largest share of members. You get any-desk 24/7 biometric access plus monthly meeting room credits, mail handling, community-event access, phone booths, printing, unlimited coffee, and free parking. The tradeoff versus Dedicated Desk is that you don't have a reserved seat, no personal storage, and no business address with mail; the tradeoff versus Day Pass is that you're paying monthly rather than per visit and getting 24/7 access, meeting credits, and mail handling on top.",
-          "It's an any-desk product, not a reserved-desk product. Hot Desk members sit wherever's open in the shared coworking area each day — that's the reason the tier exists at $350 rather than $399. If you want to plug in a dual-monitor rig and leave it there, claim a corner you keep coming back to, or use 1800 Augusta Dr as a business address on LLC filings and contracts, Dedicated Desk ($399) is the right shape, not Hot Desk. Both tiers include 24/7 biometric access, so hours-of-access isn't the deciding factor.",
-          "The mail handling piece is a real perk that often gets overlooked in the tier comparison. Hot Desk members can have tax and business correspondence sent to 1800 Augusta Dr and pick it up while the front desk is staffed (Mon–Fri 10am–7pm). The address can be used on contracts and filings that accept a commercial mail-receiving address. It's not the same product as Virtual Office (no package receiving, no mail forwarding, no dedicated business-address-only plan), but for someone who's already at the space most weekdays, the mail-handling inclusion solves the mail problem without a second subscription.",
+          "The hot desk sits in the middle of the coworking lineup, and it's the plan that fits the largest share of regular members. You get monthly access to any open desk in the shared workspace, along with the same WiFi, phone booths, coffee, and meeting rooms as the rest of the building. The tradeoff versus a dedicated desk is that you don't have a reserved seat; the tradeoff versus a day pass is that you're paying monthly rather than per visit.",
+          "It's an any-desk product, not a reserved-desk product. Hot desk members sit wherever's open in the shared coworking area each day — that's why it costs less than a dedicated desk. If you want to plug in a dual-monitor rig and leave it there, or claim a corner you keep coming back to, a dedicated desk is the right shape, not a hot desk.",
+          "The location makes a weekday habit realistic. 1800 Augusta Dr is in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr, with on-site parking and an easy drive from Memorial, Briargrove, River Oaks, West University, and Bellaire. What's included with the Houston hot desk — meeting-room time, mail handling, member access hours — is listed with current pricing on this page.",
         ],
       },
       comparison: {
         heading: "Hot Desk vs. Day Pass and Dedicated Desk",
         paragraphs: [
-          "Against the Day Pass, Hot Desk wins on cost once you're in the space more than about 14 days a month. A Day Pass at $25 × 15 days is already $375, and at 20 days you're up to $500 — a Hot Desk at $350 is cheaper starting in week three and gets progressively cheaper the more you come in. Hot Desk also adds 24/7 biometric access, meeting room credits, and mail handling, none of which the Day Pass includes (Day Pass is booked online for front-desk hours). Day Pass stays the right call if you're only in the space a handful of days per month; Hot Desk takes over once it becomes part of your weekly rhythm.",
-          "Against Dedicated Desk, the difference is desk-reservation and a business address, not hours-of-access — both tiers include 24/7 biometric entry. Dedicated Desk adds a reserved desk you can leave a monitor on, personal storage, and a business address with mail you can use on LLC filings and contracts. For remote workers who are fine with any open desk and don't need a permanent physical footprint, Hot Desk is the right fit at $350. For members who want to leave a dual-monitor rig set up between sessions, claim a specific spot, or skip a separate Virtual Office subscription, Dedicated Desk at $399 adds those pieces.",
-          "The Hot Desk tier is designed for people who are committed to being in the space most weekdays but flexible about which specific desk they sit at. If that's you — a remote worker, a solo consultant, a freelancer with a professional client roster — Hot Desk is the product that matches the commitment level without overpaying for reserved-desk infrastructure you won't use.",
+          "Against the day pass, the hot desk wins once the space becomes part of your weekly rhythm. There's a break-even point somewhere in the month where paying per day costs more than a monthly membership; with current Houston pricing on this page you can find it for your own schedule. The day pass stays the right call if you're only in the space a handful of days per month.",
+          "Against a dedicated desk, the difference is the reservation. A dedicated desk gives you the same spot every day, where you can leave a monitor and keyboard between sessions. For remote workers who are fine with any open desk, the hot desk is the right fit. For members who want a permanent setup, the dedicated desk adds that piece.",
+          "The hot desk is designed for people who are committed to being in the space most weekdays but flexible about which specific desk they sit at. If that's you — a remote worker, a solo consultant, a freelancer with a professional client roster — it's the product that matches the commitment level without overpaying for a reserved desk you won't use.",
         ],
       },
       howToGetStarted: {
         heading: "How to get started with a Hot Desk in Houston",
         paragraphs: [
-          "Muze Office Houston is opening soon at 1800 Augusta Dr in the Galleria. Join the waitlist to lock in pre-launch pricing on Hot Desk and get first access to the opening roster. Once we open, we recommend starting with a Day Pass at /houston-day-pass so you can try a typical weekday in the coworking area, test the WiFi on a real video call, and see how the community fits before signing up month-to-month.",
-          "When you're ready, Hot Desk will be month-to-month. There will be a one-time $25 setup fee, but no personal guaranty and no 12-month commitment. Mail handling will be included; if you want to start using 1800 Augusta Dr as your business address for LLC filings or contracts, we can set that up the day you sign up.",
-          "If you later want a reserved desk, personal storage, or a business address with mail you can use on LLC filings and contracts, upgrade to Dedicated Desk at /houston-dedicated-desk. If you grow a team and need wall privacy, move to a Private Office at /houston-private-office. And if you're in the space less than a week a month, the Day Pass at /houston-day-pass is probably still the right fit.",
+          "Start with a day pass at /houston-day-pass so you can try a typical weekday in the coworking area, test the WiFi on a real video call, and see how the community fits before signing up for a monthly plan.",
+          "When you're ready, choose the hot desk membership. Current Houston pricing, terms, and what's included are listed on this page, or contact the team and they'll walk you through signup. If you also want to use 1800 Augusta Dr as a business mailing address, ask about adding a virtual office plan — see /houston-virtual-office.",
+          "If you later want a reserved desk of your own, upgrade to a dedicated desk at /houston-dedicated-desk. If you grow a team and need wall privacy, move to a private office at /houston-private-office. And if you're in the space less than a week a month, the day pass at /houston-day-pass is probably still the right fit.",
         ],
       },
       relatedServices: [
-        { slug: "houston-day-pass", label: "Houston Day Pass ($25/day)" },
-        { slug: "houston-dedicated-desk", label: "Houston Dedicated Desk ($399/mo)" },
+        { slug: "houston-day-pass", label: "Houston Day Pass" },
+        { slug: "houston-dedicated-desk", label: "Houston Dedicated Desk" },
         { slug: "houston-coworking", label: "Houston Coworking (overview)" },
         { slug: "houston-virtual-office", label: "Houston Virtual Office" },
         { slug: "houston-meeting-rooms", label: "Houston Meeting Rooms" },
@@ -1680,84 +1679,84 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "dedicated-desk",
     h1: "Dedicated Desk in Houston",
     heroSubtitle:
-      "Your own reserved desk in the Galleria, personal storage, 24/7 biometric access, meeting room credits, and a business address with mail. Month-to-month terms — the most committed coworking tier short of a private office.",
-    metaTitle: "Dedicated Desk Houston — $399/mo, Reserved",
+      "Your own reserved desk in the Galleria / Uptown area — the same spot every day, with your monitor and keyboard where you left them. The most committed coworking option short of a private office.",
+    metaTitle: "Dedicated Desk Houston — Galleria Coworking",
     metaDescription:
-      "Dedicated desk coworking in Houston's Galleria at 1800 Augusta Dr — $399/mo, reserved desk, storage, 24/7 access, business address, meeting credits. Join the waitlist.",
+      "Dedicated desk coworking at 1800 Augusta Dr in Houston's Galleria / Uptown area — a reserved desk that's yours every day, near Post Oak Blvd. Book a tour today.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Remote workers who want a permanent Galleria-area desk with dual monitors",
       "Founders running a solo Texas business daily",
-      "Consultants with client calls at 7am CT or 9pm CT",
-      "Out-of-state LLC founders who also need a Texas business address",
+      "Consultants on client calls for most of the day",
+      "Out-of-state founders running a Texas business from Houston",
       "Solo professionals who used to rent a tiny private office and realized they didn't need walls",
-      "Creatives who want a personal storage cubby for equipment",
+      "Creatives who want to leave equipment set up between sessions",
     ],
     locationCallout:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, with free parking on-site. 24/7 biometric access for all monthly coworking members at opening; the front desk will be staffed Monday through Friday, 10am to 7pm.",
+      "1800 Augusta Dr, Houston, TX 77057 — in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr. On-site parking.",
     longFormBody: {
       bestFor: [
         {
           persona: "Remote workers who want a permanent desk setup",
           scenario:
-            "You're in the coworking space five days a week, you want to leave a dual-monitor setup plugged in, you don't want to pack and unpack a laptop bag every morning, and you'd rather pay $399 and never wonder whether your usual corner will be open than save $49 and hunt for a desk.",
+            "You're in the coworking space five days a week, you want to leave a dual-monitor setup plugged in, you don't want to pack and unpack a laptop bag every morning, and you'd rather pay a little more than wonder every day whether your usual corner will be open.",
           fit: [
             "Reserved desk — same spot every day, monitor and keyboard stay put",
-            "Personal storage cubby for equipment, files, headphones, and anything else you don't want to carry",
-            "24/7 biometric entry for early-morning or late-night sessions when the front desk is closed",
-            "Meeting room credits for client calls, interviews, and team syncs",
+            "No packing a bag every night or setting up from scratch every morning",
+            "Phone booths and meeting rooms nearby for calls that need privacy",
+            "A consistent, professional backdrop for video calls",
           ],
         },
         {
           persona: "Solo founders running a Texas business daily",
           scenario:
-            "You've filed an LLC in Texas, you're running the business out of Houston daily, and you want a real business address for contracts and qualifying filings — plus 24/7 access so you can match client time zones on either coast.",
+            "You've filed an LLC in Texas, you're running the business out of Houston daily, and you want a professional base you can work from every day — not a spare bedroom or a rotating cast of coffee shops.",
           fit: [
-            "Business address and mail handling are included in the $399 tier — no second Virtual Office subscription needed",
-            "24/7 biometric access for 6am calls to East Coast clients or 10pm calls to West Coast partners",
+            "A reserved desk at a commercial Galleria-area address instead of a home office",
+            "Pair it with a virtual office plan if you want 1800 Augusta Dr as your business mailing address",
             "Texas has no state personal income tax — a frequent reason founders relocate here",
-            "Address can be used for contracts and qualifying filings — it's a real commercial suite, not a mailbox",
+            "Meeting rooms for investor, vendor, and client meetings",
           ],
         },
         {
-          persona: "Consultants outgrowing Hot Desk but not ready for a private office",
+          persona: "Consultants outgrowing a Hot Desk but not ready for a private office",
           scenario:
-            "You've been on Hot Desk for a few months, your client load has grown, you're now in the space every weekday plus some weekends, and you want your own permanent spot — but you don't need walls or a lockable door and you don't want to triple your cost for a Solo Office.",
+            "You've been on a hot desk for a few months, your client load has grown, you're now in the space every weekday, and you want your own permanent spot — but you don't need walls or a lockable door and you don't want to pay for a private office.",
           fit: [
-            "$399/month adds a reserved desk, personal storage, and a business address with mail on top of everything Hot Desk already includes",
+            "Adds a reserved desk on top of everything the hot desk already gives you",
             "You keep the community of the shared coworking area — organic networking, open seating energy",
-            "Meeting room credits for client pitches and confidential conversations",
-            "If you later need wall privacy for confidential client meetings, upgrade path to Private Office is clean",
+            "Meeting rooms for client pitches and confidential conversations",
+            "If you later need wall privacy for confidential client meetings, the upgrade path to a private office is clean",
           ],
         },
       ],
       whyChoose: {
         heading: "Why choose a Dedicated Desk in Houston at Muze Office",
         paragraphs: [
-          "The Dedicated Desk at $399/month is the top of the coworking tier stack. You get everything Hot Desk includes — meeting room credits, mail handling, phone booths, fast WiFi, unlimited coffee, free parking, community events — plus four things that make the tier distinct: a reserved desk that's yours every day, personal storage for equipment and files, 24/7 biometric entry, and a Houston business address with mail for contracts and qualifying filings. It's the product for members whose work has graduated past 'I'll sit wherever' into 'I want to plug in a dual-monitor rig and leave it there.'",
-          "The reserved-desk-plus-storage piece is the part that flips the math for a lot of members. Hot Desk at $350 is any-desk access; Dedicated Desk at $399 lets you claim a specific spot, leave a monitor and keyboard plugged in between sessions, store equipment, files, and headphones in a personal cubby, and not pack a bag every night. If you're in the space daily and you've found yourself drifting back to the same desk anyway, the $49/month delta turns that drift into a real reservation — and the business-address-and-mail piece often pays for itself by replacing a separate Virtual Office subscription.",
-          "The business-address-and-mail inclusion is the other differentiator. Dedicated Desk members can have tax correspondence and business mail delivered to 1800 Augusta Dr — a real commercial suite number, not a PO Box. Confirm filing requirements with the relevant agency, and remember that registered-agent and Google Business Profile requirements are separate. That's one reason some members drop a separate Virtual Office subscription when they move up to Dedicated Desk — the mail-and-address piece is bundled in.",
+          "The dedicated desk is the top of the coworking lineup. You get the same shared amenities as a hot desk — WiFi, phone booths, coffee, meeting rooms, the community — plus a reserved desk that's yours every day. It's the plan for members whose work has graduated past 'I'll sit wherever' into 'I want to plug in a dual-monitor rig and leave it there.'",
+          "The reservation is what changes the math. If you're in the space daily and you keep drifting back to the same desk anyway, a dedicated desk turns that habit into a guarantee: your monitor, keyboard, and notes are where you left them, and nobody has claimed the spot by 9am. Current Houston pricing and exactly what's included — storage, meeting-room time, mail handling, member access hours — are listed on this page.",
+          "The location is built for a daily commute. 1800 Augusta Dr is in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr, with on-site parking and a short drive from Memorial, Briargrove, River Oaks, West University, and Bellaire. Muze Office Houston is independently operated as a Muze Office franchise.",
         ],
       },
       comparison: {
         heading: "Dedicated Desk vs. Hot Desk and Private Office",
         paragraphs: [
-          "Against Hot Desk ($350/month), the upgrade to Dedicated Desk at $399 adds three things: a reserved desk you can leave set up between sessions, personal storage, and a business address with mail. Both tiers include 24/7 biometric access — that's not a differentiator. The $49/month delta is small if any of those three pieces matter to your workflow. For members who don't care which desk they sit at and don't need the business address, Hot Desk stays the right product. For members who want a permanent physical footprint or want to skip a separate Virtual Office subscription, Dedicated Desk is the better fit.",
-          "Against a Private Office, the tradeoff is walls and cost. A Solo Office at Muze Office Houston will be a furnished, lockable private room — the right call if you have confidential client calls most days, if you want to decorate and organize a room the way your business actually works, or if you need physical wall privacy for regulatory or professional reasons. Private Offices aren't publicly priced because they vary by office size, location in the building, and length of stay; they typically run meaningfully higher than Dedicated Desk. For members who don't need walls, Dedicated Desk delivers the reserved-seat and 24/7 parts of 'my own space' at coworking pricing.",
-          "The practical way to choose is to ask how many hours a week you'd actually work with your door closed. If the answer is zero or one, Dedicated Desk is probably the right tier. If it's more than a few hours — confidential client conversations, deposition-style meetings, sensitive document review — a Solo Office starts to earn its keep.",
+          "Against a hot desk, the upgrade is about the reservation — a desk you can leave set up between sessions. For members who don't care which desk they sit at, the hot desk stays the right product. For members who want a permanent physical footprint in the space, the dedicated desk is the better fit. Compare current Houston pricing for both on this page.",
+          "Against a private office, the tradeoff is walls and cost. A private office is an enclosed, lockable room — the right call if you have confidential client calls most days, if you want to set up a room the way your business actually works, or if you need physical wall privacy for regulatory or professional reasons. It costs more than a desk in the shared area. For members who don't need walls, a dedicated desk delivers the 'my own space' part at coworking pricing.",
+          "The practical way to choose is to ask how many hours a week you'd actually work with your door closed. If the answer is zero or one, a dedicated desk is probably the right fit. If it's more than a few hours — confidential client conversations, deposition-style meetings, sensitive document review — a private office starts to earn its keep.",
         ],
       },
       howToGetStarted: {
         heading: "How to get started with a Dedicated Desk in Houston",
         paragraphs: [
-          "Muze Office Houston is opening soon at 1800 Augusta Dr in the Galleria. Join the waitlist to lock in pre-launch pricing on Dedicated Desk and get first access to the opening-day desk assignment. Once we open, we recommend spending a day or two in the space first — a Day Pass ($25) at /houston-day-pass is the simplest way — so you can pick the desk you'd like to claim as your own.",
-          "Month-to-month terms will be the same as the rest of the coworking tiers — 30 days' notice to cancel, a one-time $25 setup fee, no personal guaranty, and no long-term lock-in. Biometric entry will be enrolled on your first day; once that's set up, you'll have 24/7 access to the building. Mail handling and business address services will be activated the day you sign up — if you want to start using 1800 Augusta Dr for LLC filings or contracts, we can issue a suite assignment letter at signup.",
-          "If you realize Dedicated Desk is too much — you don't need the 24/7 access, or the reserved desk isn't worth the $49/month delta — dropping back to Hot Desk at /houston-hot-desk will be a same-day change. If you grow a team or need lockable wall privacy for confidential client conversations, the upgrade path is Private Office — see /houston-private-office for team and solo office options when Houston opens.",
+          "Spend a day or two in the space first — a day pass at /houston-day-pass is the simplest way — so you can see the shared area, test the WiFi on a real call, and get a feel for where you'd want to sit.",
+          "When you're ready, choose the dedicated desk plan. Current Houston pricing, terms, and inclusions are listed on this page, or contact the team to sign up. If you want to use 1800 Augusta Dr as your business mailing address, ask about pairing the desk with a virtual office plan at /houston-virtual-office.",
+          "If you realize a reserved desk is more than you need, the hot desk at /houston-hot-desk gives you any-desk access instead. If you grow a team or need lockable wall privacy for confidential client conversations, see /houston-private-office.",
         ],
       },
       relatedServices: [
-        { slug: "houston-hot-desk", label: "Houston Hot Desk ($350/mo)" },
-        { slug: "houston-day-pass", label: "Houston Day Pass ($25/day)" },
+        { slug: "houston-hot-desk", label: "Houston Hot Desk" },
+        { slug: "houston-day-pass", label: "Houston Day Pass" },
         { slug: "houston-coworking", label: "Houston Coworking (overview)" },
         { slug: "houston-private-office", label: "Houston Private Office" },
         { slug: "houston-virtual-office", label: "Houston Virtual Office" },
@@ -1771,52 +1770,52 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "flexible-workspaces",
     h1: "Flexible Workspaces in Houston",
     heroSubtitle:
-      "One Galleria building, four commitment levels. Start with a day pass, move up to a hot desk or dedicated desk, and grow into a private office when the team does — all month-to-month, all at 1800 Augusta Dr.",
-    metaTitle: "Houston Flexible Workspaces from $25",
+      "One Galleria-area building, several commitment levels. Start with a day pass, move up to a hot desk or dedicated desk, and grow into a private office when the team does — all at 1800 Augusta Dr.",
+    metaTitle: "Flexible Workspace Houston — Galleria",
     metaDescription:
-      "Flexible workspaces in Houston's Galleria at 1800 Augusta Dr — day pass, hot desk, dedicated desk, and private offices. Month-to-month, no lease. Join the waitlist.",
+      "Flexible workspace at 1800 Augusta Dr in Houston's Galleria / Uptown area — day passes, hot desks, dedicated desks, and private offices. Book a tour to compare.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Startups scaling from 3 to 8 people without signing a new lease",
       "Teams reducing office burn while keeping a professional address",
       "Remote-first companies opening a Houston beachhead",
       "Founders testing office culture before a full commitment",
-      "Consultants who want a pro Galleria address without a 12-month contract",
+      "Consultants who want a pro Galleria address without a long office lease",
       "Out-of-state teams relocating staff one hire at a time",
     ],
     locationCallout:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, with free parking on-site. Opening soon.",
+      "1800 Augusta Dr, Houston, TX 77057 — in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr. On-site parking.",
     longFormBody: {
       bestFor: [
         {
           persona: "Scaling startups that grew from 3 to 8 people in six months",
           scenario:
-            "You signed up for a hot desk or two when the team was small, then you hired a few more people and ran out of desks. The normal play is to break the coworking plan, sign a traditional lease, buy furniture, and wait for buildout. You want an option that doesn't require any of that — just more space in the same Galleria building.",
+            "You signed up for a hot desk or two when the team was small, then you hired a few more people and ran out of desks. The normal play is to break the coworking plan, sign a traditional lease, buy furniture, and wait for buildout. You want an option that doesn't require any of that — just more space in the same Galleria-area building.",
           fit: [
-            "Hot Desk at $350/month per person covers the first wave of hires with any-desk 24/7 biometric access",
-            "Dedicated Desk at $399/month reserves seats for full-time team members who want a permanent spot and a business address with mail",
-            "Team Office and Custom Suite options are in the same building at 1800 Augusta Dr — no move-outs, no new commute for the team",
-            "Month-to-month on every tier means you can flex headcount up or down as hiring and revenue change",
+            "Hot desks cover the first wave of hires with any-desk access in the shared area",
+            "Dedicated desks reserve seats for full-time team members who want a permanent spot",
+            "Private offices are in the same building at 1800 Augusta Dr — no move-outs, no new commute for the team",
+            "Add desks as you hire instead of signing a new lease every time headcount changes",
           ],
         },
         {
           persona: "Remote-first companies opening a Houston beachhead",
           scenario:
-            "Your company is remote by default, but you're opening a Houston presence for hiring, client-proximity, or energy-sector reasons. You don't know yet whether you need a private office, a few dedicated desks, or just a business address with meeting rooms for when leadership flies in.",
+            "Your company is remote by default, but you're opening a Houston presence for hiring, client proximity, or energy-sector reasons. You don't know yet whether you need a private office, a few dedicated desks, or just a business address with meeting rooms for when leadership flies in.",
           fit: [
-            "Virtual Office plans cover the business-address and mail-handling use case without taking physical space",
-            "Day Pass lets traveling execs and occasional visitors work from the building without adding to a monthly commitment",
-            "Dedicated Desk reserves space for a permanent Houston hire without jumping to a private office",
-            "If the Houston presence grows, Team Office and Custom Suite options are already in the same Galleria building — no second relocation for the local team",
+            "Virtual office plans cover the business-address and mail use case without taking physical space",
+            "Day passes let traveling execs and occasional visitors work from the building without adding to a monthly commitment",
+            "A dedicated desk reserves space for a permanent Houston hire without jumping to a private office",
+            "If the Houston presence grows, private offices are in the same Galleria-area building — no second relocation for the local team",
           ],
         },
         {
           persona: "Consultants who want a pro Galleria address without committing to an office",
           scenario:
-            "You run an independent practice and you want a real Houston address in the Galleria for LLC filings, contracts, and client-facing materials — plus a professional space for the occasional in-person meeting — without paying private-office prices for walls you'd sit alone inside most days.",
+            "You run an independent practice and you want a real Houston address in the Galleria area for client-facing materials — plus a professional space for the occasional in-person meeting — without paying for walls you'd sit alone inside most days.",
           fit: [
-            "Hot Desk at $350/month covers any-desk 24/7 biometric access plus meeting room credits and mail handling",
-            "Dedicated Desk at $399/month adds a reserved seat, personal storage, and a business address with mail",
+            "A hot desk membership gives you a regular base with meeting rooms down the hall",
+            "A dedicated desk adds a reserved seat you can leave set up between sessions",
             "Private phone booths for confidential client calls without a townhome or Rice Village coffee-shop background",
             "Meeting rooms bookable by the hour when a client drives in from Sugar Land, Katy, or The Woodlands",
           ],
@@ -1825,31 +1824,31 @@ export const cityServiceData: Record<string, CityServiceData> = {
       whyChoose: {
         heading: "Why choose flexible workspaces in Houston at Muze Office",
         paragraphs: [
-          "Most people who land on a flexible-workspaces search aren't asking about coworking specifically or private offices specifically — they're trying to figure out what shape their workspace should take six months from now when they're bigger, smaller, or in a different phase of a project. The honest answer is that you probably don't need to decide today. Muze Office Houston is opening at 1800 Augusta Dr inside the 610 Loop with the full stack under one roof: same-day day passes, Hot Desk memberships at $350/month, Dedicated Desks at $399/month, private offices for teams of 1-10+, and virtual-office plans for people who only need the address. Every tier is month-to-month. You can start with a day pass, move up to a hot desk once you know you'll be in the space most weekdays, grow into a dedicated desk when you want 24/7 access and a permanent spot, and move into a private office when the team outgrows the shared floor — all without changing buildings, commutes, or business addresses.",
-          "The flexibility argument is really an argument about risk. A traditional commercial lease in the Galleria or Uptown is typically a 12-to-36 month commitment with a personal guaranty, a security deposit of one or two months, a tenant-improvement allowance that locks you into a specific buildout, CAM fees on top of base rent, and a painful exit if headcount changes. A flexible-workspace plan at Muze Office Houston will be month-to-month with 30 days' notice to cancel. That difference compounds when you're a startup that might double in size, a remote-first company that might decide it doesn't need Houston at all, or a consultant whose client roster changes every quarter.",
-          "The other half of the pitch is that the whole stack is genuinely the same space. The day-pass holder, the hot-desk member, the dedicated-desk member, and the private-office tenant will all park in the same lot, walk through the same lobby, use the same conference rooms, drink coffee at the same on-site cafe, and show up to the same community events. When you upgrade, you're not changing your commute or your professional identity — you're just getting more or less space depending on what you need this quarter.",
+          "Most people who land on a flexible-workspaces search aren't asking about coworking specifically or private offices specifically — they're trying to figure out what shape their workspace should take six months from now, when they're bigger, smaller, or in a different phase of a project. The honest answer is that you probably don't need to decide today. Muze Office Houston at 1800 Augusta Dr has the full range under one roof: day passes, hot desk and dedicated desk memberships, private offices for small teams, and virtual office plans for people who only need the address. You can start with a day pass, move up to a hot desk once you know you'll be in most weekdays, take a dedicated desk when you want a permanent spot, and move into a private office when the team outgrows the shared floor — without changing buildings, commutes, or business addresses.",
+          "The flexibility argument is really an argument about risk. A traditional commercial lease in the Galleria or Uptown is typically a multi-year commitment with a personal guaranty, a security deposit, a tenant-improvement allowance that locks you into a specific buildout, operating expenses on top of base rent, and a painful exit if headcount changes. Flexible workspace is built for shorter commitments; current Houston terms and pricing are listed on this page. That difference compounds when you're a startup that might double in size, a remote-first company that might decide it doesn't need Houston at all, or a consultant whose client roster changes every quarter.",
+          "The other half of the pitch is that every option lives in the same space. The day-pass holder, the hot desk member, the dedicated desk member, and the private-office tenant all use the same building, the same conference rooms, and the same shared areas. When you upgrade, you're not changing your commute or your professional identity — you're just getting more or less space depending on what you need this quarter.",
         ],
       },
       comparison: {
         heading: "Flexible workspaces vs. a traditional lease or a single coworking plan",
         paragraphs: [
-          "A traditional commercial lease in the Galleria, Uptown, or downtown Houston typically runs 12 to 36 months with a personal guaranty, a one-to-two-month security deposit, CAM fees on top of base rent, a buildout delay that typically runs weeks, and a separate furniture bill before the first desk is usable. Breaking the lease early usually means forfeiting the deposit and paying the remaining term. That math works for a stable 15-person operation with a clear five-year trajectory. It does not work for a team that might be five people or fifteen people six months from now — which describes most early-stage companies, most consulting practices, and most remote-first businesses opening a second market.",
-          "A single coworking plan — just a Hot Desk membership at a pure coworking operator — is the other trap. The plan is flexible month-to-month, but the moment your team grows past two or three people, or you need a lockable office for a confidential conversation, or you want 24/7 access for a founder who works late, you're stuck. The answer at a pure coworking space is usually to move to a different building with different pricing, a different commute, and a different business address. Muze Office Houston is designed so the entire stack — day pass, hot desk, dedicated desk, private office, virtual office, meeting rooms — lives in the same building under the same terms. You upgrade by walking down the hall, not by signing a new lease somewhere else.",
-          "For buyers weighing these options, the comparison is not really between coworking and a private office — it's between committing early and keeping optionality. Flexible workspaces exist because the answer to 'what do we need?' genuinely changes over 6 to 12 months. Start with the tier that matches today and upgrade when reality makes the case for more space.",
+          "A traditional commercial lease in the Galleria, Uptown, or downtown Houston typically runs several years with a personal guaranty, a security deposit, operating expenses on top of base rent, a buildout that can take weeks or months, and a separate furniture bill before the first desk is usable. Breaking the lease early usually means forfeiting the deposit and paying out the remaining term. That math works for a stable operation with a clear five-year trajectory. It does not work for a team that might be five people or fifteen people six months from now — which describes most early-stage companies, most consulting practices, and most remote-first businesses opening a second market.",
+          "A single coworking plan at a pure coworking operator is the other trap. The plan is flexible, but the moment your team grows past two or three people, or you need a lockable office for a confidential conversation, you're stuck. The answer at a pure coworking space is usually to move to a different building with different pricing, a different commute, and a different business address. Muze Office Houston is set up so the whole range — day pass, hot desk, dedicated desk, private office, virtual office, meeting rooms — lives in the same building. You upgrade by walking down the hall, not by signing a new lease somewhere else.",
+          "For buyers weighing these options, the comparison is not really between coworking and a private office — it's between committing early and keeping optionality. Flexible workspaces exist because the answer to 'what do we need?' genuinely changes over 6 to 12 months. Start with the option that matches today and upgrade when reality makes the case for more space.",
         ],
       },
       howToGetStarted: {
         heading: "How to pick a flexible workspace at Muze Office Houston",
         paragraphs: [
-          "Muze Office Houston is opening soon at 1800 Augusta Dr in the Galleria. Join the waitlist to lock in pre-launch pricing across every tier — day pass, hot desk, dedicated desk, private office, and virtual office — and to get the opening-day schedule for tours and move-ins.",
-          "When we open, most people start with a Day Pass to try the space, test the WiFi on a real video call, and see how the commute from Memorial, Uptown, West University, Bellaire, River Oaks, or downtown works. See /houston-day-pass for the details. Once you've decided you'll be in the space most weekdays, Hot Desk at /houston-hot-desk is the any-desk 24/7 membership most people settle into. If you want your own reserved desk, personal storage, and a business address with mail, Dedicated Desk at /houston-dedicated-desk is the next step up. For teams of 2 to 10+ who need walls, Private Office at /houston-private-office runs month-to-month with all utilities, WiFi, cleaning, and conference rooms included. For founders and remote-first companies that only need the address, see /houston-virtual-office.",
-          "Like Las Vegas, every Houston tier will be month-to-month — no long-term commitment, 30 days' notice to cancel, no buildout delay, no furniture bill. You'll be able to move between tiers any time as headcount and commitment levels change.",
+          "Most people start with a day pass to try the space, test the WiFi on a real video call, and see how the drive from Memorial, Uptown, West University, Bellaire, River Oaks, or downtown works. See /houston-day-pass for details.",
+          "Once you've decided you'll be in the space most weekdays, the hot desk at /houston-hot-desk is the any-desk membership most people settle into. If you want your own reserved desk, the dedicated desk at /houston-dedicated-desk is the next step up. For teams that need walls, see /houston-private-office. For founders and remote-first companies that only need the address, see /houston-virtual-office.",
+          "Current Houston pricing and terms for each option are listed on this page. If you're not sure which fits, book a tour of 1800 Augusta Dr or contact the team — it's easier to decide once you've seen the space.",
         ],
       },
       relatedServices: [
         { slug: "houston-day-pass", label: "Houston Day Pass" },
-        { slug: "houston-hot-desk", label: "Houston Hot Desk ($350/mo)" },
-        { slug: "houston-dedicated-desk", label: "Houston Dedicated Desk ($399/mo)" },
+        { slug: "houston-hot-desk", label: "Houston Hot Desk" },
+        { slug: "houston-dedicated-desk", label: "Houston Dedicated Desk" },
         { slug: "houston-coworking", label: "Houston Coworking (overview)" },
         { slug: "houston-private-office", label: "Houston Private Office" },
         { slug: "houston-virtual-office", label: "Houston Virtual Office" },
@@ -1864,54 +1863,54 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "private-office",
     h1: "Private Office in Houston",
     heroSubtitle:
-      "Furnished private offices with month-to-month terms in the Galleria. All utilities, WiFi, conference rooms, parking, and cleaning included. Bring a laptop.",
-    metaTitle: "Private Office Houston | Month-to-Month",
+      "Private offices in the Galleria / Uptown area for solo professionals and small teams — a lockable room of your own without the buildout and long lease of a traditional office.",
+    metaTitle: "Private Office Houston — Galleria / Uptown",
     metaDescription:
-      "Furnished private offices in Houston's Galleria, month-to-month. WiFi, utilities, meeting rooms, and parking included. Solo offices to custom suites. Join the waitlist.",
+      "Private offices at 1800 Augusta Dr in Houston's Galleria / Uptown area for solo pros and small teams — no buildout, no traditional lease. Book a tour.",
     heroImage: "/images/hero/private-office.jpg",
     useCases: [
       "Growing startups that need their own Houston space",
       "Law firms, CPAs, and financial advisors",
-      "Teams of 1-10 who want a lockable, private office",
+      "Solo professionals and small teams who want a lockable, private office",
       "Companies relocating to Texas for tax advantages",
       "Medical, therapy, and health-tech professionals",
-      "Businesses that need a professional Galleria address",
+      "Businesses that need a professional Galleria-area address",
     ],
     locationCallout:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop, minutes from Post Oak Blvd and the Galleria. Free parking for you and your clients.",
+      "1800 Augusta Dr, Houston, TX 77057 — in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr. On-site parking.",
     longFormBody: {
       bestFor: [
         {
           persona: "Law firms, CPAs, and financial advisors",
           scenario:
-            "You need a lockable office for confidential client meetings, a professional reception area, and a Galleria address that meets state bar or regulatory expectations — without signing a three-year Class B lease in a Post Oak tower.",
+            "You need a lockable office for confidential client meetings and a Galleria-area address that reads as a professional practice — without signing a three-year Class B lease in a Post Oak tower.",
           fit: [
-            "Solo Office or Team Office with a lockable door for confidential client conversations",
-            "Conference rooms included for depositions, client reviews, and investor meetings",
-            "On-site reception handles client arrivals professionally so you don't have to run the front door",
-            "Month-to-month lease with no personal guaranty and no CAM fee surprises",
+            "A private office with a lockable door for confidential client conversations",
+            "Meeting rooms for client reviews, mediations, and meetings too large for your office",
+            "A professional Galleria-area address for letterhead and client-facing materials",
+            "Skip the buildout and furniture order that come with a traditional lease",
           ],
         },
         {
           persona: "Small tech teams transitioning from fully remote",
           scenario:
-            "Your team grew from 2 to 6 during the remote years and you want a permanent Houston headquarters inside the Loop without the buildout delay, furniture bill, and three-year commitment of a traditional Class B lease in Greenway or Post Oak.",
+            "Your team grew from 2 to 6 during the remote years and you want a permanent Houston home base without the buildout delay, furniture bill, and three-year commitment of a traditional Class B lease in Greenway or Post Oak.",
           fit: [
-            "Team Office fits 2-4 people; Custom Suite starts at 5+ for teams that have already grown",
-            "Fully furnished on day one — no $10k furniture bill or six-month buildout",
-            "WiFi, utilities, cleaning, meeting rooms, and on-site cafe all included in a single monthly bill",
-            "Galleria address your recruiters, investors, and clients will recognize",
+            "Offices for solo professionals and small teams — ask the team what sizes are currently available",
+            "No buildout period and no furniture purchase before you can start working",
+            "Meeting rooms and shared workspace in the same building when the team needs more room",
+            "A Galleria / Uptown address your recruiters, investors, and clients will recognize",
           ],
         },
         {
           persona: "Medical, therapy, and health-tech professionals",
           scenario:
-            "You run a small practice or health-tech company that needs private, professional space for patient or client conversations that a shared coworking floor can't support, and you want proximity to the Texas Medical Center without the Medical Center parking headache every day.",
+            "You run a small practice or health-tech company that needs private, professional space for patient or client conversations that a shared coworking floor can't support, and you want reasonable access to the Texas Medical Center without the Medical Center parking headache every day.",
           fit: [
             "Enclosed, lockable offices keep patient and client conversations confidential",
             "Separate meeting rooms available when you need more than your office can fit",
-            "Free parking for clients who arrive stressed and don't want to hunt for metered street spots",
-            "15 minutes from the Texas Medical Center via 610 — close enough for hospital meetings, far enough to escape TMC gridlock",
+            "On-site parking, so clients aren't hunting for a garage or a metered street spot",
+            "A short drive to the Texas Medical Center via the West Loop — close enough for hospital meetings, away from TMC gridlock",
           ],
         },
         {
@@ -1920,34 +1919,34 @@ export const cityServiceData: Record<string, CityServiceData> = {
             "You're moving your business HQ from California, New York, or Illinois to take advantage of Texas's tax structure, and you need a real Houston office — fast — before you know which neighborhood to settle in permanently.",
           fit: [
             "Texas has no state personal income tax — one of the main reasons founders relocate operating companies here",
-            "Solo, Team, and Custom Suite options fit 1 to 10+ people without a long-term lock-in",
-            "Month-to-month terms let you scale up or switch office sizes as the team stabilizes",
-            "Central inside-the-Loop Galleria location pulls from Memorial, West U, Bellaire, River Oaks, and Tanglewood for employee commutes",
+            "Private offices for one person or a small team, without a multi-year lock-in",
+            "Start in a private office while you decide where in Houston to settle long term",
+            "The Galleria / Uptown location pulls from Memorial, West U, Bellaire, River Oaks, and Tanglewood for employee commutes",
           ],
         },
       ],
       whyChoose: {
         heading: "Why choose a Houston private office at Muze Office",
         paragraphs: [
-          "A traditional Class B office lease inside the 610 Loop is a three-to-five year commitment with a personal guaranty, CAM fees on top of base rent, utilities billed separately, a buildout period that can run three to six months, and a furniture bill that typically adds $4,000 to $15,000 before you move in. On top of that you're responsible for internet contracts, cleaning services, insurance, and whatever maintenance the landlord doesn't cover. For most small businesses — law firms, accounting practices, small tech teams, insurance brokers, medical and therapy practices, growing startups — that's the wrong shape of commitment when you need a professional Houston office right now.",
-          "A private office at Muze Office solves that differently. Each office is already furnished with a desk, ergonomic chair, storage, and everything else you need to plug in a laptop and start working the same day. WiFi, utilities, cleaning, meeting rooms, on-site Muze Cafe, phone booths, and free parking are all included in a single monthly bill. The lease is month-to-month with 30 days' notice to cancel — no personal guaranty, no buildout delay, no capital expenditure.",
-          "Our 1800 Augusta Dr location works particularly well for businesses that need a professional, client-facing office without the Post Oak tower premium. Free parking for you and your clients, a quiet residential-adjacent neighborhood inside the Loop, easy access to I-610, I-69, and Memorial Dr, and a 25-minute drive to either airport for out-of-town visits. Texas's tax structure — no state personal income tax — makes the address itself valuable, especially for companies relocating from California, New York, or Illinois.",
+          "A traditional Class B office lease in Uptown or the Galleria is a multi-year commitment with a personal guaranty, operating expenses on top of base rent, utilities billed separately, a buildout period, and a furniture bill before you move in. On top of that you're responsible for internet contracts, cleaning services, insurance, and whatever maintenance the landlord doesn't cover. For most small businesses — law firms, accounting practices, small tech teams, insurance brokers, medical and therapy practices, growing startups — that's the wrong shape of commitment when you need a professional Houston office now.",
+          "A private office at Muze Office Houston lets you skip most of that. You get a lockable room inside a building where the WiFi, meeting rooms, phone booths, and shared areas are already running, so getting started is mostly a matter of bringing a laptop. What each Houston office includes and the current terms are covered on a tour, or the team can send them over.",
+          "The 1800 Augusta Dr location works well for businesses that need a professional, client-facing office without the Post Oak tower premium: on-site parking, a quieter street in the Galleria / Tanglewood area, easy access to I-610, US-59/I-69, and Woodway Dr, and a freeway drive to either IAH or Hobby for out-of-town visitors. Texas's tax structure — no state personal income tax — adds to the appeal for companies relocating from California, New York, or Illinois. Muze Office Houston is independently operated as a Muze Office franchise.",
         ],
       },
       comparison: {
         heading: "Private office vs. dedicated desk and traditional lease",
         paragraphs: [
-          "A dedicated desk in our coworking space is $399/month and gives you a reserved desk in the shared area, meeting room credits, mail handling, and 24/7 access. That's the right choice for solo professionals who don't take many client calls, don't need wall privacy, and are fine working alongside other members throughout the day. The tradeoff is that you can't leave sensitive documents out, you can't control the noise level around you, and you can't bring a client back to your desk for a private conversation.",
-          "A private office flips that tradeoff. You get a lockable door, enclosed walls for confidential calls and client meetings, space for a small team, and the ability to decorate and organize the room the way your business actually works. Our Solo Office fits one person, our Team Office fits two to four, and a Custom Suite starts at five people and can be built for up to ten or more. Most tenants move up from dedicated desk to private office once client calls become a daily thing or once they hire their first employee.",
-          "A traditional Class B office lease in the Galleria / Uptown submarket currently runs in the neighborhood of $30-40 per square foot per year for base rent plus operating expenses, usually with a three-year minimum. A 200-square-foot office — enough for a team of three — works out to a meaningful base-rent number before you add buildout, furniture, internet, utilities, cleaning, and a personal guaranty. By the time you're ready to move in, you've spent a lot more than a year of month-to-month private office pricing. A Team Office at Muze Office gives you the same footprint, fully loaded, for a single monthly price with no upfront commitment. It stops making sense only when your team is larger than about 15 people and you need truly custom infrastructure — which is exactly when you should move into a dedicated lease.",
+          "A dedicated desk in the coworking area gives you a reserved desk in the shared space. That's the right choice for solo professionals who don't take many client calls, don't need wall privacy, and are fine working alongside other members throughout the day. The tradeoff is that you can't leave sensitive documents out, you can't control the noise level around you, and you can't bring a client back to your desk for a private conversation.",
+          "A private office flips that tradeoff. You get a lockable door, enclosed walls for confidential calls and client meetings, space for a small team, and the ability to set up the room the way your business actually works. Ask the team which office sizes are currently available. Many members move up from a desk to a private office once client calls become a daily thing or once they hire their first employee.",
+          "A traditional lease in the Galleria / Uptown submarket is priced per square foot per year plus operating expenses, usually with a multi-year minimum. Add buildout, furniture, internet, utilities, cleaning, and a personal guaranty, and the true first-year cost of even a small office is well above the base rent. A private office rolls the workspace into a single monthly price with the building already running. It stops making sense when your team is large enough to need truly custom infrastructure — which is exactly when a dedicated lease earns its keep.",
         ],
       },
       howToGetStarted: {
         heading: "How to get started with a private office in Houston",
         paragraphs: [
-          "Book a tour. Pricing on private offices varies based on office size, location in the building, and length of stay, so we handle it in person rather than on the website. Tours take about 20 minutes and give you a chance to walk through the building, see the available offices, test the WiFi, and meet the community. We'll show you Solo Offices, Team Offices, and any Custom Suite availability, and give you concrete month-to-month pricing on the ones you like.",
-          "If you find an office that fits, we can usually have you moved in within a few days. There's no buildout delay, no furniture order, no waiting on internet installation. Bring a laptop and any personal items and you're operational the same day. Most of our private office tenants go from first tour to signed agreement in under a week.",
-          "If you need more than a standard furnished setup — dual monitors, a standing desk, specific AV equipment, a locked file cabinet — we'll usually accommodate that at no extra charge. Same goes for signage on the office door and in the lobby directory. Think of the move-in process like checking into a hotel, not signing a commercial lease.",
+          "Book a tour. Private office pricing depends on office size and availability, so the Houston team covers it in person or on request rather than listing every office on the website. On a tour you can walk the building, see the available offices, test the WiFi, and ask about terms.",
+          "If you find an office that fits, getting in is quick compared with a traditional lease — no buildout, no furniture order, and no waiting on a landlord's contractor. Ask the team about move-in timing when you tour.",
+          "If you have specific needs — a second monitor, a standing desk, locked file storage, room for a small team to grow — raise them on the tour so the team can tell you what's possible.",
         ],
       },
       relatedServices: [
@@ -1964,10 +1963,10 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "meeting-rooms",
     h1: "Meeting Rooms in Houston",
     heroSubtitle:
-      "Professional meeting spaces in the Galleria available by the hour. AV equipment, video conferencing, whiteboards, and free parking included. Reserve by the hour.",
-    metaTitle: "Meeting Rooms Houston | Join the Waitlist",
+      "Professional meeting rooms in the Galleria / Uptown area, booked by the hour for client pitches, interviews, depositions, and team sessions.",
+    metaTitle: "Meeting Room Rental Houston — Galleria",
     metaDescription:
-      "Professional meeting rooms are planned for Muze Office Houston. Join the waitlist for confirmed room inventory, capacity, amenities, and opening pricing.",
+      "Hourly meeting rooms at 1800 Augusta Dr in Houston's Galleria / Uptown area for client pitches, interviews, and team sessions. Contact us to book a room today.",
     heroImage: "/images/hero/meeting-room.jpg",
     useCases: [
       "Client presentations and sales pitches",
@@ -1978,18 +1977,18 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Job interviews and HR meetings",
     ],
     locationCallout:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria. Free parking for all attendees.",
+      "1800 Augusta Dr, Houston, TX 77057 — in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr. On-site parking for attendees.",
     longFormBody: {
       bestFor: [
         {
           persona: "Sales reps pitching Houston clients and fly-in prospects",
           scenario:
-            "A prospect is flying into IAH or Hobby for a 90-minute meeting, or driving in from Sugar Land or The Woodlands, and you need a professional conference room in a central Galleria location — not a Post Oak hotel ballroom with a food and beverage minimum, not a coffee shop with no privacy.",
+            "A prospect is flying into IAH or Hobby for a 90-minute meeting, or driving in from Sugar Land or The Woodlands, and you need a professional meeting room in a central Galleria-area location — not a Post Oak hotel ballroom with a food-and-beverage minimum, not a coffee shop with no privacy.",
           fit: [
-            "Hourly meeting-room options are planned for the Houston location",
-            "Final room capacities, equipment, and pricing will be announced before opening",
-            "Inside the 610 Loop, minutes from Post Oak Blvd — central for clients coming from any direction",
-            "Free parking for your prospect — no Post Oak garage fee or valet charge",
+            "Rooms booked by the hour for pitches and demos",
+            "A Galleria / Uptown address that's easy for clients coming from any direction",
+            "On-site parking for your prospect instead of a Post Oak garage or valet stand",
+            "A private room instead of a hotel lobby or a coffee shop table",
           ],
         },
         {
@@ -1997,10 +1996,10 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You need a neutral, professional Houston setting for a deposition, mediation, or sworn testimony where the venue reads as formal enough that nobody questions it, and parking doesn't become a logistics problem for witnesses and counsel.",
           fit: [
-            "Professional meeting space is planned for depositions and mediations",
-            "Final room configuration and included equipment will be announced before opening",
-            "Quiet Tanglewood-adjacent location with no retail noise interrupting proceedings",
-            "Free parking for witnesses, counsel, and the court reporter",
+            "A neutral, professional room for depositions and mediations",
+            "Book the room for the length of the proceeding, not a full-day package",
+            "A quieter Tanglewood-adjacent setting, away from Galleria retail traffic",
+            "On-site parking for witnesses, counsel, and the court reporter",
           ],
         },
         {
@@ -2008,46 +2007,46 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You're recruiting for a remote-first role and a finalist is flying into Houston for a half-day of in-person interviews, but your home office or a hotel lobby is the wrong signal to send a senior candidate.",
           fit: [
-            "Conference rooms with professional, neutral backdrops for candidate impressions",
+            "Meeting rooms with neutral, professional backdrops for candidate impressions",
             "Book by the hour — exactly the time you need, no day-rate padding",
-            "On-site reception to greet and direct candidates when they arrive",
-            "Video conferencing included for hybrid panels with remote interviewers",
+            "A real business setting that sends the right signal to a senior candidate",
+            "Works for hybrid panels with remote interviewers — confirm the room's video setup when you book",
           ],
         },
         {
           persona: "Small businesses hosting board meetings and workshops",
           scenario:
-            "Your quarterly board meeting, investor update, or leadership workshop needs a space that's not your apartment, not a Galleria hotel ballroom at 5x the price, and not a restaurant back room with no AV.",
+            "Your quarterly board meeting, investor update, or leadership workshop needs a space that's not your apartment, not a Galleria hotel ballroom priced for 200 guests, and not a restaurant back room with no way to present.",
           fit: [
-            "Professional rooms are planned for formal meetings and investor presentations",
-            "Flexible meeting space is planned for working sessions and team workshops",
-            "Catering from on-site Muze Cafe — coffee service, pastries, sandwich trays, full lunch",
-            "Rooms are planned to support presentation, training, u-shape, or conference-table layouts",
+            "Rooms suited to formal board meetings and investor presentations",
+            "Space for working sessions and team workshops",
+            "Hourly booking instead of a hotel's half-day or full-day package",
+            "Ask the team about coffee and food options when you book",
           ],
         },
       ],
       whyChoose: {
         heading: "Why book a Houston meeting room at Muze Office",
         paragraphs: [
-          "Most meeting rooms in the Galleria and Uptown area fall into two categories: Post Oak hotels charging conference-center rates with food-and-beverage minimums, or big-box venues that only rent space by the day. Muze Office Houston is planned as a flexible hourly alternative for client pitches, team meetings, workshops, and depositions.",
-          "The Houston location has not opened, so its room names, capacities, equipment, and hourly rates are not yet final. Join the waitlist for the confirmed inventory and opening pricing rather than relying on the Las Vegas room lineup.",
-          "The location helps too. 1800 Augusta Dr is inside the 610 Loop in the Galleria, which pulls comfortably from Memorial, Tanglewood, West U, Bellaire, River Oaks, and downtown — and it's 25 minutes from both IAH and Hobby, which makes fly-in meetings genuinely workable. Everyone parks for free. Nobody has to navigate a Post Oak garage or pay for valet.",
+          "Most meeting rooms around the Galleria and Uptown fall into two categories: Post Oak hotels with conference-center packages and food-and-beverage minimums, or venues that only rent space by the day. Muze Office Houston offers an hourly alternative for client pitches, team meetings, workshops, and depositions.",
+          "See current Houston room options and pricing on this page, or tell the team what the meeting is for and how many people are coming, and they'll point you to the right room.",
+          "The location helps too. 1800 Augusta Dr is in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop, which makes it easy to reach from Memorial, Tanglewood, West U, Bellaire, River Oaks, and downtown — and a freeway drive from both IAH and Hobby, which makes fly-in meetings workable. With on-site parking, nobody has to navigate a Post Oak garage or hand keys to a valet.",
         ],
       },
       comparison: {
         heading: "Meeting room vs. hotel boardroom, restaurant private room, and coffee shop",
         paragraphs: [
-          "Hotel boardrooms in the Galleria and downtown start around $150-250 per hour for a comparable room, almost always include a food-and-beverage minimum that runs $500-1,500 on top of the room rental, and charge your attendees for parking (typically $12-25 per car for day parking, more for valet). They're built for large corporate events, not for a two-person pitch meeting. You're paying for a ballroom when you need a conference table.",
+          "Hotel boardrooms in the Galleria and downtown are built for large corporate events. They usually come with a food-and-beverage minimum on top of the room rental and charge attendees for parking or valet. You're paying for a ballroom operation when you need a conference table.",
           "Restaurant private rooms are the default for client dinners but wrong for presentations. The AV is almost never set up for video conferencing, the lighting is designed for a meal rather than a whiteboard session, and the servers interrupting to ask about drinks break the meeting rhythm. They're great for celebrating after you close the deal — not great for the pitch itself.",
-          "Coffee shops are the free option, and the cost shows up in the meeting outcome. You can't present slides, you can't run a real video call, you can't write on a whiteboard, and half the time the client can't even find parking inside the Loop during lunch hour. For any meeting that affects revenue, a private professional setting can remove those distractions.",
+          "Coffee shops are the free option, and the cost shows up in the meeting outcome. You can't present slides, you can't run a real video call, you can't write on a whiteboard, and half the time the client can't even find parking around the Galleria at lunch hour. For any meeting that affects revenue, a private professional setting removes those distractions.",
         ],
       },
       howToGetStarted: {
         heading: "How to book a meeting room in Houston",
         paragraphs: [
-          "Choose a room based on the number of attendees, meeting format, privacy needs, and required presentation equipment. Final Houston room options and pricing will be published before reservations open.",
-          "Book by the hour, not by the day. Most meetings run 60-90 minutes; we'd rather you book exactly what you need than pad the reservation. Catering from the on-site Muze Cafe is available as an add-on — coffee service, pastries, sandwich trays, full lunch — and we can handle the setup before your attendees arrive.",
-          "No membership is required to book a meeting room. Same-day bookings are usually possible outside of peak hours. If you're a virtual office member or coworking member, you already have monthly meeting room credits that can cover part or all of your booking. Contact us to reserve, and we'll have the room prepped before your first attendee arrives.",
+          "Choose a room based on the number of attendees, meeting format, privacy needs, and the presentation equipment you need. See current Houston room options and pricing on this page, or contact the team.",
+          "Book by the hour, not by the day. Most meetings run 60–90 minutes; book what you need rather than padding the reservation. If you want coffee or food for the group, ask the team about options when you book.",
+          "If you're a coworking or virtual office member, ask whether your plan includes meeting-room time that can cover part of the booking. Contact us to reserve a room at 1800 Augusta Dr.",
         ],
       },
       relatedServices: [
@@ -2065,10 +2064,10 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "conference-rooms",
     h1: "Conference Rooms in Houston",
     heroSubtitle:
-      "Corporate conference rooms are planned for the Galleria location for client pitches, board meetings, depositions, and investor updates.",
-    metaTitle: "Conference Rooms Houston | Join the Waitlist",
+      "Conference rooms in the Galleria / Uptown area for client pitches, board meetings, depositions, and investor updates — booked for the hours you actually need.",
+    metaTitle: "Conference Rooms Houston — Galleria / Uptown",
     metaDescription:
-      "Conference rooms are planned for Muze Office Houston. Join the waitlist for confirmed capacity, equipment, availability, and opening pricing.",
+      "Conference rooms at 1800 Augusta Dr in Houston's Galleria / Uptown area for board meetings, depositions, and client pitches, booked by the hour. Contact us.",
     heroImage: "/images/hero/meeting-room.jpg",
     useCases: [
       "Board meetings and quarterly reviews",
@@ -2079,7 +2078,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Strategy offsites and leadership workshops",
     ],
     locationCallout:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria, minutes from Post Oak Blvd. Free parking for every attendee.",
+      "1800 Augusta Dr, Houston, TX 77057 — in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr. On-site parking for attendees.",
     longFormBody: {
       bestFor: [
         {
@@ -2087,57 +2086,57 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You're running a half-day deposition, mediation, or sworn testimony and need a neutral Galleria-area venue where witnesses, opposing counsel, and the court reporter can all find the same address, park on-site, and focus on the record — not navigate a Post Oak garage or a hotel lobby.",
           fit: [
-            "Professional conference space is planned for counsel, witnesses, and court reporters",
-            "Final room capacity and included equipment will be confirmed before opening",
-            "Free parking on-site for every attendee — no Post Oak garage fee or valet charge",
-            "Quiet, Tanglewood-adjacent location with no retail or restaurant noise interrupting proceedings",
+            "A neutral conference room for counsel, witnesses, and court reporters",
+            "One address everyone can find, just off the I-610 West Loop and Woodway Dr",
+            "On-site parking for attendees instead of a Post Oak garage or valet stand",
+            "A quieter, Tanglewood-adjacent location with no retail or restaurant noise interrupting proceedings",
           ],
         },
         {
           persona: "Sales teams pitching Houston clients and fly-in prospects",
           scenario:
-            "A prospect is flying into IAH or Hobby for a 60-90 minute meeting, or driving in from Sugar Land, The Woodlands, or Katy, and you need a central Galleria conference room with real AV — not a Post Oak hotel ballroom with a food-and-beverage minimum or a coffee shop with no privacy.",
+            "A prospect is flying into IAH or Hobby for a 60–90 minute meeting, or driving in from Sugar Land, The Woodlands, or Katy, and you need a central Galleria-area conference room with room to present — not a Post Oak hotel ballroom with a food-and-beverage minimum or a coffee shop with no privacy.",
           fit: [
-            "Hourly conference-room options are planned for client meetings and presentations",
-            "Inside the 610 Loop and minutes from Post Oak Blvd — central for clients coming from any direction",
-            "Free parking for your prospect — no Post Oak garage fee or valet charge",
-            "Book by the hour, exactly what you need — no F&B minimum, no day-rate padding",
+            "Conference rooms booked by the hour for client meetings and presentations",
+            "Galleria / Uptown location near Post Oak Blvd — central for clients coming from any direction",
+            "On-site parking for your prospect instead of a Post Oak garage or valet stand",
+            "Book the hours you need instead of a hotel's half-day package",
           ],
         },
         {
           persona: "Founders and small businesses running board meetings and investor updates",
           scenario:
-            "Your quarterly board meeting, investor update, or leadership offsite needs a Houston venue that reads as a real company — not a living room, not a Galleria hotel ballroom at 5x the price, not a restaurant private room where servers interrupt the pitch.",
+            "Your quarterly board meeting, investor update, or leadership offsite needs a Houston venue that reads as a real company — not a living room, not a Galleria hotel ballroom priced for 200 guests, not a restaurant private room where servers interrupt the pitch.",
           fit: [
-            "Professional rooms are planned for formal board meetings and investor updates",
-            "Flexible conference space is planned for working sessions and leadership workshops",
-            "Catering from on-site Muze Cafe — coffee service, pastries, sandwich trays, full lunch — one point of contact",
-            "Rooms are planned to support presentation, training, u-shape, or conference-table layouts",
+            "Rooms suited to formal board meetings and investor updates",
+            "Space for working sessions and leadership workshops",
+            "Ask the team about coffee and food options when you book",
+            "Tell the team your preferred layout — conference table, presentation, or workshop — when you reserve",
           ],
         },
       ],
       whyChoose: {
         heading: "Why book a Houston conference room at Muze Office",
         paragraphs: [
-          "Most Houston conference rooms sit inside a Galleria or downtown hotel's business center, often with food-and-beverage minimums and parking billed separately. Muze Office Houston is planned as a more flexible option for professional meetings in the Galleria area.",
-          "The Houston location has not opened, so its conference-room inventory, capacities, equipment, and rates are not yet final. Join the waitlist for confirmed details before reservations open.",
-          "Location helps too. 1800 Augusta Dr is inside the 610 Loop in the Galleria, which pulls comfortably from Memorial, Tanglewood, West University, Bellaire, River Oaks, and downtown — and it is about 25 minutes from both IAH and Hobby, which makes fly-in morning meetings workable. Everyone parks for free on-site. Nobody has to navigate a Post Oak garage or pay for valet.",
+          "Most Houston conference rooms sit inside a Galleria or downtown hotel's business center, often with food-and-beverage minimums and parking billed separately. Muze Office Houston offers a more flexible option for professional meetings in the Galleria / Uptown area, booked by the hour.",
+          "See current Houston conference-room options, capacities, and pricing on this page, or tell the team your headcount and format and they'll recommend a room.",
+          "Location helps too. 1800 Augusta Dr is in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop, which makes it easy to reach from Memorial, Tanglewood, West University, Bellaire, River Oaks, and downtown — and a freeway drive from both IAH and Hobby, which makes fly-in morning meetings workable. With on-site parking, nobody has to navigate a Post Oak garage or pay for valet.",
         ],
       },
       comparison: {
         heading: "Conference room vs. hotel business center, home office, and coffee shop",
         paragraphs: [
-          "Hotel business centers in the Galleria and downtown Houston are built for large corporate events and priced accordingly. A comparable room rents for $150 to $250 per hour before the food-and-beverage minimum, which typically adds $500 to $1,500 on a half-day booking whether you want it or not. Parking is billed separately — $12 to $25 per car for day parking, more for valet — which every attendee notices. For a routine two-hour board meeting or a one-hour pitch, the math does not hold up.",
-          "A home office is cheap and convenient, but it can be the wrong setting for a client pitch, formal board meeting, or deposition. For anything that affects revenue, a deal, a case, or a round of funding, a neutral professional venue can support a stronger impression.",
-          "Coffee shops are the default free option and the cost shows up in the meeting outcome. A Galleria-area coffee shop cannot run a real video call without ambient noise leaking in, has no privacy for confidential discussion, and does not support presentations, whiteboards, or a proper conference table. Finding parking inside the Loop at lunch hour is its own problem. For a meeting that matters, a real conference room pays for itself the moment it removes the distraction.",
+          "Hotel business centers in the Galleria and downtown Houston are built for large corporate events and priced accordingly. Room rental usually comes with a food-and-beverage minimum whether you want it or not, and parking is billed separately — which every attendee notices. For a routine two-hour board meeting or a one-hour pitch, it's more venue than you need.",
+          "A home office is cheap and convenient, but it can be the wrong setting for a client pitch, formal board meeting, or deposition. For anything that affects revenue, a deal, a case, or a round of funding, a neutral professional venue supports a stronger impression.",
+          "Coffee shops are the default free option and the cost shows up in the meeting outcome. A Galleria-area coffee shop cannot run a real video call without ambient noise leaking in, has no privacy for confidential discussion, and does not support presentations, whiteboards, or a proper conference table. Finding parking around the Galleria at lunch hour is its own problem. For a meeting that matters, a real conference room pays for itself the moment it removes the distraction.",
         ],
       },
       howToGetStarted: {
         heading: "How to book a Houston conference room",
         paragraphs: [
-          "Choose a conference room based on attendance, meeting format, privacy needs, and required presentation equipment. Final Houston room options and pricing will be published before reservations open.",
-          "Book by the hour, not by the day. Most conference-room bookings run 60 to 120 minutes and there is no reason to pad the reservation. Catering from the on-site Muze Cafe is available as an add-on — coffee service, pastries, sandwich trays, full lunch — so you are not coordinating a separate caterer.",
-          "If you end up booking conference rooms regularly, becoming a virtual office or coworking member can be cheaper. Opal and Diamond virtual-office tiers include monthly meeting-room hours that can be applied to a conference-room booking, and dedicated-desk coworking members receive monthly meeting-room credits as part of their plan. Muze Office Houston is opening soon at 1800 Augusta Dr — join the waitlist to lock in pre-launch pricing.",
+          "Choose a conference room based on attendance, meeting format, privacy needs, and required presentation equipment. See current Houston room options and pricing on this page, or contact the team.",
+          "Book by the hour, not by the day. Most conference-room bookings run 60 to 120 minutes and there is no reason to pad the reservation. If you need coffee or lunch for the group, ask about options when you book.",
+          "If you book conference rooms regularly, a membership may cost less over time. Some Houston virtual office and coworking plans include meeting-room hours — see /houston-virtual-office and /houston-coworking for what each plan includes.",
         ],
       },
       relatedServices: [
@@ -2155,10 +2154,10 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "event-space",
     h1: "Event Space in Houston",
     heroSubtitle:
-      "Host corporate events, workshops, networking mixers, and private gatherings in the Galleria. Full AV, flexible layouts, and on-site catering from Muze Cafe.",
-    metaTitle: "Event Space Houston | Join the Waitlist",
+      "Host workshops, trainings, networking mixers, and team events at 1800 Augusta Dr in the Galleria / Uptown area — a right-sized alternative to a hotel ballroom.",
+    metaTitle: "Event Space Houston — Galleria / Uptown",
     metaDescription:
-      "Event space is planned for Muze Office Houston. Join the waitlist for confirmed capacity, amenities, availability, and opening pricing.",
+      "Event space at 1800 Augusta Dr in Houston's Galleria / Uptown area for workshops, trainings, mixers, and team events — sized below a hotel ballroom. Contact us.",
     heroImage: "/images/hero/event-space.jpg",
     useCases: [
       "Corporate workshops and training sessions",
@@ -2169,29 +2168,29 @@ export const cityServiceData: Record<string, CityServiceData> = {
       "Team retreats and offsites",
     ],
     locationCallout:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria. Free parking for all guests. On-site catering by Muze Cafe.",
+      "1800 Augusta Dr, Houston, TX 77057 — in the Galleria / Tanglewood area near Post Oak Blvd, just off the I-610 West Loop and Woodway Dr. On-site parking for guests.",
     longFormBody: {
       bestFor: [
         {
           persona: "Corporate training and workshop organizers",
           scenario:
-            "You're running a multi-hour or all-day training for 20-60 attendees and need a Houston venue with real AV, configurable seating, and predictable catering pricing — not a $10k Galleria hotel ballroom quote with a five-figure F&B minimum.",
+            "You're running a multi-hour or all-day training and need a Houston venue where attendees can see the presenter, take notes, and park without a hassle — not a Galleria hotel ballroom quote with a food-and-beverage minimum attached.",
           fit: [
-            "Hourly event options are planned; final rates will be announced before opening",
-            "Projector, screen, sound system, and wireless mics included — not billed separately",
-            "Flexible seating — theater, classroom, u-shape, lounge — reconfigured for your event",
-            "Catering from the on-site Muze Cafe handles coffee service, lunch, and snack breaks",
+            "Booked by the hour — see current Houston rates on this page or contact the team",
+            "Seating arranged for training — classroom, theater, or u-shape — confirmed with the team before your event",
+            "On-site parking so attendees aren't late from circling a garage",
+            "A professional setting that isn't a hotel conference floor",
           ],
         },
         {
           persona: "Product launch and demo-day teams",
           scenario:
-            "You're launching a product or hosting a demo day for customers, investors, or press and you need a Houston venue that feels intentional — not a Post Oak hotel conference room that could be any city in the country.",
+            "You're launching a product or hosting a demo day for customers, investors, or press and you need a Houston venue that feels intentional — not a Post Oak hotel conference room that could be in any city in the country.",
           fit: [
-            "Flexible layouts support live demos, presentations, and post-event mingling in one space",
-            "AV system handles product demos, video playback, and live Q&A without a separate tech rental",
-            "Central inside-the-Loop location makes parking and arrival easy for guests across Houston",
-            "On-site Muze Cafe can upgrade the event with catered beverages, appetizers, or a full reception",
+            "One room for the presentation and the mingling afterward",
+            "Central Galleria / Uptown location near Post Oak Blvd, easy for guests across Houston",
+            "On-site parking for guests",
+            "Talk through AV and catering needs with the team when you book",
           ],
         },
         {
@@ -2199,10 +2198,10 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You're organizing a monthly industry mixer, community meetup, or real-estate networking night and you need a Houston venue that looks professional without eating your entire event budget on the room alone.",
           fit: [
-            "Hourly booking options are planned so organizers can reserve only the time they need",
-            "No food-and-beverage minimum — bring outside catering or add Muze Cafe separately",
-            "Layout flexes for standing mingling, seated presentations, or hybrid formats",
-            "Free parking for every guest so nobody leaves before the event ends",
+            "Hourly booking so organizers reserve only the time they need",
+            "Ask the team about catering options, including bringing your own caterer",
+            "A layout for standing mingling, seated talks, or a mix of both",
+            "On-site parking so guests don't leave early to feed a meter",
           ],
         },
         {
@@ -2210,35 +2209,35 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "Your distributed team is gathering in Houston once a year and you want a full day of working sessions plus an evening celebration — in one venue that doesn't feel like a sterile hotel conference floor.",
           fit: [
-            "Book 8 or more hours and get a flat 10% discount — covers a morning working session plus an evening celebration",
-            "Space reconfigures between work mode and party mode without moving venues",
+            "Book a longer block for a full day of working sessions",
+            "Coworking desks and meeting rooms in the same building for breakout work",
             "Climate-controlled indoor venue — reliable regardless of Houston summer heat or hurricane-season weather",
-            "Muze Cafe catering handles breakfast, lunch, and an evening reception without a separate vendor",
+            "Convenient for teammates flying into IAH or Hobby and staying near the Galleria",
           ],
         },
       ],
       whyChoose: {
         heading: "Why choose Muze Office for your Houston event",
         paragraphs: [
-          "Houston's event market is big, and the venues reflect it. Galleria and downtown ballrooms start around $2,500 to $6,000 for a half-day rental, almost always with a five-figure food-and-beverage minimum, parking fees on top, and an AV team you have to hire separately. For a corporate workshop, a product launch for 40 people, a networking mixer, or a private client dinner, that's massively oversized. You're paying for infrastructure designed to host 500 people when you need space for 40.",
-          "Muze Office Houston is planned as a right-sized alternative for workshops, launches, mixers, and team events. Because the location has not opened, final capacity, equipment, layouts, catering options, discounts, and hourly rates will be announced before event reservations open.",
-          "The inside-the-Loop Galleria location is part of the appeal for Houston locals. Most Houston professionals avoid the downtown parking garages and the West 610 Loop gridlock at rush hour if they can help it, and our Augusta Dr address is easy to reach from Memorial, River Oaks, West U, Bellaire, Tanglewood, and Uptown without getting on a freeway at all. Free parking for every guest is included, which matters more than most people realize until they've planned an event where attendees had to pay $15-25 each just to park.",
+          "Houston's event market is big, and the venues reflect it. Galleria and downtown ballrooms are built for hundreds of guests, usually with a food-and-beverage minimum, parking fees on top, and an AV team you hire separately. For a corporate workshop, a product launch, a networking mixer, or a team offsite, that's far more venue than you need.",
+          "Muze Office Houston is a right-sized alternative for workshops, launches, mixers, and team events. See current Houston event pricing on this page, and talk to the team about capacity, layout, and equipment for your specific event.",
+          "The Galleria / Uptown location is part of the appeal for Houston locals. Most Houston professionals avoid downtown garages and rush-hour West Loop traffic when they can, and 1800 Augusta Dr is reachable from Memorial, River Oaks, West U, Bellaire, Tanglewood, and Uptown on surface streets like Woodway, San Felipe, and Westheimer. On-site parking matters more than most people realize until they've planned an event where every attendee had to pay to park.",
         ],
       },
       comparison: {
         heading: "Event space vs. hotel ballroom, restaurant rental, and outdoor venue",
         paragraphs: [
-          "Galleria and downtown hotel ballrooms are the default for large corporate events in Houston and they work well at scale, but they don't scale down. A ballroom rental at a Post Oak hotel typically starts at $2,000-4,000 for a half-day, plus a required catering minimum of $4,000-12,000, plus parking per attendee, plus AV rental from the in-house vendor at premium prices. For an event under 80 guests you end up paying for empty tables and an oversized room, and the attendee experience suffers because the space feels sparse.",
-          "Renting out a private room at a restaurant is the other common move for smaller Houston gatherings, and it works for dinners but fails for anything that needs presentation equipment. Most restaurants don't have projectors, don't have proper sound systems, and absolutely don't have a way to run a hybrid event with remote participants. The room also usually closes the restaurant's normal service flow, which is why the rental fee is often structured as a food-and-beverage minimum rather than a flat rate — you end up paying for what you order rather than what you need.",
-          "Outdoor venues are tempting for evening mixers but the Houston climate fights you. Summer humidity and heat routinely push heat indices past 105°F from June through September, hurricane season brings unpredictable weather from June through November, and winter cold fronts can drop temperatures 30 degrees overnight. Every outdoor event needs a weather contingency, a tent rental, generators, and climate control — costs that quickly exceed the price of just renting an indoor space. Muze Office is a climate-controlled, predictable indoor venue with everything included.",
+          "Galleria and downtown hotel ballrooms are the default for large corporate events in Houston and they work well at scale, but they don't scale down. A ballroom rental usually comes with a catering minimum, per-attendee parking, and AV from the in-house vendor. For a smaller event you end up paying for empty tables and an oversized room, and the attendee experience suffers because the space feels sparse.",
+          "Renting a private room at a restaurant is the other common move for smaller Houston gatherings, and it works for dinners but fails for anything that needs presentation equipment. Most restaurants don't have projectors, don't have proper sound systems, and don't have a way to run a hybrid event with remote participants. The rental is also often structured as a food-and-beverage minimum rather than a flat rate — you end up paying for what you order rather than what you need.",
+          "Outdoor venues are tempting for evening mixers but the Houston climate fights you. Summer heat and humidity routinely push the heat index past 100°F, hurricane season runs from June through November, and winter cold fronts can drop temperatures sharply overnight. Every outdoor event needs a weather contingency, a tent rental, and some form of climate control — costs that quickly exceed the price of an indoor space. Muze Office Houston is an indoor, climate-controlled venue, so the weather plan is the room itself.",
         ],
       },
       howToGetStarted: {
         heading: "How to book event space in Houston",
         paragraphs: [
-          "Hourly booking is planned for the Houston event space. Final room capacity, pricing, minimum booking time, and any full-day discounts will be confirmed before reservations open.",
-          "Once reservations open, talk to our event coordinator about layout and catering. Planned formats include presentation seating, tables and chairs for workshops, u-shape or conference-table seating for discussions, and open layouts for mixers. Final options will be confirmed before booking.",
-          "Book a walkthrough before you commit to a specific room and time. Most of our clients decide on their exact setup after they see the space in person — the dimensions on a floor plan don't always match your mental model for how many people will fit comfortably. Walkthroughs are free, take about 15 minutes, and you can bring whoever's planning the event with you. Once you lock in the date, we handle setup and breakdown on either side of your block, so you show up when you're ready and leave when you're done.",
+          "Event space at Muze Office Houston is booked by the hour. See current pricing on this page, and contact the team with your date, headcount, and format to confirm capacity and availability.",
+          "Talk through layout and catering before you book. Common formats include presentation seating, tables for workshops, u-shape or conference-table seating for discussions, and open layouts for mixers — the team will tell you which ones work in the room for your headcount.",
+          "Book a walkthrough before you commit to a specific time. The dimensions on a floor plan don't always match your mental model of how many people will fit comfortably, and it helps to bring whoever is planning the event. Once the date is locked in, confirm setup and breakdown timing with the team so you know when you can arrive and when the room needs to be clear.",
         ],
       },
       relatedServices: [
@@ -2255,90 +2254,90 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "galleria-coworking",
     h1: "Galleria Coworking in Houston",
     heroSubtitle:
-      "Modern flexible workspace minutes from Post Oak Blvd and the Houston Galleria. Day passes and monthly memberships in Houston's premier business district.",
-    metaTitle: "Galleria Coworking Houston | Day Pass",
+      "Flexible workspace minutes from Post Oak Blvd and the Houston Galleria. Day passes and monthly desk memberships in one of Houston's busiest business districts.",
+    metaTitle: "Galleria Coworking Houston — Near Post Oak",
     metaDescription:
-      "Coworking in the Houston Galleria / Uptown area. Day passes, hot desks, and dedicated desks. Fast WiFi, free parking, meeting rooms. 1800 Augusta Dr.",
+      "Coworking near the Houston Galleria and Post Oak Blvd at 1800 Augusta Dr — day passes, hot desks, dedicated desks, and meeting rooms in Uptown. Book a tour.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Professionals working in the Galleria / Uptown area",
       "Consultants meeting clients near Post Oak Blvd",
       "Freelancers who want a productive Galleria workspace",
       "Small teams growing in Houston's Uptown district",
-      "Remote workers looking for an inside-the-Loop work environment",
+      "Remote workers in Tanglewood, Briargrove, and Memorial who want a short commute",
       "Sales teams that need a Houston base of operations",
     ],
     locationCallout:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop, minutes from the Houston Galleria and Post Oak Blvd.",
+      "1800 Augusta Dr, Houston, TX 77057 — in the Galleria / Tanglewood area, minutes from the Houston Galleria and Post Oak Blvd, just off the I-610 West Loop. On-site parking.",
     longFormBody: {
       bestFor: [
         {
           persona: "Professionals based in the Galleria / Uptown corridor",
           scenario:
-            "You live or work in the Galleria, Tanglewood, Memorial, or River Oaks area and you want a professional workspace within a 10-minute drive — not a downtown Class A tower, not a Heights coffee shop, not a home office with the kids.",
+            "You live or work in the Galleria, Tanglewood, Memorial, or River Oaks area and you want a professional workspace within a short drive — not a downtown Class A tower, not a Heights coffee shop, not a home office with the kids.",
           fit: [
-            "1800 Augusta Dr is inside the 610 Loop, minutes from Post Oak Blvd and the Galleria",
-            "Free parking on-site — no Post Oak garage fees or metered street hunting",
-            "Fast WiFi built for video calls, not the throttled guest network at a retail café",
-            "Month-to-month — no corporate annual contract like the big Galleria operators push",
+            "1800 Augusta Dr is in the Galleria / Tanglewood area, minutes from Post Oak Blvd and the Galleria",
+            "On-site parking instead of Post Oak garages or metered street hunting",
+            "WiFi set up for video calls, not the throttled guest network at a retail cafe",
+            "Day passes and monthly memberships, so you can try the space before committing",
           ],
         },
         {
           persona: "Consultants meeting clients near Post Oak and the Galleria",
           scenario:
-            "Your clients work in the Galleria, Greenway Plaza, or West Loop corridor and you want to meet them on their turf without renting a full Post Oak office just for the address.",
+            "Your clients work in the Galleria, Greenway Plaza, or West Loop corridor and you want to meet them near their offices without renting a full Post Oak office just for the address.",
           fit: [
-            "Hot Desk or Dedicated Desk memberships give you a permanent base in the Galleria",
+            "Hot desk or dedicated desk memberships give you a regular base near the Galleria",
             "Meeting rooms bookable by the hour for client conversations that need privacy",
             "Conference rooms read as professional on video — no distracting background",
-            "Address lands on business cards and LinkedIn without the Post Oak tower lease",
+            "A Galleria-area address for business cards and LinkedIn without a Post Oak tower lease",
           ],
         },
         {
           persona: "Freelancers and solopreneurs looking for a productive Galleria workspace",
           scenario:
-            "You run your business from your laptop and you want to upgrade from the home office to a real workspace in the Galleria — but the big national operators want an annual contract and $600+/month for anything usable.",
+            "You run your business from your laptop and you want to upgrade from the home office to a real workspace near the Galleria — but the big national operators often want an annual agreement for anything usable.",
           fit: [
-            "Day pass lets you try the space before you commit to a monthly membership",
-            "Hot Desk membership gives you any-desk access across the shared workspace",
-            "Dedicated Desk adds a reserved spot you can leave a second monitor and keyboard on",
-            "On-site Muze Cafe for coffee and lunch — skip the Galleria lunch-hour lines",
+            "A day pass lets you try the space before you commit to a monthly membership",
+            "A hot desk membership gives you any-desk access across the shared workspace",
+            "A dedicated desk adds a reserved spot you can leave a second monitor and keyboard on",
+            "Phone booths for calls that need privacy",
           ],
         },
         {
           persona: "Sales and field teams using Houston as a regional base",
           scenario:
-            "Your Houston-based reps need a central Galleria workspace to drop into between client calls across the West Loop, Greenway, downtown, and the Medical Center — without each of them renting their own office.",
+            "Your Houston-based reps need a central Galleria-area workspace to drop into between client calls across the West Loop, Greenway, downtown, and the Medical Center — without each of them renting their own office.",
           fit: [
-            "Central inside-the-Loop location puts the whole team within 15 minutes of most Inner Loop clients",
-            "Hot Desk memberships for team members who come in a few days a week",
+            "A central Galleria / Uptown location, a short drive from Greenway Plaza, the West Loop, and downtown",
+            "Hot desk memberships for team members who come in a few days a week",
             "Meeting rooms for team syncs, client pitches, and quarterly reviews",
-            "Free parking for the team and any clients who stop by the office",
+            "On-site parking for the team and any clients who stop by",
           ],
         },
       ],
       whyChoose: {
         heading: "Why choose Galleria coworking in Houston at Muze Office",
         paragraphs: [
-          "The Houston Galleria / Uptown district is one of the largest commercial submarkets in the country — it's the shopping, dining, and business heart of west Houston, with Post Oak Blvd as its spine and the 610 West Loop as the circulation artery. For professionals working in this corridor, the options for flexible workspace have historically been limited to the big national operators in the Post Oak towers (annual contracts, corporate pricing, layers of management) or the scattered independent cafes along Westheimer and San Felipe (nice for an hour, rough for a full work day).",
-          "Muze Office at 1800 Augusta Dr gives you a different option — a real coworking space inside the 610 Loop, minutes from Post Oak Blvd and the Galleria itself, with month-to-month pricing and none of the corporate contract friction. Day passes start at $25 and include a real desk, fast WiFi designed for video calls, unlimited coffee from the on-site Muze Cafe, free parking, and access to phone booths for private calls. Monthly Hot Desk and Dedicated Desk memberships add meeting room credits, mail handling, 24/7 biometric access, and a permanent spot to leave your equipment.",
-          "The location itself pulls comfortably from Memorial, Tanglewood, Briargrove, West U, Bellaire, River Oaks, and Uptown — most of inner-west Houston is within a 15-minute drive, and the inside-the-Loop address reads well to clients and on business cards. For anyone whose work life revolves around the Galleria corridor, having a professional, month-to-month workspace at Augusta Dr is a noticeable quality-of-life upgrade over a spare bedroom in Meyerland or a crowded Starbucks in Rice Village.",
+          "The Houston Galleria / Uptown district is one of the largest business districts in the country — the shopping, dining, and business heart of west Houston, with Post Oak Blvd as its spine and the I-610 West Loop as its main artery. For professionals working in this corridor, flexible workspace options have historically been limited to the big national operators in the Post Oak towers (annual agreements, corporate pricing, layers of management) or the scattered cafes along Westheimer and San Felipe (nice for an hour, rough for a full workday).",
+          "Muze Office at 1800 Augusta Dr gives you a different option — a coworking space minutes from Post Oak Blvd and the Galleria itself, with day passes and monthly memberships. A day pass gets you a real desk, WiFi built for video calls, coffee, and phone booths for private calls. Hot desk and dedicated desk memberships give you a regular base, and the dedicated desk adds a reserved spot where you can leave your equipment. Current Houston pricing and plan details are on this page.",
+          "The location pulls comfortably from Memorial, Tanglewood, Briargrove, West U, Bellaire, River Oaks, and Uptown — much of inner-west Houston is a short drive away, and the Galleria-area address reads well to clients and on business cards. For anyone whose work life revolves around the Galleria corridor, a professional workspace on Augusta Dr is a noticeable quality-of-life upgrade over a spare bedroom in Meyerland or a crowded Starbucks in Rice Village.",
         ],
       },
       comparison: {
         heading: "Galleria coworking vs. national operators and traditional Post Oak leases",
         paragraphs: [
-          "The big national coworking operators in the Galleria and Post Oak towers are well-known names with professional buildouts, and they work if you want a corporate experience with a corporate contract. The tradeoff is the pricing model: most of their real value is locked behind annual commitments, the desk-level pricing for true month-to-month tends to run significantly higher than Muze's $350-$399 tier, and the guest and meeting room access often bills à la carte once you use it up. If you're a consultant or a solo founder who just wants a reliable workspace without signing a year, the math rarely works out in their favor.",
-          "A traditional Post Oak or Greenway Plaza office lease is the other end of the spectrum — a three-to-five-year commitment for a single tenant, with buildout, furniture, internet, cleaning, and utilities all on you. Base rents in the Galleria Class A submarket are meaningful, and that's before operating expenses. For a team of one to ten, signing a traditional lease almost always costs more in aggregate than 12-24 months of a Muze private office, with none of the flexibility to scale up or down.",
-          "The local coffee shops and fast-casual cafes along Post Oak, Westheimer, and San Felipe are the free option for quick work sessions, but they fail the same way coffee shops fail everywhere — crowded by 10am, WiFi that breaks on video calls, background noise that destroys sensitive conversations, and seating that wrecks your back after two hours. For anyone working more than a few hours a day from their laptop, the difference between a coffee shop and a real desk is the difference between fighting your environment and focusing on your work.",
+          "The big national coworking operators in the Galleria and Post Oak towers are well-known names with professional buildouts, and they work if you want a corporate experience with a corporate contract. The tradeoff is the pricing model: much of their value is tied to annual commitments, true month-to-month desk pricing tends to run higher than their annual rates, and guest and meeting-room access often bills à la carte once you use up what's included. If you're a consultant or a solo founder who just wants a reliable workspace without signing for a year, compare the total cost carefully.",
+          "A traditional Post Oak or Greenway Plaza office lease is the other end of the spectrum — a multi-year commitment for a single tenant, with buildout, furniture, internet, cleaning, and utilities all on you. For a small team, the total cost of a traditional lease — including buildout, furniture, and the commitment itself — is often hard to justify next to a private office in a flexible workspace, which also leaves you room to scale up or down.",
+          "The coffee shops and fast-casual cafes along Post Oak, Westheimer, and San Felipe are the free option for quick work sessions, but they fail the same way coffee shops fail everywhere — crowded by mid-morning, WiFi that breaks on video calls, background noise that ruins sensitive conversations, and seating that wrecks your back after two hours. For anyone working more than a few hours a day from a laptop, the difference between a coffee shop and a real desk is the difference between fighting your environment and focusing on your work.",
         ],
       },
       howToGetStarted: {
         heading: "How to get started with Galleria coworking",
         paragraphs: [
-          "Start with a day pass if you haven't worked from Muze Office before. $25 gets you a real desk for the day with WiFi, coffee, parking, and phone booth access — enough to see whether the space, the commute, and the vibe work for you before you commit to anything monthly.",
-          "If you like the space and want to come in regularly, move up to a Hot Desk membership (month-to-month, any available desk in the shared workspace, meeting room credits, mail handling). If you want your own reserved desk that you can leave equipment on permanently, the Dedicated Desk tier adds personal storage and 24/7 biometric access.",
-          "Tours take about 15 minutes and are the easiest way to see the Augusta Dr building, test the WiFi from the desk you'd actually use, and meet the community before you commit. You can also book a day pass online — even same-day — for business hours (Monday through Friday, 10am to 7pm); your booking is your pass, ready when you arrive.",
+          "Start with a day pass if you haven't worked from Muze Office before. It gets you a real desk for the day with WiFi, coffee, and phone booth access — enough to see whether the space, the commute, and the vibe work for you before you commit to anything monthly.",
+          "If you like the space and want to come in regularly, move up to a hot desk membership for any available desk in the shared workspace. If you want your own reserved desk that you can leave equipment on, choose a dedicated desk. See current Houston pricing on this page or contact the team.",
+          "A tour is the easiest way to see the Augusta Dr building, test the WiFi from the desk you'd actually use, and meet the community before you commit. Book a tour or contact the team to set one up.",
         ],
       },
       relatedServices: [
@@ -2355,21 +2354,21 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "medical-center-coworking",
     h1: "Medical Center Coworking in Houston",
     heroSubtitle:
-      "Flexible workspace for medical professionals, health-tech startups, and researchers working with the Texas Medical Center. HIPAA-aware private offices available.",
-    metaTitle: "Medical Center Coworking Houston | TMC",
+      "Flexible workspace for medical professionals, health-tech startups, and researchers who work with the Texas Medical Center — with private offices for work that needs a closed door.",
+    metaTitle: "Medical Center Coworking Houston — Near TMC",
     metaDescription:
-      "Galleria coworking for Texas Medical Center pros — clinicians, health-tech startups, researchers, and pharma reps. HIPAA-aware private offices. Join the Houston waitlist.",
+      "Coworking for Texas Medical Center pros at 1800 Augusta Dr in Houston's Galleria / Uptown area — desks, meeting rooms, and private offices. Book a tour today.",
     heroImage: "/images/hero/coworking-space.jpg",
     useCases: [
       "Medical professionals who need flexible office space",
       "Health-tech startups working with the Texas Medical Center",
       "Researchers and academics who need a quiet workspace",
       "Pharmaceutical and medical device reps covering TMC",
-      "Telehealth providers who need HIPAA-aware space",
+      "Telehealth providers who need a private room with a door",
       "Healthcare consultants between hospital meetings",
     ],
     locationCallout:
-      "1800 Augusta Dr, Houston, TX 77057 — approximately 15 minutes from the Texas Medical Center via 610 and Main St. Free parking on-site.",
+      "1800 Augusta Dr, Houston, TX 77057 — in the Galleria / Tanglewood area, a short drive to the Texas Medical Center via the I-610 West Loop. On-site parking.",
     longFormBody: {
       bestFor: [
         {
@@ -2377,41 +2376,41 @@ export const cityServiceData: Record<string, CityServiceData> = {
           scenario:
             "You cover accounts across the Texas Medical Center — MD Anderson, Methodist, Memorial Hermann, Texas Children's, Baylor — and you need a professional base to prep for calls, run follow-ups, and take private meetings without burning an hour trying to park inside the TMC itself.",
           fit: [
-            "Inside-the-Loop Galleria location is 15 minutes from the TMC — close enough for same-day access, far enough to escape TMC parking",
-            "Day pass at $25 for short visits, monthly membership for reps based in Houston full-time",
-            "Meeting rooms for private rep-to-clinician conversations where HIPAA discussions require a door",
-            "Free parking on-site — no $15-20 TMC garage fee every time you need a desk",
+            "A Galleria-area location a short drive from the TMC — close enough for same-day visits, away from TMC parking",
+            "Day passes for short visits, monthly memberships for reps based in Houston full-time",
+            "Meeting rooms for private conversations that need a door",
+            "On-site parking instead of a TMC garage every time you need a desk",
           ],
         },
         {
           persona: "Health-tech founders building for the Texas Medical Center",
           scenario:
-            "You're building a clinical workflow, telehealth, or medical-device startup and your customer base is inside the Texas Medical Center — but leasing space inside TMC or Rice's Ion District doesn't make sense for a team of two to six.",
+            "You're building a clinical workflow, telehealth, or medical-device startup and your customer base is inside the Texas Medical Center — but leasing space inside the TMC or Rice's Ion District doesn't make sense for a team of two to six.",
           fit: [
-            "Hot Desk and Dedicated Desk memberships for daily heads-down product and engineering work",
-            "Private offices and Team Offices for teams that need lockable space for clinical or PHI conversations",
+            "Hot desk and dedicated desk memberships for daily heads-down product and engineering work",
+            "Private offices for teams that need lockable space for sensitive product or clinical conversations",
             "Meeting rooms for TMC customer interviews, pilot kick-offs, and clinician advisory board sessions",
-            "Central inside-the-Loop location — close enough to TMC for pilot demos, accessible for hires from anywhere in west Houston",
+            "A Galleria / Uptown location — close enough to the TMC for pilot demos, accessible for hires from across west Houston",
           ],
         },
         {
           persona: "Telehealth clinicians and private practices",
           scenario:
-            "You see patients via telehealth most days and you need a quiet, professional room with reliable internet and a door that locks — somewhere you can take patient calls without compliance anxiety about a shared home office or a noisy coworking floor.",
+            "You see patients via telehealth most days and you need a quiet, professional room with reliable internet and a door that locks — somewhere you can take patient calls without worrying about a shared home office or a noisy coworking floor.",
           fit: [
-            "HIPAA-aware private offices available for telehealth visits that require a clinical-grade environment",
-            "Enclosed, lockable doors for patient conversations that can't happen in an open coworking space",
-            "Fast, reliable WiFi for video visits that can't tolerate dropouts mid-appointment",
-            "Inside-the-Loop Galleria address is a realistic commute from most of west and south Houston",
+            "Private offices with a door that closes, for telehealth visits that shouldn't happen on an open floor",
+            "Lockable rooms for patient conversations — your practice remains responsible for its own HIPAA safeguards",
+            "WiFi for video visits — test it on a day pass before you commit",
+            "A Galleria-area address that's a realistic commute from much of west and southwest Houston",
           ],
         },
         {
           persona: "Healthcare consultants, researchers, and visiting faculty",
           scenario:
-            "You consult with TMC institutions, run research with Baylor or UT, or visit the Medical Center periodically for advisory work — and you need a professional Houston workspace for the days you're between meetings at the hospitals.",
+            "You consult with TMC institutions, run research with Baylor or UTHealth, or visit the Medical Center periodically for advisory work — and you need a professional Houston workspace for the days you're between meetings at the hospitals.",
           fit: [
             "Day passes for irregular on-site work — pay only for the days you're actually in Houston",
-            "Meeting rooms with video conferencing for research team calls that bridge Houston and remote collaborators",
+            "Meeting rooms for research team calls that bridge Houston and remote collaborators",
             "Phone booths for private calls with regulatory, IRB, or clinical stakeholders",
             "Quiet desks for writing grants, manuscripts, or review work between hospital visits",
           ],
@@ -2420,25 +2419,25 @@ export const cityServiceData: Record<string, CityServiceData> = {
       whyChoose: {
         heading: "Why choose Medical Center-adjacent coworking in Houston",
         paragraphs: [
-          "The Texas Medical Center is the largest medical complex in the world, and the workforce that supports it — clinicians, researchers, medical device and pharma reps, health-tech founders, healthcare consultants, telehealth providers — spends a surprising amount of their work day outside the TMC's physical footprint. Parking inside the TMC is expensive and slow, the café and lobby spaces fill up with students and patients, and most of the clinical buildings don't have a 'bring your laptop and work here' culture. For the people who orbit the TMC rather than work inside a specific hospital, the right workspace is a short drive away.",
-          "Muze Office at 1800 Augusta Dr is approximately 15 minutes from the TMC via 610 and Main St — close enough for same-day visits, far enough to step away from the Medical Center parking and traffic. Our coworking product is the same across all Muze Office members: $25 day passes, $350/month Hot Desks, $399/month Dedicated Desks, meeting rooms by the hour, fast WiFi, unlimited coffee, free parking, and phone booths for private calls. What makes the TMC-adjacent use case different is the quiet, professional environment and the availability of private offices for conversations that need confidentiality.",
-          "For telehealth providers, HIPAA-aware private offices give you an enclosed, lockable room for patient video visits that a shared coworking floor can't support. For health-tech founders, the ability to move between heads-down engineering work at a desk, a lockable office for PHI-involved product conversations, and a meeting room for TMC customer interviews gives you a single venue for three different parts of the job. For medical device and pharma reps, the free parking alone pays for the membership compared to the $15-20 per visit you'd otherwise spend at a TMC garage.",
+          "The Texas Medical Center is the largest medical complex in the world, and the workforce that supports it — clinicians, researchers, medical device and pharma reps, health-tech founders, healthcare consultants, telehealth providers — spends a surprising amount of the workday outside the TMC's physical footprint. Parking inside the TMC is expensive and slow, the cafe and lobby spaces fill up with students and patients, and most clinical buildings don't have a 'bring your laptop and work here' culture. For the people who orbit the TMC rather than work inside a specific hospital, the right workspace is a short drive away.",
+          "Muze Office at 1800 Augusta Dr is a short drive from the TMC via the I-610 West Loop — close enough for same-day visits, far enough to step away from Medical Center parking and traffic. The coworking options are the same as for any Muze Office Houston member: day passes, hot desk and dedicated desk memberships, meeting rooms by the hour, WiFi, coffee, and phone booths for private calls. What makes the TMC-adjacent use case different is the quiet, professional environment and the availability of private offices for conversations that need confidentiality.",
+          "For telehealth providers, a private office gives you an enclosed, lockable room for patient video visits that a shared coworking floor can't support — your own HIPAA policies and safeguards still apply. For health-tech founders, the ability to move between heads-down engineering work at a desk, a lockable office for sensitive product conversations, and a meeting room for TMC customer interviews gives you a single venue for three different parts of the job. For medical device and pharma reps, on-site parking and a desk away from the hospital campus make the hours between account visits far more productive.",
         ],
       },
       comparison: {
         heading: "Medical Center coworking vs. hospital lounges, home office, and TMC leased space",
         paragraphs: [
-          "Hospital lobbies and cafés inside the Texas Medical Center are the default 'free' workspace for reps and visiting clinicians, and they're the worst option for any serious work day. The WiFi is usually a guest network with limited bandwidth, the seating is designed for patients and families waiting for appointments, and privacy is nonexistent — you can't take a HIPAA-involved call or a compensation conversation in a hospital lobby without someone overhearing. Cafés inside the TMC buildings also fill up around breakfast and lunch, so the time you most need a seat is the time you're least likely to find one.",
-          "Working from home handles quiet and privacy but fails on professionalism and patient-facing work. Telehealth visits from a home office run into background noise problems (doors, HVAC, pets, family), bandwidth issues on residential internet, and compliance concerns about shared home networks. Most private practices that start out as home-based eventually move at least part of their clinical work to a dedicated space for exactly those reasons.",
-          "Leasing space inside or directly adjacent to the Texas Medical Center is the right choice if you're running a growing clinical operation or a well-funded health-tech company with a hospital-system pilot, but the base rents are meaningful and the buildout and buildings are designed for clinical tenants, not small teams looking for a flexible base. For a solo clinician, a small rep team, or a health-tech startup that's pre-revenue, a month-to-month workspace 15 minutes away is a dramatically better use of capital than a TMC-adjacent lease.",
+          "Hospital lobbies and cafes inside the Texas Medical Center are the default 'free' workspace for reps and visiting clinicians, and they're the worst option for any serious workday. The WiFi is usually a guest network with limited bandwidth, the seating is designed for patients and families waiting for appointments, and privacy is nonexistent — you can't take a sensitive call or a compensation conversation in a hospital lobby without someone overhearing. Cafes inside the TMC buildings also fill up around breakfast and lunch, so the time you most need a seat is the time you're least likely to find one.",
+          "Working from home handles quiet and privacy but fails on professionalism and patient-facing work. Telehealth visits from a home office run into background noise (doors, HVAC, pets, family), bandwidth issues on residential internet, and compliance concerns about shared home networks. Many private practices that start out home-based eventually move at least part of their clinical work to a dedicated space for exactly those reasons.",
+          "Leasing space inside or directly adjacent to the Texas Medical Center is the right choice if you're running a growing clinical operation or a well-funded health-tech company with a hospital-system pilot, but the rents are meaningful and the buildings are designed for clinical tenants, not small teams looking for a flexible base. For a solo clinician, a small rep team, or a pre-revenue health-tech startup, a flexible workspace a short drive away is a far better use of capital than a TMC-adjacent lease.",
         ],
       },
       howToGetStarted: {
         heading: "How to get started with Medical Center-adjacent coworking",
         paragraphs: [
-          "If you're a rep, consultant, or researcher who visits Houston irregularly, start with day passes at $25. Book online, even same-day, use a desk for the day, book a meeting room by the hour if you need privacy, and head back to the TMC when your next meeting is on the schedule. No commitment, no monthly fee until you know the space works for how you actually use it.",
-          "If you're a telehealth provider, a health-tech founder, or a Houston-based professional working with TMC accounts full-time, the monthly Hot Desk ($350) or Dedicated Desk ($399) is the right entry point. Both include meeting room credits and mail handling. HIPAA-aware private offices are available for clinical visits and confidential product conversations — talk to us about office sizing (Solo, Team, or Custom Suite) based on how many people need simultaneous private space.",
-          "Tours take about 15 minutes and are the easiest way to see the space, check the drive time from your TMC base of operations, and walk through which office layout works for your specific clinical or research use case. Book a tour online at /book-a-tour.",
+          "If you're a rep, consultant, or researcher who visits Houston irregularly, start with day passes. Use a desk for the day, book a meeting room by the hour if you need privacy, and head back to the TMC when your next meeting is on the schedule. No monthly commitment until you know the space works for how you actually use it.",
+          "If you're a telehealth provider, a health-tech founder, or a Houston-based professional working with TMC accounts full-time, a monthly hot desk or dedicated desk is the right entry point. Private offices are available for clinical visits and confidential product conversations — talk to the team about office sizing based on how many people need private space at the same time. Current Houston pricing is on this page.",
+          "A tour is the easiest way to see the space, check the drive time from your TMC base of operations, and work out which setup fits your clinical or research use case. Book a tour online at /book-a-tour.",
         ],
       },
       relatedServices: [
