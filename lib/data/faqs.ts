@@ -87,7 +87,7 @@ const coworkingFAQs: FAQ[] = [
   {
     question: "What memberships are available?",
     answer:
-      "We offer three options: Day Pass ($25/day), which you can buy and activate online the same day and use until midnight; Hot Desk ($350/mo) for ongoing any-desk 24/7 access with meeting room credits and mail handling; and Dedicated Desk ($399/mo), which adds a reserved desk, personal storage, and a business address with mail.",
+      "We offer three options: Day Pass ($25/day), which you can buy and activate online the same day and use until midnight; Hot Desk ($129/mo) for ongoing any-desk 24/7 access with meeting room credits and mail handling; and Dedicated Desk ($229/mo) for a reserved desk and personal storage.",
   },
   {
     question: "Can I book a meeting room as a coworking member?",
@@ -102,7 +102,7 @@ const coworkingFAQs: FAQ[] = [
   {
     question: "What amenities are included?",
     answer:
-      "All coworking plans include high-speed WiFi, unlimited coffee and water, free parking, access to phone booths, printing, and our on-site cafe. Hot Desk and Dedicated Desk plans also include meeting room credits and mail handling.",
+      "All coworking plans include high-speed WiFi, unlimited coffee and water, free parking, access to phone booths, printing, and our on-site cafe. Monthly Hot Desk and Dedicated Desk plans also include meeting room credits.",
   },
 ];
 
@@ -394,7 +394,7 @@ const dayPassFAQs: FAQ[] = [
   {
     question: "What's the difference between a Day Pass and a Hot Desk membership?",
     answer:
-      "A Day Pass is $25 with no commitment. Buy and activate it online the same day and use the workspace until midnight. A Hot Desk is $350/month for continuing any-desk 24/7 access, plus meeting room credits, mail handling, and community events. The math flips in Hot Desk's favor around the 14th or 15th day per month.",
+      "A Day Pass is $25 with no commitment. Buy and activate it online the same day and use the workspace until midnight. A Hot Desk is $129/month for continuing any-desk 24/7 access, plus meeting room credits, mail handling, and community events. Six Day Passes cost $150, so Hot Desk costs less starting with the sixth visit in a month.",
   },
 ];
 
@@ -402,22 +402,22 @@ const hotDeskFAQs: FAQ[] = [
   {
     question: "What's included with a Hot Desk membership?",
     answer:
-      "A Hot Desk at $350/month includes any-desk 24/7 biometric access in the coworking area, monthly meeting room credits, mail handling, community-event access, phone booths, printing, unlimited coffee, on-site Muze Cafe, and free parking. Month-to-month with 30 days' notice to cancel.",
+      "A Hot Desk at $129/month includes any-desk 24/7 biometric access in the coworking area, monthly meeting room credits, mail handling, community-event access, phone booths, printing, unlimited coffee, on-site Muze Cafe, and free parking. Month-to-month with 30 days' notice to cancel.",
   },
   {
     question: "Is a Hot Desk 24/7?",
     answer:
-      "Yes. Hot Desk members get ongoing 24/7 access just like every other monthly coworking tier. The Las Vegas workspace itself is open 24/7; a Day Pass is limited to its activation day and expires at midnight, while a Hot Desk membership continues all month. The upgrade to Dedicated Desk at $399/month is about a reserved desk, personal storage, and a business address — not hours.",
+      "Yes. Hot Desk members get ongoing 24/7 access just like every other monthly coworking tier. The Las Vegas workspace itself is open 24/7; a Day Pass is limited to its activation day and expires at midnight, while a Hot Desk membership continues all month. Dedicated Desk at $229/month adds a reserved desk and personal storage.",
   },
   {
     question: "Do I get my own reserved desk with a Hot Desk?",
     answer:
-      "No. Hot Desk is any-desk access — you sit wherever is open in the shared coworking area each day. If you want a reserved desk you can leave a monitor and keyboard on, plus personal storage and a business address with mail, upgrade to Dedicated Desk at $399/month.",
+      "No. Hot Desk is any-desk access — you sit wherever is open in the shared coworking area each day. If you want a reserved desk you can leave a monitor and keyboard on, plus personal storage, choose Dedicated Desk at $229/month.",
   },
   {
     question: "Do Hot Desk members get a business address?",
     answer:
-      "Hot Desk includes mail handling at your Muze Office location — you can receive LLC, tax, and business correspondence there and pick it up while the front desk is staffed (Mon–Fri 10am–7pm). A formal business-address-only product (with package receiving and mail forwarding) is the Virtual Office tier. Dedicated Desk ($399/mo) bundles a business address as part of the tier.",
+      "Our Virtual Office plans provide a professional business address and mail service. Hot Desk members can pick up eligible correspondence during staffed front-desk hours.",
   },
   {
     question: "How many meeting room hours come with Hot Desk?",
@@ -435,17 +435,12 @@ const dedicatedDeskFAQs: FAQ[] = [
   {
     question: "What's included with a Dedicated Desk membership?",
     answer:
-      "A Dedicated Desk at $399/month includes everything in Hot Desk — 24/7 biometric access, meeting room credits, mail handling, phone booths, WiFi, coffee, parking, community events — plus a reserved desk that's yours every day, personal storage, and a business address with mail for contracts and filings that accept a commercial mail-receiving address.",
+      "A Dedicated Desk at $229/month includes a reserved desk that's yours every day, personal storage, 24/7 biometric access, meeting room credits, phone booths, WiFi, coffee, parking, and community events.",
   },
   {
     question: "How is the 24/7 access provided?",
     answer:
       "Monthly coworking members (Hot Desk, Dedicated Desk, or Private Office) are enrolled for ongoing 24/7 entry on their first day. Day Pass users buy and activate access online for a single calendar day; the pass expires at midnight.",
-  },
-  {
-    question: "Is the business address real, or a PO Box?",
-    answer:
-      "It's a real commercial suite address at your Muze Office location — not a PO Box. It can be used on contracts and on filings that accept a commercial mail-receiving address. A registered-agent address and Google Business Profile eligibility have separate legal and policy requirements. Some members drop a separate Virtual Office subscription when they move up to Dedicated Desk because the mail-and-address piece is already bundled in.",
   },
   {
     question: "What's the difference between Dedicated Desk and a Private Office?",
@@ -555,7 +550,7 @@ const workspaceMembershipsFAQs: FAQ[] = [
   {
     question: "What workspace memberships does Muze Office offer?",
     answer:
-      "Muze Office offers five workspace types in Las Vegas: Virtual Office (from $39/mo) for a business address and mail, Coworking (Day Pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo), Private Office (contact for pricing) for 1–5+ person teams, Meeting Rooms (from $39/hr), a Classroom ($99/hr), and Event Space ($199/hr). All memberships are month-to-month.",
+      "Muze Office offers five workspace types in Las Vegas: Virtual Office (from $39/mo) for a business address and mail, Coworking (Day Pass $25, Hot Desk $129/mo, Dedicated Desk $229/mo), Private Office (contact for pricing) for 1–5+ person teams, Meeting Rooms (from $39/hr), a Classroom ($99/hr), and Event Space ($199/hr). All memberships are month-to-month.",
   },
   {
     question: "Which membership is right for me?",
@@ -570,7 +565,7 @@ const workspaceMembershipsFAQs: FAQ[] = [
   {
     question: "What's included with every membership?",
     answer:
-      "In-space plans (Coworking and Private Office) include free parking and high-speed WiFi; Coworking adds unlimited coffee, Muze Cafe access, and meeting room credits, and Dedicated Desk adds 24/7 biometric entry and a business address. Private Office bundles all of the above plus utilities, cleaning, and receptionist. Virtual Office centers on address and mail handling — see each service page for the per-tier breakdown.",
+      "In-space plans (Coworking and Private Office) include free parking and high-speed WiFi; Coworking adds unlimited coffee, Muze Cafe access, and meeting room credits, while Dedicated Desk adds a reserved workstation and personal storage. Private Office adds an enclosed room, utilities, cleaning, and receptionist. Virtual Office centers on address and mail handling — see each service page for the per-tier breakdown.",
   },
   {
     question: "Is there free parking for members and visitors?",
@@ -641,7 +636,7 @@ const lasVegasLocationFAQs: FAQ[] = [
   {
     question: "What services are available at Muze Office Las Vegas?",
     answer:
-      "Virtual Office (from $39/mo), Coworking (Day Pass $25, Hot Desk $350/mo, Dedicated Desk $399/mo), Private Office (contact for pricing), Meeting Rooms (from $39/hr), a Classroom ($99/hr), and Event Space ($199/hr). All memberships are month-to-month.",
+      "Virtual Office (from $39/mo), Coworking (Day Pass $25, Hot Desk $129/mo, Dedicated Desk $229/mo), Private Office (contact for pricing), Meeting Rooms (from $39/hr), a Classroom ($99/hr), and Event Space ($199/hr). All memberships are month-to-month.",
   },
   {
     question: "Does Nevada have state income tax?",

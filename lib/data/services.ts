@@ -105,7 +105,7 @@ export const services: Service[] = [
       },
       {
         name: "Hot Desk",
-        price: 350,
+        price: 129,
         priceUnit: "month",
         features: [
           "24/7 biometric member access",
@@ -117,14 +117,14 @@ export const services: Service[] = [
       },
       {
         name: "Dedicated Desk",
-        price: 399,
+        price: 229,
         priceUnit: "month",
         features: [
           "Your own reserved desk",
           "Personal storage",
           "24/7 access",
           "Meeting room credits",
-          "Business address and mail",
+          "Community events access",
         ],
       },
     ],
@@ -187,7 +187,7 @@ export const services: Service[] = [
     tiers: [
       {
         name: "Hot Desk",
-        price: 350,
+        price: 129,
         priceUnit: "month",
         features: [
           "24/7 biometric member access",
@@ -215,19 +215,19 @@ export const services: Service[] = [
     name: "Dedicated Desk",
     shortName: "Dedicated Desk",
     shortDescription:
-      "Your own reserved desk with personal storage, 24/7 biometric access, meeting room credits, and a business address with mail. The most committed coworking tier short of a private office.",
+      "Your own reserved desk with personal storage, 24/7 biometric access, and meeting room credits. The most committed coworking tier short of a private office.",
     icon: "Lock",
     tiers: [
       {
         name: "Dedicated Desk",
-        price: 399,
+        price: 229,
         priceUnit: "month",
         features: [
           "Your own reserved desk",
           "Personal storage",
           "24/7 access",
           "Meeting room credits",
-          "Business address and mail",
+          "Community events access",
         ],
         highlighted: true,
       },
@@ -241,8 +241,6 @@ export const services: Service[] = [
       "printing",
       "biometric",
       "meeting-rooms",
-      "mail-handling",
-      "business-address",
       "events",
     ],
   },
@@ -266,7 +264,7 @@ export const services: Service[] = [
       },
       {
         name: "Hot Desk",
-        price: 350,
+        price: 129,
         priceUnit: "month",
         features: [
           "Any-desk membership with 24/7 biometric access",
@@ -277,12 +275,12 @@ export const services: Service[] = [
       },
       {
         name: "Dedicated Desk",
-        price: 399,
+        price: 229,
         priceUnit: "month",
         features: [
           "Reserved desk with personal storage",
           "24/7 biometric access",
-          "Business address with mail handling",
+          "Meeting room credits and community events",
         ],
       },
       {
@@ -305,8 +303,6 @@ export const services: Service[] = [
       "printing",
       "biometric",
       "meeting-rooms",
-      "mail-handling",
-      "business-address",
       "events",
       "receptionist",
     ],

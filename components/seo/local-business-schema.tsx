@@ -135,7 +135,7 @@ export function LocalBusinessSchema({
           itemOffered: {
             "@type": "Service",
             name: "Dedicated Desk",
-            description: "Your own reserved desk with 24/7 access, storage, and mail handling.",
+            description: "Your own reserved desk with 24/7 access, personal storage, and meeting room credits.",
           },
         },
         {
