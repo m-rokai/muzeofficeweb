@@ -115,7 +115,7 @@ function buildLlmsTxt(): string {
   // Optional section
   lines.push("## Optional");
   lines.push("");
-  lines.push(`- [Current Las Vegas pricing](${BRAND.url}/pricing.md): Concise service prices, access terms, and booking links, last verified July 23, 2026.`);
+  lines.push(`- [Current Las Vegas pricing](${BRAND.url}/pricing.md): Concise service prices, access terms, and booking links, last verified September 22, 2026.`);
   lines.push(`- [Full content dump](${BRAND.url}/llms-full.txt): All primary pages and blog posts concatenated as markdown.`);
   lines.push(`- [Sitemap](${BRAND.url}/sitemap.xml): XML sitemap of all canonical HTML URLs.`);
   lines.push("");

@@ -1,6 +1,6 @@
 # Muze Office Las Vegas Pricing
 
-Last verified: July 28, 2026
+Last verified: September 22, 2026
 
 Muze Office operates a staffed flexible-workspace location at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119. Call (702) 370-7515 or visit https://muzeoffice.com/contact for help choosing a workspace.
 
@@ -8,8 +8,8 @@ Muze Office operates a staffed flexible-workspace location at 6860 Bermuda Rd, S
 
 - Day Pass: $25 per day. Buy and activate online the same day, then use the Las Vegas workspace until midnight. No membership or setup fee.
 - Day Pass amenities: quiet coworking area, gigabit fiber WiFi, free bottled water and coffee, ergonomic Herman Miller chairs, Herman Miller height-adjustable desks, phone booths, printing, and free on-site parking. Bring your laptop; monitors are not provided.
-- Hot Desk: $350 per month. Any-desk coworking with 24/7 biometric member access, meeting-room credits, mail handling, and community-event access.
-- Dedicated Desk: $399 per month. A reserved desk with personal storage, 24/7 biometric member access, meeting-room credits, and business-address mail handling.
+- Hot Desk: $129 per month. Any-desk coworking with 24/7 mobile access, meeting-room credits, mail handling, and community-event access.
+- Dedicated Desk: $229 per month. A reserved desk with personal storage, 24/7 mobile access, meeting-room credits, and community-event access.
 - Monthly memberships are month-to-month, have a one-time $25 setup fee, and require 30 days' notice to cancel.
 
 Details:
@@ -53,7 +53,7 @@ Details: https://muzeoffice.com/las-vegas-virtual-office
 
 - The Las Vegas workspace is open 24 hours a day, seven days a week.
 - The front desk is staffed Monday through Friday, 10:00 a.m.–7:00 p.m.
-- Monthly Hot Desk, Dedicated Desk, and Private Office members have 24/7 biometric access.
+- Monthly Hot Desk, Dedicated Desk, and Private Office members have 24/7 mobile access through Kisi.
 - A Day Pass can be bought and activated online the same day and remains active until midnight that day.
 - Free on-site parking is included.
 - Muze Office Houston at 1800 Augusta Dr is planned and is not currently accepting workspace bookings or address-service customers.

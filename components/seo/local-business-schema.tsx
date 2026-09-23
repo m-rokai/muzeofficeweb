@@ -114,7 +114,7 @@ export function LocalBusinessSchema({
       { "@type": "LocationFeatureSpecification", name: "On-Site Cafe", value: true },
       { "@type": "LocationFeatureSpecification", name: "Phone Booths", value: true },
       { "@type": "LocationFeatureSpecification", name: "Printing & Scanning", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Biometric Access", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Mobile Access", value: true },
       { "@type": "LocationFeatureSpecification", name: "Conference Rooms", value: true },
     ],
     hasOfferCatalog: {

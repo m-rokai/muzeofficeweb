@@ -333,7 +333,7 @@ const medicalCenterCoworkingFAQs: FAQ[] = [
   {
     question: "What amenities will be included?",
     answer:
-      "High-speed WiFi, parking, coffee, phone booths, meeting rooms, biometric access, and an on-site cafe. Dedicated desk members will also get mail handling and personal storage.",
+      "High-speed WiFi, parking, coffee, phone booths, meeting rooms, mobile access, and an on-site cafe. Dedicated desk members will also get mail handling and personal storage.",
   },
 ];
 
@@ -361,7 +361,7 @@ const privateOfficeFAQs: FAQ[] = [
   {
     question: "Is 24/7 access available?",
     answer:
-      "Yes. All private office members have 24/7 access via biometric entry. Work on your own schedule — early mornings, late nights, weekends.",
+      "Yes. Private office members can enter 24/7 using the Kisi mobile app. Work on your own schedule — early mornings, late nights, and weekends.",
   },
   {
     question: "Can I bring clients to the office?",
@@ -402,7 +402,7 @@ const hotDeskFAQs: FAQ[] = [
   {
     question: "What's included with a Hot Desk membership?",
     answer:
-      "A Hot Desk at $129/month includes any-desk 24/7 biometric access in the coworking area, monthly meeting room credits, mail handling, community-event access, phone booths, printing, unlimited coffee, on-site Muze Cafe, and free parking. Month-to-month with 30 days' notice to cancel.",
+      "A Hot Desk at $129/month includes any-desk 24/7 mobile access in the coworking area, monthly meeting room credits, mail handling, community-event access, phone booths, printing, unlimited coffee, on-site Muze Cafe, and free parking. Month-to-month with 30 days' notice to cancel.",
   },
   {
     question: "Is a Hot Desk 24/7?",
@@ -435,7 +435,7 @@ const dedicatedDeskFAQs: FAQ[] = [
   {
     question: "What's included with a Dedicated Desk membership?",
     answer:
-      "A Dedicated Desk at $229/month includes a reserved desk that's yours every day, personal storage, 24/7 biometric access, meeting room credits, phone booths, WiFi, coffee, parking, and community events.",
+      "A Dedicated Desk at $229/month includes a reserved desk that's yours every day, personal storage, 24/7 mobile access, meeting room credits, phone booths, WiFi, coffee, parking, and community events.",
   },
   {
     question: "How is the 24/7 access provided?",
@@ -550,7 +550,7 @@ const workspaceMembershipsFAQs: FAQ[] = [
   {
     question: "What workspace memberships does Muze Office offer?",
     answer:
-      "Muze Office offers five workspace types in Las Vegas: Virtual Office (from $39/mo) for a business address and mail, Coworking (Day Pass $25, Hot Desk $129/mo, Dedicated Desk $229/mo), Private Office (contact for pricing) for 1–5+ person teams, Meeting Rooms (from $39/hr), a Classroom ($99/hr), and Event Space ($199/hr). All memberships are month-to-month.",
+      "Muze Office offers six workspace options in Las Vegas: Virtual Office (from $39/mo) for a business address and mail, Coworking (Day Pass $25, Hot Desk $129/mo, Dedicated Desk $229/mo), Private Office (contact for pricing) for 1–5+ person teams, Meeting Rooms (from $39/hr), a Classroom ($99/hr), and Event Space ($199/hr). Monthly memberships are month-to-month.",
   },
   {
     question: "Which membership is right for me?",

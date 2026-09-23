@@ -14,7 +14,7 @@ import {
   UtensilsCrossed,
   Phone as PhoneIcon,
   Printer,
-  Fingerprint,
+  Smartphone,
   MonitorSmartphone,
   MapPin,
   Clock,
@@ -66,7 +66,7 @@ const amenities = [
   { icon: <UtensilsCrossed className="h-7 w-7" />, label: "On-Site Cafe", desc: "Hot meals, not just snacks" },
   { icon: <PhoneIcon className="h-7 w-7" />, label: "Phone Booths", desc: "Private calls, no noise" },
   { icon: <Printer className="h-7 w-7" />, label: "Printing & Scanning", desc: "Color and B&W" },
-  { icon: <Fingerprint className="h-7 w-7" />, label: "Biometric Access", desc: "24/7 for members" },
+  { icon: <Smartphone className="h-7 w-7" />, label: "24/7 Mobile Access", desc: "Secure entry with Kisi" },
   { icon: <MonitorSmartphone className="h-7 w-7" />, label: "Conference Rooms", desc: "AV and video ready" },
 ];
 
@@ -358,7 +358,7 @@ export default function HomePage() {
         <StaggerContainer className="grid gap-6 md:grid-cols-3 mt-4">
           {[
             { name: "Day Pass", price: "$25", unit: "/day", description: "Book a single day online, even same-day — no membership, no setup, no commitment. Reserve online and bring your laptop.", features: ["Hot desk access", "High-speed WiFi", "Unlimited coffee & tea", "Free parking"], cta: "See Day Pass Details", href: "/las-vegas-day-pass", trackingName: "view_day_pass", highlighted: false },
-            { name: "Dedicated Desk", price: "$229", unit: "/month", description: "Your own reserved desk, personal storage, 24/7 biometric access, and meeting room credits.", features: ["24/7 access", "Reserved desk & storage", "Meeting room credits", "Community events"], cta: "See Dedicated Desk Details", href: "/las-vegas-dedicated-desk", trackingName: "view_dedicated_desk", highlighted: true },
+            { name: "Dedicated Desk", price: "$229", unit: "/month", description: "Your own reserved desk, personal storage, 24/7 mobile access, and meeting room credits.", features: ["24/7 access", "Reserved desk & storage", "Meeting room credits", "Community events"], cta: "See Dedicated Desk Details", href: "/las-vegas-dedicated-desk", trackingName: "view_dedicated_desk", highlighted: true },
             { name: "Private Office", price: "Custom", unit: "", description: "Enclosed, lockable offices for 2-10 people. Fully furnished and customizable.", features: ["24/7 access", "Furnished & customizable", "All utilities included", "Conference room credits"], cta: "Book a Tour", href: BRAND.booking.tourUrl, trackingName: "book_tour", highlighted: false },
           ].map((plan) => (
             <StaggerItem key={plan.name} className={plan.highlighted ? "pt-3" : ""}>

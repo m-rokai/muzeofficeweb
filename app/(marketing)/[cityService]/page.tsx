@@ -103,7 +103,7 @@ const amenityLabels: Record<string, string> = {
   cafe: "On-Site Muze Cafe",
   "phone-booths": "Private Phone Booths",
   printing: "Printing & Scanning",
-  biometric: "Biometric 24/7 Access",
+  "mobile-access": "24/7 Mobile Access",
   furnished: "Fully Furnished",
   utilities: "All Utilities Included",
   address: "Professional Business Address",
