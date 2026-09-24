@@ -8,10 +8,19 @@ import {
 import { renderStaticPageMarkdown } from "@/lib/markdown/render-static-page";
 
 export const dynamic = "force-static";
+export const dynamicParams = false;
 
 export function generateStaticParams() {
-  // City-service slugs (all) — both cities; Houston pages are noindex until launch (~2026).
-  const cityServiceSlugs = Object.keys(cityServiceData);
+  // Only active city-service markdown mirrors are published. Houston's
+  // location hub remains available through /md/houston and /locations/houston.md.
+  const activeCityIds = new Set(
+    locations
+      .filter((location) => location.status === "active")
+      .map((location) => location.id),
+  );
+  const cityServiceSlugs = Object.values(cityServiceData)
+    .filter((entry) => activeCityIds.has(entry.cityId))
+    .map((entry) => entry.slug);
   // Static page slugs
   const staticSlugs = [
     "home",
@@ -40,7 +49,11 @@ export async function GET(
   const { slug } = await params;
 
   // 1) City-service markdown (e.g. /md/las-vegas-coworking)
-  if (cityServiceData[slug]) {
+  const cityService = cityServiceData[slug];
+  if (cityService) {
+    const location = locations.find((entry) => entry.id === cityService.cityId);
+    if (location?.status !== "active") notFound();
+
     const md = renderCityServiceMarkdown(slug);
     if (md) return markdownResponse(md);
   }
