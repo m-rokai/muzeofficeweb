@@ -1,0 +1,1804 @@
+{
+  "pulledOn": "2026-10-08",
+  "property": "https://muzeoffice.com/",
+  "data": {
+    "snapshot": {
+      "_meta": {
+        "source": "Google Search Console API (live data)",
+        "tool": "site_snapshot",
+        "parameters": {
+          "days": 28
+        },
+        "note": "All numbers in this response come directly from the Google Search Console API. They are exact values, not estimates. Base your analysis only on this data. Do not invent or assume additional context."
+      },
+      "data": {
+        "period": {
+          "startDate": "2026-09-10",
+          "endDate": "2026-10-07"
+        },
+        "current": {
+          "clicks": 187,
+          "impressions": 21752,
+          "ctr": 0.86,
+          "position": 13.5
+        },
+        "prior": {
+          "clicks": 168,
+          "impressions": 21886,
+          "ctr": 0.77,
+          "position": 14.8
+        },
+        "change": {
+          "clicks": 19,
+          "clicksPercent": 11.31,
+          "impressions": -134,
+          "impressionsPercent": -0.61,
+          "ctr": 0.09,
+          "position": -1.3
+        }
+      }
+    },
+    "alerts": {
+      "_meta": {
+        "source": "Google Search Console API (live data)",
+        "tool": "check_alerts",
+        "parameters": {
+          "days": 28,
+          "position_drop_threshold": 20,
+          "ctr_drop_threshold": 50,
+          "click_drop_threshold": 30
+        },
+        "note": "All numbers in this response come directly from the Google Search Console API. They are exact values, not estimates. Base your analysis only on this data. Do not invent or assume additional context."
+      },
+      "data": {
+        "alerts": [
+          {
+            "severity": "critical",
+            "type": "position_drop",
+            "entity": "moz co-working spaces on https://muzeoffice.com/blog/how-to-make-the-most-of-your-coworking-space",
+            "detail": "Position dropped from 11 to 83 (72 positions)",
+            "currentValue": 83,
+            "previousValue": 11,
+            "change": 72
+          },
+          {
+            "severity": "critical",
+            "type": "position_drop",
+            "entity": "small businesses near me on https://muzeoffice.com/",
+            "detail": "Position dropped from 1 to 57 (56 positions)",
+            "currentValue": 57,
+            "previousValue": 1,
+            "change": 56
+          },
+          {
+            "severity": "critical",
+            "type": "position_drop",
+            "entity": "muze on https://muzeoffice.com/las-vegas-coworking",
+            "detail": "Position dropped from 1.3 to 46.5 (45 positions)",
+            "currentValue": 46.5,
+            "previousValue": 1.3,
+            "change": 45.2
+          },
+          {
+            "severity": "critical",
+            "type": "position_drop",
+            "entity": "small meeting rooms in las vegas on https://muzeoffice.com/las-vegas-meeting-rooms",
+            "detail": "Position dropped from 2.5 to 47 (45 positions)",
+            "currentValue": 47,
+            "previousValue": 2.5,
+            "change": 44.5
+          },
+          {
+            "severity": "critical",
+            "type": "position_drop",
+            "entity": "virtual office space summit on https://muzeoffice.com/las-vegas-virtual-office",
+            "detail": "Position dropped from 45.7 to 89.5 (44 positions)",
+            "currentValue": 89.5,
+            "previousValue": 45.7,
+            "change": 43.8
+          },
+          {
+            "severity": "warning",
+            "type": "ctr_drop",
+            "entity": "muze office on https://muzeoffice.com/locations/houston",
+            "detail": "CTR dropped from 10% to 0% (100% decline)",
+            "currentValue": 0,
+            "previousValue": 10,
+            "change": -100
+          },
+          {
+            "severity": "warning",
+            "type": "ctr_drop",
+            "entity": "po box nevada on https://muzeoffice.com/blog/virtual-office-vs-po-box-in-nevada",
+            "detail": "CTR dropped from 6.25% to 0% (100% decline)",
+            "currentValue": 0,
+            "previousValue": 6.25,
+            "change": -100
+          },
+          {
+            "severity": "warning",
+            "type": "ctr_drop",
+            "entity": "virtual office address for business on https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston",
+            "detail": "CTR dropped from 9.09% to 0% (100% decline)",
+            "currentValue": 0,
+            "previousValue": 9.09,
+            "change": -100
+          },
+          {
+            "severity": "warning",
+            "type": "ctr_drop",
+            "entity": "muze office on https://muzeoffice.com/las-vegas-coworking",
+            "detail": "CTR dropped from 5.26% to 2% (62% decline)",
+            "currentValue": 2,
+            "previousValue": 5.26,
+            "change": -62
+          },
+          {
+            "severity": "warning",
+            "type": "ctr_drop",
+            "entity": "muze office las vegas on https://muzeoffice.com/las-vegas-coworking",
+            "detail": "CTR dropped from 15.38% to 6.82% (56% decline)",
+            "currentValue": 6.82,
+            "previousValue": 15.38,
+            "change": -56
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "office space museum district on https://muzeoffice.com/locations",
+            "detail": "Position dropped from 27 to 66 (39 positions)",
+            "currentValue": 66,
+            "previousValue": 27,
+            "change": 39
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "how to get a po box on https://muzeoffice.com/blog/virtual-office-vs-po-box-in-texas",
+            "detail": "Position dropped from 43 to 80 (37 positions)",
+            "currentValue": 80,
+            "previousValue": 43,
+            "change": 37
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "coworking full day pass on https://muzeoffice.com/las-vegas-day-pass",
+            "detail": "Position dropped from 25.4 to 60 (35 positions)",
+            "currentValue": 60,
+            "previousValue": 25.4,
+            "change": 34.6
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "virtual office rent on https://muzeoffice.com/las-vegas-virtual-office",
+            "detail": "Position dropped from 11 to 45.2 (34 positions)",
+            "currentValue": 45.2,
+            "previousValue": 11,
+            "change": 34.2
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "virtual office summit on https://muzeoffice.com/las-vegas-virtual-office",
+            "detail": "Position dropped from 42.2 to 73.5 (31 positions)",
+            "currentValue": 73.5,
+            "previousValue": 42.2,
+            "change": 31.3
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "temporary office providers on https://muzeoffice.com/blog/best-virtual-office-providers-in-houston",
+            "detail": "Position dropped from 33 to 64 (31 positions)",
+            "currentValue": 64,
+            "previousValue": 33,
+            "change": 31
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "virtual business office on https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston",
+            "detail": "Position dropped from 11 to 41.5 (31 positions)",
+            "currentValue": 41.5,
+            "previousValue": 11,
+            "change": 30.5
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "virtual address for llc houston on https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston",
+            "detail": "Position dropped from 18.3 to 47.7 (29 positions)",
+            "currentValue": 47.7,
+            "previousValue": 18.3,
+            "change": 29.4
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "meeting space las vegas nv on https://muzeoffice.com/las-vegas-meeting-rooms",
+            "detail": "Position dropped from 12.5 to 41.7 (29 positions)",
+            "currentValue": 41.7,
+            "previousValue": 12.5,
+            "change": 29.2
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "virtual business address houston texas on https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston",
+            "detail": "Position dropped from 20 to 46.3 (26 positions)",
+            "currentValue": 46.3,
+            "previousValue": 20,
+            "change": 26.3
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "las vegas virtual business address on https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-las-vegas",
+            "detail": "Position dropped from 25.3 to 51 (26 positions)",
+            "currentValue": 51,
+            "previousValue": 25.3,
+            "change": 25.7
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "vitural office on https://muzeoffice.com/las-vegas-virtual-office",
+            "detail": "Position dropped from 4 to 28.5 (25 positions)",
+            "currentValue": 28.5,
+            "previousValue": 4,
+            "change": 24.5
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "conference space segrate on https://muzeoffice.com/las-vegas-meeting-rooms",
+            "detail": "Position dropped from 67.3 to 91 (24 positions)",
+            "currentValue": 91,
+            "previousValue": 67.3,
+            "change": 23.7
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "best virtual office for llc on https://muzeoffice.com/blog/best-virtual-office-providers-in-houston",
+            "detail": "Position dropped from 11 to 34 (23 positions)",
+            "currentValue": 34,
+            "previousValue": 11,
+            "change": 23
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "virtual office coworking space on https://muzeoffice.com/",
+            "detail": "Position dropped from 36 to 58.5 (23 positions)",
+            "currentValue": 58.5,
+            "previousValue": 36,
+            "change": 22.5
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "virtual office palm desert on https://muzeoffice.com/",
+            "detail": "Position dropped from 45.7 to 67 (21 positions)",
+            "currentValue": 67,
+            "previousValue": 45.7,
+            "change": 21.3
+          },
+          {
+            "severity": "warning",
+            "type": "position_drop",
+            "entity": "virtual office and registered agent on https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston",
+            "detail": "Position dropped from 8 to 28.5 (21 positions)",
+            "currentValue": 28.5,
+            "previousValue": 8,
+            "change": 20.5
+          }
+        ],
+        "summary": {
+          "critical": 5,
+          "warning": 22,
+          "info": 0,
+          "total": 27
+        },
+        "period": {
+          "days": 28,
+          "startDate": "2026-09-10",
+          "endDate": "2026-10-07"
+        },
+        "thresholds": {
+          "positionDrop": 20,
+          "ctrDrop": 50,
+          "clickDrop": 30
+        }
+      }
+    },
+    "sitemaps": {
+      "_meta": {
+        "source": "Google Search Console API (live data)",
+        "tool": "list_sitemaps",
+        "parameters": {},
+        "note": "All numbers in this response come directly from the Google Search Console API. They are exact values, not estimates. Base your analysis only on this data. Do not invent or assume additional context."
+      },
+      "data": {
+        "siteUrl": "https://muzeoffice.com/",
+        "sitemaps": [
+          {
+            "path": "https://muzeoffice.com/sitemap.xml",
+            "lastSubmitted": "2026-09-23T18:42:48.782Z",
+            "isPending": false,
+            "lastDownloaded": "2026-10-04T06:33:34.161Z",
+            "warnings": 0,
+            "errors": 0,
+            "contents": [
+              {
+                "type": "web",
+                "submitted": 96,
+                "indexed": 0
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "wins": {
+      "_meta": {
+        "source": "Google Search Console API (live data)",
+        "tool": "quick_wins",
+        "parameters": {
+          "days": 28,
+          "min_impressions": 50,
+          "max_position": 15
+        },
+        "note": "All numbers in this response come directly from the Google Search Console API. They are exact values, not estimates. Base your analysis only on this data. Do not invent or assume additional context."
+      },
+      "data": [
+        {
+          "query": "vassbo.se meeting rooms count",
+          "clicks": 0,
+          "impressions": 624,
+          "ctr": 0,
+          "position": 5.7,
+          "opportunity": 69
+        },
+        {
+          "query": "muze",
+          "clicks": 1,
+          "impressions": 482,
+          "ctr": 0.21,
+          "position": 9.1,
+          "opportunity": 52
+        },
+        {
+          "query": "virtual office houston",
+          "clicks": 1,
+          "impressions": 422,
+          "ctr": 0.24,
+          "position": 11.9,
+          "opportunity": 45
+        },
+        {
+          "query": "migo office building and conference meeting rooms",
+          "clicks": 0,
+          "impressions": 326,
+          "ctr": 0,
+          "position": 8.4,
+          "opportunity": 36
+        },
+        {
+          "query": "business address for llc",
+          "clicks": 0,
+          "impressions": 271,
+          "ctr": 0,
+          "position": 12.9,
+          "opportunity": 30
+        },
+        {
+          "query": "coworking space las vegas",
+          "clicks": 0,
+          "impressions": 231,
+          "ctr": 0,
+          "position": 12.8,
+          "opportunity": 25
+        },
+        {
+          "query": "google workspace business profile alphabet",
+          "clicks": 0,
+          "impressions": 151,
+          "ctr": 0,
+          "position": 10,
+          "opportunity": 17
+        },
+        {
+          "query": "houston virtual office",
+          "clicks": 1,
+          "impressions": 139,
+          "ctr": 0.72,
+          "position": 13,
+          "opportunity": 14
+        },
+        {
+          "query": "houston virtual offices",
+          "clicks": 0,
+          "impressions": 81,
+          "ctr": 0,
+          "position": 11.3,
+          "opportunity": 9
+        },
+        {
+          "query": "virtual business address",
+          "clicks": 0,
+          "impressions": 83,
+          "ctr": 0,
+          "position": 13,
+          "opportunity": 9
+        },
+        {
+          "query": "virtual office address",
+          "clicks": 0,
+          "impressions": 73,
+          "ctr": 0,
+          "position": 13.3,
+          "opportunity": 8
+        },
+        {
+          "query": "google business verification call",
+          "clicks": 0,
+          "impressions": 63,
+          "ctr": 0,
+          "position": 9,
+          "opportunity": 7
+        },
+        {
+          "query": "virtual office houston tx",
+          "clicks": 0,
+          "impressions": 60,
+          "ctr": 0,
+          "position": 14.7,
+          "opportunity": 7
+        },
+        {
+          "query": "virtual office in houston",
+          "clicks": 0,
+          "impressions": 56,
+          "ctr": 0,
+          "position": 13.1,
+          "opportunity": 6
+        },
+        {
+          "query": "virtual offices",
+          "clicks": 0,
+          "impressions": 51,
+          "ctr": 0,
+          "position": 12.5,
+          "opportunity": 6
+        },
+        {
+          "query": "virtual offices houston",
+          "clicks": 0,
+          "impressions": 54,
+          "ctr": 0,
+          "position": 12.8,
+          "opportunity": 6
+        },
+        {
+          "query": "virtual offices in houston",
+          "clicks": 0,
+          "impressions": 54,
+          "ctr": 0,
+          "position": 13.6,
+          "opportunity": 6
+        }
+      ]
+    },
+    "houstonIndex": {
+      "_meta": {
+        "source": "Google Search Console API (live data)",
+        "tool": "inspect_url",
+        "parameters": {
+          "url": "https://muzeoffice.com/locations/houston"
+        },
+        "note": "All numbers in this response come directly from the Google Search Console API. They are exact values, not estimates. Base your analysis only on this data. Do not invent or assume additional context."
+      },
+      "data": {
+        "url": "https://muzeoffice.com/locations/houston",
+        "indexed": true,
+        "indexingState": "Submitted and indexed",
+        "lastCrawlTime": "2026-10-03T08:54:50Z",
+        "crawlAllowed": true,
+        "indexingAllowed": true,
+        "pageFetchState": "SUCCESSFUL",
+        "googleCanonical": "https://muzeoffice.com/locations/houston",
+        "userCanonical": "https://muzeoffice.com/locations/houston",
+        "canonicalMatch": true,
+        "mobileUsability": "VERDICT_UNSPECIFIED",
+        "issues": [],
+        "summary": "This URL is indexed and healthy. Last crawled: 2026-10-03T08:54:50Z."
+      }
+    },
+    "houstonQueries": {
+      "_meta": {
+        "source": "Google Search Console API (live data)",
+        "tool": "advanced_search_analytics",
+        "parameters": {
+          "days": 28,
+          "dimensions": [
+            "query",
+            "page"
+          ],
+          "filters": [
+            {
+              "dimension": "query",
+              "operator": "includingRegex",
+              "expression": "houston|galleria|tanglewood"
+            }
+          ],
+          "row_limit": 60,
+          "order_by": "impressions"
+        },
+        "note": "All numbers in this response come directly from the Google Search Console API. They are exact values, not estimates. Base your analysis only on this data. Do not invent or assume additional context."
+      },
+      "data": {
+        "rows": [
+          {
+            "keys": [
+              "virtual office houston",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 1,
+            "impressions": 382,
+            "ctr": 0.26,
+            "position": 11.2
+          },
+          {
+            "keys": [
+              "houston virtual office",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 1,
+            "impressions": 123,
+            "ctr": 0.81,
+            "position": 11.4
+          },
+          {
+            "keys": [
+              "houston virtual offices",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 69,
+            "ctr": 0,
+            "position": 12.2
+          },
+          {
+            "keys": [
+              "virtual address houston",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 66,
+            "ctr": 0,
+            "position": 16.9
+          },
+          {
+            "keys": [
+              "virtual office address houston",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 66,
+            "ctr": 0,
+            "position": 13.7
+          },
+          {
+            "keys": [
+              "virtual office houston tx",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 60,
+            "ctr": 0,
+            "position": 14.7
+          },
+          {
+            "keys": [
+              "houston virtual address",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 57,
+            "ctr": 0,
+            "position": 16.2
+          },
+          {
+            "keys": [
+              "virtual office in houston",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 56,
+            "ctr": 0,
+            "position": 13.1
+          },
+          {
+            "keys": [
+              "virtual offices houston",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 50,
+            "ctr": 0,
+            "position": 12.9
+          },
+          {
+            "keys": [
+              "virtual offices in houston",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 50,
+            "ctr": 0,
+            "position": 13.3
+          },
+          {
+            "keys": [
+              "virtual office houston texas",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 45,
+            "ctr": 0,
+            "position": 12.1
+          },
+          {
+            "keys": [
+              "virtual offices in houston texas",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 44,
+            "ctr": 0,
+            "position": 13.3
+          },
+          {
+            "keys": [
+              "virtual mailbox houston",
+              "https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 39,
+            "ctr": 0,
+            "position": 24.8
+          },
+          {
+            "keys": [
+              "virtual office space houston",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 39,
+            "ctr": 0,
+            "position": 13.8
+          },
+          {
+            "keys": [
+              "business address houston",
+              "https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 38,
+            "ctr": 0,
+            "position": 23.1
+          },
+          {
+            "keys": [
+              "virtual business address houston",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 38,
+            "ctr": 0,
+            "position": 22.8
+          },
+          {
+            "keys": [
+              "virtual office houston cheap",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 37,
+            "ctr": 0,
+            "position": 12.1
+          },
+          {
+            "keys": [
+              "houston virtual address",
+              "https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 33,
+            "ctr": 0,
+            "position": 35.4
+          },
+          {
+            "keys": [
+              "virtual address for llc houston",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 32,
+            "ctr": 0,
+            "position": 19.6
+          },
+          {
+            "keys": [
+              "virtual address houston tx",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 32,
+            "ctr": 0,
+            "position": 13
+          },
+          {
+            "keys": [
+              "virtual mailbox houston",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 32,
+            "ctr": 0,
+            "position": 52.2
+          },
+          {
+            "keys": [
+              "virtual office houston",
+              "https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 31,
+            "ctr": 0,
+            "position": 23.3
+          },
+          {
+            "keys": [
+              "virtual address houston tx",
+              "https://muzeoffice.com/"
+            ],
+            "clicks": 0,
+            "impressions": 30,
+            "ctr": 0,
+            "position": 3.1
+          },
+          {
+            "keys": [
+              "virtual office in houston texas",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 30,
+            "ctr": 0,
+            "position": 13.2
+          },
+          {
+            "keys": [
+              "private offices virtual tour houston",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 29,
+            "ctr": 0,
+            "position": 5.1
+          },
+          {
+            "keys": [
+              "houston galleria workspaces",
+              "https://muzeoffice.com/locations/houston"
+            ],
+            "clicks": 0,
+            "impressions": 27,
+            "ctr": 0,
+            "position": 9.2
+          },
+          {
+            "keys": [
+              "private offices virtual tour houston, tx",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 27,
+            "ctr": 0,
+            "position": 5.1
+          },
+          {
+            "keys": [
+              "best virtual office houston",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 26,
+            "ctr": 0,
+            "position": 14.2
+          },
+          {
+            "keys": [
+              "houston galleria office space",
+              "https://muzeoffice.com/locations/houston"
+            ],
+            "clicks": 0,
+            "impressions": 25,
+            "ctr": 0,
+            "position": 15.4
+          },
+          {
+            "keys": [
+              "virtual offices houston tx",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 22,
+            "ctr": 0,
+            "position": 13.8
+          },
+          {
+            "keys": [
+              "galleria flexible workspaces",
+              "https://muzeoffice.com/locations/houston"
+            ],
+            "clicks": 0,
+            "impressions": 21,
+            "ctr": 0,
+            "position": 9.4
+          },
+          {
+            "keys": [
+              "houston galleria office space for rent",
+              "https://muzeoffice.com/locations/houston"
+            ],
+            "clicks": 0,
+            "impressions": 21,
+            "ctr": 0,
+            "position": 22.1
+          },
+          {
+            "keys": [
+              "houston galleria office spaces",
+              "https://muzeoffice.com/locations/houston"
+            ],
+            "clicks": 0,
+            "impressions": 20,
+            "ctr": 0,
+            "position": 16.3
+          },
+          {
+            "keys": [
+              "houston virtual office",
+              "https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 17,
+            "ctr": 0,
+            "position": 25.3
+          },
+          {
+            "keys": [
+              "virtual services houston tx",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 17,
+            "ctr": 0,
+            "position": 13.2
+          },
+          {
+            "keys": [
+              "virtual office houston",
+              "https://muzeoffice.com/blog/virtual-office-vs-po-box-in-texas"
+            ],
+            "clicks": 0,
+            "impressions": 14,
+            "ctr": 0,
+            "position": 21.1
+          },
+          {
+            "keys": [
+              "houston virtual mailbox",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 11,
+            "ctr": 0,
+            "position": 27.4
+          },
+          {
+            "keys": [
+              "houston virtual office",
+              "https://muzeoffice.com/blog/virtual-office-vs-po-box-in-texas"
+            ],
+            "clicks": 0,
+            "impressions": 11,
+            "ctr": 0,
+            "position": 25.5
+          },
+          {
+            "keys": [
+              "houston virtual offices",
+              "https://muzeoffice.com/blog/virtual-office-vs-po-box-in-texas"
+            ],
+            "clicks": 0,
+            "impressions": 11,
+            "ctr": 0,
+            "position": 6.3
+          },
+          {
+            "keys": [
+              "virtual office houston",
+              "https://muzeoffice.com/"
+            ],
+            "clicks": 0,
+            "impressions": 11,
+            "ctr": 0,
+            "position": 3.1
+          },
+          {
+            "keys": [
+              "unlimited mailbox exchange houston",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 10,
+            "ctr": 0,
+            "position": 18.6
+          },
+          {
+            "keys": [
+              "virtual office address houston",
+              "https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 10,
+            "ctr": 0,
+            "position": 46.6
+          },
+          {
+            "keys": [
+              "houston virtual address",
+              "https://muzeoffice.com/blog/virtual-office-vs-po-box-in-texas"
+            ],
+            "clicks": 0,
+            "impressions": 9,
+            "ctr": 0,
+            "position": 5.3
+          },
+          {
+            "keys": [
+              "houston virtual mailbox",
+              "https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 9,
+            "ctr": 0,
+            "position": 32.7
+          },
+          {
+            "keys": [
+              "virtual address houston",
+              "https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 9,
+            "ctr": 0,
+            "position": 30.1
+          },
+          {
+            "keys": [
+              "business address houston",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 8,
+            "ctr": 0,
+            "position": 43
+          },
+          {
+            "keys": [
+              "is there a coqorking spage i can sit down and use my.laptop at the houstoj galleria mall?",
+              "https://muzeoffice.com/locations/houston"
+            ],
+            "clicks": 0,
+            "impressions": 8,
+            "ctr": 0,
+            "position": 11.1
+          },
+          {
+            "keys": [
+              "virtual business address houston texas",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 8,
+            "ctr": 0,
+            "position": 15.3
+          },
+          {
+            "keys": [
+              "virtual office houston texas",
+              "https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 8,
+            "ctr": 0,
+            "position": 47.4
+          },
+          {
+            "keys": [
+              "virtual offices houston texas",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 8,
+            "ctr": 0,
+            "position": 12.8
+          },
+          {
+            "keys": [
+              "virtual services houston tx",
+              "https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 8,
+            "ctr": 0,
+            "position": 19.4
+          },
+          {
+            "keys": [
+              "virtual services houston tx",
+              "https://muzeoffice.com/blog/virtual-office-vs-po-box-in-texas"
+            ],
+            "clicks": 0,
+            "impressions": 8,
+            "ctr": 0,
+            "position": 17.5
+          },
+          {
+            "keys": [
+              "houston virtual mail",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 7,
+            "ctr": 0,
+            "position": 11.4
+          },
+          {
+            "keys": [
+              "houston virtual mail",
+              "https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 7,
+            "ctr": 0,
+            "position": 38
+          },
+          {
+            "keys": [
+              "office space houston galleria",
+              "https://muzeoffice.com/locations/houston"
+            ],
+            "clicks": 0,
+            "impressions": 7,
+            "ctr": 0,
+            "position": 14.6
+          },
+          {
+            "keys": [
+              "virtual business address houston",
+              "https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 7,
+            "ctr": 0,
+            "position": 46.4
+          },
+          {
+            "keys": [
+              "virtual office address houston tx",
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 0,
+            "impressions": 7,
+            "ctr": 0,
+            "position": 11.9
+          },
+          {
+            "keys": [
+              "hourly conference rooms galleria",
+              "https://muzeoffice.com/las-vegas-meeting-rooms"
+            ],
+            "clicks": 0,
+            "impressions": 6,
+            "ctr": 0,
+            "position": 26.7
+          },
+          {
+            "keys": [
+              "hourly conference rooms galleria",
+              "https://muzeoffice.com/locations/houston"
+            ],
+            "clicks": 0,
+            "impressions": 6,
+            "ctr": 0,
+            "position": 15
+          },
+          {
+            "keys": [
+              "muse houston",
+              "https://muzeoffice.com/"
+            ],
+            "clicks": 0,
+            "impressions": 6,
+            "ctr": 0,
+            "position": 7.8
+          }
+        ],
+        "totalRows": 141,
+        "dimensions": [
+          "query",
+          "page"
+        ],
+        "period": {
+          "startDate": "2026-09-10",
+          "endDate": "2026-10-07"
+        },
+        "filtersApplied": [
+          {
+            "dimension": "query",
+            "operator": "includingRegex",
+            "expression": "houston|galleria|tanglewood"
+          }
+        ],
+        "searchType": "web"
+      }
+    },
+    "pages": {
+      "_meta": {
+        "source": "Google Search Console API (live data)",
+        "tool": "advanced_search_analytics",
+        "parameters": {
+          "days": 28,
+          "dimensions": [
+            "page"
+          ],
+          "filters": [],
+          "row_limit": 25,
+          "order_by": "clicks"
+        },
+        "note": "All numbers in this response come directly from the Google Search Console API. They are exact values, not estimates. Base your analysis only on this data. Do not invent or assume additional context."
+      },
+      "data": {
+        "rows": [
+          {
+            "keys": [
+              "https://muzeoffice.com/"
+            ],
+            "clicks": 57,
+            "impressions": 1955,
+            "ctr": 2.92,
+            "position": 11
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/blog/google-business-profile-verification-coworking-space"
+            ],
+            "clicks": 26,
+            "impressions": 2734,
+            "ctr": 0.95,
+            "position": 7.5
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/las-vegas-coworking"
+            ],
+            "clicks": 16,
+            "impressions": 1357,
+            "ctr": 1.18,
+            "position": 10
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/las-vegas-airport-coworking"
+            ],
+            "clicks": 14,
+            "impressions": 441,
+            "ctr": 3.17,
+            "position": 5.3
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/las-vegas-day-pass"
+            ],
+            "clicks": 13,
+            "impressions": 2228,
+            "ctr": 0.58,
+            "position": 14.9
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/locations/las-vegas"
+            ],
+            "clicks": 9,
+            "impressions": 433,
+            "ctr": 2.08,
+            "position": 4
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/las-vegas-virtual-office"
+            ],
+            "clicks": 7,
+            "impressions": 1549,
+            "ctr": 0.45,
+            "position": 14.7
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/about"
+            ],
+            "clicks": 5,
+            "impressions": 332,
+            "ctr": 1.51,
+            "position": 7.1
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/las-vegas-meeting-rooms"
+            ],
+            "clicks": 5,
+            "impressions": 3387,
+            "ctr": 0.15,
+            "position": 18.4
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-houston"
+            ],
+            "clicks": 4,
+            "impressions": 2785,
+            "ctr": 0.14,
+            "position": 14.8
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/las-vegas-private-office"
+            ],
+            "clicks": 4,
+            "impressions": 414,
+            "ctr": 0.97,
+            "position": 9.6
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/locations/houston"
+            ],
+            "clicks": 4,
+            "impressions": 363,
+            "ctr": 1.1,
+            "position": 12.1
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/las-vegas-flexible-workspaces"
+            ],
+            "clicks": 3,
+            "impressions": 366,
+            "ctr": 0.82,
+            "position": 22.3
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-houston"
+            ],
+            "clicks": 2,
+            "impressions": 1484,
+            "ctr": 0.13,
+            "position": 16.5
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/blog/how-to-set-up-a-virtual-office-in-las-vegas"
+            ],
+            "clicks": 2,
+            "impressions": 554,
+            "ctr": 0.36,
+            "position": 15.8
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/blog/virtual-office-vs-po-box-in-nevada"
+            ],
+            "clicks": 2,
+            "impressions": 574,
+            "ctr": 0.35,
+            "position": 10
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/book-a-tour"
+            ],
+            "clicks": 2,
+            "impressions": 127,
+            "ctr": 1.57,
+            "position": 6.2
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/blog"
+            ],
+            "clicks": 1,
+            "impressions": 197,
+            "ctr": 0.51,
+            "position": 8.3
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/blog/best-virtual-office-providers-in-las-vegas"
+            ],
+            "clicks": 1,
+            "impressions": 89,
+            "ctr": 1.12,
+            "position": 11.4
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/blog/client-meetings-during-las-vegas-convention"
+            ],
+            "clicks": 1,
+            "impressions": 34,
+            "ctr": 2.94,
+            "position": 9.8
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/blog/coworking-for-therapists-las-vegas"
+            ],
+            "clicks": 1,
+            "impressions": 10,
+            "ctr": 10,
+            "position": 6.9
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/blog/coworking-near-las-vegas-airport"
+            ],
+            "clicks": 1,
+            "impressions": 37,
+            "ctr": 2.7,
+            "position": 9.2
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/blog/how-to-budget-a-corporate-event-in-las-vegas"
+            ],
+            "clicks": 1,
+            "impressions": 293,
+            "ctr": 0.34,
+            "position": 4.4
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/blog/meeting-rooms-in-las-vegas-booking-guide"
+            ],
+            "clicks": 1,
+            "impressions": 37,
+            "ctr": 2.7,
+            "position": 10.3
+          },
+          {
+            "keys": [
+              "https://muzeoffice.com/blog/meeting-space-near-las-vegas-airport"
+            ],
+            "clicks": 1,
+            "impressions": 115,
+            "ctr": 0.87,
+            "position": 7.9
+          }
+        ],
+        "totalRows": 101,
+        "dimensions": [
+          "page"
+        ],
+        "period": {
+          "startDate": "2026-09-10",
+          "endDate": "2026-10-07"
+        },
+        "filtersApplied": [],
+        "searchType": "web"
+      }
+    },
+    "drops": {
+      "_meta": {
+        "source": "Google Search Console API (live data)",
+        "tool": "traffic_drops",
+        "parameters": {
+          "days": 28
+        },
+        "note": "All numbers in this response come directly from the Google Search Console API. They are exact values, not estimates. Base your analysis only on this data. Do not invent or assume additional context."
+      },
+      "data": [
+        {
+          "page": "https://muzeoffice.com/las-vegas-coworking",
+          "currentClicks": 16,
+          "priorClicks": 25,
+          "clickChange": -9,
+          "currentPosition": 10,
+          "priorPosition": 10.8,
+          "positionChange": -0.8,
+          "diagnosis": "CTR collapse (rankings stable, fewer clicks)"
+        },
+        {
+          "page": "https://muzeoffice.com/las-vegas-day-pass",
+          "currentClicks": 13,
+          "priorClicks": 20,
+          "clickChange": -7,
+          "currentPosition": 14.9,
+          "priorPosition": 14.9,
+          "positionChange": 0,
+          "diagnosis": "CTR collapse (rankings stable, fewer clicks)"
+        },
+        {
+          "page": "https://muzeoffice.com/las-vegas-private-office",
+          "currentClicks": 4,
+          "priorClicks": 8,
+          "clickChange": -4,
+          "currentPosition": 9.6,
+          "priorPosition": 10.3,
+          "positionChange": -0.7,
+          "diagnosis": "CTR collapse (rankings stable, fewer clicks)"
+        },
+        {
+          "page": "https://muzeoffice.com/blog/virtual-office-vs-po-box-in-nevada",
+          "currentClicks": 2,
+          "priorClicks": 4,
+          "clickChange": -2,
+          "currentPosition": 10,
+          "priorPosition": 9.9,
+          "positionChange": 0.1,
+          "diagnosis": "CTR collapse (rankings stable, fewer clicks)"
+        },
+        {
+          "page": "https://muzeoffice.com/blog/podcasting-rooms-in-las-vegas",
+          "currentClicks": 0,
+          "priorClicks": 2,
+          "clickChange": -2,
+          "currentPosition": 15.8,
+          "priorPosition": 21.4,
+          "positionChange": -5.6,
+          "diagnosis": "CTR collapse (rankings stable, fewer clicks)"
+        },
+        {
+          "page": "https://muzeoffice.com/blog/virtual-office-cost",
+          "currentClicks": 0,
+          "priorClicks": 2,
+          "clickChange": -2,
+          "currentPosition": 8.6,
+          "priorPosition": 8.4,
+          "positionChange": 0.1,
+          "diagnosis": "CTR collapse (rankings stable, fewer clicks)"
+        },
+        {
+          "page": "https://muzeoffice.com/muze-cube-world",
+          "currentClicks": 0,
+          "priorClicks": 2,
+          "clickChange": -2,
+          "currentPosition": 7,
+          "priorPosition": 13.5,
+          "positionChange": -6.4,
+          "diagnosis": "CTR collapse (rankings stable, fewer clicks)"
+        },
+        {
+          "page": "https://muzeoffice.com/authors/ashley-lacy",
+          "currentClicks": 0,
+          "priorClicks": 1,
+          "clickChange": -1,
+          "currentPosition": 3.5,
+          "priorPosition": 6.1,
+          "positionChange": -2.6,
+          "diagnosis": "CTR collapse (rankings stable, fewer clicks)"
+        },
+        {
+          "page": "https://muzeoffice.com/authors/robert-mai",
+          "currentClicks": 0,
+          "priorClicks": 1,
+          "clickChange": -1,
+          "currentPosition": 5.9,
+          "priorPosition": 7.8,
+          "positionChange": -1.9,
+          "diagnosis": "CTR collapse (rankings stable, fewer clicks)"
+        },
+        {
+          "page": "https://muzeoffice.com/blog/coworking-spaces-in-las-vegas-the-best-of-both-worlds",
+          "currentClicks": 0,
+          "priorClicks": 1,
+          "clickChange": -1,
+          "currentPosition": 15.6,
+          "priorPosition": 12.4,
+          "positionChange": 3.2,
+          "diagnosis": "Ranking loss"
+        },
+        {
+          "page": "https://muzeoffice.com/blog/virtual-office-for-llc",
+          "currentClicks": 0,
+          "priorClicks": 1,
+          "clickChange": -1,
+          "currentPosition": 6.7,
+          "priorPosition": 7.8,
+          "positionChange": -1.1,
+          "diagnosis": "CTR collapse (rankings stable, fewer clicks)"
+        },
+        {
+          "page": "https://muzeoffice.com/blog/where-to-work-during-aws-reinvent-las-vegas",
+          "currentClicks": 0,
+          "priorClicks": 1,
+          "clickChange": -1,
+          "currentPosition": 8,
+          "priorPosition": 9,
+          "positionChange": -0.9,
+          "diagnosis": "CTR collapse (rankings stable, fewer clicks)"
+        },
+        {
+          "page": "https://muzeoffice.com/blog/where-to-work-during-g2e-las-vegas",
+          "currentClicks": 0,
+          "priorClicks": 1,
+          "clickChange": -1,
+          "currentPosition": 6.2,
+          "priorPosition": 7.1,
+          "positionChange": -0.9,
+          "diagnosis": "CTR collapse (rankings stable, fewer clicks)"
+        },
+        {
+          "page": "https://muzeoffice.com/las-vegas-dedicated-desk",
+          "currentClicks": 0,
+          "priorClicks": 1,
+          "clickChange": -1,
+          "currentPosition": 7.5,
+          "priorPosition": 5.9,
+          "positionChange": 1.6,
+          "diagnosis": "CTR collapse (rankings stable, fewer clicks)"
+        },
+        {
+          "page": "https://muzeoffice.com/workspace-memberships",
+          "currentClicks": 0,
+          "priorClicks": 1,
+          "clickChange": -1,
+          "currentPosition": 6.4,
+          "priorPosition": 19,
+          "positionChange": -12.6,
+          "diagnosis": "CTR collapse (rankings stable, fewer clicks)"
+        }
+      ]
+    },
+    "roomQueries": {
+      "_meta": {
+        "source": "Google Search Console API (live data)",
+        "tool": "advanced_search_analytics",
+        "parameters": {
+          "days": 28,
+          "dimensions": [
+            "query"
+          ],
+          "filters": [
+            {
+              "dimension": "page",
+              "operator": "equals",
+              "expression": "https://muzeoffice.com/las-vegas-meeting-rooms"
+            }
+          ],
+          "row_limit": 20,
+          "order_by": "impressions"
+        },
+        "note": "All numbers in this response come directly from the Google Search Console API. They are exact values, not estimates. Base your analysis only on this data. Do not invent or assume additional context."
+      },
+      "data": {
+        "rows": [
+          {
+            "keys": [
+              "vassbo.se meeting rooms count"
+            ],
+            "clicks": 0,
+            "impressions": 624,
+            "ctr": 0,
+            "position": 5.7
+          },
+          {
+            "keys": [
+              "migo office building and conference meeting rooms"
+            ],
+            "clicks": 0,
+            "impressions": 325,
+            "ctr": 0,
+            "position": 8.4
+          },
+          {
+            "keys": [
+              "sjobogastgiveri.se meeting rooms count"
+            ],
+            "clicks": 0,
+            "impressions": 309,
+            "ctr": 0,
+            "position": 3.7
+          },
+          {
+            "keys": [
+              "conference room"
+            ],
+            "clicks": 0,
+            "impressions": 216,
+            "ctr": 0,
+            "position": 38.4
+          },
+          {
+            "keys": [
+              "virtual meeting rooms"
+            ],
+            "clicks": 0,
+            "impressions": 135,
+            "ctr": 0,
+            "position": 25.4
+          },
+          {
+            "keys": [
+              "virtual meeting room"
+            ],
+            "clicks": 0,
+            "impressions": 127,
+            "ctr": 0,
+            "position": 34.8
+          },
+          {
+            "keys": [
+              "conference room booking"
+            ],
+            "clicks": 0,
+            "impressions": 70,
+            "ctr": 0,
+            "position": 29.1
+          },
+          {
+            "keys": [
+              "online conference rooms"
+            ],
+            "clicks": 0,
+            "impressions": 66,
+            "ctr": 0,
+            "position": 22.9
+          },
+          {
+            "keys": [
+              "mobile meeting room"
+            ],
+            "clicks": 0,
+            "impressions": 49,
+            "ctr": 0,
+            "position": 36
+          },
+          {
+            "keys": [
+              "conference room rental las vegas"
+            ],
+            "clicks": 0,
+            "impressions": 48,
+            "ctr": 0,
+            "position": 37
+          },
+          {
+            "keys": [
+              "online conference room"
+            ],
+            "clicks": 0,
+            "impressions": 45,
+            "ctr": 0,
+            "position": 28.6
+          },
+          {
+            "keys": [
+              "can i book a flexible hourly meeting room in las vegas, and what cancellation rules should i watch for?"
+            ],
+            "clicks": 0,
+            "impressions": 44,
+            "ctr": 0,
+            "position": 6.5
+          },
+          {
+            "keys": [
+              "online meeting room"
+            ],
+            "clicks": 0,
+            "impressions": 42,
+            "ctr": 0,
+            "position": 25.7
+          },
+          {
+            "keys": [
+              "online meeting rooms"
+            ],
+            "clicks": 0,
+            "impressions": 41,
+            "ctr": 0,
+            "position": 21.4
+          },
+          {
+            "keys": [
+              "visbyfangelse.se meeting rooms capacity"
+            ],
+            "clicks": 0,
+            "impressions": 40,
+            "ctr": 0,
+            "position": 4.3
+          },
+          {
+            "keys": [
+              "virtual conference room"
+            ],
+            "clicks": 0,
+            "impressions": 34,
+            "ctr": 0,
+            "position": 42.4
+          },
+          {
+            "keys": [
+              "online meeting space"
+            ],
+            "clicks": 0,
+            "impressions": 31,
+            "ctr": 0,
+            "position": 16.9
+          },
+          {
+            "keys": [
+              "meeting rooms las vegas"
+            ],
+            "clicks": 0,
+            "impressions": 30,
+            "ctr": 0,
+            "position": 45.9
+          },
+          {
+            "keys": [
+              "virtual conference one time room"
+            ],
+            "clicks": 0,
+            "impressions": 30,
+            "ctr": 0,
+            "position": 30.2
+          },
+          {
+            "keys": [
+              "video conference rooms"
+            ],
+            "clicks": 0,
+            "impressions": 29,
+            "ctr": 0,
+            "position": 36.4
+          }
+        ],
+        "totalRows": 182,
+        "dimensions": [
+          "query"
+        ],
+        "period": {
+          "startDate": "2026-09-10",
+          "endDate": "2026-10-07"
+        },
+        "filtersApplied": [
+          {
+            "dimension": "page",
+            "operator": "equals",
+            "expression": "https://muzeoffice.com/las-vegas-meeting-rooms"
+          }
+        ],
+        "searchType": "web"
+      }
+    }
+  }
+}
