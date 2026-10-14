@@ -68,8 +68,8 @@ export default function AboutPage() {
       {/* Hero */}
       <section className="relative flex min-h-[60vh] items-end bg-[#1A1A1A] px-6 pb-16 pt-32">
         <Image
-          src="/images/hero/coworking-space.jpg"
-          alt="Inside Muze Office Las Vegas — open coworking area with desks, natural light, and members working alongside the on-site cafe"
+          src="/images/locations/las-vegas/coworking-floor.webp"
+          alt="Open coworking floor at Muze Office Las Vegas with shared desks, lounge seating, and private work booths"
           fill
           className="object-cover"
           fetchPriority="high"

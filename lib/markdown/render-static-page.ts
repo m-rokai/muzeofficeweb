@@ -20,7 +20,7 @@ function renderHome(): string {
   lines.push("# Muze Office");
   lines.push("");
   lines.push(
-    "> Flexible workspace in Las Vegas and Houston — coworking, virtual offices, private offices, meeting rooms, and event space. Month-to-month. Free parking. No long-term leases."
+    "> Flexible workspace open in Las Vegas, with an independently operated Houston franchise location planned. Las Vegas offers coworking, virtual offices, private offices, meeting rooms, and event space. Month-to-month. Free parking. No long-term leases."
   );
   lines.push("");
   lines.push(`**Canonical URL:** ${BRAND.url}/`);
@@ -60,7 +60,7 @@ function renderAbout(): string {
   return [
     "# About Muze Office",
     "",
-    "> Muze Office provides flexible coworking, virtual offices, private offices, meeting rooms, and event space in Las Vegas and Houston. No long-term leases. Month-to-month memberships designed for modern professionals.",
+    "> Muze Office provides flexible coworking, virtual offices, private offices, meeting rooms, and event space in Las Vegas, with an independently operated Houston franchise location planned. No Houston services are active yet. No long-term leases. Month-to-month memberships designed for modern professionals.",
     "",
     `**Canonical URL:** ${BRAND.url}/about`,
     "",
@@ -77,7 +77,7 @@ function renderAbout(): string {
     "## Locations",
     "",
     "- Las Vegas — 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119. 10 minutes from Harry Reid International Airport via I-215.",
-    "- Houston — 1800 Augusta Dr, Houston, TX 77057. Inside the 610 Loop in the Galleria / Tanglewood area.",
+    "- Houston — planned for 1800 Augusta Dr, Houston, TX 77057, in the Galleria / Tanglewood area. Join the waitlist or ask about pre-leasing at /locations/houston#waitlist.",
     "",
   ].join("\n");
 }
@@ -109,16 +109,23 @@ function renderContact(): string {
   lines.push("## Houston");
   lines.push("");
   if (hou) {
-    lines.push(`- **Address:** ${hou.address.street}, ${hou.address.city}, ${hou.address.state} ${hou.address.zip}`);
+    const isActive = hou.status === "active";
+    lines.push(`- **${isActive ? "Address" : "Planned address"}:** ${hou.address.street}, ${hou.address.city}, ${hou.address.state} ${hou.address.zip}`);
     if (hou.phone !== "TBD") lines.push(`- **Phone:** ${hou.phone}`);
     lines.push(`- **Email:** ${hou.email}`);
-    lines.push(
-      `- **Hours:** ${
-        hou.hours.is24Hours
-          ? "Open 24/7"
-          : `Monday–Friday, ${hou.hours.weekdays.open}–${hou.hours.weekdays.close}`
-      }`
-    );
+    if (isActive) {
+      lines.push(
+        `- **Hours:** ${
+          hou.hours.is24Hours
+            ? "Open 24/7"
+            : `Monday–Friday, ${hou.hours.weekdays.open}–${hou.hours.weekdays.close}`
+        }`
+      );
+    } else {
+      lines.push("- **Status:** Coming soon. No memberships, bookings, or address services are active yet.");
+      lines.push("- **Hours and opening date:** To be announced.");
+      lines.push(`- [Join the waitlist or ask about pre-leasing](${BRAND.url}/locations/${hou.slug}#waitlist)`);
+    }
   }
   lines.push("");
   lines.push("## Book a Tour");
@@ -134,7 +141,7 @@ function renderBookATour(): string {
     "",
     `**Canonical URL:** ${BRAND.url}/book-a-tour`,
     "",
-    "Schedule a 20–30 minute walkthrough of the Las Vegas coworking floor, private offices, meeting rooms, and on-site cafe. Houston is not open for tours yet; join early access for launch updates.",
+    "Schedule a 20–30 minute walkthrough of the Las Vegas coworking floor, private offices, meeting rooms, and on-site cafe. After your tour, work in our coworking space free for a day. Houston is not open for tours yet; join early access for launch updates.",
     "",
     "## Las Vegas",
     "",
@@ -145,9 +152,9 @@ function renderBookATour(): string {
     "## Houston",
     "",
     "- 1800 Augusta Dr, Houston, TX 77057",
-    "- Inside the 610 Loop in the Galleria / Tanglewood area",
+    "- Planned for the Galleria / Tanglewood area; not open for tours yet",
     "",
-    "Email access@muzeoffice.com to book a tour at either location.",
+    "Book a Las Vegas tour at /book-a-tour. For Houston, join the waitlist or ask about pre-leasing at /locations/houston#waitlist.",
     "",
   ].join("\n");
 }

@@ -593,7 +593,7 @@ const locationsOverviewFAQs: FAQ[] = [
   {
     question: "How do I find the Houston location?",
     answer:
-      "1800 Augusta Dr, Houston, TX 77057 — inside the 610 Loop in the Galleria / Tanglewood area, minutes from Post Oak Blvd, 15 minutes from the Texas Medical Center, and 25 minutes from George Bush Intercontinental (IAH) and William P. Hobby (HOU).",
+      "The planned Houston Galleria location is at 1800 Augusta Dr, Houston, TX 77057, in the Galleria / Tanglewood area. It is not open yet. Check live directions for travel times when planning a visit after opening.",
   },
   {
     question: "Will multi-city memberships be available?",
@@ -654,7 +654,7 @@ const houstonLocationFAQs: FAQ[] = [
   {
     question: "What is the address for Muze Office Houston?",
     answer:
-      "1800 Augusta Dr, Houston, TX 77057. It's a real commercial suite in the Galleria / Tanglewood area inside the 610 Loop — not a PO Box or mail-drop storefront — minutes from Post Oak Blvd.",
+      "The planned Houston Galleria location is at 1800 Augusta Dr, Houston, TX 77057, in the Galleria / Tanglewood area. It is not open yet; join the waitlist for confirmed opening and availability updates.",
   },
   {
     question: "How far is Muze Office Houston from IAH and Hobby airports?",
@@ -677,9 +677,9 @@ const houstonLocationFAQs: FAQ[] = [
       "No Houston services are active yet. The planned mix includes virtual office services, coworking, private offices, meeting rooms, and event space. Join early access and select the workspace type you need; availability and Houston pricing will be confirmed before sales open.",
   },
   {
-    question: "Does Texas have state income tax?",
+    question: "Can I ask about pre-leasing a Houston Galleria office?",
     answer:
-      "No. Texas has no state personal income tax. This is one reason many out-of-state founders form Texas LLCs and use a real Houston address like Muze Office Houston for their business filings.",
+      "Yes. Use the form above and choose Discuss pre-leasing a workspace. Share your workspace type, team size, and preferred timing so the team can follow up. This is an inquiry, not a reservation or lease agreement. Availability, pricing, and lease terms will be confirmed separately; no payment is collected through this form.",
   },
   {
     question: "Can I use the Houston address for my Texas LLC?",

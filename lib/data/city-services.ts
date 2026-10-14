@@ -223,7 +223,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     metaTitle: "Las Vegas Coworking & Shared Office — $25",
     metaDescription:
       "Las Vegas coworking with day passes from $25 and monthly hot desks from $129. Free parking, fast WiFi, coffee, and meeting rooms included. No long-term lease.",
-    heroImage: "/images/hero/coworking-space.jpg",
+    heroImage: "/images/locations/las-vegas/coworking-floor.webp",
     useCases: [
       "Remote workers tired of working from home or coffee shops",
       "Freelancers and solopreneurs who want community",
@@ -327,7 +327,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     metaTitle: "Las Vegas Day Pass — $25, Open 24/7",
     metaDescription:
       "Las Vegas coworking day pass for $25. Open 24/7; buy and activate online the same day and work until midnight. Gigabit WiFi and Herman Miller furniture.",
-    heroImage: "/images/hero/coworking-space.jpg",
+    heroImage: "/images/locations/las-vegas/coworking-floor.webp",
     useCases: [
       "Freelancers and consultants here for a single day of focused work",
       "CES, SEMA, NAB, MAGIC, Black Hat, and DEF CON attendees escaping the convention floor",
@@ -418,7 +418,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     metaTitle: "Hot Desk Las Vegas — $129/mo, 24/7 Access",
     metaDescription:
       "Hot desk coworking in Las Vegas for $129/mo at 6860 Bermuda Rd. Any-desk 24/7 mobile access, meeting credits, mail handling, free parking. Sign up online today.",
-    heroImage: "/images/hero/coworking-space.jpg",
+    heroImage: "/images/locations/las-vegas/coworking-floor.webp",
     useCases: [
       "Remote workers in the space three-to-five days a week",
       "Consultants who don't care which specific desk they sit at",
@@ -509,7 +509,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     metaTitle: "Dedicated Desk Las Vegas — $229/mo, Reserved",
     metaDescription:
       "Dedicated desk coworking in Las Vegas for $229/mo. Reserved desk, storage, 24/7 access, meeting credits, and free parking. Sign up online.",
-    heroImage: "/images/hero/coworking-space.jpg",
+    heroImage: "/images/locations/las-vegas/coworking-floor.webp",
     useCases: [
       "Remote workers who want a permanent desk and dual monitors",
       "Founders running a solo business out of Nevada daily",
@@ -600,7 +600,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     metaTitle: "Las Vegas Flexible Workspaces from $25",
     metaDescription:
       "Flexible workspaces in Las Vegas at 6860 Bermuda Rd: day pass $25, Hot Desk $129/mo, Dedicated Desk $229/mo, private offices — month-to-month, no lease. Book a tour.",
-    heroImage: "/images/hero/coworking-space.jpg",
+    heroImage: "/images/locations/las-vegas/coworking-floor.webp",
     useCases: [
       "Startups scaling from 3 to 8 people without signing a new lease",
       "Teams reducing office burn while keeping a professional address",
@@ -693,7 +693,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     metaTitle: "Private Office for Rent in Las Vegas",
     metaDescription:
       "Furnished private offices in Las Vegas, month-to-month. WiFi, utilities, meeting rooms, and free parking included. Solo offices to custom suites. Book a tour today.",
-    heroImage: "/images/hero/private-office.jpg",
+    heroImage: "/images/locations/las-vegas/private-office-wide.webp",
     useCases: [
       "Growing startups that need their own space",
       "Law firms, CPAs, and financial advisors",
@@ -985,7 +985,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     metaTitle: "Las Vegas Event Space $199/hr | Classroom $99/hr",
     metaDescription:
       "Rent Las Vegas event space for $199/hr or a classroom for up to 50 people for $99/hr. Full AV, flexible layouts, catering, and free parking.",
-    heroImage: "/images/hero/event-space.jpg",
+    heroImage: "/images/locations/las-vegas/classroom-training-room.webp",
     useCases: [
       "Corporate workshops and training sessions",
       "Networking events and mixers",
@@ -1097,7 +1097,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     metaTitle: "Airport Coworking Las Vegas | Near LAS",
     metaDescription:
       "Coworking near Las Vegas airport (LAS). Day passes from $25. 10 minutes from Harry Reid International. Free parking, fast WiFi, no membership required.",
-    heroImage: "/images/hero/coworking-space.jpg",
+    heroImage: "/images/locations/las-vegas/coworking-floor.webp",
     useCases: [
       "Travelers with long layovers who need a real workspace",
       "Business visitors in town for a day or two",
@@ -1197,7 +1197,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     metaTitle: "Convention Coworking Las Vegas | CES, SEMA",
     metaDescription:
       "Coworking for Las Vegas convention attendees. Day passes from $25, weekly passes available. Skip the hotel lobby — real desks, fast WiFi, free parking.",
-    heroImage: "/images/hero/coworking-space.jpg",
+    heroImage: "/images/locations/las-vegas/coworking-floor.webp",
     useCases: [
       "CES attendees and exhibitors",
       "SEMA Show visitors and vendors",

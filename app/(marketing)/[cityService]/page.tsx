@@ -137,6 +137,27 @@ export default async function CityServicePage({ params }: PageProps) {
   const pageData = getCityServiceData(cityService);
   if (!pageData) notFound();
 
+  const lasVegasHeroAlts: Record<string, string> = {
+    coworking:
+      "Open coworking floor at Muze Office Las Vegas with shared desks, lounge seating, and private work booths",
+    "day-pass":
+      "Coworking floor available to Las Vegas day pass visitors, with shared desks and private work booths",
+    "hot-desk":
+      "Shared hot desks and lounge seating at Muze Office Las Vegas",
+    "dedicated-desk":
+      "Shared coworking desks and ergonomic chairs at Muze Office Las Vegas",
+    "flexible-workspaces":
+      "Open coworking floor at Muze Office Las Vegas with desks, lounge seating, and private booths",
+    "private-office":
+      "Furnished private office at Muze Office Las Vegas with a desk, guest chairs, and wood slat accent wall",
+    "event-space":
+      "Las Vegas classroom arranged with movable tables and yellow chairs for training and workshops",
+    "airport-coworking":
+      "Open coworking floor at Muze Office Las Vegas with shared desks, lounge seating, and private booths",
+    "convention-coworking":
+      "Open coworking floor at Muze Office Las Vegas with shared desks, lounge seating, and private booths",
+  };
+
   const faqs = getFAQsForService(ctx.serviceId, ctx.locationId);
   const isComingSoon = location.status === "coming-soon";
   if (isComingSoon) {
@@ -219,7 +240,10 @@ export default async function CityServicePage({ params }: PageProps) {
         <div className="absolute inset-0">
           <Image
             src={pageData.heroImage}
-            alt={`${pageData.h1} at Muze Office ${location.name} — ${location.address.street !== "TBD" ? `${location.address.street}, ${location.address.city}, ${location.address.state}` : location.address.city}`}
+            alt={
+              (ctx.locationId === "las-vegas" && lasVegasHeroAlts[service.id]) ||
+              `${pageData.h1} at Muze Office ${location.name} — ${location.address.street !== "TBD" ? `${location.address.street}, ${location.address.city}, ${location.address.state}` : location.address.city}`
+            }
             fill
             className="object-cover opacity-40"
             fetchPriority="high"
@@ -779,6 +803,8 @@ export default async function CityServicePage({ params }: PageProps) {
               ? `Pick a tier, complete USPS Form 1583, and use the address where the receiving agency, bank, or platform permits a commercial mail-receiving address. Registered-agent and Google Business Profile requirements are separate.`
             : isEventSpace
               ? `Tell us your preferred date, guest count, and room setup. We will confirm availability and the right space for your event.`
+            : ["coworking", "hot-desk", "dedicated-desk", "private-office"].includes(service.id)
+              ? `Tour Muze Office ${location.name}, then work in our coworking space free for a day before choosing your workspace.`
             : `Book a tour today or call us to learn more about ${service.name.toLowerCase()} at Muze Office ${location.name}.`
         }
         primaryLabel={primaryCtaLabel}

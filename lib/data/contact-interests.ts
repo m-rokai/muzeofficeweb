@@ -7,7 +7,8 @@ export const CONTACT_INTERESTS = [
   { value: "private-office", label: "Private Office" },
   { value: "meeting-rooms", label: "Meeting Rooms" },
   { value: "event-space", label: "Event Space" },
-  { value: "houston-waitlist", label: "Houston Waitlist (opening 2026)" },
+  { value: "houston-waitlist", label: "Houston Waitlist (opening soon)" },
+  { value: "houston-prelease", label: "Houston Galleria Pre-Lease Inquiry" },
   { value: "general", label: "General Inquiry" },
 ] as const;
 

@@ -4,6 +4,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { MobileCTA } from "@/components/layout/mobile-cta";
+import { FreeWorkdayPopup } from "@/components/marketing/free-workday-popup";
 import { OrganizationSchema } from "@/components/seo/organization-schema";
 import { EngagementTracker } from "@/components/analytics/engagement-tracker";
 import { Analytics } from "@vercel/analytics/next";
@@ -33,7 +34,7 @@ export const metadata: Metadata = {
     template: "%s | Muze Office",
   },
   description:
-    "Coworking, virtual offices, private offices, and meeting rooms in Las Vegas. Month-to-month, with a $25 day pass and virtual office plans from $39/mo. Houston opening in 2026.",
+    "Coworking, virtual offices, private offices, and meeting rooms in Las Vegas. Month-to-month, with a $25 day pass and virtual office plans from $39/mo. Houston coming soon.",
   metadataBase: new URL("https://muzeoffice.com"),
   openGraph: {
     siteName: "Muze Office",
@@ -72,6 +73,7 @@ export default function RootLayout({
         <main className="flex-1 pb-[68px] md:pb-0">{children}</main>
         <SiteFooter />
         <MobileCTA />
+        <FreeWorkdayPopup />
         <EngagementTracker />
         <Analytics />
         <Script

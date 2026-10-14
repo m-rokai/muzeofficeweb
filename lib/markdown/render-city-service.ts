@@ -35,6 +35,9 @@ export function renderCityServiceMarkdown(slug: string): string | null {
   const service = getService(data.serviceId);
   const location = getLocation(data.cityId);
   if (!service || !location) return null;
+  // Match the HTML redirect to the pre-opening hub. Do not expose dormant
+  // service prices, hours, or booking claims through the Markdown mirror.
+  if (location.status !== "active") return renderCityMarkdown(location.id);
 
   const lines: string[] = [];
   const canonical = `${BRAND.url}/${slug}`;
@@ -165,6 +168,31 @@ export function renderCityServiceMarkdown(slug: string): string | null {
 export function renderCityMarkdown(locationId: string): string | null {
   const location: Location | undefined = getLocation(locationId);
   if (!location) return null;
+
+  if (location.status !== "active") {
+    const canonical = `${BRAND.url}/locations/${location.slug}`;
+    return [
+      `# Muze Office ${location.name}${location.slug === "houston" ? " Galleria" : ""} — Opening Soon`,
+      "",
+      `**Canonical URL:** ${canonical}`,
+      `**Planned address:** ${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}`,
+      `**Email:** ${location.email}`,
+      "**Status:** Coming soon. No memberships, bookings, or address services are active yet.",
+      "**Hours and opening date:** To be announced.",
+      "",
+      "## Waitlist and pre-lease inquiries",
+      "",
+      "Join the opening waitlist or discuss pre-leasing a workspace. Share your workspace type, team size, and preferred timing for follow-up. No payment is collected or space reserved; availability, pricing, and lease terms will be confirmed separately.",
+      `[Join the waitlist or ask about pre-leasing](${canonical}#waitlist)`,
+      "",
+      "## Planned workspace options",
+      "",
+      "Private offices, coworking, virtual office services, meeting rooms, and event space. Final availability will be confirmed before opening.",
+      "",
+      ...location.localCues.map((cue) => `- ${cue}`),
+      "",
+    ].join("\n");
+  }
 
   const lines: string[] = [];
   const canonical = `${BRAND.url}/locations/${location.slug}`;

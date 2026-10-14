@@ -94,8 +94,8 @@ export default function HomePage() {
       {/* Hero */}
       <section className="relative flex min-h-[90vh] items-end overflow-hidden bg-[#1A1A1A] px-6 pb-20 pt-32">
         <Image
-          src="/images/hero/coworking-space.jpg"
-          alt="Muze Office coworking lounge at 6860 Bermuda Rd, Suite 200 in Las Vegas, with open desks, natural light, and a view toward the on-site cafe"
+          src="/images/locations/las-vegas/coworking-floor.webp"
+          alt="Open coworking floor at Muze Office Las Vegas with shared desks, lounge seating, and private work booths"
           fill
           fetchPriority="high"
           sizes="100vw"
@@ -131,6 +131,9 @@ export default function HomePage() {
               Find Your Desk
             </Link>
           </div>
+          <p className="mt-4 max-w-[580px] text-base font-medium text-[#F5C45D]">
+            Come tour Muze Office Las Vegas, then work in our space free for a day.
+          </p>
           <div className="mt-10 flex flex-wrap items-center gap-3 sm:gap-6 text-base text-gray-400">
             <span>Month-to-month, no leases</span>
             <Separator orientation="vertical" className="h-4 bg-gray-600" />
@@ -250,7 +253,7 @@ export default function HomePage() {
             data-cta="houston_waitlist"
             data-cta-location="homepage_houston_feature"
             className="group block"
-            aria-label="Explore the planned Muze Office Houston location and join early access"
+            aria-label="Explore the planned Muze Office Houston location, join the waitlist, or ask about pre-leasing"
           >
             <Card className="overflow-hidden border-[#E6E4DF] bg-[#F7F6F3] transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
               <CardContent className="flex flex-col gap-8 p-8 md:flex-row md:items-center md:justify-between md:p-10">
@@ -259,14 +262,14 @@ export default function HomePage() {
                     <MapPin className="mr-1.5 h-3.5 w-3.5" /> Planned Houston location
                   </Badge>
                   <h2 className="text-3xl font-semibold md:text-4xl">
-                    Houston Galleria — opening in 2026
+                    Houston Galleria — opening soon
                   </h2>
                   <p className="mt-4 text-lg leading-relaxed text-[#74726D]">
-                    An independently operated Muze Office franchise is planned for 1800 Augusta Dr in the Galleria / Tanglewood area. Services, hours, pricing, and address use are not active yet.
+                    An independently operated Muze Office franchise is planned for 1800 Augusta Dr in the Galleria / Tanglewood area. Join the waitlist or ask about pre-leasing; availability and terms will be confirmed separately. Services, hours, pricing, and address use are not active yet.
                   </p>
                 </div>
                 <span className="inline-flex shrink-0 items-center gap-2 text-base font-semibold text-[#1A1A1A] transition-colors group-hover:text-[#8A6000]">
-                  View Houston plans <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  Join the waitlist / ask about pre-leasing <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
                 </span>
               </CardContent>
             </Card>
@@ -280,10 +283,10 @@ export default function HomePage() {
           <div className="mb-14 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
               <h2 className="text-3xl font-semibold md:text-4xl lg:text-5xl">
-                Las Vegas open now; Houston planned for 2026
+                Las Vegas open now; Houston coming soon
               </h2>
               <p className="mt-4 max-w-[600px] text-lg text-[#74726D]">
-                Open in Las Vegas at 6860 Bermuda Rd with free parking, 10 minutes from Harry Reid International Airport. An independently operated Muze Office franchise location is planned for Houston in 2026 at 1800 Augusta Dr in the Galleria / Tanglewood area.
+                Open in Las Vegas at 6860 Bermuda Rd with free parking, 10 minutes from Harry Reid International Airport. An independently operated Muze Office franchise location is planned for Houston at 1800 Augusta Dr in the Galleria / Tanglewood area.
               </p>
             </div>
             <Link
@@ -506,7 +509,7 @@ export default function HomePage() {
       {/* Final CTA */}
       <CTASection
         heading="Ready to find your workspace?"
-        subtitle="Coworking, virtual offices, and private offices in Las Vegas. Month-to-month. No commitment. Book a tour today."
+        subtitle="Book a tour of our Las Vegas workspace and stay to work here free for a day. Explore coworking and private offices before choosing a plan."
         primaryLabel="Book a Free Tour"
         primaryHref={BRAND.booking.tourUrl}
         ctaLocation="homepage_bottom"

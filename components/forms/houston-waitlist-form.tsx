@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import { track } from "@vercel/analytics";
 import { CheckCircle2, Loader2, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -27,6 +28,7 @@ type Status = "idle" | "submitting" | "sent" | "error";
 
 export function HoustonWaitlistForm() {
   const [status, setStatus] = useState<Status>("idle");
+  const [inquiryType, setInquiryType] = useState("waitlist");
   const [serverMessage, setServerMessage] = useState("");
   const [startedAt] = useState(() => Date.now());
   const startedTracking = useRef(false);
@@ -47,6 +49,8 @@ export function HoustonWaitlistForm() {
     const formData = new FormData(form);
     const workspace = String(formData.get("workspace") ?? "");
     const timeline = String(formData.get("timeline") ?? "not-provided");
+    const isPrelease = formData.get("inquiryType") === "prelease";
+    const teamSize = String(formData.get("teamSize") ?? "").trim();
     const workspaceLabel =
       WORKSPACE_OPTIONS.find((option) => option.value === workspace)?.label ??
       workspace;
@@ -64,10 +68,13 @@ export function HoustonWaitlistForm() {
         email: String(formData.get("email") ?? "").trim(),
         phone: String(formData.get("phone") ?? "").trim(),
         company: String(formData.get("company") ?? "").trim(),
-        interest: "houston-waitlist",
+        interest: isPrelease ? "houston-prelease" : "houston-waitlist",
         message: [
-          "Houston early-access request.",
+          isPrelease
+            ? "Houston Galleria pre-lease inquiry. Request for follow-up only; no reservation or lease agreement."
+            : "Houston Galleria waitlist request.",
           `Workspace interest: ${workspaceLabel}.`,
+          `Team size: ${teamSize || "Not provided"}.`,
           `Expected timing: ${timelineLabel}.`,
           `Source path: ${attribution.landingPath}.`,
           `Referrer host: ${attribution.referrerHost}.`,
@@ -83,6 +90,7 @@ export function HoustonWaitlistForm() {
 
       if (result.success) {
         track("houston_waitlist_submitted", {
+          inquiry_type: isPrelease ? "prelease" : "waitlist",
           workspace,
           timeline,
           source_path: attribution.landingPath,
@@ -116,11 +124,14 @@ export function HoustonWaitlistForm() {
       >
         <CheckCircle2 className="h-7 w-7 text-green-700" />
         <h3 className="mt-3 font-[family-name:var(--font-plus-jakarta)] text-xl font-semibold text-[#1A1A1A]">
-          Early-access request received
+          {inquiryType === "prelease"
+            ? "Pre-lease inquiry received"
+            : "You’re on the Houston Galleria waitlist"}
         </h3>
         <p className="mt-2 text-sm leading-relaxed text-[#74726D]">
-          We&apos;ll email you with Houston opening updates and next steps. No
-          membership or address service is active at this location yet.
+          We&apos;ll follow up about your workspace needs and confirmed opening
+          details. This request does not reserve an office or activate a
+          membership or address service.
         </p>
       </div>
     );
@@ -157,6 +168,21 @@ export function HoustonWaitlistForm() {
           <span>{serverMessage}</span>
         </div>
       )}
+
+      <div className="flex flex-col gap-1.5">
+        <Label htmlFor="houston-inquiry-type">How can we help?</Label>
+        <select
+          id="houston-inquiry-type"
+          name="inquiryType"
+          value={inquiryType}
+          onChange={(event) => setInquiryType(event.target.value)}
+          disabled={isSubmitting}
+          className="h-10 rounded-md border border-input bg-transparent px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-3 focus-visible:ring-ring/50 disabled:opacity-50"
+        >
+          <option value="waitlist">Join the opening waitlist</option>
+          <option value="prelease">Discuss pre-leasing a workspace</option>
+        </select>
+      </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="flex flex-col gap-1.5">
@@ -244,6 +270,19 @@ export function HoustonWaitlistForm() {
         </select>
       </div>
 
+      <div className="flex flex-col gap-1.5">
+        <Label htmlFor="houston-team-size">Team size (optional)</Label>
+        <Input
+          id="houston-team-size"
+          name="teamSize"
+          type="number"
+          min={1}
+          max={10000}
+          step={1}
+          disabled={isSubmitting}
+        />
+      </div>
+
       <Button
         type="submit"
         disabled={isSubmitting}
@@ -254,15 +293,17 @@ export function HoustonWaitlistForm() {
         {isSubmitting ? (
           <>
             <Loader2 className="h-4 w-4 animate-spin" />
-            Joining…
+            Sending…
           </>
         ) : (
-          "Join Houston early access"
+          inquiryType === "prelease" ? "Send pre-lease inquiry" : "Join the Houston waitlist"
         )}
       </Button>
       <p className="text-xs leading-relaxed text-[#74726D]">
         By submitting, you agree that Muze Office may contact you about the
-        Houston opening. No payment or membership commitment is required.
+        Houston Galleria opening and your workspace request. No payment is
+        collected and no space is reserved. Pricing and lease terms will be
+        confirmed separately. <Link href="/privacy-policy" className="underline">Privacy policy</Link>.
       </p>
     </form>
   );

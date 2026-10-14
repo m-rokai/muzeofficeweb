@@ -86,6 +86,9 @@ export default function WorkspaceMembershipsPage() {
               month-to-month with no long-term lease. Find the plan that fits your
               work style.
             </p>
+            <p className="mt-4 text-base font-medium text-[#8A6000]">
+              Thinking about a desk or office? Tour our Las Vegas space and work here free for a day.
+            </p>
           </div>
         </FadeIn>
       </Section>
@@ -201,7 +204,7 @@ export default function WorkspaceMembershipsPage() {
       {/* CTA */}
       <CTASection
         heading="Not sure which plan is right for you?"
-        subtitle="Book a tour and our team will walk you through the options. No pressure, no commitment."
+        subtitle="Tour our Las Vegas space, then work here free for a day. Get a feel for the desks and community before you choose a plan."
         primaryLabel="Book a Tour"
         primaryHref={BRAND.booking.tourUrl}
         ctaLocation="workspace_memberships_bottom"

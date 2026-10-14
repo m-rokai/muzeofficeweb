@@ -40,6 +40,49 @@ const coreServiceIds = [
   "event-space",
 ];
 
+const lasVegasPhotos = [
+  {
+    src: "coworking-floor.webp",
+    alt: "Open coworking floor in the Las Vegas location, with shared tables, lounge seating, and private work booths",
+    label: "Coworking floor",
+  },
+  {
+    src: "coworking-workstations.webp",
+    alt: "Shared coworking desks and ergonomic chairs at Muze Office Las Vegas",
+    label: "Shared workstations",
+  },
+  {
+    src: "classroom-training-room.webp",
+    alt: "Las Vegas classroom set up with movable tables and yellow chairs for training and workshops",
+    label: "Classroom and training room",
+  },
+  {
+    src: "coworking-lounge.webp",
+    alt: "Coworking lounge with communal tables, private booths, and cafe seating in Las Vegas",
+    label: "Coworking lounge",
+  },
+  {
+    src: "phone-booth.webp",
+    alt: "Enclosed phone booth with soft seating and a small table at the Las Vegas workspace",
+    label: "Private booth",
+  },
+  {
+    src: "small-meeting-office.webp",
+    alt: "Small furnished meeting office with a desk, guest chairs, a loveseat, and wood slat accent wall",
+    label: "Small meeting office",
+  },
+  {
+    src: "private-office-desk.webp",
+    alt: "Furnished private office with a desk, guest chairs, and wood slat accent wall in Las Vegas",
+    label: "Furnished private office",
+  },
+  {
+    src: "private-office-wide.webp",
+    alt: "Wide view of a furnished Las Vegas private office with guest seating and a desk",
+    label: "Private office",
+  },
+];
+
 export function generateStaticParams() {
   return locations.map((loc) => ({ city: loc.slug }));
 }
@@ -68,17 +111,17 @@ export async function generateMetadata({
 
   if (isHoustonLaunchPage) {
     return {
-      title: "Muze Office Houston — Galleria Opening 2026",
+      title: "Houston Galleria Offices & Coworking — Opening Soon",
       description:
-        "Join Muze Office Houston early access for planned virtual office, coworking, private offices, and meeting rooms at 1800 Augusta Dr. Services are not active yet.",
+        "Join the Houston Galleria waitlist or ask about pre-leasing at 1800 Augusta Dr. Private offices, coworking and virtual offices planned. Opening details to come.",
       alternates: { canonical: `/locations/${city}` },
       openGraph: {
         ...OG_DEFAULTS,
         type: "website",
         url: `/locations/${city}`,
-        title: "Muze Office Houston — Galleria Opening 2026",
+        title: "Houston Galleria Offices & Coworking — Opening Soon",
         description:
-          "Join early access for Houston opening updates, planned coworking, virtual office, private office, and meeting space availability.",
+          "Join the Houston Galleria waitlist or send a pre-lease inquiry for planned private offices, coworking, virtual offices and meeting space.",
       },
     };
   }
@@ -161,7 +204,7 @@ export default async function LocationDetailPage({
             <div className="flex items-center gap-3">
               <h1 className="font-[family-name:var(--font-plus-jakarta)] text-4xl font-semibold text-white md:text-5xl">
                 {isHoustonLaunchPage
-                  ? "Muze Office Houston, Opening in 2026"
+                  ? "Houston Galleria Offices & Coworking, Opening Soon"
                   : `Muze Office ${location.name}`}
               </h1>
               {!isActive && (
@@ -172,7 +215,7 @@ export default async function LocationDetailPage({
             </div>
             <p className="mt-4 max-w-[560px] text-base leading-relaxed text-gray-300 md:text-lg">
               {isActive
-                ? `Open 24/7 at ${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}. Same-day Day Passes and month-to-month memberships with free parking.`
+                ? `Open 24/7 at ${location.address.street}, ${location.address.city}, ${location.address.state} ${location.address.zip}. Tour the space and work here free for a day. Same-day Day Passes and month-to-month memberships with free parking.`
                 : `An independently operated Muze Office franchise location is planned at ${location.address.street} in Houston's Galleria / Tanglewood area. Join early access for verified opening updates; no Houston memberships or address services are active yet.`}
             </p>
             {isHoustonLaunchPage && (
@@ -185,7 +228,7 @@ export default async function LocationDetailPage({
                   "mt-6 w-fit rounded-lg bg-[#EAA820] text-[#1A1A1A] hover:bg-[#C17A28]",
                 )}
               >
-                Join Houston early access
+                Join the waitlist / ask about pre-leasing
               </a>
             )}
           </div>
@@ -202,16 +245,18 @@ export default async function LocationDetailPage({
             <FadeIn>
               <div>
                 <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8A6000]">
-                  Houston early access
+                  Houston Galleria early access
                 </p>
                 <h2 className="mt-3 font-[family-name:var(--font-plus-jakarta)] text-3xl font-semibold text-[#1A1A1A]">
-                  Tell us what workspace you need
+                  Join the waitlist or discuss pre-leasing
                 </h2>
                 <p className="mt-4 max-w-[560px] leading-relaxed text-[#74726D]">
                   Join the opening list for updates about planned coworking,
                   private offices, virtual office services, and meeting space
-                  near the Galleria. We&apos;ll use your response to prioritize
-                  demand and contact you when availability is confirmed.
+                  near the Galleria. Planning an office for your team? Select
+                  pre-leasing in the form so we can follow up on your space needs
+                  and timing. Availability, pricing, and lease terms will be
+                  confirmed separately.
                 </p>
                 <ul className="mt-6 flex flex-col gap-3 text-sm text-[#74726D]">
                   <li className="flex gap-2">
@@ -234,6 +279,43 @@ export default async function LocationDetailPage({
                 <HoustonWaitlistForm />
               </div>
             </FadeIn>
+          </div>
+        </Section>
+      )}
+
+      {location.slug === "las-vegas" && (
+        <Section variant="gray">
+          <div className="mx-auto max-w-[1200px]">
+            <div className="mb-8 max-w-[680px]">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-[#8A6000]">
+                Inside Muze Office
+              </p>
+              <h2 className="mt-3 font-[family-name:var(--font-plus-jakarta)] text-3xl font-semibold text-[#1A1A1A]">
+                Explore our Las Vegas workspace
+              </h2>
+              <p className="mt-3 text-[#74726D]">
+                Recent photos of the coworking floor, private offices, booths,
+                and classroom at 6860 Bermuda Rd, Suite 200.
+              </p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {lasVegasPhotos.map((photo) => (
+                <figure key={photo.src} className="overflow-hidden rounded-xl bg-white shadow-sm">
+                  <div className="relative aspect-[4/3]">
+                    <Image
+                      src={`/images/locations/las-vegas/${photo.src}`}
+                      alt={photo.alt}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                      className="object-cover"
+                    />
+                  </div>
+                  <figcaption className="px-4 py-3 text-sm font-medium text-[#1A1A1A]">
+                    {photo.label}
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </Section>
       )}
@@ -294,7 +376,7 @@ export default async function LocationDetailPage({
                   </span>
                 ) : (
                   <span>
-                    Planned opening: 2026
+                    Opening date and hours to be announced
                     <br />
                     Hours and opening date: to be announced
                   </span>
@@ -581,7 +663,7 @@ export default async function LocationDetailPage({
         }
         subtitle={
           isActive
-            ? "Book a tour today. Walk through the space, meet the community, and find the plan that fits."
+            ? "Book a tour, meet the community, and work in our coworking space free for a day before you choose a plan."
             : "Get notified when our Houston location opens. Reach out with questions or early interest."
         }
         primaryLabel={isActive ? "Book a Tour" : "Join Houston early access"}

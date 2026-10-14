@@ -20,9 +20,9 @@ import { FadeIn, StaggerContainer, StaggerItem } from "@/components/marketing/an
 import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
-  title: "Book a Free Tour — Las Vegas Workspace",
+  title: "Book a Tour & Free Workday — Las Vegas Workspace",
   description:
-    "Book a free tour of Muze Office Las Vegas at 6860 Bermuda Rd — see coworking desks, private offices, and meeting rooms. Call (702) 370-7515 or book online today.",
+    "Tour Muze Office Las Vegas at 6860 Bermuda Rd, then work in our space free for a day. See coworking desks, private offices, and meeting rooms. Book online today.",
   alternates: { canonical: "/book-a-tour" },
   openGraph: { ...OG_DEFAULTS, type: "website", url: "/book-a-tour" },
 };
@@ -42,9 +42,9 @@ const steps = [
   },
   {
     icon: <Handshake className="h-6 w-6" />,
-    title: "3. Choose your plan",
+    title: "3. Work here for a day",
     description:
-      "Find the membership that fits. Day passes, dedicated desks, private offices — all month-to-month, no long-term lease.",
+      "After your tour, work in our coworking space free for a day. Get a feel for Muze before choosing a membership.",
   },
 ];
 
@@ -65,13 +65,14 @@ export default function BookATourPage() {
         <div className="mx-auto max-w-[800px] text-center">
           <FadeIn>
             <h1 className="font-[family-name:var(--font-plus-jakarta)] text-4xl font-semibold md:text-5xl">
-              Book a Tour &mdash; Visit Muze Office Las Vegas
+              Tour Muze Office, Then Work Here Free for a Day
             </h1>
           </FadeIn>
           <FadeIn delay={0.1}>
             <p className="mt-4 text-base text-[#74726D] md:text-lg">
-              See the space in person. Walk through coworking desks, private offices,
-              meeting rooms, and our on-site cafe at 6860 Bermuda Rd, Suite 200, Las Vegas.
+              Visit our Las Vegas workspace at 6860 Bermuda Rd, Suite 200.
+              See the desks, offices, meeting rooms, and cafe, then stay and try
+              coworking for a day on us.
             </p>
           </FadeIn>
           <FadeIn delay={0.2}>
@@ -113,6 +114,9 @@ export default function BookATourPage() {
                 Call (702) 370-7515
               </a>
             </div>
+            <p className="mt-4 text-sm text-[#74726D]">
+              Bring your laptop and let our team know you&apos;d like to stay for your free workday.
+            </p>
           </FadeIn>
         </div>
       </Section>
@@ -125,7 +129,7 @@ export default function BookATourPage() {
               What to expect
             </h2>
             <p className="mt-3 max-w-[560px] text-base text-[#74726D]">
-              Three simple steps from scheduling to your first day.
+              Three simple steps from scheduling to trying the space for yourself.
             </p>
           </div>
         </FadeIn>
