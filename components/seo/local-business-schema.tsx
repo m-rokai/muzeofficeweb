@@ -39,6 +39,7 @@ export function LocalBusinessSchema({
     externalProfiles.yelp,
     externalProfiles.bbb,
     externalProfiles.gbp,
+    ...(externalProfiles.directories ?? []),
   ].filter((url): url is string => Boolean(url));
 
   const data: Record<string, unknown> = {

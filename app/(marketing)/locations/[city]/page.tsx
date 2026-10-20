@@ -114,7 +114,7 @@ export async function generateMetadata({
       title: "Houston Galleria Offices & Coworking — Opening Soon",
       description:
         "Join the Houston Galleria waitlist or ask about pre-leasing at 1800 Augusta Dr. Private offices, coworking and virtual offices planned. Opening details to come.",
-      alternates: { canonical: `/locations/${city}` },
+      alternates: { canonical: `/locations/${city}`, types: { "text/markdown": `/locations/${city}.md` } },
       openGraph: {
         ...OG_DEFAULTS,
         type: "website",
@@ -132,7 +132,7 @@ export async function generateMetadata({
         ? { absolute: "Muze Office Las Vegas — 24/7 Coworking, Hours & Directions" }
         : `Muze Office ${location.name} — Hours & Directions`,
     description: `Visit Muze Office ${location.name} at ${shortAddress}. Hours, parking, directions, and amenities. Month-to-month memberships available. ${phoneCta}`,
-    alternates: { canonical: `/locations/${city}` },
+    alternates: { canonical: `/locations/${city}`, types: { "text/markdown": `/locations/${city}.md` } },
     openGraph: { ...OG_DEFAULTS, type: "website", url: `/locations/${city}` },
     // Generic future locations stay out of search until their address and
     // launch information are confirmed. Houston is handled above as the one

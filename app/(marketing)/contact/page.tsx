@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Contact Us — Las Vegas Workspace, Book a Tour",
   description:
     "Visit Muze Office Las Vegas at 6860 Bermuda Rd, Suite 200 — free parking, book a tour. Email access@muzeoffice.com or call (702) 370-7515, Mon–Fri 10am–5pm.",
-  alternates: { canonical: "/contact" },
+  alternates: { canonical: "/contact", types: { "text/markdown": "/contact.md" } },
   openGraph: { ...OG_DEFAULTS, type: "website", url: "/contact" },
 };
 

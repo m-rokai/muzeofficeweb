@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: "Coworking & Virtual Office Blog",
   description:
     "Tips, guides, and insights on coworking, virtual offices, remote work, and flexible workspace in Las Vegas and Houston from the Muze Office team.",
-  alternates: { canonical: "/blog" },
+  alternates: { canonical: "/blog", types: { "text/markdown": "/blog.md" } },
   openGraph: {
     ...OG_DEFAULTS,
     title: "Muze Office Blog — Coworking & Virtual Office Insights",

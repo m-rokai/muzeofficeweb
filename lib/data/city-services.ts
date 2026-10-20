@@ -80,7 +80,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "virtual-office",
     h1: "Virtual Office in Las Vegas — Real Address from $39/mo",
     heroSubtitle:
-      "A real Las Vegas virtual business address on Bermuda Rd in a staffed commercial suite — not a PO Box. Use it for business mail, contracts, and filings that accept a commercial mail-receiving address. Virtual mailbox service with mail forwarding included on Opal and Diamond plans.",
+      "Muze Office provides a Las Vegas virtual office with a real commercial business address at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119, in a staffed suite, not a PO Box. Plans run from $39 a month for mail holding to $249 a month with mail forwarding, month-to-month with a one-time $25 setup fee. Use it for business mail, contracts, and filings that accept a commercial mail-receiving address.",
     metaTitle: "Las Vegas Virtual Office — Address $39/mo",
     metaDescription:
       "Virtual office in Las Vegas with a real business address at 6860 Bermuda Rd — not a PO box. From $39/mo, mail forwarding, month-to-month.",
@@ -224,7 +224,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "coworking",
     h1: "Coworking Space in Las Vegas",
     heroSubtitle:
-      "Flexible shared workspace with hot desks and dedicated desks. High-speed WiFi, unlimited coffee, free parking, and a real community — not a hotel lobby.",
+      "Muze Office is a coworking space at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119, about 10 minutes from Harry Reid International Airport. Day passes are $25, hot desks $129 a month, and dedicated desks $229 a month, with gigabit WiFi, free parking, an on-site cafe, 24/7 member access, and no long-term lease.",
     metaTitle: "Las Vegas Coworking & Shared Office — $25",
     metaDescription:
       "Las Vegas coworking with day passes from $25 and monthly hot desks from $129. Free parking, fast WiFi, coffee, and meeting rooms included. No long-term lease.",
@@ -331,7 +331,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "day-pass",
     h1: "Day Pass at Muze Office Las Vegas",
     heroSubtitle:
-      "Our Las Vegas workspace is open 24/7. Buy and activate a $25 Day Pass online the same day, then work in a quiet area until midnight.",
+      "A Muze Office Day Pass is $25 and gives same-day access to the Las Vegas coworking floor at 6860 Bermuda Rd, Suite 200, until midnight. Buy and activate it online, bring your laptop, and get gigabit WiFi, free coffee and water, phone booths, printing, and free parking, 10 minutes from Harry Reid International Airport.",
     metaTitle: "Las Vegas Day Pass — $25, Open 24/7",
     metaDescription:
       "Las Vegas coworking day pass for $25. Open 24/7; buy and activate online the same day and work until midnight. Gigabit WiFi and Herman Miller furniture.",
@@ -425,7 +425,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "hot-desk",
     h1: "Hot Desk in Las Vegas",
     heroSubtitle:
-      "Any-desk monthly coworking for remote workers and consultants in the space three-to-five days a week. Meeting room credits, mail handling, and community events included — all on month-to-month terms.",
+      "A Muze Office hot desk is $129 a month for any-desk coworking at 6860 Bermuda Rd, Suite 200, Las Vegas, with 24/7 mobile access, meeting-room credits, mail handling, gigabit WiFi, and free parking. Memberships are month-to-month with a one-time $25 setup fee and no long-term lease.",
     metaTitle: "Hot Desk Las Vegas — $129/mo, 24/7 Access",
     metaDescription:
       "Hot desk coworking in Las Vegas for $129/mo at 6860 Bermuda Rd. Any-desk 24/7 mobile access, meeting credits, mail handling, free parking. Sign up online today.",
@@ -519,7 +519,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "dedicated-desk",
     h1: "Dedicated Desk in Las Vegas",
     heroSubtitle:
-      "Your own reserved desk, personal storage, 24/7 mobile access, and meeting room credits. Month-to-month terms — the most committed coworking tier short of a private office.",
+      "A Muze Office dedicated desk is $229 a month for a reserved desk with personal storage at 6860 Bermuda Rd, Suite 200, Las Vegas, plus 24/7 mobile access, meeting-room credits, gigabit WiFi, and free parking. Memberships are month-to-month with a one-time $25 setup fee and no long-term lease.",
     metaTitle: "Dedicated Desk Las Vegas — $229/mo, Reserved",
     metaDescription:
       "Dedicated desk coworking in Las Vegas for $229/mo. Reserved desk, storage, 24/7 access, meeting credits, and free parking. Sign up online.",
@@ -709,7 +709,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "private-office",
     h1: "Private Office Space in Las Vegas",
     heroSubtitle:
-      "Furnished private offices with month-to-month terms. All utilities, WiFi, conference rooms, parking, and cleaning included. Move in this week.",
+      "Muze Office rents furnished, lockable private offices month-to-month at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119, 10 minutes from Harry Reid International Airport. Pricing is quoted by room size and availability; every office includes 24/7 access, WiFi, utilities, cleaning, conference rooms, and free parking.",
     metaTitle: "Private Office for Rent in Las Vegas",
     metaDescription:
       "Furnished private offices in Las Vegas, month-to-month. WiFi, utilities, meeting rooms, and free parking included. Solo offices to custom suites. Book a tour today.",
@@ -813,7 +813,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "meeting-rooms",
     h1: "Meeting Rooms & Meeting Space in Las Vegas",
     heroSubtitle:
-      "Professional meeting spaces available by the hour. AV equipment, video conferencing, whiteboards, and free parking included. Book online instantly.",
+      "Muze Office rents meeting rooms by the hour at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119, 10 minutes from Harry Reid International Airport: a huddle room for 2–4 people from $39 an hour and two conference rooms for up to 16 people at $69 an hour, with AV, video conferencing, whiteboards, free parking, and instant online booking.",
     metaTitle: "Meeting Rooms & Meeting Space Las Vegas $39/hr",
     metaDescription:
       "Book Las Vegas meeting rooms from $39/hr. Two conference rooms fit up to 16 each; the $99/hr classroom fits 50. AV, WiFi, and free parking included.",
@@ -914,7 +914,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "conference-rooms",
     h1: "Conference Rooms in Las Vegas",
     heroSubtitle:
-      "Two corporate conference rooms available by the hour for client pitches, board meetings, depositions, and investor updates. Each fits up to 16 people, with video conferencing and free parking included.",
+      "Muze Office has two Las Vegas conference rooms at 6860 Bermuda Rd, Suite 200, each seating up to 16 people, at $69 an hour with AV, video conferencing, whiteboards, free parking, and instant online booking, 10 minutes from Harry Reid International Airport.",
     metaTitle: "Conference Rooms Las Vegas | $69/hr",
     metaDescription:
       "Book either Las Vegas conference room for $69/hr at 6860 Bermuda Rd. Each fits up to 16 people, with video conferencing and free parking included.",
@@ -1004,7 +1004,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "event-space",
     h1: "Event Space & Training Rooms in Las Vegas",
     heroSubtitle:
-      "Host corporate events, workshops, networking mixers, and private gatherings. Full AV, flexible layouts, and on-site catering from Muze Cafe.",
+      "Muze Office rents event space in Las Vegas at 6860 Bermuda Rd, Suite 200, for $199 an hour, and a classroom for up to 50 people for $99 an hour, with full AV, flexible layouts, catering, and free parking, 10 minutes from Harry Reid International Airport.",
     metaTitle: "Las Vegas Event Space $199/hr | Classroom $99/hr",
     metaDescription:
       "Rent Las Vegas event space for $199/hr or a classroom for up to 50 people for $99/hr. Full AV, flexible layouts, catering, and free parking.",
@@ -1119,7 +1119,7 @@ export const cityServiceData: Record<string, CityServiceData> = {
     serviceId: "airport-coworking",
     h1: "Airport Coworking in Las Vegas",
     heroSubtitle:
-      "Just 10 minutes from Harry Reid International Airport. Book a day pass online, even same-day — no membership required. Fast WiFi, free parking, and real desks.",
+      "Muze Office is a coworking space 10 minutes from Harry Reid International Airport (LAS) at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119, off I-215. Day passes are $25 with no membership required, with gigabit WiFi, free parking, phone booths, an on-site cafe, and hourly meeting rooms for layovers and day trips.",
     metaTitle: "Airport Coworking Las Vegas | Near LAS",
     metaDescription:
       "Coworking near Las Vegas airport (LAS). Day passes from $25. 10 minutes from Harry Reid International. Free parking, fast WiFi, no membership required.",

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   title: "Book a Tour & Free Workday — Las Vegas Workspace",
   description:
     "Tour Muze Office Las Vegas at 6860 Bermuda Rd, then work in our space free for a day. See coworking desks, private offices, and meeting rooms. Book online today.",
-  alternates: { canonical: "/book-a-tour" },
+  alternates: { canonical: "/book-a-tour", types: { "text/markdown": "/book-a-tour.md" } },
   openGraph: { ...OG_DEFAULTS, type: "website", url: "/book-a-tour" },
 };
 

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Las Vegas Workspace Memberships from $39/mo",
   description:
     "Flexible Las Vegas workspace memberships: virtual offices from $39/mo, coworking from $25/day, private offices, and meeting rooms. All month-to-month. Book a tour.",
-  alternates: { canonical: "/workspace-memberships" },
+  alternates: { canonical: "/workspace-memberships", types: { "text/markdown": "/workspace-memberships.md" } },
   openGraph: { ...OG_DEFAULTS, type: "website", url: "/workspace-memberships" },
 };
 

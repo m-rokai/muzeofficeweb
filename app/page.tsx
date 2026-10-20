@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   title: { absolute: "Muze Office — Coworking & Flexible Workspace in Las Vegas" },
   description:
     "Coworking, private offices, virtual offices, meeting rooms, and event space at 6860 Bermuda Rd in Las Vegas. Month-to-month, free parking, on-site cafe.",
-  alternates: { canonical: "/" },
+  alternates: { canonical: "/", types: { "text/markdown": "/home.md" } },
   openGraph: { ...OG_DEFAULTS, type: "website", url: "/" },
 };
 

@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "About Muze Office — Workspaces That Inspire",
   description:
     "Muze Office offers flexible coworking, virtual offices, private offices, and meeting rooms in Las Vegas — Houston coming soon. Month-to-month, no long-term leases.",
-  alternates: { canonical: "/about" },
+  alternates: { canonical: "/about", types: { "text/markdown": "/about.md" } },
   openGraph: { ...OG_DEFAULTS, type: "website", url: "/about" },
 };
 

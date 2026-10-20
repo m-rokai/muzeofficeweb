@@ -71,7 +71,10 @@ export async function generateMetadata({
   return {
     title: data.metaTitle,
     description: data.metaDescription,
-    alternates: { canonical: `/${cityService}` },
+    alternates: {
+      canonical: `/${cityService}`,
+      ...(isComingSoon ? {} : { types: { "text/markdown": `/${cityService}.md` } }),
+    },
     openGraph: {
       ...OG_DEFAULTS,
       title: data.metaTitle,

@@ -7,6 +7,10 @@ const eslintConfig = defineConfig([
   ...nextTs,
   // Override default ignores of eslint-config-next.
   globalIgnores([
+    // Nested apps and agent worktrees carry their own .next output
+    "franchise/**",
+    ".claude/**",
+    ".codex/**",
     // Default ignores of eslint-config-next:
     ".next/**",
     "out/**",

@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
     "Muze Office privacy policy. Learn how we collect, use, and protect your personal information when you visit our website or use our workspace services.",
-  alternates: { canonical: "/privacy-policy" },
+  alternates: { canonical: "/privacy-policy", types: { "text/markdown": "/privacy-policy.md" } },
   openGraph: { ...OG_DEFAULTS, type: "website", url: "/privacy-policy" },
 };
 

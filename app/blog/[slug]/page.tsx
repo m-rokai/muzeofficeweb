@@ -50,7 +50,7 @@ export async function generateMetadata({
   return {
     title: post.seoTitle || post.title,
     description: post.description,
-    alternates: { canonical: `/blog/${slug}` },
+    alternates: { canonical: `/blog/${slug}`, types: { "text/markdown": `/blog/${slug}.md` } },
     ...(post.noindex && { robots: { index: false, follow: true } }),
     openGraph: {
       ...OG_DEFAULTS,

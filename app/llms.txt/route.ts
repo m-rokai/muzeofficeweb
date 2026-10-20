@@ -3,6 +3,7 @@ import { locations } from "@/lib/data/locations";
 import { cityServiceData } from "@/lib/data/city-services";
 import { getAllPosts } from "@/lib/blog";
 import { people } from "@/lib/data/people";
+import { MUZE_KEY_FACTS, FEATURED_GUIDE_SLUGS } from "@/lib/data/key-facts";
 
 export const dynamic = "force-static";
 
@@ -14,9 +15,7 @@ function buildLlmsTxt(): string {
 
   lines.push("# Muze Office");
   lines.push("");
-  lines.push(
-    "> Flexible workspace in Las Vegas (Houston coming soon) — coworking, virtual offices, private offices, meeting rooms, and event space. Month-to-month memberships, free parking, no long-term leases."
-  );
+  lines.push(`> ${MUZE_KEY_FACTS}`);
   lines.push("");
   lines.push(
     "Muze Office runs a staffed commercial location in Las Vegas. An independently operated Muze Office franchise location is planned for Houston. Every page on this site also has a plain-markdown twin at the same path with a `.md` suffix — e.g. `/las-vegas-coworking.md`. A full content dump is available at `/llms-full.txt`."
@@ -99,12 +98,21 @@ function buildLlmsTxt(): string {
   }
   lines.push("");
 
-  // Blog posts
+  // Pricing sheet, kept with the primary pages so a truncated read still gets it
+  lines.push("## Pricing");
+  lines.push("");
+  lines.push(`- [Current Las Vegas pricing](${BRAND.url}/pricing.md): Concise service prices, access terms, and booking links, last verified September 22, 2026.`);
+  lines.push("");
+
+  // Featured guides: the posts AI assistants already cite most, ahead of the long tail
   const posts = getAllPosts().filter((p) => !p.noindex);
-  if (posts.length > 0) {
-    lines.push("## Blog Posts");
+  const featured = FEATURED_GUIDE_SLUGS.map((slug) => posts.find((p) => p.slug === slug)).filter(
+    (p): p is (typeof posts)[number] => Boolean(p)
+  );
+  if (featured.length > 0) {
+    lines.push("## Guides");
     lines.push("");
-    for (const post of posts) {
+    for (const post of featured) {
       lines.push(
         `- [${post.title}](${BRAND.url}/blog/${post.slug}.md): ${post.description || ""}`
       );
@@ -112,12 +120,18 @@ function buildLlmsTxt(): string {
     lines.push("");
   }
 
-  // Optional section
+  // Optional section (llmstxt.org: safe to skip when context is short)
   lines.push("## Optional");
   lines.push("");
-  lines.push(`- [Current Las Vegas pricing](${BRAND.url}/pricing.md): Concise service prices, access terms, and booking links, last verified September 22, 2026.`);
   lines.push(`- [Full content dump](${BRAND.url}/llms-full.txt): All primary pages and blog posts concatenated as markdown.`);
   lines.push(`- [Sitemap](${BRAND.url}/sitemap.xml): XML sitemap of all canonical HTML URLs.`);
+  const featuredSlugs = new Set(featured.map((p) => p.slug));
+  for (const post of posts) {
+    if (featuredSlugs.has(post.slug)) continue;
+    lines.push(
+      `- [${post.title}](${BRAND.url}/blog/${post.slug}.md): ${post.description || ""}`
+    );
+  }
   lines.push("");
 
   return lines.join("\n");

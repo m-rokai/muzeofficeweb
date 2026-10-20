@@ -30,7 +30,7 @@ export async function generateMetadata({
   return {
     title: { absolute: profileTitle },
     description: person.shortBio,
-    alternates: { canonical: `/authors/${person.slug}` },
+    alternates: { canonical: `/authors/${person.slug}`, types: { "text/markdown": `/authors/${person.slug}.md` } },
     openGraph: {
       ...OG_DEFAULTS,
       title: profileTitle,

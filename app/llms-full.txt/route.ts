@@ -1,4 +1,5 @@
 import { BRAND } from "@/lib/utils/constants";
+import { MUZE_KEY_FACTS } from "@/lib/data/key-facts";
 import { locations } from "@/lib/data/locations";
 import { cityServiceData } from "@/lib/data/city-services";
 import { getAllPosts } from "@/lib/blog";
@@ -23,6 +24,10 @@ function buildLlmsFullTxt(): string {
   parts.push(
     `Generated from ${BRAND.url}. Every primary page and blog post, concatenated as markdown, for LLMs and search agents.`
   );
+  parts.push("");
+  parts.push("## Key facts");
+  parts.push("");
+  parts.push(MUZE_KEY_FACTS);
   parts.push("");
   parts.push("---");
   parts.push("");

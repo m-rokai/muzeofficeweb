@@ -39,6 +39,8 @@ export interface Location {
     yelp?: string;
     bbb?: string;
     gbp?: string;
+    /** Verified third-party listings (directories, marketplaces). */
+    directories?: string[];
   };
 }
 
@@ -118,6 +120,9 @@ export const locations: Location[] = [
     externalProfiles: {
       yelp: "https://www.yelp.com/biz/muze-office-bermuda-las-vegas",
       gbp: "https://www.google.com/search?q=Muze+Office+Las+Vegas&kgmid=/g/11x2wpzbg_",
+      directories: [
+        "https://www.coworkingcafe.com/coworking-property/us/nv/las-vegas/muze-office-las-vegas/",
+      ],
     },
   },
   {

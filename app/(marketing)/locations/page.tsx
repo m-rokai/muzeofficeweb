@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   },
   description:
     "Muze Office locations: Las Vegas (open) at 6860 Bermuda Rd and Houston (coming soon) in the Galleria. Free parking, month-to-month memberships. Book a tour.",
-  alternates: { canonical: "/locations" },
+  alternates: { canonical: "/locations", types: { "text/markdown": "/locations.md" } },
   openGraph: { ...OG_DEFAULTS, type: "website", url: "/locations" },
 };
 
