@@ -54,9 +54,9 @@ export function FreeWorkdayPopup() {
           type="button"
           onClick={dismiss}
           aria-label="Dismiss free workday offer"
-          className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full text-[#74726D] transition-colors hover:bg-[#F2F1ED] hover:text-[#1A1A1A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1A1A1A]"
+          className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full border border-[#D9D6CF] bg-[#ECEAE4] text-[#1A1A1A] shadow-sm transition-colors hover:bg-[#1A1A1A] hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1A1A1A]"
         >
-          <X className="h-5 w-5" aria-hidden="true" />
+          <X className="h-5 w-5" strokeWidth={2.5} aria-hidden="true" />
         </button>
         <p className="text-xs font-semibold uppercase tracking-[0.16em] text-[#8A6000]">
           Your invitation to Muze Office
@@ -67,15 +67,24 @@ export function FreeWorkdayPopup() {
         <p className="mt-3 text-sm leading-relaxed text-[#555550]">
           Come see our Las Vegas workspace, then stay and try coworking for yourself. Bring your laptop; the day is on us.
         </p>
-        <Link
-          href="/book-a-tour"
-          onClick={dismiss}
-          data-cta="book_tour"
-          data-cta-location="free_workday_popup"
-          className="mt-5 inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[#1A1A1A] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#333] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1A1A1A]"
-        >
-          Book your tour <ArrowRight className="h-4 w-4" aria-hidden="true" />
-        </Link>
+        <div className="mt-5 flex flex-wrap items-center gap-x-5 gap-y-3">
+          <Link
+            href="/book-a-tour"
+            onClick={dismiss}
+            data-cta="book_tour"
+            data-cta-location="free_workday_popup"
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-xl bg-[#1A1A1A] px-5 text-sm font-semibold text-white transition-colors hover:bg-[#333] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1A1A1A]"
+          >
+            Book your tour <ArrowRight className="h-4 w-4" aria-hidden="true" />
+          </Link>
+          <button
+            type="button"
+            onClick={dismiss}
+            className="min-h-11 text-sm font-medium text-[#555550] underline underline-offset-4 transition-colors hover:text-[#1A1A1A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#1A1A1A]"
+          >
+            No thanks
+          </button>
+        </div>
       </div>
     </aside>
   );
