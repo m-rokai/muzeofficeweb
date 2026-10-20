@@ -4,23 +4,15 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { ArrowRight, X } from "lucide-react";
 import { usePathname } from "next/navigation";
+import { FREE_WORKDAY_PATHS } from "@/lib/data/free-workday";
 
 const DISMISS_KEY = "muze-free-workday-popup-dismissed-v1";
-const ELIGIBLE_PATHS = new Set([
-  "/",
-  "/workspace-memberships",
-  "/locations/las-vegas",
-  "/las-vegas-coworking",
-  "/las-vegas-hot-desk",
-  "/las-vegas-dedicated-desk",
-  "/las-vegas-private-office",
-]);
 
 export function FreeWorkdayPopup() {
   const pathname = usePathname();
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(false);
-  const eligible = ELIGIBLE_PATHS.has(pathname);
+  const eligible = FREE_WORKDAY_PATHS.has(pathname);
 
   useEffect(() => {
     if (!eligible || dismissed) return;
@@ -32,7 +24,11 @@ export function FreeWorkdayPopup() {
     }
 
     const timer = window.setTimeout(() => setVisible(true), 6000);
-    return () => window.clearTimeout(timer);
+    return () => {
+      window.clearTimeout(timer);
+      // Leaving an eligible page re-arms the delay instead of re-showing instantly.
+      setVisible(false);
+    };
   }, [eligible, dismissed]);
 
   function dismiss() {

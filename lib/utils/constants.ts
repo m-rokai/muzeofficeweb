@@ -1,7 +1,7 @@
 export const BRAND = {
   name: "Muze Office",
   legalName: "Muze International Corporation",
-  tagline: "Flexible workspace open in Las Vegas, with Houston planned for 2026",
+  tagline: "Flexible workspace open in Las Vegas, with Houston coming soon",
   email: "access@muzeoffice.com",
   url: "https://muzeoffice.com",
   blogUrl: "https://muzeoffice.com/blog",

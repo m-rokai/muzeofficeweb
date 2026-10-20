@@ -575,7 +575,7 @@ const workspaceMembershipsFAQs: FAQ[] = [
   {
     question: "Can I try the space before committing to a membership?",
     answer:
-      "Yes. Book a free tour or grab a $25 Day Pass — no membership required. You'll get full access to the coworking area, WiFi, coffee, and free parking for the day.",
+      "Yes. Book a free tour and stay to work in the coworking space free for a day; bring your laptop and let the team know you'd like to stay. If you'd rather skip the tour, a $25 Day Pass gives you same-day access to the coworking area, WiFi, coffee, and free parking.",
   },
 ];
 
@@ -583,12 +583,12 @@ const locationsOverviewFAQs: FAQ[] = [
   {
     question: "Where is Muze Office located?",
     answer:
-      "Open in Las Vegas at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 (10 minutes from Harry Reid International Airport, off I-215). An independently operated Muze Office franchise location is planned for Houston in 2026 at 1800 Augusta Dr, Houston, TX 77057 in the Galleria / Tanglewood area.",
+      "Open in Las Vegas at 6860 Bermuda Rd, Suite 200, Las Vegas, NV 89119 (10 minutes from Harry Reid International Airport, off I-215). An independently operated Muze Office franchise location is planned for Houston at 1800 Augusta Dr, Houston, TX 77057 in the Galleria / Tanglewood area.",
   },
   {
     question: "Which cities are open?",
     answer:
-      "Las Vegas is open now and accepting members, day pass visitors, and meeting room bookings at 6860 Bermuda Rd, Suite 200. Houston is planned to open in 2026; join early access for confirmed timing and availability updates.",
+      "Las Vegas is open now and accepting members, day pass visitors, and meeting room bookings at 6860 Bermuda Rd, Suite 200. Houston is coming soon; join the waitlist for confirmed timing and availability updates.",
   },
   {
     question: "How do I find the Houston location?",
@@ -679,7 +679,7 @@ const houstonLocationFAQs: FAQ[] = [
   {
     question: "Can I ask about pre-leasing a Houston Galleria office?",
     answer:
-      "Yes. Use the form above and choose Discuss pre-leasing a workspace. Share your workspace type, team size, and preferred timing so the team can follow up. This is an inquiry, not a reservation or lease agreement. Availability, pricing, and lease terms will be confirmed separately; no payment is collected through this form.",
+      "Yes. Use the waitlist form on the Houston page at muzeoffice.com/locations/houston#waitlist and choose the pre-leasing option. Share your workspace type, team size, and preferred timing so the team can follow up. This is an inquiry, not a reservation or lease agreement. Availability, pricing, and lease terms will be confirmed separately; no payment is collected through this form.",
   },
   {
     question: "Can I use the Houston address for my Texas LLC?",

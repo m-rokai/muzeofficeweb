@@ -19,7 +19,7 @@ import {
  * The offer is derived from the post's categories: high-intent commercial
  * topics route to the matching money page (which carries the real booking
  * widgets), softer topics route to a tour, and any Houston post routes to the
- * waitlist (the only Houston monetization until it opens in 2026).
+ * waitlist (the only Houston monetization until it opens).
  */
 
 type CtaLink = { label: string; href: string };
@@ -105,11 +105,11 @@ const TOPIC_CTAS: Record<CtaTopic, BlogCtaConfig> = {
 };
 
 const HOUSTON_CTA: BlogCtaConfig = {
-  heading: "Muze Office Houston opens in 2026",
+  heading: "Muze Office Houston Galleria is coming soon",
   subtitle:
-    "Join early access for verified opening updates and planned virtual office, coworking, and private office availability near the Galleria.",
+    "Join the waitlist for verified opening updates, or ask about pre-leasing. Planned virtual office, coworking, and private office availability near the Galleria.",
   primary: {
-    label: "Join Houston early access",
+    label: "Join the Houston waitlist",
     href: "/locations/houston#waitlist",
     event: "blog_cta_houston_waitlist",
   },

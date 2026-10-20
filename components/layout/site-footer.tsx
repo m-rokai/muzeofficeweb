@@ -38,7 +38,7 @@ export function SiteFooter() {
             </Link>
             <p className="text-sm text-gray-400">
               Flexible workspace open in Las Vegas, with an independently
-              operated Houston franchise location planned for 2026.
+              operated Houston franchise location coming soon.
             </p>
             <a
               href="https://muzeofficefranchise.com"
@@ -97,7 +97,7 @@ export function SiteFooter() {
                     href="/locations/houston"
                     className="text-sm text-gray-400 transition-colors hover:text-white"
                   >
-                    Houston Galleria &mdash; Opening 2026
+                    Houston Galleria &mdash; Opening Soon
                   </Link>
                 </li>
                 {houston.status !== "active" && (
@@ -108,7 +108,7 @@ export function SiteFooter() {
                       data-cta-location="footer"
                       className="text-sm text-[#EAA820] transition-colors hover:text-white"
                     >
-                      Join Houston early access
+                      Join the Houston waitlist
                     </Link>
                   </li>
                 )}

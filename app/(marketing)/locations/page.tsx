@@ -16,10 +16,10 @@ import { BRAND, OG_DEFAULTS } from "@/lib/utils/constants";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Muze Office Locations — Las Vegas (Open) & Houston 2026",
+    absolute: "Muze Office Locations — Las Vegas (Open) & Houston (Coming Soon)",
   },
   description:
-    "Muze Office locations: Las Vegas (open) at 6860 Bermuda Rd and Houston (2026) in the Galleria. Free parking, month-to-month memberships. Book a tour.",
+    "Muze Office locations: Las Vegas (open) at 6860 Bermuda Rd and Houston (coming soon) in the Galleria. Free parking, month-to-month memberships. Book a tour.",
   alternates: { canonical: "/locations" },
   openGraph: { ...OG_DEFAULTS, type: "website", url: "/locations" },
 };
@@ -60,7 +60,7 @@ export default function LocationsPage() {
             </h1>
             <p className="mt-4 text-base text-[#74726D] md:text-lg">
               Open in Las Vegas (6860 Bermuda Rd, Suite 200), with a second
-              independently operated franchise location planned for Houston in 2026 (1800 Augusta Dr in the
+              independently operated franchise location planned for Houston (1800 Augusta Dr in the
               Galleria / Tanglewood area). Las Vegas has free parking; Houston
               parking details will be confirmed before opening.
             </p>
