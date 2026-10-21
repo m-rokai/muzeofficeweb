@@ -115,8 +115,9 @@ export const locations: Location[] = [
     ],
     taxAdvantage:
       "Nevada has no state income tax, no corporate income tax, and no franchise tax.",
-    rating: 4.6,
-    reviewCount: 11,
+    // Google Business Profile figures; verified on Maps 2026-10-20. Refresh monthly.
+    rating: 4.8,
+    reviewCount: 21,
     externalProfiles: {
       yelp: "https://www.yelp.com/biz/muze-office-bermuda-las-vegas",
       gbp: "https://www.google.com/search?q=Muze+Office+Las+Vegas&kgmid=/g/11x2wpzbg_",

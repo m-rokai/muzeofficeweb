@@ -104,7 +104,7 @@ export function LocalBusinessSchema({
     // itself, so a self-hosted rating is "self-serving"
     // and ineligible for review-snippet stars under Google policy — it only
     // produces GSC "invalid object type for field" errors, never stars. The
-    // real 4.6★ rating lives on the Google Business Profile and surfaces in
+    // real Google rating (4.8★ / 21 reviews as of 2026-10-20) lives on the Google Business Profile and surfaces in
     // Maps / the local pack. location.rating & location.reviewCount still feed
     // the visible <GoogleReviewsBadge> UI — never route them back into JSON-LD.
     sameAs,
